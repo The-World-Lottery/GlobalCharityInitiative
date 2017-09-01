@@ -12,6 +12,7 @@ class CreateVotesTable extends Migration
      */
     public function up()
     {
+
         Schema::create('votes', function(Blueprint $table)
         {
             $table->increments('id');
@@ -21,6 +22,7 @@ class CreateVotesTable extends Migration
             $table->foreign('post_id')->references('id')->on('posts');
             $table->integer('vote');
             $table->timestamps();
+
         });
     }
 

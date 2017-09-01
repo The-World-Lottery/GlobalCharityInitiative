@@ -12,7 +12,9 @@ class CreateOurImpactsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('ourImpacts', function (Blueprint $table) {
+           
+        });
     }
 
     /**
@@ -22,6 +24,6 @@ class CreateOurImpactsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('ourImpacts');
     }
 }
