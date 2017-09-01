@@ -12,7 +12,9 @@ class CreateWorldlotteryEntrantsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('worldlotteryEntrants', function (Blueprint $table) {
+           
+        });
     }
 
     /**
@@ -22,6 +24,6 @@ class CreateWorldlotteryEntrantsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('worldlotteryEntrants');
     }
 }
