@@ -12,7 +12,9 @@ class CreateRafflesTable extends Migration
      */
     public function up()
     {
-        //
+         Schema::create('raffles', function (Blueprint $table) {
+           
+        });
     }
 
     /**
@@ -22,6 +24,6 @@ class CreateRafflesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('raffles');
     }
 }

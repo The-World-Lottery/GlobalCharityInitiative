@@ -12,7 +12,9 @@ class CreateLotteriesTable extends Migration
      */
     public function up()
     {
-        //
+         Schema::create('lotteries', function (Blueprint $table) {
+           
+        });
     }
 
     /**
@@ -22,6 +24,6 @@ class CreateLotteriesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('lotteries');
     }
 }
