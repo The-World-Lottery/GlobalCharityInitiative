@@ -1,13 +1,5 @@
-#chat {
-	height:60%;
-}
-
-#info {
-	height: 38%;
-	margin-top: 1.5vh;
-}
-
 .borderOpac {
+	/*all main area borders*/
 	border:1px solid black;
 	background-color:rgba(255,255,255,.4);
 	border-radius: 1.5em;
@@ -19,21 +11,19 @@
 	min-height:10vh;
 }
 
-.gameAndChatInfo {
-	min-height:80vh; 
-}
+ /*content right side*/
+	.gameAndChatInfo {
+		min-height:80vh; 
+	}
 
-/*.chatInfoMargins {
- 	min-height:39.5vh;
-}
-*/
-#chat {
-	min-height:50.5vh;
-}
+	#chat {
+		min-height:50.5vh;
+	}
 
-#info {
-	min-height:28vh;
-}
+	#info {
+		min-height:28vh;
+	}
+/*end content right side*/
 
 .col-sm-4 {
 	padding-right:0;
