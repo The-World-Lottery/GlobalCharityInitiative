@@ -1,3 +1,5 @@
+
+
 .borderOpac {
 	/*all main area borders*/
 	border:1px solid black;
@@ -7,8 +9,13 @@
 	margin-top: 1vh;
 }
 
-.headAndLinks {
+#head, #footer {
 	min-height:10vh;
+}
+
+.navLink {
+	padding-top:1em;
+	padding-bottom: 1em;
 }
 
  /*content right side*/
@@ -17,16 +24,31 @@
 	}
 
 	#chat {
-		min-height:50.5vh;
+		min-height:51vh;
 	}
 
 	#info {
 		min-height:28vh;
 	}
-/*end content right side*/
 
 .col-sm-4 {
 	padding-right:0;
+}
+
+#gameArea {
+	padding:0;
+}
+
+#links {
+	display:flex;
+	justify-content: space-around;
+}
+
+.areaHeaders {
+	border-bottom:1px solid black;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	text-align: center;
 }
 
 @media screen and (max-width: 768px) {
