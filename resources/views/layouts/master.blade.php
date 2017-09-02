@@ -8,12 +8,7 @@
 </head>
 <body>
 	<div class="container">
-		<div class="row" id="header">
-			<div class="col col-xs-12 borderOpac headAndLinks"></div>
-		</div>
-		<div class="row" id="links">
-			<div class="col col-xs-12 borderOpac headAndLinks"></div>
-		</div>
+		@include('layouts.partials._header')
 		<div class="row" id="main">
 			<div class="col col-sm-8 col-xs-12 borderOpac gameAndChatInfo">
 				games
@@ -23,10 +18,14 @@
 				<div class="chatInfoMargins borderOpac" id="info">info</div>
 			</div>
 		</div>
-		<div class="row" id="footer">
-			<div class="col col-xs-12 borderOpac headAndLinks"></div>
-		</div>
-
+		@include('layouts.partials._footer')
 	</div>
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.js"
+	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+	  crossorigin="anonymous">
+	</script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="main.js" type="text/javascript"></script>
 </body>
 </html>

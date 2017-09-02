@@ -1,3 +1,3 @@
-<div id="footerSpacer">
+<div class="row" id="footer">
+	<div class="col col-xs-12 borderOpac headAndLinks"></div>
 </div>
-<div class="footer">This footer will always be positioned at the bottom of the page, but <strong>not fixed</strong>.</div>
