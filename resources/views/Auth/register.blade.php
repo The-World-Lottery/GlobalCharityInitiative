@@ -32,7 +32,7 @@
         Confirm Password
         <input type="password" name="password_confirmation">
     </div>
-
+    
     <div>
         <button type="submit">Register</button>
     </div>
