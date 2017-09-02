@@ -23,6 +23,10 @@
 				<div class="chatInfoMargins borderOpac" id="info">info</div>
 			</div>
 		</div>
+		<div class="row" id="footer">
+			<div class="col col-xs-12 borderOpac headAndLinks"></div>
+		</div>
+
 	</div>
 </body>
 </html>
