@@ -11,7 +11,7 @@
 		<a class="navLink" href="">Raffles</a>
 		<a class="navLink" href="">Currency Conversions</a>
 		<a class="navLink" href="">Suggestion Box</a>
-		<a class="navLink" href="">About</a>
+		<a class="navLink" href="">About Us</a>
 		<a class="navLink" href="">Profile</a>
 	</div>
 </div>

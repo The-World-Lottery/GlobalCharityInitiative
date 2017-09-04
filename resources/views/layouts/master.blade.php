@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	
+	@yield('title')
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
@@ -13,13 +15,16 @@
 		<div class="row" id="main">
 			<div class="col col-sm-8 col-xs-12 borderOpac gameAndChatInfo" id="gameArea">
 				<div class="areaHeaders">Game Area</div>
+				<div>
+					@yield('content')
+				</div>
 			</div>
 			<div class="col col-sm-4 col-xs-12 gameAndChatInfo chatInfoContSpacing">
 				<div class="chatInfoMargins borderOpac" id="chat"><div class="areaHeaders">Chat</div></div>
 				<div class="chatInfoMargins borderOpac" id="info"><div class="areaHeaders">Info</div></div>
 			</div>
 		</div>
-		@include('layouts.partials._footer')
+		@include('layouts.partials._footer')vb 
 	</div>
 	<script
 	  src="https://code.jquery.com/jquery-3.2.1.js"
