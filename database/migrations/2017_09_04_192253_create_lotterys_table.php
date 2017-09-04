@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLotteriesTable extends Migration
+class CreateLotterysTable extends Migration
 {
     /**
      * Run the migrations.
