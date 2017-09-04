@@ -1,0 +1,63 @@
+
+
+.borderOpac {
+	/*all main area borders*/
+	border:1px solid black;
+	background-color:rgba(255,255,255,.4);
+	border-radius: 1.5em;
+	margin-bottom: 1vh;
+	margin-top: 1vh;
+}
+
+#head, #footer {
+	min-height:10vh;
+}
+
+.navLink {
+	padding-top:1em;
+	padding-bottom: 1em;
+}
+
+ /*content right side*/
+	.gameAndChatInfo {
+		min-height:80vh; 
+	}
+
+	#chat {
+		min-height:51vh;
+	}
+
+	#info {
+		min-height:28vh;
+	}
+
+.col-sm-4 {
+	padding-right:0;
+}
+
+#gameArea {
+	padding:0;
+}
+
+#links {
+	display:flex;
+	justify-content: space-around;
+}
+
+.areaHeaders {
+	border-bottom:1px solid black;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+
+	.col-sm-4 {
+	  	padding:0;
+	}
+
+
+
+
+}
