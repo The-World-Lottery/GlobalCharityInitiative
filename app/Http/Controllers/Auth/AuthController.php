@@ -27,7 +27,15 @@ class AuthController extends Controller
      * Create a new authentication controller instance.
      *
      * @return void
+
+    
+
      */
+
+    protected $redirectPath = "/suggestions";
+    protected $redirectAfterLogout = "/suggestions";
+
+
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'getLogout']);
