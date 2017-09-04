@@ -12,12 +12,12 @@ class CreateLotteryEntrantsTable extends Migration
      */
     public function up()
     {
-         Schema::create('lotteryEntrants', function (Blueprint $table) {
+        Schema::create('lotteryEntrants', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->integer('lotto_id')->unsigned();
-            $table->foreign('lotto_id')->references('id')->on('lotteries');
+            $table->integer('lottery_id')->unsigned();
+            $table->foreign('lottery_id')->references('id')->on('lotterys');
             $table->timestamps();
         });
     }
