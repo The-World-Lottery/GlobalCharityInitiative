@@ -18,6 +18,7 @@ class CreateRaffleEntrantsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->integer('raffles_id')->unsigned();
             $table->foreign('raffles_id')->references('id')->on('raffles');
+            $table->timestamps();
         });
     }
 
