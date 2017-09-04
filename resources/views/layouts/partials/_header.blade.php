@@ -12,6 +12,6 @@
 		<a class="navLink" href="">Currency Conversions</a>
 		<a class="navLink" href="">Suggestion Box</a>
 		<a class="navLink" href="">About Us</a>
-		<a class="navLink" href="">Profile</a>
+		<a class="navLink" href="{{action('Auth\AuthController@getLogin')}}">Login</a>
 	</div>
 </div>
