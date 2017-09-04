@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('layouts.master');
 });
 
-Route::resource('posts', 'PostsController');
+Route::resource('suggestions', 'SuggestionsController');
 
 // Login routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
