@@ -24,7 +24,7 @@
 				<div class="chatInfoMargins borderOpac" id="info"><div class="areaHeaders">Info</div></div>
 			</div>
 		</div>
-		@include('layouts.partials._footer')vb 
+		@include('layouts.partials._footer')
 	</div>
 	<script
 	  src="https://code.jquery.com/jquery-3.2.1.js"

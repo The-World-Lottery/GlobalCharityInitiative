@@ -14,7 +14,16 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        // $this->call(UserTableSeeder::class);
+        DB::statement('SET FOREIGN_KEY_CHECKS=0');
+
+        DB::table('posts')->truncate();
+        DB::table('users')->truncate();
+
+
+        $this->call('UsersTableSeeder');
+        $this->call('SuggestionsTableSeeder');
+
+        DB::statement('SET FOREIGN_KEY_CHECKS=1');
 
         Model::reguard();
     }
