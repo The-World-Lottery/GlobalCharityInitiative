@@ -27,7 +27,7 @@
 		<a href="{{ action('SuggestionsController@edit', $suggestion->id) }}">Edit</a>
 		@endif
 
-
+	
 		
 	</main>
 
