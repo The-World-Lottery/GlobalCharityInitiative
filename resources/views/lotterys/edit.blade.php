@@ -6,6 +6,12 @@
 
 @stop
 
+@section('divHead')
+
+<span>Edit Lottery #{!! $lottery->id !!} </span>
+
+@stop
+
 @section('content')
 
 	<main class="container">

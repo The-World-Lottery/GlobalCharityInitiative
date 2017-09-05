@@ -6,6 +6,12 @@
 
 @stop
 
+@section('divHead')
+
+<span>Create a Lottery</span>
+
+@stop
+
 @section('content')
 
 	<main class="container">

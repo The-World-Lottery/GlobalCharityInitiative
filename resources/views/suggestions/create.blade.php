@@ -6,10 +6,15 @@
 
 @stop
 
+@section('divHead')
+
+<span>Throw a suggestion in the box</span>
+
+@stop
+
 @section('content')
 
 	<main class="container">
-		<h1>Create a suggestion here</h1>
 		<form method="POST" action="{{ action('SuggestionsController@store') }}">
 			{!! csrf_field() !!}
 			{!! $errors->first('title', '<span class="help-block">:message</span>')!!}
