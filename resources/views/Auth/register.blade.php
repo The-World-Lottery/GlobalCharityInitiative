@@ -19,6 +19,11 @@
     </div>
 
     <div>
+        Username
+        <input type="text" name="username" value="{{ old('username') }}">
+    </div>
+
+    <div>
         Email
         <input type="email" name="email" value="{{ old('email') }}">
     </div>
