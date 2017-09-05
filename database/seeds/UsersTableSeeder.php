@@ -16,8 +16,10 @@ class UsersTableSeeder extends Seeder
         $user->name = 'emmett';
         $user->username = 'ejp8611';
         $user->email='ejp8611@gmail.com';
+        $user->phone_number = 2108838541;
         $user->is_admin = 1;
         $user->is_super_admin = 1;
+
         $user->password = Hash::make(env('USER_PASSWORD'));
         $user->save();
 
@@ -32,6 +34,7 @@ class UsersTableSeeder extends Seeder
                 'username' => $faker->userName,
                 'email'=> $faker->email,
                 'password'=> $faker->password,
+                'phone_number'=>$faker->phoneNumber,
                 'is_admin' => 0,
                 'is_super_admin' => 0,
                 'created_at'=> $faker->dateTime(),
