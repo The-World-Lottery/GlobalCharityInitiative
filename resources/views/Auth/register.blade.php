@@ -19,11 +19,6 @@
     </div>
 
     <div>
-        Username
-        <input type="text" name="username" value="{{ old('username') }}">
-    </div>
-
-    <div>
         Email
         <input type="email" name="email" value="{{ old('email') }}">
     </div>
@@ -40,7 +35,6 @@
 
     <div>
         <button type="submit">Register</button>
-        <a href="{{action('Auth\AuthController@getLogin')}}">Login</a>
     </div>
 </form>
     </main>
