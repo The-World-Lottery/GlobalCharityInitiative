@@ -37,7 +37,17 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $rules = array(
+        // 'name' => 'required|max:255',
+        //     'username' => 'required|max:255|unique:users',
+        //     'email' => 'required|email|max:255|unique:users',
+        //     'password' => 'required|confirmed|min:6'
+        //     'image'=>'max:255',
+        //     'phone_number'=>'required|min:10'
+    // );
+
+//    $this->validate($request, $rules);
+
     }
 
     /**
@@ -60,7 +70,7 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('Users.edit');
     }
 
     /**
