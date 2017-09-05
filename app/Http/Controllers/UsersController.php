@@ -16,7 +16,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
+        $users = \App\User::paginate(16);
+        return view('users.index')->with(array('users' => $users));
     }
 
     /**
@@ -47,6 +48,7 @@ class UsersController extends Controller
     // );
 
 //    $this->validate($request, $rules);
+
 
     }
 

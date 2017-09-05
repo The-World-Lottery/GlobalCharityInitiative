@@ -52,7 +52,6 @@
 
     <div class="form-group">
         <button type="submit">Register</button>
-        <a href="{{action('Auth\AuthController@getLogin')}}">Login</a>
     </div>
 
 </form>
