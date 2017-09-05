@@ -31,6 +31,7 @@
             </div>
             <div>
                 <button type="submit">Login</button>
+                <a href="{{action('Auth\AuthController@getRegister')}}">signup</a>
             </div>
         </form>
     </main>
