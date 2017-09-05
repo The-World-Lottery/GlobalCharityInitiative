@@ -16,7 +16,7 @@
 
 	<main class="container">
 		<h1>Edit User</h1>
-		<form method="POST" action="{{ action('UsersController@update', $User->id )}}">
+		<form method="POST" action="{{ action('UsersController@update' )}}">
 			{!! csrf_field() !!}
 			{{ method_field('PUT') }}
 			{!! $errors->first('title', '<span class="help-block">:message</span>')!!}
