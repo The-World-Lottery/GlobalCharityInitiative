@@ -72,7 +72,9 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        return view('Users.edit');
+        $User = \App\User::find($id);
+        $data['User'] = $User;
+        return view('Users.edit',$data);
     }
 
     /**

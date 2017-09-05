@@ -26,7 +26,6 @@ table, th, td {
 			<tr>
 			
 				<td><a href="{{action('UsersController@edit',$user['id'])}}" >{{$user['name']}}</a></td>
-			
 				<td>{{$user['username']}}</td>
 				<td>{{$user['email']}}</td>
 				<td>{{$user['id']}}</td>
