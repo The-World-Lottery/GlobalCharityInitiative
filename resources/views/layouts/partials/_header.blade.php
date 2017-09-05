@@ -11,7 +11,7 @@
 		<a class="navLink" href="{{action('RafflesController@index')}}">Raffles</a>
 		<a class="navLink" href="{{action('CurrencyConversionController@index')}}">Currency Conversions</a>
 		<a class="navLink" href="{{action('SuggestionsController@index')}}">Suggestion Box</a>
-		<a class="navLink" href="">About Us</a>
+		<a class="navLink" href="{{action('AboutUsController@index')}}">About Us</a>
 		@if (Auth::check())
     	<a class="navLink" href="{{action('UsersController@show')}}">Profile</a>
 		@else

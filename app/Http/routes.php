@@ -23,6 +23,7 @@ Route::resource('suggestions', 'SuggestionsController');
 Route::resource('user', 'UsersController');
 Route::resource('lotteries', 'LotterysController');
 Route::resource('raffles', 'RafflesController');
+Route::resource('aboutus', 'AboutUsController');
 
 // Login routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
