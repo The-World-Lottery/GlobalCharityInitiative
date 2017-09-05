@@ -51,6 +51,15 @@
 	text-align: center;
 }
 
+ul.pagination {
+	margin-top:1em;
+	max-height:1em;
+}
+
+.suggHead {
+	margin-top: 0;
+}
+
 @media screen and (max-width: 768px) {
 
 	.col-sm-4 {

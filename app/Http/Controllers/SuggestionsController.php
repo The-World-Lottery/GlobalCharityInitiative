@@ -84,7 +84,7 @@ class SuggestionsController extends Controller
             abort(404);
         }
 
-        $data['suggestion'] = $sugegstion;
+        $data['suggestion'] = $suggestion;
         return view('suggestions.show',$data);
     }
 

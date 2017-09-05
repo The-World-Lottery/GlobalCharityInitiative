@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('layouts.master');
 });
 
+Route::get('suggestions/userssuggestions','SuggestionsController@userssuggestions');
+Route::post('suggestions/upvote','SuggestionsController@upvote');
+Route::post('suggestions/downvote','SuggestionsController@downvote');
 Route::resource('suggestions', 'SuggestionsController');
 
 // Login routes...
