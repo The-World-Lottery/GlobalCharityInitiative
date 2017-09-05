@@ -6,6 +6,12 @@
 
 @stop
 
+@section('divHead')
+
+<span>Edit your suggestion</span>
+
+@stop
+
 @section('content')
 
 	<main class="container">

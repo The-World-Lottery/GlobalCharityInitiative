@@ -6,11 +6,17 @@
 
 @stop
 
+@section('divHead')
+
+<span>Edit Raffle #{!! $raffle->id !!} </span>
+
+@stop
+
 @section('content')
 
 	<main class="container">
 		<h1>Edit Raffle</h1>
-		<form method="POST" action="{{ action('RafflesController@update', $Raffle->id )}}">
+		<form method="POST" action="{{ action('RafflesController@update', $raffle->id )}}">
 			{!! csrf_field() !!}
 			{{ method_field('PUT') }}
 			{!! $errors->first('title', '<span class="help-block">:message</span>')!!}
@@ -22,7 +28,7 @@
 			<button>Submit</button>
 		</form>
 
-		<form method="Raffle" action="{{ action('RafflesController@destroy', $Raffle->id )}}">
+		<form method="Raffle" action="{{ action('RafflesController@destroy', $raffle->id )}}">
 		{!! csrf_field() !!}
 		{{ method_field('DELETE') }}
 		<button class="btn btn-warning">DELETE</button>

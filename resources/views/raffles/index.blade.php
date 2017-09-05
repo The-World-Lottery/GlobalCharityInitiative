@@ -6,6 +6,12 @@
 
 @stop
 
+@section('divHead')
+
+<span>All Raffles</span>
+
+@stop
+
 @section('content')
 
 	<main class="container">
