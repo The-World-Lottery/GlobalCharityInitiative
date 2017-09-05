@@ -14,11 +14,16 @@
 
 @section('content')
 
-	<main class="container">
-		<h1>About Us</h1>
-	
-
-
+	<main class="container" style="display:flex;justify-content:space-between;max-width:100%;">
+		<span class="aboutUs">
+			Our Mission
+		</span>
+		<span class="aboutUs">
+			About The World Lottery
+		</span>
+		<span class="aboutUs">
+			About the Creators
+		</span>
 	</main>
 
 @stop
