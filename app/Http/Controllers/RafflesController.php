@@ -16,7 +16,16 @@ class RafflesController extends Controller
      */
     public function index()
     {
-        //
+        // if($request->has('q')){
+        //     $q = $request->q;
+        //     $raffles = Raffle::search($q);    
+        // } else {
+        //     $raffles = Raffle::with('user')->paginate(6);  
+        // }
+        $data = [];
+
+        // $data['raffles']= $raffles;
+        return view('raffles.index',$data);
     }
 
     /**

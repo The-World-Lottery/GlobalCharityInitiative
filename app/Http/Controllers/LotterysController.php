@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\Lottery;
+use Log;
+use App\User;
+use DB;
 
 class LotterysController extends Controller
 {
@@ -14,9 +18,18 @@ class LotterysController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        // if($request->has('q')){
+        //     $q = $request->q;
+        //     $lotterys = Lottery::search($q);
+        // } else {
+        //     $lotterys = Lottery::with('user')->paginate(6);  
+        // }
+        $data = [];
+
+        // $data['lotterys']= $lotterys;
+        return view('lotterys.index',$data);
     }
 
     /**
