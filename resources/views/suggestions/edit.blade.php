@@ -10,7 +10,7 @@
 
 	<main class="container">
 		<h1>Edit Suggestion</h1>
-		<form method="Suggestion" action="{{ action('SuggestionsController@update', $Suggestion->id )}}">
+		<form method="POST" action="{{ action('SuggestionsController@update', $Suggestion->id )}}">
 			{!! csrf_field() !!}
 			{{ method_field('PUT') }}
 			{!! $errors->first('title', '<span class="help-block">:message</span>')!!}
