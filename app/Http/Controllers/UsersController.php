@@ -45,9 +45,11 @@ class UsersController extends Controller
         //     'password' => 'required|confirmed|min:6'
         //     'image'=>'max:255',
         //     'phone_number'=>'required|min:10'
-    //);
+    // );
 
-   $this->validate($request, $rules);
+//    $this->validate($request, $rules);
+
+
     }
 
     /**
@@ -70,7 +72,7 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('Users.edit');
     }
 
     /**
