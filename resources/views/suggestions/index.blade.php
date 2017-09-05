@@ -14,11 +14,11 @@
 
 		@foreach($suggestions as $suggestion)
 			<h1>{{$suggestion->title}}</h1>
-			{{-- <a href="{{action('suggestionsController@upvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
-            <a href="{{action('suggestionsController@downvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-down"></span></a> --}}
+			<a href="{{action('SuggestionsController@upvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
+            <a href="{{action('SuggestionsController@downvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-down"></span></a>
 			<p>{{$suggestion->content}}</p>
 			<p>By {{$suggestion->user->name}}</p>
-			{{-- <a href="{{ action('suggestionsController@show', $suggestion->id) }}">See More</a> --}}
+			<a href="{{ action('SuggestionsController@show', $suggestion->id) }}">See More</a>
 		@endforeach
 		<br>
 
