@@ -7,8 +7,8 @@
 
 <div class="row" id="links">
 	<div class="col col-xs-12 borderOpac" id="links">
-		<a class="navLink" href="">Lottos</a>
-		<a class="navLink" href="">Raffles</a>
+		<a class="navLink" href="{{action('LotterysController@index')}}">Lottos</a>
+		<a class="navLink" href="{{action('RafflesController@index')}}">Raffles</a>
 		<a class="navLink" href="">Currency Conversions</a>
 		<a class="navLink" href="{{action('SuggestionsController@index')}}">Suggestion Box</a>
 		<a class="navLink" href="">About Us</a>

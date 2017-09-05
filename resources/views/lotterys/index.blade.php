@@ -18,7 +18,7 @@
 		<h1>All Lotteries</h1>
 	
 
-		@foreach($lotterys as $lottery)
+{{-- 		@foreach($lotterys as $lottery)
 			<h1>{{$lottery->title}}</h1>
 			<a href="{{action('LotterysController@upvote',$lottery->id)}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
             <a href="{{action('LotteryController@downvote',$lottery->id)}}"><span class="glyphicon glyphicon-thumbs-down"></span></a>
@@ -29,7 +29,7 @@
 		<br>
 
 	
-		{!! $lotterys->appends(Request::except('page'))->render() !!}
+		{!! $lotterys->appends(Request::except('page'))->render() !!} --}}
 
 	</main>
 

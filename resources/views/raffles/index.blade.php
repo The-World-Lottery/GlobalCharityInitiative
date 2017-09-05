@@ -17,7 +17,7 @@
 	<main class="container">
 		<h1>All Raffles</h1>
 	
-
+{{-- 
 		@foreach($raffles as $raffle)
 			<h1>{{$raffle->title}}</h1>
 			<a href="{{action('rafflesController@upvote',$raffle->id)}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
@@ -29,7 +29,7 @@
 		<br>
 
 	
-		{!! $raffles->appends(Request::except('page'))->render() !!}
+		{!! $raffles->appends(Request::except('page'))->render() !!} --}}
 
 	</main>
 
