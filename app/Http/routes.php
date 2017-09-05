@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::get('suggestions/userssuggestions','SuggestionsController@userssuggestions');
 Route::get('/upvote/{id}','SuggestionsController@upvote');
 Route::get('/downvote/{id}','SuggestionsController@downvote');
+Route::resource('currencyconversion','CurrencyConversionController');
 Route::resource('suggestions', 'SuggestionsController');
 Route::resource('user', 'UsersController');
 Route::resource('lotteries', 'LotterysController');
