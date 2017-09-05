@@ -18,14 +18,22 @@
         <input type="text" name="name" value="{{ old('name') }}">
     </div>
 
-    <div>
-        Username
-        <input type="text" name="username" value="{{ old('username') }}">
-    </div>
 
     <div>
         Email
         <input type="email" name="email" value="{{ old('email') }}">
+    </div>
+    <div>
+        Username
+        <input type="text" name="username" value="{{ old('username') }}">
+    </div>
+    <div>
+        Phone Number
+        <input type="text" name="phone_number" value="{{ old('phone_number') }}">
+    </div>
+    <div>
+        Profile Image
+        <input type="text" name="image" value="{{ old('image') }}">
     </div>
 
     <div>
