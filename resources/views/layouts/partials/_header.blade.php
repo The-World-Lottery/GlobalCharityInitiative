@@ -12,6 +12,11 @@
 		<a class="navLink" href="">Currency Conversions</a>
 		<a class="navLink" href="{{action('SuggestionsController@index')}}">Suggestion Box</a>
 		<a class="navLink" href="">About Us</a>
-		<a class="navLink" href="{{action('Auth\AuthController@getLogin')}}">Profile</a>
+		@if (Auth::check())
+    	<a class="navLink" href="{{action('UsersController@show')}}">Profile</a>
+		@else
+    	<a class="navLink" href="{{action('Auth\AuthController@getLogin')}}">Login</a>
+		@endif
+		
 	</div>
 </div>

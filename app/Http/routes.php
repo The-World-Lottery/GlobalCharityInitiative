@@ -19,6 +19,7 @@ Route::get('suggestions/userssuggestions','SuggestionsController@userssuggestion
 Route::get('/upvote/{id}','SuggestionsController@upvote');
 Route::get('/downvote/{id}','SuggestionsController@downvote');
 Route::resource('suggestions', 'SuggestionsController');
+Route::resource('user', 'UsersController');
 
 // Login routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');

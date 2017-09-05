@@ -2,15 +2,15 @@
 
 @section('title')
 
-<title>Edit Raffle</title>
+<title>Edit Lottery</title>
 
 @stop
 
 @section('content')
 
 	<main class="container">
-		<h1>Edit Raffle</h1>
-		<form method="POST" action="{{ action('RafflesController@update', $Raffle->id )}}">
+		<h1>Edit Lottery</h1>
+		<form method="POST" action="{{ action('LotterysController@update', $lottery->id )}}">
 			{!! csrf_field() !!}
 			{{ method_field('PUT') }}
 			{!! $errors->first('title', '<span class="help-block">:message</span>')!!}
@@ -22,7 +22,7 @@
 			<button>Submit</button>
 		</form>
 
-		<form method="Raffle" action="{{ action('RafflesController@destroy', $Raffle->id )}}">
+		<form method="lottery" action="{{ action('LotterysController@destroy', $lottery->id )}}">
 		{!! csrf_field() !!}
 		{{ method_field('DELETE') }}
 		<button class="btn btn-warning">DELETE</button>
