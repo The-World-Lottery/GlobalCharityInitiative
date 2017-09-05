@@ -16,7 +16,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
+        $users = \App\User::paginate(16);
+        return view('users.index')->with(array('users' => $users));
     }
 
     /**
@@ -44,7 +45,7 @@ class UsersController extends Controller
         //     'password' => 'required|confirmed|min:6'
         //     'image'=>'max:255',
         //     'phone_number'=>'required|min:10'
-    );
+    //);
 
    $this->validate($request, $rules);
     }
