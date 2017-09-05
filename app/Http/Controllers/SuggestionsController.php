@@ -132,7 +132,7 @@ class SuggestionsController extends Controller
 
 
 
-        dd(DB::table('votes')->select('vote')->where('suggestion_id',$suggestion_id)->sum('vote'));
+        // dd(DB::table('votes')->select('vote')->where('suggestion_id',$suggestion_id)->sum('vote'));
 
 
         $currVotes = Vote::where('suggestion_id',$id)->where('user_id',$user_id)->get();
