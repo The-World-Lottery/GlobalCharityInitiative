@@ -10,6 +10,8 @@
 	<link rel="stylesheet" type="text/css" href="/main.css">
 </head>
 <body>
+{{ (Auth::check()) ? "User Is Logged IN" : "User is logged OUT" }}
+  {{Auth::user()}}
 	<div class="container">
 		@include('layouts.partials._header')
 		<div class="row" id="main">
