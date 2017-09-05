@@ -46,7 +46,8 @@ class UsersController extends Controller
         //     'phone_number'=>'required|min:10'
     // );
 
-   $this->validate($request, $rules);
+//    $this->validate($request, $rules);
+
     }
 
     /**
