@@ -6,10 +6,15 @@
 
 @stop
 
+@section('divHead')
+
+<span>Sign up for an account</span>
+
+@stop
+
 @section('content')
 
  	<main class="container">
- 	<h1>Register</h1>
         <form method="POST" action="/auth/register">
     {!! csrf_field() !!}
 
