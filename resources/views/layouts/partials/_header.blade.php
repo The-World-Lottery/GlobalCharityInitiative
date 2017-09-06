@@ -1,16 +1,18 @@
 <div class="row" id="header">
 	<div class="col col-xs-12 borderOpac" id="head">
 		<div class="row">
-			<div class="col-xs-6">
-				<h2>The World Lottery Logo Here</h2>
+			<div class="col-sm-6">
+				<h2 id="headLogo">The World Lottery Logo Here</h2>
+				<h4 style="color:lightgreen">Current value of world lottery $$$$</h4>
 			</div>
-			<div class="col-xs-6">
+			<div class="col-sm-6">
 				@if (Auth::check())
-				<span style="float:right;margin-top: 2em;">{{Auth::user()->name}}</span>
-				<img src="{{Auth::user()->image}}" id="profImg" class="img-circle">
+					<span class="headUN">{{Auth::user()->name}}</span>
+					<div class="img-circle">
+						<img src='{{substr(Auth::user()->image,1,-1)}}' id="profImg">
+					</div>
 				@else
-				<span style="float:right;margin-top: 2em;">Not Logged In</span>
-				<img src="" id="nonProfImg" class="img-circle">
+					<span class="headUN">Not Logged In</span>
 				@endif
 			</div>
 			
@@ -29,7 +31,7 @@
 		@if (Auth::check())
     	<a class="navLink" href="{{action('UsersController@show')}}">Profile</a>
 		@else
-    	<a class="navLink" href="{{action('Auth\AuthController@getLogin')}}">Login</a>
+    	<a class="navLink" href="{{action('Auth\AuthController@getLogin')}}">Login/Register</a>
 		@endif	
 	</div>
 </div>

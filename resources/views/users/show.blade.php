@@ -14,16 +14,16 @@
 
 @section('content')
 
-	<main class="container" style="max-width:100%;float:left;">
+	<main class="container" style="max-width:100%;float:left;display:flex;justify-content: center;">
+		<div style="padding-top: 2em;">
+			<div id="showProfImg"><img src='{{substr(Auth::user()->image,1,-1)}}' id="profImg"></div>
+			<div><strong>Name:</strong> {{Auth::user()->name}}</div>
+			<div><strong>Email:</strong> {{Auth::user()->email}}</div>
+			<div><strong>User Name:</strong> {{Auth::user()->username}}</div>
+			<div><strong>Member since:</strong> {{Auth::user()->created_at}}</div>
 
-		<div>Name: {{Auth::user()->name}}</div>
-		<div>Email: {{Auth::user()->email}}</div>
-		<div>User Name: {{Auth::user()->username}}</div>
-		<div>Member since: {{Auth::user()->created_at}}</div>
-		
-
-
-		<a href="{{action('Auth\AuthController@getLogout')}}">Logout</a>
+			<a href="{{action('Auth\AuthController@getLogout')}}"><button class="btn btn-primary">Logout</button></a>
+		</div>
 
 	</main>
 

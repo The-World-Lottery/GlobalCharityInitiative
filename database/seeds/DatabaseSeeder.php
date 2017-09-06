@@ -18,10 +18,14 @@ class DatabaseSeeder extends Seeder
 
         DB::table('suggestions')->truncate();
         DB::table('users')->truncate();
+        DB::table('lotterys')->truncate();
+        DB::table('raffles')->truncate();
 
 
         $this->call('UsersTableSeeder');
         $this->call('SuggestionsTableSeeder');
+        $this->call('RafflesTableSeeder');
+        $this->call('LotteryTableSeeder');
 
         DB::statement('SET FOREIGN_KEY_CHECKS=1');
 
