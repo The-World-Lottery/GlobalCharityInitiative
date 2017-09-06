@@ -2,7 +2,8 @@
 	<div class="col col-xs-12 borderOpac" id="head">
 		<div class="row">
 			<div class="col-sm-6">
-				<h2>The World Lottery Logo Here</h2>
+				<h2 id="headLogo">The World Lottery Logo Here</h2>
+				<h4 style="color:lightgreen">Current value of world lottery $$$$</h4>
 			</div>
 			<div class="col-sm-6">
 				@if (Auth::check())
