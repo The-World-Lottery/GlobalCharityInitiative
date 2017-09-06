@@ -11,7 +11,7 @@
 </head>
 <body>
 {{ (Auth::check()) ? "User Is Logged IN" : "User is logged OUT" }}
-  {{Auth::user()}}
+{{ Auth::user() }}
 	<div class="container">
 		@include('layouts.partials._header')
 		<div class="row" id="main">
@@ -22,8 +22,12 @@
 				</div>
 			</div>
 			<div class="col col-sm-4 col-xs-12 gameAndChatInfo chatInfoContSpacing">
-				<div class="chatInfoMargins borderOpac" id="chat"><div class="areaHeaders">Chat</div></div>
-				<div class="chatInfoMargins borderOpac" id="info"><div class="areaHeaders">Info</div></div>
+				<div class="chatInfoMargins borderOpac" id="chat">
+					<div class="areaHeaders">Chat</div>
+				</div>
+				<div class="chatInfoMargins borderOpac" id="info">
+					<div class="areaHeaders">Info</div>
+				</div>
 			</div>
 		</div>
 		@include('layouts.partials._footer')
