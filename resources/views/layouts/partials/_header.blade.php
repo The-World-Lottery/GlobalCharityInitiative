@@ -16,7 +16,6 @@
     	<a class="navLink" href="{{action('UsersController@show')}}">Profile</a>
 		@else
     	<a class="navLink" href="{{action('Auth\AuthController@getLogin')}}">Login</a>
-		@endif
-		
+		@endif	
 	</div>
 </div>
