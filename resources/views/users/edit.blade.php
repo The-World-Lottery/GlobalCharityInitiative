@@ -22,28 +22,66 @@
 
 
 			{!! $errors->first('name', '<span class="help-block">:message</span>')!!}
+			
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" >
-				<p style="text-align: left"> <span style="padding-right:40%"><strong>Name</strong></span>{{$User->name}}<span class="glyphicon glyphicon-pencil" style= "padding-left:40%">Edit</span></p>
+				<div class="row">	
+					<div class="col-xs-4">
+					 	<strong>Name</strong>
+					</div>					
+					<div class="col-xs-4">
+						{{$User->name}}
+					</div>
+					<div class="col-xs-4">
+						<span class="glyphicon glyphicon-pencil">Edit</span>
+					</div>
+				</div>
 			</a>
 			<div class="collapse" id="collapseOne">
-				<input type="text" name="name" id="name" value="{{$User->name}}" placeholder="{{$User->name}}">
+				<div class="panel-body">
+					<input class="form-control text-center" type="text" name="name" id="name" value="{{$User->name}}" placeholder="{{$User->name}}">
+				</div>
 			</div>
-
+			
 
 			{!! $errors->first('username', '<span class="help-block">:message</span>')!!}
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" >
-				<p style="text-align: left"> <span style="padding-right:40%"><strong>User Name</strong></span>{{$User->username}}<span class="glyphicon glyphicon-pencil" style= "padding-left:40%">Edit</span></p>
+				<div class="row">
+					 <div class="col-xs-4">
+					 	<strong>User Name</strong>
+					</div>
+					<div class="col-xs-4">
+					 	{{$User->username}}
+					</div>
+					<div class="col-xs-4">
+					 	<span class="glyphicon glyphicon-pencil">Edit</span>
+					</div>
+				</div>
 			</a>
 			<div class="collapse" id="collapseTwo">
-				<input type="text" name="username" id="username" value="{{$User->username}}" placeholder="username">
+				<div class="panel-body">
+					<input class="form-control text-center" type="text" name="username" id="username" value="{{$User->username}}" placeho
+					lder="username">
+				</div>
 			</div>
 
 			{!! $errors->first('email', '<span class="help-block">:message</span>')!!}
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" >
-				<p style="text-align: left"> <span style="padding-right:40%"><strong>Email</strong></span>{{$User->email}}<span class="glyphicon glyphicon-pencil" style= "padding-left:40%">Edit</span></p>
+				<div class="row">
+					 <div class="col-xs-4">
+					 	<strong>Email</strong>
+					</div>
+					<div class="col-xs-4">
+					 	{{$User->email}}
+					</div>
+					<div class="col-xs-4">
+					 	<span class="glyphicon glyphicon-pencil">Edit</span>
+					</div>
+				</div>
 			</a>
 			<div class="collapse" id="collapseThree">
-				<input type="text" name="email" id="email" value="{{$User->email}}" placeholder="email">
+				<div class="panel-body">
+					<input class="form-control text-center" type="text" name="email" id="email" value="{{$User->email}}" placeholder="email">
+				</div>
 			</div>
 
 
@@ -55,10 +93,22 @@
 
 			{!! $errors->first('phone_number', '<span class="help-block">:message</span>')!!}
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour" >
-				<p style="text-align: left"> <span style="padding-right:40%"><strong>Phone Number</strong></span>{{$User->email}}<span class="glyphicon glyphicon-pencil" style= "padding-left:40%">Edit</span></p>
+				<div class="row">
+					 <div class="col-xs-4">
+					 	<strong>Phone Number</strong>
+					</div>
+					<div class="col-xs-4">
+					 	{{$User->phone_number}}
+					</div>
+					<div class="col-xs-4">
+					 	<span class="glyphicon glyphicon-pencil">Edit</span>
+					</div>
+				</div>
 			</a>
 			<div class="collapse" id="collapseFour">
-				<input type="text" name="phone_number" id="phone_number" value="{{$User->phone_number}}" placeholder="phone_number">
+				<div class="panel-body">
+					<input class="form-control text-center" type="text" name="phone_number" id="phone_number" value="{{$User->phone_number}}" placeholder="phone_number">
+				</div>
 			</div>
 
 
