@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLotterysTable extends Migration
+class CreateLotteriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreateLotterysTable extends Migration
      */
     public function up()
     {
-         Schema::create('lotterys', function (Blueprint $table) {
+         Schema::create('lotteries', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
             $table->string('content');
@@ -32,6 +32,6 @@ class CreateLotterysTable extends Migration
      */
     public function down()
     {
-        Schema::drop('lotterys');
+        Schema::drop('lotteries');
     }
 }
