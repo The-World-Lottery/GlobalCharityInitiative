@@ -25,7 +25,7 @@ class SuggestionsController extends Controller
             $q = $request->q;
             $suggestions = Suggestion::search($q);    
         } else {
-            $suggestions = Suggestion::with('user')->paginate(6);  
+            $suggestions = Suggestion::with('user')->paginate(5);  
         }
 
 

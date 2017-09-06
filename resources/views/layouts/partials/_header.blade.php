@@ -12,9 +12,6 @@
 					</div>
 				@else
 					<span class="headUN">Not Logged In</span>
-					<div class="img-circle">
-						<img src="" id="nonProfImg">
-					</div>
 				@endif
 			</div>
 			
@@ -33,7 +30,7 @@
 		@if (Auth::check())
     	<a class="navLink" href="{{action('UsersController@show')}}">Profile</a>
 		@else
-    	<a class="navLink" href="{{action('Auth\AuthController@getLogin')}}">Login</a>
+    	<a class="navLink" href="{{action('Auth\AuthController@getLogin')}}">Login/Register</a>
 		@endif	
 	</div>
 </div>
