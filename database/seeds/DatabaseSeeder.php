@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
 
         DB::table('suggestions')->truncate();
         DB::table('users')->truncate();
+        DB::table('lotterys')->truncate();
+        DB::table('raffles')->truncate();
 
 
         $this->call('UsersTableSeeder');
