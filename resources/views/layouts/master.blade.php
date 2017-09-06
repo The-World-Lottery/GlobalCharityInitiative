@@ -16,7 +16,7 @@
 		@include('layouts.partials._header')
 		<div class="row" id="main">
 			<div class="col col-sm-8 col-xs-12 borderOpac gameAndChatInfo" id="gameArea">
-				<div class="areaHeaders">@yield('divHead')</div>
+				<div class="areaHeader">@yield('divHead')</div>
 				<div>
 					@yield('content')
 				</div>
