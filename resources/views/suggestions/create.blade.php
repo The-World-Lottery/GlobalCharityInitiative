@@ -14,16 +14,21 @@
 
 @section('content')
 
-	<main class="container">
+	<main class="container" style="max-width:100%;float:left;">
 		<form method="POST" action="{{ action('SuggestionsController@store') }}">
 			{!! csrf_field() !!}
 			{!! $errors->first('title', '<span class="help-block">:message</span>')!!}
-			<input type="text" name="title" id="title" value="{{ old('title') }}" placeholder="title">
+
+			<input class="form-control" type="text" name="title" id="title" value="{{ old('title') }}" placeholder="title">
+
+
 			{!! $errors->first('content', '<span class="help-block">:message</span>')!!}
-			<input type="text" name="content" id="content" value="{{ old('content') }}" placeholder="content">
-			{!! $errors->first('url', '<span class="help-block">:message</span>')!!}
-			<input type="text" name="url" id="url" value="{{ old('url') }}" placeholder="url">
-			<button>Submit</button>
+
+			
+			<textarea class="form-control" type="text" name="content" id="content" placeholder="content">{{ old('content') }}</textarea>
+
+
+			<button class="btn btn-primary">Submit</button>
 		</form>
 	</main>
 @stop
