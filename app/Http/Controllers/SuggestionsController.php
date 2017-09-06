@@ -174,7 +174,7 @@ class SuggestionsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, Suggestion::$rules);
+        // $this->validate($request, Suggestion::$rules);
 
         $suggestion = Suggestion::find($id);
 
@@ -184,11 +184,9 @@ class SuggestionsController extends Controller
 
         $suggestion->title = $request->title;
         $suggestion->content =$request->content;
-        $suggestion->url =$request->url;
-        $suggestion->user_id = 1;
         $suggestion->save();
 
-        $request->session()->flash('successMessage', 'Suggestion updated');
+        // $request->session()->flash('successMessage', 'Suggestion updated');
 
         return \Redirect::action('SuggestionsController@show', $suggestion->id);
     }
