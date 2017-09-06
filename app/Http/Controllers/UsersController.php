@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\User;
 
 class UsersController extends Controller
 {
@@ -16,7 +17,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users = \App\User::paginate(16);
+        $users = User::paginate(16);
         return view('users.index')->with(array('users' => $users));
     }
 
@@ -72,7 +73,7 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        $User = \App\User::find($id);
+        $User = User::find($id);
         $data['User'] = $User;
         return view('Users.edit',$data);
     }
@@ -86,7 +87,20 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        // $this->validate($request, Post::$rules);
+        $user = User::findOrFail($id);
+        $user->name = $request->name;
+        $user->username = $request->username;
+        $user->email = $request->email;
+        $user->phone_number = $request->phone_number;
+        // $user->user_id = \Auth::id();
+        $user->save();
+        // $request->session()->flash('successMessage', 'Your Post was a successfully updated!');
+        
+        return \Redirect::action('UsersController@index');
+
+
     }
 
     /**
