@@ -1,6 +1,12 @@
 <div class="row" id="header">
 	<div class="col col-xs-12 borderOpac" id="head">
-		
+	
+		@if (Auth::check())
+		<img src='{{substr(Auth::user()->image, 1, -1)}}' id="profImg" class="img-circle">
+		<span style="float:right;">{{Auth::user()->username}}</span>
+
+
+		@endif
 	</div>
 </div>
 
