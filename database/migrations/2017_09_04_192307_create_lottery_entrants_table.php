@@ -17,7 +17,7 @@ class CreateLotteryEntrantsTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->integer('lottery_id')->unsigned();
-            $table->foreign('lottery_id')->references('id')->on('lotterys');
+            $table->foreign('lottery_id')->references('id')->on('lotteries');
             $table->timestamps();
         });
     }
