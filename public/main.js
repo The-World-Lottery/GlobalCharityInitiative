@@ -5,9 +5,10 @@ $(document).ready(function(){
 	// 	$(this).css("background-color","black");
 	// });
 
+	//filestack js for click on register
 	var client = filestack.init('A5gY0fZEnTzWuvzsVI5Ttz');
  
-	 $('#filestackButton').click(function(){
+	$('#filestackButton').click(function(){
 	    client.pick({
 	      accept: 'image/*',
 	      maxFiles: 1,
@@ -16,9 +17,11 @@ $(document).ready(function(){
 	      
 	      var $imageUrl = JSON.stringify(result.filesUploaded[0].url);
 
-	      // console.log(JSON.stringify(result));
-
 	    $('#img').val($imageUrl);
 	  });
-	})
+	});
+
+
+
+
 });

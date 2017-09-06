@@ -72,10 +72,11 @@ ul.pagination {
 	padding:1em;
 }
 
-#profImg{
-	width:10%;
-	height: 100%;
+.imgCircle {
+	height:3em;
+	width:3em;
 	float: right;
+	background-color: black;
 }
 
 
