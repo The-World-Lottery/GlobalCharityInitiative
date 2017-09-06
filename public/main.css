@@ -72,6 +72,11 @@ ul.pagination {
 	padding:1em;
 }
 
+#profImg{
+	width:10%;
+	height: 100%;
+	float: right;
+}
 
 
 @media screen and (max-width: 768px) {
