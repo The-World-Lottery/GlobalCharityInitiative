@@ -60,6 +60,12 @@ ul.pagination {
 	margin-top: 0;
 }
 
+.aboutUs {
+	border:1px solid black;
+	border-top:0;
+	padding:1em;
+}
+
 @media screen and (max-width: 768px) {
 
 	.col-sm-4 {
