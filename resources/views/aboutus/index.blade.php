@@ -20,9 +20,32 @@
 	<div style="padding:1em;">
 	<div class="tab-content">
 	  <div id="home" class="tab-pane fade in active">
-	    <h3>HOME</h3>
-	    <p>Some content.</p>
-	  </div>
+	    <p>Our mission is to eliminate the man power that is usually necessary for fund-raising, for all types of worth-while charities and human interest projects by providing massive monetary donations (from The World Lottery Foundation) directly to the source of the charitable work. We will accomplish this by running a large number of simultaneous lotteries and raffles whose ticket prices will be split thusly.</p>
+	    <ul>
+		    <li>Lottery Ticket Price
+		    	<ul>
+		    		<li>40% to the current lottery's pool.</li>
+		    		<li>30% to The World Lottery Foundation.</li>
+		    		<li>25% to The World Lottery's Pool.</li>
+		    		<li>5% max to the payment system.</li>
+		    	</ul>
+		    </li>
+		    <li>Raffle Ticket Price
+		    	<ul>
+		    		<li>50% to The World Lottery Foundation.</li>
+	    			<li>45% to The World Lottery's Pool.</li>
+	    			<li>5% max to the payment system.</li>
+		    	</ul>
+		    </li>
+		    <li>The World Lottery Ticket Price
+		    	<ul>
+	    			<li>50% to The World Lottery Foundation.</li>
+	    			<li>45% to The World Lottery's Pool.</li>
+	    			<li>5% max to the payment system.</li>	
+		    	</ul>
+		    </li>
+	    </ul>
+	</div>
 	  <div id="menu1" class="tab-pane fade">
 	    <h3>Menu 1</h3>
 	    <p>Some content in menu 1.</p>
