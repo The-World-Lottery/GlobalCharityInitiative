@@ -15,15 +15,16 @@
 @section('content')
 
 	<main class="container" style="display:flex;justify-content:space-between;max-width:100%;">
-		<span class="aboutUs" id="about1">
+		<a href="" class="aboutUs" id="about1">
 			Our Mission
-		</span>
-		<span class="aboutUs" id="about2">
+		</a>
+		<a href="" class="aboutUs" id="about2">
 			About The World Lottery
-		</span>
-		<span class="aboutUs" id="about3">
-			About the Creators
-		</span>
+		</a>
+		<a href="" class="aboutUs" id="about3">
+			The Creators
+		</a>
 	</main>
+	<hr style="margin:0;color:black;">
 
 @stop
