@@ -6,5 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Lottery extends Model
 {
-    //
+    protected $fillable = ['title', 'content','init_value','end_date'];
+
+    public function user(){
+   	return $this->belongsTo('App\User','user_id');
+   }
 }
