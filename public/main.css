@@ -76,7 +76,7 @@ ul.pagination {
 	height:3em;
 	width:3em;
 	margin-top: 1em;
-	background-color: black;
+	margin-bottom: 1em;
 	float:right;
 }
 
@@ -90,6 +90,15 @@ ul.pagination {
 img {
 	max-width:100%;
 	max-height:100%;
+}
+
+#showProfImg {
+	max-height: 15em;
+	max-width:15em;
+}
+
+#headLogo {
+	margin-top: 10px;
 }
 
 
