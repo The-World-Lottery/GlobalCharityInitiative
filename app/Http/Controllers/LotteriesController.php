@@ -11,7 +11,7 @@ use Log;
 use App\User;
 use DB;
 
-class LotterysController extends Controller
+class LotteriesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,10 +26,13 @@ class LotterysController extends Controller
         // } else {
         //     $lotterys = Lottery::with('user')->paginate(6);  
         // }
-        $data = [];
+
+        $lotteries = Lottery::paginate(16);
+        return view('lotteries.index')->with(array('lotteries' => $lotteries));
+       
 
         // $data['lotterys']= $lotterys;
-        return view('lotterys.index',$data);
+        return view('lotteries.index',$data);
     }
 
     /**
