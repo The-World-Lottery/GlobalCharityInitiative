@@ -1,18 +1,20 @@
 @extends('layouts.master')
 
-@section('title')
-
-<title>All Suggestions</title>
-
-@stop
 
 @section('divHead')
+<ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
+  <li class="active"><a href="{{action('SuggestionsController@index')}}">All Suggestions</a></li>
+  <li><a href="{{action('SuggestionsController@highest')}}">Top 5 Suggestions</a></li>
+  <li><a href="{{action('SuggestionsController@create')}}">Add a Suggestion</a></li>
+   <li><a href="{{action('SuggestionsController@userssuggestions')}}">Your Suggestions</a></li>
 
-<span>All Suggestions</span>
-
+</ul>
 @stop
 
+
+
 @section('content')
+	
 
 	<span style="float:right;padding-right:1em;">{!! $suggestions->appends(Request::except('page'))->render() !!}</span>
 	<main class="container" style="max-width:100%;float:left;">

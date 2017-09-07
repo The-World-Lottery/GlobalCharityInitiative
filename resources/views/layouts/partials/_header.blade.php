@@ -23,15 +23,26 @@
 
 <div class="row" id="links">
 	<div class="col col-xs-12 borderOpac" id="links">
-		<a class="navLink" href="{{action('LotterysController@index')}}">Lottos</a>
+		<a class="navLink" href="{{action('LotteriesController@index')}}">Lottos</a>
 		<a class="navLink" href="{{action('RafflesController@index')}}">Raffles</a>
 		<a class="navLink" href="{{action('CurrencyConversionController@index')}}">Currency Conversions</a>
 		<a class="navLink" href="{{action('SuggestionsController@index')}}">Suggestion Box</a>
 		<a class="navLink" href="{{action('AboutUsController@index')}}">About Us</a>
 		@if (Auth::check())
-    	<a class="navLink" href="{{action('UsersController@show')}}">Profile</a>
+    	<a class="navLink" href="{{action('UsersController@show' , Auth::id())}}">Profile</a>
 		@else
     	<a class="navLink" href="{{action('Auth\AuthController@getLogin')}}">Login/Register</a>
 		@endif	
 	</div>
 </div>
+@if(Auth::check() && Auth::user()->is_admin)
+<div class="row" id="links">
+	<div class="col col-xs-12 borderOpac" id="links">
+		<a class="navLink" href="{{action('LotteriesController@create')}}">Create Lottery</a>
+		<a class="navLink" href="{{action('RafflesController@create')}}">Create Raffle</a>
+		<a class="navLink" href="{{action('UsersController@index')}}">Manage Users</a>
+		<a class="navLink" href="">Manage Suggestions</a>
+	
+	</div>
+</div>
+@endif

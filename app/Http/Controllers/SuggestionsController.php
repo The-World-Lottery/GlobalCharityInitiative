@@ -86,8 +86,10 @@ class SuggestionsController extends Controller
         return view('suggestions.show',$data);
     }
 
-    public function userssuggestions($id)
+    public function userssuggestions()
     {   
+        $id = \Auth::id();
+
         if(User::find($id) ===null)
         {
             abort(404);
@@ -95,8 +97,51 @@ class SuggestionsController extends Controller
 
         $suggestions = User::find($id)->suggestions;
 
-        $data['suggstions'] = $suggestions;
-        return view('suggstions.userssuggestions',$data);
+        $data['suggestions'] = $suggestions;
+        return view('suggestions.userssuggestions',$data);
+    }
+
+    public function highest()
+    {
+        
+        // $votes = DB::table('votes')
+        //              ->select(DB::raw('count(*) as total, suggestion_id'))
+        //              ->groupBy('suggestion_id')
+        //              ->orderBy('total','desc')
+        //              ->take(5)
+        //              ->get();
+
+        // $suggIds = [];
+
+        // foreach($votes as $vote){
+            
+        //     $suggIds[] = $vote->suggestion_id;
+
+        // }
+
+        // $suggestions = Suggestion::where('id',$suggIds[0])->orWhere('id',$suggIds[1])->orWhere('id',$suggIds[2])->orWhere('id',$suggIds[3])->orWhere('id',$suggIds[4])->get();
+
+        // $suggestions = Suggestion::whereIn('id', $suggIds);
+
+        $suggestions = DB::table('suggestions')
+                    ->leftJoin('votes', 'votes.suggestion_id', '=', 'suggestions.id')
+                    ->select(DB::raw('count(votes.id) as totalvotes, votes.suggestion_id, suggestions.id'))
+                    ->groupBy('votes.suggestion_id')
+                    ->orderBy('totalvotes', 'desc')
+                    ->take(5)
+                    ->get();
+
+        $suggObjs = array();
+        foreach ($suggestions as $suggest) {
+            $suggObjs[] = Suggestion::find($suggest->id);
+        }
+
+        // foreach ($suggestions as $suggestion) {
+        //     var_dump($suggestion->title);
+        // }
+
+        $data['suggestions']= $suggObjs;
+        return view('suggestions.highest', $data);
     }
 
     /**
@@ -125,10 +170,9 @@ class SuggestionsController extends Controller
         $suggestion = Suggestion::find($id);
         $user_id = \Auth::id();
         $suggestion_id = Suggestion::find($id)->id;
-        $voteCount = Vote::select('vote')->where('suggestion_id',$suggestion_id)->get()->count();
 
-
-
+        
+        // $voteCount = Vote::select('suggestion_id')->groupBy('suggestion_id')->orderBy('')->get();
 
         // dd(DB::table('votes')->select('vote')->where('suggestion_id',$suggestion_id)->sum('vote'));
 

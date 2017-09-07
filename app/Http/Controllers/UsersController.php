@@ -17,8 +17,11 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(16);
-        return view('users.index')->with(array('users' => $users));
+        if(\Auth::user()->is_admin){
+            $users = User::paginate(16);
+            return view('users.index')->with(array('users' => $users));    
+        }
+        return \Redirect::action('LotteriesController@index');
     }
 
     /**
@@ -62,7 +65,15 @@ class UsersController extends Controller
     public function show($id)
     {
         
-         return view('Users.show');
+        $user = User::find($id);
+
+        if(!$user){
+            abort(404);
+        }
+
+        $data['user'] = $user;
+        return view('users.show',$data);
+
     }
 
     /**
@@ -73,9 +84,14 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        $User = User::find($id);
-        $data['User'] = $User;
-        return view('Users.edit',$data);
+        if(\Auth::id() == $id || \Auth::user()->is_admin){
+            $User = User::find($id);
+            $data['User'] = $User;
+            return view('Users.edit',$data);
+        }
+
+        return \Redirect::action('LotteriesController@index');
+
     }
 
     /**
@@ -98,7 +114,7 @@ class UsersController extends Controller
         $user->save();
         // $request->session()->flash('successMessage', 'Your Post was a successfully updated!');
         
-        return \Redirect::action('UsersController@index');
+       return \Redirect::action('LotteriesController@index');
 
 
     }

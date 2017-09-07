@@ -59,7 +59,7 @@
 			</a>
 			<div class="collapse" id="collapseTwo">
 				<div class="panel-body">
-					<textarea class="form-control text-center" type="text" name="content" id="content" placeholder="content">{{$suggestion->content}}</textarea>
+					<textarea class="form-control text-left" type="text" name="content" id="content" placeholder="content">{{$suggestion->content}}</textarea>
 				</div>
 			</div>
 

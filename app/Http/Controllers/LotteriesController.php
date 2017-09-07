@@ -3,11 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \App\Models\Raffle As RiffRaff;
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\Lottery;
+use Log;
+use App\User;
+use DB;
 
-class RafflesController extends Controller
+class LotteriesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,16 +20,19 @@ class RafflesController extends Controller
      */
     public function index(Request $request)
     {
-        if($request->has('q')){
-            $q = $request->q;
-            $raffles = RiffRaff::search($q);    
-        } else {
-            $raffles = RiffRaff::with('user')->paginate(6);  
-        }
-        
+        // if($request->has('q')){
+        //     $q = $request->q;
+        //     $lotterys = Lottery::search($q);
+        // } else {
+        //     $lotterys = Lottery::with('user')->paginate(6);  
+        // }
 
-        $data['raffles']= $raffles;
-        return view('raffles.index',$data);
+        $lotteries = Lottery::paginate(16);
+        return view('lotteries.index')->with(array('lotteries' => $lotteries));
+       
+
+        // $data['lotterys']= $lotterys;
+        return view('lotteries.index',$data);
     }
 
     /**
@@ -35,7 +42,7 @@ class RafflesController extends Controller
      */
     public function create()
     {
-        return view('raffles.create');
+        return view('lotteries.create');
     }
 
     /**
@@ -46,24 +53,26 @@ class RafflesController extends Controller
      */
     public function store(Request $request)
     {
+        // $this->validate($request, Suggestion::$rules);
+
         $title = $request->input('title');
         $content = $request->input('content');
-        $end_date = $request->input('end-date');
-        $product = $request->input('product');
-        $date = \DateTime::createFromFormat('n/j/Y', $end_date);
-        $end_date = $date->format('Y-m-d H:i:00');
-        $raffle = new RiffRaff();
-        $raffle->title = $title;
-        $raffle->content = $content;
-        $raffle->product = $product;
-        $raffle->end_date = $end_date;
-        $raffle->user_id = \Auth::id();
-        if(\Auth::user()->is_admin){
-            $raffle->save();
-        }
+        $init_value = $request->input('init_value');
+        $end_date = $request->input('end_date');
+        $lottery = new Lottery();
+        $lottery->title = $title;
+        $lottery->content = $content;
+        $lottery->init_value = $init_value;
+        $lottery->current_value = $init_value;
+        $lottery->end_date = $end_date;
+        $lottery->user_id = \Auth::id();
+        $lottery->save();
 
-        return redirect()->action('RafflesController@show',$raffle->id);
-    
+        // $request->session()->flash('successMessage', 'Suggestion created');
+
+        // Log::info("$title, $content, $url");
+
+        return redirect()->action('LotteriesController@index');
     }
 
     /**
@@ -74,14 +83,14 @@ class RafflesController extends Controller
      */
     public function show($id)
     {
-         $raffle = RiffRaff::find($id);
+        $lottery = Lottery::find($id);
 
-        if(!$raffle){
+        if(!$lottery){
             abort(404);
         }
 
-        $data['raffle'] = $raffle;
-        return view('raffles.show',$data);
+        $data['lottery'] = $lottery;
+        return view('lotteries.show',$data);
     }
 
     /**
@@ -92,17 +101,18 @@ class RafflesController extends Controller
      */
     public function edit($id)
     {
-         $raffle = RiffRaff::find($id);
+        $lottery = Lottery::find($id);
 
-        if(\Auth::id() == $raffle->user_id){ 
-            if(!$raffle){
+        if(\Auth::id() == $lottery->user_id){ 
+            if(!$lottery){
                 abort(404);
             }
-            $data['raffle'] = $raffle;
-            return view('Raffles.edit',$data);
+            $data['lottery'] = $lottery;
+            return view('lotteries.edit',$data);
         } else {
-            header('Location:/Raffles');
+            header('Location:/lotteries');
         }
+
     }
 
     /**
@@ -116,21 +126,21 @@ class RafflesController extends Controller
     {
         // $this->validate($request, Suggestion::$rules);
 
-        $raffle = Raffle::find($id);
+        $lottery = Lottery::find($id);
 
-        if(!$raffle){
+        if(!$lottery){
             abort(404);
         }
 
         $title = $request->input('title');
         $content = $request->input('content');
-        $product = $request->input('product');
+        $init_value = $request->input('init_value');
         $end_date = $request->input('end_date');
-        $raffle->title = $title;
-        $raffle->content = $content;
-        $raffle->product = $product;
-        $raffle->end_date = $end_date;
-        $raffle->save();
+        $lottery->title = $title;
+        $lottery->content = $content;
+        $lottery->init_value = $init_value;
+        $lottery->end_date = $end_date;
+        $lottery->save();
 
         // $request->session()->flash('successMessage', 'lottery updated');
 
@@ -146,9 +156,5 @@ class RafflesController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function runRaffle(){
-
     }
 }

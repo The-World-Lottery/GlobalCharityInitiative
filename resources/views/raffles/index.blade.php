@@ -16,6 +16,8 @@
 
 	<main class="container">
 		<h1>All Raffles</h1>
+
+		
 	
 
 		@foreach($raffles as $raffle)
