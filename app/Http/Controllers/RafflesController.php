@@ -114,7 +114,27 @@ class RafflesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // $this->validate($request, Suggestion::$rules);
+
+        $raffle = Raffle::find($id);
+
+        if(!$raffle){
+            abort(404);
+        }
+
+        $title = $request->input('title');
+        $content = $request->input('content');
+        $product = $request->input('product');
+        $end_date = $request->input('end_date');
+        $raffle->title = $title;
+        $raffle->content = $content;
+        $raffle->product = $product;
+        $raffle->end_date = $end_date;
+        $raffle->save();
+
+        // $request->session()->flash('successMessage', 'lottery updated');
+
+        return \Redirect::action('LotteriesController@show', $lottery->id);
     }
 
     /**

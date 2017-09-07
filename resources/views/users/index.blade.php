@@ -25,7 +25,7 @@ table, th, td {
 	@foreach($users as $user)
 			<tr>
 			
-				<td><a href="{{action('UsersController@edit',$user['id'])}}" >{{$user['name']}}</a></td>
+				<td><a href="{{action('UsersController@show',$user['id'])}}" >{{$user['name']}}</a></td>
 				<td>{{$user['username']}}</td>
 				<td>{{$user['email']}}</td>
 				<td>{{$user['id']}}</td>
