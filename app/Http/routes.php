@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('layouts.master');
 });
 
-Route::get('suggestions/userssuggestions','SuggestionsController@userssuggestions');
+Route::get('/suggestions/userssuggestions/{id}','SuggestionsController@userssuggestions');
 Route::get('/upvote/{id}','SuggestionsController@upvote');
 Route::get('/downvote/{id}','SuggestionsController@downvote');
 Route::resource('currencyconversion','CurrencyConversionController');
