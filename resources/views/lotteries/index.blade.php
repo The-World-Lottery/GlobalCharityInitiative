@@ -27,7 +27,6 @@
 			<p>{{$lottery->init_value}}</p>
 			<p>{{$lottery->current_value}}</p>
 			<p>{{$lottery->end_date}}</p>
-
 			<p>{{$lottery->content}}</p>
 
 		@endforeach
