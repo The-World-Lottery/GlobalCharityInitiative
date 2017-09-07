@@ -23,7 +23,7 @@
 
 <div class="row" id="links">
 	<div class="col col-xs-12 borderOpac" id="links">
-		<a class="navLink" href="{{action('LotterysController@index')}}">Lottos</a>
+		<a class="navLink" href="{{action('LotteriesController@index')}}">Lottos</a>
 		<a class="navLink" href="{{action('RafflesController@index')}}">Raffles</a>
 		<a class="navLink" href="{{action('CurrencyConversionController@index')}}">Currency Conversions</a>
 		<a class="navLink" href="{{action('SuggestionsController@index')}}">Suggestion Box</a>
