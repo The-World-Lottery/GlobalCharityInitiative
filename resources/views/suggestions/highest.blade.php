@@ -3,9 +3,9 @@
 @section('divHead')
 <ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
   <li><a href="{{action('SuggestionsController@index')}}">All Suggestions</a></li>
-  <li><a href="{{action('SuggestionsController@highest')}}">Top 5 Suggestions</a></li>
+  <li class="active"><a href="{{action('SuggestionsController@highest')}}">Top 5 Suggestions</a></li>
   <li><a href="{{action('SuggestionsController@create')}}">Add a Suggestion</a></li>
-  <li class="active"><a href="{{action('SuggestionsController@userssuggestions')}}">Your Suggestions</a></li>
+  <li><a href="{{action('SuggestionsController@userssuggestions')}}">Your Suggestions</a></li>
 </ul>
 @stop
 
