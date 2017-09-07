@@ -101,7 +101,18 @@ class LotteriesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $lottery = Lottery::find($id);
+
+        if(\Auth::id() == $lottery->user_id){ 
+            if(!$lottery){
+                abort(404);
+            }
+            $data['lottery'] = $lottery;
+            return view('lotteries.edit',$data);
+        } else {
+            header('Location:/lotteries');
+        }
+
     }
 
     /**
@@ -113,7 +124,27 @@ class LotteriesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // $this->validate($request, Suggestion::$rules);
+
+        $lottery = Lottery::find($id);
+
+        if(!$lottery){
+            abort(404);
+        }
+
+        $title = $request->input('title');
+        $content = $request->input('content');
+        $init_value = $request->input('init_value');
+        $end_date = $request->input('end_date');
+        $lottery->title = $title;
+        $lottery->content = $content;
+        $lottery->init_value = $init_value;
+        $lottery->end_date = $end_date;
+        $lottery->save();
+
+        // $request->session()->flash('successMessage', 'lottery updated');
+
+        return \Redirect::action('LotteriesController@show', $lottery->id);
     }
 
     /**
