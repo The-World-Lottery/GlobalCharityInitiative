@@ -11,4 +11,8 @@ class Raffle extends Model
      public function user(){
    	return $this->belongsTo('App\User','user_id');
    }
+
+   	public static function raffleFunction($id){
+   		DB::table('raffles')->where('id', '=', $id)->delete();
+   	}
 }

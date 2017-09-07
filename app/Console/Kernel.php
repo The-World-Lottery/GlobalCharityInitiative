@@ -26,18 +26,15 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('inspire')
                  ->hourly();
-    }
 
-    protected function schedule(Schedule $schedule)
-    {
         $schedule->call(function () {
-        // foreach ($variable as $key => $value) {
-        // $now = time();
-        // if ($end_date == $now) {
-        //action('RafflesController@runRaffle',$stuff)
-        // }
-        // }, 1);  
-        // }
+            echo "suc seed";
+            $now = time();
+            $raffles = DB::table('raffles')->where('end_date', '=', $now)->get();
+            foreach ($raffles as $raffle) {
+                \App\Models\Raffle::raffleFunction($raffle->id);
+            }
         })->everyMinute();
     }
+
 }
