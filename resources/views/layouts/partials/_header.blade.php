@@ -35,7 +35,7 @@
 		@endif	
 	</div>
 </div>
-@if(Auth::user()->is_admin)
+@if(Auth::check() && Auth::user()->is_admin)
 <div class="row" id="links">
 	<div class="col col-xs-12 borderOpac" id="links">
 		<a class="navLink" href="{{action('LotteriesController@create')}}">Create Lottery</a>
