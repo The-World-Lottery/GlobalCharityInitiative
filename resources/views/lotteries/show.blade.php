@@ -14,20 +14,18 @@
 
 @section('content')
 
-	<main class="container">
-		<h1>This lottery</h1>
+	<main class="container" style="max-width:100%;float:left;display:flex;justify-content: center;">
+		<div style="padding-top: 2em;">
+			<div><strong>Starting Pot:</strong> {{$lottery->init_value}}</div>
+			<div><strong>Current Pot:</strong> {{$lottery->current_value}}</div>
+			<div><strong>Lotto Ends On:</strong> {{$lottery->end_date}}</div>
+			<div><strong>Charity To:</strong> {{$lottery->content}}</div>
 
-		<h2>{{$lottery['title']}}</h2>
-		<a href="{{action('LotterysController@upvote',$lottery->id)}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
-        <a href="{{action('LotterysController@downvote',$lottery->id)}}"><span class="glyphicon glyphicon-thumbs-down"></span></a>
-		<h3>{{$lottery['content']}}</h3>
-		<p>By {{$lottery->user->name}}</p>
-		<p>posted on {{$lottery->created_at}}</p>
-		<p>Last updated on {{$lottery->updated_at}}</p>
-		@if (Auth::id() == $lottery->user_id)
-		<a href="{{ action('LotterysController@edit', $lottery->id) }}">Edit</a>
-		@endif
-		
+
+
+			<a href=""><button class="btn btn-primary">BUY TICKET!!!</button></a>
+		</div>
+
 	</main>
 
 @stop

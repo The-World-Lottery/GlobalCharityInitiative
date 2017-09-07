@@ -21,9 +21,9 @@
 
 			@foreach($lotteries as $lottery)
 
-			{{-- <a href="{{ action('lotteriesController@show', $lottery->id) }}"> --}}
+			<a href="{{ action('LotteriesController@show', $lottery->id) }}">
 				<h3 class ="suggHead">{{$lottery->title}}</h3>
-			{{-- </a> --}}
+			</a>
 			<p>{{$lottery->init_value}}</p>
 			<p>{{$lottery->current_value}}</p>
 			<p>{{$lottery->end_date}}</p>

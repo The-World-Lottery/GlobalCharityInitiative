@@ -42,7 +42,7 @@ class LotteriesController extends Controller
      */
     public function create()
     {
-        //
+        return view('lotteries.create');
     }
 
     /**
@@ -53,7 +53,26 @@ class LotteriesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $this->validate($request, Suggestion::$rules);
+
+        $title = $request->input('title');
+        $content = $request->input('content');
+        $init_value = $request->input('init_value');
+        $end_date = $request->input('end_date');
+        $lottery = new Lottery();
+        $lottery->title = $title;
+        $lottery->content = $content;
+        $lottery->init_value = $init_value;
+        $lottery->current_value = $init_value;
+        $lottery->end_date = $end_date;
+        $lottery->user_id = \Auth::id();
+        $lottery->save();
+
+        // $request->session()->flash('successMessage', 'Suggestion created');
+
+        // Log::info("$title, $content, $url");
+
+        return redirect()->action('LotteriesController@index');
     }
 
     /**
@@ -64,7 +83,14 @@ class LotteriesController extends Controller
      */
     public function show($id)
     {
-        //
+        $lottery = Lottery::find($id);
+
+        if(!$lottery){
+            abort(404);
+        }
+
+        $data['lottery'] = $lottery;
+        return view('lotteries.show',$data);
     }
 
     /**
