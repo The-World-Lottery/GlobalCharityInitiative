@@ -74,7 +74,7 @@ class RafflesController extends Controller
      */
     public function show($id)
     {
-         $raffle = RiffRaff::find($id);
+        $raffle = RiffRaff::find($id);
 
         if(!$raffle){
             abort(404);
@@ -94,15 +94,15 @@ class RafflesController extends Controller
     {
          $raffle = RiffRaff::find($id);
 
-        if(\Auth::id() == $raffle->user_id){ 
+        if(\Auth::user()->is_admin){ 
             if(!$raffle){
                 abort(404);
             }
             $data['raffle'] = $raffle;
             return view('Raffles.edit',$data);
-        } else {
-            header('Location:/Raffles');
         }
+            return \Redirect::action('LotteriesController@index');
+        
     }
 
     /**
