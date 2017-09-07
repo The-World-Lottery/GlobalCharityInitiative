@@ -86,8 +86,10 @@ class SuggestionsController extends Controller
         return view('suggestions.show',$data);
     }
 
-    public function userssuggestions($id)
+    public function userssuggestions()
     {   
+        $id = \Auth::id();
+
         if(User::find($id) ===null)
         {
             abort(404);
@@ -95,8 +97,8 @@ class SuggestionsController extends Controller
 
         $suggestions = User::find($id)->suggestions;
 
-        $data['suggstions'] = $suggestions;
-        return view('suggstions.userssuggestions',$data);
+        $data['suggestions'] = $suggestions;
+        return view('suggestions.userssuggestions',$data);
     }
 
     /**
