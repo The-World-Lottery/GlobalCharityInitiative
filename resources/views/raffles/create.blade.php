@@ -1,8 +1,9 @@
+@if(Auth::user()->is_admin)
 @extends('layouts.master')
 
 @section('title')
 
-<title>Creat a raffle</title>
+<title>Create a raffle</title>
 
 @stop
 
@@ -16,15 +17,21 @@
 
 	<main class="container">
 		<h1>Create a raffle here</h1>
-		<form method="POST" action="{{ action('SuggestionsController@store') }}">
+		<form method="POST" action="{{ action('RafflesController@store') }}">
 			{!! csrf_field() !!}
 			{!! $errors->first('title', '<span class="help-block">:message</span>')!!}
 			<input type="text" name="title" id="title" value="{{ old('title') }}" placeholder="title">
 			{!! $errors->first('content', '<span class="help-block">:message</span>')!!}
 			<input type="text" name="content" id="content" value="{{ old('content') }}" placeholder="content">
-			{!! $errors->first('url', '<span class="help-block">:message</span>')!!}
-			<input type="text" name="url" id="url" value="{{ old('url') }}" placeholder="url">
+			{!! $errors->first('product', '<span class="help-block">:message</span>')!!}
+			<input type="text" name="product" id="product" value="{{ old('product') }}" placeholder="product">
+			<p>format MM/DD/YYYY</p>
+			{!! $errors->first('end-date', '<span class="help-block">:message</span>')!!}
+			<input type="datetime" name="end-date" id="end-date" value="{{ old('end-date') }}" placeholder="end-date">
 			<button>Submit</button>
 		</form>
 	</main>
 @stop
+@else
+{{action('RafflesController@index')}}
+@endif

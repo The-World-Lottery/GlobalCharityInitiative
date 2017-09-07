@@ -27,4 +27,17 @@ class Kernel extends ConsoleKernel
         $schedule->command('inspire')
                  ->hourly();
     }
+
+    protected function schedule(Schedule $schedule)
+    {
+        $schedule->call(function () {
+        // foreach ($variable as $key => $value) {
+        // $now = time();
+        // if ($end_date == $now) {
+        //action('RafflesController@runRaffle',$stuff)
+        // }
+        // }, 1);  
+        // }
+        })->everyMinute();
+    }
 }

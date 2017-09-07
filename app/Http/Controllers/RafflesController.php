@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use \App\Models\Raffle As RiffRaff;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -14,17 +14,17 @@ class RafflesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        // if($request->has('q')){
-        //     $q = $request->q;
-        //     $raffles = Raffle::search($q);    
-        // } else {
-        //     $raffles = Raffle::with('user')->paginate(6);  
-        // }
-        $data = [];
+        if($request->has('q')){
+            $q = $request->q;
+            $raffles = RiffRaff::search($q);    
+        } else {
+            $raffles = RiffRaff::with('user')->paginate(6);  
+        }
+        
 
-        // $data['raffles']= $raffles;
+        $data['raffles']= $raffles;
         return view('raffles.index',$data);
     }
 
@@ -35,7 +35,7 @@ class RafflesController extends Controller
      */
     public function create()
     {
-        //
+        return view('raffles.create');
     }
 
     /**
@@ -46,7 +46,24 @@ class RafflesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $title = $request->input('title');
+        $content = $request->input('content');
+        $end_date = $request->input('end-date');
+        $product = $request->input('product');
+        $date = \DateTime::createFromFormat('n/j/Y', $end_date);
+        $end_date = $date->format('Y-m-d H:i:00');
+        $raffle = new RiffRaff();
+        $raffle->title = $title;
+        $raffle->content = $content;
+        $raffle->product = $product;
+        $raffle->end_date = $end_date;
+        $raffle->user_id = \Auth::id();
+        if(\Auth::user()->is_admin){
+            $raffle->save();
+        }
+
+        return redirect()->action('RafflesController@show',$raffle->id);
+    
     }
 
     /**
@@ -57,7 +74,14 @@ class RafflesController extends Controller
      */
     public function show($id)
     {
-        //
+         $raffle = RiffRaff::find($id);
+
+        if(!$raffle){
+            abort(404);
+        }
+
+        $data['raffle'] = $raffle;
+        return view('raffles.show',$data);
     }
 
     /**
@@ -68,7 +92,17 @@ class RafflesController extends Controller
      */
     public function edit($id)
     {
-        //
+         $raffle = RiffRaff::find($id);
+
+        if(\Auth::id() == $raffle->user_id){ 
+            if(!$raffle){
+                abort(404);
+            }
+            $data['raffle'] = $raffle;
+            return view('Raffles.edit',$data);
+        } else {
+            header('Location:/Raffles');
+        }
     }
 
     /**
@@ -92,5 +126,9 @@ class RafflesController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function runRaffle(){
+
     }
 }
