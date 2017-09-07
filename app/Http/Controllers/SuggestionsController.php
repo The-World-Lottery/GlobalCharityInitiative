@@ -104,33 +104,44 @@ class SuggestionsController extends Controller
     public function highest()
     {
         
-        $votes = DB::table('votes')
-                     ->select(DB::raw('count(*) as total, suggestion_id'))
-                     ->groupBy('suggestion_id')
-                     ->orderBy('total','desc')
-                     ->take(5)
-                     ->get();
+        // $votes = DB::table('votes')
+        //              ->select(DB::raw('count(*) as total, suggestion_id'))
+        //              ->groupBy('suggestion_id')
+        //              ->orderBy('total','desc')
+        //              ->take(5)
+        //              ->get();
 
-        $suggIds = '';
+        // $suggIds = [];
 
-        foreach($votes as $vote){
+        // foreach($votes as $vote){
             
-            $suggIds .= $vote->suggestion_id;
+        //     $suggIds[] = $vote->suggestion_id;
 
+        // }
+
+        // $suggestions = Suggestion::where('id',$suggIds[0])->orWhere('id',$suggIds[1])->orWhere('id',$suggIds[2])->orWhere('id',$suggIds[3])->orWhere('id',$suggIds[4])->get();
+
+        // $suggestions = Suggestion::whereIn('id', $suggIds);
+
+        $suggestions = DB::table('suggestions')
+                    ->leftJoin('votes', 'votes.suggestion_id', '=', 'suggestions.id')
+                    ->select(DB::raw('count(votes.id) as totalvotes, votes.suggestion_id, suggestions.id'))
+                    ->groupBy('votes.suggestion_id')
+                    ->orderBy('totalvotes', 'desc')
+                    ->take(5)
+                    ->get();
+
+        $suggObjs = array();
+        foreach ($suggestions as $suggest) {
+            $suggObjs[] = Suggestion::find($suggest->id);
         }
-
-        $suggestions = Suggestion::where('id',$suggIds[0])->orWhere('id',$suggIds[1])->orWhere('id',$suggIds[2])->orWhere('id',$suggIds[3])->orWhere('id',$suggIds[4])->get();
 
         // foreach ($suggestions as $suggestion) {
         //     var_dump($suggestion->title);
         // }
 
-
-        $data['suggestions']= $suggestions;
-        return view('suggestions.highest',$data);
-
-
-
+        $data['suggestions']= $suggObjs;
+        return view('suggestions.highest', $data);
     }
 
     /**
