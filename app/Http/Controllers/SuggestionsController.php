@@ -101,6 +101,38 @@ class SuggestionsController extends Controller
         return view('suggestions.userssuggestions',$data);
     }
 
+    public function highest()
+    {
+        
+        $votes = DB::table('votes')
+                     ->select(DB::raw('count(*) as total, suggestion_id'))
+                     ->groupBy('suggestion_id')
+                     ->orderBy('total','desc')
+                     ->take(5)
+                     ->get();
+
+        $suggIds = '';
+
+        foreach($votes as $vote){
+            
+            $suggIds .= $vote->suggestion_id;
+
+        }
+
+        $suggestions = Suggestion::where('id',$suggIds[0])->orWhere('id',$suggIds[1])->orWhere('id',$suggIds[2])->orWhere('id',$suggIds[3])->orWhere('id',$suggIds[4])->get();
+
+        // foreach ($suggestions as $suggestion) {
+        //     var_dump($suggestion->title);
+        // }
+
+
+        $data['suggestions']= $suggestions;
+        return view('suggestions.highest',$data);
+
+
+
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -127,10 +159,9 @@ class SuggestionsController extends Controller
         $suggestion = Suggestion::find($id);
         $user_id = \Auth::id();
         $suggestion_id = Suggestion::find($id)->id;
-        $voteCount = Vote::select('vote')->where('suggestion_id',$suggestion_id)->get()->count();
 
-
-
+        
+        // $voteCount = Vote::select('suggestion_id')->groupBy('suggestion_id')->orderBy('')->get();
 
         // dd(DB::table('votes')->select('vote')->where('suggestion_id',$suggestion_id)->sum('vote'));
 

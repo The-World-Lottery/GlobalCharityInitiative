@@ -12,7 +12,7 @@ class Vote extends Model
    }
 
    //relation to post
-   public function post(){
+   public function suggestion(){
    	return $this->belongsTo('App\Models\Suggestion','suggestion_id');
    }
 }
