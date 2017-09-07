@@ -18,8 +18,6 @@
 		<h1>This Raffle</h1>
 
 		<h2>{{$raffle['title']}}</h2>
-		<a href="{{action('RafflesController@upvote',$raffle->id)}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
-        <a href="{{action('RafflesController@downvote',$raffle->id)}}"><span class="glyphicon glyphicon-thumbs-down"></span></a>
 		<h3>{{$raffle['content']}}</h3>
 		<p>By {{$raffle->user->name}}</p>
 		<p>posted on {{$raffle->created_at}}</p>
