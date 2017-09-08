@@ -25,11 +25,21 @@ Route::get('/openAddress/{id}','SuggestionsController@openAddress');
 Route::get('/closeAddress/{id}','SuggestionsController@closeAddress');
 Route::get('/adminIndex','SuggestionsController@adminIndex');
 
+
+
+Route::get('/lotteryTicket','LotteriesController@addUserToEntries');
+Route::get('/raffleTicket','RafflesController@addUserToEntries');
+
 Route::resource('currencyconversion','CurrencyConversionController');
+
 Route::resource('suggestions', 'SuggestionsController');
+
 Route::resource('users', 'UsersController');
+
 Route::resource('lotteries', 'LotteriesController');
+
 Route::resource('raffles', 'RafflesController');
+
 Route::resource('aboutus', 'AboutUsController');
 
 // Login routes...

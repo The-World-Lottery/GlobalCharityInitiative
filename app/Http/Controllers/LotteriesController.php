@@ -45,6 +45,14 @@ class LotteriesController extends Controller
         return view('lotteries.create');
     }
 
+
+
+
+    public function addUserToEntries($lotteryId)
+    {
+        
+    }
+
     /**
      * Store a newly created resource in storage.
      *

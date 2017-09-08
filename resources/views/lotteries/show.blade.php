@@ -23,7 +23,7 @@
 
 
 
-			<a href=""><button class="btn btn-primary">BUY TICKET!!!</button></a>
+			<a href="{{ action('LotteriesController@addUserToEntries', $lottery->id) }}"><button class="btn btn-primary">BUY TICKET!!!</button></a>
 
 			@if (Auth::check() && Auth::user()->is_admin)
 

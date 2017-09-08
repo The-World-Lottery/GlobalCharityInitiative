@@ -47,6 +47,27 @@ class User extends Model implements AuthenticatableContract,
         return $this->hasMany('App\Models\Vote','vote_id');
     }
 
+    public function lotteries()
+    {
+        return $this->hasMany('App\Models\Lottery','user_id');
+    }
+
+    public function raffles()
+    {
+        return $this->hasMany('App\Models\Raffle','user_id');
+    }
+
+    public function lotteryEntries()
+    {
+        return $this->hasMany('App\Models\LotteryEntry','user_id');
+    }
+
+    public function raffleEntries()
+    {
+        return $this->hasMany('App\Models\RaffleEntry','user_id');
+    }
+
+
     // public function lotteries()
     // {
     //     return $this->hasMany('App\Models\Lottery','lottery_id');
