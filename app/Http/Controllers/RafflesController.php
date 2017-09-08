@@ -52,12 +52,6 @@ class RafflesController extends Controller
     public function addUserToEntries(Request $request, $id)
     {
 
-        $userId = \Auth::id();
-        $newEntry = new RaffleEntry();
-        $newEntry->user_id = $userId;
-        $newEntry->raffles_id = $id;
-        $newEntry->save();
-
         if(\Auth::check()){
             $userId = \Auth::id();
             $newEntry = new RaffleEntry();

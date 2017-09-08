@@ -60,17 +60,12 @@ class LotteriesController extends Controller
 
     public function addUserToEntries(Request $request, $id)
     {
-        $currLottery = Lottery::find($id);
-        $currLottery->current_value += 1;
-        $currLottery->save();
-
-        $userId = \Auth::id();
-        $newEntry = new LotteryEntry();
-        $newEntry->user_id = $userId;
-        $newEntry->lottery_id = $id;
-        $newEntry->save();
 
         if(\Auth::check()){
+            $currLottery = Lottery::find($id);
+            $currLottery->current_value += 1;
+            $currLottery->save();
+
             $userId = \Auth::id();
             $newEntry = new LotteryEntry();
             $newEntry->user_id = $userId;
