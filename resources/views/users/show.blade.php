@@ -21,8 +21,9 @@
 			<div><strong>Email:</strong> {{$user->email}}</div>
 			<div><strong>User Name:</strong> {{$user->username}}</div>
 			<div><strong>Member since:</strong> {{$user->created_at}}</div>
-			
+			@if(Auth::id() == $user->id)
 			<a href="{{action('Auth\AuthController@getLogout')}}"><button class="btn btn-primary">Logout</button></a>
+			@endif
 			@if(Auth::id() == $user->id || Auth::user()->is_admin) 
 				<a href="{{action('UsersController@edit' , $user->id)}}"><button class="btn btn-primary">Edit</button></a>
 			@endif
