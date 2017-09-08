@@ -12,7 +12,7 @@ class CreateRaffleEntrantsTable extends Migration
      */
     public function up()
     {
-         Schema::create('raffleEntrants', function (Blueprint $table) {
+         Schema::create('raffle_entries', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
@@ -29,6 +29,6 @@ class CreateRaffleEntrantsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('raffleEntrants');
+        Schema::drop('raffle_entries');
     }
 }

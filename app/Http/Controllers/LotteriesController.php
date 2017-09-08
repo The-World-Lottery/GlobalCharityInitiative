@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Lottery;
+use App\Models\LotteryEntry;
 use Log;
 use App\User;
 use DB;
@@ -57,9 +58,17 @@ class LotteriesController extends Controller
 
 
 
-    public function addUserToEntries($lotteryId)
+    public function addUserToEntries($id)
     {
-        
+    
+        $userId = \Auth::id();
+        $newEntry = new LotteryEntry();
+        $newEntry->user_id = $userId;
+        $newEntry->lottery_id = $id;
+        $newEntry->save();
+
+        return \Redirect::action('LotteriesController@index');
+
     }
 
     /**
