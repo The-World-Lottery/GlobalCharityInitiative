@@ -28,13 +28,27 @@
 				<a href="{{action('UsersController@edit' , $user->id)}}"><button class="btn btn-primary">Edit</button></a>
 			@endif
 			@if(Auth::id() == $user->id || Auth::user()->is_admin) 
-				<form method="POST" action="{{ action('UsersController@destroy', $user->id )}}">
+				{{-- <form method="POST" action="{{ action('UsersController@destroy', $user->id )}}">
 					<button class="btn btn-large btn-primary" data-toggle="confirmation" data-title="Open Google?">Delete Account</button>
 					{!! csrf_field() !!}
 					{{ method_field('DELETE') }}
 
-				</form>
+				</form> --}}
+				<a href="{{ action('UsersController@destroy',$user->id) }}" class="btn btn-danger btn-sm"
+                           data-tr="tr_{{$user->id}}"
+                           data-toggle="confirmation"
+                           data-btn-ok-label="Delete" data-btn-ok-icon="fa fa-remove"
+                           data-btn-ok-class="btn btn-sm btn-danger"
+                           data-btn-cancel-label="Cancel"
+                           data-btn-cancel-icon="fa fa-chevron-circle-left"
+                           data-btn-cancel-class="btn btn-sm btn-default"
+                           data-title="Are you sure you want to delete ?"
+                           data-placement="left" data-singleton="true">
+                            Delete
+                        </a>
 			@endif
+
+			<button class="btn btn-default" data-toggle="confirmation" data-popout="true">Confirmation 1</button>
 
 		</div>
 	</main>
