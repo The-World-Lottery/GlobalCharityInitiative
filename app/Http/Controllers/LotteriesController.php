@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Lottery;
+use App\Models\LotteryEntry;
 use Log;
 use App\User;
 use DB;
@@ -35,6 +36,15 @@ class LotteriesController extends Controller
         return view('lotteries.index',$data);
     }
 
+    public function adminIndex()
+    {
+        if(\Auth::user()->is_admin){
+            $lotteries = Lottery::paginate(16);
+            return view('lotteries.admin')->with(array('lotteries' => $lotteries));
+        }
+        return \Redirect::action('LotteriesController@index');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -43,6 +53,33 @@ class LotteriesController extends Controller
     public function create()
     {
         return view('lotteries.create');
+    }
+
+
+
+
+    public function addUserToEntries(Request $request, $id)
+    {
+
+        if(\Auth::check()){
+            $currLottery = Lottery::find($id);
+            $currLottery->current_value += 1;
+            $currLottery->save();
+
+            $userId = \Auth::id();
+            $newEntry = new LotteryEntry();
+            $newEntry->user_id = $userId;
+            $newEntry->lottery_id = $id;
+            $newEntry->save();
+        } else {
+            $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
+            return \Redirect::action('Auth\AuthController@getLogin');
+        }
+
+
+        $request->session()->flash('successMessage', 'You have successfully purchased a LOTTERY ticket! Thank you for your donation and good luck!');
+        return \Redirect::action('LotteriesController@index');
+
     }
 
     /**
@@ -103,7 +140,7 @@ class LotteriesController extends Controller
     {
         $lottery = Lottery::find($id);
 
-        if(\Auth::id() == $lottery->user_id){ 
+        if(\Auth::user()->is_admin){ 
             if(!$lottery){
                 abort(404);
             }
@@ -155,6 +192,15 @@ class LotteriesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $lottery = Lottery::find($id);
+
+        if(!$lottery){
+            abort(404);
+        }
+
+        $lottery->delete();
+        $request->session()->flash('successMessage', 'lottery deleted');
+        return redirect()->action('LotteriesController@index');
     }
+    
 }

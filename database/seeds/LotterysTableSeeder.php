@@ -10,13 +10,14 @@ class LotterysTableSeeder extends Seeder
     public function run()
     {
         for($i = 0;$i <= 5;$i++) {
-       	$lotterys = new \App\Models\Lottery();
-        $lotterys->title = 'emmetts'.$i;
-        $lotterys->content = 'for charity'.$i;
-        $lotterys->product ='his hair'.$i;
-        $lotterys->end_date = '2017-09-07 1'.$i.':00:00';
-        $lotterys->user_id = 1;
-        $lotterys->save();
+
+       	$lottery = new \App\Models\Lottery();
+        $lottery->title = 'emmetts'.$i;
+        $lottery->content = 'for charity'.$i;
+        $lottery->init_value ='his hair'.$i;
+        $lottery->end_date = '2017-09-07 1'.$i.':00:00';
+        $lottery->user_id = 1;
+        $lottery->save();
     	}
     }
 }

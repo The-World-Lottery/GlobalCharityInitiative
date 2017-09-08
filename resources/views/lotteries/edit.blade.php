@@ -62,7 +62,7 @@
 				</div>
 			</div>
 
-			{!! $errors->first('init_value', '<span class="help-block">:message</span>')!!}
+{{-- 			{!! $errors->first('init_value', '<span class="help-block">:message</span>')!!}
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" >
 				<div class="row">
 					 <div class="col-xs-4">
@@ -80,8 +80,8 @@
 				<div class="panel-body">
 					<textarea class="form-control text-left" type="text" name="init_value" id="init_value" placeholder="init_value">{{$lottery->init_value}}</textarea>
 				</div>
-			</div>
-
+			</div> --}}
+			@if((\App\Models\LotteryEntry::filterEntrants($lottery->id)) || Auth::user()->is_super_admin)
 			{!! $errors->first('end_date', '<span class="help-block">:message</span>')!!}
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapsefour" aria-expanded="false" aria-controls="collapsefour" >
 				<div class="row">
@@ -101,11 +101,17 @@
 					<textarea class="form-control text-left" type="text" name="end_date" id="end_date" placeholder="end_date">{{$lottery->end_date}}</textarea>
 				</div>
 			</div>
-
+			@endif
         
 
 
 			<button>Submit</button>
 		</form>
-
+		@if((\App\Models\LotteryEntry::filterEntrants($lottery->id)))
+		<form method="POST" action="{{ action('LotteriesController@destroy', $lottery->id )}}">
+		{!! csrf_field() !!}
+		{{ method_field('DELETE') }}
+		<button class="btn btn-danger">DELETE LOTTERY</button>
+		</form>
+		@endif
 @stop

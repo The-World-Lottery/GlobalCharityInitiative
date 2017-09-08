@@ -64,13 +64,13 @@
 			</div>
 
 
-
-
-
-
-
-
 			<button>Submit</button>
+		</form>
+
+		<form method="POST" action="{{ action('SuggestionsController@destroy', $suggestion->id )}}">
+		{!! csrf_field() !!}
+		{{ method_field('DELETE') }}
+		<button class="btn btn-danger">DELETE SUGGESTION</button>
 		</form>
 
 @stop

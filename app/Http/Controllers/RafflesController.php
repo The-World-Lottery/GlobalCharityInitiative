@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \App\Models\Raffle As RiffRaff;
+use \App\Models\Raffle;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\RaffleEntry;
+use Carbon\Carbon;
 
 class RafflesController extends Controller
 {
@@ -18,14 +20,23 @@ class RafflesController extends Controller
     {
         if($request->has('q')){
             $q = $request->q;
-            $raffles = RiffRaff::search($q);    
+            $raffles = Raffle::search($q);    
         } else {
-            $raffles = RiffRaff::with('user')->paginate(6);  
+            $raffles = Raffle::with('user')->paginate(6);  
         }
         
 
         $data['raffles']= $raffles;
         return view('raffles.index',$data);
+    }
+
+    public function adminIndex()
+    {
+        if(\Auth::user()->is_admin){
+            $raffles = Raffle::paginate(16);
+            return view('raffles.admin')->with(array('raffles' => $raffles));
+        }
+        return \Redirect::action('LotteriesController@index');
     }
 
     /**
@@ -36,6 +47,24 @@ class RafflesController extends Controller
     public function create()
     {
         return view('raffles.create');
+    }
+
+    public function addUserToEntries(Request $request, $id)
+    {
+
+        if(\Auth::check()){
+            $userId = \Auth::id();
+            $newEntry = new RaffleEntry();
+            $newEntry->user_id = $userId;
+            $newEntry->raffles_id = $id;
+            $newEntry->save();
+        } else {
+                $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
+                return \Redirect::action('Auth\AuthController@getLogin');
+        }
+        $request->session()->flash('successMessage', 'You have successfully purchased a RAFFLE ticket! Thank you for your donation and good luck!');
+        return \Redirect::action('RafflesController@index');
+
     }
 
     /**
@@ -50,13 +79,15 @@ class RafflesController extends Controller
         $content = $request->input('content');
         $end_date = $request->input('end-date');
         $product = $request->input('product');
+        $image = $request->input('image');
         $date = \DateTime::createFromFormat('n/j/Y', $end_date);
         $end_date = $date->format('Y-m-d H:i:00');
-        $raffle = new RiffRaff();
+        $raffle = new Raffle();
         $raffle->title = $title;
         $raffle->content = $content;
         $raffle->product = $product;
         $raffle->end_date = $end_date;
+        $raffle->img = $image;
         $raffle->user_id = \Auth::id();
         if(\Auth::user()->is_admin){
             $raffle->save();
@@ -74,7 +105,7 @@ class RafflesController extends Controller
      */
     public function show($id)
     {
-        $raffle = RiffRaff::find($id);
+        $raffle = Raffle::find($id);
 
         if(!$raffle){
             abort(404);
@@ -92,7 +123,7 @@ class RafflesController extends Controller
      */
     public function edit($id)
     {
-         $raffle = RiffRaff::find($id);
+         $raffle = Raffle::find($id);
 
         if(\Auth::user()->is_admin){ 
             if(!$raffle){
@@ -145,8 +176,17 @@ class RafflesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $raffle = Raffle::find($id);
+
+        if(!$raffle){
+            abort(404);
+        }
+
+        $raffle->delete();
+        $request->session()->flash('successMessage', 'raffle deleted');
+        return redirect()->action('RafflesController@index');
     }
+    
 
     public function runRaffle(){
 

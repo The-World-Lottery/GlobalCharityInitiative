@@ -17,6 +17,9 @@
 
  	<main class="container">
     <div style="padding:1em;">
+        @if (session()->has('errorMessage'))
+            <div class="alert alert-error">{{ session('errorMessage') }}</div>
+        @endif
 
         <form method="POST" action="/auth/login">
             {!! csrf_field() !!}
