@@ -29,8 +29,8 @@ Route::get('/lotteries/adminIndex','LotteriesController@adminIndex');
 
 
 
-Route::get('/lotteryTicket','LotteriesController@addUserToEntries');
-Route::get('/raffleTicket','RafflesController@addUserToEntries');
+Route::get('/lotteryTicket/{id}','LotteriesController@addUserToEntries');
+Route::get('/raffleTicket/{id}','RafflesController@addUserToEntries');
 
 Route::resource('currencyconversion','CurrencyConversionController');
 

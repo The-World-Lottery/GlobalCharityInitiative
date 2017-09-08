@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use \App\Models\Raffle;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\RaffleEntry;
 use Carbon\Carbon;
 
 class RafflesController extends Controller
@@ -46,6 +47,19 @@ class RafflesController extends Controller
     public function create()
     {
         return view('raffles.create');
+    }
+
+    public function addUserToEntries($id)
+    {
+    
+        $userId = \Auth::id();
+        $newEntry = new RaffleEntry();
+        $newEntry->user_id = $userId;
+        $newEntry->raffles_id = $id;
+        $newEntry->save();
+
+        return \Redirect::action('RafflesController@index');
+
     }
 
     /**
