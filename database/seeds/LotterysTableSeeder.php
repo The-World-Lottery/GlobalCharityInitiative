@@ -10,6 +10,7 @@ class LotterysTableSeeder extends Seeder
     public function run()
     {
         for($i = 0;$i <= 5;$i++) {
+
        	$lottery = new \App\Models\Lottery();
         $lottery->title = 'emmetts'.$i;
         $lottery->content = 'for charity'.$i;
