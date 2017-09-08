@@ -25,8 +25,9 @@
 
 			<a href="{{ action('LotteriesController@addUserToEntries', $lottery->id) }}"><button class="btn btn-primary">BUY TICKET!!!</button></a>
 
-			@if (Auth::check() && Auth::user()->is_admin)
+			
 
+			@if ((Auth::check()) && (Auth::user()->is_admin))
 			<a href="{{ action('LotteriesController@edit', $lottery->id) }}">Edit</a>
 			@endif
 		</div>
