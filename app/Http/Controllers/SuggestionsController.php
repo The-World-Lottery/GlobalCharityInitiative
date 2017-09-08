@@ -143,7 +143,7 @@ class SuggestionsController extends Controller
     {
         $suggestion = Suggestion::find($id);
 
-        if(\Auth::id() == $suggestion->user_id){ 
+        if(\Auth::id() == $suggestion->user_id || \Auth::user()->is_admin){ 
             if(!$suggestion){
                 abort(404);
             }

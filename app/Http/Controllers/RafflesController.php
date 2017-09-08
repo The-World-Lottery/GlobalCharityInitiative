@@ -145,8 +145,17 @@ class RafflesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $raffle = Raffle::find($id);
+
+        if(!$raffle){
+            abort(404);
+        }
+
+        $raffle->delete();
+        $request->session()->flash('successMessage', 'raffle deleted');
+        return redirect()->action('rafflesController@index');
     }
+    
 
     public function runRaffle(){
 

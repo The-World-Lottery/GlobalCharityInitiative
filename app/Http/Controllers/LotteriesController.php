@@ -103,7 +103,7 @@ class LotteriesController extends Controller
     {
         $lottery = Lottery::find($id);
 
-        if(\Auth::id() == $lottery->user_id){ 
+        if(\Auth::user()->is_admin){ 
             if(!$lottery){
                 abort(404);
             }
@@ -155,6 +155,15 @@ class LotteriesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $lottery = Lottery::find($id);
+
+        if(!$lottery){
+            abort(404);
+        }
+
+        $lottery->delete();
+        $request->session()->flash('successMessage', 'lottery deleted');
+        return redirect()->action('lotteriesController@index');
     }
+    
 }

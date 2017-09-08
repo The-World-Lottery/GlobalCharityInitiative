@@ -143,11 +143,11 @@
 		</form>
 
 
-		{{-- <form method="POST" action="{{ action('UsersController@destroy', $User->id )}}">
+		<form method="POST" action="{{ action('UsersController@destroy', $User->id )}}">
 		{!! csrf_field() !!}
 		{{ method_field('DELETE') }}
 		<button class="btn btn-warning">DELETE ACCOUNT</button>
-		</form> --}}
+		</form>
 
 	</main>
 

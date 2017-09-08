@@ -103,9 +103,13 @@
 			</div>
 
         
-
-
 			<button>Submit</button>
+		</form>
+
+		<form method="POST" action="{{ action('RafflesController@destroy', $raffle->id )}}">
+		{!! csrf_field() !!}
+		{{ method_field('DELETE') }}
+		<button class="btn btn-danger">DELETE RAFFLE</button>
 		</form>
 
 @stop

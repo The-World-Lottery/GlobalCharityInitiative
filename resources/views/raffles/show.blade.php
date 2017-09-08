@@ -22,7 +22,7 @@
 		<p>By {{$raffle->user->name}}</p>
 		<p>posted on {{$raffle->created_at}}</p>
 		<p>Last updated on {{$raffle->updated_at}}</p>
-		@if (Auth::id() == $raffle->user_id)
+		@if (Auth::check() && Auth::user()->is_admin)
 		<a href="{{ action('RafflesController@edit', $raffle->id) }}">Edit</a>
 		@endif
 
