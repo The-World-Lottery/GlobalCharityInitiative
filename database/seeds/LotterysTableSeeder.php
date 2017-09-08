@@ -13,7 +13,7 @@ class LotterysTableSeeder extends Seeder
        	$lotterys = new \App\Models\Lottery();
         $lotterys->title = 'emmetts'.$i;
         $lotterys->content = 'for charity'.$i;
-        $lotterys->product ='his hair'.$i;
+        $lotterys->init_value ='his hair'.$i;
         $lotterys->end_date = '2017-09-07 1'.$i.':00:00';
         $lotterys->user_id = 1;
         $lotterys->save();
