@@ -20,16 +20,16 @@ table, th, td {
 
 @section('content')
 
-	<main class="container" style="max-width:100%;float:left;">
+	<main class="container table-responsive" style="max-width:100%;float:left;">
 
-		<table style="width:100%">
+		<table class="table table-striped table-condensed" style="width:100%">
 			<tr>
 				<th>Edit</th>
 				<th>Name</th>
 				<th>UserName</th>
 				<th>Email</th>
 				<th>User ID</th>
-				<th>Number of Suggestions</th>
+				<th># of Posts</th>
 				<th>Admin</th>
 				@if(Auth::user()->is_super_admin)
 					<th>Change Status</th>
@@ -38,7 +38,7 @@ table, th, td {
 	@foreach($users as $user)
 			<tr>
 				
-				<td><a class="btn btn-primary" href="{{action('UsersController@show',$user->id)}}" >Edit</a></td>
+				<td><a class="btn btn-primary btn-xs" href="{{action('UsersController@show',$user->id)}}" >Edit</a></td>
 				<td>{{$user->name}}</td>
 				<td>{{$user->username}}</td>
 				<td>{{$user->email}}</td>
@@ -51,8 +51,8 @@ table, th, td {
 				@endif
 				@if(Auth::user()->is_super_admin)
 					<td>
-						<a class="btn btn-block btn-primary" href="{{action('UsersController@makeAdmin',$user->id)}}" >+ Admin Rights</a>
-						<a class="btn btn-block btn-primary" href="{{action('UsersController@destroyAdmin',$user->id)}}">- Admin Rights</a>
+						<a class="btn btn-block btn-primary btn-xs" href="{{action('UsersController@makeAdmin',$user->id)}}" >+ Admin Rights</a>
+						<a class="btn btn-block btn-primary btn-xs" href="{{action('UsersController@destroyAdmin',$user->id)}}">- Admin Rights</a>
 					</td>
 				@endif
 			</tr>

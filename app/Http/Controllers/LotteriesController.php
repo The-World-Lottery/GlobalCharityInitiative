@@ -35,6 +35,15 @@ class LotteriesController extends Controller
         return view('lotteries.index',$data);
     }
 
+    public function adminIndex()
+    {
+        if(\Auth::user()->is_admin){
+            $lotteries = Lottery::paginate(16);
+            return view('lotteries.admin')->with(array('lotteries' => $lotteries));
+        }
+        return \Redirect::action('LotteriesController@index');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -23,7 +23,9 @@ Route::get('/makeAdmin/{id}','UsersController@makeAdmin');
 Route::get('/destroyAdmin/{id}','UsersController@destroyAdmin');
 Route::get('/openAddress/{id}','SuggestionsController@openAddress');
 Route::get('/closeAddress/{id}','SuggestionsController@closeAddress');
-Route::get('/adminIndex','SuggestionsController@adminIndex');
+Route::get('/suggestions/adminIndex','SuggestionsController@adminIndex');
+Route::get('/raffles/adminIndex','RafflesController@adminIndex');
+Route::get('/lotteries/adminIndex','LotteriesController@adminIndex');
 
 
 
