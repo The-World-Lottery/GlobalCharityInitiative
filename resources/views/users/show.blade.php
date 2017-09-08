@@ -34,7 +34,10 @@
 					{{ method_field('DELETE') }}
 
 				</form>
+			
 			@endif
+
+			<button class="btn btn-default" data-toggle="confirmation" data-popout="true">Confirmation 1</button>
 
 		</div>
 	</main>
