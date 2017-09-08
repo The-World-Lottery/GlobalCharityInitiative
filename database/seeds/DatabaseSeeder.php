@@ -16,6 +16,8 @@ class DatabaseSeeder extends Seeder
 
         DB::statement('SET FOREIGN_KEY_CHECKS=0');
 
+        DB::table('raffle_entries')->truncate();
+        DB::table('lottery_entries')->truncate();
         DB::table('suggestions')->truncate();
         DB::table('users')->truncate();
         DB::table('lotteries')->truncate();
@@ -26,6 +28,8 @@ class DatabaseSeeder extends Seeder
         $this->call('SuggestionsTableSeeder');
         $this->call('RafflesTableSeeder');
         $this->call('LotterysTableSeeder');
+        $this->call('LotteryEntrantsTableSeeder');
+        $this->call('RaffleEntrantsTableSeeder');
 
         DB::statement('SET FOREIGN_KEY_CHECKS=1');
 
