@@ -50,6 +50,7 @@ class RafflesController extends Controller
         $content = $request->input('content');
         $end_date = $request->input('end-date');
         $product = $request->input('product');
+        $image = $request->input('image');
         $date = \DateTime::createFromFormat('n/j/Y', $end_date);
         $end_date = $date->format('Y-m-d H:i:00');
         $raffle = new RiffRaff();
@@ -57,6 +58,7 @@ class RafflesController extends Controller
         $raffle->content = $content;
         $raffle->product = $product;
         $raffle->end_date = $end_date;
+        $raffle->img = $image;
         $raffle->user_id = \Auth::id();
         if(\Auth::user()->is_admin){
             $raffle->save();
