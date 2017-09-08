@@ -1,4 +1,4 @@
-@if (true) <!-- replace <- Auth::user()->is_admin -->
+
 @extends('layouts.master')
 
 @section('title')
@@ -24,6 +24,7 @@ table, th, td {
 
 		<table style="width:100%">
 			<tr>
+				<th>Edit</th>
 				<th>Name</th>
 				<th>UserName</th>
 				<th>Email</th>
@@ -37,7 +38,8 @@ table, th, td {
 	@foreach($users as $user)
 			<tr>
 				
-				<td><a href="{{action('UsersController@show',$user->id)}}" >{{$user->name}}</a></td>
+				<td><a class="btn btn-primary" href="{{action('UsersController@show',$user->id)}}" >Edit</a></td>
+				<td>{{$user->name}}</td>
 				<td>{{$user->username}}</td>
 				<td>{{$user->email}}</td>
 				<td>{{$user->id}}</td>
@@ -61,6 +63,3 @@ table, th, td {
 	</main>
 
 @stop
-@else
-{{action('LotterysController@index')}}
-@endif
