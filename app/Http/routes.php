@@ -19,6 +19,8 @@ Route::get('/suggestions/userssuggestions/{id}','SuggestionsController@userssugg
 Route::get('/upvote/{id}','SuggestionsController@upvote');
 Route::get('/downvote/{id}','SuggestionsController@downvote');
 Route::get('/highest','SuggestionsController@highest');
+Route::get('/makeAdmin/{id}','UsersController@makeAdmin');
+Route::get('/destroyAdmin/{id}','UsersController@destroyAdmin');
 Route::resource('currencyconversion','CurrencyConversionController');
 Route::resource('suggestions', 'SuggestionsController');
 Route::resource('users', 'UsersController');
