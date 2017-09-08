@@ -110,6 +110,7 @@ class UsersController extends Controller
         $user->username = $request->username;
         $user->email = $request->email;
         $user->phone_number = $request->phone_number;
+        $user->image = $request->image;
         // $user->user_id = \Auth::id();
         $user->save();
         // $request->session()->flash('successMessage', 'Your Post was a successfully updated!');

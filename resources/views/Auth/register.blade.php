@@ -40,7 +40,7 @@
 
     <div class="form-group">
         Phone Number
-        <input type="text" name="phone_number"">
+        <input type="text" name="phone_number">
     </div>
 
     <div class="form-group">
