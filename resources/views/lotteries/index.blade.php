@@ -15,8 +15,6 @@
 @section('content')
 	<span style="float:right;padding-right:1em;">{!! $lotteries->appends(Request::except('page'))->render() !!}</span>
 	<main class="container" style="max-width:100%;float:left;">
-
-		<h1>All Lotteries</h1>
 	
 
 			@foreach($lotteries as $lottery)

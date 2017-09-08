@@ -15,7 +15,6 @@
 @section('content')
 
 	<main class="container">
-		<h1>All Raffles</h1>
 
 		
 	

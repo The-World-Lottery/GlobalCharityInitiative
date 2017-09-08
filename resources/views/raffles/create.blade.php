@@ -16,7 +16,6 @@
 @section('content')
 
 	<main class="container" style="max-width:100%;float:left;">
-		<h1>Create a raffle here</h1>
 		<form method="POST" action="{{ action('RafflesController@store') }}">
 			{!! csrf_field() !!}
 			{!! $errors->first('title', '<span class="help-block">:message</span>')!!}
