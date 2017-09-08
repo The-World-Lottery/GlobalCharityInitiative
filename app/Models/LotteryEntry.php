@@ -17,4 +17,18 @@ class LotteryEntry extends Model
    	{
    	return $this->belongsTo('App\Models\Lottery','lottery_id');
    }
+
+   public static function filterEntrants($lottoId)
+   {
+   		$entrants = LotteryEntry::where('lottery_id', '=', $lottoId)->get();
+
+   		
+
+   		if (count($entrants)) {
+   			return false;
+   		}
+
+   		return true;
+
+   }
 }

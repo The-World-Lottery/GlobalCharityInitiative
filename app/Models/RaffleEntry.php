@@ -17,4 +17,17 @@ class RaffleEntry extends Model
    	{
    	return $this->belongsTo('App\Models\Raffle','raffle_id');
    }
+    public static function filterEntrants($raffleId)
+   {
+   		$entrants = RaffleEntry::where('raffles_id', '=', $raffleId)->get();
+
+   		
+
+   		if (count($entrants)) {
+   			return false;
+   		}
+
+   		return true;
+
+   }
 }
