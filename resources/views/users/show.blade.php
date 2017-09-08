@@ -27,8 +27,16 @@
 			@if(Auth::id() == $user->id || Auth::user()->is_admin) 
 				<a href="{{action('UsersController@edit' , $user->id)}}"><button class="btn btn-primary">Edit</button></a>
 			@endif
-		</div>
+			@if(Auth::id() == $user->id || Auth::user()->is_admin) 
+				<form method="POST" action="{{ action('UsersController@destroy', $user->id )}}">
+					<button class="btn btn-large btn-primary" data-toggle="confirmation" data-title="Open Google?">Delete Account</button>
+					{!! csrf_field() !!}
+					{{ method_field('DELETE') }}
 
+				</form>
+			@endif
+
+		</div>
 	</main>
 
 @stop

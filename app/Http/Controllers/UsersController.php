@@ -128,6 +128,16 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail($id);
+        $suggestions = $user->suggestions;
+
+        foreach ($suggestions as $suggestion) {
+            $suggestion->delete();
+        }
+
+        $user->delete();
+        // $request->session()->flash('successMessage', 'Your user was a successfully destroyed!');
+
+        return \Redirect::action('LotteriesController@index');
     }
 }
