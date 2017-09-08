@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \App\Models\Raffle As RiffRaff;
+use \App\Models\Raffle;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 
 class RafflesController extends Controller
 {
@@ -18,14 +19,23 @@ class RafflesController extends Controller
     {
         if($request->has('q')){
             $q = $request->q;
-            $raffles = RiffRaff::search($q);    
+            $raffles = Raffle::search($q);    
         } else {
-            $raffles = RiffRaff::with('user')->paginate(6);  
+            $raffles = Raffle::with('user')->paginate(6);  
         }
         
 
         $data['raffles']= $raffles;
         return view('raffles.index',$data);
+    }
+
+    public function adminIndex()
+    {
+        if(\Auth::user()->is_admin){
+            $raffles = Raffle::paginate(16);
+            return view('raffles.admin')->with(array('raffles' => $raffles));
+        }
+        return \Redirect::action('LotteriesController@index');
     }
 
     /**
@@ -52,7 +62,7 @@ class RafflesController extends Controller
         $product = $request->input('product');
         $date = \DateTime::createFromFormat('n/j/Y', $end_date);
         $end_date = $date->format('Y-m-d H:i:00');
-        $raffle = new RiffRaff();
+        $raffle = new Raffle();
         $raffle->title = $title;
         $raffle->content = $content;
         $raffle->product = $product;
@@ -74,7 +84,7 @@ class RafflesController extends Controller
      */
     public function show($id)
     {
-        $raffle = RiffRaff::find($id);
+        $raffle = Raffle::find($id);
 
         if(!$raffle){
             abort(404);
@@ -92,7 +102,7 @@ class RafflesController extends Controller
      */
     public function edit($id)
     {
-         $raffle = RiffRaff::find($id);
+         $raffle = Raffle::find($id);
 
         if(\Auth::user()->is_admin){ 
             if(!$raffle){

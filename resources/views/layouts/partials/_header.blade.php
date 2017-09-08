@@ -38,8 +38,8 @@
 @if(Auth::check() && Auth::user()->is_admin)
 <div class="row" id="links">
 	<div class="col col-xs-12 borderOpac" id="links">
-		<a class="navLink" href="{{action('LotteriesController@create')}}">Create Lottery</a>
-		<a class="navLink" href="{{action('RafflesController@create')}}">Create Raffle</a>
+		<a class="navLink" href="{{action('LotteriesController@adminIndex')}}">Manage Lotteries</a>
+		<a class="navLink" href="{{action('RafflesController@adminIndex')}}">Manage Raffles</a>
 		<a class="navLink" href="{{action('UsersController@index')}}">Manage Users</a>
 		<a class="navLink" href="{{action('SuggestionsController@adminIndex')}}">Manage Suggestions</a>
 	

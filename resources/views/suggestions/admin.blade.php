@@ -22,7 +22,7 @@ table, th, td {
 
 	<main class="container" style="max-width:100%;float:left;">
 
-		<table style="width:100%">
+		<table class="table table-striped table-condensed" style="width:100%">
 			<tr>
 				<th>Edit</th>
 				<th>Title</th>
@@ -38,7 +38,7 @@ table, th, td {
 			<tr>
 				
 				<td>
-					<a class="btn btn-primary" href="{{action('SuggestionsController@show',$suggestion->id)}}">Edit</a>
+					<a class="btn btn-primary btn-sm" href="{{action('SuggestionsController@show',$suggestion->id)}}">Edit</a>
 				</td>
 				<td>{{$suggestion->title}}</td>
 				<td>{{$suggestion->content}}</td>

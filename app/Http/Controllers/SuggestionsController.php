@@ -262,7 +262,7 @@ class SuggestionsController extends Controller
         $suggestion->addressed = 0;
         $suggestion->save();
 
-        return \Redirect::action('SuggestionssController@index');
+        return \Redirect::action('SuggestionsController@adminIndex');
 
     }
 
@@ -277,7 +277,7 @@ class SuggestionsController extends Controller
         $suggestion->addressed = 1;
         $suggestion->save();
 
-        return \Redirect::action('SuggestionssController@index');
+        return \Redirect::action('SuggestionsController@adminIndex');
 
     }
 
