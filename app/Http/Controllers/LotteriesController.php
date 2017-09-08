@@ -58,14 +58,18 @@ class LotteriesController extends Controller
 
 
 
-    public function addUserToEntries($id)
+    public function addUserToEntries(Request $request, $id)
     {
-    
-        $userId = \Auth::id();
-        $newEntry = new LotteryEntry();
-        $newEntry->user_id = $userId;
-        $newEntry->lottery_id = $id;
-        $newEntry->save();
+        if(\Auth::check()){
+            $userId = \Auth::id();
+            $newEntry = new LotteryEntry();
+            $newEntry->user_id = $userId;
+            $newEntry->lottery_id = $id;
+            $newEntry->save();
+        } else {
+            $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
+            return \Redirect::action('Auth\AuthController@getLogin');
+        }
 
         return \Redirect::action('LotteriesController@index');
 
