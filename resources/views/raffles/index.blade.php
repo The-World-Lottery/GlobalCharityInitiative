@@ -14,9 +14,9 @@
 
 @section('content')
 
-	<main class="container">
+	<main class="container" style="max-width:100%;float:left;">
+	<div style="padding-top: 2em;">
 
-		<div style="padding-top: 2em;">
 		@if (session()->has('successMessage'))
             <div class="alert alert-success">{{ session('successMessage') }}</div>
         @endif
