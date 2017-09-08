@@ -49,14 +49,15 @@ class RafflesController extends Controller
         return view('raffles.create');
     }
 
-    public function addUserToEntries($id)
+    public function addUserToEntries(Request $request, $id)
     {
-    
         $userId = \Auth::id();
         $newEntry = new RaffleEntry();
         $newEntry->user_id = $userId;
         $newEntry->raffles_id = $id;
         $newEntry->save();
+
+        $request->session()->flash('successMessage', 'You have successfully purchased a RAFFLE ticket! Thank you for your donation and good luck!');
 
         return \Redirect::action('RafflesController@index');
 
@@ -179,7 +180,7 @@ class RafflesController extends Controller
 
         $raffle->delete();
         $request->session()->flash('successMessage', 'raffle deleted');
-        return redirect()->action('rafflesController@index');
+        return redirect()->action('RafflesController@index');
     }
     
 

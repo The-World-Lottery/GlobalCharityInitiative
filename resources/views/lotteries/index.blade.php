@@ -15,7 +15,10 @@
 @section('content')
 	<span style="float:right;padding-right:1em;">{!! $lotteries->appends(Request::except('page'))->render() !!}</span>
 	<main class="container" style="max-width:100%;float:left;">
-	
+		<div style="padding-top: 2em;">
+			@if (session()->has('successMessage'))
+            <div class="alert alert-success">{{ session('successMessage') }}</div>
+        	@endif
 
 			@foreach($lotteries as $lottery)
 
@@ -29,6 +32,7 @@
 
 		@endforeach
 		<br>
+		</div>
 	</main>
 
 @stop
