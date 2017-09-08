@@ -86,13 +86,33 @@
 
 
 
-{{-- 		PLACEHOLDER FOR UPDATING IMAGE
 
 			{!! $errors->first('image', '<span class="help-block">:message</span>')!!}
-			<input type="text" name="image" id="image" value="{{ old('image') }}" placeholder="image"> --}}
-
-			{!! $errors->first('phone_number', '<span class="help-block">:message</span>')!!}
+			
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour" >
+				<div class="row">
+					 <div class="col-xs-4">
+					 	<strong>Profile Image</strong>
+					</div>
+					<div class="col-xs-4">
+					 
+					</div>
+					<div class="col-xs-4">
+					 	<span class="glyphicon glyphicon-pencil">Edit</span>
+					</div>
+				</div>
+			</a>
+			<div class="collapse" id="collapseFour">
+				<div class="panel-body">
+					<img src='{{substr($User->image,1,-1)}}' id="profImg">
+					<input id="img" type="text" name="image">
+        			<a id="filestackButton" class="btn btn-secondary">Filestack Image Hosting</a>
+				</div>
+			</div>
+			
+        
+			{!! $errors->first('phone_number', '<span class="help-block">:message</span>')!!}
+			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive" >
 				<div class="row">
 					 <div class="col-xs-4">
 					 	<strong>Phone Number</strong>
@@ -105,7 +125,7 @@
 					</div>
 				</div>
 			</a>
-			<div class="collapse" id="collapseFour">
+			<div class="collapse" id="collapseFive">
 				<div class="panel-body">
 					<input class="form-control text-center" type="text" name="phone_number" id="phone_number" value="{{$User->phone_number}}" placeholder="phone_number">
 				</div>
@@ -123,11 +143,11 @@
 		</form>
 
 
-		{{-- <form method="POST" action="{{ action('UsersController@destroy', $User->id )}}">
+		<form method="POST" action="{{ action('UsersController@destroy', $User->id )}}">
 		{!! csrf_field() !!}
 		{{ method_field('DELETE') }}
 		<button class="btn btn-warning">DELETE ACCOUNT</button>
-		</form> --}}
+		</form>
 
 	</main>
 

@@ -110,6 +110,7 @@ class UsersController extends Controller
         $user->username = $request->username;
         $user->email = $request->email;
         $user->phone_number = $request->phone_number;
+        $user->image = $request->image;
         // $user->user_id = \Auth::id();
         $user->save();
         // $request->session()->flash('successMessage', 'Your Post was a successfully updated!');
@@ -127,6 +128,39 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail($id);
+        $suggestions = $user->suggestions;
+
+        foreach ($suggestions as $suggestion) {
+            $suggestion->delete();
+        }
+
+        $user->delete();
+        // $request->session()->flash('successMessage', 'Your user was a successfully destroyed!');
+
+        return \Redirect::action('LotteriesController@index');
+    }
+
+    public function makeAdmin($id)
+    {
+        $user = User::findOrFail($id);
+
+
+        $user->is_admin = 1;
+        $user->save();
+
+        // $request->session()->flash('successMessage', 'Your user was a successfully destroyed!');
+
+        return \Redirect::action('UsersController@index');
+    }
+
+    public function destroyAdmin($id)
+    {
+        $user = User::findOrFail($id);
+
+        $user->is_admin = 0;
+        $user->save();
+
+        return \Redirect::action('UsersController@index');
     }
 }

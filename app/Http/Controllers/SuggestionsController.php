@@ -32,6 +32,14 @@ class SuggestionsController extends Controller
         $data['suggestions']= $suggestions;
         return view('suggestions.index',$data);
     }
+    public function adminIndex()
+    {
+        if(\Auth::user()->is_admin){
+            $suggestions = Suggestion::paginate(16);
+            return view('suggestions.admin')->with(array('suggestions' => $suggestions));    
+        }
+        return \Redirect::action('LotteriesController@index');
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -154,7 +162,7 @@ class SuggestionsController extends Controller
     {
         $suggestion = Suggestion::find($id);
 
-        if(\Auth::id() == $suggestion->user_id){ 
+        if(\Auth::id() == $suggestion->user_id || \Auth::user()->is_admin){ 
             if(!$suggestion){
                 abort(404);
             }
@@ -253,4 +261,41 @@ class SuggestionsController extends Controller
         $request->session()->flash('successMessage', 'Suggestion deleted');
         return redirect()->action('SuggestionsController@index');
     }
+
+    public function closeAddress($id)
+    {
+        $suggestion = Suggestion::findOrFail($id);
+
+        if(!$suggestion){
+            abort(404);
+        }
+
+        $suggestion->addressed = 0;
+        $suggestion->save();
+
+        return \Redirect::action('SuggestionssController@index');
+
+    }
+
+    public function openAddress($id)
+    {
+        $suggestion = Suggestion::findOrFail($id);
+
+        if(!$suggestion){
+            abort(404);
+        }
+
+        $suggestion->addressed = 1;
+        $suggestion->save();
+
+        return \Redirect::action('SuggestionssController@index');
+
+    }
+
+
+
+
+
+
+
 }

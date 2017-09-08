@@ -19,6 +19,12 @@ Route::get('/suggestions/userssuggestions/{id}','SuggestionsController@userssugg
 Route::get('/upvote/{id}','SuggestionsController@upvote');
 Route::get('/downvote/{id}','SuggestionsController@downvote');
 Route::get('/highest','SuggestionsController@highest');
+Route::get('/makeAdmin/{id}','UsersController@makeAdmin');
+Route::get('/destroyAdmin/{id}','UsersController@destroyAdmin');
+Route::get('/openAddress/{id}','SuggestionsController@openAddress');
+Route::get('/closeAddress/{id}','SuggestionsController@closeAddress');
+Route::get('/adminIndex','SuggestionsController@adminIndex');
+
 Route::resource('currencyconversion','CurrencyConversionController');
 Route::resource('suggestions', 'SuggestionsController');
 Route::resource('users', 'UsersController');
