@@ -50,6 +50,7 @@ class RafflesController extends Controller
         $content = $request->input('content');
         $end_date = $request->input('end-date');
         $product = $request->input('product');
+        $image = $request->input('image');
         $date = \DateTime::createFromFormat('n/j/Y', $end_date);
         $end_date = $date->format('Y-m-d H:i:00');
         $raffle = new RiffRaff();
@@ -57,6 +58,7 @@ class RafflesController extends Controller
         $raffle->content = $content;
         $raffle->product = $product;
         $raffle->end_date = $end_date;
+        $raffle->img = $image;
         $raffle->user_id = \Auth::id();
         if(\Auth::user()->is_admin){
             $raffle->save();
@@ -74,7 +76,7 @@ class RafflesController extends Controller
      */
     public function show($id)
     {
-         $raffle = RiffRaff::find($id);
+        $raffle = RiffRaff::find($id);
 
         if(!$raffle){
             abort(404);
@@ -94,15 +96,15 @@ class RafflesController extends Controller
     {
          $raffle = RiffRaff::find($id);
 
-        if(\Auth::id() == $raffle->user_id){ 
+        if(\Auth::user()->is_admin){ 
             if(!$raffle){
                 abort(404);
             }
             $data['raffle'] = $raffle;
             return view('Raffles.edit',$data);
-        } else {
-            header('Location:/Raffles');
         }
+            return \Redirect::action('LotteriesController@index');
+        
     }
 
     /**
@@ -145,8 +147,17 @@ class RafflesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $raffle = Raffle::find($id);
+
+        if(!$raffle){
+            abort(404);
+        }
+
+        $raffle->delete();
+        $request->session()->flash('successMessage', 'raffle deleted');
+        return redirect()->action('rafflesController@index');
     }
+    
 
     public function runRaffle(){
 

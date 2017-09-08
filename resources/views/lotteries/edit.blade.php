@@ -108,4 +108,10 @@
 			<button>Submit</button>
 		</form>
 
+		<form method="POST" action="{{ action('LotteriesController@destroy', $lottery->id )}}">
+		{!! csrf_field() !!}
+		{{ method_field('DELETE') }}
+		<button class="btn btn-danger">DELETE LOTTERY</button>
+		</form>
+
 @stop

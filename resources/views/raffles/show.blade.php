@@ -14,17 +14,19 @@
 
 @section('content')
 
-	<main class="container">
+	<main class="container" style="max-width:100%;float:left;display:flex;justify-content: center;">
+		<div style="padding-top: 2em;">
 		<h1>This Raffle</h1>
-
+		<div id="showProfImg"><img src={!! $raffle->img !!}></div>
 		<h2>{{$raffle['title']}}</h2>
 		<h3>{{$raffle['content']}}</h3>
 		<p>By {{$raffle->user->name}}</p>
 		<p>posted on {{$raffle->created_at}}</p>
 		<p>Last updated on {{$raffle->updated_at}}</p>
-		@if (Auth::id() == $raffle->user_id)
+		@if (Auth::check() && Auth::user()->is_admin)
 		<a href="{{ action('RafflesController@edit', $raffle->id) }}">Edit</a>
 		@endif
+		</div>
 
 
 		

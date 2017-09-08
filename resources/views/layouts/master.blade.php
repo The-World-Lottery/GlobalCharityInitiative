@@ -37,6 +37,7 @@
 	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
 	  crossorigin="anonymous"></script>
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mistic100-Bootstrap-Confirmation/2.4.0/bootstrap-confirmation.js" integrity="sha256-TnkpSdG7zEbrmoCPfvJbbKcuhectEI/li+FwydoF4DY=" crossorigin="anonymous"></script>
 	<script src="https://static.filestackapi.com/v3/filestack.js"></script>
 	<script src="/main.js" type="text/javascript"></script>
 </body>

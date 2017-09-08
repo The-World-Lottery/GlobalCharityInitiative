@@ -28,6 +28,14 @@
 			<p>format MM/DD/YYYY</p>
 			{!! $errors->first('end-date', '<span class="help-block">:message</span>')!!}
 			<input class="form-control" type="datetime" name="end-date" id="end-date" value="{{ old('end-date') }}" placeholder="end-date">
+
+			<div class="form-group">
+		        Profile Image
+		        <input id="img" type="text" name="image"><br>
+		        <a id="filestackButton" class="btn btn-secondary">Use Filestack Image Hosting</a>
+		    </div>
+
+
 			<button>Submit</button>
 		</form>
 	</main>
