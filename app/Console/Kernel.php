@@ -14,6 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         Commands\Inspire::class,
+        Commands\GameTimeCheck::class
     ];
 
     /**
@@ -26,13 +27,9 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('inspire')
                  ->hourly();
-        $schedule->call(function () {
-            echo "suc seed";
-            $now = time();
-            $raffles = DB::table('raffles')->where('end_date', '=', $now)->get();
-            foreach ($raffles as $raffle) {
-                \App\Models\Raffle::raffleFunction($raffle->id);
-            }
-        })->everyMinute();
+
+        $schedule->command('game:check')
+                 ->everyMinute();
     }
 
+}

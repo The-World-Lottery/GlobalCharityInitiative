@@ -12,7 +12,11 @@ class Raffle extends Model
    	return $this->belongsTo('App\User','user_id');
    }
 
-   	public static function raffleFunction($id){
-   		DB::table('raffles')->where('id', '=', $id)->delete();
+   	public static function raffleFunction($time){
+   		return Raffle::where('end_date', '<', $time)->get();
+   	}
+
+   	public static function raffleWin($id){
+   		return Raffle::where('id', '=', $id)->delete();
    	}
 }
