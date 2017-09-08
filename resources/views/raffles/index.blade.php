@@ -14,11 +14,12 @@
 
 @section('content')
 
-	<main class="container">
-		<h1>All Raffles</h1>
+	<main class="container" style="max-width:100%;float:left;">
+	<div style="padding-top: 2em;">
 
-		
-	
+		@if (session()->has('successMessage'))
+            <div class="alert alert-success">{{ session('successMessage') }}</div>
+        @endif
 
 		@foreach($raffles as $raffle)
 			<a href="{{ action('RafflesController@show', $raffle->id) }}"><h1>{{$raffle->title}}</h1></a>
@@ -30,7 +31,7 @@
 
 	
 		{!! $raffles->appends(Request::except('page'))->render() !!} 
-
+		</div>
 	</main>
 
 @stop

@@ -60,6 +60,16 @@ class LotteriesController extends Controller
 
     public function addUserToEntries(Request $request, $id)
     {
+        $currLottery = Lottery::find($id);
+        $currLottery->current_value += 1;
+        $currLottery->save();
+
+        $userId = \Auth::id();
+        $newEntry = new LotteryEntry();
+        $newEntry->user_id = $userId;
+        $newEntry->lottery_id = $id;
+        $newEntry->save();
+
         if(\Auth::check()){
             $userId = \Auth::id();
             $newEntry = new LotteryEntry();
@@ -71,6 +81,8 @@ class LotteriesController extends Controller
             return \Redirect::action('Auth\AuthController@getLogin');
         }
 
+
+        $request->session()->flash('successMessage', 'You have successfully purchased a LOTTERY ticket! Thank you for your donation and good luck!');
         return \Redirect::action('LotteriesController@index');
 
     }
@@ -193,7 +205,7 @@ class LotteriesController extends Controller
 
         $lottery->delete();
         $request->session()->flash('successMessage', 'lottery deleted');
-        return redirect()->action('lotteriesController@index');
+        return redirect()->action('LotteriesController@index');
     }
     
 }
