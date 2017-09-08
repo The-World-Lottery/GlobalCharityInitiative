@@ -103,7 +103,7 @@ class SuggestionsController extends Controller
 
     public function highest()
     {
-        
+        //initial way of euserping a join query w/ 2 queries
         // $votes = DB::table('votes')
         //              ->select(DB::raw('count(*) as total, suggestion_id'))
         //              ->groupBy('suggestion_id')
@@ -121,7 +121,7 @@ class SuggestionsController extends Controller
 
         // $suggestions = Suggestion::where('id',$suggIds[0])->orWhere('id',$suggIds[1])->orWhere('id',$suggIds[2])->orWhere('id',$suggIds[3])->orWhere('id',$suggIds[4])->get();
 
-        // $suggestions = Suggestion::whereIn('id', $suggIds);
+    
 
         $suggestions = DB::table('suggestions')
                     ->leftJoin('votes', 'votes.suggestion_id', '=', 'suggestions.id')

@@ -16,7 +16,7 @@
 
 	<main class="container">
 		<h1>This Raffle</h1>
-
+		<div id="showProfImg"><img src={!! $raffle->img !!}></div>
 		<h2>{{$raffle['title']}}</h2>
 		<h3>{{$raffle['content']}}</h3>
 		<p>By {{$raffle->user->name}}</p>
