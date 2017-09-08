@@ -70,6 +70,18 @@ class LotteriesController extends Controller
         $newEntry->lottery_id = $id;
         $newEntry->save();
 
+        if(\Auth::check()){
+            $userId = \Auth::id();
+            $newEntry = new LotteryEntry();
+            $newEntry->user_id = $userId;
+            $newEntry->lottery_id = $id;
+            $newEntry->save();
+        } else {
+            $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
+            return \Redirect::action('Auth\AuthController@getLogin');
+        }
+
+
         $request->session()->flash('successMessage', 'You have successfully purchased a LOTTERY ticket! Thank you for your donation and good luck!');
         return \Redirect::action('LotteriesController@index');
 

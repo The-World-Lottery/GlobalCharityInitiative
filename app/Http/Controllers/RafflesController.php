@@ -51,14 +51,24 @@ class RafflesController extends Controller
 
     public function addUserToEntries(Request $request, $id)
     {
+
         $userId = \Auth::id();
         $newEntry = new RaffleEntry();
         $newEntry->user_id = $userId;
         $newEntry->raffles_id = $id;
         $newEntry->save();
 
+        if(\Auth::check()){
+            $userId = \Auth::id();
+            $newEntry = new RaffleEntry();
+            $newEntry->user_id = $userId;
+            $newEntry->raffles_id = $id;
+            $newEntry->save();
+        } else {
+                $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
+                return \Redirect::action('Auth\AuthController@getLogin');
+        }
         $request->session()->flash('successMessage', 'You have successfully purchased a RAFFLE ticket! Thank you for your donation and good luck!');
-
         return \Redirect::action('RafflesController@index');
 
     }
