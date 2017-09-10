@@ -15,7 +15,7 @@
 
 @section('content')
 
- 	<main class="container">
+ 	<main class="container" style="max-width:100%;float:left;">
     <div style="padding:1em;">
         @if (session()->has('errorMessage'))
             <div class="alert alert-error">{{ session('errorMessage') }}</div>
@@ -24,19 +24,19 @@
         <form method="POST" action="/auth/login">
             {!! csrf_field() !!}
 
-            <div>
-                Email
-                <input type="email" name="email" value="{{ old('email') }}">
+            <div class="form-group">
+                <label>Email</label>
+                <input class="form-control" type="email" name="email" value="{{ old('email') }}">
             </div>
-            <div>
-                Password
-                <input type="password" name="password" id="password">
+            <div class="form-group">
+                <label>Password</label>
+                <input class="form-control" type="password" name="password" id="password">
             </div>
-            <div>
+            <div class="form-group">
                 <input type="checkbox" name="remember"> Remember Me
             </div>
-            <div>
-                <button type="submit">Login</button>
+            <div class="form-group" style="display:flex;justify-content: center;">
+                <button class="btn btn-success" type="submit">Login</button>
             </div>
             
         </form>

@@ -25,7 +25,7 @@ class SuggestionsController extends Controller
             $q = $request->q;
             $suggestions = Suggestion::search($q);    
         } else {
-            $suggestions = Suggestion::with('user')->paginate(5);  
+            $suggestions = Suggestion::with('user')->where('addressed','1')->paginate(5);  
         }
 
 
@@ -35,7 +35,7 @@ class SuggestionsController extends Controller
     public function adminIndex()
     {
         if(\Auth::user()->is_admin){
-            $suggestions = Suggestion::paginate(16);
+            $suggestions = Suggestion::where('addressed','1')->paginate(16);
             return view('suggestions.admin')->with(array('suggestions' => $suggestions));    
         }
         return \Redirect::action('LotteriesController@index');
@@ -132,6 +132,7 @@ class SuggestionsController extends Controller
     
 
         $suggestions = DB::table('suggestions')
+                    ->where('addressed','1')
                     ->leftJoin('votes', 'votes.suggestion_id', '=', 'suggestions.id')
                     ->select(DB::raw('count(votes.id) as totalvotes, votes.suggestion_id, suggestions.id'))
                     ->groupBy('votes.suggestion_id')

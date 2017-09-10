@@ -3,7 +3,9 @@
 		<div class="row">
 			<div class="col-sm-6">
 				<h2 id="headLogo">The World Lottery Logo Here</h2>
-				<h4 style="color:lightgreen">Current value of world lottery $$$$</h4>
+				<h4 style="color:lightgreen">Current World Lottery Jackpot is $
+				{{-- {{ TheWorldLottery::select('current_value') }} --}}
+				</h4>
 			</div>
 			<div class="col-sm-6">
 				@if (Auth::check())
