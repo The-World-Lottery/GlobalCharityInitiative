@@ -14,14 +14,14 @@ table, th, td {
 @section('divHead')
 
 <span>Manage Lotteries </span>
-<span><a class="btn btn-block btn-primary" href="{{action('LotteriesController@create')}}" >Create New Lottery</a></span>
-<span style="float:right;padding-right:1em;">{!! $lotteries->appends(Request::except('page'))->render() !!}</span>
 
 @stop
 
 @section('content')
 
 	<main class="container" style="max-width:100%;float:left;">
+	<span><a class="btn btn-block btn-primary" href="{{action('LotteriesController@create')}}" >Create New Lottery</a></span>
+	<span style="float:right;padding-right:1em;">{!! $lotteries->appends(Request::except('page'))->render() !!}</span>
 
 		<table class="table table-striped table-condensed" style="width:100%">
 			<tr>

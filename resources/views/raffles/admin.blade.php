@@ -14,8 +14,6 @@ table, th, td {
 @section('divHead')
 
 <span>Manage Raffles </span>
-<span><a class="btn btn-block btn-primary" href="{{action('RafflesController@create')}}" >Create New Raffle</a></span>
-<span style="float:right;padding-right:1em;">{!! $raffles->appends(Request::except('page'))->render() !!}</span>
 
 @stop
 
@@ -23,6 +21,8 @@ table, th, td {
 
 	<main class="container" style="max-width:100%;float:left;">
 
+	<span><a class="btn btn-block btn-primary" href="{{action('RafflesController@create')}}" >Create New Raffle</a></span>
+	<span style="float:right;padding-right:1em;">{!! $raffles->appends(Request::except('page'))->render() !!}</span>
 		<table class="table table-striped table-condensed" style="width:100%">
 			<tr>
 				<th>Edit</th>
