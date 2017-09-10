@@ -35,8 +35,8 @@
             <div class="form-group">
                 <input type="checkbox" name="remember"> Remember Me
             </div>
-            <div class="form-group">
-                <button type="submit">Login</button>
+            <div class="form-group" style="display:flex;justify-content: center;">
+                <button class="btn btn-success" type="submit">Login</button>
             </div>
             
         </form>

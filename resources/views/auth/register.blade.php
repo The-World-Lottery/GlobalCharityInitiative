@@ -42,11 +42,11 @@
         <input class="form-control" type="text" name="phone_number" id="Input4" value="{{old('phone_number')}}">
     </div>
 
-    <div class="form-group">
+    <div class="form-group" hidden>
         <label for="Input5">Profile Image</label>
         <input class="form-control" id="img" type="text" name="image" id="Input5" value="{{old('image')}}"><br>
-        <a id="filestackButton" class="btn btn-secondary">Use Filestack Image Hosting</a>
     </div>
+        <a id="filestackButton" class="btn btn-secondary">Use Filestack Image Hosting</a>
 
     <div class="form-group">
         <label for="Input6">Password</label>
@@ -58,8 +58,8 @@
         <input class="form-control" type="password" name="password_confirmation" id="formGroupExampleInput7" value="">
     </div>
 
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary">Register</button>
+    <div class="form-group" style="display:flex;justify-content: center;">
+        <button type="submit" class="btn btn-success">Register Your Account</button>
     </div>
 
 </form>
