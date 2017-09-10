@@ -24,7 +24,7 @@
 		@foreach($raffles as $raffle)
 			<a href="{{ action('RafflesController@show', $raffle->id) }}"><h1>{{$raffle->title}}</h1></a>
 			<p>{{$raffle->content}}</p>
-			<p>By {{$raffle->user->name}}</p>
+			<p>Created By : {{$raffle->user->name}}</p>
 			
 		@endforeach
 		<br>
