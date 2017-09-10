@@ -33,7 +33,7 @@ class LotteriesController extends Controller
        
 
         // $data['lotterys']= $lotterys;
-        return view('lotteries.index',$data);
+        // return view('lotteries.index',$data);
     }
 
     public function adminIndex()
