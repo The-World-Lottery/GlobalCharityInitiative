@@ -184,14 +184,33 @@ class TheWorldLotterysController extends Controller
 
         public function storeNumbers(Request $request)
     {
-        $requestArr = $request->input();
+        if(\Auth::check()){
+            $requestArr = $request->input();
 
-        $newArr = array_keys($requestArr);
-        array_shift($newArr);
-       dd($newArr);
+            $powerNum = $requestArr['powerNumber'];
+
+            $newArr = array_keys($requestArr);
+            array_shift($newArr);
+
+
+            $entry = new TheWorldLotteryEntry();
+            $entry->first_num = $newArr[0];
+            $entry->second_num = $newArr[1];
+            $entry->third_num = $newArr[2];
+            $entry->fourth_num = $newArr[3];
+            $entry->fifth_num = $newArr[4];
+            $entry->key_num = $powerNum;
+            $entry->user_id = \Auth::id();
+            $entry->the_world_lottery_id = 1;
+            $entry->save();
+        } else {
+            $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
+            return \Redirect::action('Auth\AuthController@getLogin');
+        }
+
+        $request->session()->flash('successMessage', 'You have successfully purchased a LOTTERY ticket! Thank you for your donation and good luck!');
+        return \Redirect::action('TheWorldLotterysController@index');
 
        
-
-        return view('theworldlottery.select');
     }
 }
