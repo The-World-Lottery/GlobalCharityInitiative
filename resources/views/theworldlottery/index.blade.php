@@ -22,13 +22,12 @@
 			<div><strong>Lotto Ends On: </strong> {{$theWorldLottery->end_date}}</div>
 			<div><strong>Charity To: </strong> {{$theWorldLottery->content}}</div>
 
-			<a href=""><button class="btn btn-primary">BUY TICKET!!!</button></a>
 
-			
 
+			<a href="{{ action('TheWorldLotterysController@addUserToEntries', $theWorldLottery->id) }}"><button class="btn btn-primary">BUY TICKET!!!</button></a>
 
 			@if ((Auth::check()) && (Auth::user()->is_admin))
-			  <a href="{{ action('LotteriesController@edit', $lottery->id) }}">Edit</a>
+			  <a href="{{ action('TheWorldLotterysController@edit', $theWorldLottery->id) }}">Edit</a>
 
 			@endif
 		</div>
