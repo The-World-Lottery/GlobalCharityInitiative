@@ -94,7 +94,7 @@ class TheWorldLotterysController extends Controller
 
 
         $request->session()->flash('successMessage', 'You have successfully purchased a ticket for THE WORLD LOTTERY! Thank you for your donation and good luck!');
-        return \Redirect::action('TheWorldLotterysController@index');
+        return \Redirect::action('TheWorldLotterysController@selectNumbers');
 
     }
 
@@ -173,5 +173,11 @@ class TheWorldLotterysController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function selectNumbers()
+    {
+
+        return view('theworldlottery.select');
     }
 }
