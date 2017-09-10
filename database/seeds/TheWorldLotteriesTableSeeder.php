@@ -12,11 +12,11 @@ class TheWorldLotteriesTableSeeder extends Seeder
     public function run()
     {
    
-
        	$theWorldLottery = new \App\Models\TheWorldLottery();
         $theWorldLottery->title = 'TheWorldLottery';
         $theWorldLottery->init_value = 100000;
-        $theWorldLottery->end_date = '2017-09-01 00:00:00';
+        $theWorldLottery->current_value = 100000;
+        $theWorldLottery->end_date = '2017-09-11 00:00:00';
         $theWorldLottery->user_id = 1;
         $theWorldLottery->save();
   
