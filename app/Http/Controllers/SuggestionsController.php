@@ -132,6 +132,7 @@ class SuggestionsController extends Controller
     
 
         $suggestions = DB::table('suggestions')
+                    ->where('addressed','1')
                     ->leftJoin('votes', 'votes.suggestion_id', '=', 'suggestions.id')
                     ->select(DB::raw('count(votes.id) as totalvotes, votes.suggestion_id, suggestions.id'))
                     ->groupBy('votes.suggestion_id')
