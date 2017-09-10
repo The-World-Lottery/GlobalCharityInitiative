@@ -117,6 +117,14 @@ label {
 
 }
 
+.creatorsSocialIcons {
+	height:3em;
+	width:3em;
+	border:1px solid black;
+	float:left;
+	margin-right:1em;
+}
+
 @media screen and (max-width: 768px) {
 
 	.col-sm-4 {
