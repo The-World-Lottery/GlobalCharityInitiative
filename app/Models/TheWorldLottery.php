@@ -13,7 +13,9 @@ class TheWorldLottery extends Model
 		return $this->belongsTo('App\User','user_id');
    	}
 
+
    	public function theWorldLotteryEntries()
+
     {
         return $this->hasMany('App\Models\TheWorldLotteryEntry','the_world_lottery_id');
     }
