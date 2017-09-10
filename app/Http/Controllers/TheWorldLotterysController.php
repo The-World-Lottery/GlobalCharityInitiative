@@ -59,29 +59,35 @@ class TheWorldLotterysController extends Controller
         return redirect()->action('TheWorldLotterysController@index');
     }
 
-    // public function addUserToEntries(Request $request, $id)
-    // {
+    public function addUserToEntries(Request $request, $id)
+    {
 
-    //     if(\Auth::check()){
-    //         $currLottery = TheWorldLottery::find($id);
-    //         $currLottery->current_value += 2;
-    //         $currLottery->save();
+        if(\Auth::check()){
+            $currLottery = TheWorldLottery::find($id);
+            $currLottery->current_value += 2;
+            $currLottery->save();
 
-    //         $userId = \Auth::id();
-    //         $newEntry = new TheWorldLotteryEntry();
-    //         $newEntry->user_id = $userId;
-    //         $newEntry->lottery_id = $id;
-    //         $newEntry->save();
-    //     } else {
-    //         $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
-    //         return \Redirect::action('Auth\AuthController@getLogin');
-    //     }
+            $userId = \Auth::id();
+            $newEntry = new TheWorldLotteryEntry();
+            $newEntry->user_id = $userId;
+            $newEntry->the_world_lottery_id = $id;
+            $newEntry->first_num = $request->input('first_num');
+            $newEntry->second_num = $request->input('second_num');
+            $newEntry->third_num = $request->input('third_num');
+            $newEntry->fourth_num = $request->input('fourth_num');
+            $newEntry->fifth_num = $request->input('fifth_num');
+            $newEntry->key_num = $request->input('key_num');
+            $newEntry->save();
+        } else {
+            $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
+            return \Redirect::action('Auth\AuthController@getLogin');
+        }
 
 
-    //     $request->session()->flash('successMessage', 'You have successfully purchased a LOTTERY ticket! Thank you for your donation and good luck!');
-    //     return \Redirect::action('LotteriesController@index');
+        $request->session()->flash('successMessage', 'You have successfully purchased a ticket for THE WORLD LOTTERY! Thank you for your donation and good luck!');
+        return \Redirect::action('TheWorldLotterysController@index');
 
-    // }
+    }
 
     /**
      * Display the specified resource.
@@ -103,13 +109,13 @@ class TheWorldLotterysController extends Controller
     public function edit($id)
     {
         
-        $lottery = Lottery::find($id);
+        $theWorldLottery = TheWorldLottery::find($id);
 
         if(\Auth::user()->is_admin){ 
-            if(!$lottery){
+            if(!$theWorldLottery){
                 abort(404);
             }
-            $data['lottery'] = $lottery;
+            $data['theworldlottery'] = $theWorldLottery;
             return view('theworldlottery.edit',$data);
         } 
             return \Redirect::action('TheWorldLotterysController@index');
