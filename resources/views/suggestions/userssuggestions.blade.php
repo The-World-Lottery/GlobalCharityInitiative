@@ -11,9 +11,13 @@
 
 @section('content')
 
-	{{-- <span style="float:right;padding-right:1em;">{!! $suggestions->appends(Request::except('page'))->render() !!}</span> --}}
+{{-- 	<span style="float:right;padding-right:1em;">{!! $suggestions->appends(Request::except('page'))->render() !!}</span> --}}
+
     <main class="container" style="max-width:100%;float:left;">
 
+    
+
+      @if(count($suggestions))
         @foreach($suggestions as $suggestion)
 
             <a href="{{ action('SuggestionsController@show', $suggestion->id) }}">
@@ -25,7 +29,16 @@
 
             <p>{{$suggestion->content}}</p>
             <p>__By {{$suggestion->user->name}}</p>
+
         @endforeach
+      @else
+
+        <h1> You have no Suggestions!!</h1>
+
+        <div> Click here to give us feedback!!</div>
+
+       <a href="{{action('SuggestionsController@create')}}"> <button class="btn btn-primary" >GO!</button></a>
+      @endif
         <br>
 
     </main>
