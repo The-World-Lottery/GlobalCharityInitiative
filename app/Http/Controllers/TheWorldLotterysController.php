@@ -178,6 +178,20 @@ class TheWorldLotterysController extends Controller
     public function selectNumbers()
     {
 
+
+        return view('theworldlottery.select');
+    }
+
+        public function storeNumbers(Request $request)
+    {
+        $requestArr = $request->input();
+
+        $newArr = array_keys($requestArr);
+        array_shift($newArr);
+       dd($newArr);
+
+       
+
         return view('theworldlottery.select');
     }
 }
