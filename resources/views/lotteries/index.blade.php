@@ -25,9 +25,9 @@
 			<a href="{{ action('LotteriesController@show', $lottery->id) }}">
 				<h3 class ="suggHead">{{$lottery->title}}</h3>
 			</a>
-			<p>{{$lottery->init_value}}</p>
-			<p>{{$lottery->current_value}}</p>
-			<p>{{$lottery->end_date}}</p>
+			<p>Current Value : {{$lottery->current_value}}</p>
+			<p>Initial Value : {{$lottery->init_value}}</p>
+			<p>Lottery Ends : {{$lottery->end_date}}</p>
 			<p>{{$lottery->content}}</p>
 
 		@endforeach
