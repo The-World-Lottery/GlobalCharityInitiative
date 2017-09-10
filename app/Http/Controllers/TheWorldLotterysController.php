@@ -59,6 +59,30 @@ class TheWorldLotterysController extends Controller
         return redirect()->action('TheWorldLotterysController@index');
     }
 
+    // public function addUserToEntries(Request $request, $id)
+    // {
+
+    //     if(\Auth::check()){
+    //         $currLottery = TheWorldLottery::find($id);
+    //         $currLottery->current_value += 2;
+    //         $currLottery->save();
+
+    //         $userId = \Auth::id();
+    //         $newEntry = new TheWorldLotteryEntry();
+    //         $newEntry->user_id = $userId;
+    //         $newEntry->lottery_id = $id;
+    //         $newEntry->save();
+    //     } else {
+    //         $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
+    //         return \Redirect::action('Auth\AuthController@getLogin');
+    //     }
+
+
+    //     $request->session()->flash('successMessage', 'You have successfully purchased a LOTTERY ticket! Thank you for your donation and good luck!');
+    //     return \Redirect::action('LotteriesController@index');
+
+    // }
+
     /**
      * Display the specified resource.
      *
