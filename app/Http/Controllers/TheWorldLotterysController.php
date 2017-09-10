@@ -16,7 +16,7 @@ class TheWorldLotterysController extends Controller
      */
     public function index()
     {
-        //
+        return view('theworldlottery.index');
     }
 
     /**
@@ -26,7 +26,7 @@ class TheWorldLotterysController extends Controller
      */
     public function create()
     {
-        //
+        return view('theworldlottery.create');
     }
 
     /**
@@ -37,7 +37,26 @@ class TheWorldLotterysController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $this->validate($request, Suggestion::$rules);
+
+        $title = $request->input('title');
+        $content = $request->input('content');
+        $init_value = $request->input('init_value');
+        $end_date = $request->input('end_date');
+        $lottery = new Lottery();
+        $lottery->title = $title;
+        $lottery->content = $content;
+        $lottery->init_value = $init_value;
+        $lottery->current_value = $init_value;
+        $lottery->end_date = $end_date;
+        $lottery->user_id = \Auth::id();
+        $lottery->save();
+
+        // $request->session()->flash('successMessage', 'Suggestion created');
+
+        // Log::info("$title, $content, $url");
+
+        return redirect()->action('TheWorldLotterysController@index');
     }
 
     /**
@@ -59,7 +78,19 @@ class TheWorldLotterysController extends Controller
      */
     public function edit($id)
     {
-        //
+        
+        $lottery = Lottery::find($id);
+
+        if(\Auth::user()->is_admin){ 
+            if(!$lottery){
+                abort(404);
+            }
+            $data['lottery'] = $lottery;
+            return view('theworldlottery.edit',$data);
+        } 
+            return \Redirect::action('TheWorldLotterysController@index');
+        
+     
     }
 
     /**
@@ -71,7 +102,27 @@ class TheWorldLotterysController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         // $this->validate($request, Suggestion::$rules);
+
+        $lottery = Lottery::find($id);
+
+        if(!$lottery){
+            abort(404);
+        }
+
+        $title = $request->input('title');
+        $content = $request->input('content');
+        $init_value = $request->input('init_value');
+        $end_date = $request->input('end_date');
+        $lottery->title = $title;
+        $lottery->content = $content;
+        $lottery->init_value = $init_value;
+        $lottery->end_date = $end_date;
+        $lottery->save();
+
+        // $request->session()->flash('successMessage', 'lottery updated');
+
+        return \Redirect::action('TheWorldLotterysController@index', $lottery->id);
     }
 
     /**
