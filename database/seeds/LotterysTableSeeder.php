@@ -14,7 +14,8 @@ class LotterysTableSeeder extends Seeder
        	$lottery = new \App\Models\Lottery();
         $lottery->title = 'Lottery #'.$i;
         $lottery->content = 'for charity';
-        $lottery->init_value = 1000 * $i;
+        $lottery->init_value = 1000 * $i + 1000;
+        $lottery->current_value = 1000 * $i + 1000;
         $lottery->end_date = '2017-09-11 1'. $i .':00:00';
         $lottery->user_id = 1;
         $lottery->save();

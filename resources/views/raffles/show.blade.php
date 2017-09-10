@@ -20,7 +20,8 @@
 		<h2>{{$raffle['title']}}</h2>
 		<h3>{{$raffle['content']}}</h3>
 		<p>By {{$raffle->user->name}}</p>
-		<p>posted on {{$raffle->created_at}}</p>
+		<p>Possted On : {{$raffle->created_at}}</p>
+		<p>Product : {{$raffle->product}}</p>
 		<p>Last updated on {{$raffle->updated_at}}</p>
 
 		<a href="{{ action('RafflesController@addUserToEntries', $raffle->id) }}"><button class="btn btn-primary">BUY TICKET!!!</button></a>
