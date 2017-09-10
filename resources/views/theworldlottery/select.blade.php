@@ -15,18 +15,25 @@
 @section('content')
 
 	<main class="container" style="max-width:100%;float:left;display:flex;justify-content: center;">
-		<div style="padding-top: 2em;">
-			
-			@for($i = 1; $i < 100; $i++)
+		<div id="checkWrapper">
+			<p>Pick 5 numbers!</p>
+			<form method="GET" action="{{action('TheWorldLotterysController@storeNumbers')}}">
+				{!! csrf_field() !!}
+			@for($i = 1; $i <= 100; $i++)
 
-			
-			<form action="{{action('TheWorldLotterysController@selectNumbers')}}">
-				
-			<input  type="checkbox" name="number . {{$i}}">{{$i}}
-			
-			</form>
+			<label for="number . {{$i}}">{{$i}}
+				<input class="numCheckbox"  type="checkbox" name="{{$i}}">
+			</label>
 
 			@endfor
+			<p>Select your power number!!!</p>
+			<select> 
+				@for($i = 1; $i <= 100; $i++)
+					<option value="{{$i}}">{{$i}}</option>
+				@endfor
+			</select>
+			<button class="btn btn-success">Submit Numbers</button>
+			</form>
 		</div>
 
 	</main>

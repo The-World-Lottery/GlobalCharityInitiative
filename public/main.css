@@ -101,13 +101,27 @@ img {
 	margin-top: 10px;
 }
 
+#checkWrapper {
+	max-width: 100%;
+
+}
+label {
+	vertical-align: bottom;
+}
+
+.numCheckbox {
+	width: 20px;
+	height: 50px;
+	vertical-align: -18px;
+	
+
+}
 
 @media screen and (max-width: 768px) {
 
 	.col-sm-4 {
 	  	padding:0;
 	}
-
 
 
 
