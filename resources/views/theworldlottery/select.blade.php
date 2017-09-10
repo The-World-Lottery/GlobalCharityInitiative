@@ -27,7 +27,7 @@
 
 			@endfor
 			<p>Select your power number!!!</p>
-			<select> 
+			<select name="powerNumber"> 
 				@for($i = 1; $i <= 100; $i++)
 					<option value="{{$i}}">{{$i}}</option>
 				@endfor
