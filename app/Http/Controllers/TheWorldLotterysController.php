@@ -72,21 +72,21 @@ class TheWorldLotterysController extends Controller
     {
 
         if(\Auth::check()){
-            $currLottery = TheWorldLottery::find($id);
-            $currLottery->current_value += 2;
-            $currLottery->save();
+            // $currLottery = TheWorldLottery::find($id);
+            // $currLottery->current_value += 2;
+            // $currLottery->save();
 
-            $userId = \Auth::id();
-            $newEntry = new TheWorldLotteryEntry();
-            $newEntry->user_id = $userId;
-            $newEntry->the_world_lottery_id = $id;
+            // $userId = \Auth::id();
+            // $newEntry = new TheWorldLotteryEntry();
+            // $newEntry->user_id = $userId;
+            // $newEntry->the_world_lottery_id = $id;
             // $newEntry->first_num = $request->input('first_num');
             // $newEntry->second_num = $request->input('second_num');
             // $newEntry->third_num = $request->input('third_num');
             // $newEntry->fourth_num = $request->input('fourth_num');
             // $newEntry->fifth_num = $request->input('fifth_num');
             // $newEntry->key_num = $request->input('key_num');
-            $newEntry->save();
+            // $newEntry->save();
         } else {
             $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
             return \Redirect::action('Auth\AuthController@getLogin');
@@ -191,6 +191,11 @@ class TheWorldLotterysController extends Controller
 
             $newArr = array_keys($requestArr);
             array_shift($newArr);
+
+
+            $currLottery = TheWorldLottery::find(1);
+            $currLottery->current_value += 2;
+            $currLottery->save();
 
 
             $entry = new TheWorldLotteryEntry();
