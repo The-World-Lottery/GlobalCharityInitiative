@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\TheWorldLottery;
+use App\Models\TheWorldLotteryEntry;
+use Log;
+use App\User;
+use DB;
+
 
 class TheWorldLotterysController extends Controller
 {
@@ -75,12 +80,12 @@ class TheWorldLotterysController extends Controller
             $newEntry = new TheWorldLotteryEntry();
             $newEntry->user_id = $userId;
             $newEntry->the_world_lottery_id = $id;
-            $newEntry->first_num = $request->input('first_num');
-            $newEntry->second_num = $request->input('second_num');
-            $newEntry->third_num = $request->input('third_num');
-            $newEntry->fourth_num = $request->input('fourth_num');
-            $newEntry->fifth_num = $request->input('fifth_num');
-            $newEntry->key_num = $request->input('key_num');
+            // $newEntry->first_num = $request->input('first_num');
+            // $newEntry->second_num = $request->input('second_num');
+            // $newEntry->third_num = $request->input('third_num');
+            // $newEntry->fourth_num = $request->input('fourth_num');
+            // $newEntry->fifth_num = $request->input('fifth_num');
+            // $newEntry->key_num = $request->input('key_num');
             $newEntry->save();
         } else {
             $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
