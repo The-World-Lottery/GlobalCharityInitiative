@@ -15,18 +15,17 @@
 @section('content')
 
 	<main class="container" style="max-width:100%;float:left;display:flex;justify-content: center;">
-		<div style="padding-top: 2em;">
-			
-			@for($i = 1; $i < 100; $i++)
-
+		<div id="checkWrapper">
 			
 			<form action="{{action('TheWorldLotterysController@selectNumbers')}}">
-				
-			<input  type="checkbox" name="number . {{$i}}">{{$i}}
-			
-			</form>
+			@for($i = 1; $i < 100; $i++)
+
+			<label for="number . {{$i}}">{{$i}}
+				<input class="numCheckbox"  type="checkbox" name="number . {{$i}}">
+			</label>
 
 			@endfor
+			</form>
 		</div>
 
 	</main>
