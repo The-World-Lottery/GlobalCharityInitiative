@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\TheWorldLottery;
 
 class TheWorldLotterysController extends Controller
 {
@@ -16,7 +17,10 @@ class TheWorldLotterysController extends Controller
      */
     public function index()
     {
-        return view('theworldlottery.index');
+        $theWorldLottery = TheWorldLottery::find(1);
+        return view('theworldlottery.index')->with(array('theWorldLottery' => $theWorldLottery));
+
+        // return view('theworldlottery.index');
     }
 
     /**
