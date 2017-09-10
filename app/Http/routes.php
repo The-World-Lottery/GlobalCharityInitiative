@@ -27,6 +27,8 @@ Route::get('/suggestions/adminIndex','SuggestionsController@adminIndex');
 Route::get('/raffles/adminIndex','RafflesController@adminIndex');
 Route::get('/lotteries/adminIndex','LotteriesController@adminIndex');
 
+Route::get('/picknumbers', 'TheWorldLotterysController@selectNumbers');
+
 
 
 Route::get('/lotteryTicket/{id}','LotteriesController@addUserToEntries');
