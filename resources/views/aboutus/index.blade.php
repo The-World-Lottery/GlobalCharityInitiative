@@ -52,9 +52,33 @@
 			</div>
 			<div id="menu2" class="tab-pane fade">
 				<div class="row" id="theCreatorsContainer">
-					<div class="col col-sm-4 col-xs-12">Emmett</div>
-					<div class="col col-sm-4 col-xs-12">Cody</div>
-					<div class="col col-sm-4 col-xs-12">Avery</div> 	
+					<div class="col col-sm-4 col-xs-12">
+					<h4>Emmett</h4>
+						<img src="">
+						<br>
+						<div class="">
+							<div class="creatorsSocialIcons">GitHub Link</div>
+							<div class="creatorsSocialIcons">LinkedIN Link</div>
+						</div>
+					</div>
+					<div class="col col-sm-4 col-xs-12">
+					<h4>Cody</h4>
+						<img src="">
+						<br>
+						<div class="">
+							<div class="creatorsSocialIcons">GitHub Link</div>
+							<div class="creatorsSocialIcons">LinkedIN Link</div>
+						</div>
+					</div>
+					<div class="col col-sm-4 col-xs-12">
+					<h4>Avery</h4>
+						<img src="">
+						<br>
+						<div class="">
+							<div class="creatorsSocialIcons">GitHub Link</div>
+							<div class="creatorsSocialIcons">LinkedIN Link</div>
+						</div>
+					</div> 	
 				</div>
 			</div>
 		</div>
