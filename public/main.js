@@ -22,11 +22,16 @@ $(document).ready(function(){
 	});
 
 	$('input[type=checkbox]').on('change', function (e) {
-    if ($('input[type=checkbox]:checked').length > 5) {
-        $(this).prop('checked', false);
-        alert("allowed only 5");
-    }
-});
+	    if ($('input[type=checkbox]:checked').length > 5) {
+	        $(this).prop('checked', false);
+	        alert("allowed only 5");
+	    }
+	});
+
+	$('#img').on('change', function(e){
+		console.log("everything is awesome");
+		$(this).src($(this).val());
+	});
 
 
 
