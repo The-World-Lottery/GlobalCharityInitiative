@@ -15,50 +15,51 @@
 
 @section('content')
 
- 	<main class="container">
-  
+
+ 	<main class="container" style="max-width:100%;float:left;">
+    
             <form method="POST" action="/auth/register">
     {!! csrf_field() !!}
 
     <div class="form-group">
-        Name
-        <input type="text" name="name" value="{{old('name')}}">
+        <label for="Input1">Your Name</label>
+        <input class="form-control" type="text" name="name" id="Input1" value="{{old('name')}}">
     </div>
 
 
     <div class="form-group">
-        Email
-        <input type="email" name="email" value="{{old('email')}}">
+        <label for="Input2">Email</label>
+        <input class="form-control" type="email" name="email" id="Input2" value="{{old('email')}}">
     </div>
 
     <div class="form-group">
-        Username
-        <input type="text" name="username" value="{{old('username')}}">
+        <label for="Input3">Username</label>
+        <input class="form-control" type="text" name="username" id="Input3" value="{{old('username')}}">
     </div>
 
     <div class="form-group">
-        Phone Number
-        <input type="text" name="phone_number" value="{{old('phone_number')}}">
+        <label for="Input4">Phone Number</label>
+        <input class="form-control" type="text" name="phone_number" id="Input4" value="{{old('phone_number')}}">
     </div>
 
     <div class="form-group">
-        Profile Image
-        <input id="img" type="text" name="image" value="{{old('image')}}"><br>
+        <label for="Input5">Profile Image</label>
+        <input class="form-control" id="img" type="text" name="image" id="Input5" value="{{old('image')}}"><br>
         <a id="filestackButton" class="btn btn-secondary">Use Filestack Image Hosting</a>
     </div>
 
     <div class="form-group">
-        Password
-        <input type="password" name="password" value="{{old('password')}}">
+        <label for="Input6">Password</label>
+        <input class="form-control" type="password" name="password" id="Input6" value="{{old('password')}}">
     </div>
 
     <div class="form-group">
-        Confirm Password
-        <input type="password" name="password_confirmation" value="">
+        <label for="formGroupExampleInput7">Confirm Password</label>
+        <input class="form-control" type="password" name="password_confirmation" id="formGroupExampleInput7" value="">
     </div>
 
     <div class="form-group">
-        <button type="submit">Register</button>
+        <button type="submit" class="btn btn-primary">Register</button>
     </div>
 
 </form>
