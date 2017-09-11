@@ -28,7 +28,7 @@ $(document).ready(function(){
 	    }
 	});
 
-	$('#img').on('change', function(e){
+	$('#img').on('value', function(e){
 		console.log("everything is awesome");
 		$(this).src($(this).val());
 	});

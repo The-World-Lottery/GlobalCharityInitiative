@@ -36,8 +36,20 @@
 				</form>
 			
 			@endif
+			{{-- {{dd($entries)}} --}}
+			{{-- @if(count($entries)) --}}
+				<div style="float: left;">You are currently participating in:
+					<ul>
 
-			<button class="btn btn-default" data-toggle="confirmation" data-popout="true">Confirmation 1</button>
+						@foreach($user->raffleEntries as $entry)
+						{{dd($entry->raffle)}}
+						{{-- <a href="{{action('TheWorldLotterysController@index')}}"><li>{{$entry->theworldlottery->title}}</li></a> --}}
+
+
+				</div>
+				@endforeach
+			{{-- @endif --}}
+			
 
 		</div>
 	</main>

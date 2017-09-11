@@ -71,7 +71,24 @@ class UsersController extends Controller
             abort(404);
         }
 
+
+
         $data['user'] = $user;
+        // $entries = \App\User::getEntries($user->id);
+        // $newArr = [];
+        // foreach ($entries as $entry){
+        //     array_push($newArr, $entry->id);
+        // }
+
+        // $worldLotteryid = $newArr[0];
+
+        // $raffleId = $newArr[1];
+
+        // $lotteriesid = $newArr[2];
+
+        // dd($worldLotteryid);
+
+        // $data['entries'] = $entries;
         return view('users.show',$data);
 
     }
