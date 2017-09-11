@@ -61,6 +61,6 @@ Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 
-public function broadcastOn (){
-	return ['test-channel'];
-}
+// public function broadcastOn (){
+// 	return ['test-channel'];
+// };

@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         DB::statement('SET FOREIGN_KEY_CHECKS=0');
+        DB::table('user_comments')->truncate();
         DB::table('user_wallets')->truncate();
         DB::table('the_world_lottery_entries')->truncate();
         DB::table('the_world_lotteries')->truncate();
@@ -35,6 +36,7 @@ class DatabaseSeeder extends Seeder
         $this->call('TheWorldLotteriesTableSeeder');
         $this->call('TheWorldLotterysEntrantsTableSeeder');
         $this->call('UserWalletsTableSeeder');
+        $this->call('UserCommentsTableSeeder');
 
 
         DB::statement('SET FOREIGN_KEY_CHECKS=1');
