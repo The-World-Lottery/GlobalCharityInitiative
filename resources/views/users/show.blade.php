@@ -38,19 +38,22 @@
 			@endif
 			{{-- {{dd($entries)}} --}}
 			{{-- @if(count($entries)) --}}
-				<div style="float: left;">You are currently participating in:
-					<ul>
-
-						@foreach($user->raffleEntries as $entry)
-						{{dd($entry->raffle)}}
-						{{-- <a href="{{action('TheWorldLotterysController@index')}}"><li>{{$entry->theworldlottery->title}}</li></a> --}}
-
-
-				</div>
-				@endforeach
 			{{-- @endif --}}
 			
 
+		</div>
+		<div style="float: left; postion: absolute;">You are currently participating in:
+			<ul> Raffles
+				@foreach($user->raffleEntries as $raffleEntry)
+				<a href="{{action('RafflesController@show', $raffleEntry->raffle->id)}}"><li>{{$raffleEntry->raffle->title}}</li></a>
+				@endforeach
+			</ul>
+			<ul> Lotteries
+				@foreach($user->lotteryEntries as $lotteryEntry)
+				{{-- {{dd($lotteryEntry)}} --}}
+				<a href="{{action('LotteriesController@show', $lotteryEntry->lottery->id)}}"><li>{{$lotteryEntry->lottery->title}}</li></a>
+				@endforeach
+			</ul>
 		</div>
 	</main>
 

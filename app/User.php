@@ -75,30 +75,7 @@ class User extends Model implements AuthenticatableContract,
         return $this->hasMany('App\Models\TheWorldLotteryEntry','user_id');
     }
 
-    public static function getEntries($user_id){
-        $worldLottery = TheWorldLotteryEntry::where('user_id',  '=', $user_id)->get();
-        $raffles = RaffleEntry::where('user_id',  '=', $user_id)->get();
-        $lotteries = LotteryEntry::where('user_id',  '=', $user_id)->get();
-
-        if($worldLottery != null){
-             $data['worldLottery'] = $worldLottery;
-        }
-
-        if($raffles != null) {
-            $data['raffles'] = $raffles;
-        }
-
-
-
-        if($lotteries != null){
-
-            $data['lotteries'] = $lotteries;
-        } 
-
-        return $data;
-
-    
-    }
+ 
 
 
     // public function lotteries()

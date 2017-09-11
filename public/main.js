@@ -28,9 +28,16 @@ $(document).ready(function(){
 	    }
 	});
 
-	$('#img').on('value', function(e){
-		console.log("everything is awesome");
-		$(this).src($(this).val());
+
+	$('body').on('click', function(){
+		console.log("stuff");
+		if($('#img').val().length > 5){
+			console.log($('#profImg').attr('src'));
+			console.log($('#img').val());
+			$('#profImg').attr('src', $('#img').val());
+			console.log($('#profImg').attr('src'));
+		}
+
 	});
 
 

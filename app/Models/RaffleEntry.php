@@ -15,7 +15,7 @@ class RaffleEntry extends Model
 
    	public function raffle()
    	{
-   	return $this->belongsTo('App\Models\Raffle','raffle_id');
+   	return $this->belongsTo('App\Models\Raffle','raffles_id');
    }
     public static function filterEntrants($raffleId)
    {
