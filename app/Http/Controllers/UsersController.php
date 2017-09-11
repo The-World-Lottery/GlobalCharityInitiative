@@ -113,11 +113,16 @@ class UsersController extends Controller
     }
 
     public function comment(Request $request, $id)
-    {
-        $comment = new UserComment();
-        $comment->user_id = \Auth::id();
-        $comment->content = $request->input('comment');
-        $comment->save();
+    {   
+        if(\Auth::check()){
+            $comment = new UserComment();
+            $comment->user_id = \Auth::id();
+            $comment->content = $request->input('comment');
+            $comment->save();
+        } else {
+             $request->session()->flash('errorMessage', 'You must be LOGGED IN to comment in chat!');
+            return \Redirect::action('Auth\AuthController@getLogin');
+        }
     }
 
     /**
