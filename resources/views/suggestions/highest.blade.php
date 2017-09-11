@@ -23,8 +23,10 @@
             <a href="{{ action('SuggestionsController@show', $suggestion->id) }}">
                 <h3 class ="suggHead">{{$suggestion->title}}</h3>
             </a>
-            <a href="{{action('SuggestionsController@upvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
-            <a href="{{action('SuggestionsController@downvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-down"></span></a>
+            @if(Auth::check())
+              <a href="{{action('SuggestionsController@upvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
+              <a href="{{action('SuggestionsController@downvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-down"></span></a>
+            @endif
 
 
             <p>{{$suggestion->content}}</p>
