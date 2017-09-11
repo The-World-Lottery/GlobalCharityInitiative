@@ -67,6 +67,11 @@ class User extends Model implements AuthenticatableContract,
         return $this->hasMany('App\Models\RaffleEntry','user_id');
     }
 
+     public function userWallet()
+    {
+        return $this->hasOne('App\Models\UserWallet','user_id');
+    }
+
 
     // public function lotteries()
     // {
