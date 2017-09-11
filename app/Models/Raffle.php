@@ -8,11 +8,19 @@ class Raffle extends Model
 {
      protected $fillable = ['title', 'content','product','end_date','img'];
 
+
    	public static function raffleFunction($time){
    		return Raffle::where('end_date', '<', $time)->get();
    	}
 
    	public static function raffleWin($id){
+   		//change status to complete,
+   		Raffle::where('id', $id)->update(['complete' => 1]);
+   		//pick a random id number
+   		
+
+   		//add money to user wallets
+   		//alert admins
    		return Raffle::where('id', '=', $id)->delete();
    	}
 

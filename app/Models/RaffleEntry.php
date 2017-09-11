@@ -17,6 +17,12 @@ class RaffleEntry extends Model
    	{
    	return $this->belongsTo('App\Models\Raffle','raffle_id');
    }
+
+   public static function pickWinner($id){
+    $titles = RaffleEntry::lists('user_id')->where('raffles_id', $id);
+    return  $titles;
+   }
+
     public static function filterEntrants($raffleId)
    {
    		$entrants = RaffleEntry::where('raffles_id', '=', $raffleId)->get();
