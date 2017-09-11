@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\TheWorldLottery;
 use App\Models\TheWorldLotteryEntry;
+use App\Models\UserWallet;
 use Log;
 use App\User;
 use DB;
@@ -71,29 +72,6 @@ class TheWorldLotterysController extends Controller
     public function addUserToEntries(Request $request, $id)
     {
 
-        if(\Auth::check()){
-            // $currLottery = TheWorldLottery::find($id);
-            // $currLottery->current_value += 2;
-            // $currLottery->save();
-
-            // $userId = \Auth::id();
-            // $newEntry = new TheWorldLotteryEntry();
-            // $newEntry->user_id = $userId;
-            // $newEntry->the_world_lottery_id = $id;
-            // $newEntry->first_num = $request->input('first_num');
-            // $newEntry->second_num = $request->input('second_num');
-            // $newEntry->third_num = $request->input('third_num');
-            // $newEntry->fourth_num = $request->input('fourth_num');
-            // $newEntry->fifth_num = $request->input('fifth_num');
-            // $newEntry->key_num = $request->input('key_num');
-            // $newEntry->save();
-        } else {
-            $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
-            return \Redirect::action('Auth\AuthController@getLogin');
-        }
-
-
-        $request->session()->flash('successMessage', 'You have successfully purchased a ticket for THE WORLD LOTTERY! Thank you for your donation and good luck!');
         return \Redirect::action('TheWorldLotterysController@selectNumbers');
 
     }
@@ -143,11 +121,14 @@ class TheWorldLotterysController extends Controller
     {
          // $this->validate($request, Suggestion::$rules);
 
-        $lottery = Lottery::find($id);
+        $lottery = TheWorldLottery::find($id);
 
         if(!$lottery){
             abort(404);
         }
+
+
+
 
         $title = $request->input('title');
         $content = $request->input('content');
@@ -191,6 +172,12 @@ class TheWorldLotterysController extends Controller
 
             $newArr = array_keys($requestArr);
             array_shift($newArr);
+
+
+            $userId = \Auth::id();
+            $userWallet = UserWallet::find($userId);
+            $userWallet->usd -= 2;
+            $userWallet->save();
 
 
             $currLottery = TheWorldLottery::find(1);
