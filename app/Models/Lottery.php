@@ -17,4 +17,13 @@ class Lottery extends Model
     {
         return $this->hasMany('App\Models\LotteryEntry','lottery_id');
     }
+
+        public function getEndDateAttribute($value)
+    {
+        $utc = \Carbon\Carbon::createFromFormat($this->getDateFormat(), $value);
+
+        return $utc;
+
+        
+    }
 }

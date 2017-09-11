@@ -34,7 +34,9 @@ $(document).ready(function(){
 		if($('#img').val().length > 5){
 			console.log($('#profImg').attr('src'));
 			console.log($('#img').val());
-			$('#profImg').attr('src', $('#img').val());
+			var sanitizedSource = $('#img').val().replace(/"/g, "");
+			console.log(sanitizedSource);
+			$('#editImg').attr('src', sanitizedSource);
 			console.log($('#profImg').attr('src'));
 		}
 

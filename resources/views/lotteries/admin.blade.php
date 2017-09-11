@@ -49,7 +49,7 @@ table, th, td {
 				<td>{{$lottery->user->name}}</td>
 				<td>{{$lottery->created_at->diffForHumans()}}</td>
 				<td>{{$lottery->updated_at->diffForHumans()}}</td>
-				<td>{{$lottery->end_date}}</td>
+				<td>{{$lottery->end_date->diffForHumans()}}</td>
 				@if($lottery->end_date > \Carbon\Carbon::now()->toDateTimeString())
 				<td>Y</td>
 				@else
