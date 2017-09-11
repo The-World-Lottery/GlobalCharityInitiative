@@ -23,7 +23,7 @@
 		<p>By {{$suggestion->user->name}}</p>
 		<p>posted on {{$suggestion->created_at}}</p>
 		<p>Last updated on {{$suggestion->updated_at}}</p>
-		@if (Auth::id() == $suggestion->user_id || Auth::user()->is_admin)
+		@if (Auth::check() && (Auth::id() == $suggestion->user_id || Auth::user()->is_admin))
 		<a href="{{ action('SuggestionsController@edit', $suggestion->id) }}">Edit</a>
 		@endif
 
