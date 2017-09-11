@@ -42,7 +42,14 @@
 			
 
 		</div>
-		<div style="float: left; postion: absolute;">You are currently participating in:
+		<div style="float: left; postion: absolute;">{{$user->name}}'s tickets:
+
+			<ul> World Lottery
+				@foreach($user->worldLotteryEntries as $worldLotteryEntry)
+				{{-- {{dd($worldLotteryEntry)}} --}}
+				<a href="{{action('TheWorldLotterysController@index')}}"><li>{{$worldLotteryEntry->theworldlottery->title}}</li></a>
+				@endforeach
+			</ul>
 			<ul> Raffles
 				@foreach($user->raffleEntries as $raffleEntry)
 				<a href="{{action('RafflesController@show', $raffleEntry->raffle->id)}}"><li>{{$raffleEntry->raffle->title}}</li></a>
