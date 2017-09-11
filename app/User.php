@@ -70,21 +70,15 @@ class User extends Model implements AuthenticatableContract,
         return $this->hasMany('App\Models\RaffleEntry','user_id');
     }
 
+
      public function worldLotteryEntries()
     {
         return $this->hasMany('App\Models\TheWorldLotteryEntry','user_id');
     }
 
- 
+     public function userWallet()
+    {
+        return $this->hasOne('App\Models\UserWallet','user_id');
+    }
 
-
-    // public function lotteries()
-    // {
-    //     return $this->hasMany('App\Models\Lottery','lottery_id');
-    // }
-
-    // public function raffles()
-    // {
-    //     return $this->hasMany('App\Models\Vote','raffle_id');
-    // }
 }

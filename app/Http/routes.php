@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.master');
-});
+Route::get('/', 'LotteriesController@index');
 
 Route::get('/suggestions/userssuggestions/{id}','SuggestionsController@userssuggestions');
 Route::get('/upvote/{id}','SuggestionsController@upvote');
