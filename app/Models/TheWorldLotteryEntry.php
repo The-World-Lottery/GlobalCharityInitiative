@@ -15,6 +15,6 @@ class TheWorldLotteryEntry extends Model
 
    	public function theworldlottery()
    	{
-   		return $this->belongsTo('App\Models\Lottery','the_world_lottery_id');
+   		return $this->belongsTo('App\Models\TheWorldLottery','the_world_lottery_id');
     }
 }

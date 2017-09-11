@@ -104,7 +104,7 @@
 			</a>
 			<div class="collapse" id="collapseFour">
 				<div class="panel-body">
-					<img src='{{substr($User->image,1,-1)}}' id="profImg">
+					<img src='{{substr($User->image,1,-1)}}' id="editImg">
 					<input id="img" type="text" name="image">
         			<a id="filestackButton" class="btn btn-secondary">Filestack Image Hosting</a>
 				</div>

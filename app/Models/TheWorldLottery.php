@@ -19,4 +19,12 @@ class TheWorldLottery extends Model
     {
         return $this->hasMany('App\Models\TheWorldLotteryEntry','the_world_lottery_id');
     }
+
+	public function getEndDateAttribute($value)
+	{
+		$utc = \Carbon\Carbon::createFromFormat($this->getDateFormat(), $value);
+
+		return $utc;
+	
+	}
 }

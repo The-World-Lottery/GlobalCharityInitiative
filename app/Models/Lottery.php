@@ -18,6 +18,7 @@ class Lottery extends Model
         return $this->hasMany('App\Models\LotteryEntry','lottery_id');
     }
 
+
     public static function lotteryFunction($time){
    		return Lottery::where('end_date', '<=', $time)->get();
    	}
@@ -36,4 +37,13 @@ class Lottery extends Model
    		//alert admins
    		
    	}
+
+        public function getEndDateAttribute($value)
+    {
+        $utc = \Carbon\Carbon::createFromFormat($this->getDateFormat(), $value);
+
+        return $utc;
+
+        
+    }
 }

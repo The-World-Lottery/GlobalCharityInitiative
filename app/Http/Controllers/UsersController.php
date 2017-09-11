@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Models\UserComment;
 
 class UsersController extends Controller
 {
@@ -71,7 +72,24 @@ class UsersController extends Controller
             abort(404);
         }
 
+
+
         $data['user'] = $user;
+        // $entries = \App\User::getEntries($user->id);
+        // $newArr = [];
+        // foreach ($entries as $entry){
+        //     array_push($newArr, $entry->id);
+        // }
+
+        // $worldLotteryid = $newArr[0];
+
+        // $raffleId = $newArr[1];
+
+        // $lotteriesid = $newArr[2];
+
+        // dd($worldLotteryid);
+
+        // $data['entries'] = $entries;
         return view('users.show',$data);
 
     }
@@ -92,6 +110,14 @@ class UsersController extends Controller
 
         return \Redirect::action('LotteriesController@index');
 
+    }
+
+    public function comment(Request $request, $id)
+    {
+        $comment = new UserComment();
+        $comment->user_id = \Auth::id();
+        $comment->content = $request->input('comment');
+        $comment->save();
     }
 
     /**

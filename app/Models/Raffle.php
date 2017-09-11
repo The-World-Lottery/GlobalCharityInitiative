@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Raffle extends Model
 {
-     protected $fillable = ['title', 'content','product','end_date','img'];
+		 protected $fillable = ['title', 'content','product','end_date','img'];
 
 
    	public static function raffleFunction($time){
@@ -20,20 +20,25 @@ class Raffle extends Model
    		//pick a weener
    		$ween = \App\Models\RaffleEntry::pickWinner($id);
 
-
-   		
-   		//alert admins
-   		//return Raffle::where('id', '=', $id)->delete();
    	}
 
-	 public function user()
-	 {
+
+		public function user()
+		{
 		return $this->belongsTo('App\User','user_id');
-   	}
+		}
 
-   	public function raffleEntries()
-    {
-        return $this->hasMany('App\Models\RaffleEntry','raffle_id');
-    }
+		public function raffleEntries()
+		{
+			return $this->hasMany('App\Models\RaffleEntry','raffle_id');
+		}
+
+		public function getEndDateAttribute($value)
+		{
+			$utc = \Carbon\Carbon::createFromFormat($this->getDateFormat(), $value);
+
+			return $utc;
+		
+		}
 
 }

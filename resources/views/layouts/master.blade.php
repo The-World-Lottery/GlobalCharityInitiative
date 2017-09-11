@@ -23,7 +23,13 @@
 			</div>
 			<div class="col col-sm-4 col-xs-12 gameAndChatInfo chatInfoContSpacing">
 				<div class="chatInfoMargins borderOpac" id="chat">
-					<div class="areaHeaders">Chat</div>
+					<div class="areaHeaders">
+						Chat
+						<form action="{{ action('UsersController@comment') }}">
+							<input type="text" name="comment"><br>
+							<button type="submit">Add comment</button>
+						</form>
+					</div>
 				</div>
 				<div class="chatInfoMargins borderOpac" id="info">
 					<div class="areaHeaders">Info</div>

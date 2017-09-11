@@ -28,9 +28,14 @@ $(document).ready(function(){
 	    }
 	});
 
-	$('#img').on('change', function(e){
-		console.log("everything is awesome");
-		$(this).src($(this).val());
+
+	$('body').on('click', function(){
+		console.log("stuff");
+		if($('#img').val().length > 5){
+			var sanitizedSource = $('#img').val().replace(/"/g, "");
+			$('#editImg').attr('src', sanitizedSource);
+		}
+
 	});
 
 

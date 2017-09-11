@@ -19,10 +19,11 @@
 		<div id="showProfImg"><img src={!! $raffle->img !!}></div>
 		<h2>{{$raffle['title']}}</h2>
 		<h3>{{$raffle['content']}}</h3>
-		<p>By {{$raffle->user->name}}</p>
-		<p>Possted On : {{$raffle->created_at}}</p>
-		<p>Product : {{$raffle->product}}</p>
-		<p>Last updated on {{$raffle->updated_at}}</p>
+		<p>By: {{$raffle->user->name}}</p>
+		<p>Possted On: {{$raffle->created_at}}</p>
+		<p>Product: {{$raffle->product}}</p>
+		<p>Last updated on: {{$raffle->updated_at}}</p>
+		<p>Ends on: {{$raffle->end_date->diffForHumans()}}
 
 		<a href="{{ action('RafflesController@addUserToEntries', $raffle->id) }}"><button class="btn btn-primary">BUY TICKET!!!</button></a>
 

@@ -34,8 +34,7 @@ class LotteryEntry extends Model
    {
    		$entrants = LotteryEntry::where('lottery_id', '=', $lottoId)->get();
 
-   		
-
+   	
    		if (count($entrants)) {
    			return false;
    		}
