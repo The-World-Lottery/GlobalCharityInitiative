@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Lottery;
 use App\Models\LotteryEntry;
+use App\Models\TheWorldLottery;
 use Log;
 use App\User;
 use DB;
@@ -63,8 +64,12 @@ class LotteriesController extends Controller
 
         if(\Auth::check()){
             $currLottery = Lottery::find($id);
-            $currLottery->current_value += 1;
+            $currLottery->current_value += .80;
             $currLottery->save();
+
+            $currWorldLottery = TheWorldLottery::find(1);
+            $currWorldLottery->current_value += .50;
+            $currWorldLottery->save();
 
             $userId = \Auth::id();
             $newEntry = new LotteryEntry();
