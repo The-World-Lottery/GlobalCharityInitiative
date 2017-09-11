@@ -18,6 +18,14 @@ class LotteryEntry extends Model
    	return $this->belongsTo('App\Models\Lottery','lottery_id');
    }
 
+   public static function pickWinner($id){
+    $user_id = LotteryEntry::select('user_id')->where('lottery_id', $id)->get();
+    $weener = rand(count($user_id)-1);
+    $winner = $user_id[$weener]['user_id'];
+    $victor = \App\User::find($winner);
+    return $victor;
+   }
+
    public static function filterEntrants($lottoId)
    {
    		$entrants = LotteryEntry::where('lottery_id', '=', $lottoId)->get();

@@ -16,12 +16,13 @@ class Raffle extends Model
    	public static function raffleWin($id){
    		//change status to complete,
    		Raffle::where('id', $id)->update(['complete' => 1]);
-   		//pick a random id number
-   		
+   		//pick a weener
+   		$ween = \App\Models\RaffleEntry::pickWinner($id);
+
 
    		//add money to user wallets
    		//alert admins
-   		return Raffle::where('id', '=', $id)->delete();
+   		//return Raffle::where('id', '=', $id)->delete();
    	}
 
 	 public function user()
