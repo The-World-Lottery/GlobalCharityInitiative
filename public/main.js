@@ -32,12 +32,8 @@ $(document).ready(function(){
 	$('body').on('click', function(){
 		console.log("stuff");
 		if($('#img').val().length > 5){
-			console.log($('#profImg').attr('src'));
-			console.log($('#img').val());
 			var sanitizedSource = $('#img').val().replace(/"/g, "");
-			console.log(sanitizedSource);
 			$('#editImg').attr('src', sanitizedSource);
-			console.log($('#profImg').attr('src'));
 		}
 
 	});
