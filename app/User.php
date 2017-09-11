@@ -9,6 +9,9 @@ use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use App\Models\RaffleEntry;
+use App\Models\TheWorldLotteryEntry;
+use App\Models\LotteryEntry;
 
 class User extends Model implements AuthenticatableContract,
                                     AuthorizableContract,
@@ -67,19 +70,15 @@ class User extends Model implements AuthenticatableContract,
         return $this->hasMany('App\Models\RaffleEntry','user_id');
     }
 
+
+     public function worldLotteryEntries()
+    {
+        return $this->hasMany('App\Models\TheWorldLotteryEntry','user_id');
+    }
+
      public function userWallet()
     {
         return $this->hasOne('App\Models\UserWallet','user_id');
     }
 
-
-    // public function lotteries()
-    // {
-    //     return $this->hasMany('App\Models\Lottery','lottery_id');
-    // }
-
-    // public function raffles()
-    // {
-    //     return $this->hasMany('App\Models\Vote','raffle_id');
-    // }
 }
