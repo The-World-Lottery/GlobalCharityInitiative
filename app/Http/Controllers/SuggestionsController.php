@@ -187,13 +187,13 @@ class SuggestionsController extends Controller
 
 
         $currVotes = Vote::where('suggestion_id',$id)->where('user_id',$user_id)->get();
-        // if($currVotes->isEmpty()){
+        if($currVotes->isEmpty()){
             $vote = new Vote;
             $vote->user_id = $user_id;
             $vote->suggestion_id = $suggestion_id;
             $vote->vote = 1;
             $vote->save();
-        // };
+        };
 
         $data['suggestion'] = $suggestion;
         return view('suggestions.show',$data);
@@ -205,13 +205,13 @@ class SuggestionsController extends Controller
         $user_id = \Auth::id();
         $suggestion_id = Suggestion::find($id)->id;
         $currVotes = Vote::where('suggestion_id',$id)->where('user_id',$user_id)->get();
-        // if($currVotes->isEmpty()){
+        if($currVotes->isEmpty()){
             $vote = new Vote;
             $vote->user_id = $user_id;
             $vote->suggestion_id = $suggestion_id;
             $vote->vote = -1;
             $vote->save();
-        // };
+        };
 
 
         $data['suggestion'] = $suggestion;

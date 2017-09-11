@@ -19,7 +19,7 @@ n
 			
 			<div><strong>Starting Pot: </strong> {{$lottery->init_value}}</div>
 			<div><strong>Current Pot: </strong> {{$lottery->current_value}}</div>
-			<div><strong>Lotto Ends On: </strong> {{$lottery->end_date}}</div>
+			<div><strong>Lotto Ends On: </strong> {{$lottery->end_date->diffForHumans()}}</div>
 			<div><strong>Charity To: </strong> {{$lottery->content}}</div>
 
 			<a href="{{ action('LotteriesController@addUserToEntries', $lottery->id) }}"><button class="btn btn-primary">BUY TICKET!!!</button></a>
