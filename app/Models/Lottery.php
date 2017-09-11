@@ -19,8 +19,9 @@ class Lottery extends Model
     }
 
     public static function lotteryFunction($time){
-   		return Lottery::where('end_date', '<', $time)->get();
+   		return Lottery::where('end_date', '<=', $time)->get();
    	}
+
 
    	public static function lotteryWin($id){
    		//change status to complete,
@@ -28,9 +29,11 @@ class Lottery extends Model
    		//pick a weener
    		$ween = \App\Models\LotteryEntry::pickWinner($id);
 
-   		
+   		//$winAmount = Lottery::where('id', $id)->value('current_value');
+
+   		//$ween->usd += $winAmount;
    		//add money to user wallets
    		//alert admins
-   		//return Raffle::where('id', '=', $id)->delete();
+   		
    	}
 }

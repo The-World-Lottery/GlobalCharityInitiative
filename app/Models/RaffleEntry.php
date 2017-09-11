@@ -19,11 +19,15 @@ class RaffleEntry extends Model
    }
 
    public static function pickWinner($id){
-    $user_id = RaffleEntry::select('user_id')->where('raffles_id', $id)->get();
-    $weener = rand(count($user_id)-1);
-    $winner = $user_id[$weener]['user_id'];
-    $victor = \App\User::find($winner);
-    return $victor;
+    $user_id = RaffleEntry::select('user_id')->where('id', $id)->get();
+    $arr = (array)$user_id;
+    if (!empty($arr)) {
+      $weener = rand(0,count($user_id)-1);
+      $winner = $user_id[$weener]['user_id'];
+      $victor = \App\User::find($winner);
+      return $victor;
+    }
+    return false;
    }
 
     public static function filterEntrants($raffleId)

@@ -10,6 +10,7 @@ class Raffle extends Model
 
 
    	public static function raffleFunction($time){
+   		//not completed
    		return Raffle::where('end_date', '<', $time)->get();
    	}
 
@@ -20,7 +21,7 @@ class Raffle extends Model
    		$ween = \App\Models\RaffleEntry::pickWinner($id);
 
 
-   		//add money to user wallets
+   		
    		//alert admins
    		//return Raffle::where('id', '=', $id)->delete();
    	}

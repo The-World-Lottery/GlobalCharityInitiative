@@ -40,16 +40,18 @@ class GameTimeCheck extends Command
 
         $now = date('Y-m-d H:i:s');
 
-       $raffles = \App\Models\Raffle::raffleFunction($now);
+        $raffles = \App\Models\Raffle::raffleFunction($now);
+        $lottos = \App\Models\Lottery::lotteryFunction($now);
         foreach ($raffles as $raffle) {
             if(isset($raffle->id)){
                 \App\Models\Raffle::raffleWin($raffle->id);
             }
-        $lottos = \App\Models\Lottery::lotteryFunction($now);
+        }
         foreach ($lottos as $lotto) {
             if(isset($lotto->id)){
                 \App\Models\Lottery::lotteryWin($lotto->id);
             }
         }
+        
     }
 }
