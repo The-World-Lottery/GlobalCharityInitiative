@@ -5,7 +5,9 @@
 <ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
   <li class="active"><a href="{{action('SuggestionsController@index')}}">All Suggestions</a></li>
   <li><a href="{{action('SuggestionsController@highest')}}">Top 5 Suggestions</a></li>
+  @if(Auth::check())
   <li><a href="{{action('SuggestionsController@create')}}">Add a Suggestion</a></li>
+  @endif
 	@if(Auth::check())
   		<li><a href="{{action('SuggestionsController@userssuggestions')}}">Your Suggestions</a></li>
 	@endif
@@ -25,9 +27,10 @@
 			<a href="{{ action('SuggestionsController@show', $suggestion->id) }}">
 				<h3 class ="suggHead">{{$suggestion->title}}</h3>
 			</a>
-			<a href="{{action('SuggestionsController@upvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
-            <a href="{{action('SuggestionsController@downvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-down"></span></a>
-
+			@if(Auth::check())
+				<a href="{{action('SuggestionsController@upvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
+	            <a href="{{action('SuggestionsController@downvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-down"></span></a>
+			@endif
 
 			<p>{{$suggestion->content}}</p>
 			<p>__By {{$suggestion->user->name}}</p>
