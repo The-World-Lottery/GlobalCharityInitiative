@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Models\UserComment;
 
 class UsersController extends Controller
 {
@@ -109,6 +110,14 @@ class UsersController extends Controller
 
         return \Redirect::action('LotteriesController@index');
 
+    }
+
+    public function comment(Request $request, $id)
+    {
+        $comment = new UserComment();
+        $comment->user_id = \Auth::id();
+        $comment->content = $request->input('comment');
+        $comment->save();
     }
 
     /**
