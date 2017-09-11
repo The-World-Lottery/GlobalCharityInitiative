@@ -4,7 +4,7 @@
 			<div class="col-sm-6">
 				<h2 id="headLogo">The World Lottery Logo Here</h2>
 				<h4 style="color:lightgreen">Current World Lottery Jackpot is $
-				{{-- {{ TheWorldLottery::select('current_value') }} --}}
+				{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']}}
 				</h4>
 			</div>
 			<div class="col-sm-6">
