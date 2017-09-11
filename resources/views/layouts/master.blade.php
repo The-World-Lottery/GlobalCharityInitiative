@@ -25,6 +25,10 @@
 				<div class="chatInfoMargins borderOpac" id="chat">
 					<div class="areaHeaders">
 						Chat
+						<form action="{{ action('UsersController@comment') }}">
+							<input type="text" name="comment"><br>
+							<button type="submit">Add comment</button>
+						</form>
 					</div>
 				</div>
 				<div class="chatInfoMargins borderOpac" id="info">
