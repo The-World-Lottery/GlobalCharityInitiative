@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\RaffleEntry;
 use App\Models\TheWorldLottery;
+use App\Models\UserWallet;
 use Carbon\Carbon;
 
 class RafflesController extends Controller
@@ -54,7 +55,14 @@ class RafflesController extends Controller
     {
 
         if(\Auth::check()){
+
+
             $userId = \Auth::id();
+
+            $userWallet = UserWallet::find($userId);
+            $userWallet->usd -= 2;
+            $userwallet->save();
+
             $newEntry = new RaffleEntry();
             $newEntry->user_id = $userId;
             $newEntry->raffles_id = $id;
