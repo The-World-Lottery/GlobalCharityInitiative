@@ -1,10 +1,5 @@
 $(document).ready(function(){
 
-	// testing color change background  on hover with javascript 
-	// $('#chat').hover(function(){
-	// 	$(this).css("background-color","black");
-	// });
-
 	//filestack js for click on register
 	var client = filestack.init('A5gY0fZEnTzWuvzsVI5Ttz');
  
@@ -20,7 +15,7 @@ $(document).ready(function(){
 	    $('#img').val($imageUrl);
 	  });
 	});
-
+	//checkbox controllers for the world lottery numbers selection
 	$('input[type=checkbox]').on('change', function (e) {
 	    if ($('input[type=checkbox]:checked').length > 5) {
 	        $(this).prop('checked', false);
@@ -38,12 +33,11 @@ $(document).ready(function(){
 
 	});
 
+	//countdown times for end_date
 	var wlEndDate = $('#clock').data("clock-id");
 	var wLottoEndDate = $('.worldLottoClock').data("clock-id")
 	var lottoEndDate = $('.lottoClock').data("clock-id")
 	var raffleEndDate = $('.raffleClock').data("clock-id")
-
-	
 
 	$('#clock').countdown(wlEndDate)
 	.on('update.countdown', function(event) {
@@ -112,6 +106,44 @@ $(document).ready(function(){
 	.parent().addClass('disabled');
 
 	});
+
+	//current currency value
+	function coinPriceConversion(){
+		$.ajax({
+			url: 'https://min-api.cryptocompare.com/data/price?fsym=USD&tsyms=BTC,ETH,LTC,BCC,EUR,JPY,GBP,CHF,DOGE,XRP',
+			type: 'GET',
+			dataType: 'json'
+		})
+		.done(function(response) {
+			console.log("success");
+			$('#usdEUR').val(response.EUR);
+			$('#usdJPY').val(response.JPY);
+			$('#usdGBP').val(response.GBP);
+			$('#usdCHF').val(response.CHF);
+			$('#usdBTC').val(response.BTC);
+			$('#usdETH').val(response.ETH);
+			$('#usdLTC').val(response.LTC);
+			$('#usdBCH').val(response.BCC);
+			$('#usdDoge').val(response.DOGE);
+			$('#usdXRP').val(response.XRP);
+
+		})
+		.fail(function() {
+			console.log("error");
+		})
+		.always(function() {
+			console.log("complete");
+		});
+	}
+	coinPriceConversion();
+
+	$('#ajaxCall').click(function(){
+		coinPriceConversion();
+	})
+
+	setInterval(function(){
+		coinPriceConversion();
+	},300000)
 
 
 
