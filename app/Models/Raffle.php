@@ -21,6 +21,11 @@ class Raffle extends Model
    		$ween = \App\Models\RaffleEntry::pickWinner($id);
 
    		Raffle::where('id', $id)->update(['winner_id' => $ween->id]);
+
+   		  // \Mail::raw("Congrats! You've won a Raffle", function($message){
+       //  $message->subject('Please return to the site and Login to claim you prize!');
+       //  $message->from('no-reply@TheWorldLottery.com', 'TheWorldLottery');
+       //  $message->to($ween->email);
    	}
 
 
