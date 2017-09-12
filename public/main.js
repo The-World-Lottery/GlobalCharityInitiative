@@ -38,6 +38,44 @@ $(document).ready(function(){
 
 	});
 
+	var endDate = $('#clock').data("clock-id");
+	console.log(endDate);
+	
+
+	$('#clock').countdown(endDate)
+	.on('update.countdown', function(event) {
+		var format = '%H:%M:%S';
+			if(event.offset.totalDays > 0) {
+		format = '%-d day%!d ' + format;
+		}
+		if(event.offset.weeks > 0) {
+		format = '%-w week%!w ' + format;
+		}
+		$(this).html(event.strftime(format));
+	})
+	.on('finish.countdown', function(event) {
+			$(this).html('Drawing Complete!')
+	.parent().addClass('disabled');
+
+	});
+
+	$('.worldLottoClock').countdown(endDate)
+	.on('update.countdown', function(event) {
+		var format = '%H:%M:%S';
+			if(event.offset.totalDays > 0) {
+		format = '%-d day%!d ' + format;
+		}
+		if(event.offset.weeks > 0) {
+		format = '%-w week%!w ' + format;
+		}
+		$(this).html(event.strftime(format));
+	})
+	.on('finish.countdown', function(event) {
+			$(this).html('Drawing Complete!')
+	.parent().addClass('disabled');
+
+	});
+
 
 
 });
