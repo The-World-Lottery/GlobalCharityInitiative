@@ -13,11 +13,11 @@ class RaffleEntrantsTableSeeder extends Seeder
      */
     public function run()
     {
-        for($i = 0;$i <= 20;$i++) {
+        for($i = 0;$i <= 50;$i++) {
 
        	$raffleEntry = new \App\Models\RaffleEntry();
-        $raffleEntry->raffles_id = 1;
-        $raffleEntry->user_id = 1;
+        $raffleEntry->raffles_id = rand(1,25);;
+        $raffleEntry->user_id = rand(1,10);;
         $raffleEntry->save();
     	}
     }

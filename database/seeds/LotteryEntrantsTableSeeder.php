@@ -13,11 +13,11 @@ class LotteryEntrantsTableSeeder extends Seeder
      */
     public function run()
     {
-        for($i = 0;$i <= 20;$i++) {
+        for($i = 0;$i <= 50;$i++) {
 
        	$lotteryEntry = new \App\Models\LotteryEntry();
-        $lotteryEntry->lottery_id = 1;
-        $lotteryEntry->user_id = 1;
+        $lotteryEntry->lottery_id = rand(1,10);;
+        $lotteryEntry->user_id = rand(1,10);
         $lotteryEntry->save();
     	}
     }
