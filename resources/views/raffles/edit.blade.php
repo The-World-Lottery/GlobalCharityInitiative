@@ -13,8 +13,7 @@
 @stop
 
 @section('content')
-
-	{{\App\Models\LotteryEntry::pickWinner(3)}}
+{{\App\Models\LotteryEntry::pickWinner(1)}}
 	<main class="container" style="max-width:100%;float:left;">
 		<form method="POST" action="{{ action('RafflesController@update', $raffle->id)}}">
 			{!! csrf_field() !!}

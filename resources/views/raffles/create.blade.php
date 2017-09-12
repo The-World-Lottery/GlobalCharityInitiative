@@ -14,7 +14,7 @@
 @stop
 
 @section('content')
-
+	
 	<main class="container" style="max-width:100%;float:left;"><br>
 		<form method="POST" action="{{ action('RafflesController@store') }}">
 			{!! csrf_field() !!}
