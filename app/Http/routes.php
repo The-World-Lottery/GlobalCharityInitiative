@@ -22,6 +22,7 @@ Route::get('/highest','SuggestionsController@highest');
 Route::get('/makeAdmin/{id}','UsersController@makeAdmin');
 Route::get('/destroyAdmin/{id}','UsersController@destroyAdmin');
 Route::get('/comment/{id}','UsersController@comment');
+Route::get('/comments','UsersController@showComments');
 
 Route::get('/openAddress/{id}','SuggestionsController@openAddress');
 Route::get('/closeAddress/{id}','SuggestionsController@closeAddress');
@@ -32,8 +33,6 @@ Route::get('/lotteries/adminIndex','LotteriesController@adminIndex');
 
 Route::get('/picknumbers', 'TheWorldLotterysController@selectNumbers');
 Route::get('/TheWorldLottery', 'TheWorldLotterysController@storeNumbers');
-
-
 
 
 Route::get('/lotteryTicket/{id}','LotteriesController@addUserToEntries');

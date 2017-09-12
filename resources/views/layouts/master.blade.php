@@ -25,11 +25,15 @@
 				<div class="chatInfoMargins borderOpac" id="chat">
 					<div class="areaHeaders">
 						Chat
-						<form action="{{ action('UsersController@comment') }}">
-							<input type="text" name="comment"><br>
-							<button type="submit">Add comment</button>
-						</form>
 					</div>
+					<form action="{{ action('UsersController@comment') }}">
+					{!! csrf_field() !!}
+						<input type="text" autofocus style="width:100%" placeholder="Say Something!" name="comment"><button hidden  type="submit">Add comment</button>
+					</form>
+					@foreach(\App\Models\UserComment::orderBy('created_at','desc')->limit(10)->get() as $comment)
+					{{ \App\User::select('username')->where('id',$comment->user_id )->get()[0]['username']}} :
+						<span class="commentSpacing">{{$comment->content}}</span><br>
+					@endforeach
 				</div>
 				<div class="chatInfoMargins borderOpac" id="info">
 					<div class="areaHeaders">Info</div>
