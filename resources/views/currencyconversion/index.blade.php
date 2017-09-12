@@ -8,7 +8,8 @@
 
 @section('divHead')
 
-<h3>Currency Conversions</h3>
+<h4>Currency Conversions</h4>
+<p class="suggBox">For your convenience, we have added an area that shows the current currency exchange rate between all the forms of payment we accept for ticket purchase.</p>
 
 <ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
   <li class="active"><a data-toggle="tab" href="#home">USD (Dollar)</a></li>

@@ -3,8 +3,8 @@
 		<div class="row">
 			<div class="col-sm-6">
 				<h2 id="headLogo">The World Lottery Logo Here</h2>
-				<h4 style="color:lightgreen">Current World Lottery Jackpot is $
-				{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']}}
+				<h4 style="color:lightgreen">Current Estimated World Lottery Jackpot is (USD) $
+				{{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}
 				</h4>
 				<div class="countdown">
   					Next World Lotto Drawing in:
