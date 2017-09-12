@@ -11,7 +11,7 @@ class UserWalletsTableSeeder extends Seeder
      */
     public function run()
     {
-        for($i = 1;$i <= 12;$i++) {
+        for($i = 1;$i <= 13;$i++) {
 	       	$newUserWallet = new \App\Models\UserWallet();
 	        $newUserWallet->user_id = $i;
 	        $newUserWallet->usd = random_int(0, 100);

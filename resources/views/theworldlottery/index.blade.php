@@ -13,9 +13,10 @@
 @stop
 
 @section('content')
+	<p class="suggBox">The World Lottery drawing happens every two weeks. Winning numbers selected with a random number generator. The value is fed by ticket purchases to any Lottery, Raffle or currently running World Lottery</p>
 
 	<main class="container" style="max-width:100%;float:left;display:flex;justify-content: center;">
-		<div style="padding-top: 2em;">
+		<div>
 			<div><h1>Drawing takes place in: <span class="worldLottoClock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
 				</div> </h1>
 			
