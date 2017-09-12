@@ -135,15 +135,12 @@ $(document).ready(function(){
 			console.log("complete");
 		});
 	}
-	coinPriceConversion();
 
-	$('#ajaxCall').click(function(){
-		coinPriceConversion();
-	})
+	coinPriceConversion();
 
 	setInterval(function(){
 		coinPriceConversion();
-	},300000)
+	},3000)
 
 
 
