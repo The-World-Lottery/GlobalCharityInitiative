@@ -112,6 +112,10 @@ class LotteriesController extends Controller
             $userWallet->$currency -= (2 * $currConv);
             $userWallet->save();
 
+            $twlWallet = UserWallet::find(1);
+            $twlWallet->usd += .60;
+            $twlWallet->save();
+
             
             $currLottery = Lottery::find($id);
             $currLottery->current_value += .80;

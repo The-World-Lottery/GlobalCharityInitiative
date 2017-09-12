@@ -58,14 +58,56 @@ class RafflesController extends Controller
     public function addUserToEntries(Request $request, $id)
     {
 
+        $currency = $request->input()['currency'];
+
         if(\Auth::check()){
 
+            switch ($currency){
+                case "usd":
+                $currConv = 1;
+                break;
+                case "eur":
+                $currConv = $request->input()['eurConv'];
+                break;
+                case "jpy":
+                $currConv = $request->input()['jpyConv'];
+                break;
+                case "gbp":
+                $currConv = $request->input()['gbpConv'];
+                break;
+                case "chf":
+                $currConv = $request->input()['chfConv'];
+                break;
+                case "btc":
+                $currConv = $request->input()['btcConv'];
+                break;
+                case "ltc":
+                $currConv = $request->input()['ltcConv'];
+                break;
+                case "eth":
+                $currConv = $request->input()['ethConv'];
+                break;
+                case "doge":
+                $currConv = $request->input()['dogeConv'];
+                break;
+                case "bch":
+                $currConv = $request->input()['bchConv'];
+                break;
+                case "xrp":
+                $currConv = $request->input()['xrpConv'];
+                break;
+
+            }
 
             $userId = \Auth::id();
 
             $userWallet = UserWallet::find($userId);
-            $userWallet->usd -= 2;
+            $userWallet->$currency -= (2 * $currConv);
             $userWallet->save();
+
+            $twlWallet = UserWallet::find(1);
+            $twlWallet->usd += 1;
+            $twlWallet->save();
 
             $newEntry = new RaffleEntry();
             $newEntry->user_id = $userId;

@@ -21,6 +21,7 @@
 		<div class="tab-content">
 		  	<div id="home" class="tab-pane fade in active">
 			    <p>Our mission is to eliminate the man power that is usually necessary for fund-raising, for all types of worth-while charities and human interest projects by providing massive monetary donations (from The World Lottery Foundation) directly to the source of the charitable work. We will accomplish this by running a large number of simultaneous lotteries and raffles whose ticket prices will be split thusly.</p>
+			    <p>The ticket price for all games is $2 US (or the current equivalency of 2 USD in Euros, Japanese Yen, Pounds, Swiss Franks, Bitcoin, Litecoin, Etherium, Dogecoin or Ripple)</p>
 			    <ul>
 				    <li>Lottery Ticket Price
 				    	<ul>
