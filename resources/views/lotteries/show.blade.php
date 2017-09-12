@@ -43,6 +43,16 @@
 				<option value="bch">Bitcoin Cash</option>
 				<option value="xrp">Ripple</option>
 			</select>
+			<input hidden id="usdEUR" name="eurConv">
+			<input hidden id="usdJPY" name="jpyConv">
+			<input hidden id="usdGBP" name="gbpConv">
+			<input hidden id="usdCHF" name="chfConv">
+			<input hidden id="usdBTC" name="btcConv">
+			<input hidden id="usdLTC" name="ltcConv">
+			<input hidden id="usdETH" name="ethConv">
+			<input hidden id="usdDoge" name="dogeConv">
+			<input hidden id="usdBCH" name="bchConv">
+			<input hidden id="usdXRP" name="xrpConv">
 			{{-- </a> --}}
 			</form>
 
