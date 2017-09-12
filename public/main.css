@@ -15,6 +15,7 @@
 
 .suggBox {
 	padding:1em;
+	margin:0;
 }
 
 .navLink {
@@ -29,10 +30,14 @@
 
 	#chat {
 		min-height:51vh;
+		max-height:51vh;
+		/*overflow:scroll;*/
+		border-radius:1.5em 1.5em 0 0;
 	}
 
 	#info {
 		min-height:28vh;
+		border-radius:0 0 1.5em 1.5em;
 	}
 
 .col-sm-4 {
@@ -129,7 +134,6 @@ label {
 .creatorsSocialIcons {
 	height:3em;
 	width:3em;
-	border:1px solid black;
 	float:left;
 	margin-right:1em;
 }

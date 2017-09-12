@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('divHead')
-<p class="suggBox">The suggestion box is intended for users to be able to create a post detailing a charity or cause they know needs funding or a change that they would like to see us implement on the website.</p>
+<p class="suggBox">The suggestion box is intended for users to be able to create a post detailing a charity or cause they know needs funding or a change that they would like to see us implement on the website. Suggestion priority is determined by the amount of User upvotes on each suggestion. Admins will address the top 5 suggestions every two weeks.</p>
 <ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
   <li><a href="{{action('SuggestionsController@index')}}">All Suggestions</a></li>
   <li><a href="{{action('SuggestionsController@highest')}}">Top 5 Suggestions</a></li>

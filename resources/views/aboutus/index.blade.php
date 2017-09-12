@@ -54,29 +54,32 @@
 				<div class="row" id="theCreatorsContainer">
 					<div class="col col-sm-4 col-xs-12">
 					<h4>Emmett</h4>
-						<img src="">
+						<img src="/images/Emmett.jpg">
+						<br>
 						<br>
 						<div class="">
-							<div class="creatorsSocialIcons">GitHub Link</div>
-							<div class="creatorsSocialIcons">LinkedIN Link</div>
+							<div class="creatorsSocialIcons"><a target="_blank" href="https://github.com/emmettpeters"><img src="/images/ghIcon.png"></a></div>
+							<div class="creatorsSocialIcons"><a target="_blank" href="https://www.linkedin.com/in/emmett-peters/"><img src="/images/liIcon.png"></a></div>
 						</div>
 					</div>
 					<div class="col col-sm-4 col-xs-12">
 					<h4>Cody</h4>
-						<img src="">
+						<img src="/images/Cody.jpg">
+						<br>
 						<br>
 						<div class="">
-							<div class="creatorsSocialIcons">GitHub Link</div>
-							<div class="creatorsSocialIcons">LinkedIN Link</div>
+							<div class="creatorsSocialIcons"><a target="_blank" href="https://github.com/CodyHastings"><img src="/images/ghIcon.png"></a></div>
+							<div class="creatorsSocialIcons"><a target="_blank" href="https://www.linkedin.com/in/cody-hastings/"><img src="/images/liIcon.png"></a></div>
 						</div>
 					</div>
-					<div class="col col-sm-4 col-xs-12">
+					<div class="col col-sm-4 col-xs-12" style="padding-right:1em;">
 					<h4>Avery</h4>
-						<img src="">
+						<img src="/images/Avery.JPG">
+						<br>
 						<br>
 						<div class="">
-							<div class="creatorsSocialIcons">GitHub Link</div>
-							<div class="creatorsSocialIcons">LinkedIN Link</div>
+							<div class="creatorsSocialIcons"><a target="_blank" href="https://github.com/Avery-H"><img src="/images/ghIcon.png"></a></div>
+							<div class="creatorsSocialIcons"><a target="_blank" href="https://www.linkedin.com/in/avery-hankins/"><img src="/images/liIcon.png"></a></div>
 						</div>
 					</div> 	
 				</div>
