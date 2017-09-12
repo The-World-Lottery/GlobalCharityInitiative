@@ -24,7 +24,7 @@
 			
 			<div><strong>Starting Pot: </strong> {{$lottery->init_value}}</div>
 			<div><strong>Current Pot: </strong> {{$lottery->current_value}}</div>
-			<div><strong>Lotto Ends On: </strong> {{$lottery->end_date->diffForHumans()}}</div>
+			<div><strong>Lotto Ends On: </strong> {{$lottery->end_date}}</div>
 			<div><strong>Charity To: </strong> {{$lottery->content}}</div>
 			<form action="{{ action('LotteriesController@addUserToEntries', $lottery->id) }}">
 			{{-- <a href="{{ action('LotteriesController@addUserToEntries', $lottery->id) }}"> --}}
