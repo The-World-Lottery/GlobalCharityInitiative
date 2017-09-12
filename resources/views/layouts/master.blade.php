@@ -30,13 +30,21 @@
 					{!! csrf_field() !!}
 						<input type="text" autofocus style="width:100%" placeholder="Say Something!" name="comment"><button hidden  type="submit">Add comment</button>
 					</form>
-					@foreach(\App\Models\UserComment::orderBy('created_at','desc')->limit(10)->get() as $comment)
+					<div style="overflow:scroll;height:44.1vh;">
+					@foreach(\App\Models\UserComment::orderBy('created_at','desc')->limit(30)->get() as $comment)
 					{{ \App\User::select('username')->where('id',$comment->user_id )->get()[0]['username']}} :
 						<span class="commentSpacing">{{$comment->content}}</span><br>
 					@endforeach
+					</div>
 				</div>
-				<div class="chatInfoMargins borderOpac" id="info">
-					<div class="areaHeaders">Info</div>
+				<div class="chatInfoMargins borderOpac" id="info" style="text-align:center;">
+					<div class="areaHeaders">Site Info
+					</div>
+					<br>
+					<p><strong>Registered Accounts:</strong> {{ \App\User::count()}}</p>
+					<p><strong>TWL Jackpot : </strong>${{ \App\Models\TheWorldLottery::select('current_value')->where('id','1')->get()[0]['current_value']}}</p>
+					<p><strong>Highest Value Lottery : </strong>${{ \App\Models\Lottery::select('current_value')->orderBy('current_value','desc')->limit(1)->get()[0]['current_value']}}</p>
+					<p><strong>Raffle finishing next : <br></strong>{{ \App\Models\Raffle::select('product','content')->orderBy('end_date','asc')->limit(1)->get()[0]['product']}}</p>
 				</div>
 			</div>
 		</div>

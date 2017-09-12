@@ -10,6 +10,10 @@ use App\Models\RaffleEntry;
 use App\Models\TheWorldLottery;
 use App\Models\UserWallet;
 use Carbon\Carbon;
+use Log;
+use App\User;
+use DB;
+
 
 class RafflesController extends Controller
 {
@@ -61,7 +65,7 @@ class RafflesController extends Controller
 
             $userWallet = UserWallet::find($userId);
             $userWallet->usd -= 2;
-            $userwallet->save();
+            $userWallet->save();
 
             $newEntry = new RaffleEntry();
             $newEntry->user_id = $userId;

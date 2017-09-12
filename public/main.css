@@ -30,10 +30,14 @@
 
 	#chat {
 		min-height:51vh;
+		max-height:51vh;
+		/*overflow:scroll;*/
+		border-radius:1.5em 1.5em 0 0;
 	}
 
 	#info {
 		min-height:28vh;
+		border-radius:0 0 1.5em 1.5em;
 	}
 
 .col-sm-4 {

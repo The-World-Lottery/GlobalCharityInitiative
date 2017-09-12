@@ -58,8 +58,8 @@
 						<br>
 						<br>
 						<div class="">
-							<div class="creatorsSocialIcons"><img src="/images/ghIcon.png"></div>
-							<div class="creatorsSocialIcons"><img src="/images/liIcon.png"></div>
+							<div class="creatorsSocialIcons"><a target="_blank" href="https://github.com/emmettpeters"><img src="/images/ghIcon.png"></a></div>
+							<div class="creatorsSocialIcons"><a target="_blank" href="https://www.linkedin.com/in/emmett-peters/"><img src="/images/liIcon.png"></a></div>
 						</div>
 					</div>
 					<div class="col col-sm-4 col-xs-12">
@@ -68,8 +68,8 @@
 						<br>
 						<br>
 						<div class="">
-							<div class="creatorsSocialIcons"><img src="/images/ghIcon.png"></div>
-							<div class="creatorsSocialIcons"><img src="/images/liIcon.png"></div>
+							<div class="creatorsSocialIcons"><a target="_blank" href="https://github.com/CodyHastings"><img src="/images/ghIcon.png"></a></div>
+							<div class="creatorsSocialIcons"><a target="_blank" href="https://www.linkedin.com/in/cody-hastings/"><img src="/images/liIcon.png"></a></div>
 						</div>
 					</div>
 					<div class="col col-sm-4 col-xs-12" style="padding-right:1em;">
@@ -78,8 +78,8 @@
 						<br>
 						<br>
 						<div class="">
-							<div class="creatorsSocialIcons"><img src="/images/ghIcon.png"></div>
-							<div class="creatorsSocialIcons"><img src="/images/liIcon.png"></div>
+							<div class="creatorsSocialIcons"><a target="_blank" href="https://github.com/Avery-H"><img src="/images/ghIcon.png"></a></div>
+							<div class="creatorsSocialIcons"><a target="_blank" href="https://www.linkedin.com/in/avery-hankins/"><img src="/images/liIcon.png"></a></div>
 						</div>
 					</div> 	
 				</div>
