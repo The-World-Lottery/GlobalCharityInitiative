@@ -12,18 +12,18 @@ class CreateUserWalletsTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             // national currencies
-            $table->decimal('usd');
-            $table->decimal('eur');
-            $table->decimal('jpy');
-            $table->decimal('gbp');
-            $table->decimal('chf');
+            $table->decimal('usd',8,6);
+            $table->decimal('eur',8,6);
+            $table->decimal('jpy',8,6);
+            $table->decimal('gbp',8,6);
+            $table->decimal('chf',8,6);
             // cryptocurrencies
-            $table->decimal('btc');
-            $table->decimal('ltc');
-            $table->decimal('eth');
-            $table->decimal('doge');
-            $table->decimal('bch');
-            $table->decimal('xrp');
+            $table->decimal('btc',8,6);
+            $table->decimal('ltc',8,6);
+            $table->decimal('eth',8,6);
+            $table->decimal('doge',8,6);
+            $table->decimal('bch',8,6);
+            $table->decimal('xrp',8,6);
             
             $table->timestamps();
         });
