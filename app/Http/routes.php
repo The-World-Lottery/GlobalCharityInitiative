@@ -10,6 +10,12 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::get('send_test_email', function(){
+	Mail::raw('Sending emails with Mailgun and Laravel is easy!', function($message)
+	{
+		$message->to('candy0man2@gmail.com');
+	});
+});
 
 Route::get('/', 'LotteriesController@index');
 
