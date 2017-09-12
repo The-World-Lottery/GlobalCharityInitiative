@@ -38,11 +38,14 @@ $(document).ready(function(){
 
 	});
 
-	var endDate = $('#clock').data("clock-id");
-	console.log(endDate);
+	var wlEndDate = $('#clock').data("clock-id");
+	var wLottoEndDate = $('.worldLottoClock').data("clock-id")
+	var lottoEndDate = $('.lottoClock').data("clock-id")
+	var raffleEndDate = $('.raffleClock').data("clock-id")
+
 	
 
-	$('#clock').countdown(endDate)
+	$('#clock').countdown(wlEndDate)
 	.on('update.countdown', function(event) {
 		var format = '%H:%M:%S';
 			if(event.offset.totalDays > 0) {
@@ -59,7 +62,41 @@ $(document).ready(function(){
 
 	});
 
-	$('.worldLottoClock').countdown(endDate)
+	$('.worldLottoClock').countdown(wLottoEndDate)
+	.on('update.countdown', function(event) {
+		var format = '%H:%M:%S';
+			if(event.offset.totalDays > 0) {
+		format = '%-d day%!d ' + format;
+		}
+		if(event.offset.weeks > 0) {
+		format = '%-w week%!w ' + format;
+		}
+		$(this).html(event.strftime(format));
+	})
+	.on('finish.countdown', function(event) {
+			$(this).html('Drawing Complete!')
+	.parent().addClass('disabled');
+
+	});
+
+	$('.lottoClock').countdown(lottoEndDate)
+	.on('update.countdown', function(event) {
+		var format = '%H:%M:%S';
+			if(event.offset.totalDays > 0) {
+		format = '%-d day%!d ' + format;
+		}
+		if(event.offset.weeks > 0) {
+		format = '%-w week%!w ' + format;
+		}
+		$(this).html(event.strftime(format));
+	})
+	.on('finish.countdown', function(event) {
+			$(this).html('Drawing Complete!')
+	.parent().addClass('disabled');
+
+	});
+
+		$('.raffleClock').countdown(raffleEndDate)
 	.on('update.countdown', function(event) {
 		var format = '%H:%M:%S';
 			if(event.offset.totalDays > 0) {

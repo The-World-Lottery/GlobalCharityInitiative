@@ -26,7 +26,7 @@ class UserWalletsController extends Controller
      */
     public function create()
     {
-        //
+        return view('userwallets.create');
     }
 
     /**

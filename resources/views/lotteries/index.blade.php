@@ -27,10 +27,8 @@
 			</a>
 			<p>Current Estimated Value : {{$lottery->current_value}}</p>
 			<p>Initial Value : {{$lottery->init_value}}</p>
-			{{-- <p>Lottery Ends : {{$lottery->end_date->diffForHumans()}}</p> --}}
-			<div>Drawing takes place in: <span class="worldLottoClock" data-clock-id="{{$lottery->end_date}}"></span>
-			</div> 
-			{{-- <p>{{$lottery->content}}</p> --}}
+			<p>Lottery Ends : {{$lottery->end_date->diffForHumans()}}</p>
+			<p>Description : {{$lottery->content}}</p>
 
 		@endforeach
 		<br>
