@@ -11,7 +11,7 @@ class Raffle extends Model
 
    	public static function raffleFunction($time){
    		//not completed
-   		return Raffle::where('end_date', '<', $time)->get();
+   		return Raffle::where('end_date', '<', $time)->where('complete',0)->get();
    	}
 
    	public static function raffleWin($id){

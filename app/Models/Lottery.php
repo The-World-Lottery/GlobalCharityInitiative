@@ -20,19 +20,21 @@ class Lottery extends Model
 
 
     public static function lotteryFunction($time){
-   		return Lottery::where('end_date', '<=', $time)->get();
+   		return Lottery::where('end_date', '<=', $time)->where('complete',0)->get();
    	}
 
 
    	public static function lotteryWin($id){
    		//change status to complete,
-   		Lottery::where('id', $id)->update(['complete' => 1]);
+   		Lottery::where('id', $id)->update(['complete' => true]);
    		//pick a weener
    		$ween = \App\Models\LotteryEntry::pickWinner($id);
 
-   		//$winAmount = Lottery::where('id', $id)->value('current_value');
+   		$winAmount = Lottery::where('id', $id)->value('current_value');
+   		$userAmount = \App\Models\UserWallet::where('user_id',$ween->id)->value('usd');
+   		$userTotal = $winAmount + $userAmount; 
+   		\App\Models\UserWallet::where('user_id',$ween->id)->update(['usd' => $userTotal]);
 
-   		//$ween->usd += $winAmount;
    		//add money to user wallets
    		//alert admins
    		
