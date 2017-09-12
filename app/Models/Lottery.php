@@ -35,8 +35,14 @@ class Lottery extends Model
    		$userTotal = $winAmount + $userAmount; 
    		\App\Models\UserWallet::where('user_id',$ween->id)->update(['usd' => $userTotal]);
 
-   		Lottery::where('id', $id)->update(['winner_id' => $ween->id]);
    		//add money to user wallets
+      Lottery::where('id', $id)->update(['winner_id' => $ween->id]);
+
+       // \Mail::raw("Congrats! You've won a Lottery", function($message){
+       //  $message->subject('Please return to the site and Login to claim you prize!');
+       //  $message->from('no-reply@TheWorldLottery.com', 'TheWorldLottery');
+       //  $message->to($ween->email);
+    });
    		//alert admins
    		
    	}
