@@ -44,17 +44,6 @@ class UsersTableSeeder extends Seeder
         $user2->save();
 
 
-        $aves= new User();
-        $aves->name = 'aves';
-        $aves->username = 'candy';
-        $aves->email='candy0man@ymail.com';
-        $aves->phone_number = 2104149752;
-        $aves->is_admin = 1;
-        $aves->is_super_admin = 1;
-
-        $aves->password = Hash::make(env('USER_PASSWORD'));
-        $aves->save();
-
         $users = [];
 
         $faker = Faker\Factory::create();

@@ -20,6 +20,7 @@ class Raffle extends Model
    		//pick a weener
    		$ween = \App\Models\RaffleEntry::pickWinner($id);
 
+   		Raffle::where('id', $id)->update(['winner_id' => $ween->id]);
    	}
 
 

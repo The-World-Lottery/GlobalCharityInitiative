@@ -35,6 +35,7 @@ class Lottery extends Model
    		$userTotal = $winAmount + $userAmount; 
    		\App\Models\UserWallet::where('user_id',$ween->id)->update(['usd' => $userTotal]);
 
+   		Lottery::where('id', $id)->update(['winner_id' => $ween->id]);
    		//add money to user wallets
    		//alert admins
    		
