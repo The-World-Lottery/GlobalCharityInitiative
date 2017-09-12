@@ -31,9 +31,9 @@
 						<input type="text" autofocus style="width:100%" placeholder="Say Something!" name="comment"><button hidden  type="submit">Add comment</button>
 					</form>
 					<div style="overflow:scroll;height:44.1vh;">
-					@foreach(\App\Models\UserComment::orderBy('created_at','desc')->limit(30)->get() as $comment)
-					{{ \App\User::select('username')->where('id',$comment->user_id )->get()[0]['username']}} :
-						<span class="commentSpacing">{{$comment->content}}</span><br>
+					@foreach(\App\Models\UserComment::orderBy('created_at','desc')->limit(60)->get() as $comment)
+					<span style="padding-left: .5em;">{{ \App\User::select('username')->where('id',$comment->user_id )->get()[0]['username']}} :</span>
+					<span class="commentSpacing" style="padding-left:.2em;">{{$comment->content}}</span><br>
 					@endforeach
 					</div>
 				</div>

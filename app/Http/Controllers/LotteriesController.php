@@ -14,6 +14,7 @@ use Log;
 use App\User;
 use DB;
 
+
 class LotteriesController extends Controller
 {
     /**
@@ -62,12 +63,13 @@ class LotteriesController extends Controller
 
     public function addUserToEntries(Request $request, $id)
     {
+        $currency = $request->input()['currency'];
 
         if(\Auth::check()){
             $userId = \Auth::id();
 
             $userWallet = UserWallet::find($userId);
-            $userWallet->usd -= 2;
+            $userWallet->$currency -= 2;
             $userWallet->save();
 
             
