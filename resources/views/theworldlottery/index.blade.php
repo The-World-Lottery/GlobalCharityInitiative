@@ -13,7 +13,7 @@
 @stop
 
 @section('content')
-	<p class="suggBox">The World Lottery drawing happens every two weeks. Winning numbers selected with a random number generator. The value is fed by ticket purchases to any Lottery, Raffle or currently running World Lottery</p>
+	<p class="suggBox" style="text-align:center;">The World Lottery drawing happens every two weeks. Winning numbers selected with a random number generator. The Jackpot value is fed by ticket purchases to any Lottery, Raffle or currently running World Lottery.</p>
 
 	<main class="container" style="max-width:100%;float:left;display:flex;justify-content: center;">
 		<div>

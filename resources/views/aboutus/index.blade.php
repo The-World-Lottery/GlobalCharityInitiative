@@ -54,29 +54,32 @@
 				<div class="row" id="theCreatorsContainer">
 					<div class="col col-sm-4 col-xs-12">
 					<h4>Emmett</h4>
-						<img src="">
+						<img src="/images/Emmett.jpg">
+						<br>
 						<br>
 						<div class="">
-							<div class="creatorsSocialIcons">GitHub Link</div>
-							<div class="creatorsSocialIcons">LinkedIN Link</div>
+							<div class="creatorsSocialIcons"><img src="/images/ghIcon.png"></div>
+							<div class="creatorsSocialIcons"><img src="/images/liIcon.png"></div>
 						</div>
 					</div>
 					<div class="col col-sm-4 col-xs-12">
 					<h4>Cody</h4>
-						<img src="">
+						<img src="/images/Cody.jpg">
+						<br>
 						<br>
 						<div class="">
-							<div class="creatorsSocialIcons">GitHub Link</div>
-							<div class="creatorsSocialIcons">LinkedIN Link</div>
+							<div class="creatorsSocialIcons"><img src="/images/ghIcon.png"></div>
+							<div class="creatorsSocialIcons"><img src="/images/liIcon.png"></div>
 						</div>
 					</div>
-					<div class="col col-sm-4 col-xs-12">
+					<div class="col col-sm-4 col-xs-12" style="padding-right:1em;">
 					<h4>Avery</h4>
-						<img src="">
+						<img src="/images/Avery.JPG">
+						<br>
 						<br>
 						<div class="">
-							<div class="creatorsSocialIcons">GitHub Link</div>
-							<div class="creatorsSocialIcons">LinkedIN Link</div>
+							<div class="creatorsSocialIcons"><img src="/images/ghIcon.png"></div>
+							<div class="creatorsSocialIcons"><img src="/images/liIcon.png"></div>
 						</div>
 					</div> 	
 				</div>
