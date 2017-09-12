@@ -6,6 +6,10 @@
 				<h4 style="color:lightgreen">Current World Lottery Jackpot is $
 				{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']}}
 				</h4>
+				<div class="countdown">
+  					Next World Lotto Drawing in:
+  					<span id="clock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
+				</div>
 			</div>
 			<div class="col-sm-6">
 				@if (Auth::check())

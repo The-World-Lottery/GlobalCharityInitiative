@@ -16,6 +16,11 @@
 
 	<main class="container" style="max-width:100%;float:left;display:flex;justify-content: center;">
 		<div style="padding-top: 2em;">
+			<div class="countdown"><h1>
+				The Drawing ends in : 
+				<span class="raffleClock" data-clock-id="{{$raffle->end_date}}"></span>
+				</h1>
+			</div>
 		<div id="showProfImg"><img src={!! $raffle->img !!}></div>
 		<h2>{{$raffle['title']}}</h2>
 		<h3>{{$raffle['content']}}</h3>

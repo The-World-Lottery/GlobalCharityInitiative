@@ -16,6 +16,8 @@
 
 	<main class="container" style="max-width:100%;float:left;display:flex;justify-content: center;">
 		<div style="padding-top: 2em;">
+			<div><h1>Drawing takes place in: <span class="worldLottoClock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
+				</div> </h1>
 			
 			<div><strong>Starting Pot: </strong> {{$theWorldLottery->init_value}}</div>
 			<div><strong>Current Pot: </strong> {{$theWorldLottery->current_value}}</div>

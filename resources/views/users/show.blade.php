@@ -36,11 +36,8 @@
 				</form>
 			
 			@endif
-			{{-- {{dd($entries)}} --}}
-			{{-- @if(count($entries)) --}}
-			{{-- @endif --}}
-			
 
+			
 		</div>
 		<div style="float: left; postion: absolute;">{{$user->name}}'s tickets:
 
@@ -62,6 +59,7 @@
 				@endforeach
 			</ul>
 		</div>
+
 	</main>
 
 @stop
