@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('divHead')
+<p class="suggBox">The suggestion box is intended for users to be able to create a post detailing a charity or cause they know needs funding or a change that they would like to see us implement on the website.</p>
 <ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
   <li><a href="{{action('SuggestionsController@index')}}">All Suggestions</a></li>
   <li class="active"><a href="{{action('SuggestionsController@highest')}}">Top 5 Suggestions</a></li>
@@ -14,7 +15,7 @@
 @stop
 
 @section('content')
-
+    
 	{{-- <span style="float:right;padding-right:1em;">{!! $suggestions->appends(Request::except('page'))->render() !!}</span> --}}
     <main class="container" style="max-width:100%;float:left;">
 

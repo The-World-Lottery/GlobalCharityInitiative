@@ -25,11 +25,15 @@
 				<div class="chatInfoMargins borderOpac" id="chat">
 					<div class="areaHeaders">
 						Chat
-						<form action="{{ action('UsersController@comment') }}">
-							<input type="text" name="comment"><br>
-							<button type="submit">Add comment</button>
-						</form>
 					</div>
+					<form action="{{ action('UsersController@comment') }}">
+					{!! csrf_field() !!}
+						<input type="text" autofocus style="width:100%" placeholder="Say Something!" name="comment"><button hidden  type="submit">Add comment</button>
+					</form>
+					@foreach(\App\Models\UserComment::orderBy('created_at','desc')->limit(10)->get() as $comment)
+					{{ \App\User::select('username')->where('id',$comment->user_id )->get()[0]['username']}} :
+						<span class="commentSpacing">{{$comment->content}}</span><br>
+					@endforeach
 				</div>
 				<div class="chatInfoMargins borderOpac" id="info">
 					<div class="areaHeaders">Info</div>
@@ -43,6 +47,7 @@
 	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
 	  crossorigin="anonymous"></script>
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
 	<script src="https://static.filestackapi.com/v3/filestack.js"></script>
 	<script src="/main.js" type="text/javascript"></script>
 </body>

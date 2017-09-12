@@ -13,6 +13,10 @@
 	min-height:7.5vh;
 }
 
+.suggBox {
+	padding:1em;
+}
+
 .navLink {
 	padding-top:1em;
 	padding-bottom: 1em;
@@ -79,6 +83,11 @@ ul.pagination {
 	margin-bottom: 1em;
 	float:right;
 }
+
+.commentSpacing{
+	padding: 1em;
+}
+
 
 .headUN {
 	float:right;

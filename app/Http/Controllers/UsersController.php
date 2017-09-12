@@ -119,11 +119,18 @@ class UsersController extends Controller
             $comment->user_id = \Auth::id();
             $comment->content = $request->input('comment');
             $comment->save();
+            return \Redirect::action('Auth\AuthController@getLogin');
         } else {
              $request->session()->flash('errorMessage', 'You must be LOGGED IN to comment in chat!');
             return \Redirect::action('Auth\AuthController@getLogin');
         }
     }
+
+    // public function showComments(){
+    //     $comments = UserComment::orderBy('created_at','desc')->limit(10)->get();
+    //     // dd($comments[0]->content);
+    //     return view('layouts.master' ,$data['comments']=$comments);
+    // }
 
     /**
      * Update the specified resource in storage.
