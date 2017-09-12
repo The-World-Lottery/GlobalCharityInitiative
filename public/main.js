@@ -25,7 +25,7 @@ $(document).ready(function(){
 
 
 	$('body').on('click', function(){
-		console.log("stuff");
+		// console.log("stuff");
 		if($('#img').val().length > 5){
 			var sanitizedSource = $('#img').val().replace(/"/g, "");
 			$('#editImg').attr('src', sanitizedSource);
@@ -140,7 +140,7 @@ $(document).ready(function(){
 
 	setInterval(function(){
 		coinPriceConversion();
-	},3000)
+	},30000)
 
 
 
