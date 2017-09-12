@@ -81,4 +81,9 @@ class User extends Model implements AuthenticatableContract,
         return $this->hasOne('App\Models\UserWallet','user_id');
     }
 
+    public function userComments()
+    {
+        return $this->hasMany('App\Models\UserComment','user_id');
+    }
+
 }

@@ -80,6 +80,11 @@ ul.pagination {
 	float:right;
 }
 
+.commentSpacing{
+	padding: 1em;
+}
+
+
 .headUN {
 	float:right;
 	margin-top: 4.2%;
