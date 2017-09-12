@@ -16,7 +16,12 @@ class RafflesTableSeeder extends Seeder
         $raffle->title = 'Raffle #'. $i;
         $raffle->content = 'for charity'.$i;
         $raffle->product ='A product donated by company # '.$i . ' to advertise their business.';
-        $raffle->end_date = '2017-09-11 1'.$i.':00:00';
+       if($i < 9){
+        	$raffle->end_date = date("Y-m-d ") .'0'. $i .':00:00';
+    	}
+    	else{
+    		$raffle->end_date = date("Y-m-d ") . $i .':00:00';
+    	}
         $raffle->user_id = 1;
         $raffle->save();
     	}
