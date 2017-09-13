@@ -31,7 +31,7 @@ class LotteriesController extends Controller
         //     $lotterys = Lottery::with('user')->paginate(6);  
         // }
 
-        $lotteries = Lottery::paginate(16);
+        $lotteries = Lottery::where('end_date','>',\Carbon\Carbon::now())->paginate(16);
         return view('lotteries.index')->with(array('lotteries' => $lotteries));
        
 

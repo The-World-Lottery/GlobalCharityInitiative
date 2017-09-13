@@ -19,18 +19,25 @@
 			@if (session()->has('successMessage'))
             <div class="alert alert-success">{{ session('successMessage') }}</div>
         	@endif
+			<div class="row">
+				@foreach($lotteries as $lottery)
+				<div class="col col-sm-4  col-xs-12"
+				style="padding:1em;min-height:25vh;text-align:center"
+				>
+				<a href="{{ action('LotteriesController@show', $lottery->id) }}">
+					<h4 class ="suggHead">{{$lottery->title}}</h4>
+				</a>
+				<p>"{{$lottery->content}}"</p>
+				<p>Current Estimated Value :<strong style="color:lightgreen">${{number_format(($lottery->current_value),2,".",",")}}</strong></p>
+				<p>Lottery Ends : <strong style="color:red;">{{$lottery->end_date->diffForHumans()}}</strong></p>
+				</div>
 
-			@foreach($lotteries as $lottery)
 
-			<a href="{{ action('LotteriesController@show', $lottery->id) }}">
-				<h3 class ="suggHead">{{$lottery->title}}</h3>
-			</a>
-			<p>Current Estimated Value : {{$lottery->current_value}}</p>
-			<p>Initial Value : {{$lottery->init_value}}</p>
-			<p>Lottery Ends : {{$lottery->end_date->diffForHumans()}}</p>
-			<p>Description : {{$lottery->content}}</p>
 
-		@endforeach
+
+					{{-- <p>Initial Value : {{$lottery->init_value}}</p> --}}
+				@endforeach
+			</div>
 		<br>
 		</div>
 	</main>
