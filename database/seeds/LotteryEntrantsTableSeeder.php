@@ -16,7 +16,7 @@ class LotteryEntrantsTableSeeder extends Seeder
         for($i = 0;$i <= 50;$i++) {
 
        	$lotteryEntry = new \App\Models\LotteryEntry();
-        $lotteryEntry->lottery_id = rand(1,25);;
+        $lotteryEntry->lottery_id = rand(1,23);;
         $lotteryEntry->user_id = rand(1,10);
         $lotteryEntry->save();
     	}

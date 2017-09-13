@@ -14,7 +14,7 @@ class LotterysTableSeeder extends Seeder
 
 
 
-        for($i = 0;$i <= 26;$i++) {
+        for($i = 0;$i <= 23;$i++) {
 
        	$lottery = new \App\Models\Lottery();
         $lottery->title = 'Lottery #'.$i;
