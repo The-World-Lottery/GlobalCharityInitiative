@@ -37,8 +37,8 @@ class UsersTableSeeder extends Seeder
         $user2->name = 'Avery Hankins';
         $user2->username = 'Aves';
         $user2->email='avery@gmail.com';
-        $user2->phone_number = 2108839090;
-        $user2->is_admin = 1;
+        $user2->phone_number = 2108549090;
+        $user2->is_admin = 0;
         $user2->is_super_admin = 0;
         $user2->password = Hash::make(env('USER_PASSWORD'));
         $user2->save();
