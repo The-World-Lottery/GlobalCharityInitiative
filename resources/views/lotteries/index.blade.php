@@ -21,15 +21,19 @@
         	@endif
 
 			@foreach($lotteries as $lottery)
-
+			<div style="max-width:31.2%;float:left;border:1px solid black;height:25vh;padding:1em;margin:1%;">
 			<a href="{{ action('LotteriesController@show', $lottery->id) }}">
-				<h3 class ="suggHead">{{$lottery->title}}</h3>
+				<h4 class ="suggHead">{{$lottery->title}}</h4>
 			</a>
+			<p>{{$lottery->content}}</p>
 			<p>Current Estimated Value : {{$lottery->current_value}}</p>
-			<p>Initial Value : {{$lottery->init_value}}</p>
 			<p>Lottery Ends : {{$lottery->end_date->diffForHumans()}}</p>
-			<p>Description : {{$lottery->content}}</p>
+			</div>
 
+
+
+
+			{{-- <p>Initial Value : {{$lottery->init_value}}</p> --}}
 		@endforeach
 		<br>
 		</div>
