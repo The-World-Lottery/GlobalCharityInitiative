@@ -25,7 +25,7 @@ class SuggestionsController extends Controller
             $q = $request->q;
             $suggestions = Suggestion::search($q);    
         } else {
-            $suggestions = Suggestion::with('user')->where('addressed','1')->paginate(5);  
+            $suggestions = Suggestion::with('user')->where('addressed','0')->paginate(5);  
         }
 
 
@@ -59,7 +59,7 @@ class SuggestionsController extends Controller
      */
     public function store(Request $request)
     {
-        // $this->validate($request, Suggestion::$rules);
+        $this->validate($request, Suggestion::$rules);
 
         $title = $request->input('title');
         $content = $request->input('content');
@@ -69,7 +69,7 @@ class SuggestionsController extends Controller
         $suggestion->user_id = \Auth::id();
         $suggestion->save();
 
-        // $request->session()->flash('successMessage', 'Suggestion created');
+        $request->session()->flash('successMessage', 'Suggestion created');
 
         // Log::info("$title, $content, $url");
 
@@ -132,7 +132,7 @@ class SuggestionsController extends Controller
     
 
         $suggestions = DB::table('suggestions')
-                    ->where('addressed','1')
+                    ->where('addressed','0')
                     ->leftJoin('votes', 'votes.suggestion_id', '=', 'suggestions.id')
                     ->select(DB::raw('count(votes.id) as totalvotes, votes.suggestion_id, suggestions.id'))
                     ->groupBy('votes.suggestion_id')
@@ -227,7 +227,7 @@ class SuggestionsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // $this->validate($request, Suggestion::$rules);
+        $this->validate($request, Suggestion::$rules);
 
         $suggestion = Suggestion::find($id);
 
@@ -239,7 +239,7 @@ class SuggestionsController extends Controller
         $suggestion->content =$request->content;
         $suggestion->save();
 
-        // $request->session()->flash('successMessage', 'Suggestion updated');
+        $request->session()->flash('successMessage', 'Suggestion updated');
 
         return \Redirect::action('SuggestionsController@show', $suggestion->id);
     }
@@ -271,7 +271,7 @@ class SuggestionsController extends Controller
             abort(404);
         }
 
-        $suggestion->addressed = 0;
+        $suggestion->addressed = 1;
         $suggestion->save();
 
         return \Redirect::action('SuggestionsController@adminIndex');
@@ -286,7 +286,7 @@ class SuggestionsController extends Controller
             abort(404);
         }
 
-        $suggestion->addressed = 1;
+        $suggestion->addressed = 0;
         $suggestion->save();
 
         return \Redirect::action('SuggestionsController@adminIndex');

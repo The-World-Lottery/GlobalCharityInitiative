@@ -24,7 +24,7 @@ class SuggestionsTableSeeder extends Seeder
                 'created_at'=> $faker->dateTime(),
                 'updated_at'=> $faker->dateTime(),
                 'user_id' => User::all()->random()->id,
-                'addressed' => 1
+                'addressed' => 0
             ];
         }
         DB::table('suggestions')->insert($suggestions);

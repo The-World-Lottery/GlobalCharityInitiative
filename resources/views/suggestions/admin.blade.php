@@ -46,7 +46,7 @@ table, th, td {
 				<td>#</td>
 				<td>{{$suggestion->created_at}}</td>
 				<td>{{$suggestion->updated_at}}</td>
-				@if(!$suggestion->addressed)
+				@if($suggestion->addressed)
 				<td>Y</td>
 				@else
 				<td>N</td>
