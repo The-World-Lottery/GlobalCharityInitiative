@@ -16,6 +16,7 @@
 @section('content')
 
 	<main class="container" style="max-width:100%;float:left;">
+		{!! $raffles->appends(Request::except('page'))->render() !!} 
 	<div style="padding-top: 2em;">
 
 		@if (session()->has('successMessage'))
@@ -23,15 +24,16 @@
         @endif
 
 		@foreach($raffles as $raffle)
-			<a href="{{ action('RafflesController@show', $raffle->id) }}"><h1>{{$raffle->title}}</h1></a>
+		<div style="max-width:31.3%;float:left;border:1px solid black;height:25vh;padding:2em 1em 1em 1em ;margin:1%;overflow:hidden;">
+			<a href="{{ action('RafflesController@show', $raffle->id) }}"><h4>{{$raffle->title}}</h4></a>
 			<p>{{$raffle->product}}</p>
 			<p>Created By : {{$raffle->user->name}}</p>
+		</div>
 			
 		@endforeach
 		<br>
 
 	
-		{!! $raffles->appends(Request::except('page'))->render() !!} 
 		</div>
 	</main>
 
