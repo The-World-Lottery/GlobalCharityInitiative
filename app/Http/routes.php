@@ -11,7 +11,11 @@
 |
 */
 
-Route::get('/', 'LotteriesController@index');
+// Route::get('/', 'LotteriesController@index');
+
+Route::get('/',function(){
+	return view('splash');
+});
 
 Route::get('/suggestions/userssuggestions/{id}','SuggestionsController@userssuggestions');
 

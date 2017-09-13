@@ -15,7 +15,7 @@ class UserCommentsTableSeeder extends Seeder
         $userComment7->user_id = 3;
         $userComment7->content = "Apparently not...";
         $userComment7->save();
-        
+
         $userComment6 = new \App\Models\UserComment();
         $userComment6->user_id = 1;
         $userComment6->content = "no nonsense in our chat boiiii";
@@ -50,11 +50,6 @@ class UserCommentsTableSeeder extends Seeder
         $userComment->user_id = 1;
         $userComment->content = "Haha! The first comment on the world lottery!";
         $userComment->save();
-
-        
-
-        
-
     	
     }
 }
