@@ -36,7 +36,7 @@ class Raffle extends Model
 
 		public function raffleEntries()
 		{
-			return $this->hasMany('App\Models\RaffleEntry','raffle_id');
+			return $this->hasMany('App\Models\RaffleEntry','raffles_id');
 		}
 
 		public function getEndDateAttribute($value)

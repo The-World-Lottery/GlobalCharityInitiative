@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class RaffleEntry extends Model
 {
-	protected $fillable = ['user_id', 'lottery_id'];
+	protected $fillable = ['user_id', 'raffles_id'];
 
     public function user()
     {
