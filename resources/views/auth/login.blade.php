@@ -26,10 +26,12 @@
 
             <div class="form-group">
                 <label>Email</label>
+                {!! $errors->first('email', '<span class="help-block">:message</span>')!!}
                 <input class="form-control" type="email" name="email" value="{{ old('email') }}">
             </div>
             <div class="form-group">
                 <label>Password</label>
+                {!! $errors->first('password', '<span class="help-block">:message</span>')!!}
                 <input class="form-control" type="password" name="password" id="password">
             </div>
             <div class="form-group">
