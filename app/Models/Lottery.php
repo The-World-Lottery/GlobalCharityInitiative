@@ -42,7 +42,7 @@ class Lottery extends Model
        //  $message->subject('Please return to the site and Login to claim you prize!');
        //  $message->from('no-reply@TheWorldLottery.com', 'TheWorldLottery');
        //  $message->to($ween->email);
-    });
+    // });
    		//alert admins
    		
    	}
