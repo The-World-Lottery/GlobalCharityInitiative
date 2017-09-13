@@ -8,10 +8,13 @@
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	{{-- <link rel="stylesheet" type="text/css" href="/bootstrap.min.css"> --}}
 	<link rel="stylesheet" type="text/css" href="/main.css">
+	{{-- <link rel="stylesheet" href="/theWorldLottery.css"> --}}
+	<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
 </head>
 <body>
-
-
+	{{-- <div style="z-index:10;position:fixed;">
+	@include('layouts.partials._splash')
+	</div> --}}
 	<div class="container">
 		@include('layouts.partials._header')
 		<div class="row" id="main">
@@ -54,6 +57,7 @@
 	  src="https://code.jquery.com/jquery-3.2.1.js"
 	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
 	  crossorigin="anonymous"></script>
+	  {{-- <script type="text/javascript" src="theWorldLottery.js"></script> --}}
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
 	<script src="https://static.filestackapi.com/v3/filestack.js"></script>

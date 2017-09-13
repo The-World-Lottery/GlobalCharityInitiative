@@ -38,6 +38,9 @@
 		min-height:28vh;
 		border-radius:0 0 1.5em 1.5em;
 	}
+.splashPar {
+	font-size:1em;
+}
 
 .col-sm-4 {
 	padding-right:0;
