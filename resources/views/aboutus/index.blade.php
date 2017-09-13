@@ -48,8 +48,8 @@
 			    </ul>
 			</div>
 			<div id="menu1" class="tab-pane fade">
-				<h3>Menu 1</h3>
-				<p>Some content in menu 1.</p>
+				<h3>Our Sources and Technologies</h3>
+				<p></p>
 			</div>
 			<div id="menu2" class="tab-pane fade">
 				<div class="row" id="theCreatorsContainer">

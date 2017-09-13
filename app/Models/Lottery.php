@@ -24,7 +24,8 @@ class Lottery extends Model
    	}
 
 
-   	public static function lotteryWin($id){
+   	public static function lotteryWin($id)
+    {
    		//change status to complete,
    		Lottery::where('id', $id)->update(['complete' => true]);
    		//pick a weener
@@ -42,12 +43,12 @@ class Lottery extends Model
        //  $message->subject('Please return to the site and Login to claim you prize!');
        //  $message->from('no-reply@TheWorldLottery.com', 'TheWorldLottery');
        //  $message->to($ween->email);
-    // });
+      // });
    		//alert admins
    		
    	}
 
-        public function getEndDateAttribute($value)
+    public function getEndDateAttribute($value)
     {
         $utc = \Carbon\Carbon::createFromFormat($this->getDateFormat(), $value);
 
