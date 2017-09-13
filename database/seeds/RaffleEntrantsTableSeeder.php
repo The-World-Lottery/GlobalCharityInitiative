@@ -16,7 +16,7 @@ class RaffleEntrantsTableSeeder extends Seeder
         for($i = 0;$i <= 50;$i++) {
 
        	$raffleEntry = new \App\Models\RaffleEntry();
-        $raffleEntry->raffles_id = rand(1,25);;
+        $raffleEntry->raffles_id = rand(1,20);;
         $raffleEntry->user_id = rand(1,10);;
         $raffleEntry->save();
     	}
