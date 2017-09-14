@@ -140,7 +140,43 @@ $(document).ready(function(){
 
 	setInterval(function(){
 		coinPriceConversion();
-	},30000)
+	},30000);
+
+
+	//random quote
+	function randomQuote() {
+      $.ajax({
+          url: "https://api.forismatic.com/api/1.0/?",
+          dataType: "jsonp",
+          data: "method=getQuote&format=jsonp&lang=en&jsonp=?",
+          success: function( response ) {
+            $("#random_quote").html("<p id='random_quote' class='lead text-center'>" +
+              response.quoteText + "<br/>&dash; " + response.quoteAuthor + " &dash;</p>");
+          }
+      });
+    }
+
+    $(function() {
+      randomQuote();
+    });
+
+    //setting interval of ajax quote call
+
+    var t = 0;
+    setInterval(function(){
+        if (t % 15 == 14){
+            $('.quote').fadeOut();
+            randomQuote();
+            setTimeout(function(){
+                $('.quote').fadeIn();
+            },700);
+        };  
+        t++;
+    },1000);
+
+    // $('#splashButton').click(function(){
+    // 	$('#splashCont').fadeOut(1000);
+    // });
 
 
 

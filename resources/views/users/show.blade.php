@@ -42,18 +42,18 @@
 		<div style="float: left; postion: absolute;">{{$user->name}}'s tickets:
 
 			<ul> World Lottery
-				@foreach($user->worldLotteryEntries as $worldLotteryEntry)
+				@foreach($user->worldLotteryEntries->unique('title') as $worldLotteryEntry)
 				{{-- {{dd($worldLotteryEntry)}} --}}
 				<a href="{{action('TheWorldLotterysController@index')}}"><li>{{$worldLotteryEntry->theworldlottery->title}}</li></a>
 				@endforeach
 			</ul>
 			<ul> Raffles
-				@foreach($user->raffleEntries as $raffleEntry)
+				@foreach($user->raffleEntries->unique('raffles_id') as $raffleEntry)
 				<a href="{{action('RafflesController@show', $raffleEntry->raffle->id)}}"><li>{{$raffleEntry->raffle->title}}</li></a>
 				@endforeach
 			</ul>
 			<ul> Lotteries
-				@foreach($user->lotteryEntries as $lotteryEntry)
+				@foreach($user->lotteryEntries->unique('lottery_id') as $lotteryEntry)
 				{{-- {{dd($lotteryEntry)}} --}}
 				<a href="{{action('LotteriesController@show', $lotteryEntry->lottery->id)}}"><li>{{$lotteryEntry->lottery->title}}</li></a>
 				@endforeach
