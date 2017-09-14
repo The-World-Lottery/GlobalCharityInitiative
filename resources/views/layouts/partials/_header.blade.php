@@ -44,6 +44,7 @@
     	<li><a class="navLink btn-custom" id="white" href="{{action('UsersController@show' , Auth::id())}}">Profile</a></li>
 		@else
     	<li><a class="navLink btn-custom" id="white" href="{{action('Auth\AuthController@getLogin')}}">Login/Register</a></li>
+		@endif
       </ul>
 
     </div><!-- /.navbar-collapse -->
@@ -75,4 +76,3 @@
 	
 	</div>
 </div> --}}
-@endif
