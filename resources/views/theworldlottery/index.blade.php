@@ -8,22 +8,22 @@
 
 @section('divHead')
 
-<span>The World Lottery </span>
+<h3>The World Lottery </h3>
 
 @stop
 
 @section('content')
-	<p class="suggBox" style="text-align:center;">The World Lottery drawing happens every two weeks. Winning numbers selected with a random number generator. The Jackpot value is fed by ticket purchases to any Lottery, Raffle or currently running World Lottery.</p>
+	<p class="suggBox" style="padding:0 5em 0 5em ;text-align:center;">The World Lottery drawing happens every two weeks. Winning numbers selected with a random number generator. The Jackpot value is fed by ticket purchases to any Lottery, Raffle or currently running World Lottery.</p>
 
-	<main class="container" style="max-width:100%;float:left;display:flex;justify-content: center;">
+	<main class="container" style="text-align:center;max-width:100%;float:left;display:flex;justify-content: center;">
 		<div>
-			<div><h1>Drawing takes place in: <span class="worldLottoClock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
-				</div> </h1>
+			<div><h2 style="color:#00ffc4;">Drawing takes place in: <span class="worldLottoClock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
+				</div> </h2>
 			
-			<div><strong>Starting Pot: </strong> {{$theWorldLottery->init_value}}</div>
-			<div><strong>Current Pot: </strong> {{$theWorldLottery->current_value}}</div>
-			<div><strong>Lotto Ends On: </strong> {{$theWorldLottery->end_date}}</div>
-			<div><strong>Charity To: </strong> {{$theWorldLottery->content}}</div>
+			<h4><strong>Starting Pot : $</strong> {{number_format($theWorldLottery->init_value,2,".",",")}}</h4>
+			<h4><strong>Current Pot: $</strong> {{number_format($theWorldLottery->current_value,2,".",",")}}</h4>
+			<h4><strong>Lotto Ends On: </strong> {{$theWorldLottery->end_date}}</h4>
+			
 
 
 

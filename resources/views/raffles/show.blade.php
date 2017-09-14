@@ -14,15 +14,15 @@
 
 @section('content')
 
-	<main class="container" style="max-width:100%;float:left;display:flex;justify-content: center;">
-		<div style="padding-top: 2em;">
+	<main class="container" style="text-align:center;max-width:100%;float:left;display:flex;justify-content: center;">
+		<div style="padding-top: 0;">
+		<h2>{{$raffle['title']}}</h2>
 			<div class="countdown"><h1>
 				The Drawing ends in : 
 				<span class="raffleClock" data-clock-id="{{$raffle->end_date}}"></span>
 				</h1>
 			</div>
-		<div id="showProfImg"><img src={!! $raffle->img !!}></div>
-		<h2>{{$raffle['title']}}</h2>
+		<div id="showProfImg" style="display:flex;justify-content:center;width:100%;"><img style="width:18em;" src={!! $raffle->img !!}></div>
 		<h3>{{$raffle['content']}}</h3>
 		<p>By: {{$raffle->user->name}}</p>
 		<p>Possted On: {{$raffle->created_at}}</p>
