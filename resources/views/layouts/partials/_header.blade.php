@@ -24,7 +24,7 @@
 	</div>
 </div>
 <nav class="navbar navbar-default btn-custom" id="mainNav">
-  <div class="container-fluid">
+  <div class="container-fluid borderOpac">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -34,16 +34,16 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-		<li><a class="navLink btn-custom" href="{{action('TheWorldLotterysController@index')}}">The World Lottery</a></li>
-		<li><a class="navLink btn-custom" href="{{action('LotteriesController@index')}}">Lottos</a></li>
-		<li><a class="navLink btn-custom" href="{{action('RafflesController@index')}}">Raffles</a></li>
-		<li><a class="navLink btn-custom" href="{{action('CurrencyConversionController@index')}}">Currency Conversions</a></li>
-		<li><a class="navLink btn-custom" href="{{action('SuggestionsController@index')}}">Suggestion Box</a></li>
-		<li><a class="navLink btn-custom" href="{{action('AboutUsController@index')}}">About Us</a></li>
+		<li><a class="navLink btn-custom" id="white" href="{{action('TheWorldLotterysController@index')}}">The World Lottery</a></li>
+		<li><a class="navLink btn-custom" id="white" href="{{action('LotteriesController@index')}}">Lottos</a></li>
+		<li><a class="navLink btn-custom" id="white" href="{{action('RafflesController@index')}}">Raffles</a></li>
+		<li><a class="navLink btn-custom" id="white" href="{{action('CurrencyConversionController@index')}}">Currency Conversions</a></li>
+		<li><a class="navLink btn-custom" id="white" href="{{action('SuggestionsController@index')}}">Suggestion Box</a></li>
+		<li><a class="navLink btn-custom" id="white" href="{{action('AboutUsController@index')}}">About Us</a></li>
 		@if (Auth::check())
-    	<li><a class="navLink btn-custom" href="{{action('UsersController@show' , Auth::id())}}">Profile</a></li>
+    	<li><a class="navLink btn-custom" id="white" href="{{action('UsersController@show' , Auth::id())}}">Profile</a></li>
 		@else
-    	<li><a class="navLink btn-custom" href="{{action('Auth\AuthController@getLogin')}}">Login/Register</a></li>
+    	<li><a class="navLink btn-custom" id="white" href="{{action('Auth\AuthController@getLogin')}}">Login/Register</a></li>
       </ul>
 
     </div><!-- /.navbar-collapse -->
