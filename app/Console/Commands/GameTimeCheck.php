@@ -53,9 +53,9 @@ class GameTimeCheck extends Command
                 \App\Models\Lottery::lotteryWin($lotto->id);
             }
         }
-            // if(isset($worldLotto->id)){
-            //     \App\Models\TheWorldLottery::TheWorldlotteryWin($worldLotto->id);
-            // }
+            if(isset($worldLotto->id)){
+                \App\Models\TheWorldLottery::TheWorldlotteryWin($worldLotto->id);
+            }
         }
         
     }

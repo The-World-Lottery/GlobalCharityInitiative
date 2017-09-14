@@ -14,7 +14,7 @@ class TheWorldLottery extends Model
    	}
 
    	public static function TheWorldLotteryFunction($time){
-   		//not completed
+   		//Find expired World lottos
    		return TheWorldLottery::where('end_date', '<', $time)->where('complete',0)->get();
    	}
 
@@ -37,10 +37,16 @@ class TheWorldLottery extends Model
    			else{
    				\App\Models\UserWallet::where('user_id',$winners->id)->update(['usd' => $biglot]);
    			}
-   			
+   			$theWorldLottery = new \App\Models\TheWorldLottery();
+        	$theWorldLottery->title = 'TheWorldLottery';
+        	$theWorldLottery->init_value = $nextWorldCut;
+        	$theWorldLottery->current_value = $nextWorldCut;
+        	$theWorldLottery->end_date = date("Y-m_d", time()+ 1209600);
+        	$theWorldLottery->user_id = 1;
+        	$theWorldLottery->save();
    		}
    		else{
-
+   			TheWorldLottery::where('id', $id)->update(['complete' => 0, 'end_date' => date("Y-m_d", time()+ 1209600)]);
    		}
    		
 	   	//TheWorldLottery::where('id', $id)->update(['winner_id' => $ween->id]);
