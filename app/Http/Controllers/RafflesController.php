@@ -139,9 +139,9 @@ class RafflesController extends Controller
         $end_date = $request->input('end-date');
         $product = $request->input('product');
         $image = $request->input('image');
-        $date = \DateTime::createFromFormat('n/j/Y', $end_date);
-        $end_date = $date->format('Y-m-d H:i:00');
+        $end_date = str_replace("T","",$end_date);
         $raffle = new Raffle();
+        $raffle->winner_id = 1;
         $raffle->title = $title;
         $raffle->content = $content;
         $raffle->product = $product;
