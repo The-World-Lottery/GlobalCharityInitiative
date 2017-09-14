@@ -14,7 +14,7 @@
 @stop
 
 @section('content')
-
+	
 	<main class="container" style="max-width:100%;float:left;">
 		{!! $raffles->appends(Request::except('page'))->render() !!} 
 	<div style="padding-top: 2em;">

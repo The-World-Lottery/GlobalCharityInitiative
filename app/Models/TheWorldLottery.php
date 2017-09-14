@@ -20,36 +20,36 @@ class TheWorldLottery extends Model
 
    	public static function TheWorldLotteryWin($id){
    		//change status to complete,
-   		TheWorldLottery::where('id', $id)->update(['complete' => 1]);
-   		//find a weener(s)
-   		$winners = \App\Models\TheWorldLotteryEntry::findWinners();
-   		if($winners){
-   			$biglot = TheWorldLottery::select('current_value')->where('id',$id)->get();
+   		TheWorldLottery::where('id', $id)->update(['complete' => true]);
+   		
+   		// find a weener(s)
+   		$winners = \App\Models\TheWorldLotteryEntry::findWinners($id);
+   		var_dump($winners);
+   		if(isset($winners)){
+   			$biglot = TheWorldLottery::where('id',$id)->value('current_value');
    			$nextWorldCut = $biglot * .2; 
    			$biglot -= $nextWorldCut;
-   			if(is_array($winners)){
-   				$numbOfWinners = count($winners);
-   				$cut = $biglot / $numbOfWinners;
-   				foreach ($winners as $winner) {
-   					\App\Models\UserWallet::where('user_id',$winner->id)->update(['usd' => $cut]);
-   				}
+   			$numbOfWinners = count($winners);
+   			$cut = $biglot / $numbOfWinners;
+   			foreach ($winners as $winner) {
+   				$userAmount = \App\Models\UserWallet::where('user_id',$winner)->value('usd');
+   				$userTotal = $cut + $userAmount; 
+   				\App\Models\UserWallet::where('user_id',$winner)->update(['usd' => $userTotal]);
    			}
-   			else{
-   				\App\Models\UserWallet::where('user_id',$winners->id)->update(['usd' => $biglot]);
-   			}
+
    			$theWorldLottery = new \App\Models\TheWorldLottery();
         	$theWorldLottery->title = 'TheWorldLottery';
         	$theWorldLottery->init_value = $nextWorldCut;
         	$theWorldLottery->current_value = $nextWorldCut;
         	$theWorldLottery->end_date = date("Y-m_d", time()+ 1209600);
         	$theWorldLottery->user_id = 1;
+        	$theWorldLottery->winner_id = 1;
         	$theWorldLottery->save();
+	   		TheWorldLottery::where('id', $id)->update(['winner_id' => $winner[0]]);
    		}
    		else{
    			TheWorldLottery::where('id', $id)->update(['complete' => 0, 'end_date' => date("Y-m_d", time()+ 1209600)]);
    		}
-   		
-	   	//TheWorldLottery::where('id', $id)->update(['winner_id' => $ween->id]);
 
    		  // \Mail::raw("Congrats! You've won the World Lottery!", function($message){
        //  $message->subject('Please return to the site and Login to claim you prize!');

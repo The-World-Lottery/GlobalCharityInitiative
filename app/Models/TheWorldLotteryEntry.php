@@ -23,7 +23,7 @@ class TheWorldLotteryEntry extends Model
       	for($i = 0;$i < 6; $i++){
       		$numb[] = rand(0,100);
   		}
-  		$peeps = TheWorldLotteryEntry::all();
+  		$peeps = TheWorldLotteryEntry::where('the_world_lottery_id' , $id)->get();
   		foreach ($peeps as $peep) {
   			$x = 0;
   			if($peep->first_num == $numb[0]){
@@ -45,14 +45,14 @@ class TheWorldLotteryEntry extends Model
   				$x++; 
   			}
   			if($x === 6){
-  				$winners[] = $peep;
+  				$winners[] = $peep->user_id;
   			}
   		}
   		if(isset($winners)){
      		return $winners;
      	}
      	else{
-     		return false;
+     		return null;
      	}
    }
 }
