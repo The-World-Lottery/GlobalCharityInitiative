@@ -37,7 +37,7 @@ class RafflesTableSeeder extends Seeder
         $raffle1->content = 'Hilarity for Charity';
         $raffle1->product ='Samuel L. Jackson has put aside a day to the winner shadow him on the set of Avengers 4';
         $raffle1->end_date = date("Y-m-") . $j ." 12:00:00";
-        $raffle1->img = "images/samuel.jpg";
+        $raffle1->img = "/images/samuel.jpg";
         $raffle1->user_id = 1;
         $raffle1->save();
 
@@ -46,7 +46,7 @@ class RafflesTableSeeder extends Seeder
         $raffle2->content = 'The World Lottery Foundation';
         $raffle2->product ='Chevrolet has donated one of their new 2018 Stingrays for us to raffle off.';
         $raffle2->end_date = date("Y-m-") . ($j + 1) ." 12:00:00";
-        $raffle2->img = "images/corvette.jpg";
+        $raffle2->img = "/images/corvette.png";
         $raffle2->user_id = 1;
         $raffle2->save();
 
@@ -55,7 +55,7 @@ class RafflesTableSeeder extends Seeder
         $raffle3->content = 'The World Lottery Foundation';
         $raffle3->product ='Emma Watson has put aside a day to the winner shadow him on the set of Harry Potter 12';
         $raffle3->end_date = date("Y-m-") . ($j + 2) ." 12:00:00";
-        $raffle3->img = "images/emma.jpg";
+        $raffle3->img = "/images/emma.jpg";
         $raffle3->user_id = 1;
         $raffle3->save();
 
@@ -64,7 +64,7 @@ class RafflesTableSeeder extends Seeder
         $raffle4->content = 'American Cancer Society';
         $raffle4->product ='Disney Land has donated an all-expense-paid visit to their amazing park!';
         $raffle4->end_date = date("Y-m-") . ($j + 4) ." 12:00:00";
-        $raffle4->img = "images/disney.jpg";
+        $raffle4->img = "/images/disney.png";
         $raffle4->user_id = 1;
         $raffle4->save();
 
@@ -73,7 +73,7 @@ class RafflesTableSeeder extends Seeder
         $raffle5->content = 'The World Lottery Foundation';
         $raffle5->product ='D&B has donated a one-of-a-kind limitless gamecard';
         $raffle5->end_date = date("Y-m-") . ($j + 5) ." 12:00:00";
-        $raffle5->img = "images/dandb.jpg";
+        $raffle5->img = "/images/dandb.png";
         $raffle5->user_id = 1;
         $raffle5->save();
 
@@ -82,7 +82,7 @@ class RafflesTableSeeder extends Seeder
         $raffle6->content = 'Tesla Foundation';
         $raffle6->product ='Tesla had donated their newest sportscar model';
         $raffle6->end_date = date("Y-m-") . ($j + 6) ." 12:00:00";
-        $raffle6->img = "images/tesla.jpg";
+        $raffle6->img = "/images/tesla.png";
         $raffle6->user_id = 1;
         $raffle6->save();
 
@@ -91,7 +91,7 @@ class RafflesTableSeeder extends Seeder
         $raffle7->content = 'Tesla Foundation';
         $raffle7->product ='Tesla had donated their newest sportscar model';
         $raffle7->end_date = date("Y-m-") . ($j + 6) ." 12:00:00";
-        $raffle7->img = "images/tesla.jpg";
+        $raffle7->img = "/images/tesla.png";
         $raffle7->user_id = 1;
         $raffle7->save();
 

@@ -18,24 +18,28 @@
 	<main class="container" style="max-width:100%;float:left;">
 		{!! $raffles->appends(Request::except('page'))->render() !!} 
 	<div style="padding-top: 2em;">
+            
 
 		@if (session()->has('successMessage'))
             <div class="alert alert-success">{{ session('successMessage') }}</div>
         @endif
 
 		@foreach($raffles as $raffle)
-		<div style="text-align:center;max-width:31.3%;float:left;border:1px solid black;border-radius:1em;height:25vh;padding:0em 1em 1em 1em ;margin:1%;overflow:hidden;">
-			<a href="{{ action('RafflesController@show', $raffle->id) }}"><h4>{{$raffle->title}}</h4></a>
-			<p>{{$raffle->product}}</p>
-			<p>Drawing Happens : <span style="color:red">{{$raffle->end_date->diffForHumans()}}</span></p>
-			{{-- get cody to help this work for each raffle --}}
-			{{-- <span class="raffleClock" data-clock-id="{{$raffle->end_date}}"></span> --}}
-			<p>Created By : {{$raffle->user->name}}</p>
+		<div style='position:relative;color:white;background-position:center;background-size:110% 110%;background-image:url("{{$raffle->img}}");text-align:center;max-width:31.3%;float:left;border:1px solid black;border-radius:1em;height:25vh;padding:0em 1em 1em 1em ;margin:1%;overflow:hidden;'>
+			<a style="color:white" href="{{ action('RafflesController@show', $raffle->id) }}"><h4 style="padding:8px;border-top:1px solid white;background-color:rgba(0,0,0,.3);">{{$raffle->title}}</h4></a>
+		<div class="raffleContent">
+			<p style="margin-top:15%;">{{$raffle->product}}</p>
+			{{-- <p>Created By : {{$raffle->user->name}}</p> --}}
+		</div>
+			<p style="padding:4px;width:87%;position:absolute;bottom:0;border-bottom:1px solid white;background-color:rgba(0,0,0,.3);">Drawing Happens : <span style="color:red">{{$raffle->end_date->diffForHumans()}}</span></p>
 		</div>
 			
+
 		@endforeach
 		<br>
 
+			{{-- get cody to help this work for each raffle --}}
+			{{-- <span class="raffleClock" data-clock-id="{{$raffle->end_date}}"></span> --}}
 	
 		</div>
 	</main>
