@@ -1,9 +1,39 @@
+body {
+	color:white;
+	background-color:rgba(0,0,0,0);
+	
+}
 
+::-webkit-input-placeholder {
+    color:white;
+    text-align:center;
+}
+
+.countdown {
+	color:#00ffc4;
+}
+
+html {
+	background-image:url("images/earthAtNight.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	color:white;
+	margin:0;
+	padding:0;
+	position: relative;
+	padding-bottom: 6rem;
+	min-height: 100%;
+}
+
+a {
+	color:lightblue;
+}
 
 .borderOpac {
 	/*all main area borders*/
-	border:1px solid black;
-	background-color:rgba(255,255,255,.4);
+	border:1px solid white;
+	background-color:rgba(255,255,255,.2);
 	border-radius: 1.5em;
 	margin-bottom: 1vh;
 	margin-top: 1vh;
@@ -66,7 +96,7 @@
 }
 
 .areaHeaders {
-	border-bottom:1px solid black;
+	border-bottom:1px solid white;
 	padding-top: .5em;
 	padding-bottom: .5em;
 	text-align: center;
@@ -88,7 +118,7 @@ ul.pagination {
 }
 
 .aboutUs {
-	border:1px solid black;
+	border:1px solid white;
 	border-top:0;
 	padding:1em;
 }
@@ -108,7 +138,7 @@ ul.pagination {
 
 .headUN {
 	float:right;
-	margin-top: 4.2%;
+	margin-top: 3em;
 	margin-bottom: 1%;
 	margin-left: 1em;
 }
@@ -120,7 +150,7 @@ img {
 
 #showProfImg {
 	max-height: 15em;
-	max-width:15em;
+	width:100%;
 }
 
 #headLogo {
@@ -141,6 +171,11 @@ label {
 	vertical-align: -18px;
 	
 
+}
+
+select {
+	background-color:rgba(0,0,0,0);
+	margin-bottom:2em;
 }
 
 .creatorsSocialIcons {

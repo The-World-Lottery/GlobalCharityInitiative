@@ -1,17 +1,13 @@
 <div class="row" id="header">
 	<div class="col col-xs-12 borderOpac" id="head">
 		<div class="row">
-			<div class="col-sm-6">
-				<h2 id="headLogo">The World Lottery Logo Here</h2>
+			<div class="col-sm-8">
+				<h2 id="headLogo"><img style="height:2em;width:2em;background-color:rgba(0,0,0,0);" src="/images/earth.png"> The World Lottery For Charity</h2>
 				<h4 style="color:lightgreen">Current Estimated World Lottery Jackpot is (USD) $
 				{{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}
 				</h4>
-				<div class="countdown">
-  					Next World Lotto Drawing in:
-  					<span id="clock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
-				</div>
 			</div>
-			<div class="col-sm-6">
+			<div class="col-sm-4">
 				@if (Auth::check())
 					<span class="headUN">{{Auth::user()->name}}</span>
 					<div class="img-circle">
@@ -19,7 +15,9 @@
 					</div>
 				@else
 					<span class="headUN">Not Logged In</span>
+					
 				@endif
+				
 			</div>
 			
 		</div>

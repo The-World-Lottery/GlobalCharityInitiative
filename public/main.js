@@ -1,4 +1,13 @@
+	
 $(document).ready(function(){
+    // scrolling background
+	$(function(){
+	    var x = 0;
+	    setInterval(function(){
+	        x-=1;
+	        $('html').css('background-position', x + 'px 0');
+	    }, 100);
+	});
 
 	//filestack js for click on register
 	var client = filestack.init('A5gY0fZEnTzWuvzsVI5Ttz');
@@ -174,9 +183,7 @@ $(document).ready(function(){
         t++;
     },1000);
 
-    // $('#splashButton').click(function(){
-    // 	$('#splashCont').fadeOut(1000);
-    // });
+		
 
 
 
