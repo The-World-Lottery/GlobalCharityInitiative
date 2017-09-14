@@ -9,12 +9,12 @@
 			</div>
 			<div class="col-sm-4">
 				@if (Auth::check())
-					<span class="headUN">{{Auth::user()->name}}</span>
+					<span style="padding-right:1em" class="headUN">{{Auth::user()->name}}</span>
 					<div class="img-circle">
 						<img src='{{substr(Auth::user()->image,1,-1)}}' id="profImg">
 					</div>
 				@else
-					<span class="headUN">Not Logged In</span>
+					<span style="padding-right:1em" class="headUN">Not Logged In</span>
 					
 				@endif
 				
@@ -33,7 +33,7 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+      <ul style="display:flex;justify-content: space-around;" class="nav navbar-nav">
 		<li><a class="navLink btn-custom" id="white" href="{{action('TheWorldLotterysController@index')}}">The World Lottery</a></li>
 		<li><a class="navLink btn-custom" id="white" href="{{action('LotteriesController@index')}}">Lottos</a></li>
 		<li><a class="navLink btn-custom" id="white" href="{{action('RafflesController@index')}}">Raffles</a></li>
@@ -44,7 +44,7 @@
     	<li><a class="navLink btn-custom" id="white" href="{{action('UsersController@show' , Auth::id())}}">Profile</a></li>
 		@else
     	<li><a class="navLink btn-custom" id="white" href="{{action('Auth\AuthController@getLogin')}}">Login/Register</a></li>
-		@endif
+@endif
       </ul>
 
     </div><!-- /.navbar-collapse -->
