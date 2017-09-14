@@ -19,7 +19,7 @@ class LotteryEntry extends Model
    }
 
    public static function pickWinner($id){
-    $user_id = LotteryEntry::select('user_id')->where('id', $id)->get();
+    $user_id = LotteryEntry::select('user_id')->where('lottery_id', $id)->get();
     $arr = (array)$user_id;
     if (!empty($arr)) {
     $weener = rand(0,count($user_id)-1);

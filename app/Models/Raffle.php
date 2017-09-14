@@ -16,7 +16,7 @@ class Raffle extends Model
 
    	public static function raffleWin($id){
    		//change status to complete,
-   		Raffle::where('id', $id)->update(['complete' => 1]);
+   		Raffle::where('id', $id)->update(['complete' => true]);
    		//pick a weener
    		$ween = \App\Models\RaffleEntry::pickWinner($id);
 

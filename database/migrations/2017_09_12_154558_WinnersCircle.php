@@ -34,12 +34,15 @@ class WinnersCircle extends Migration
     public function down()
     {
         Schema::table('raffles', function (Blueprint $table) {
+            $table->dropForeign(['winner_id']);
             $table->dropColumn('winner_id');
         });
         Schema::table('lotteries', function (Blueprint $table) {
+            $table->dropForeign(['winner_id']);
             $table->dropColumn('winner_id');
         });
         Schema::table('the_world_lotteries', function (Blueprint $table) {
+            $table->dropForeign(['winner_id']);
             $table->dropColumn('winner_id');
         });
     }
