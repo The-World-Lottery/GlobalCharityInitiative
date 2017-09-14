@@ -33,9 +33,8 @@
 		{{-- <a href="{{ action('RafflesController@addUserToEntries', $raffle->id) }}"><button class="btn btn-primary">BUY TICKET!!!</button></a> --}}
 
 		<form action="{{ action('RafflesController@addUserToEntries', $raffle->id) }}">
-			{{-- <a href="{{ action('LotteriesController@addUserToEntries', $lottery->id) }}"> --}}
-			<button type="submit" class="btn btn-primary">BUY TICKET!!!</button>
-			<h5>What currency would you like to purchase a ticket with?</h5>
+			
+			<h5 style="color:yellow;">What currency would you like to purchase a ticket with?</h5>
 			<select name="currency">
 				<option value="usd">Dollars</option>
 				<option value="eur">Euros</option>
@@ -58,8 +57,9 @@
 			<input hidden id="usdETH" name="ethConv">
 			<input hidden id="usdDoge" name="dogeConv">
 			<input hidden id="usdBCH" name="bchConv">
-			<input hidden id="usdXRP" name="xrpConv">
-			{{-- </a> --}}
+			<input hidden id="usdXRP" name="xrpConv"><br>
+			<button type="submit" class="btn btn-primary">BUY TICKET!!!</button>
+		
 		</form>
 
 		@if (Auth::check() && Auth::user()->is_admin)

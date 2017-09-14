@@ -33,7 +33,7 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul style="display:flex;justify-content: space-around;" class="nav navbar-nav">
+      <ul style="display:flex;justify-content:space-around;" class="nav navbar-nav">
 		<li><a class="navLink btn-custom" id="white" href="{{action('TheWorldLotterysController@index')}}">The World Lottery</a></li>
 		<li><a class="navLink btn-custom" id="white" href="{{action('LotteriesController@index')}}">Lottos</a></li>
 		<li><a class="navLink btn-custom" id="white" href="{{action('RafflesController@index')}}">Raffles</a></li>

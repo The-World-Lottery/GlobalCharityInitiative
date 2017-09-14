@@ -13,7 +13,6 @@
 @stop
 
 @section('content')
-	<span style="float:right;padding-right:1em;">{!! $lotteries->appends(Request::except('page'))->render() !!}</span>
 	<main class="container" style="max-width:100%;float:left;">
 		<div>
 			@if (session()->has('successMessage'))
@@ -38,6 +37,7 @@
 					{{-- <p>Initial Value : {{$lottery->init_value}}</p> --}}
 				@endforeach
 			</div>
+		<span style="float:right;padding-right:1em;">{!! $lotteries->appends(Request::except('page'))->render() !!}</span>
 		<br>
 		</div>
 	</main>

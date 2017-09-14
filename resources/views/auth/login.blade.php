@@ -23,22 +23,23 @@
 
         <form method="POST" action="/auth/login">
             {!! csrf_field() !!}
-
-            <div class="form-group">
-                <label>Email</label>
-                {!! $errors->first('email', '<span class="help-block">:message</span>')!!}
-                <input class="form-control" type="email" name="email" value="{{ old('email') }}">
-            </div>
-            <div class="form-group">
-                <label>Password</label>
-                {!! $errors->first('password', '<span class="help-block">:message</span>')!!}
-                <input class="form-control" type="password" name="password" id="password">
+            <div style="margin-top:5em;" class="row">
+                <div class="form-group col col-sm-6 col-xs-12">
+                    <label>Email</label>
+                    {!! $errors->first('email', '<span class="help-block">:message</span>')!!}
+                    <input class="form-control" type="email" name="email" value="{{ old('email') }}">
+                </div>
+                <div class="form-group col col-sm-6 col-xs-12">
+                    <label>Password</label>
+                    {!! $errors->first('password', '<span class="help-block">:message</span>')!!}
+                    <input class="form-control" type="password" name="password" id="password">
+                </div>
             </div>
             <div class="form-group">
                 <input type="checkbox" name="remember"> Remember Me
             </div>
             <div class="form-group" style="display:flex;justify-content: center;">
-                <button class="btn btn-success" type="submit">Login</button>
+                <button style="width:5em;height:3em;" class="btn btn-success" type="submit">Login</button>
             </div>
             
         </form>
