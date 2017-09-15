@@ -73,9 +73,8 @@ a {
 	margin-left: 1em;
 }
 #mainNav {
-	border-radius:1.5em;
-	border:1px solid black;
 	margin:0;
+	border:0;
 }
 
  /*content right side*/
@@ -163,6 +162,11 @@ ul.pagination {
 /*.form-group {
 	width:80%;
 }*/
+
+tr {
+	background-color:rgba(0,0,0,0);
+	overflow:hidden;
+}
 
 .headUN {
 	float:right;

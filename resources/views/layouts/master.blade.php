@@ -32,7 +32,7 @@
 					</form>
 					<div style="overflow:scroll;height:43.7vh;">
 					@foreach(\App\Models\UserComment::orderBy('created_at','desc')->limit(60)->get() as $comment)
-					<span style="padding-left: .5em;"><u>{{ \App\User::select('username')->where('id',$comment->user_id )->get()[0]['username']}}-</u></span>
+					<span style="padding-left: .5em;"><u style="color:lightgreen;">{{ \App\User::select('username')->where('id',$comment->user_id )->get()[0]['username']}}-</u></span>
 					<span class="commentSpacing" style="padding-left:.2em;">{{$comment->content}}</span><br>
 					@endforeach
 					</div>

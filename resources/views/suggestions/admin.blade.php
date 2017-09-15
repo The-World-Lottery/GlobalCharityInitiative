@@ -22,7 +22,7 @@ table, th, td {
 
 	<main class="container" style="max-width:100%;float:left;">
 
-		<table class="table table-striped table-condensed" style="width:100%">
+		<table class="table table-condensed" style="width:100%">
 			<tr>
 				<th>Edit</th>
 				<th>Title</th>
