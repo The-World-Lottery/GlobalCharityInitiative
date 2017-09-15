@@ -16,16 +16,15 @@
 
 	<main class="container" style="text-align:center;max-width:100%;float:left;display:flex;justify-content: center;">
 		<div style="padding-top: 2em;">
+			<h1 style="color:lightgreen;"><strong>Current Pot : $</strong> {{number_format($lottery->current_value,2,".",",")}}</h1>
 			<div class="countdown">
-				<h1>
+				<h2>
 				The Drawing ends in : 
 				<span class="lottoClock" data-clock-id="{{$lottery->end_date}}"></span>
-				</h1>
+				</h2>
 			</div>
-			
-			<div><strong>Current Pot: </strong> {{$lottery->current_value}}</div>
-			<div><strong>Lotto Ends On: </strong> {{$lottery->end_date}}</div>
-			<div><strong>Charity To: </strong> {{$lottery->content}}</div>
+		
+			<div><strong>Human Comment:<br> </strong>"{{$lottery->content}}"</div>
 			<form action="{{ action('LotteriesController@addUserToEntries', $lottery->id) }}">
 		
 				<h5 style="color:yellow;">What currency would you like to purchase a ticket with?</h5>
@@ -53,7 +52,6 @@
 				<input hidden id="usdBCH" name="bchConv">
 				<input hidden id="usdXRP" name="xrpConv"><br>
 				<button type="submit" class="btn btn-primary">BUY TICKET!!!</button>
-			{{-- </a> --}}
 			</form>
 
 			

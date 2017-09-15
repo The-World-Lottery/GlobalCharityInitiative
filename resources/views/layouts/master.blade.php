@@ -11,7 +11,7 @@
 	{{-- <link rel="stylesheet" href="/theWorldLottery.css"> --}}
 	<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
 </head>
-<body>
+<body style="font-family: 'Roboto';letter-spacing:1px;">
 	<div class="container">
 		@include('layouts.partials._header')
 		<div class="row" id="main">
@@ -23,16 +23,16 @@
 			</div>
 			<div class="col col-sm-4 col-xs-12 gameAndChatInfo chatInfoContSpacing">
 				<div class="chatInfoMargins borderOpac" id="chat">
-					<div class="areaHeaders">
+					{{-- <div class="areaHeaders">
 						Chat
-					</div>
+					</div> --}}
 					<form action="{{ action('UsersController@comment') }}">
 					{!! csrf_field() !!}
 						<input type="text" autofocus style="padding:.5em;border:0;border-bottom:1px solid white;color:white;width:100%;background-color:rgba(0,0,0,0);" placeholder="Say Something!" name="comment"><button hidden type="submit">Add comment</button>
 					</form>
-					<div style="overflow:scroll;height:43.7vh;">
+					<div style="overflow-y:scroll;height:46vh;">
 					@foreach(\App\Models\UserComment::orderBy('created_at','desc')->limit(60)->get() as $comment)
-					<span style="padding-left: .5em;"><u>{{ \App\User::select('username')->where('id',$comment->user_id )->get()[0]['username']}}-</u></span>
+					<span style="padding-left:.5em;"><u style="color:lightgreen;">{{ \App\User::select('username')->where('id',$comment->user_id )->get()[0]['username']}}-</u></span>
 					<span class="commentSpacing" style="padding-left:.2em;">{{$comment->content}}</span><br>
 					@endforeach
 					</div>
@@ -41,12 +41,12 @@
 					<div class="areaHeaders">Site Info
 					</div>
 					<br>
+					<h3><strong>Jackpot : </strong><span style="color:lightgreen;">${{ number_format(\App\Models\TheWorldLottery::select('current_value')->where('id','1')->get()[0]['current_value'],2,".",",")}} (USD)</span></h3>
 					<h4 class="countdown">
 	  					World Lottery Drawing in:
 	  					<span id="clock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
 					</h4><br>
 					<p><strong>Registered Accounts:</strong> {{ \App\User::count()}}</p>
-					<p><strong>TWL Jackpot : </strong><span style="color:lightgreen;">${{ number_format(\App\Models\TheWorldLottery::select('current_value')->where('id','1')->get()[0]['current_value'],2,".",",")}} (USD)</span></p>
 					<p><strong>Highest Value Lottery : </strong><span style="color:lightgreen;">${{ number_format(\App\Models\Lottery::select('current_value')->orderBy('current_value','desc')->limit(1)->get()[0]['current_value'],2,".",",")}} (USD)</span></p>
 					<p><strong>Raffle finishing next : <br></strong>{{ \App\Models\Raffle::select('product','content')->orderBy('end_date','asc')->limit(1)->get()[0]['product']}}</p>
 					

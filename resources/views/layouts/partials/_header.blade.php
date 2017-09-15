@@ -2,7 +2,7 @@
 	<div class="col col-xs-12 borderOpac" id="head">
 		<div class="row">
 			<div class="col-sm-8">
-				<h2 id="headLogo"><img style="height:2em;width:2em;background-color:rgba(0,0,0,0);" src="/images/earth.png"> The World Lottery For Charity</h2>
+				<h2 id="headLogo" style="font-family: 'Racing Sans One', cursive;color:lightblue;font-size:2em;"><img style="height:2em;width:2em;background-color:rgba(0,0,0,0);" src="/images/earth.png"> The World Lottery For Charity</h2>
 				<h4 style="color:lightgreen">Current Estimated World Lottery Jackpot is (USD) $
 				{{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}
 				</h4>
@@ -44,35 +44,34 @@
     	<li><a class="navLink btn-custom" id="white" href="{{action('UsersController@show' , Auth::id())}}">Profile</a></li>
 		@else
     	<li><a class="navLink btn-custom" id="white" href="{{action('Auth\AuthController@getLogin')}}">Login/Register</a></li>
-@endif
+		@endif
       </ul>
 
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
-{{-- <div class="row" id="links">
-	<div class="col navbar col-xs-12 borderOpac" id="links">
-		<a class="navLink" href="{{action('TheWorldLotterysController@index')}}">The World Lottery</a>
-		<a class="navLink" href="{{action('LotteriesController@index')}}">Lottos</a>
-		<a class="navLink" href="{{action('RafflesController@index')}}">Raffles</a>
-		<a class="navLink" href="{{action('CurrencyConversionController@index')}}">Currency Conversions</a>
-		<a class="navLink" href="{{action('SuggestionsController@index')}}">Suggestion Box</a>
-		<a class="navLink" href="{{action('AboutUsController@index')}}">About Us</a>
-		@if (Auth::check())
-    	<a class="navLink" href="{{action('UsersController@show' , Auth::id())}}">Profile</a>
-		@else
-    	<a class="navLink" href="{{action('Auth\AuthController@getLogin')}}">Login/Register</a>
-		@endif	
-	</div>
-</div> --}}
-{{-- @if(Auth::check() && Auth::user()->is_admin) --}}
-{{-- <div class="row" id="links">
-	<div class="col col-xs-12 borderOpac" id="links">
-		<a class="navLink" href="{{action('LotteriesController@adminIndex')}}">Manage Lotteries</a>
-		<a class="navLink" href="{{action('RafflesController@adminIndex')}}">Manage Raffles</a>
-		<a class="navLink" href="{{action('UsersController@index')}}">Manage Users</a>
-		<a class="navLink" href="{{action('SuggestionsController@adminIndex')}}">Manage Suggestions</a>
-	
-	</div>
-</div> --}}
+
+@if(Auth::check() && Auth::user()->is_admin)
+<nav class="navbar navbar-default btn-custom" id="mainNav">
+  <div class="container-fluid borderOpac">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul style="display:flex;justify-content:space-around;" class="nav navbar-nav">
+		<li><a class="navLink btn-custom" id="white" href="{{action('LotteriesController@adminIndex')}}">Manage Lotteries</a></li>
+		<li><a class="navLink btn-custom" id="white" href="{{action('RafflesController@adminIndex')}}">Manage Raffles</a></li>
+		<li><a class="navLink btn-custom" id="white" href="{{action('UsersController@index')}}">Manage Users</a></li>
+		<li><a class="navLink btn-custom" id="white" href="{{action('SuggestionsController@adminIndex')}}">Manage Suggestions</a></li>
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+@endif
+

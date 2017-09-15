@@ -23,7 +23,7 @@ table, th, td {
 	<span><a class="btn btn-block btn-primary" href="{{action('LotteriesController@create')}}" >Create New Lottery</a></span>
 	<span style="float:right;padding-right:1em;">{!! $lotteries->appends(Request::except('page'))->render() !!}</span>
 
-		<table class="table table-striped table-condensed" style="width:100%">
+		<table class="table table-condensed" style="width:100%">
 			<tr>
 				<th>Edit</th>
 				<th>ID</th>

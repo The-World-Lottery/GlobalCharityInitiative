@@ -17,7 +17,7 @@
 @section('content')
 	
 	<main class="container" style="max-width:100%;float:left;">
-	<div style="padding-top: 2em;">
+	
             
 
 		@if (session()->has('successMessage'))
@@ -41,7 +41,7 @@
 			{{-- get cody to help this work for each raffle --}}
 			{{-- <span class="raffleClock" data-clock-id="{{$raffle->end_date}}"></span> --}}
 	
-		</div>
+
 	</main>
 
 @stop

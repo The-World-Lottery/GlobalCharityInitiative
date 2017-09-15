@@ -16,21 +16,19 @@
 
 	<main class="container" style="text-align:center;max-width:100%;float:left;display:flex;justify-content: center;">
 		<div style="padding-top: 0;">
-		<h2>{{$raffle['title']}}</h2>
-			<div class="countdown"><h1>
+		<h1>{{$raffle['title']}}</h1>
+			<div class="countdown"><h2>
 				The Drawing ends in : 
 				<span class="raffleClock" data-clock-id="{{$raffle->end_date}}"></span>
-				</h1>
+				</h2>
 			</div>
-		<div id="showProfImg" style="display:flex;justify-content:center;width:100%;"><img style="width:18em;" src={!! $raffle->img !!}></div>
+		<div id="showProfImg" style="display:flex;justify-content:center;width:100%;"><img style="width:18em;border-radius:1em;" src={!! $raffle->img !!}></div>
 		<h3>{{$raffle['content']}}</h3>
 		<p>By: {{$raffle->user->name}}</p>
 		<p>Possted On: {{$raffle->created_at}}</p>
 		<p>Product: {{$raffle->product}}</p>
 		<p>Last updated on: {{$raffle->updated_at}}</p>
-		<p>Ends on: {{$raffle->end_date}}
-
-		{{-- <a href="{{ action('RafflesController@addUserToEntries', $raffle->id) }}"><button class="btn btn-primary">BUY TICKET!!!</button></a> --}}
+		<p>Ends on: {{$raffle->end_date}}</p>
 
 		<form action="{{ action('RafflesController@addUserToEntries', $raffle->id) }}">
 			
