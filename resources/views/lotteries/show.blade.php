@@ -23,9 +23,8 @@
 				<span class="lottoClock" data-clock-id="{{$lottery->end_date}}"></span>
 				</h2>
 			</div>
-			
-			<div><strong>Lotto Ends On: </strong> {{$lottery->end_date}}</div>
-			<div><strong>Human Comment:<br> </strong>"{{$lottery->content}}"</div
+		
+			<div><strong>Human Comment:<br> </strong>"{{$lottery->content}}"</div>
 			<form action="{{ action('LotteriesController@addUserToEntries', $lottery->id) }}">
 		
 				<h5 style="color:yellow;">What currency would you like to purchase a ticket with?</h5>

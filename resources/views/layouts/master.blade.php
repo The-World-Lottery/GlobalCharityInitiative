@@ -41,12 +41,12 @@
 					<div class="areaHeaders">Site Info
 					</div>
 					<br>
+					<h3><strong>Jackpot : </strong><span style="color:lightgreen;">${{ number_format(\App\Models\TheWorldLottery::select('current_value')->where('id','1')->get()[0]['current_value'],2,".",",")}} (USD)</span></h3>
 					<h4 class="countdown">
 	  					World Lottery Drawing in:
 	  					<span id="clock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
 					</h4><br>
 					<p><strong>Registered Accounts:</strong> {{ \App\User::count()}}</p>
-					<p><strong>TWL Jackpot : </strong><span style="color:lightgreen;">${{ number_format(\App\Models\TheWorldLottery::select('current_value')->where('id','1')->get()[0]['current_value'],2,".",",")}} (USD)</span></p>
 					<p><strong>Highest Value Lottery : </strong><span style="color:lightgreen;">${{ number_format(\App\Models\Lottery::select('current_value')->orderBy('current_value','desc')->limit(1)->get()[0]['current_value'],2,".",",")}} (USD)</span></p>
 					<p><strong>Raffle finishing next : <br></strong>{{ \App\Models\Raffle::select('product','content')->orderBy('end_date','asc')->limit(1)->get()[0]['product']}}</p>
 					

@@ -62,7 +62,8 @@ class LotteriesController extends Controller
 
 
     public function addUserToEntries(Request $request, $id)
-    {
+    { 
+        var_dump("some shit happened");
 
 
         $currency = $request->input()['currency'];

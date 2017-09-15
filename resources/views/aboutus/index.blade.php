@@ -21,7 +21,7 @@
 		<div class="tab-content">
 		  	<div id="home" class="tab-pane fade in active">
 			    <p style="text-align:center;">Our mission is to eliminate the man power that is usually necessary for fund-raising, for all types of worth-while charities and human interest projects by providing massive monetary donations (from The World Lottery Foundation) directly to the source of the charitable work. We will accomplish this by running a large number of simultaneous lotteries and raffles whose ticket prices will be split thusly.</p>
-			    <p style="text-align:center;">The ticket price for all games is $2 US (or the current equivalency of 2 USD in Euros, Japanese Yen, Pounds, Swiss Franks, Bitcoin, Litecoin, Etherium, Dogecoin or Ripple)</p>
+			    <p style="text-align:center;" >The ticket price for all games is $2 US (or the current equivalency of 2 USD in Euros, Japanese Yen, Pounds, Swiss Franks, Bitcoin, Litecoin, Etherium, Dogecoin or Ripple)</p>
 			    <ul>
 				    <li>Lottery Ticket Price
 				    	<ul>
@@ -52,14 +52,23 @@
 				<div>
 					<h3>Sources</h3>
 					<a target="_blank" href="http://www.theperfecttitle.com/money/money.shtml"><h5>Lottery Quotes</h5></a>
-					
 					<a target="_blank" href="https://www.cryptonator.com/?utm_referrer=http%3a%2f%2ftheworldlottery.dev%2fcurrencyconversion"><h5>Currency Conversion Widgets</h5></a>
-					
 					<a target="_blank" href="https://www.cryptocompare.com/api/#-api-data-price-"><h5>Currency conversion API Call for point of sale transactions</h5></a>
-					
 					<a target="_blank" href="https://www.filestack.com"><h5>Profile and Raffle Image Hosting</h5></a>
-					
 					<a target="_blank" href="http://hilios.github.io/jQuery.countdown/"><h5>Games timer Countdown</h5></a>
+
+					<h3>Technologies</h3>
+					
+						<h5>Laravel framework for PHP</h5>
+						<h5>Cron Jobs for game timeouts</h5>
+						<h5>Jquery h5brary for Javascript</h5>
+						<h5>Bootstrap and custom styh5ngs for mobile responsiveness</h5>
+						<h5>Role based authentication</h5>
+						<h5>MVC (Model View Controller)</h5>
+						<h5>Events/task sched</h5>
+						<h5>14db tables and db stuff</h5>
+						<h5>120+ Merges, 300+ commits - Github Version control</h5>
+
 					
 				</div>
 			</div>
