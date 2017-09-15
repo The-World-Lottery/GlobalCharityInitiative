@@ -2,7 +2,7 @@
 	<div class="col col-xs-12 borderOpac" id="head">
 		<div class="row">
 			<div class="col-sm-8">
-				<h2 id="headLogo"><img style="height:2em;width:2em;background-color:rgba(0,0,0,0);" src="/images/earth.png"> The World Lottery For Charity</h2>
+				<h2 id="headLogo" style="font-family: 'Racing Sans One', cursive;color:lightblue;font-size:2em;"><img style="height:2em;width:2em;background-color:rgba(0,0,0,0);" src="/images/earth.png"> The World Lottery For Charity</h2>
 				<h4 style="color:lightgreen">Current Estimated World Lottery Jackpot is (USD) $
 				{{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}
 				</h4>

@@ -11,7 +11,7 @@
 	{{-- <link rel="stylesheet" href="/theWorldLottery.css"> --}}
 	<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
 </head>
-<body>
+<body style="font-family: 'Roboto';letter-spacing:1px;">
 	<div class="container">
 		@include('layouts.partials._header')
 		<div class="row" id="main">
