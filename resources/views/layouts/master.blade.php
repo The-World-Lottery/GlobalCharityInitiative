@@ -30,7 +30,7 @@
 					{!! csrf_field() !!}
 						<input type="text" autofocus style="padding:.5em;border:0;border-bottom:1px solid white;color:white;width:100%;background-color:rgba(0,0,0,0);" placeholder="Say Something!" name="comment"><button hidden type="submit">Add comment</button>
 					</form>
-					<div style="overflow:scroll;height:43.7vh;">
+					<div style="overflow-y:scroll;height:43.3vh;">
 					@foreach(\App\Models\UserComment::orderBy('created_at','desc')->limit(60)->get() as $comment)
 					<span style="padding-left: .5em;"><u style="color:lightgreen;">{{ \App\User::select('username')->where('id',$comment->user_id )->get()[0]['username']}}-</u></span>
 					<span class="commentSpacing" style="padding-left:.2em;">{{$comment->content}}</span><br>
