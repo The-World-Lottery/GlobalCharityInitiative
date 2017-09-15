@@ -26,7 +26,7 @@
 				<a href="{{ action('LotteriesController@show', $lottery->id) }}">
 					<h4 class ="suggHead">{{$lottery->title}}</h4>
 				</a>
-				<p>Current Estimated Value : <strong style="color:lightgreen">${{number_format(($lottery->current_value),2,".",",")}}</strong></p>
+				<p>Current Estimated Value : <br><strong style="color:lightgreen">${{number_format(($lottery->current_value),2,".",",")}}</strong></p>
 				<p>Lottery Ends : <strong style="color:#00ffc4;">{{$lottery->end_date->diffForHumans()}}</strong></p>
 				<p>"{{$lottery->content}}"</p>
 				</div>
