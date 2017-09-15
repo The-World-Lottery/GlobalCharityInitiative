@@ -20,8 +20,8 @@
 	<div style="padding:1em;">
 		<div class="tab-content">
 		  	<div id="home" class="tab-pane fade in active">
-			    <p>Our mission is to eliminate the man power that is usually necessary for fund-raising, for all types of worth-while charities and human interest projects by providing massive monetary donations (from The World Lottery Foundation) directly to the source of the charitable work. We will accomplish this by running a large number of simultaneous lotteries and raffles whose ticket prices will be split thusly.</p>
-			    <p>The ticket price for all games is $2 US (or the current equivalency of 2 USD in Euros, Japanese Yen, Pounds, Swiss Franks, Bitcoin, Litecoin, Etherium, Dogecoin or Ripple)</p>
+			    <p style="text-align:center;">Our mission is to eliminate the man power that is usually necessary for fund-raising, for all types of worth-while charities and human interest projects by providing massive monetary donations (from The World Lottery Foundation) directly to the source of the charitable work. We will accomplish this by running a large number of simultaneous lotteries and raffles whose ticket prices will be split thusly.</p>
+			    <p style="text-align:center;">The ticket price for all games is $2 US (or the current equivalency of 2 USD in Euros, Japanese Yen, Pounds, Swiss Franks, Bitcoin, Litecoin, Etherium, Dogecoin or Ripple)</p>
 			    <ul>
 				    <li>Lottery Ticket Price
 				    	<ul>
@@ -47,8 +47,8 @@
 				    </li>
 			    </ul>
 			</div>
-			<div id="menu1" class="tab-pane fade">
-				<h3 style="text-align: center;">Our Sources and Technologies</h3>
+			<div id="menu1" class="tab-pane fade" style="text-align: center;">
+				<h3>Our Sources and Technologies</h3>
 				<div>
 					<h3>Sources</h3>
 					<a target="_blank" href="http://www.theperfecttitle.com/money/money.shtml"><h5>Lottery Quotes</h5></a>
