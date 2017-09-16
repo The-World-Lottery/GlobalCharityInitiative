@@ -13,8 +13,8 @@
 </head>
 <body style="font-family: 'Roboto';letter-spacing:1px;">
 <img id="backgroundPic" style="opacity:1;height:100%;width:100%;" src="/images/earthAtNight.jpg">
-	<div class="container-fluid">
-		<div class="row">
+	<div class="container-fluid" >
+		<div style="" class="row">
 			<div style="" id="main" class="col col-xs-12 col-sm-3">
 				@include('layouts.partials._header')
 				

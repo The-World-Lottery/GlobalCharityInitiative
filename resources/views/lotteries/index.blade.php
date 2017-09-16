@@ -20,13 +20,13 @@
         	@endif
 			<div class="row">
 				@foreach($lotteries as $lottery)
-				<div class="col col-sm-4  col-xs-12"
-				style='position:relative;background-position:center;background-size:110% 110%;text-align:center;max-width:31.33%;float:left;border:1px solid white;border-radius:1em;height:15.5em;padding:1em 1em 1em 1em ;margin:1%;overflow:hidden;background-color:rgba(255,255,255,.08);'
+				<div class="indivLottoCont col col-sm-4  col-xs-12"
+				style=''
 				>
 				<a href="{{ action('LotteriesController@show', $lottery->id) }}">
 					<h4 class ="suggHead">{{$lottery->title}}</h4>
 				</a>
-				<p style="background-color:rgba(0,0,0,.5);padding:4px;border-radius:.5em;">Current Estimated Value : <br><strong style="font-size:1.9em;color:lightgreen">${{number_format(($lottery->current_value),2,".",",")}}</strong></p>
+				<p style="background-color:rgba(0,0,0,.5);border-radius:.5em;">Current Estimated Value : <br><strong style="font-size:1.9em;color:lightgreen">${{number_format(($lottery->current_value),2,".",",")}}</strong></p>
 				<p>Lottery Ends : <strong style="color:#00ffc4;">{{$lottery->end_date->diffForHumans()}}</strong></p>
 				<p>"{{$lottery->content}}"</p>
 				</div>

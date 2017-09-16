@@ -17,7 +17,7 @@
 	<main class="container" style="max-width:100%;display:flex;justify-content: center;">
 	<div>
 		<div class="row"  style="text-align:center;padding-top: 2em;">
-		<div class="col col-sm-6 col-sm-offset-3">
+		<div class="col col-sm-8 col-sm-offset-2">
 			<div id="showProfImg"><img src='{{$user->image}}' id="profImg"></div><br>
 			<div><strong>Name:</strong> {{$user->name}}</div>
 			<div><strong>Email:</strong> {{$user->email}}</div>
