@@ -88,6 +88,22 @@ a {
 	margin-right: 1em;
 	margin-left: 1em;
 }
+
+#raffleCont{
+	position:relative;
+	color:white;
+	background-position:center;
+	background-size:110% 110%;
+	text-align:center;
+	max-width:31.3%;
+	float:left;
+	border-radius:1em;
+	height:25vh;
+	padding:0em 1em 1em 1em ;
+	margin:1%;
+	overflow:hidden;
+}
+
 #main {
 	height:100%;
 

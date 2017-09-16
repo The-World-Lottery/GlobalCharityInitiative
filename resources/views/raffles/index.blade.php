@@ -25,7 +25,7 @@
         @endif
 
 		@foreach($raffles as $raffle)
-		<div style='position:relative;color:white;background-position:center;background-size:110% 110%;background-image:url("{{$raffle->img}}");text-align:center;max-width:31.3%;float:left;border-radius:1em;height:25vh;padding:0em 1em 1em 1em ;margin:1%;overflow:hidden;'>
+		<div id="raffleCont" style='background-image:url("{{$raffle->img}}");'>
 			<a style="color:lightblue" href="{{ action('RafflesController@show', $raffle->id) }}"><h4 style="border-radius:6px;padding:8px;background-color:rgba(0,0,0,.5);">{{$raffle->title}}</h4></a>
 		<div class="raffleContent">
 			<p style="margin-top:0%;">{{$raffle->product}}</p>
