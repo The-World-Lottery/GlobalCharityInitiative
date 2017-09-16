@@ -12,34 +12,36 @@
 	<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
 </head>
 <body style="font-family: 'Roboto';letter-spacing:1px;">
-	<div class="container">
-		@include('layouts.partials._header')
-		<div class="row" id="main">
-			<div class="col col-sm-8 col-xs-12 borderOpac gameAndChatInfo" id="gameArea">
+<img id="backgroundPic" style="opacity:1;height:100%;width:100%;" src="/images/earthAtNight.jpg">
+	<div class="container-fluid">
+		<div class="row">
+			<div style="" id="main" class="col col-xs-12 col-sm-3">
+				@include('layouts.partials._header')
+				
+			</div>
+			<div style="clear:left;" class="col col-sm-6 col-xs-12 borderOpac gameAndChatInfo" id="gameArea">
 				<div class="areaHeader">@yield('divHead')</div>
 				<div>
 					@yield('content')
 				</div>
 			</div>
-			<div class="col col-sm-4 col-xs-12 gameAndChatInfo chatInfoContSpacing">
+			<div style="background-color:rgba(0,0,0,.4);" class="col col-sm-3 col-xs-12 gameAndChatInfo chatInfoContSpacing">
 				<div class="chatInfoMargins borderOpac" id="chat">
 					{{-- <div class="areaHeaders">
 						Chat
 					</div> --}}
-					<form action="{{ action('UsersController@comment') }}">
-					{!! csrf_field() !!}
-						<input type="text" autofocus style="padding:.5em;border:0;border-bottom:1px solid white;color:white;width:100%;background-color:rgba(0,0,0,0);" placeholder="Say Something!" name="comment"><button hidden type="submit">Add comment</button>
-					</form>
 					<div style="overflow-y:scroll;height:46vh;">
 					@foreach(\App\Models\UserComment::orderBy('created_at','desc')->limit(60)->get() as $comment)
 					<span style="padding-left:.5em;"><u style="color:lightgreen;">{{ \App\User::select('username')->where('id',$comment->user_id )->get()[0]['username']}}-</u></span>
 					<span class="commentSpacing" style="padding-left:.2em;">{{$comment->content}}</span><br>
 					@endforeach
 					</div>
+					<form action="{{ action('UsersController@comment') }}">
+					{!! csrf_field() !!}
+						<input type="text" autofocus style="padding:.5em;margin-top:.5em;border:0;border-bottom:1px solid white;color:white;width:100%;background-color:rgba(0,0,0,0);" placeholder="Say Something!" name="comment"><button hidden type="submit">Add comment</button>
+					</form>
 				</div>
 				<div class="chatInfoMargins borderOpac" id="info" style="text-align:center;">
-					<div class="areaHeaders">Site Info
-					</div>
 					<br>
 					<h3><strong>Jackpot : </strong><span style="color:lightgreen;">${{ number_format(\App\Models\TheWorldLottery::select('current_value')->where('id','1')->get()[0]['current_value'],2,".",",")}} (USD)</span></h3>
 					<h4 class="countdown">
@@ -53,7 +55,7 @@
 				</div>
 			</div>
 		</div>
-		@include('layouts.partials._footer')
+		{{-- @include('layouts.partials._footer') --}}
 	</div>
 	<script
 	  src="https://code.jquery.com/jquery-3.2.1.js"

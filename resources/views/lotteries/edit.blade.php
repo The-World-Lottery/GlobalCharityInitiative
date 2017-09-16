@@ -14,7 +14,7 @@
 
 @section('content')
 
-	<main class="container" style="max-width:100%;float:left;">
+	<main class="container" style="text-align:center;max-width:100%;float:left;"><br>
 		<form method="POST" action="{{ action('LotteriesController@update', $lottery->id)}}">
 			{!! csrf_field() !!}
 			{{ method_field('PUT') }}
@@ -40,7 +40,7 @@
 					<input class="form-control text-center" type="text" name="title" id="title" value="{{$lottery->title}}" placeholder="{{$lottery->title}}">
 				</div>
 			</div>
-			
+			<br>
 
 			{!! $errors->first('content', '<span class="help-block">:message</span>')!!}
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" >
@@ -49,7 +49,7 @@
 					 	<strong>Content</strong>
 					</div>
 					<div class="col-xs-4">
-					 	{{$lottery->content}}
+					 	{{-- {{$lottery->content}} --}}
 					</div>
 					<div class="col-xs-4">
 					 	<span class="glyphicon glyphicon-pencil">Edit</span>
@@ -81,12 +81,13 @@
 					<textarea class="form-control text-left" type="text" name="init_value" id="init_value" placeholder="init_value">{{$lottery->init_value}}</textarea>
 				</div>
 			</div> --}}
+			<br>
 			@if((\App\Models\LotteryEntry::filterEntrants($lottery->id)) || Auth::user()->is_super_admin)
 			{!! $errors->first('end_date', '<span class="help-block">:message</span>')!!}
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapsefour" aria-expanded="false" aria-controls="collapsefour" >
 				<div class="row">
 					 <div class="col-xs-4">
-					 	<strong>end_date</strong>
+					 	<strong>End Date</strong>
 					</div>
 					<div class="col-xs-4">
 					 	{{$lottery->end_date}}
@@ -103,14 +104,14 @@
 			</div>
 			@endif
         
+			<br>
 
-
-			<button>Submit</button>
+			<button type="submit" class="btn btn-success">Submit</button>
 		</form>
 		@if((\App\Models\LotteryEntry::filterEntrants($lottery->id)))
 		<form method="POST" action="{{ action('LotteriesController@destroy', $lottery->id )}}">
 		{!! csrf_field() !!}
-		{{ method_field('DELETE') }}
+		{{ method_field('DELETE') }}<br>
 		<button class="btn btn-danger">DELETE LOTTERY</button>
 		</form>
 		@endif

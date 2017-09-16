@@ -13,7 +13,7 @@
 @stop
 
 @section('content')
-{{\App\Models\LotteryEntry::pickWinner(1)}}
+{{-- {{\App\Models\LotteryEntry::pickWinner(1)}} --}}
 	<main class="container" style="max-width:100%;float:left;">
 		<form method="POST" action="{{ action('RafflesController@update', $raffle->id)}}">
 			{!! csrf_field() !!}
@@ -112,6 +112,5 @@
 		<button class="btn btn-danger">DELETE RAFFLE</button>
 		</form>
 		@endif
-	}
 
 @stop

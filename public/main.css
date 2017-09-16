@@ -15,8 +15,15 @@ body {
 	color:#00ffc4;
 }
 
+#backgroundPic {
+	position:fixed;
+	height:100%;
+	width:100%;
+}
+
 html {
-	background-image:url("images/earthAtNight.jpg");
+	height:100vh;
+	/*background-image:url("images/earthAtNight.jpg");
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;
@@ -25,11 +32,12 @@ html {
 	padding:0;
 	position: relative;
 	padding-bottom: 6rem;
-	min-height: 100%;
+	min-height: 100%;*/
 }
 
 a {
 	color:lightblue;
+	text-decoration: underline;
 }
 #clock{
 	font-size: 20px;
@@ -51,11 +59,18 @@ a {
 
 .borderOpac {
 	/*all main area borders*/
-	border:1px solid white;
-	background-color:rgba(255,255,255,.2);
+	/*border:1px solid white;*/
+	/*background-color:rgba(255,255,255,.2);*/
 	border-radius: 1.5em;
 	margin-bottom: 1vh;
 	margin-top: 1vh;
+}
+
+.navbar-collapse>ul>li>a {
+	border: 2px solid white;
+	border-radius:3em;
+	margin:0;
+	text-align:center;
 }
 
 #head, #footer {
@@ -68,15 +83,35 @@ a {
 }
 
 .navLink {
-	padding-top:1em;
+	padding-top:.2em;
 	padding-bottom: 1em;
 	margin-right: 1em;
 	margin-left: 1em;
 }
-#mainNav {
-	margin:0;
-	border:0;
+
+#raffleCont{
+	position:relative;
+	color:white;
+	background-position:center;
+	background-size:110% 110%;
+	text-align:center;
+	max-width:31.3%;
+	float:left;
+	border-radius:1em;
+	height:25vh;
+	padding:0em 1em 1em 1em ;
+	margin:1%;
+	overflow:hidden;
 }
+
+#main {
+	height:100%;
+
+	}
+
+	#random_quote {
+		margin:0px;
+	}
 
  /*content right side*/
 	.gameAndChatInfo {
@@ -94,7 +129,7 @@ a {
 		border-radius:0 0 1.5em 1.5em;
 	}
 .splashPar {
-	font-size:1em;
+	font-size:1.5em;
 }
 
 .raffleContent {
@@ -149,11 +184,20 @@ ul.pagination {
 }
 
 .img-circle {
-	height:3em;
-	width:3em;
+	display:flex;
+	justify-content: center;
+	width:100%;
 	margin-top: 1em;
 	margin-bottom: 1em;
-	float:right;
+	height:8em;
+}
+
+#profImg {
+	border-radius: 15em;
+}
+
+#profImg:hover {
+	border-radius: 1em;
 }
 
 .commentSpacing{
@@ -170,7 +214,6 @@ tr {
 }
 
 .headUN {
-	float:right;
 	margin-top: 3em;
 	margin-bottom: 1%;
 	margin-left: 1em;
@@ -218,11 +261,47 @@ select {
 	margin-right:1em;
 }
 
-@media screen and (max-width: 768px) {
+a:hover{color:yellow;}
 
-	.col-sm-4 {
-	  	padding:0;
+@media screen and (min-width: 768px) {
+
+	#gameArea {
+		margin-left: 20.75vw;
+		width:52.6vw;
+
 	}
+
+	#main {
+		position:fixed;left:0;
+		max-height:100vh;
+		width:20%;
+		/*background-color:#2a6969;*/
+		background-color:rgba(0,0,0,.4);
+
+	}
+
+	.chatInfoContSpacing {
+		position:fixed;right:0;
+		padding-right:0;
+		height:100vh;
+		border-left:1px solid white;
+
+	}
+	.chatInfoMargins {
+		padding-right:2em;
+		margin-right:-1.1vw;
+
+	}
+
+	#chat {
+		padding-right:0;
+		margin-left:-.6em;
+	}
+
+	#backgroundPic {
+		/*padding-left: 15vw;*/
+	}
+
 
 
 
