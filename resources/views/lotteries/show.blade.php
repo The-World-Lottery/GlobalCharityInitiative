@@ -8,7 +8,7 @@
 
 @section('divHead')
 
-<span>Show Lottery #{!! $lottery->id !!} </span>
+<h2><strong>Show Lottery #{!! $lottery->id !!} </strong></h2>
 
 @stop
 
@@ -16,7 +16,8 @@
 
 	<main class="container" style="text-align:center;max-width:100%;float:left;display:flex;justify-content: center;">
 		<div style="padding-top: 2em;">
-			<h1 style="color:lightgreen;"><strong>Current Pot : $</strong> {{number_format($lottery->current_value,2,".",",")}}</h1>
+			<h1 style="color:lightgreen;"><strong>Current Pot : $</strong> {{number_format($lottery->current_value,2,".",",")}}
+			</h1>
 			<div class="countdown">
 				<h2>
 				The Drawing ends in : 
