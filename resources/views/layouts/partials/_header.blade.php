@@ -2,7 +2,7 @@
 	<div class="col col-xs-12 borderOpac" id="head">
 		<div class="row">
 			<div class="col-xs-12">
-				<h2 id="headLogo" style="font-family: 'Racing Sans One', cursive;color:lightblue;font-size:2em;"><img style="float:right;color:white;height:2em;width:2em;background-color:rgba(0,0,0,0);" src="/images/globe.png"><br>The World Lottery For Charity</h2>
+				<h2 id="headLogo" style="font-family: 'Racing Sans One', cursive;color:lightblue;font-size:2em;text-align:center;">The World Lottery For Charity</h2>
 				<h3 style="color:lightgreen">World Lottery Jackpot is (USD) $
 				{{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}
 				</h3>
@@ -53,7 +53,7 @@
 </div>
    
 @endif
-<div style="position:fixed;bottom:1em;background-color:white;display:flex;justify-content:center;border-radius: 1em;width:17.5%;">
+<div style="bottom:1em;background-color:white;display:flex;justify-content:center;border-radius: 1em;">
 <div style="color:white;" id="google_translate_element"></div><script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');

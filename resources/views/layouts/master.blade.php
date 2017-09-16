@@ -12,7 +12,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
 </head>
 <body style="font-family: 'Roboto';letter-spacing:1px;">
-<img id="backgroundPic" style="opacity:.8;height:100%;width:100%;" src="/images/earthAtNight.jpg">
+<img id="backgroundPic" style="opacity:1;height:100%;width:100%;" src="/images/earthAtNight.jpg">
 	<div class="container-fluid">
 		<div class="row">
 			<div style="" id="main" class="col col-xs-12 col-sm-3">
@@ -25,7 +25,7 @@
 					@yield('content')
 				</div>
 			</div>
-			<div style="" class="col col-sm-3 col-xs-12 gameAndChatInfo chatInfoContSpacing">
+			<div style="background-color:rgba(0,0,0,.4);" class="col col-sm-3 col-xs-12 gameAndChatInfo chatInfoContSpacing">
 				<div class="chatInfoMargins borderOpac" id="chat">
 					{{-- <div class="areaHeaders">
 						Chat

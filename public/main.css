@@ -83,7 +83,7 @@ a {
 }
 
 .navLink {
-	padding-top:1em;
+	padding-top:.2em;
 	padding-bottom: 1em;
 	margin-right: 1em;
 	margin-left: 1em;
@@ -91,6 +91,10 @@ a {
 #main {
 	height:100%;
 
+	}
+
+	#random_quote {
+		margin:0px;
 	}
 
  /*content right side*/
@@ -109,7 +113,7 @@ a {
 		border-radius:0 0 1.5em 1.5em;
 	}
 .splashPar {
-	font-size:1em;
+	font-size:1.5em;
 }
 
 .raffleContent {
@@ -255,7 +259,8 @@ a:hover{color:yellow;}
 		position:fixed;left:0;
 		max-height:100vh;
 		width:20%;
-		background-color:#2a6969;
+		/*background-color:#2a6969;*/
+		background-color:rgba(0,0,0,.4);
 
 	}
 
@@ -264,6 +269,7 @@ a:hover{color:yellow;}
 		padding-right:0;
 		height:100vh;
 		border-left:1px solid white;
+
 	}
 	.chatInfoMargins {
 		padding-right:2em;
@@ -277,7 +283,7 @@ a:hover{color:yellow;}
 	}
 
 	#backgroundPic {
-		padding-left: 15vw;
+		/*padding-left: 15vw;*/
 	}
 
 
