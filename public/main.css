@@ -95,13 +95,80 @@ a {
 	background-position:center;
 	background-size:110% 110%;
 	text-align:center;
-	max-width:31.3%;
-	float:left;
+	/*max-width:31.3%;*/
+	/*float:left;*/
 	border-radius:1em;
 	height:25vh;
 	padding:0em 1em 1em 1em ;
 	margin:1%;
 	overflow:hidden;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+	float:left;
+	margin:1.5vw;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 75vw;
+	height: 25vh;
+	text-align:center;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+.indivLottoCont{
+position:relative;
+background-position:center;
+background-size:110% 110%;
+text-align:center;
+max-width:31.33%;
+float:left;
+border:1px solid white;
+border-radius:1em;
+height:15.5em;
+padding:1em 1em 1em 0em ;
+margin:1%;
+overflow:hidden;
+background-color:rgba(255,255,255,.08);
+}
+
+.indivLottoCont::hover{
+	background-color:rgba(255,255,255,.5);
+
 }
 
 #main {
@@ -133,7 +200,9 @@ a {
 }
 
 .raffleContent {
-	opacity:0;
+	/*opacity:0;*/
+	color:white;
+	margin-top:25%;
 }
 
 .raffleContent:hover {
@@ -301,6 +370,12 @@ a:hover{color:yellow;}
 	#backgroundPic {
 		/*padding-left: 15vw;*/
 	}
+
+	.flip-container, .front, .back {
+	width: 21.75vw;
+	height: 25vh;
+	text-align:center;
+}
 
 
 

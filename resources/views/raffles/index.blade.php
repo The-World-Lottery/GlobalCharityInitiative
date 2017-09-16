@@ -25,14 +25,31 @@
         @endif
 
 		@foreach($raffles as $raffle)
-		<div id="raffleCont" style='background-image:url("{{$raffle->img}}");'>
-			<a style="color:lightblue" href="{{ action('RafflesController@show', $raffle->id) }}"><h4 style="border-radius:6px;padding:8px;background-color:rgba(0,0,0,.5);">{{$raffle->title}}</h4></a>
-		<div class="raffleContent">
-			<p style="margin-top:0%;">{{$raffle->product}}</p>
-			{{-- <p>Created By : {{$raffle->user->name}}</p> --}}
+
+
+		<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+			<div class="flipper">
+				<div class="front">
+					<!-- front content -->
+					<a style="color:lightblue" href="{{ action('RafflesController@show', $raffle->id) }}">
+						<div id="raffleCont" style='background-image:url("{{$raffle->img}}");'>
+							<h4 style="border-radius:6px;padding:8px;background-color:rgba(0,0,0,.5);">{{$raffle->title}}</h4>
+							<p style="border-radius:6px;width:88%;position:absolute;bottom:0;background-color:rgba(0,0,0,.5);padding:4px;">Drawing Happens : 
+							<span style="color:#00ffc4;">{{$raffle->end_date->diffForHumans()}}</span>
+							</p>
+						</div>
+					</a>
+				</div>
+				<div class="back">
+									<a style="color:lightblue" href="{{ action('RafflesController@show', $raffle->id) }}">
+					<div class="raffleContent">
+						<p style="margin-top:0%;">{{$raffle->product}}</p>
+					</div></a>
+				</div>
+			</div>
 		</div>
-			<p style="border-radius:6px;width:88%;position:absolute;bottom:0;background-color:rgba(0,0,0,.5);padding:4px;">Drawing Happens : <span style="color:#00ffc4;">{{$raffle->end_date->diffForHumans()}}</span></p>
-		</div>
+
+
 			
 
 		@endforeach
