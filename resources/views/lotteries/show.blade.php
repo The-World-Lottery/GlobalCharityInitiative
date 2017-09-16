@@ -27,7 +27,7 @@
 			<div><strong>Human Comment:<br> </strong>"{{$lottery->content}}"</div>
 			<form action="{{ action('LotteriesController@addUserToEntries', $lottery->id) }}">
 		
-				<h5 style="color:yellow;">What currency would you like to purchase a ticket with?</h5>
+				<h5 style="color:yellow;font-size:2em;">What currency would you like to purchase a ticket with?</h5>
 				<select name="currency">
 					<option value="usd">Dollars</option>
 					<option value="eur">Euros</option>

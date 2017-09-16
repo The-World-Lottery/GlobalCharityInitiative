@@ -16,8 +16,8 @@
 @section('content')
 
 
- 	<main class="container" style="max-width:100%;float:left;">
-    
+ 	<main class="container" style="max-width:100%;float:left;"><br>
+    <div style="width:100%;display:flex;justify-content:center;">
             <form method="POST" action="/auth/register">
     {!! csrf_field() !!}
 
@@ -69,7 +69,7 @@
     </div>
 
 </form>
-     
+     </div>
     </main>
 
 @stop

@@ -25,14 +25,14 @@
 		<div id="showProfImg" style="display:flex;justify-content:center;width:100%;"><img style="width:18em;border-radius:1em;" src={!! $raffle->img !!}></div>
 		<h3>{{$raffle['content']}}</h3>
 		<p>By: {{$raffle->user->name}}</p>
-		<p>Possted On: {{$raffle->created_at}}</p>
+		<p>Posted On: {{$raffle->created_at}}</p>
 		<p>Product: {{$raffle->product}}</p>
 		<p>Last updated on: {{$raffle->updated_at}}</p>
 		<p>Ends on: {{$raffle->end_date}}</p>
 
 		<form action="{{ action('RafflesController@addUserToEntries', $raffle->id) }}">
 			
-			<h5 style="color:yellow;">What currency would you like to purchase a ticket with?</h5>
+			<h5 style="color:yellow;font-size:2em;">What currency would you like to purchase a ticket with?</h5>
 			<select name="currency">
 				<option value="usd">Dollars</option>
 				<option value="eur">Euros</option>

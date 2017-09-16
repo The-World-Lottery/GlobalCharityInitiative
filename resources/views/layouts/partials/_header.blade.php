@@ -9,7 +9,7 @@
 			</div>
 			<div style="text-align:center" class="col-xs-12">
 				@if (Auth::check())Logged In As<br>
-					<span style="float:left;" class="headUN">{{Auth::user()->name}}</span>
+					<span style="margin-left:3px;" class="headUN">{{Auth::user()->name}}</span>
 					<div class="img-circle">
 						<img src='{{Auth::user()->image}}' id="profImg">
 					</div>
@@ -39,9 +39,8 @@
   </ul>
 </div>
 
-
-
 @if(Auth::check() && Auth::user()->is_admin)
+<div>
 
     Admin Functions:
       <ul  class="">
@@ -51,6 +50,13 @@
 		<li><a class="" id="white" href="{{action('SuggestionsController@adminIndex')}}">Manage Suggestions</a></li>
       </ul>
 
+</div>
    
 @endif
-
+<div style="position:fixed;bottom:1em;background-color:white;display:flex;justify-content:center;border-radius: 1em;width:17.5%;">
+<div style="color:white;" id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div>
