@@ -1,11 +1,11 @@
 // scrolling background
-// $(function(){
-//     var x = 0;
-//     setInterval(function(){
-//         x-=1;
-//         $('html').css('background-position', x + 'px 0');
-//     }, 100);
-// });
+$(function(){
+    var x = 0;
+    setInterval(function(){
+        x-=1;
+        $('html').css('background-position', x + 'px 0');
+    }, 100);
+});
 	
 $(document).ready(function(){
 

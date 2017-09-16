@@ -13,14 +13,14 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         $user= new User();
-        $user->name = 'emmett';
-        $user->username = 'ejp8611';
+        $user->name = 'Emmett Peters';
+        $user->username = 'Skimsy';
         $user->email='emmett@gmail.com';
         $user->phone_number = 2106678899;
         $user->is_admin = 1;
         $user->is_super_admin = 1;
         $user->password = Hash::make(env('USER_PASSWORD'));
-        $user->image = "https://cdn.filestackcontent.com/vinjG28TRGS7TIBhtYwS";
+        $user->image = "/images/st8.jpeg";
         $user->save();
 
         $user1= new User();
