@@ -117,7 +117,7 @@
 
         // Build POST data and make AJAX request
         var data = {chat_text: messageText};
-        $.post('/chat/message', data).success(sendMessageSuccess);
+        $.post('/chat', data).success(sendMessageSuccess);
 
         // Ensure the normal browser event doesn't take place
         return false;
@@ -135,7 +135,7 @@
         var el = createMessageEl();
         el.find('.message-body').html(data.text);
         el.find('.author').text(data.username);
-        el.find('.avatar img').attr('src', data.avatar)
+        // el.find('.avatar img').attr('src', data.avatar)
         
         // Utility to build nicely formatted time
         el.find('.timestamp').text(strftime('%H:%M:%S %P', new Date(data.timestamp)));

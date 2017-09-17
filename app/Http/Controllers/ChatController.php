@@ -18,7 +18,7 @@ class ChatController extends Controller
     public function __construct()
     {
         $this->pusher = App::make('pusher');
-        $this->user = Session::get('user');
+        // $this->user = Session::get('user');
         $this->chatChannel = self::DEFAULT_CHAT_CHANNEL;
     }
 
@@ -36,8 +36,8 @@ class ChatController extends Controller
     {
         $message = [
             'text' => e($request->input('chat_text')),
-            'username' => $this->user->getNickname(),
-            'avatar' => $this->user->getAvatar(),
+            'username' => Auth::user()->username,
+            // 'avatar' => $this->user->getAvatar(),
             'timestamp' => (time()*1000)
         ];
         $this->pusher->trigger($this->chatChannel, 'new-message', $message);

@@ -12,8 +12,8 @@
 */
 use Illuminate\Support\Facades\App;
 
+Route::post('/chat', 'ChatController@postMessage');
 Route::controller('chat', 'ChatController');
-Route::post('chat/message', 'ChatController@postMessage');
 
 // Route::get('/', 'LotteriesController@index');
 
