@@ -10,6 +10,10 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+use Illuminate\Support\Facades\App;
+
+Route::controller('chat', 'ChatController');
+Route::post('chat/message', 'ChatController@postMessage');
 
 // Route::get('/', 'LotteriesController@index');
 

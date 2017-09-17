@@ -3,12 +3,11 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Log;
 
-class AppServiceProvider extends ServiceProvider
+class PusherServiceProvider extends ServiceProvider
 {
     /**
-     * Bootstrap any application services.
+     * Bootstrap the application services.
      *
      * @return void
      */
@@ -18,7 +17,7 @@ class AppServiceProvider extends ServiceProvider
     }
 
     /**
-     * Register any application services.
+     * Register the application services.
      *
      * @return void
      */
@@ -27,4 +26,3 @@ class AppServiceProvider extends ServiceProvider
         //
     }
 }
-
