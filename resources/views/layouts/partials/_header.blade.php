@@ -56,6 +56,7 @@ function googleTranslateElementInit() {
 </div>
    
 @endif
+@if(Auth::check())
 	<div class="row">
 			<div class="col col-xs-12 text-center">USD: ${{Auth::user()->userWallet->usd}} </div>
 	</div>
@@ -80,3 +81,4 @@ function googleTranslateElementInit() {
 		<div class="col col-xs-6 text-center">Ripple: {{Auth::user()->userWallet->xrp}} </div>
 	</div>
 </div>
+@endif

@@ -28,7 +28,7 @@
 				</a>
 				<p style="background-color:rgba(0,0,0,.5);border-radius:.5em;">Current Estimated Value : <br><strong style="font-size:1.9em;color:lightgreen">${{number_format(($lottery->current_value),2,".",",")}}</strong></p>
 				<p>Lottery Ends : <strong style="color:#00ffc4;">{{$lottery->end_date->diffForHumans()}}</strong></p>
-				<p>"{{$lottery->content}}"</p>
+				{{-- <p>"{{$lottery->content}}"</p> --}}
 				</div>
 
 
