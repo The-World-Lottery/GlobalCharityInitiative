@@ -72,7 +72,7 @@ class LotteriesController extends Controller
 
             switch ($currency){
                 case "usd":
-                $currConv = 1;
+                $currConv = 1.3;
                 break;
                 case "eur":
                 $currConv = $request->input()['eurConv'];

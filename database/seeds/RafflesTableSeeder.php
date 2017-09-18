@@ -11,26 +11,26 @@ class RafflesTableSeeder extends Seeder
      */
     public function run()
     {
-    	for($i = 0;$i <= 20;$i++) 
-        {
-           	$raffle= new \App\Models\Raffle();
-            $raffle->title = 'Raffle #'. $i;
-            $raffle->content = 'for charity'.$i;
-            $raffle->product ='A product donated by company # '.$i . ' to advertise their business.';
-           if($i < 9)
-           {
-            	$raffle->end_date = date("Y-m-d ") .'0'. $i .':00:00';
-        	}
-        	else
-            {
-        		$raffle->end_date = date("Y-m-d ") . $i .':00:00';
-        	}
+    	// for($i = 0;$i <= 20;$i++) 
+     //    {
+     //       	$raffle= new \App\Models\Raffle();
+     //        $raffle->title = 'Raffle #'. $i;
+     //        $raffle->content = 'for charity'.$i;
+     //        $raffle->product ='A product donated by company # '.$i . ' to advertise their business.';
+     //       if($i < 9)
+     //       {
+     //        	$raffle->end_date = date("Y-m-d ") .'0'. $i .':00:00';
+     //    	}
+     //    	else
+     //        {
+     //    		$raffle->end_date = date("Y-m-d ") . $i .':00:00';
+     //    	}
 
-            $raffle->user_id = 1;
-            $raffle->save();
-        }
+     //        $raffle->user_id = 1;
+     //        $raffle->save();
+     //    }
         
-        $j = 18;
+        $j = 19;
         
         $raffle1= new \App\Models\Raffle();
         $raffle1->title = 'A Day With Samuel L. Jackson';
