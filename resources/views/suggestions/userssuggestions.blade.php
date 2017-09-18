@@ -34,12 +34,13 @@
 
         @endforeach
       @else
-
-        <h1> You have no Suggestions!!</h1>
-
-        <div> Click here to give us feedback!!</div>
-
+        <div style="text-align: center;">
+        <h1>You have no Suggestions!!</h1>
+        <br>
+        <div>Click here to give us feedback!!</div>
+        <br>
        <a href="{{action('SuggestionsController@create')}}"> <button class="btn btn-primary" >GO!</button></a>
+       </div>
       @endif
         <br>
 

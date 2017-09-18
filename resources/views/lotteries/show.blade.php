@@ -16,7 +16,7 @@
 
 	<main class="container" style="text-align:center;max-width:100%;float:left;display:flex;justify-content: center;">
 		<div style="padding-top: 2em;">
-			<h1 style="color:lightgreen;"><strong>Current Pot : $</strong> {{number_format($lottery->current_value,2,".",",")}}
+			<h1 style="color:lightgreen;">Current Pot<br><strong style="font-size:2em;">${{number_format($lottery->current_value,2,".",",")}}</strong>
 			</h1>
 			<div class="countdown">
 				<h2>
@@ -54,12 +54,13 @@
 				<input hidden id="usdXRP" name="xrpConv"><br>
 				<button type="submit" class="btn btn-primary">BUY TICKET!!!</button>
 			</form>
+			<br>
 
 			
 
 
 			@if ((Auth::check()) && (Auth::user()->is_admin))
-			  <a href="{{ action('LotteriesController@edit', $lottery->id) }}">Edit</a>
+			  <a href="{{ action('LotteriesController@edit', $lottery->id) }}"><button class="btn btn-warning">Edit</button></a>
 
 			@endif
 		</div>

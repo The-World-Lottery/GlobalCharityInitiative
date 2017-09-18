@@ -23,6 +23,7 @@
 
 			{!! $errors->first('name', '<span class="help-block">:message</span>')!!}
 			
+			<br>
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" >
 				<div class="row">	
 					<div class="col-xs-4">
@@ -44,6 +45,7 @@
 			
 
 			{!! $errors->first('username', '<span class="help-block">:message</span>')!!}
+			<br>
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" >
 				<div class="row">
 					 <div class="col-xs-4">
@@ -65,6 +67,7 @@
 			</div>
 
 			{!! $errors->first('email', '<span class="help-block">:message</span>')!!}
+			<br>
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" >
 				<div class="row">
 					 <div class="col-xs-4">
@@ -89,6 +92,7 @@
 
 			{!! $errors->first('image', '<span class="help-block">:message</span>')!!}
 			
+			<br>
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour" >
 				<div class="row">
 					 <div class="col-xs-4">
@@ -112,6 +116,7 @@
 			
         
 			{!! $errors->first('phone_number', '<span class="help-block">:message</span>')!!}
+			<br>
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive" >
 				<div class="row">
 					 <div class="col-xs-4">
@@ -137,16 +142,16 @@
 			{!! $errors->first('password', '<span class="help-block">:message</span>')!!}
 			<input type="text" name="password" id="password" value="{{ old('password') }}" placeholder="password"> --}}
 
+			<br>
 
-
-			<button>Submit</button>
+			<button class="btn btn-success">Save Changes</button>
 		</form>
-
+		<br>
 
 		<form method="POST" action="{{ action('UsersController@destroy', $User->id )}}">
 		{!! csrf_field() !!}
 		{{ method_field('DELETE') }}
-		<button class="btn btn-warning">DELETE ACCOUNT</button>
+		<button class="btn btn-danger">DELETE ACCOUNT</button>
 		</form>
 
 	</main>

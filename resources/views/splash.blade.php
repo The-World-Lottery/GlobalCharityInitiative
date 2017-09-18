@@ -19,10 +19,9 @@
 			<div style="min-height:50vh;width:100%;z-index:20;text-align:center;">
 				<h1 style="font-family: 'Racing Sans One', cursive;color:lightblue;font-size:5em;">The World Lottery For Charity</h1>
 				<p class="splashPar">ALL proceeds go to selected charities, human interest projectsand TWL staff, development, maintenence and security.</p>
-				<form action="{{action('LotteriesController@index')}}"><button class="navLink" id="splashButton" style="margin:3em 0 3em 0;width:70%;height:2em;color:lightgreen;border:3px solid lightgreen;border-radius:2em;text-align:center;font-size:2em;background-color:rgba(0,0,0,0);">Click here to enter site</button></form>
-				<h1 style="margin:0;" class="splashPar">"We're trying to save the World.
-				You can bet on that."</h1>
+				<form action="{{action('LotteriesController@index')}}"><button class="navLink" id="splashButton" style="margin:2em 0 3em 0;width:70%;height:2em;color:lightgreen;border:3px solid lightgreen;border-radius:2em;text-align:center;font-size:2em;background-color:rgba(0,0,0,0);">Click here to enter site</button></form>
 			</div>
+				
 			<div style="z-index:30;width:100%;">
 			    <div style="background-color:rgba(0,0,0,.4);padding:1em;margin:auto;" id="random_quote"></div>
 			</div>
