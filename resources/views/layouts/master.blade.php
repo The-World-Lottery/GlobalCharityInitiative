@@ -10,6 +10,8 @@
 	<link rel="stylesheet" type="text/css" href="/main.css">
 	{{-- <link rel="stylesheet" href="/theWorldLottery.css"> --}}
 	<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 </head>
 <body style="font-family: 'Roboto';letter-spacing:1px;">
 <img id="backgroundPic" style="opacity:1;height:100%;width:100%;" src="/images/earthAtNight.jpg">
@@ -75,5 +77,15 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
 	<script src="https://static.filestackapi.com/v3/filestack.js"></script>
 	<script src="/main.js" type="text/javascript"></script>
+	<script>
+	function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
 </body>
 </html>
