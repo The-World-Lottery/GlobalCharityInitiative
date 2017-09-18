@@ -8,7 +8,7 @@
 
 @section('divHead')
 
-<h2><strong>Show Lottery #{!! $lottery->id !!} </strong></h2>
+<h2><strong>Show Lottery #{!! ($lottery->id)-1 !!} </strong></h2>
 
 @stop
 
