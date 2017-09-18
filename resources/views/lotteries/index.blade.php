@@ -8,8 +8,8 @@
 
 @section('divHead')
 
-<h2><strong>All Lotteries</strong></h2>
-<p class="suggBox">Lotteries are created with an initial value coming from the world lottery foundation. When the date/time of each lottery is reached, one user will be randomly selected from the pool of entrys. This ensures there will always be a winner. Each ticket you have to the lottery increases your chances of winning. Good Luck!</p>
+<h2 id="hoverTrigger"><strong>All Lotteries</strong></h2>
+<p  id="hoverSumm" hidden class="suggBox">Lotteries are created with an initial value coming from the world lottery foundation. When the date/time of each lottery is reached, one user will be randomly selected from the pool of entrys. This ensures there will always be a winner. Each ticket you have to the lottery increases your chances of winning. Good Luck!</p>
 @stop
 
 @section('content')

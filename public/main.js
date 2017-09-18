@@ -184,6 +184,13 @@ $(document).ready(function(){
         t++;
     },1000);
 
+    //hover for summaries
+    $('#hoverTrigger').mouseenter(function(){
+    	$('#hoverSumm').fadeIn();
+	}).mouseleave(function(){
+	    $('#hoverSumm').fadeOut();
+	});
+
 		
 
 

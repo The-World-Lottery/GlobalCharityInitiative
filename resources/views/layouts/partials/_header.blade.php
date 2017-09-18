@@ -1,11 +1,18 @@
 <div class="row" id="header">
 	<div class="col col-xs-12 borderOpac" id="head">
 		<div class="row">
+			<div id="googlepos" style="background-color:#161554;width:100%;display:flex;justify-content:center;">
+				<div>
+					<div style="color:white;" id="google_translate_element"></div><script type="text/javascript">
+					function googleTranslateElementInit() {
+					  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+					}
+					</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+				</div>
+			</div>
 			<div class="col-xs-12">
+
 				<h2 id="headLogo" style="font-family: 'Racing Sans One', cursive;color:lightblue;font-size:2em;text-align:center;">The World Lottery For Charity</h2>
-				<h3 style="color:lightgreen">World Lottery Jackpot is (USD) $
-				{{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}
-				</h3>
 			</div>
 			<div style="text-align:center" class="col-xs-12">
 				@if (Auth::check())Logged In As<br>

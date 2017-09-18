@@ -22,7 +22,7 @@ table, th, td {
 
 	<main class="container table-responsive" style="max-width:100%;float:left;">
 
-		<table class="table table-condensed" style="width:100%">
+		<table class="table table-condensed">
 			<tr>
 				<th>Edit</th>
 				<th>Name</th>

@@ -2,7 +2,7 @@
 body {
 	color:#e0fff8;
 	background-color:rgba(0,0,0,0);
-	font-size:1.5em;
+	font-size:1.7em;
 	
 }
 
@@ -186,17 +186,17 @@ background-color:rgba(255,255,255,.08);
 
  /*content right side*/
 	.gameAndChatInfo {
-		min-height:80vh; 
+		/*min-height:100vh; */
 	}
 
 	#chat {
-		min-height:51vh;
-		max-height:51vh;
+		/*min-height:70vh;
+		max-height:75vh;*/
 		border-radius:1.5em 1.5em 0 0;
 	}
 
 	#info {
-		min-height:28vh;
+		max-height:15vh;
 		border-radius:0 0 1.5em 1.5em;
 	}
 .splashPar {
@@ -281,9 +281,10 @@ ul.pagination {
 	width:80%;
 }*/
 
-tr {
+td {
 	background-color:rgba(0,0,0,0);
 	overflow:hidden;
+
 }
 
 .headUN {
@@ -336,13 +337,17 @@ select {
 
 a:hover{color:yellow;}
 
+
 @media screen and (min-width: 768px) {
+
+
 
 	#gameArea {
 		margin-left: 21.2vw;
 		width:52.6vw;
 
 	}
+
 
 	#main {
 		position:fixed;left:0;
@@ -354,10 +359,11 @@ a:hover{color:yellow;}
 	}
 
 	.chatInfoContSpacing {
-		position:fixed;right:0;
+		position:fixed;
+		right:0;
 		padding-right:0;
 		height:100vh;
-		border-left:1px solid white;
+		/*border-left:1px solid white;*/
 
 	}
 	.chatInfoMargins {
@@ -369,6 +375,7 @@ a:hover{color:yellow;}
 	#chat {
 		padding-right:0;
 		margin-left:-.6em;
+		height:100vh;
 	}
 
 	#backgroundPic {
@@ -386,12 +393,13 @@ a:hover{color:yellow;}
 	}
 
 	#googlepos {
-		position:absolute;bottom:0;right:25%;
+		/*position:absolute;bottom:0;right:15%;*/
 	}
 
 	.walletPadding {
 		margin:.1em;
 	}
+
 
 
 
