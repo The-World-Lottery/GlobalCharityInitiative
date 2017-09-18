@@ -8,7 +8,7 @@
 
 @section('divHead')
 
-<span>Suggestion #{{$suggestion->id}} </span>
+<span>Suggestion #{{($suggestion->id)-1}} </span>
 
 @stop
 
