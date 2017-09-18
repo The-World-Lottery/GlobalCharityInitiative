@@ -27,12 +27,14 @@
 
 			@endfor
 			<p>Select your power number!!!</p>
+
 			<select name="powerNumber"> 
 				@for($i = 1; $i <= 100; $i++)
 					<option value="{{$i}}">{{$i}}</option>
 				@endfor
 			</select>
 			<button class="btn btn-success">Submit Numbers</button>
+			
 			</form>
 		</div>
 

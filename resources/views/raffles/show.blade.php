@@ -24,11 +24,11 @@
 			</div>
 		<div id="showProfImg" style="display:flex;justify-content:center;width:100%;"><img style="width:18em;border-radius:1em;" src={!! $raffle->img !!}></div>
 		<h3>{{$raffle['content']}}</h3>
-		<p>By: {{$raffle->user->name}}</p>
-		<p>Posted On: {{$raffle->created_at}}</p>
+		{{-- <p>By: {{$raffle->user->name}}</p> --}}
+		{{-- <p>Posted On: {{$raffle->created_at}}</p> --}}
 		<p>Product: {{$raffle->product}}</p>
-		<p>Last updated on: {{$raffle->updated_at}}</p>
-		<p>Ends on: {{$raffle->end_date}}</p>
+		{{-- <p>Last updated on: {{$raffle->updated_at}}</p> --}}
+		{{-- <p>Ends on: {{$raffle->end_date}}</p> --}}
 
 		<form action="{{ action('RafflesController@addUserToEntries', $raffle->id) }}">
 			
