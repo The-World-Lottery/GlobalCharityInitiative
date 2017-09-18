@@ -30,7 +30,7 @@ class RafflesTableSeeder extends Seeder
             $raffle->save();
         }
         
-        $j = 17;
+        $j = 18;
         
         $raffle1= new \App\Models\Raffle();
         $raffle1->title = 'A Day With Samuel L. Jackson';

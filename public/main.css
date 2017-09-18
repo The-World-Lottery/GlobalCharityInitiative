@@ -2,7 +2,7 @@
 body {
 	color:#e0fff8;
 	background-color:rgba(0,0,0,0);
-	font-size:1.9em;
+	font-size:1.5em;
 	
 }
 
@@ -150,12 +150,16 @@ a {
 	transform: rotateY(180deg);
 }
 
+.btn {
+	font-size: 1em;
+}
+
 .indivLottoCont{
 position:relative;
 background-position:center;
 background-size:110% 110%;
 text-align:center;
-width:48%;
+width:100%;
 float:left;
 border:1px solid white;
 border-radius:1em;
@@ -335,7 +339,7 @@ a:hover{color:yellow;}
 @media screen and (min-width: 768px) {
 
 	#gameArea {
-		margin-left: 20.75vw;
+		margin-left: 21.2vw;
 		width:52.6vw;
 
 	}
@@ -346,7 +350,7 @@ a:hover{color:yellow;}
 		width:20%;
 		/*background-color:#2a6969;*/
 		background-color:rgba(0,0,0,.4);
-
+		font-size:1em;
 	}
 
 	.chatInfoContSpacing {
@@ -372,10 +376,22 @@ a:hover{color:yellow;}
 	}
 
 	.flip-container, .front, .back {
-	width: 21.75vw;
-	height: 25vh;
-	text-align:center;
-}
+		width: 21.75vw;
+		height: 25vh;
+		text-align:center;
+	}
+
+	.indivLottoCont{
+		width:48%
+	}
+
+	#googlepos {
+		position:absolute;bottom:0;right:25%;
+	}
+
+	.walletPadding {
+		margin:.1em;
+	}
 
 
 

@@ -19,10 +19,13 @@
             <div class="alert alert-success">{{ session('successMessage') }}</div>
         	@endif
 			<div class="row">
+				
 				@foreach($lotteries as $lottery)
+					
 				<div class="indivLottoCont col col-sm-4  col-xs-12"
 				style=''
 				>
+
 				<a href="{{ action('LotteriesController@show', $lottery->id) }}">
 					<h4 class ="suggHead">{{$lottery->title}}</h4>
 				</a>
@@ -30,6 +33,7 @@
 				<p>Lottery Ends : <strong style="color:#00ffc4;">{{$lottery->end_date->diffForHumans()}}</strong></p>
 				{{-- <p>"{{$lottery->content}}"</p> --}}
 				</div>
+				
 
 
 

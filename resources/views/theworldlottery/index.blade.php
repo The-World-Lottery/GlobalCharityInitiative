@@ -16,7 +16,7 @@
 	<p class="suggBox" style="padding:0 5em 0 5em ;text-align:center;">The World Lottery drawing happens every two weeks. Winning numbers selected with a random number generator. The Jackpot value is fed by ticket purchases to any Lottery, Raffle or currently running World Lottery.</p>
 
 	<main class="container" style="text-align:center;max-width:100%;float:left;display:flex;justify-content: center;">
-		<div>
+		<div style="margin-top:15%;">
 			<div><h2 style="color:#00ffc4;">Drawing takes place in: <span class="worldLottoClock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
 				</div> </h2>
 			
@@ -27,10 +27,10 @@
 
 
 
-			<a href="{{ action('TheWorldLotterysController@addUserToEntries', $theWorldLottery->id) }}"><button class="btn btn-primary">BUY TICKET!!!</button></a>
+			<a href="{{ action('TheWorldLotterysController@addUserToEntries', $theWorldLottery->id) }}"><button class="btn btn-primary">BUY TICKET!!!</button></a><br><br>
 
 			@if ((Auth::check()) && (Auth::user()->is_admin))
-			  <a href="{{ action('TheWorldLotterysController@edit', $theWorldLottery->id) }}">Edit</a>
+			  <a href="{{ action('TheWorldLotterysController@edit', $theWorldLottery->id) }}"><button class="btn btn-warning">Edit</button></a>
 
 			@endif
 		</div>

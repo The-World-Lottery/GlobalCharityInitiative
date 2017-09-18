@@ -1,11 +1,4 @@
 <div class="row" id="header">
-<div style="bottom:1em;background-color:#0d0c32;display:flex;justify-content:center;">
-<div style="color:white;" id="google_translate_element"></div><script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-}
-</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-</div>
 	<div class="col col-xs-12 borderOpac" id="head">
 		<div class="row">
 			<div class="col-xs-12">
@@ -56,29 +49,4 @@ function googleTranslateElementInit() {
 </div>
    
 @endif
-@if(Auth::check())
-	<div class="row">
-			<div class="col col-xs-12 text-center">USD: ${{Auth::user()->userWallet->usd}} </div>
-	</div>
-	<div class="row">
-		<div class="col col-xs-6 text-center">Euro: {{Auth::user()->userWallet->eur}} </div>
-		<div class="col col-xs-6 text-center">Yen: {{Auth::user()->userWallet->jpy}} </div>
-	</div>
-	<div class="row">
-		<div class="col col-xs-6 text-center">Pounds: {{Auth::user()->userWallet->gbp}} </div>
-		<div class="col col-xs-6 text-center">Franks: {{Auth::user()->userWallet->chf}} </div>
-	</div>
-	<div class="row">
-		<div class="col col-xs-6 text-center">Bitcoin: {{Auth::user()->userWallet->btc}} </div>
-		<div class="col col-xs-6 text-center">Litecoin: {{Auth::user()->userWallet->ltc}} </div>
-	</div>
-	<div class="row">
-		<div class="col col-xs-6 text-center">Etherium: {{Auth::user()->userWallet->eth}} </div>
-		<div class="col col-xs-6 text-center">Dogecoin: {{Auth::user()->userWallet->doge}} </div>
-	</div>
-	<div class="row">
-		<div class="col col-xs-6 text-center">Bitcoin Cash: {{Auth::user()->userWallet->bch}} </div>
-		<div class="col col-xs-6 text-center">Ripple: {{Auth::user()->userWallet->xrp}} </div>
-	</div>
-</div>
-@endif
+
