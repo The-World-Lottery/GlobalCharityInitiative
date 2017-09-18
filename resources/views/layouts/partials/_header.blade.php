@@ -32,30 +32,20 @@
 	</div>
 </div>
 
-<div class="w3-sidebar w3-bar-block w3-black">
+<div class="w3-sidebar w3-bar-block" style="background-color: rgba(0,0,0,0);">
 	<a class="w3-bar-item w3-button" id="white" href="{{action('TheWorldLotterysController@index')}}">The World Lottery</a>
 	<button onclick="myFunction('Demo1')" class="w3-button w3-block w3-left-align">Games</button>
-	<div id="Demo1" class="w3-bar-block w3-hide  w3-card-4">
+	<div id="Demo1" class="w3-bar-block w3-hide  w3-card-4 w3-animate-zoom">
 	<a class="w3-bar-item w3-button" id="white" href="{{action('LotteriesController@index')}}">Lottos</a>
 	<a class="w3-bar-item w3-button" id="white" href="{{action('RafflesController@index')}}">Raffles</a>
 	</div>
 	<a class="w3-bar-item w3-button" id="white" href="{{action('CurrencyConversionController@index')}}">Currency Conversions</a>
 	<a class="w3-bar-item w3-button" id="white" href="{{action('SuggestionsController@index')}}">Suggestion Box</a>
 	<a class="w3-bar-item w3-button" id="white" href="{{action('AboutUsController@index')}}">About Us</a>
-  
-</div>
-
 @if(Auth::check() && Auth::user()->is_admin)
-<div>
-
-    Admin Functions:
-      <ul  class="">
-		<li><a class="" id="white" href="{{action('LotteriesController@adminIndex')}}">Manage Lotteries</a></li>
-		<li><a class="" id="white" href="{{action('RafflesController@adminIndex')}}">Manage Raffles</a></li>
-		<li><a class="" id="white" href="{{action('UsersController@index')}}">Manage Users</a></li>
-		<li><a class="" id="white" href="{{action('SuggestionsController@adminIndex')}}">Manage Suggestions</a></li>
-      </ul>
-
-</div>
-   
+  	<a class="w3-bar-item w3-button" id="white" href="{{action('LotteriesController@adminIndex')}}">Manage Lotteries</a>
+		<a class="w3-bar-item w3-button" id="white" href="{{action('RafflesController@adminIndex')}}">Manage Raffles</a>
+		<a class="w3-bar-item w3-button" id="white" href="{{action('UsersController@index')}}">Manage Users</a>
+		<a class="w3-bar-item w3-button" id="white" href="{{action('SuggestionsController@adminIndex')}}">Manage Suggestions</a>
 @endif
+</div>
