@@ -32,13 +32,7 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="w3-sidebar w3-light-grey w3-card-2" style="width:200px">
-  	<a href="#" class="w3-bar-item w3-button">The World Lottery</a> 
-  	<button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">Games</button>
-  	<div id="demoAcc" class="w3-bar-block w3-hide w3-white w3-card-4">
-    <a href="#" class="w3-bar-item w3-button">Link</a>
-    <a href="#" class="w3-bar-item w3-button">Link</a>
-  	</div>
+    
       <ul style="display:flex;justify-content:space-around;" class="nav navbar-nav">
 		<li><a class="navLink btn-custom" id="white" href="{{action('TheWorldLotterysController@index')}}">The World Lottery</a></li>
 		<li><a class="navLink btn-custom" id="white" href="{{action('LotteriesController@index')}}">Lottos</a></li>
@@ -53,7 +47,7 @@
 		@endif
       </ul>
 
-    </div><!-- /.navbar-collapse -->
+   <!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 

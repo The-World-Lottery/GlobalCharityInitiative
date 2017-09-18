@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="background-color: black">
 <head>
 	<title>Welcome!</title>
 	<meta charset="utf-8">
@@ -10,24 +10,23 @@
 	{{-- <link rel="stylesheet" href="/theWorldLottery.css"> --}}
 	<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
 </head>
-	<body>
-	<div id="splashCont" style="opacity:1;color:white">
-		<div style="position:relative;height:100vh;background-color:black;z-index:10;position:fixed;width:100%;opacity:1;">
-			<div style="position:absolute;top:20%;min-height:50vh;min-width:50vh;margin-left:5%;z-index:20;text-align:center;">
-				<h1 style="text-align:center;font-family: 'Racing Sans One', cursive;color:lightblue;font-size:5em;">The World Lottery</h1>
-				<p class="splashPar">ALL proceeds go to selected charities, human interest projectsand TWL staff, development, maintenence and security.</p>
-				<a class="navLink" href="{{action('LotteriesController@index')}}"><button id="splashButton" style="margin:3em 0 3em 0;width:100%;height:2em;color:lightgreen;border:3px solid lightgreen;border-radius:2em;text-align:center;font-size:2em;background-color:rgba(0,0,0,0);">Click here to enter site</button></a>
-				<p class="splashPar">We're trying to save the World.
-				You can bet on that. =)</p>
-			</div>
-
-			<video style="position:absolute;right:6%;top:10%;" poster="IMGS/magnifyingGlass.png" autoplay="autoplay" muted="muted" loop="loop">
-	            <source src="/images/earth.mp4" type="video/mp4">     
+	<body class="container-fluid" style="width:110%;height:120%;margin-top:-10vh;padding:0;">
+			<video style="width:110%;height:120%;position:fixed;z-index:-10;" poster="IMGS/magnifyingGlass.png" autoplay="autoplay" muted="muted" loop="loop">
+	            <source src="/images/earth2.mp4" type="video/mp4">     
 	        </video>
-
-			<div style="position:absolute;bottom:2%;width:100%;padding:0 5em 0 5em;">
-			    <div style="margin:auto;" id="random_quote"></div>
+	<div id="splashCont" style="opacity:1;color:white;">
+		<div style="position:relative;height:100vh;z-index:10;position:fixed;width:100%;opacity:1;top:20%;width:100%;z-index:10;">
+			<div style="min-height:50vh;width:100%;z-index:20;text-align:center;">
+				<h1 style="font-family: 'Racing Sans One', cursive;color:lightblue;font-size:5em;">The World Lottery For Charity</h1>
+				<p class="splashPar">ALL proceeds go to selected charities, human interest projectsand TWL staff, development, maintenence and security.</p>
+				<form action="{{action('LotteriesController@index')}}"><button class="navLink" id="splashButton" style="margin:2em 0 3em 0;width:70%;height:2em;color:lightgreen;border:3px solid lightgreen;border-radius:2em;text-align:center;font-size:2em;background-color:rgba(0,0,0,0);">Click here to enter site</button></form>
 			</div>
+				
+			<div style="z-index:30;width:100%;">
+			    <div style="background-color:rgba(0,0,0,.4);padding:1em;margin:auto;" id="random_quote"></div>
+			</div>
+
+
 		</div>
 	</div>
 <script

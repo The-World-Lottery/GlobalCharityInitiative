@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\User;
-
+use App\Models\Suggestion;
 class SuggestionsTableSeeder extends Seeder
 {
     /**
@@ -12,21 +12,21 @@ class SuggestionsTableSeeder extends Seeder
      */
     public function run()
     {
-        $suggestions = [];
+        
+        $suggestion = new Suggestion();
+        $suggestion->title = "Adding comments on suggestions.";
+        $suggestion->content ="Hey there; I was just thinking it would be nice for your users to be able to comment on the suggestions in the suggestion box.";
+        $suggestion->user_id = User::all()->random()->id;
+        $suggestion->addressed = 0;
+        $suggestion->save();
 
-        $faker = Faker\Factory::create();
-
-        for ($i = 1; $i <= 10; $i++)
-        {
-            $suggestions[] = [
-                'title'=> $faker->catchPhrase,
-                'content'=> $faker->text,
-                'created_at'=> $faker->dateTime(),
-                'updated_at'=> $faker->dateTime(),
-                'user_id' => User::all()->random()->id,
-                'addressed' => 0
-            ];
-        }
-        DB::table('suggestions')->insert($suggestions);
+        $suggestion2 = new Suggestion();
+        $suggestion2->title = "Yall should look into Hilarity for Charity.";
+        $suggestion2->content ="An up and coming charity is called Hilarity for Charity. The work with several different organizations that do direct charity work.";
+        $suggestion2->user_id = User::all()->random()->id;
+        $suggestion2->addressed = 0;
+        $suggestion2->save();
+    
+        
     }
 }

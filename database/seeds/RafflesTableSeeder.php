@@ -30,7 +30,7 @@ class RafflesTableSeeder extends Seeder
             $raffle->save();
         }
         
-        $j = 15;
+        $j = 19;
         
         $raffle1= new \App\Models\Raffle();
         $raffle1->title = 'A Day With Samuel L. Jackson';
@@ -51,11 +51,11 @@ class RafflesTableSeeder extends Seeder
         $raffle2->save();
 
         $raffle3= new \App\Models\Raffle();
-        $raffle3->title = 'A Day With Emma Watson';
+        $raffle3->title = 'Music Video Appearance';
         $raffle3->content = 'The World Lottery Foundation';
-        $raffle3->product ='Emma Watson has put aside a day to the winner shadow him on the set of Harry Potter 12';
+        $raffle3->product ='Justin Beiber has offered to include one fan in his next music videos';
         $raffle3->end_date = date("Y-m-") . ($j + 2) ." 12:00:00";
-        $raffle3->img = "/images/emma.jpg";
+        $raffle3->img = "/images/justin.png";
         $raffle3->user_id = 1;
         $raffle3->save();
 

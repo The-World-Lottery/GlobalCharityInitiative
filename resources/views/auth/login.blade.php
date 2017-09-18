@@ -25,12 +25,12 @@
             {!! csrf_field() !!}
             <div style="margin-top:5em;" class="row">
                 <div class="form-group col col-sm-6 col-xs-12">
-                    <label>Email</label>
+                    <label><h2>Email</h2></label>
                     {!! $errors->first('email', '<span class="help-block">:message</span>')!!}
                     <input class="form-control" type="email" name="email" value="{{ old('email') }}">
                 </div>
                 <div class="form-group col col-sm-6 col-xs-12">
-                    <label>Password</label>
+                    <label><h2>Password</h2></label>
                     {!! $errors->first('password', '<span class="help-block">:message</span>')!!}
                     <input class="form-control" type="password" name="password" id="password">
                 </div>

@@ -15,8 +15,15 @@ body {
 	color:#00ffc4;
 }
 
+#backgroundPic {
+	position:fixed;
+	height:100%;
+	width:100%;
+}
+
 html {
-	background-image:url("images/earthAtNight.jpg");
+	height:100vh;
+	/*background-image:url("images/earthAtNight.jpg");
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;
@@ -25,11 +32,12 @@ html {
 	padding:0;
 	position: relative;
 	padding-bottom: 6rem;
-	min-height: 100%;
+	min-height: 100%;*/
 }
 
 a {
 	color:lightblue;
+	text-decoration: underline;
 }
 #clock{
 	font-size: 20px;
@@ -51,11 +59,18 @@ a {
 
 .borderOpac {
 	/*all main area borders*/
-	border:1px solid white;
-	background-color:rgba(255,255,255,.2);
+	/*border:1px solid white;*/
+	/*background-color:rgba(255,255,255,.2);*/
 	border-radius: 1.5em;
 	margin-bottom: 1vh;
 	margin-top: 1vh;
+}
+
+.navbar-collapse>ul>li>a {
+	border: 2px solid white;
+	border-radius:3em;
+	margin:0;
+	text-align:center;
 }
 
 #head, #footer {
@@ -68,15 +83,106 @@ a {
 }
 
 .navLink {
-	padding-top:1em;
+	padding-top:.2em;
 	padding-bottom: 1em;
 	margin-right: 1em;
 	margin-left: 1em;
 }
-#mainNav {
-	margin:0;
-	border:0;
+
+#raffleCont{
+	position:relative;
+	color:white;
+	background-position:center;
+	background-size:110% 110%;
+	text-align:center;
+	/*max-width:31.3%;*/
+	/*float:left;*/
+	border-radius:1em;
+	height:25vh;
+	padding:0em 1em 1em 1em ;
+	margin:1%;
+	overflow:hidden;
 }
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+	float:left;
+	margin:1.5vw;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 75vw;
+	height: 25vh;
+	text-align:center;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+.btn {
+	font-size: 1em;
+}
+
+.indivLottoCont{
+position:relative;
+background-position:center;
+background-size:110% 110%;
+text-align:center;
+width:100%;
+float:left;
+border:1px solid white;
+border-radius:1em;
+height:9.5em;
+padding:1em 1em 1em 0em ;
+margin:1%;
+overflow:hidden;
+background-color:rgba(255,255,255,.08);
+}
+
+.indivLottoCont::hover{
+	background-color:rgba(255,255,255,.5);
+
+}
+
+#main {
+	height:100%;
+
+	}
+
+	#random_quote {
+		margin:0px;
+	}
 
  /*content right side*/
 	.gameAndChatInfo {
@@ -94,11 +200,13 @@ a {
 		border-radius:0 0 1.5em 1.5em;
 	}
 .splashPar {
-	font-size:1em;
+	font-size:1.5em;
 }
 
 .raffleContent {
-	opacity:0;
+	/*opacity:0;*/
+	color:white;
+	margin-top:25%;
 }
 
 .raffleContent:hover {
@@ -149,11 +257,20 @@ ul.pagination {
 }
 
 .img-circle {
-	height:3em;
-	width:3em;
+	display:flex;
+	justify-content: center;
+	width:100%;
 	margin-top: 1em;
 	margin-bottom: 1em;
-	float:right;
+	height:8em;
+}
+
+#profImg {
+	border-radius: 15em;
+}
+
+#profImg:hover {
+	border-radius: 1em;
 }
 
 .commentSpacing{
@@ -170,7 +287,6 @@ tr {
 }
 
 .headUN {
-	float:right;
 	margin-top: 3em;
 	margin-bottom: 1%;
 	margin-left: 1em;
@@ -218,11 +334,65 @@ select {
 	margin-right:1em;
 }
 
-@media screen and (max-width: 768px) {
+a:hover{color:yellow;}
 
-	.col-sm-4 {
-	  	padding:0;
+@media screen and (min-width: 768px) {
+
+	#gameArea {
+		margin-left: 21.2vw;
+		width:52.6vw;
+
 	}
+
+	#main {
+		position:fixed;left:0;
+		max-height:100vh;
+		width:20%;
+		/*background-color:#2a6969;*/
+		background-color:rgba(0,0,0,.4);
+		font-size:1em;
+	}
+
+	.chatInfoContSpacing {
+		position:fixed;right:0;
+		padding-right:0;
+		height:100vh;
+		border-left:1px solid white;
+
+	}
+	.chatInfoMargins {
+		padding-right:2em;
+		margin-right:-1.1vw;
+
+	}
+
+	#chat {
+		padding-right:0;
+		margin-left:-.6em;
+	}
+
+	#backgroundPic {
+		/*padding-left: 15vw;*/
+	}
+
+	.flip-container, .front, .back {
+		width: 21.75vw;
+		height: 25vh;
+		text-align:center;
+	}
+
+	.indivLottoCont{
+		width:48%
+	}
+
+	#googlepos {
+		position:absolute;bottom:0;right:25%;
+	}
+
+	.walletPadding {
+		margin:.1em;
+	}
+
 
 
 
