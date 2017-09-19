@@ -18,18 +18,9 @@
 	<div class="container-fluid" >
 		<div style="" class="row">
 			<div style="" id="main" class="col col-xs-12 col-sm-3">
-				@include('layouts.partials._header')
-				
+				@include('layouts.partials._header')	
 			</div>
 			<div style="clear:left;" class="col col-sm-6 col-xs-12 borderOpac gameAndChatInfo" id="gameArea">
-
-			
-
-			
-
-
-
-
 				<div class="areaHeader">@yield('divHead')</div>
 				<div>
 					@yield('content')
