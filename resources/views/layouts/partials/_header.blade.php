@@ -1,3 +1,4 @@
+
 <div class="row" id="header">
 	<div class="col col-xs-12 borderOpac" id="head">
 	<div id="googlepos" style="width:100%;display:flex;justify-content:center;">
@@ -41,6 +42,7 @@
 			<a style="border-radius:1em;font-size:1.4em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('LotteriesController@index')}}">Lotteries</a>
 			<a style="border-radius:1em;font-size:1.4em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('RafflesController@index')}}">Raffles</a>
 		{{-- 	</div> --}}
+
 			<a style="border-radius:1em;font-size:1.4em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('CurrencyConversionController@index')}}">Currency Conversions</a>
 			<a style="border-radius:1em;font-size:1.4em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('SuggestionsController@index')}}">Suggestion Box</a>
 			<a style="border-radius:1em;font-size:1.4em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('AboutUsController@index')}}">About Us</a>
