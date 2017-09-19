@@ -1,9 +1,15 @@
 
 body {
 	color:#e0fff8;
-	background-color:rgba(0,0,0,0);
+	background-color:#1d5c92;
 	font-size:1.7em;
-	
+	font-family: 'PT Sans Narrow', sans-serif !important; 
+	letter-spacing:1px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'PT Sans Narrow', sans-serif !important; 
+	letter-spacing:2px;
 }
 
 ::-webkit-input-placeholder {
@@ -168,7 +174,7 @@ float:left;
 border:1px solid white;
 border-radius:1em;
 height:8em;
-padding:1em 1em .5em 0em ;
+padding:.7em .5em .5em 0em ;
 margin:1%;
 overflow:hidden;
 background-color:rgba(255,255,255,.08);
@@ -310,7 +316,7 @@ img {
 }
 
 #headLogo {
-	margin-top: 10px;
+	margin-top: 2em;
 }
 
 #checkWrapper {
@@ -356,6 +362,12 @@ a:hover, a:active {color:lightgreen;}
 	display:hidden;
 }
 
+#googlepos {
+	/*position:absolute;bottom:0;right:15%;*/
+	background-color:#1d5c92;
+	padding:1em 0 1em 0;
+	border-radius: .5em;
+}
 
 @media screen and (min-width: 768px) {
 
@@ -397,7 +409,7 @@ a:hover, a:active {color:lightgreen;}
 
 	#chat {
 		padding-right:0;
-		margin-left:-.6em;
+		/*margin-left:-.6em;*/
 		height:100vh;
 	}
 
@@ -416,9 +428,6 @@ a:hover, a:active {color:lightgreen;}
 
 	}
 
-	#googlepos {
-		/*position:absolute;bottom:0;right:15%;*/
-	}
 
 	.walletPadding {
 		margin:.1em;

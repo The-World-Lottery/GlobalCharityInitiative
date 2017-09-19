@@ -10,11 +10,12 @@
 	<link rel="stylesheet" type="text/css" href="/main.css">
 	{{-- <link rel="stylesheet" href="/theWorldLottery.css"> --}}
 	<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
-<body style="font-family: 'Roboto';letter-spacing:1px;">
-<img id="backgroundPic" style="opacity:.81;height:100%;width:100%;" src="/images/earthAtNight.jpg">
+<body style="">
+{{-- <img id="backgroundPic" style="opacity:.41;height:100%;width:100%;" src="/images/earthAtNight.jpg"> --}}
 	<div class="container-fluid" >
 		<div style="" class="row">
 			<div style="" id="main" class="col col-xs-12 col-sm-3">
@@ -22,9 +23,10 @@
 			</div>
 			<div style="clear:left;font-size:1.5em" class="col col-sm-6 col-xs-12 borderOpac gameAndChatInfo" id="gameArea">
 				<div class="areaHeader">@yield('divHead')</div>
+				<div style="padding-right: .5em;">
 				@if(\Auth::check())
 					<div id="walletTrigger" style="color:lightgreen;margin:0;padding:0;width:100%;text-align:right;">
-					Your Wallets
+					<img style="height:1.3em;width:1.3em;" src="/images/wallet.png"> Your Wallets
 					</div>
 					<div class="walletShow" hidden style="width:100%;display:hidden;background-color:rgba(0,0,0,.4);margin:0;padding:0;"><div style="display:flex;justify-content: space-around;">
 						<div class="walletPadding text-center">USD <br>${{number_format(Auth::user()->userWallet->usd,"2",".",",")}} </div>
@@ -55,6 +57,7 @@
 					</div>
 					</div>
 				@endif
+				</div>
 				<div>
 					@yield('content')
 				</div>
