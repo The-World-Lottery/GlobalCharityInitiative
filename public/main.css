@@ -370,6 +370,10 @@ a:hover, a:active {color:lightgreen;}
 	border-radius: .5em;
 }
 
+input, button {
+	outline:none;
+}
+
 @media screen and (min-width: 768px) {
 
 
@@ -392,8 +396,10 @@ a:hover, a:active {color:lightgreen;}
 		/*background-color:#2a6969;*/
 		background-color:rgba(0,0,0,.6);
 		font-size:1em;
-		overflow: scroll;
+		/*overflow: scroll;*/
 	}
+
+
 
 	.chatInfoContSpacing {
 		position:fixed;
