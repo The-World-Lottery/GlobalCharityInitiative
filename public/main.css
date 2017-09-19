@@ -163,8 +163,8 @@ width:100%;
 float:left;
 border:1px solid white;
 border-radius:1em;
-height:9.5em;
-padding:1em 1em 1em 0em ;
+height:8em;
+padding:1em 1em .5em 0em ;
 margin:1%;
 overflow:hidden;
 background-color:rgba(255,255,255,.08);
@@ -196,7 +196,7 @@ background-color:rgba(255,255,255,.08);
 	}
 
 	#info {
-		max-height:15vh;
+		max-height:10vh;
 		border-radius:0 0 1.5em 1.5em;
 	}
 .splashPar {
@@ -354,7 +354,7 @@ a:hover{color:yellow;}
 		max-height:100vh;
 		width:20%;
 		/*background-color:#2a6969;*/
-		background-color:rgba(0,0,0,.4);
+		background-color:rgba(0,0,0,.6);
 		font-size:1em;
 	}
 
@@ -389,7 +389,8 @@ a:hover{color:yellow;}
 	}
 
 	.indivLottoCont{
-		width:48%
+		width:48%;
+
 	}
 
 	#googlepos {
@@ -399,6 +400,8 @@ a:hover{color:yellow;}
 	.walletPadding {
 		margin:.1em;
 	}
+
+
 
 
 

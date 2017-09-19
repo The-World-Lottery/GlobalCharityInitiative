@@ -83,7 +83,6 @@
 							<div class="creatorsSocialIcons"><a target="_blank" href="https://github.com/emmettpeters"><img src="/images/ghIcon.png"></a></div>
 							<div class="creatorsSocialIcons"><a target="_blank" href="https://www.linkedin.com/in/emmett-peters/"><img src="/images/liIcon.png"></a></div>
 						</div><br>
-						<p>"A wise man speaks beacuse he has something to say, a fool because he has to say something."</p>
 					</div>
 					<div class="col col-sm-4 col-xs-12" >
 					<h4>Avery</h4>

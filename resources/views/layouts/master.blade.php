@@ -14,33 +14,24 @@
 
 </head>
 <body style="font-family: 'Roboto';letter-spacing:1px;">
-<img id="backgroundPic" style="opacity:1;height:100%;width:100%;" src="/images/earthAtNight.jpg">
+<img id="backgroundPic" style="opacity:.81;height:100%;width:100%;" src="/images/earthAtNight.jpg">
 	<div class="container-fluid" >
 		<div style="" class="row">
 			<div style="" id="main" class="col col-xs-12 col-sm-3">
-				@include('layouts.partials._header')
-				
+				@include('layouts.partials._header')	
 			</div>
-			<div style="clear:left;" class="col col-sm-6 col-xs-12 borderOpac gameAndChatInfo" id="gameArea">
-
-			
-
-			
-
-
-
-
+			<div style="clear:left;font-size:1.5em" class="col col-sm-6 col-xs-12 borderOpac gameAndChatInfo" id="gameArea">
 				<div class="areaHeader">@yield('divHead')</div>
 				<div>
 					@yield('content')
 				</div>
 			</div>
-			<div style="background-color:rgba(0,0,0,.4);" class="col col-sm-3 col-xs-12 gameAndChatInfo chatInfoContSpacing">
+			<div style="background-color:rgba(0,0,0,.6);" class="col col-sm-3 col-xs-12 gameAndChatInfo chatInfoContSpacing">
 				<div class="chatInfoMargins borderOpac" id="chat">
 					{{-- <div class="areaHeaders">
 						Chat
 					</div> --}}
-					<div style="overflow-y:scroll;height:75vh;">
+					<div style="overflow-y:scroll;height:79vh;">
 					@foreach(\App\Models\UserComment::orderBy('created_at','desc')->limit(60)->get() as $comment)
 					<span style="padding-left:.5em;"><u style="color:lightgreen;">{{ \App\User::select('username')->where('id',$comment->user_id )->get()[0]['username']}}-</u></span>
 					<span class="commentSpacing" style="padding-left:.2em;">{{$comment->content}}</span><br>
@@ -57,7 +48,7 @@
 						<h3 style="color:lightgreen">World Lottery Jackpot is <br>(USD) ${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}
 						</h3>
 						<h4 class="countdown">
-		  					World Lottery Drawing in:
+		  					Drawing in:
 		  					<span id="clock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
 						</h4>
 						{{-- <p><strong>Registered Accounts:</strong> {{ \App\User::count()}}</p>
