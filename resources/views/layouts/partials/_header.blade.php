@@ -37,18 +37,18 @@
 		<div class=" w3-bar-block" style="background-color: rgba(0,0,0,0);">
 			{{-- <button onclick="myFunction('Demo1')" style="text-align:center;" class="w3-button w3-block w3-left-align">Games</button>
 			<div id="Demo1" class="w3-bar-block w3-hide  w3-card-4 w3-animate-zoom"> --}}
-			<a style="text-align:center;" class="w3-bar-item w3-button" id="white" href="{{action('TheWorldLotterysController@index')}}">The World Lottery</a>
-			<a style="text-align:center;" class="w3-bar-item w3-button" id="white" href="{{action('LotteriesController@index')}}">Lotteries</a>
-			<a style="text-align:center;" class="w3-bar-item w3-button" id="white" href="{{action('RafflesController@index')}}">Raffles</a>
+			<a style="text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('TheWorldLotterysController@index')}}">The World Lottery</a>
+			<a style="text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('LotteriesController@index')}}">Lotteries</a>
+			<a style="text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('RafflesController@index')}}">Raffles</a>
 		{{-- 	</div> --}}
-			<a style="text-align:center;" class="w3-bar-item w3-button" id="white" href="{{action('CurrencyConversionController@index')}}">Currency Conversions</a>
-			<a style="text-align:center;" class="w3-bar-item w3-button" id="white" href="{{action('SuggestionsController@index')}}">Suggestion Box</a>
-			<a style="text-align:center;" class="w3-bar-item w3-button" id="white" href="{{action('AboutUsController@index')}}">About Us</a>
+			<a style="text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('CurrencyConversionController@index')}}">Currency Conversions</a>
+			<a style="text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('SuggestionsController@index')}}">Suggestion Box</a>
+			<a style="text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('AboutUsController@index')}}">About Us</a>
 		@if(Auth::check() && Auth::user()->is_admin)
-		  	<a style="text-align:center;" class="w3-bar-item w3-button" id="white" href="{{action('LotteriesController@adminIndex')}}">Manage Lotteries</a>
-				<a style="text-align:center;" class="w3-bar-item w3-button" id="white" href="{{action('RafflesController@adminIndex')}}">Manage Raffles</a>
-				<a style="text-align:center;" class="w3-bar-item w3-button" id="white" href="{{action('UsersController@index')}}">Manage Users</a>
-				<a style="text-align:center;" class="w3-bar-item w3-button" id="white" href="{{action('SuggestionsController@adminIndex')}}">Manage Suggestions</a>
+		  	<a style="text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('LotteriesController@adminIndex')}}">Manage Lotteries</a>
+				<a style="text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('RafflesController@adminIndex')}}">Manage Raffles</a>
+				<a style="text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('UsersController@index')}}">Manage Users</a>
+				<a style="text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('SuggestionsController@adminIndex')}}">Manage Suggestions</a>
 		@endif
 		</div>
 	</div>

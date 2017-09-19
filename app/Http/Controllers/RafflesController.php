@@ -28,7 +28,7 @@ class RafflesController extends Controller
             $q = $request->q;
             $raffles = Raffle::search($q);    
         } else {
-            $raffles = Raffle::with('user')->where('end_date','>',\Carbon\Carbon::now())->paginate(6);  
+            $raffles = Raffle::with('user')->where('end_date','>',\Carbon\Carbon::now())->orderBy('end_date','asc')->paginate(16);  
         }
         
 
