@@ -11,7 +11,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
 </head>
 	<body class="container-fluid" style="width:110%;height:120%;margin-top:-10vh;padding:0;">
-			<video style="width:110%;height:120%;position:fixed;z-index:-10;" poster="IMGS/magnifyingGlass.png" autoplay="autoplay" muted="muted" loop="loop">
+			<video style="width:110%;height:120%;position:fixed;z-index:1;opacity:.75;" poster="IMGS/magnifyingGlass.png" autoplay="autoplay" muted="muted" loop="loop">
 	            <source src="/images/earth2.mp4" type="video/mp4">     
 	        </video>
 	<div id="splashCont" style="opacity:1;color:white;">

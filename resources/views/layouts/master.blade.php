@@ -26,7 +26,7 @@
 				<div style="padding-right: .5em;">
 				@if(\Auth::check())
 					<div id="walletTrigger" style="color:lightgreen;margin:0;padding:0;width:100%;text-align:right;">
-					<img style="height:1.3em;width:1.3em;" src="/images/wallet.png"> Your Wallets
+					<img style="height:1.3em;width:1.3em;margin-bottom:.5em;" src="/images/wallet.png"> Your Wallets
 					</div>
 					<div class="walletShow" hidden style="width:100%;display:hidden;background-color:rgba(0,0,0,.4);margin:0;padding:0;"><div style="display:flex;justify-content: space-around;">
 						<div class="walletPadding text-center">USD <br>${{number_format(Auth::user()->userWallet->usd,"2",".",",")}} </div>
@@ -55,7 +55,7 @@
 						<div class="walletPadding text-center">Bitcoin Cash<br>{{number_format(Auth::user()->userWallet->bch,"2",".",",")}} </div>
 						<div class="walletPadding text-center">Ripple<br>{{number_format(Auth::user()->userWallet->xrp,"2",".",",")}} </div>
 					</div>
-					</div>
+					</div><br>
 				@endif
 				</div>
 				<div>

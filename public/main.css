@@ -165,19 +165,19 @@ a {
 }
 
 .indivLottoCont{
-position:relative;
-background-position:center;
-background-size:110% 110%;
-text-align:center;
-width:100%;
-float:left;
-border:1px solid white;
-border-radius:1em;
-height:8em;
-padding:.7em .5em .5em 0em ;
-margin:1%;
-overflow:hidden;
-background-color:rgba(255,255,255,.08);
+	position:relative;
+	background-position:center;
+	background-size:110% 110%;
+	text-align:center;
+	width:100%;
+	float:left;
+	border:1px solid white;
+	border-radius:1em;
+	height:9em;
+	padding:.3em .5em .5em 0em ;
+	margin:1%;
+	overflow:hidden;
+	background-color:rgba(255,255,255,.08);
 }
 
 .indivLottoCont::hover{
@@ -259,7 +259,8 @@ ul.pagination {
 }
 
 .suggHead {
-	margin-top: 0;
+	margin-top: 1em;
+	text-decoration:underline;
 }
 
 .aboutUs {

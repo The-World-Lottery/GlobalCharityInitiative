@@ -18,11 +18,11 @@
 		<div style="padding-top: 0;">
 		<h1>{{$raffle['title']}}</h1>
 			<div class="countdown"><h2>
-				The Drawing ends in : 
+				This Drawing ends in : 
 				<span class="raffleClock" data-clock-id="{{$raffle->end_date}}"></span>
 				</h2>
 			</div>
-		<div id="showProfImg" style="display:flex;justify-content:center;width:100%;"><img style="width:18em;border-radius:1em;" src={!! $raffle->img !!}></div>
+		<div style="display:flex;justify-content:center;"><img style="height:15em;border-radius:1em;" src={!! $raffle->img !!}></div>
 		<h3>{{$raffle['content']}}</h3>
 		{{-- <p>By: {{$raffle->user->name}}</p> --}}
 		{{-- <p>Posted On: {{$raffle->created_at}}</p> --}}
@@ -32,7 +32,7 @@
 
 		<form action="{{ action('RafflesController@addUserToEntries', $raffle->id) }}">
 			
-			<h5 style="color:yellow;font-size:2em;">What currency would you like to purchase a ticket with?</h5>
+			<h5 style="color:yellow;font-size:1.5em;">What currency would you like to purchase a ticket with?</h5>
 			<select name="currency">
 				<option value="usd">Dollars</option>
 				<option value="eur">Euros</option>
@@ -55,13 +55,15 @@
 			<input hidden id="usdETH" name="ethConv">
 			<input hidden id="usdDoge" name="dogeConv">
 			<input hidden id="usdBCH" name="bchConv">
-			<input hidden id="usdXRP" name="xrpConv"><br>
-			<button type="submit" class="btn btn-primary">BUY TICKET!!!</button>
+			<input hidden id="usdXRP" name="xrpConv"><br><br>
+			<button type="submit" class="btn btn-success">BUY TICKET!!!</button>
 		
 		</form>
+		
+		<br>
 
 		@if (Auth::check() && Auth::user()->is_admin)
-		<a href="{{ action('RafflesController@edit', $raffle->id) }}">Edit</a>
+		<a href="{{ action('RafflesController@edit', $raffle->id) }}"><button class="btn btn-warning">Edit</button></a>
 		@endif
 		</div>
 

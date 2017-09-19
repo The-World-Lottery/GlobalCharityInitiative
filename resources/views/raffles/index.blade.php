@@ -15,7 +15,7 @@
 
 @section('content')
 	
-	<main class="container" style="max-width:100%;float:left;">
+	<main class="container" style="max-width:100%;">
 	
             
 
