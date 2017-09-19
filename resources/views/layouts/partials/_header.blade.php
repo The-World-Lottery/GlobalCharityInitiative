@@ -36,12 +36,11 @@
 	<div class="col col-xs-12">
 
 		<div class=" w3-bar-block" style="background-color: rgba(0,0,0,0);">
-			{{-- <button onclick="myFunction('Demo1')" style="text-align:center;" class="w3-button w3-block w3-left-align">Games</button>
-			<div id="Demo1" class="w3-bar-block w3-hide  w3-card-4 w3-animate-zoom"> --}}
+		
 			<a style="border-radius:1em;font-size:1.4em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('TheWorldLotterysController@index')}}">The World Lottery</a>
 			<a style="border-radius:1em;font-size:1.4em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('LotteriesController@index')}}">Lotteries</a>
 			<a style="border-radius:1em;font-size:1.4em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('RafflesController@index')}}">Raffles</a>
-		{{-- 	</div> --}}
+	
 
 			<a style="border-radius:1em;font-size:1.4em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('CurrencyConversionController@index')}}">Currency Conversions</a>
 			<a style="border-radius:1em;font-size:1.4em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('SuggestionsController@index')}}">Suggestion Box</a>
