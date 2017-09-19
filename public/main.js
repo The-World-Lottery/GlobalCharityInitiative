@@ -191,6 +191,11 @@ $(document).ready(function(){
 	    $('#hoverSumm').fadeOut();
 	});
 
+	// hover for wallets
+	 $('#walletTrigger').click(function(){
+    	$('.walletShow').slideToggle();
+	})
+
 		
 
 

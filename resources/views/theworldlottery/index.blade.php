@@ -21,9 +21,9 @@
 			<div><h2 style="color:#00ffc4;">Drawing takes place in: <span class="worldLottoClock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
 				</div> </h2>
 			
-			<h4 style="font-size:4em;color:lightgreen;"><strong >Current Pot: <br>$</strong> {{number_format($theWorldLottery->current_value,2,".",",")}}</h4>
+			<h4 id="jackpot" style="color:lightgreen;"><strong >Jackpot</strong><br>$ {{number_format($theWorldLottery->current_value,2,".",",")}}</h4>
 			{{-- <h4><strong>Starting Pot : $</strong> {{number_format($theWorldLottery->init_value,2,".",",")}}</h4> --}}
-			<h4><strong>Lotto Ends On: </strong> {{$theWorldLottery->end_date}}</h4>
+			{{-- <h4><strong>Lotto Ends On: </strong> {{$theWorldLottery->end_date}}</h4> --}}
 			
 
 
