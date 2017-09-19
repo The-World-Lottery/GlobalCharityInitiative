@@ -1,5 +1,5 @@
 <div class="row" id="header">
-	<div id="googlepos" style="background-color:#161554;width:100%;display:flex;justify-content:center;">
+	<div id="googlepos" style="background-color:#c0bfff;width:100%;display:flex;justify-content:center;">
 		<div>
 			<div style="color:white;" id="google_translate_element"></div><script type="text/javascript">
 			function googleTranslateElementInit() {

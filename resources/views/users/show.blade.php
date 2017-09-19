@@ -12,7 +12,7 @@
 	<main class="container" style="max-width:100%;display:flex;justify-content: center;">
 	<div>
 		<div class="row"  style="text-align:center;padding-top:0;">
-	@if(Auth::check())
+	{{-- @if(Auth::check())
 			<h3>Your Wallets</h3>
 				<div style="width:100%;display:flex;justify-content:space-around;background-color:rgba(0,0,0,.4);margin:0;padding:0;">
 					<div class="col walletPadding text-center">USD <br>${{number_format(Auth::user()->userWallet->usd,"2",".",",")}} </div>
@@ -22,7 +22,11 @@
 				
 				
 					<div class="col walletPadding text-center">Pounds<br>{{number_format(Auth::user()->userWallet->gbp,"2",".",",")}} </div>
+					
 					<div class="col walletPadding text-center">Franks<br>{{number_format(Auth::user()->userWallet->chf,"2",".",",")}} </div>
+				</div>
+				<br>
+				<div style="width:100%;display:flex;justify-content:space-around;background-color:rgba(0,0,0,.4);margin:0;padding:0;">
 				
 				
 					<div class="col walletPadding text-center">Bitcoin<br>{{number_format(Auth::user()->userWallet->btc,"2",".",",")}} </div>
@@ -36,7 +40,7 @@
 					<div class="col walletPadding text-center">Bitcoin Cash<br>{{number_format(Auth::user()->userWallet->bch,"2",".",",")}} </div>
 					<div class="col walletPadding text-center">Ripple<br>{{number_format(Auth::user()->userWallet->xrp,"2",".",",")}} </div>
 				</div>
-			@endif
+			@endif --}}
 			<br>
 			<div class="col col-sm-8 col-sm-offset-2">
 				<div id="showProfImg"><img src='{{$user->image}}' id="profImg"></div><br>

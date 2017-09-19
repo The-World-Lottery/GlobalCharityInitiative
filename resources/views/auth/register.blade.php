@@ -8,8 +8,8 @@
 
 @section('divHead')
 <ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
-  <li ><a href="{{action('Auth\AuthController@getLogin')}}">Login</a></li>
-  <li class="active"><a href="{{action('Auth\AuthController@getRegister')}}">Register</a></li>
+  <li ><a id="zeroO" href="{{action('Auth\AuthController@getLogin')}}">Login</a></li>
+  <li class="active"><a  id="zeroO"  href="{{action('Auth\AuthController@getRegister')}}">Register</a></li>
 </ul>
 @stop
 
