@@ -356,6 +356,7 @@ a:hover{color:yellow;}
 		/*background-color:#2a6969;*/
 		background-color:rgba(0,0,0,.4);
 		font-size:1em;
+		overflow: scroll;
 	}
 
 	.chatInfoContSpacing {

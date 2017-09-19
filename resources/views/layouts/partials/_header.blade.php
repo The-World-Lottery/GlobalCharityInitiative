@@ -1,4 +1,4 @@
-<div class="row" id="header">
+<div class="row" id="header" style="overflow: scroll;">
 	<div class="col col-xs-12 borderOpac" id="head">
 		<div class="row">
 			<div id="googlepos" style="background-color:#161554;width:100%;display:flex;justify-content:center;">
