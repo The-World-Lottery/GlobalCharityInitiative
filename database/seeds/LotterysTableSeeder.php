@@ -15,20 +15,21 @@ class LotterysTableSeeder extends Seeder
         $day = 19;
 
         for($i = 0;$i <= 23;$i++) {
-
+            for($x = 0;$x <= 6;$x++){
        	$lottery = new \App\Models\Lottery();
         $lottery->title = 'Lottery #'.$i;
         $lottery->content = $quoteArr[array_rand($quoteArr)];
         $lottery->init_value = 1000 * $i + 1000;
         $lottery->current_value = 1000 * $i + 1000;
         if($i < 9){
-        	$lottery->end_date = date("Y-m-"). $day .' 0'. $i .':00:00';
+        	$lottery->end_date = date("Y-m-"). $day .' 0'. $i .':'.$x.'0:00';
     	}
     	else{
-    		$lottery->end_date = date("Y-m-"). $day . ' ' . $i .':00:00';
+    		$lottery->end_date = date("Y-m-"). $day . ' ' . $i .':'.$x.'0:00';
     	}
         $lottery->user_id = 1;
         $lottery->save();
     	}
+        }
     }
 }
