@@ -49,6 +49,23 @@ class RafflesTableSeeder extends Seeder
         $raffle2->img = "/images/corvette.png";
         $raffle2->user_id = 1;
         $raffle2->save();
+        $raffle10= new \App\Models\Raffle();
+        $raffle10->title = 'Trip to Fiji (for 5)';
+        $raffle10->content = 'TWL Foundation';
+        $raffle10->product ='Radisson Blu Resort Fiji Denarau Island has donated an all expense paid, 5 day trip.';
+        $raffle10->end_date = date("Y-m-") . ($j + 2) ." 12:00:02";
+        $raffle10->img = "/images/fiji.jpg";
+        $raffle10->user_id = 1;
+        $raffle10->save();
+
+        $raffle11= new \App\Models\Raffle();
+        $raffle11->title = 'Blue Chrome Nissan GT-R';
+        $raffle11->content = 'TWL Foundation';
+        $raffle11->product ='Nissan has donated one of their new gt-rs to be auctioned off';
+        $raffle11->end_date = date("Y-m-") . ($j + 3) ." 12:01:00";
+        $raffle11->img = "/images/nissan.jpg";
+        $raffle11->user_id = 1;
+        $raffle11->save();
 
         $raffle3= new \App\Models\Raffle();
         $raffle3->title = 'Music Video Appearance';
@@ -87,13 +104,41 @@ class RafflesTableSeeder extends Seeder
         $raffle6->save();
 
         $raffle7= new \App\Models\Raffle();
-        $raffle7->title = 'Tesla Sport';
-        $raffle7->content = 'Tesla Foundation';
-        $raffle7->product ='Tesla had donated their newest sportscar model';
-        $raffle7->end_date = date("Y-m-") . ($j + 6) ." 12:00:00";
-        $raffle7->img = "/images/tesla.png";
+        $raffle7->title = 'CodeUp Bootcamp Entry';
+        $raffle7->content = 'TWL Foundation';
+        $raffle7->product ='CodeUp has donated one entry into their next Java class. Valued at $22,500.00';
+        $raffle7->end_date = date("Y-m-") . ($j + 7) ." 12:00:00";
+        $raffle7->img = "/images/codeup.jpg";
         $raffle7->user_id = 1;
         $raffle7->save();
+
+        $raffle8= new \App\Models\Raffle();
+        $raffle8->title = 'All expense paid trip to Hawaii';
+        $raffle8->content = 'TWL Foundation';
+        $raffle8->product ='A five night stay at Ko"a Kea Hotel Resort at Poipu Beach';
+        $raffle8->end_date = date("Y-m-") . ($j + 8) ." 12:00:00";
+        $raffle8->img = "/images/hawaii.png";
+        $raffle8->user_id = 1;
+        $raffle8->save();
+
+        $raffle8= new \App\Models\Raffle();
+        $raffle8->title = 'KISS Ticket & Backstage Pass (x4)';
+        $raffle8->content = 'TWL Foundation';
+        $raffle8->product ='Kiss has donated 4 all access passes for their next show in Washington. Transport provided as well.';
+        $raffle8->end_date = date("Y-m-") . ($j + 9) ." 12:00:00";
+        $raffle8->img = "/images/kiss.jpg";
+        $raffle8->user_id = 1;
+        $raffle8->save();
+
+        $raffle9= new \App\Models\Raffle();
+        $raffle9->title = 'KB Homes House';
+        $raffle9->content = 'TWL Foundation';
+        $raffle9->product ='KB Homes has donated a fully built house valued at $260,000, in Austin, Texas';
+        $raffle9->end_date = date("Y-m-") . ($j + 10) ." 12:00:00";
+        $raffle9->img = "/images/home.jpg";
+        $raffle9->user_id = 1;
+        $raffle9->save();
+
 
 
     }

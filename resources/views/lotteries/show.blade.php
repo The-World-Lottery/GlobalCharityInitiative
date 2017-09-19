@@ -25,10 +25,10 @@
 				</h2>
 			</div>
 		
-			<div><strong>Human Comment:<br> </strong>"{{$lottery->content}}"</div>
+			{{-- <div><strong>Human Comment:<br> </strong>"{{$lottery->content}}"</div> --}}
 			<form action="{{ action('LotteriesController@addUserToEntries', $lottery->id) }}">
 		
-				<h5 style="color:yellow;font-size:2em;">What currency would you like to purchase a ticket with?</h5>
+				<h5 style="color:yellow;font-size:1.5em;">What currency would you like to purchase a ticket with?</h5>
 				<select name="currency">
 					<option value="usd">Dollars</option>
 					<option value="eur">Euros</option>
@@ -52,7 +52,7 @@
 				<input hidden id="usdDoge" name="dogeConv">
 				<input hidden id="usdBCH" name="bchConv">
 				<input hidden id="usdXRP" name="xrpConv"><br>
-				<button type="submit" class="btn btn-primary">BUY TICKET!!!</button>
+				<button type="submit" class="btn btn-success">BUY TICKET!!!</button>
 			</form>
 			<br>
 
