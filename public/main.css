@@ -37,7 +37,7 @@ html {
 
 a {
 	color:lightblue;
-	text-decoration: underline;
+	/*text-decoration: underline*/;
 }
 #clock{
 	font-size: 20px;
@@ -177,6 +177,7 @@ background-color:rgba(255,255,255,.08);
 
 #main {
 	height:100%;
+	background-color:rgba(0,0,0,.6);
 
 	}
 
@@ -193,6 +194,7 @@ background-color:rgba(255,255,255,.08);
 		/*min-height:70vh;
 		max-height:75vh;*/
 		border-radius:1.5em 1.5em 0 0;
+		margin-right:-.8em;
 	}
 
 	#info {
@@ -335,7 +337,20 @@ select {
 	margin-right:1em;
 }
 
-a:hover{color:yellow;}
+a:hover, a:active {color:lightgreen;}
+
+#jackpot {
+	font-size:2em;
+}
+
+#zeroO {
+	background-color:rgba(0,0,0,0);
+	color:lightgreen;
+}
+
+.walletShow {
+	display:hidden;
+}
 
 
 @media screen and (min-width: 768px) {
@@ -347,6 +362,10 @@ a:hover{color:yellow;}
 		width:52.6vw;
 
 	}
+
+	#jackpot {
+	font-size:4em;
+}
 
 
 	#main {

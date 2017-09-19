@@ -9,9 +9,9 @@
 @section('divHead')
 
 <ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
-  <li class="active"><a data-toggle="tab" href="#home">Our Mission</a></li>
-  <li><a data-toggle="tab" href="#menu1">About The World Lottery</a></li>
-  <li><a data-toggle="tab" href="#menu2">The Creators</a></li>
+  <li class="active"><a  id="zeroO"  data-toggle="tab" href="#home">Our Mission</a></li>
+  <li><a  id="zeroO"  data-toggle="tab" href="#menu1">About The World Lottery</a></li>
+  <li><a  id="zeroO"  data-toggle="tab" href="#menu2">The Creators</a></li>
 </ul>
 
 @stop

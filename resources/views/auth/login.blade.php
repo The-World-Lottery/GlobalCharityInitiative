@@ -8,8 +8,8 @@
 
 @section('divHead')
 <ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
-  <li class="active"><a href="{{action('Auth\AuthController@getLogin')}}">Login</a></li>
-  <li><a href="{{action('Auth\AuthController@getRegister')}}">Register</a></li>
+  <li class="active"><a id="zeroO" href="{{action('Auth\AuthController@getLogin')}}">Login</a></li>
+  <li><a id="zeroO" href="{{action('Auth\AuthController@getRegister')}}">Register</a></li>
 </ul>
 @stop
 
@@ -23,7 +23,7 @@
 
         <form method="POST" action="/auth/login">
             {!! csrf_field() !!}
-            <div style="margin-top:5em;" class="row">
+            <div style="margin-top:10em;" class="row">
                 <div class="form-group col col-sm-6 col-xs-12">
                     <label><h2>Email</h2></label>
                     {!! $errors->first('email', '<span class="help-block">:message</span>')!!}
