@@ -11,7 +11,7 @@ class RafflesTableSeeder extends Seeder
      */
     public function run()
     {
-    	for($i = 0;$i <= 20;$i++) 
+    	for($i = 0;$i <= 12;$i++) 
         {
            	$raffle= new \App\Models\Raffle();
             $raffle->title = 'Raffle #'. $i;
@@ -36,7 +36,7 @@ class RafflesTableSeeder extends Seeder
         $raffle1->title = 'A Day With Samuel L. Jackson';
         $raffle1->content = 'Hilarity for Charity';
         $raffle1->product ='Samuel L. Jackson has put aside a day to the winner shadow him on the set of Avengers 4';
-        $raffle1->end_date = date("Y-m-") . $j ." 12:00:00";
+        $raffle1->end_date = date("Y-m-") . ($j + 2)." 12:00:00";
         $raffle1->img = "/images/samuel.jpg";
         $raffle1->user_id = 1;
         $raffle1->save();

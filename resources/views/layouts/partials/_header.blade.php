@@ -37,19 +37,19 @@
 
 		<div class=" w3-bar-block" style="background-color: rgba(0,0,0,0);">
 		
-			<a style="border-radius:1em;font-size:1.4em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('TheWorldLotterysController@index')}}">The World Lottery</a>
-			<a style="border-radius:1em;font-size:1.4em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('LotteriesController@index')}}">Lotteries</a>
-			<a style="border-radius:1em;font-size:1.4em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('RafflesController@index')}}">Raffles</a>
+			<a style="border-radius:1em;font-size:1.25em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('TheWorldLotterysController@index')}}">The World Lottery</a>
+			<a style="border-radius:1em;font-size:1.25em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('LotteriesController@index')}}">Lotteries</a>
+			<a style="border-radius:1em;font-size:1.25em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('RafflesController@index')}}">Raffles</a>
 	
 
-			<a style="border-radius:1em;font-size:1.4em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('CurrencyConversionController@index')}}">Currency Conversions</a>
-			<a style="border-radius:1em;font-size:1.4em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('SuggestionsController@index')}}">Suggestion Box</a>
-			<a style="border-radius:1em;font-size:1.4em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('AboutUsController@index')}}">About Us</a>
+			<a style="border-radius:1em;font-size:1.25em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('CurrencyConversionController@index')}}">Currency Conversions</a>
+			<a style="border-radius:1em;font-size:1.25em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('SuggestionsController@index')}}">Suggestion Box</a>
+			<a style="border-radius:1em;font-size:1.25em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('AboutUsController@index')}}">About Us</a>
 		@if(Auth::check() && Auth::user()->is_admin)
-		  	<a style="border-radius:1em;font-size:1.4em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('LotteriesController@adminIndex')}}">Manage Lotteries</a>
-				<a style="border-radius:1em;font-size:1.4em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('RafflesController@adminIndex')}}">Manage Raffles</a>
-				<a style="border-radius:1em;font-size:1.4em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('UsersController@index')}}">Manage Users</a>
-				<a style="border-radius:1em;font-size:1.4em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('SuggestionsController@adminIndex')}}">Manage Suggestions</a>
+		  	<a style="border-radius:1em;font-size:1.25em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('LotteriesController@adminIndex')}}">Manage Lotteries</a>
+				<a style="border-radius:1em;font-size:1.25em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('RafflesController@adminIndex')}}">Manage Raffles</a>
+				<a style="border-radius:1em;font-size:1.25em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('UsersController@index')}}">Manage Users</a>
+				<a style="border-radius:1em;font-size:1.25em;text-align:center;" class="w3-hover-blue w3-bar-item w3-button" id="white" href="{{action('SuggestionsController@adminIndex')}}">Manage Suggestions</a>
 		@endif
 		</div>
 	</div>
