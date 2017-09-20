@@ -18,7 +18,7 @@
 		<div style="position:relative;height:100vh;z-index:10;position:fixed;width:100%;opacity:1;top:20%;width:100%;z-index:10;">
 			<div style="min-height:50vh;width:100%;z-index:20;text-align:center;">
 				<h1 style="font-family: 'Racing Sans One', cursive;color:lightblue;font-size:5em;">The World Lottery For Charity</h1>
-				<p class="splashPar">ALL proceeds go to selected charities, human interest projectsand TWL staff, development, maintenence and security.</p>
+				<p class="splashPar">ALL proceeds go to selected charities, human interest projects and TWL staff, development, maintenence and security.</p>
 				<form action="{{action('RafflesController@index')}}"><button class="navLink" id="splashButton" style="margin:2em 0 3em 0;width:70%;height:2em;color:lightgreen;border:3px solid lightgreen;border-radius:2em;text-align:center;font-size:2em;background-color:rgba(0,0,0,0);">Click here to enter site</button></form>
 			</div>
 				
