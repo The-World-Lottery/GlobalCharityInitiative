@@ -38,7 +38,7 @@ table, th, td {
 	@foreach($users as $user)
 			<tr>
 				
-				<td><a class="btn btn-primary btn-xs" href="{{action('UsersController@show',$user->id)}}" >Edit</a></td>
+				<td><a class="btn btn-success btn-xs" href="{{action('UsersController@show',$user->id)}}" >Edit</a></td>
 				<td>{{$user->name}}</td>
 				<td>{{$user->username}}</td>
 				<td>{{$user->email}}</td>
@@ -51,8 +51,8 @@ table, th, td {
 				@endif
 				@if(Auth::user()->is_super_admin)
 					<td>
-						<a class="btn btn-block btn-primary btn-xs" href="{{action('UsersController@makeAdmin',$user->id)}}" >+ Admin Rights</a>
-						<a class="btn btn-block btn-primary btn-xs" href="{{action('UsersController@destroyAdmin',$user->id)}}">- Admin Rights</a>
+						<a class="btn btn-block btn-success btn-xs" href="{{action('UsersController@makeAdmin',$user->id)}}" >+ Admin Rights</a>
+						<a class="btn btn-block btn-success btn-xs" href="{{action('UsersController@destroyAdmin',$user->id)}}">- Admin Rights</a>
 					</td>
 				@endif
 			</tr>

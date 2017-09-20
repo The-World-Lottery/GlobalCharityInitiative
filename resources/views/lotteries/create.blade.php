@@ -35,7 +35,7 @@
 			<textarea class="form-control" type="text" name="content" id="content" placeholder="content">{{ old('content') }}</textarea><br>
 
 
-			<button class="btn btn-primary">Submit</button>
+			<button class="btn btn-success">Submit</button>
 		</form>
 	</main>
 @stop

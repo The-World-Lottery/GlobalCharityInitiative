@@ -38,7 +38,7 @@ table, th, td {
 			<tr>
 				
 				<td>
-					<a class="btn btn-primary btn-sm" href="{{action('SuggestionsController@show',$suggestion->id)}}">Edit</a>
+					<a class="btn btn-success btn-sm" href="{{action('SuggestionsController@show',$suggestion->id)}}">Edit</a>
 				</td>
 				<td>{{$suggestion->title}}</td>
 				<td>{{$suggestion->content}}</td>
@@ -52,8 +52,8 @@ table, th, td {
 				<td>N</td>
 				@endif
 				<td>
-					<a class="btn btn-block btn-primary" href="{{action('SuggestionsController@closeAddress',$suggestion->id)}}" >Close</a>
-					<a class="btn btn-block btn-primary" href="{{action('SuggestionsController@openAddress',$suggestion->id)}}">Reopen</a>
+					<a class="btn btn-block btn-success" href="{{action('SuggestionsController@closeAddress',$suggestion->id)}}" >Close</a>
+					<a class="btn btn-block btn-success" href="{{action('SuggestionsController@openAddress',$suggestion->id)}}">Reopen</a>
 				</td>
 			</tr>
 	@endforeach
