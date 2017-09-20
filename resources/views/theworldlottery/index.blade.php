@@ -28,7 +28,7 @@
 
 
 
-			<a href="{{ action('TheWorldLotterysController@addUserToEntries', $theWorldLottery->id) }}"><button class="btn btn-primary">BUY TICKET!!!</button></a><br><br>
+			<a href="{{ action('TheWorldLotterysController@addUserToEntries', $theWorldLottery->id) }}"><button class="btn btn-success">BUY TICKET!!!</button></a><br><br>
 
 			@if ((Auth::check()) && (Auth::user()->is_admin))
 			  <a href="{{ action('TheWorldLotterysController@edit', $theWorldLottery->id) }}"><button class="btn btn-warning">Edit</button></a>
