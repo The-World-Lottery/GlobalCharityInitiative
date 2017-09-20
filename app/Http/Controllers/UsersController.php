@@ -119,7 +119,7 @@ class UsersController extends Controller
             $comment->user_id = \Auth::id();
             $comment->content = $request->input('comment');
             $comment->save();
-            return \Redirect::action('LotteriesController@index');
+            return \Redirect::action('RafflesController@index');
         } else {
              $request->session()->flash('errorMessage', 'You must be LOGGED IN to comment in chat!');
             return \Redirect::action('Auth\AuthController@getLogin');
