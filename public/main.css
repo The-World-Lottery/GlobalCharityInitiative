@@ -374,6 +374,10 @@ input, button {
 	outline:none;
 }
 
+main.container {
+	overflow:scroll;
+}
+
 @media screen and (min-width: 768px) {
 
 

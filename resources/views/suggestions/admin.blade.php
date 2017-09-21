@@ -26,7 +26,7 @@ table, th, td {
 			<tr>
 				<th>Edit</th>
 				<th>Title</th>
-				<th>Content</th>
+				{{-- <th>Content</th> --}}
 				<th>User Name</th>
 				<th>Votes</th>
 				<th>Created At</th>
@@ -41,7 +41,7 @@ table, th, td {
 					<a class="btn btn-success btn-sm" href="{{action('SuggestionsController@show',$suggestion->id)}}">Edit</a>
 				</td>
 				<td>{{$suggestion->title}}</td>
-				<td>{{$suggestion->content}}</td>
+				{{-- <td>{{$suggestion->content}}</td> --}}
 				<td>{{$suggestion->user->name}}</td>
 				<td>#</td>
 				<td>{{$suggestion->created_at}}</td>
