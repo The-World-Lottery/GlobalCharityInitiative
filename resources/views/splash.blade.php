@@ -10,12 +10,12 @@
 	{{-- <link rel="stylesheet" href="/theWorldLottery.css"> --}}
 	<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
 </head>
-	<body class="container-fluid" style="width:110%;height:120%;margin-top:-10vh;padding:0;">
+	<body class="container-fluid" style="width:100%;height:120%;margin-top:-10vh;padding:0;">
 			<video style="width:110%;height:120%;position:fixed;z-index:10;opacity:.75;" poster="IMGS/magnifyingGlass.png" autoplay="autoplay" muted="muted" loop="loop">
 	            <source src="/images/earth2.mp4" type="video/mp4">     
 	        </video>
 	<div id="splashCont" style="opacity:1;color:white;">
-		<div style="position:relative;height:100vh;z-index:10;position:fixed;width:100%;opacity:1;top:20%;width:100%;z-index:10;">
+		<div style="position:relative;height:100vh;z-index:10;position:fixed;width:100%;opacity:1;top:20%;z-index:10;">
 			<div style="min-height:50vh;width:100%;z-index:20;text-align:center;">
 				<h1 style="font-family: 'Racing Sans One', cursive;color:lightblue;font-size:5em;">The World Lottery For Charity</h1>
 				<p class="splashPar">ALL proceeds go to selected charities, human interest projects and TWL staff, development, maintenence and security.</p>

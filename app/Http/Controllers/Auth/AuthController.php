@@ -32,8 +32,8 @@ class AuthController extends Controller
 
      */
 
-    protected $redirectPath = "/lotteries";
-    protected $redirectAfterLogout = "/lotteries";
+    protected $redirectPath = "/raffles";
+    protected $redirectAfterLogout = "/raffles";
 
 
     public function __construct()
