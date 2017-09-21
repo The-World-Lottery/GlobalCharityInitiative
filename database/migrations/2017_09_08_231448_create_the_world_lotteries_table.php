@@ -16,8 +16,8 @@ class CreateTheWorldLotteriesTable extends Migration
             $table->string('title');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->decimal('init_value');
-            $table->decimal('current_value');
+            $table->decimal('init_value',20,6);
+            $table->decimal('current_value',20,6);
             $table->timestamps();
             $table->dateTime('end_date');
         });

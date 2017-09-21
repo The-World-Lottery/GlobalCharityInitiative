@@ -374,7 +374,7 @@ input, button {
 	outline:none;
 }
 
-main.container {
+.adminTables {
 	overflow:scroll;
 }
 

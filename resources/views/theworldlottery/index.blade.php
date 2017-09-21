@@ -23,7 +23,8 @@
 			
 			<h4 id="jackpot" style="color:lightgreen;"><strong >Jackpot</strong><br>$ {{number_format($theWorldLottery->current_value,2,".",",")}}</h4>
 			{{-- <h4><strong>Starting Pot : $</strong> {{number_format($theWorldLottery->init_value,2,".",",")}}</h4> --}}
-			{{-- <h4><strong>Lotto Ends On: </strong> {{$theWorldLottery->end_date}}</h4> --}}
+			{{-- <h4><strong>Lotto Ends On: </strong> {{$theWorldLottery->end_date}}</h4> --}} 
+			
 			
 
 

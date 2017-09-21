@@ -15,8 +15,8 @@ class TheWorldLotteriesTableSeeder extends Seeder
    
        	$theWorldLottery = new \App\Models\TheWorldLottery();
         $theWorldLottery->title = 'TheWorldLottery';
-        $theWorldLottery->init_value = 100000;
-        $theWorldLottery->current_value = 100000;
+        $theWorldLottery->init_value = 10000000000;
+        $theWorldLottery->current_value = 10000000000;
         $theWorldLottery->end_date = date("Y-m_d", time()+86400);
         $theWorldLottery->user_id = 1;
         $theWorldLottery->save();
