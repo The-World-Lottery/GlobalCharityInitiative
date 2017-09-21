@@ -52,7 +52,7 @@ table, th, td {
 				@if(Auth::user()->is_super_admin)
 					<td>
 						<a class="btn btn-block btn-success btn-xs" href="{{action('UsersController@makeAdmin',$user->id)}}" >+ Admin Rights</a>
-						<a class="btn btn-block btn-success btn-xs" href="{{action('UsersController@destroyAdmin',$user->id)}}">- Admin Rights</a>
+						<a class="btn btn-block btn-danger btn-xs" href="{{action('UsersController@destroyAdmin',$user->id)}}">- Admin Rights</a>
 					</td>
 				@endif
 			</tr>
