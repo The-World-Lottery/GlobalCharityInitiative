@@ -122,7 +122,7 @@ a {
 .flip-container {
 	perspective: 1000px;
 	float:left;
-	margin:1.5vw;
+	margin:1.7vw;
 }
 	/* flip the pane when hovered */
 	.flip-container:hover .flipper, .flip-container.hover .flipper {
@@ -146,7 +146,6 @@ a {
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
-
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -445,7 +444,7 @@ input, button {
 
 	.flip-container, .front, .back {
 		width: 33vw;
-		height: 10em;
+		height: 37vh;
 		text-align:center;
 	}
 

@@ -18,11 +18,11 @@
 {{-- <img id="backgroundPic" style="opacity:.41;height:100%;width:100%;" src="/images/earthAtNight.jpg"> --}}
 	<div class="container-fluid" style="padding:0;">
 		<div style="width:100%;" class="row">
-			<div style="z-index:10em;" id="main" class="col col-xs-12">
+			<div style="z-index:10;" id="main" class="col col-xs-12">
 				@include('layouts.partials._header')	
 			</div>
 		</div>
-		<div class="row">
+		<div style="z-index:0;" class="row">
 			<div style="clear:left;font-size:1.5em;margin-top: 3em;" class="col col-sm-9 col-xs-12 borderOpac gameAndChatInfo" id="gameArea">
 				<div class="areaHeader">@yield('divHead')</div>
 				<div style="padding-right: .5em;">
