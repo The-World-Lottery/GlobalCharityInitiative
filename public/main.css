@@ -377,7 +377,7 @@ a:hover, a:active {color:lightgreen;}
 
 #googlepos {
 	/*position:absolute;bottom:0;right:15%;*/
-	background-color:#1d5c92;
+	/*background-color:#1d5c92;*/
 	padding:1em 0 1em 0;
 	border-radius: .5em;
 }

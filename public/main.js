@@ -185,11 +185,9 @@ $(document).ready(function(){
     },1000);
 
     //hover for summaries
-    $('#hoverTrigger').mouseenter(function(){
-    	$('#hoverSumm').fadeIn();
-	}).mouseleave(function(){
-	    $('#hoverSumm').fadeOut();
-	});
+    $('#hoverTrigger').click(function(){
+    	$('#hoverSumm').slideToggle();
+	})
 
 	// hover for wallets
 	 $('#walletTrigger').click(function(){

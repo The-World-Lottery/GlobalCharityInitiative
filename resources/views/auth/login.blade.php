@@ -23,19 +23,21 @@
 
         <form method="POST" action="/auth/login">
             {!! csrf_field() !!}
-            <div style="margin-top:10em;" class="row">
-                <div class="form-group col col-sm-6 col-xs-12">
+            <div style="margin-top:3em;" class="row">
+                <div class="form-group col col-sm-6 col-sm-offset-3 col-xs-12">
                     <label><h2>Email</h2></label>
                     {!! $errors->first('email', '<span class="help-block">:message</span>')!!}
                     <input class="form-control" type="email" name="email" value="{{ old('email') }}">
                 </div>
-                <div class="form-group col col-sm-6 col-xs-12">
+            </div>
+            <div class="row">
+                <div class="form-group col col-sm-6 col-sm-offset-3 col-xs-12">
                     <label><h2>Password</h2></label>
                     {!! $errors->first('password', '<span class="help-block">:message</span>')!!}
                     <input class="form-control" type="password" name="password" id="password">
                 </div>
             </div>
-            <div class="form-group">
+            <div class=" col-sm-offset-5 form-group">
                 <input type="checkbox" name="remember"> Remember Me
             </div>
             <div class="form-group" style="display:flex;justify-content: center;">

@@ -15,7 +15,7 @@
 
 </head>
 <body style="">
-{{-- <img id="backgroundPic" style="opacity:.41;height:100%;width:100%;" src="/images/earthAtNight.jpg"> --}}
+<img id="backgroundPic" style="opacity:.31;height:100%;width:100%;" src="/images/earthAtNight.jpg">
 	<div class="container-fluid" style="padding:0;">
 		<div style="width:100%;" class="row">
 			<div style="z-index:10;" id="main" class="col col-xs-12">
