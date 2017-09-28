@@ -15,17 +15,17 @@
 
 </head>
 <body style="">
-{{-- <img id="backgroundPic" style="opacity:.41;height:100%;width:100%;" src="/images/earthAtNight.jpg"> --}}
-	<div class="container-fluid" >
-		<div style="" class="row">
-			<div style="" id="main" class="col col-xs-12 col-sm-3">
+<img id="backgroundPic" style="opacity:.31;height:100%;width:100%;" src="/images/earthAtNight.jpg">
+	<div class="container-fluid" style="padding:0;">
+		<div style="width:100%;" class="row">
+			<div style="z-index:10;" id="main" class="col col-xs-12">
 				@include('layouts.partials._header')	
 			</div>
-			<div style="clear:left;font-size:1.5em" class="col col-sm-6 col-xs-12 borderOpac gameAndChatInfo" id="gameArea">
-				<div class="areaHeader">@yield('divHead')</div>
-				<div style="padding-right: .5em;">
+		</div>
+		<div style="z-index:0;" class="row">
+			<div style="clear:left;font-size:1.5em;margin-top: 3em;" class="col col-sm-9 col-xs-12 borderOpac gameAndChatInfo" id="gameArea">
 				@if(\Auth::check())
-					<div id="walletTrigger" style="color:lightgreen;margin:0;padding:0;width:100%;text-align:right;">
+					<div id="walletTrigger" style="color:lightgreen;margin:0;padding:0;width:100%;text-align:center;">
 					<img style="height:1.3em;width:1.3em;margin-bottom:.5em;" src="/images/wallet.png"> Your Wallets
 					</div>
 					<div class="walletShow" hidden style="border-radius:1em 1em 0 0;width:100%;display:hidden;background-color:rgba(0,0,0,.4);margin:0;">
@@ -58,17 +58,20 @@
 					</div>
 					</div><br>
 				@endif
-				</div>
+				<div class="areaHeader">@yield('divHead')</div>
+				
+			
 				<div>
 					@yield('content')
 				</div>
+				
 			</div>
-			<div style="background-color:rgba(0,0,0,.6);" class="col col-sm-3 col-xs-12 gameAndChatInfo chatInfoContSpacing">
+			<div style="background-color:rgba(0,0,0,.6);position:fixed;right:0;" class="col col-sm-3 col-xs-12 gameAndChatInfo chatInfoContSpacing">
 				<div class="chatInfoMargins borderOpac" id="chat">
 					{{-- <div class="areaHeaders">
 						Chat
 					</div> --}}
-					<div style="overflow-y:scroll;height:79vh;">
+					<div style="overflow-y:scroll;height:75vh;">
 					@foreach(\App\Models\UserComment::orderBy('created_at','asc')->limit(60)->get() as $comment)
 					<span style="padding-left:.5em;"><u style="color:lightgreen;">{{ \App\User::select('username')->where('id',$comment->user_id )->get()[0]['username']}}-</u></span>
 					<span class="commentSpacing" style="padding-left:.2em;">{{$comment->content}}</span><br>

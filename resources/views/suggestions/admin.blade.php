@@ -38,7 +38,9 @@ table, th, td {
 			<tr>
 				
 				<td>
-					<a class="btn btn-success btn-sm" href="{{action('SuggestionsController@show',$suggestion->id)}}">Edit</a>
+
+					<a class="btn btn-success" href="{{action('SuggestionsController@show',$suggestion->id)}}">Edit</a>
+
 				</td>
 				<td>{{$suggestion->title}}</td>
 				{{-- <td>{{$suggestion->content}}</td> --}}
