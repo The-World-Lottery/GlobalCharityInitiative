@@ -20,7 +20,7 @@ table, th, td {
 
 @section('content')
 
-	<main class="container table-responsive" style="max-width:100%;float:left;">
+	<main class="container table-responsive adminTables" style="max-width:100%;float:left;">
 
 		<table class="table table-condensed">
 			<tr>
@@ -51,7 +51,9 @@ table, th, td {
 				@endif
 				@if(Auth::user()->is_super_admin)
 					<td>
+
 						<a class="btn btn-block btn-primary btn-xs" href="{{action('UsersController@makeAdmin',$user->id)}}" >+ Admin Rights</a>
+
 						<a class="btn btn-block btn-danger btn-xs" href="{{action('UsersController@destroyAdmin',$user->id)}}">- Admin Rights</a>
 					</td>
 				@endif

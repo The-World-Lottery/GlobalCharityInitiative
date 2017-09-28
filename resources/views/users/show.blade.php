@@ -47,7 +47,7 @@
 			<div>
 
 				@if(Auth::id() == $user->id)
-				<a href="{{action('Auth\AuthController@getLogout')}}"><button class="btn btn-primary">Logout</button></a>
+				<a href="{{action('Auth\AuthController@getLogout')}}"><button class="btn btn-success">Logout</button></a>
 				@endif
 				</div>
 				<div>

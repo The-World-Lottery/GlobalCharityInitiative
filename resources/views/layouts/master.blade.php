@@ -28,7 +28,7 @@
 					<div id="walletTrigger" style="color:lightgreen;margin:0;padding:0;width:100%;text-align:center;">
 					<img style="height:1.3em;width:1.3em;margin-bottom:.5em;" src="/images/wallet.png"> Your Wallets
 					</div>
-					<div class="walletShow" hidden style="width:100%;display:hidden;background-color:rgba(0,0,0,.4);margin:0;">
+					<div class="walletShow" hidden style="border-radius:1em 1em 0 0;width:100%;display:hidden;background-color:rgba(0,0,0,.4);margin:0;">
 						<div style="padding-left:3em;display:flex;justify-content:space-around;">
 							<div class="walletPadding text-center">USD <br>${{number_format(Auth::user()->userWallet->usd,"2",".",",")}} </div>
 						
@@ -42,7 +42,7 @@
 						<br>
 						</div>
 					</div>
-					<div class="walletShow" hidden style="width:100%;display:hidden;justify-content:space-around;background-color:rgba(0,0,0,.4);margin:0;padding:0;"><div style="display:flex;justify-content: space-around;">
+					<div class="walletShow" hidden style="border-radius:0 0 1em 1em ;width:100%;display:hidden;justify-content:space-around;background-color:rgba(0,0,0,.4);margin:0;padding:0;"><div style="display:flex;justify-content: space-around;">
 					
 					
 						<div class="walletPadding text-center">Bitcoin<br>{{number_format(Auth::user()->userWallet->btc,"2",".",",")}} </div>
@@ -109,14 +109,14 @@
 	<script src="https://static.filestackapi.com/v3/filestack.js"></script>
 	<script src="/main.js" type="text/javascript"></script>
 	<script>
-	function myFunction(id) {
-    var x = document.getElementById(id);
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else { 
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
+		function myFunction(id) {
+	    var x = document.getElementById(id);
+	    if (x.className.indexOf("w3-show") == -1) {
+	        x.className += " w3-show";
+	    } else { 
+	        x.className = x.className.replace(" w3-show", "");
+	    }
+	}
+	</script>
 </body>
 </html>

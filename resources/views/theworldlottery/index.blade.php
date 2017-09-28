@@ -23,12 +23,13 @@
 			
 			<h4 id="jackpot" style="color:lightgreen;"><strong >Jackpot</strong><br>$ {{number_format($theWorldLottery->current_value,2,".",",")}}</h4>
 			{{-- <h4><strong>Starting Pot : $</strong> {{number_format($theWorldLottery->init_value,2,".",",")}}</h4> --}}
-			{{-- <h4><strong>Lotto Ends On: </strong> {{$theWorldLottery->end_date}}</h4> --}}
+			{{-- <h4><strong>Lotto Ends On: </strong> {{$theWorldLottery->end_date}}</h4> --}} 
+			
 			
 
 
 
-			<a href="{{ action('TheWorldLotterysController@addUserToEntries', $theWorldLottery->id) }}"><button class="btn btn-primary">BUY TICKET!!!</button></a><br><br>
+			<a href="{{ action('TheWorldLotterysController@addUserToEntries', $theWorldLottery->id) }}"><button class="btn btn-success">BUY TICKET!!!</button></a><br><br>
 
 			@if ((Auth::check()) && (Auth::user()->is_admin))
 			  <a href="{{ action('TheWorldLotterysController@edit', $theWorldLottery->id) }}"><button class="btn btn-warning">Edit</button></a>

@@ -19,7 +19,7 @@ table, th, td {
 
 @section('content')
 
-	<main class="container" style="max-width:100%;float:left;">
+	<main class="container adminTables" style="max-width:100%;float:left;">
 
 	<span><a class="btn btn-block btn-success" href="{{action('RafflesController@create')}}" >Create New Raffle</a></span>
 	<span style="float:right;padding-right:1em;">{!! $raffles->appends(Request::except('page'))->render() !!}</span>
@@ -28,7 +28,7 @@ table, th, td {
 				<th>Edit</th>
 				<th>ID</th>
 				<th>Description</th>
-				<th>Product</th>
+				{{-- <th>Product</th> --}}
 				<th>Created By</th>
 				<th>Created At</th>
 				<th>Updated At</th>
@@ -43,7 +43,7 @@ table, th, td {
 				</td>
 				<td>{{$raffle->id}}</td>
 				<td>{{$raffle->content}}</td>
-				<td>{{$raffle->product}}</td>
+				{{-- <td>{{$raffle->product}}</td> --}}
 				<td>{{$raffle->user->name}}</td>
 				<td>{{$raffle->created_at->diffForHumans()}}</td>
 				<td>{{$raffle->updated_at->diffForHumans()}}</td>

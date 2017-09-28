@@ -95,7 +95,7 @@
 						</div>
 						<p></p>
 					</div> 	
-					<div class="col col-sm-4 col-xs-12" style="padding-right:1em;">
+					<div class="col col-sm-4 col-xs-12" style="">
 					<h4>Cody</h4>
 						<img src="/images/Cody.jpg">
 						<br>

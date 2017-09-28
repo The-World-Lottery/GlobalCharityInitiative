@@ -225,7 +225,7 @@ a {
 .raffleContent {
 	/*opacity:0;*/
 	color:white;
-	margin-top:25%;
+	margin-top:15%;
 }
 
 .raffleContent:hover {
@@ -329,7 +329,7 @@ img {
 }
 
 #headLogo {
-	margin-top: 2em;
+	margin-top: 1em;
 }
 
 #checkWrapper {
@@ -384,6 +384,10 @@ a:hover, a:active {color:lightgreen;}
 
 input, button {
 	outline:none;
+}
+
+.adminTables {
+	overflow:scroll;
 }
 
 @media screen and (min-width: 768px) {

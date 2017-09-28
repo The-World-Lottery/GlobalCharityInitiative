@@ -14,10 +14,11 @@ class LotterysTableSeeder extends Seeder
 
         $day = 29;
 
+
         for($i = 0;$i <= 23;$i++) {
             for($x = 0;$x <= 6;$x++){
        	$lottery = new \App\Models\Lottery();
-        $lottery->title = 'Lottery #'.$i;
+        $lottery->title = 'Daily Lottery';
         $lottery->content = $quoteArr[array_rand($quoteArr)];
         $lottery->init_value = 1000 * $i + 1000;
         $lottery->current_value = 1000 * $i + 1000;

@@ -51,7 +51,7 @@
 				<input hidden id="usdETH" name="ethConv">
 				<input hidden id="usdDoge" name="dogeConv">
 				<input hidden id="usdBCH" name="bchConv">
-				<input hidden id="usdXRP" name="xrpConv"><br>
+				<input hidden id="usdXRP" name="xrpConv"><br><br>
 				<button type="submit" class="btn btn-success">BUY TICKET!!!</button>
 			</form>
 			<br>
