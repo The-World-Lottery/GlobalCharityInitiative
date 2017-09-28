@@ -443,7 +443,7 @@ input, button {
 	}
 
 	.flip-container, .front, .back {
-		width: 33vw;
+		width: 13.3em;
 		height: 37vh;
 		text-align:center;
 	}

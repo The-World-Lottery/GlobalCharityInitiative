@@ -20,7 +20,7 @@ table, th, td {
 @section('content')
 
 	<main class="container" style="max-width:100%;float:left;">
-	<span><a class="btn btn-block btn-primary" href="{{action('LotteriesController@create')}}" >Create New Lottery</a></span>
+	<span><a class="btn btn-block btn-success" href="{{action('LotteriesController@create')}}" >Create New Lottery</a></span>
 	<span style="float:right;padding-right:1em;">{!! $lotteries->appends(Request::except('page'))->render() !!}</span>
 
 		<table class="table table-condensed" style="width:95%">
@@ -40,7 +40,7 @@ table, th, td {
 			<tr>
 				
 				<td>
-					<a class="btn btn-primary" href="{{action('LotteriesController@edit',$lottery->id)}}">Edit</a>
+					<a class="btn btn-success" href="{{action('LotteriesController@edit',$lottery->id)}}">Edit</a>
 				</td>
 				<td>{{$lottery->id}}</td>
 				<td>{{$lottery->content}}</td>

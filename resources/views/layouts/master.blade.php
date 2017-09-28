@@ -25,9 +25,9 @@
 		<div style="z-index:0;" class="row">
 			<div style="clear:left;font-size:1.5em;margin-top: 3em;" class="col col-sm-9 col-xs-12 borderOpac gameAndChatInfo" id="gameArea">
 				<div class="areaHeader">@yield('divHead')</div>
-				<div style="padding-right: .5em;">
+				
 				@if(\Auth::check())
-					<div id="walletTrigger" style="color:lightgreen;margin:0;padding:0;width:100%;text-align:right;">
+					<div id="walletTrigger" style="color:lightgreen;margin:0;padding:0;width:100%;text-align:center;">
 					<img style="height:1.3em;width:1.3em;margin-bottom:.5em;" src="/images/wallet.png"> Your Wallets
 					</div>
 					<div class="walletShow" hidden style="width:100%;display:hidden;background-color:rgba(0,0,0,.4);margin:0;">
@@ -60,7 +60,7 @@
 					</div>
 					</div><br>
 				@endif
-				</div>
+			
 				<div>
 					@yield('content')
 				</div>
