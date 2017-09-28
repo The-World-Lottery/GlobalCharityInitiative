@@ -16,12 +16,14 @@
 </head>
 <body style="">
 {{-- <img id="backgroundPic" style="opacity:.41;height:100%;width:100%;" src="/images/earthAtNight.jpg"> --}}
-	<div class="container-fluid" >
-		<div style="" class="row">
-			<div style="" id="main" class="col col-xs-12 col-sm-3">
+	<div class="container-fluid" style="padding:0;">
+		<div style="width:100%;" class="row">
+			<div style="z-index:10em;" id="main" class="col col-xs-12">
 				@include('layouts.partials._header')	
 			</div>
-			<div style="clear:left;font-size:1.5em" class="col col-sm-6 col-xs-12 borderOpac gameAndChatInfo" id="gameArea">
+		</div>
+		<div class="row">
+			<div style="clear:left;font-size:1.5em;margin-top: 3em;" class="col col-sm-9 col-xs-12 borderOpac gameAndChatInfo" id="gameArea">
 				<div class="areaHeader">@yield('divHead')</div>
 				<div style="padding-right: .5em;">
 				@if(\Auth::check())
@@ -63,12 +65,12 @@
 					@yield('content')
 				</div>
 			</div>
-			<div style="background-color:rgba(0,0,0,.6);" class="col col-sm-3 col-xs-12 gameAndChatInfo chatInfoContSpacing">
+			<div style="background-color:rgba(0,0,0,.6);position:fixed;right:0;" class="col col-sm-3 col-xs-12 gameAndChatInfo chatInfoContSpacing">
 				<div class="chatInfoMargins borderOpac" id="chat">
 					{{-- <div class="areaHeaders">
 						Chat
 					</div> --}}
-					<div style="overflow-y:scroll;height:79vh;">
+					<div style="overflow-y:scroll;height:75vh;">
 					@foreach(\App\Models\UserComment::orderBy('created_at','asc')->limit(60)->get() as $comment)
 					<span style="padding-left:.5em;"><u style="color:lightgreen;">{{ \App\User::select('username')->where('id',$comment->user_id )->get()[0]['username']}}-</u></span>
 					<span class="commentSpacing" style="padding-left:.2em;">{{$comment->content}}</span><br>

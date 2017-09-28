@@ -30,7 +30,7 @@ class RafflesTableSeeder extends Seeder
             $raffle->save();
         }
         
-        $j = 20;
+        $j = 30;
         
         $raffle1= new \App\Models\Raffle();
         $raffle1->title = 'A Day With Samuel L. Jackson';
@@ -45,7 +45,7 @@ class RafflesTableSeeder extends Seeder
         $raffle2->title = '2018 Corvette Stingray';
         $raffle2->content = 'The World Lottery Foundation';
         $raffle2->product ='Chevrolet has donated one of their new 2018 Stingrays for us to raffle off.';
-        $raffle2->end_date = date("Y-m-") . ($j + 1) ." 12:00:00";
+        $raffle2->end_date = date("Y-m-") . ($j ) ." 12:00:00";
         $raffle2->img = "/images/corvette.png";
         $raffle2->user_id = 1;
         $raffle2->save();
@@ -53,7 +53,7 @@ class RafflesTableSeeder extends Seeder
         $raffle10->title = 'Trip to Fiji (for 5)';
         $raffle10->content = 'TWL Foundation';
         $raffle10->product ='Radisson Blu Resort Fiji Denarau Island has donated an all expense paid, 5 day trip.';
-        $raffle10->end_date = date("Y-m-") . ($j + 2) ." 12:00:02";
+        $raffle10->end_date = date("Y-m-") . ($j ) ." 12:00:02";
         $raffle10->img = "/images/fiji.jpg";
         $raffle10->user_id = 1;
         $raffle10->save();
@@ -62,7 +62,7 @@ class RafflesTableSeeder extends Seeder
         $raffle11->title = 'Blue Chrome Nissan GT-R';
         $raffle11->content = 'TWL Foundation';
         $raffle11->product ='Nissan has donated one of their new gt-rs to be auctioned off';
-        $raffle11->end_date = date("Y-m-") . ($j + 3) ." 12:01:00";
+        $raffle11->end_date = date("Y-m-") . ($j ) ." 12:01:00";
         $raffle11->img = "/images/nissan.jpg";
         $raffle11->user_id = 1;
         $raffle11->save();
@@ -71,7 +71,7 @@ class RafflesTableSeeder extends Seeder
         $raffle3->title = 'Music Video Appearance';
         $raffle3->content = 'The World Lottery Foundation';
         $raffle3->product ='Justin Beiber has offered to include one fan in his next music videos';
-        $raffle3->end_date = date("Y-m-") . ($j + 2) ." 12:00:00";
+        $raffle3->end_date = date("Y-m-") . ($j ) ." 12:00:00";
         $raffle3->img = "/images/justin.png";
         $raffle3->user_id = 1;
         $raffle3->save();
@@ -80,7 +80,7 @@ class RafflesTableSeeder extends Seeder
         $raffle4->title = '4 days at Disney Land (for 4)';
         $raffle4->content = 'American Cancer Society';
         $raffle4->product ='Disney Land has donated an all-expense-paid visit to their amazing park!';
-        $raffle4->end_date = date("Y-m-") . ($j + 4) ." 12:00:00";
+        $raffle4->end_date = date("Y-m-") . ($j ) ." 12:00:00";
         $raffle4->img = "/images/disney.png";
         $raffle4->user_id = 1;
         $raffle4->save();
@@ -89,7 +89,7 @@ class RafflesTableSeeder extends Seeder
         $raffle5->title = 'Lifetime Dave&Busters Gamecard';
         $raffle5->content = 'The World Lottery Foundation';
         $raffle5->product ='D&B has donated a one-of-a-kind limitless gamecard';
-        $raffle5->end_date = date("Y-m-") . ($j + 5) ." 12:00:00";
+        $raffle5->end_date = date("Y-m-") . ($j ) ." 12:00:00";
         $raffle5->img = "/images/dandb.png";
         $raffle5->user_id = 1;
         $raffle5->save();
@@ -98,7 +98,7 @@ class RafflesTableSeeder extends Seeder
         $raffle6->title = 'Tesla Sport';
         $raffle6->content = 'Tesla Foundation';
         $raffle6->product ='Tesla had donated their newest sportscar model';
-        $raffle6->end_date = date("Y-m-") . ($j + 6) ." 12:00:00";
+        $raffle6->end_date = date("Y-m-") . ($j ) ." 12:00:00";
         $raffle6->img = "/images/tesla.png";
         $raffle6->user_id = 1;
         $raffle6->save();
@@ -107,7 +107,7 @@ class RafflesTableSeeder extends Seeder
         $raffle7->title = 'CodeUp Bootcamp Entry';
         $raffle7->content = 'TWL Foundation';
         $raffle7->product ='CodeUp has donated one entry into their next Java class. Valued at $22,500.00';
-        $raffle7->end_date = date("Y-m-") . ($j + 7) ." 12:00:00";
+        $raffle7->end_date = date("Y-m-") . ($j ) ." 12:00:00";
         $raffle7->img = "/images/codeup.jpg";
         $raffle7->user_id = 1;
         $raffle7->save();
@@ -116,7 +116,7 @@ class RafflesTableSeeder extends Seeder
         $raffle8->title = 'All expense paid trip to Hawaii';
         $raffle8->content = 'TWL Foundation';
         $raffle8->product ='A five night stay at Ko"a Kea Hotel Resort at Poipu Beach';
-        $raffle8->end_date = date("Y-m-") . ($j + 8) ." 12:00:00";
+        $raffle8->end_date = date("Y-m-") . ($j ) ." 12:00:00";
         $raffle8->img = "/images/hawaii.png";
         $raffle8->user_id = 1;
         $raffle8->save();
@@ -125,7 +125,7 @@ class RafflesTableSeeder extends Seeder
         $raffle8->title = 'KISS Ticket & Backstage Pass (x4)';
         $raffle8->content = 'TWL Foundation';
         $raffle8->product ='Kiss has donated 4 all access passes for their next show in Washington. Transport provided as well.';
-        $raffle8->end_date = date("Y-m-") . ($j + 9) ." 12:00:00";
+        $raffle8->end_date = date("Y-m-") . ($j ) ." 12:00:00";
         $raffle8->img = "/images/kiss.jpg";
         $raffle8->user_id = 1;
         $raffle8->save();
@@ -134,7 +134,7 @@ class RafflesTableSeeder extends Seeder
         $raffle9->title = 'KB Homes House';
         $raffle9->content = 'TWL Foundation';
         $raffle9->product ='KB Homes has donated a fully built house valued at $260,000, in Austin, Texas';
-        $raffle9->end_date = date("Y-m-") . ($j + 10) ." 12:00:00";
+        $raffle9->end_date = date("Y-m-") . ($j) ." 12:00:00";
         $raffle9->img = "/images/home.jpg";
         $raffle9->user_id = 1;
         $raffle9->save();
