@@ -13,12 +13,19 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .navButton {
-	padding:1em 0 1em 0;
+	padding:3px 0 3px 0;
+	text-align: center;
 }
 
 ::-webkit-input-placeholder {
     color:white;
     text-align:center;
+}
+
+.navIcons {
+	width:30px;
+	height:30px;
+	margin-bottom: 3px;
 }
 
 .countdown {
@@ -33,7 +40,7 @@ h1,h2,h3,h4,h5,h6 {
 
 html {
 	height:100vh;
-	/*background-image:url("images/earthAtNight.jpg");
+	/*background-image:url("/images/earthAtNight.jpg");
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;
@@ -195,6 +202,16 @@ a {
 	color:white;
 	/*position:fixed;*/
 	float:right;
+	}
+
+	#main2 {
+	/*height:100%;*/
+	background-color:rgba(0,0,0,.5);
+	/*height:2em;*/
+	color:white;
+	z-index:0;
+	/*position:fixed;*/
+
 	}
 
 	#random_quote {
@@ -413,6 +430,19 @@ input, button {
 		width:100%;
 		/*background-color:#2a6969;*/
 		background-color:rgba(0,0,0,1);
+		font-size:1em;
+		/*overflow: scroll;*/
+		display: flex;
+		justify-content: space-around;
+	}
+
+	#main2 {
+		/*position:fixed;left:0;*/
+		/*max-height:100vh;*/
+
+		width:100%;
+		/*background-color:#2a6969;*/
+		background-color:rgba(0,0,0,.5);
 		font-size:1em;
 		/*overflow: scroll;*/
 		display: flex;
