@@ -9,7 +9,7 @@
 @section('divHead')
 
 <h3 id="hoverTrigger">The World Lottery </h3>
-	<p id="hoverSumm" hidden class="suggBox" style="padding:0 5em 0 5em ;text-align:center;">The World Lottery drawing happens every two weeks. Winning numbers selected with a random number generator. The Jackpot value is fed by ticket purchases to any Lottery, Raffle or currently running World Lottery.</p>
+	<p id="hoverSumm" class="suggBox" style="padding:0 5em 0 5em ;text-align:center;">The World Lottery drawing happens every two weeks. Winning numbers selected with a random number generator. The Jackpot value is fed by ticket purchases to any Lottery, Raffle or currently running World Lottery.</p>
 
 @stop
 
@@ -17,7 +17,7 @@
 	
 
 	<main class="container" style="text-align:center;max-width:100%;float:left;display:flex;justify-content: center;">
-		<div style="margin-top:15%;">
+		<div style="margin-top:0%;">
 			<div><h2 style="color:#00ffc4;">Drawing takes place in: <span class="worldLottoClock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
 				</div> </h2>
 			

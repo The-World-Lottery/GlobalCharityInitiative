@@ -17,18 +17,35 @@
 <body style="">
 <img id="backgroundPic" style="opacity:.31;height:100%;width:100%;" src="/images/earthAtNight.jpg">
 	<div class="container-fluid" style="padding:0;">
-		<div style="width:100%;" class="row">
-			<div style="z-index:10;" id="main" class="col col-xs-12">
-				@include('layouts.partials._header')	
+		<div style="position:fixed;top:0;width:100%;float:right;z-index:10;">
+			<div style="width:100%;" class="row">
+				<div style="z-index:10;" id="main" class="col col-xs-12">
+					@include('layouts.partials._header')	
+				</div>
 			</div>
+			@if(Auth::check() && Auth::user()->is_admin)
+			<div style="width:100%;" class="row">
+				<div style="z-index:10;" id="main" class="col col-xs-12">
+			  		<a href="{{action('LotteriesController@adminIndex')}}">Manage Lotteries</a>
+					<a href="{{action('RafflesController@adminIndex')}}">Manage Raffles</a>
+					<a href="{{action('UsersController@index')}}">Manage Users</a>
+					<a href="{{action('SuggestionsController@adminIndex')}}">Manage Suggestions</a>
+				</div>
+			</div>
+			@endif
+			@if(Auth::check())
+			<div class="img-circle">
+				<a class="" id="white" href="{{action('UsersController@show' , Auth::id())}}"><img src='{{Auth::user()->image}}' id="profImg"></a>
+			</div>
+			@endif
 		</div>
 		<div style="z-index:0;" class="row">
-			<div style="clear:left;font-size:1.5em;margin-top: 3em;" class="col col-sm-9 col-xs-12 borderOpac gameAndChatInfo" id="gameArea">
+			<div style="clear:left;font-size:1.5em;margin-top: 4em;" class="col col-sm-9 col-xs-12 borderOpac gameAndChatInfo" id="gameArea">
 				@if(\Auth::check())
 					<div id="walletTrigger" style="color:lightgreen;margin:0;padding:0;width:100%;text-align:center;">
 					<img style="height:1.3em;width:1.3em;margin-bottom:.5em;" src="/images/wallet.png"> Your Wallets
 					</div>
-					<div class="walletShow" hidden style="border-radius:1em 1em 0 0;width:100%;display:hidden;background-color:rgba(0,0,0,.4);margin:0;">
+					<div class="walletShow" hidden style="width:100%;display:hidden;background-color:rgba(0,0,0,.4);margin:0;">
 						<div style="padding-left:3em;display:flex;justify-content:space-around;">
 							<div class="walletPadding text-center">USD <br>${{number_format(Auth::user()->userWallet->usd,"2",".",",")}} </div>
 						
@@ -42,7 +59,7 @@
 						<br>
 						</div>
 					</div>
-					<div class="walletShow" hidden style="border-radius:0 0 1em 1em ;width:100%;display:hidden;justify-content:space-around;background-color:rgba(0,0,0,.4);margin:0;padding:0;"><div style="display:flex;justify-content: space-around;">
+					<div class="walletShow" hidden style="width:100%;display:hidden;justify-content:space-around;background-color:rgba(0,0,0,.4);margin:0;padding:0;"><div style="display:flex;justify-content: space-around;">
 					
 					
 						<div class="walletPadding text-center">Bitcoin<br>{{number_format(Auth::user()->userWallet->btc,"2",".",",")}} </div>
@@ -71,7 +88,7 @@
 					{{-- <div class="areaHeaders">
 						Chat
 					</div> --}}
-					<div style="overflow-y:scroll;height:75vh;">
+					<div style="overflow-y:scroll;height:75vh;padding-top:5em;">
 					@foreach(\App\Models\UserComment::orderBy('created_at','asc')->limit(60)->get() as $comment)
 					<span style="padding-left:.5em;"><u style="color:lightgreen;">{{ \App\User::select('username')->where('id',$comment->user_id )->get()[0]['username']}}-</u></span>
 					<span class="commentSpacing" style="padding-left:.2em;">{{$comment->content}}</span><br>
@@ -84,7 +101,7 @@
 				{{-- </div> --}}
 				{{-- <div class="chatInfoMargins borderOpac" id="info" style="text-align:center;"> --}}
 					{{-- <h3><strong>Jackpot : </strong><span style="color:lightgreen;">${{ number_format(\App\Models\TheWorldLottery::select('current_value')->where('id','1')->get()[0]['current_value'],2,".",",")}} (USD)</span></h3> --}}
-					<div style="text-align:center;">
+					<div style="text-align:center;margin-top:2em;">
 						<h3 style="color:lightgreen">World Lottery Jackpot is <br>(USD) ${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}
 						</h3>
 						<h4 class="countdown">

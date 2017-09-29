@@ -189,12 +189,16 @@ $(document).ready(function(){
     	$('#hoverSumm').slideToggle();
 	})
 
+
 	// hover for wallets
 	 $('#walletTrigger').click(function(){
     	$('.walletShow').slideToggle();
 	})
 
-		
+		//hover profile image 
+	$('.imageTrigger').click(function(){
+    	$('.img-circle').slideToggle();
+	})
 
 
 
