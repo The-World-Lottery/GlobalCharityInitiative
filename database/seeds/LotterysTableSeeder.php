@@ -17,20 +17,20 @@ class LotterysTableSeeder extends Seeder
 
         for($i = 0;$i <= 23;$i++) {
             for($x = 0;$x <= 6;$x++){
-       	$lottery = new \App\Models\Lottery();
-        $lottery->title = 'Daily Lottery';
-        $lottery->content = $quoteArr[array_rand($quoteArr)];
-        $lottery->init_value = 1000 * $i + 1000;
-        $lottery->current_value = 1000 * $i + 1000;
-        if($i < 9){
-        	$lottery->end_date = date("Y-m-"). $day .' 0'. $i .':'.$x.'0:00';
-    	}
-    	else{
-    		$lottery->end_date = date("Y-m-"). $day . ' ' . $i .':'.$x.'0:00';
-    	}
-        $lottery->user_id = 1;
-        $lottery->save();
-    	}
+           	$lottery = new \App\Models\Lottery();
+            $lottery->title = 'Daily Lottery';
+            $lottery->content = $quoteArr[array_rand($quoteArr)];
+            $lottery->init_value = 1000 * $i + 1000;
+            $lottery->current_value = 1000 * $i + 1000;
+            if($i < 9){
+            	$lottery->end_date = date("Y-m-"). $day .' 0'. $i .':'.$x.'0:00';
+        	}
+        	else{
+        		$lottery->end_date = date("Y-m-"). $day . ' ' . $i .':'.$x.'0:00';
+        	}
+            $lottery->user_id = 1;
+            $lottery->save();
+        	}
         }
     }
 }

@@ -1,11 +1,11 @@
-//scrolling background
-$(function(){
-    var x = 0;
-    setInterval(function(){
-        x-=1;
-        $('html').css('background-position', x + 'px 0');
-    }, 100);
-});
+// scrolling background
+// $(function(){
+//     var x = 0;
+//     setInterval(function(){
+//         x-=1;
+//         $('html').css('background-position', x + 'px 0');
+//     }, 100);
+// });
 	
 $(document).ready(function(){
 
@@ -201,21 +201,18 @@ $(document).ready(function(){
 	})
 
 	//query db with
-	function refresh_div() {
-        jQuery.ajax({
-            url:'layouts.master',
-            type:'POST',
-            success:function(results) {
-                jQuery("#chatArea").html('');
+	// function refresh_div() {
+ //        jQuery.ajax({
+ //            url:'layouts.maste',
+ //            type:'POST',
+ //            success:function(results) {
+ //                jQuery("#chatArea").html("hello");
 
-                <span style="padding-left:.5em;"><u style="color:lightgreen;">{{ \App\User::select('username')->where('id',$comment->user_id )->get()[0]['username']}}-</u></span>
-					<span class="commentSpacing" style="padding-left:.2em;">{{$comment->content}}</span><br>
+ //            }
+ //        });
+ //    }
 
-            }
-        });
-    }
-
-    setInterval(refresh_div,1000);
+ //    t = setInterval(refresh_div,1000);
 
 
 

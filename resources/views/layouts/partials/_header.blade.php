@@ -3,13 +3,13 @@
 			<span style="padding-top: .6em;">
 				@if (Auth::check())
 					<a href="{{action('UsersController@show' , Auth::id())}}" >{{Auth::user()->name}}</a>
+					<br>
+					<a id="walletTrigger" style="text-align:center;">
+						Your Wallets
+					</a>
 				@else
 					<a class="navButton imageTrigger" id="white" href="{{action('Auth\AuthController@getLogin')}}">Login/Register</a>	
 				@endif
-				<br>
-				<a id="walletTrigger" style="text-align:center;">
-					Your Wallets
-				</a>
 			</span>
 								
 

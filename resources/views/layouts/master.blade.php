@@ -37,6 +37,7 @@
 				</div>
 				@endif
 				@if(\Auth::check())
+				<div
 					<div class="walletShow" hidden style="width:100%;display:hidden;background-color:rgba(0,0,0,.4);margin:0;">
 						<div style="padding-left:3em;display:flex;justify-content:space-around;">
 							<div class="walletPadding text-center">USD <br>${{number_format(Auth::user()->userWallet->usd,"2",".",",")}} </div>
