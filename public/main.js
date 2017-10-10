@@ -171,7 +171,6 @@ $(document).ready(function(){
     });
 
     //setting interval of ajax quote call
-
     var t = 0;
     setInterval(function(){
         if (t % 15 == 14){
