@@ -43,7 +43,7 @@
 			</div>
 		</div>
 		<br>
-		<div style="display: flex;justify-content: space-around;">
+		<div style="display: flex;justify-content:center;">
 			<div>
 
 				@if(Auth::id() == $user->id)

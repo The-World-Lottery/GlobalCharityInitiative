@@ -16,18 +16,14 @@
 @section('content')
 	
 
-	<main class="container" style="text-align:center;max-width:100%;float:left;display:flex;justify-content: center;">
-		<div style="margin-top:0%;">
+	<main class="container" style="text-align:center;display:flex;justify-content: center;">
+		<div>
 			<div><h2 style="color:#00ffc4;">Drawing takes place in: <span class="worldLottoClock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
 				</div> </h2>
 			
 			<h4 id="jackpot" style="color:lightgreen;"><strong >Jackpot</strong><br>$ {{number_format($theWorldLottery->current_value,2,".",",")}}</h4>
-			{{-- <h4><strong>Starting Pot : $</strong> {{number_format($theWorldLottery->init_value,2,".",",")}}</h4> --}}
-			{{-- <h4><strong>Lotto Ends On: </strong> {{$theWorldLottery->end_date}}</h4> --}} 
 			
-			
-
-
+		
 
 			<a href="{{ action('TheWorldLotterysController@addUserToEntries', $theWorldLottery->id) }}"><button class="btn btn-success">BUY TICKET!!!</button></a><br><br>
 

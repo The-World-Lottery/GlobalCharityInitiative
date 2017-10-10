@@ -15,23 +15,62 @@
 
 </head>
 <body>
-<img id="backgroundPic" style="opacity:.41;height:100%;width:100%;" src="/images/earthAtNight.jpg">
+	<img id="backgroundPic" style="opacity:.41;height:100%;width:100%;" src="/images/earthAtNight.jpg">
 	<div class="container-fluid" style="padding:0;">
-		<div id="nav">
-			<div class="row">
-				<div style="z-index:10;" id="main" class="col col-xs-12">
-					@include('layouts.partials._header')	
-				</div>
-			</div>
-		</div>
+		
 		<div class="row">
-			<div style="clear:left;font-size:1.5em;margin-top: 2.7em;" class="col col-sm-9 col-xs-12 borderOpac gameAndChatInfo" id="gameArea">
-				@if(Auth::check() && Auth::user()->is_admin)
+			{{-- <div style="z-index:10;" id="main" class="col col-xs-12"> --}}
+			@include('layouts.partials._header')	
+			{{-- </div> --}}
+		</div>
+		</div class="row">
+			@if(Auth::check() && Auth::user()->is_admin)
 					@include('layouts.partials._adminBar')
 				@endif
 				@if(\Auth::check())
 					@include('layouts.partials._wallet')
 				@endif
+			
+			<div class="col col-xs-12 col-sm-4">
+				<div style="text-align:center;margin-top:2em;">
+					<h3 style="color:lightgreen">World Lottery Jackpot is <br>(USD) ${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}
+					</h3>
+					<h4 class="countdown">
+	  					Drawing in:
+	  					<span id="clock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
+					</h4>
+				</div>
+				<a id="googlepos" href="{{action('CurrencyConversionController@index')}}">
+					<div>
+					<img class="navIcons" src="/images/coins.png">
+						Currency Conversions
+					</div>
+				</a>
+				<div id="googlepos">
+					<div  id="google_translate_element"></div><script type="text/javascript">
+					function googleTranslateElementInit() {
+					  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+					}
+					</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+				</div>
+			</div>
+			<div id="sidebar" class="col col-sm-8 col-xs-12 {{-- gameAndChatInfo --}} chatInfoContSpacing">
+				<div class="chatInfoMargins borderOpac" id="chat">
+					{{-- <div id="chatArea"> --}}
+					@foreach(\App\Models\UserComment::orderBy('created_at','asc')->limit(60)->get() as $comment)
+						<span style="padding-left:.5em;"><u style="color:lightgreen;">{{ \App\User::select('username')->where('id',$comment->user_id )->get()[0]['username']}}-</u></span>
+						<span class="commentSpacing" style="padding-left:.2em;">{{$comment->content}}</span><br>
+					@endforeach
+					{{-- </div> --}}
+				</div>
+					<form action="{{ action('UsersController@comment') }}">
+					{!! csrf_field() !!}
+						<input type="text"{{--  autofocus --}} autofocus style="padding:.5em;margin-top:.5em;border:0;border-bottom:1px solid white;color:white;width:100%;background-color:rgba(0,0,0,0);" placeholder="Say Something!" name="comment"><button hidden type="submit">Add comment</button>
+					</form>
+			</div>
+		</div>
+		<div class="row">
+			<div style="font-size:1.5em;" class="col col-sm-12 col-xs-12" id="gameArea">
 				<div style="margin-top:1em;" class="areaHeader">
 					@yield('divHead')
 				</div>
@@ -39,42 +78,8 @@
 					@yield('content')
 				</div>	
 			</div>
-			<div id="sidebar" class="col col-sm-3 col-xs-12 gameAndChatInfo chatInfoContSpacing">
-				<div class="chatInfoMargins borderOpac" id="chat">
-					<div id="chatArea">
-					@foreach(\App\Models\UserComment::orderBy('created_at','asc')->limit(60)->get() as $comment)
-						<span style="padding-left:.5em;"><u style="color:lightgreen;">{{ \App\User::select('username')->where('id',$comment->user_id )->get()[0]['username']}}-</u></span>
-						<span class="commentSpacing" style="padding-left:.2em;">{{$comment->content}}</span><br>
-					@endforeach
-					</div>
-					<form action="{{ action('UsersController@comment') }}">
-					{!! csrf_field() !!}
-						<input type="text" autofocus style="padding:.5em;margin-top:.5em;border:0;border-bottom:1px solid white;color:white;width:100%;background-color:rgba(0,0,0,0);" placeholder="Say Something!" name="comment"><button hidden type="submit">Add comment</button>
-					</form>
-					<div style="text-align:center;margin-top:2em;">
-						<h3 style="color:lightgreen">World Lottery Jackpot is <br>(USD) ${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}
-						</h3>
-						<h4 class="countdown">
-		  					Drawing in:
-		  					<span id="clock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
-						</h4>
-					</div>
-					<a class=" navButton" href="{{action('CurrencyConversionController@index')}}">
-						<div>
-						<img class="navIcons" src="/images/coins.png">
-							Currency Conversions
-						</div>
-					</a>
-					<div class=" navButton" id="googlepos">
-						<div  id="google_translate_element"></div><script type="text/javascript">
-						function googleTranslateElementInit() {
-						  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-						}
-						</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-					</div>
-				</div>
-			</div>
 		</div>
+		
 	</div>
 	<script
 	  src="https://code.jquery.com/jquery-3.2.1.js"
@@ -85,14 +90,14 @@
 	<script src="https://static.filestackapi.com/v3/filestack.js"></script>
 	<script src="/main.js" type="text/javascript"></script>
 	<script>
-		function myFunction(id) {
-	    var x = document.getElementById(id);
-	    if (x.className.indexOf("w3-show") == -1) {
-	        x.className += " w3-show";
-	    } else { 
-	        x.className = x.className.replace(" w3-show", "");
-	    }
-	}
+	// 	function myFunction(id) {
+	//     var x = document.getElementById(id);
+	//     if (x.className.indexOf("w3-show") == -1) {
+	//         x.className += " w3-show";
+	//     } else { 
+	//         x.className = x.className.replace(" w3-show", "");
+	//     }
+	// }
 	</script>
 </body>
 </html>

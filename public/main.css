@@ -19,10 +19,13 @@ h1,h2,h3,h4,h5,h6 {
     text-align:center;
 }
 
+.auto {
+	line-height: 2em;
+}
+
 .navIcons {
 	width:30px;
 	height:30px;
-	margin-bottom: 3px;
 }
 
 .countdown {
@@ -76,7 +79,7 @@ a {
 }
 
 .borderOpac {
-	border-radius: 1.5em;
+	/*border-radius: 1.5em;*/
 	margin-bottom: 1vh;
 	margin-top: 1vh;
 }
@@ -93,7 +96,7 @@ a {
 	margin-left: 1em;
 }
 
-#raffleCont{
+.raffleCont {
 	position:relative;
 	color:white;
 	background-position:center;
@@ -109,7 +112,7 @@ a {
 /* entire container, keeps perspective */
 .flip-container {
 	perspective: 1000px;
-	float:left;
+	/*float:left;*/
 	margin:1.7vw;
 }
 	/* flip the pane when hovered */
@@ -176,6 +179,14 @@ a {
 
 }
 
+.col1 {
+	text-align: center;
+	/*border:1px solid white;*/
+	height:4em;
+	padding-top:.5em;
+	padding-bottom:.5em;
+}
+
 
 #main2 {
 	background-color:rgba(0,0,0,.5);
@@ -186,6 +197,8 @@ a {
 #main {
 	background-color:rgba(0,0,0,1);
 	color:white;
+	z-index:10;
+	top:0;
 }
 	
 #random_quote {
@@ -200,7 +213,7 @@ a {
 	#chat {
 		/*min-height:70vh;
 		max-height:75vh;*/
-		border-radius:1.5em 1.5em 0 0;
+		/*border-radius:1.5em 1.5em 0 0;*/
 		margin-right:-.8em;
 		color:white;
 
@@ -316,6 +329,12 @@ img {
 	max-height:100%;
 }
 
+#headImg {
+	width:4em;
+	height:3.3em;
+	border-radius: 10em;
+}
+
 #showProfImg {
 	max-height: 15em;
 	width:100%;
@@ -379,20 +398,33 @@ input, button {
 }
 
 .navButton {
+	margin:.18em 0 .18em 0;
 	
+	/*height:3em;*/
 }
 
+.auto2 {
+	/*margin-top;*/
+}
+
+#googlepos {
+		padding:1em 0 1em 0;
+		border-radius: .5em;
+		text-align: center;
+	}
 
 
-@media screen and (min-width: 768px) {
+
+@media screen and (min-width: 900px) {
 
 	.navButton {
-		float:none;
+		/*float:none;*/
 	}
 
 	#gameArea {
 		/*margin-left: 21.2vw;*/
 		/*width:52.6vw;*/
+		margin-top: 3em;
 
 	}
 
@@ -414,6 +446,7 @@ input, button {
 		width:100%;
 		background-color:rgba(0,0,0,1);
 		font-size:1em;
+		position:fixed;
 		
 	}
 
@@ -431,23 +464,21 @@ input, button {
 	.chatInfoContSpacing {
 		clear:right;
 		padding-right:0;
-		height:95vh;
-
+		height:60vh;
 	}
+
 	.chatInfoMargins {
 		padding-right:2em;
 		margin-right:-1.1vw;
-
 	}
 
 	#chat {
 		padding-right:0;
 		overflow-y:scroll;
-		padding-top:5em;"
+		height:50vh;
 	}
 
 	#backgroundPic {
-		/*padding-left: 15vw;*/
 	}
 
 	.flip-container, .front, .back {
@@ -462,7 +493,7 @@ input, button {
 	}
 
 	#chatArea {
-		min-height:58vh;
+		
 	}
 
 
@@ -472,22 +503,16 @@ input, button {
 
 	#sidebar {
 		background-color:rgba(0,0,0,.6);
-		position:fixed;
-		right:0;
+		/*position:fixed;
+		right:0;*/
 	}
 
 	.navButton {
 		padding:3px 0 3px 0;
 		text-align: center;
-		height:4em;
 	}
 
-	#googlepos {
-	/*position:absolute;bottom:0;right:15%;*/
-	/*background-color:#1d5c92;*/
-	padding:1em 0 1em 0;
-	border-radius: .5em;
-}
+	
 
 
 

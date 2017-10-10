@@ -1,4 +1,4 @@
-<div style="width:100%;" class="row">
+<div style="width:100%;margin-top: 4em;" class="row">
 	<div id="main2" class="col col-xs-12">
   		<a href="{{action('LotteriesController@adminIndex')}}">Manage Lotteries</a>
 		<a href="{{action('RafflesController@adminIndex')}}">Manage Raffles</a>

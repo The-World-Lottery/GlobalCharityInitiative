@@ -20,7 +20,7 @@ table, th, td {
 
 @section('content')
 
-	<main class="container table-responsive adminTables" style="max-width:100%;float:left;">
+	<main class="container table-responsive adminTables" style="max-width:100%;">
 
 		<table class="table table-condensed">
 			<tr>
