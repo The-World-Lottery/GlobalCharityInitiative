@@ -23,7 +23,7 @@
 			@include('layouts.partials._header')	
 			{{-- </div> --}}
 		</div>
-		</div class="row">
+		<div class="row" style="background-color:rgba(0,0,0,.6);">
 			@if(Auth::check() && Auth::user()->is_admin)
 					@include('layouts.partials._adminBar')
 				@endif
@@ -31,7 +31,7 @@
 					@include('layouts.partials._wallet')
 				@endif
 			
-			<div class="col col-xs-12 col-sm-4">
+			<div class="col col-xs-12 col-sm-4" style="height:100%;margin-top: 4em;">
 				<div style="text-align:center;margin-top:2em;">
 					<h3 style="color:lightgreen">World Lottery Jackpot is <br>(USD) ${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}
 					</h3>
@@ -54,7 +54,7 @@
 					</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 				</div>
 			</div>
-			<div id="sidebar" class="col col-sm-8 col-xs-12 {{-- gameAndChatInfo --}} chatInfoContSpacing">
+			<div id="sidebar" class="col col-sm-8 col-xs-12 {{-- gameAndChatInfo --}} chatInfoContSpacing" style="margin-top: 4em;">
 				<div class="chatInfoMargins borderOpac" id="chat">
 					{{-- <div id="chatArea"> --}}
 					@foreach(\App\Models\UserComment::orderBy('created_at','asc')->limit(60)->get() as $comment)

@@ -424,7 +424,7 @@ input, button {
 	#gameArea {
 		/*margin-left: 21.2vw;*/
 		/*width:52.6vw;*/
-		margin-top: 3em;
+		/*margin-top: 3em;*/
 
 	}
 
@@ -502,7 +502,7 @@ input, button {
 	}
 
 	#sidebar {
-		background-color:rgba(0,0,0,.6);
+		/*background-color:rgba(0,0,0,.6);*/
 		/*position:fixed;
 		right:0;*/
 	}
