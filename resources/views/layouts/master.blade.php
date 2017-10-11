@@ -19,9 +19,7 @@
 	<div class="container-fluid" style="padding:0;">
 		
 		<div class="row">
-			{{-- <div style="z-index:10;" id="main" class="col col-xs-12"> --}}
 			@include('layouts.partials._header')	
-			{{-- </div> --}}
 		</div>
 		<div class="row" style="background-color:rgba(0,0,0,.6);">
 			@if(Auth::check() && Auth::user()->is_admin)
@@ -31,30 +29,36 @@
 					@include('layouts.partials._wallet')
 				@endif
 			
-			<div class="col col-xs-12 col-sm-4" style="height:100%;margin-top: 4em;">
+			<div class="col col-xs-12 col-sm-8" style="height:100%;padding-top: 4em;">
 				<div style="text-align:center;margin-top:2em;">
-					<h3 style="color:lightgreen">World Lottery Jackpot is <br>(USD) ${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}
-					</h3>
+					<h1 style="font-size:4em;color:lightgreen">World Lottery Jackpot is <br>(USD) ${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}
+					</h1>
 					<h4 class="countdown">
 	  					Drawing in:
 	  					<span id="clock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
 					</h4>
 				</div>
-				<a id="googlepos" href="{{action('CurrencyConversionController@index')}}">
-					<div>
-					<img class="navIcons" src="/images/coins.png">
-						Currency Conversions
+				<div class="row">
+					<div class="col col-xs-12">
+						<a id="googlepos" href="{{action('CurrencyConversionController@index')}}">
+							<div>
+							<img class="navIcons" src="/images/coins.png">
+								Currency Conversions
+							</div>
+						</a>
 					</div>
-				</a>
-				<div id="googlepos">
-					<div  id="google_translate_element"></div><script type="text/javascript">
-					function googleTranslateElementInit() {
-					  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-					}
-					</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+					<div class="col col-xs-12">
+						<div id="googlepos">
+							<div  id="google_translate_element"></div><script type="text/javascript">
+							function googleTranslateElementInit() {
+							  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+							}
+							</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div id="sidebar" class="col col-sm-8 col-xs-12 {{-- gameAndChatInfo --}} chatInfoContSpacing" style="margin-top: 4em;">
+			<div id="sidebar" class="col col-sm-4 col-xs-12 {{-- gameAndChatInfo --}} chatInfoContSpacing" style="margin-top: 1em;">
 				<div class="chatInfoMargins borderOpac" id="chat">
 					{{-- <div id="chatArea"> --}}
 					@foreach(\App\Models\UserComment::orderBy('created_at','asc')->limit(60)->get() as $comment)
@@ -65,7 +69,7 @@
 				</div>
 					<form action="{{ action('UsersController@comment') }}">
 					{!! csrf_field() !!}
-						<input type="text"{{--  autofocus --}} autofocus style="padding:.5em;margin-top:.5em;border:0;border-bottom:1px solid white;color:white;width:100%;background-color:rgba(0,0,0,0);" placeholder="Say Something!" name="comment"><button hidden type="submit">Add comment</button>
+						<input type="text" autofocus style="padding:.5em;margin-top:.5em;border:0;border-bottom:1px solid white;color:white;width:100%;background-color:rgba(0,0,0,0);" placeholder="Say Something!" name="comment"><button hidden type="submit">Add comment</button>
 					</form>
 			</div>
 		</div>
@@ -77,6 +81,17 @@
 				<div >
 					@yield('content')
 				</div>	
+			</div>
+		</div>
+		<div class="row" style="background-color:rgba(0,0,0,.6);height:5em;">
+			<div class="col-xs-12 col-sm-4">
+				
+			</div>
+			<div class="col-xs-12 col-sm-4">
+				
+			</div>
+			<div class="col-xs-12 col-sm-4">
+				
 			</div>
 		</div>
 		

@@ -14,7 +14,7 @@
 
 @section('content')
 
-	<main class="container" style="max-width:100%;float:left;">
+	<main class="container" style="max-width:100%;">
 		<form method="POST" action="{{ action('LotteriesController@store') }}">
 			{!! csrf_field() !!}
 			{!! $errors->first('title', '<span class="help-block">:message</span>')!!}

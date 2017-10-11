@@ -15,7 +15,7 @@
 
 @section('content')
 	
-	<main class="container" style="max-width:100%;float:left;"><br>
+	<main class="container" style="max-width:100%;"><br>
 		<form method="POST" action="{{ action('RafflesController@store') }}">
 			{!! csrf_field() !!}
 			{!! $errors->first('title', '<span class="help-block">:message</span>')!!}

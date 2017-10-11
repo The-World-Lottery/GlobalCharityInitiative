@@ -14,7 +14,7 @@
 
 @section('content')
 {{-- {{\App\Models\LotteryEntry::pickWinner(1)}} --}}
-	<main class="container" style="max-width:100%;float:left;">
+	<main class="container" style="max-width:100%;">
 		<form method="POST" action="{{ action('RafflesController@update', $raffle->id)}}">
 			{!! csrf_field() !!}
 			{{ method_field('PUT') }}

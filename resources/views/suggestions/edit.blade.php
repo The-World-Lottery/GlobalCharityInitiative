@@ -14,7 +14,7 @@
 
 @section('content')
 
-	<main class="container" style="max-width:100%;float:left;">
+	<main class="container" style="max-width:100%;">
 		<h1>Edit Suggestion</h1>
 		<form method="POST" action="{{ action('SuggestionsController@update', $suggestion->id)}}">
 			{!! csrf_field() !!}

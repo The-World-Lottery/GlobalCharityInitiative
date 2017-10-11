@@ -20,7 +20,7 @@ table, th, td {
 @section('content')
 
 
-	<main class="container" style="max-width:100%;float:left;">
+	<main class="container" style="max-width:100%;">
 
 	<span><a class="btn btn-block btn-success" href="{{action('LotteriesController@create')}}" >Create New Lottery</a></span>
 	<span style="float:right;padding-right:1em;">{!! $lotteries->appends(Request::except('page'))->render() !!}</span>

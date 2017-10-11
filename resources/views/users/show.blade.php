@@ -14,6 +14,20 @@
 		<div class="row"  style="text-align:center;padding-top:0;width:100%;">
 	
 			<div class="col col-sm-12">
+				<div style="display: flex;justify-content:center;">
+					<div>
+						@if(Auth::id() == $user->id)
+						<a style="margin-right:1em;" href="{{action('Auth\AuthController@getLogout')}}"><button class="btn btn-success">Logout</button></a>
+						@endif
+						</div>
+						<div>
+						@if(Auth::id() == $user->id || Auth::user()->is_admin) 
+							<a href="{{action('UsersController@edit' , $user->id)}}"><button class="btn btn-warning">Edit</button></a><br>
+						@endif
+					</div>
+					<br>
+					<br>
+				</div>
 				<div id="showProfImg"><img src='{{$user->image}}' id="profImg"></div><br>
 				<div>{{$user->name}}</div>
 				<div><strong>Email:</strong> {{$user->email}}</div>
@@ -43,21 +57,7 @@
 			</div>
 		</div>
 		<br>
-		<div style="display: flex;justify-content:center;">
-			<div>
-
-				@if(Auth::id() == $user->id)
-				<a href="{{action('Auth\AuthController@getLogout')}}"><button class="btn btn-success">Logout</button></a>
-				@endif
-				</div>
-				<div>
-				@if(Auth::id() == $user->id || Auth::user()->is_admin) 
-					<a href="{{action('UsersController@edit' , $user->id)}}"><button class="btn btn-warning">Edit</button></a><br>
-				@endif
-			</div>
-			
-
-		</div>
+		
 	</div>
 
 	</main>

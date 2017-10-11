@@ -14,7 +14,7 @@
 
 @section('content')
 
-	<main class="container" style="max-width:100%;float:left;display:flex;justify-content: center;">
+	<main class="container" style="max-width:100%;display:flex;justify-content: center;">
 		<div id="checkWrapper">
 			<p>Pick 5 numbers!</p>
 			<form method="GET" action="{{action('TheWorldLotterysController@storeNumbers')}}">

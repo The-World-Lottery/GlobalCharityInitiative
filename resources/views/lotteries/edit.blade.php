@@ -14,7 +14,7 @@
 
 @section('content')
 
-	<main class="container" style="text-align:center;max-width:100%;float:left;"><br>
+	<main class="container" style="text-align:center;max-width:100%;"><br>
 		<form method="POST" action="{{ action('LotteriesController@update', $lottery->id)}}">
 			{!! csrf_field() !!}
 			{{ method_field('PUT') }}

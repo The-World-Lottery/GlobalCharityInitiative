@@ -76,44 +76,44 @@
 			@endif
 		</div>
 	</div>
-	<div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col1">
 		<a class="navButton" href="{{action('RafflesController@index')}}">
+	<div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col1">
 			<img class="auto navIcons" src="/images/ticket.png">
 			<div class="auto2">
 			 Raffles
 			</div>
-		</a>
 	</div>
-	<div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col1">
+		</a>
 		<a class="navButton" href="{{action('LotteriesController@index')}}">
+	<div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col1">
 			<img class="auto navIcons" src="/images/money-bag.png">
 			<div class="auto2">
 			 Lotteries
 			 </div>
-		</a>
 	</div>
-	<div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col1">
+		</a>
 		<a class="navButton" href="{{action('TheWorldLotterysController@index')}}">
+	<div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col1">
 			<img class="auto navIcons" src="/images/treasure.png">
 			<div class="auto2">
 			 The World Lottery
 			 </div>
-		</a>
 	</div>
-	<div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col1">
+		</a>
 		<a class="navButton" href="{{action('SuggestionsController@index')}}">
+	<div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col1">
 			<img class="auto navIcons" src="/images/chat.png">
 			<div class="auto2">
 			 Suggestion Box
 			 </div>
-		</a>
 	</div>
-	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col1">
+		</a>
 		<a class="navButton" href="{{action('AboutUsController@index')}}">
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col1">
 			<img class="auto navIcons" src="/images/round-help-button.png">
 			<div class="auto2">
-			 About Us
-			 </div>
-		</a>
+			About Us
+			</div>
 	</div>
+		</a>
 </div>

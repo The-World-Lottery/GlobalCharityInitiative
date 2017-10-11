@@ -13,7 +13,7 @@
 @stop
 
 @section('content')
-	<main class="container" style="max-width:100%;float:left;">
+	<main class="container" style="max-width:100%;">
 		<div>
 			@if (session()->has('successMessage'))
             <div class="alert alert-success">{{ session('successMessage') }}</div>

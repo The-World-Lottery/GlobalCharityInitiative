@@ -191,20 +191,14 @@ $(document).ready(function(){
     	$('.img-circle').slideToggle();
 	})
 
-	//query db with
-	// function refresh_div() {
- //        jQuery.ajax({
- //            url:'layouts.maste',
- //            type:'POST',
- //            success:function(results) {
- //                jQuery("#chatArea").html("hello");
 
- //            }
- //        });
- //    }
-
- //    t = setInterval(refresh_div,1000);
-
+    $('.col1').hover(function() {
+        $(this).find('img:first').hide();
+        $(this).find('div:first').show();
+    }, function() {
+        $(this).find('img:first').show();
+        $(this).find('div:first').hide()
+    });
 
 
 });

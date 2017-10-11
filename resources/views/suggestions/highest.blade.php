@@ -18,7 +18,7 @@
   @endif
 </ul>
 	{{-- <span style="float:right;padding-right:1em;">{!! $suggestions->appends(Request::except('page'))->render() !!}</span> --}}
-    <main class="container" style="max-width:100%;float:left;">
+    <main class="container" style="max-width:100%;">
 
         @foreach($suggestions as $suggestion)
 

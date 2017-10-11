@@ -14,7 +14,7 @@
 
 @section('content')
 
-	<main class="container" style="text-align:center;max-width:100%;float:left;display:flex;justify-content: center;">
+	<main class="container" style="text-align:center;max-width:100%;display:flex;justify-content: center;">
 		<div style="padding-top: 0;">
 		<h1>{{$raffle['title']}}</h1>
 			<div class="countdown"><h2>

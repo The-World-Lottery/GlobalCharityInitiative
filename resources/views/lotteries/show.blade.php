@@ -14,7 +14,7 @@
 
 @section('content')
 
-	<main class="container" style="text-align:center;max-width:100%;float:left;display:flex;justify-content: center;">
+	<main class="container" style="text-align:center;max-width:100%;display:flex;justify-content: center;">
 		<div style="padding-top: 2em;">
 			<h1 style="color:lightgreen;">Current Pot<br><strong style="font-size:2em;">${{number_format($lottery->current_value,2,".",",")}}</strong>
 			</h1>
