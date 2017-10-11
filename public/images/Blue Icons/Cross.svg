@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>Cross</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M100,0 C44.771524,3.03201907e-14 0,44.771524 0,100 C0,155.228476 44.771524,200 100,200 C155.228476,200 200,155.228476 200,100 C200,44.771524 155.228476,-3.41060513e-14 100,0 Z M84,40 L116,40 L116,84 L160,84 L160,116 L116,116 L116,160 L84,160 L84,116 L40,116 L40,84 L84,84 L84,40 Z" id="Cross" fill="#009BCD"></path>
+    </g>
+</svg>

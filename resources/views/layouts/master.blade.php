@@ -37,6 +37,7 @@
 	  					Drawing in:
 	  					<span id="clock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
 					</h4>
+
 				</div>
 				<div class="row">
 					<div class="col col-xs-12">
@@ -59,18 +60,18 @@
 				</div>
 			</div>
 			<div id="sidebar" class="col col-sm-4 col-xs-12 {{-- gameAndChatInfo --}} chatInfoContSpacing" style="margin-top: 1em;">
+					<form action="{{ action('UsersController@comment') }}">
+					{!! csrf_field() !!}
+						<input type="text" autofocus style="padding:.5em;margin-bottom:.5em;border:0;border-bottom:1px solid white;color:white;width:100%;background-color:rgba(0,0,0,0);" placeholder="Say Something!" name="comment"><button hidden type="submit">Add comment</button>
+					</form>
 				<div class="chatInfoMargins borderOpac" id="chat">
 					{{-- <div id="chatArea"> --}}
-					@foreach(\App\Models\UserComment::orderBy('created_at','asc')->limit(60)->get() as $comment)
+					@foreach(\App\Models\UserComment::orderBy('created_at','desc')->limit(60)->get() as $comment)
 						<span style="padding-left:.5em;"><u style="color:lightgreen;">{{ \App\User::select('username')->where('id',$comment->user_id )->get()[0]['username']}}-</u></span>
 						<span class="commentSpacing" style="padding-left:.2em;">{{$comment->content}}</span><br>
 					@endforeach
 					{{-- </div> --}}
 				</div>
-					<form action="{{ action('UsersController@comment') }}">
-					{!! csrf_field() !!}
-						<input type="text" autofocus style="padding:.5em;margin-top:.5em;border:0;border-bottom:1px solid white;color:white;width:100%;background-color:rgba(0,0,0,0);" placeholder="Say Something!" name="comment"><button hidden type="submit">Add comment</button>
-					</form>
 			</div>
 		</div>
 		<div class="row">
@@ -88,7 +89,12 @@
 				
 			</div>
 			<div class="col-xs-12 col-sm-4">
-				
+				<div style="display:flex;justify-content: space-around;">
+					<img src="/images/Blue Icons/GitHub.svg" alt="" class="socialIcon">
+					<img src="/images/Blue Icons/Instagram.svg" alt="" class="socialIcon">
+					<img src="/images/Blue Icons/Twitter.svg" alt="" class="socialIcon">
+					<img src="/images/Blue Icons/Facebook.svg" alt="" class="socialIcon">
+				</div>
 			</div>
 			<div class="col-xs-12 col-sm-4">
 				

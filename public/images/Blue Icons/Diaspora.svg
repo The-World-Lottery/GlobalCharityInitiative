@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>Diaspora</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M100,0 C44.7714,0 0,44.7714 0,100 C0,155.2286 44.7714,200 100,200 C155.2286,200 200,155.2286 200,100 C200,44.7714 155.2286,0 100,0 Z M44,68 L84,81 L84,35 L116,35 L116,81 L156,68 L165,96 L125,109 L151,147 L127,164 L100,128 L73,164 L49,147 L75,109 L35,96 L44,68 Z" id="Diaspora" fill="#009BCD"></path>
+    </g>
+</svg>

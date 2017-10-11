@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>Flickr</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M100,0 C44.771526,3.03201907e-14 0,44.771526 0,100 C1.5158245e-14,155.228474 44.771526,200 100,200 C155.228474,200 200,155.228474 200,100 C200,44.771526 155.228474,-3.03201909e-14 100,0 Z M60,64 C79.1061827,64 95,79.8938173 95,100 C95,119.106183 79.1061827,135 60,135 C39.8938173,135 24,119.106183 24,100 C24,79.8938173 39.8938173,64 60,64 Z M141,64 C160.106183,64 176,79.8938173 176,100 C176,119.106183 160.106183,135 141,135 C120.893817,135 105,119.106183 105,100 C105,79.8938173 120.893817,64 141,64 Z" id="Flickr" fill="#009BCD"></path>
+    </g>
+</svg>

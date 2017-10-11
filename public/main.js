@@ -175,23 +175,23 @@ $(document).ready(function(){
         t++;
     },1000);
 
-    //hover for summaries
+    //click for summaries
     $('#hoverTrigger').click(function(){
     	$('#hoverSumm').slideToggle();
 	})
 
 
-	// hover for wallets
+	//click for wallets
 	 $('#walletTrigger').click(function(){
     	$('.walletShow').slideToggle();
 	})
 
-	//hover profile image 
+	//click profile image 
 	$('.imageTrigger').click(function(){
     	$('.img-circle').slideToggle();
 	})
 
-
+	//hover for nav buttons
     $('.col1').hover(function() {
         $(this).find('img:first').hide();
         $(this).find('div:first').show();

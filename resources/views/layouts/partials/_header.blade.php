@@ -65,7 +65,7 @@
 			@if (Auth::check())
 				<span class="" style="display:flex;justify-content: center;">
 					<img src='{{Auth::user()->image}}' id="headImg">
-					<span>
+					<span id="nameAndWall">
 						<a href="{{action('UsersController@show' , Auth::id())}}" >{{Auth::user()->name}}</a>
 						<br>
 						<a id="walletTrigger">Your Wallets</a>

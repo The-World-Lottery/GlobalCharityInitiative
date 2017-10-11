@@ -22,30 +22,30 @@
 		  	<div id="home" class="tab-pane fade in active">
 			    <p style="text-align:center;">Our mission is to eliminate the man power that is usually necessary for fund-raising, for all types of worth-while charities and human interest projects by providing massive monetary donations (from The World Lottery Foundation) directly to the source of the charitable work. We will accomplish this by running a large number of simultaneous lotteries and raffles whose ticket prices will be split thusly.</p>
 			    <p style="text-align:center;" >The ticket price for all games is $2 US (or the current equivalency of 2 USD in Euros, Japanese Yen, Pounds, Swiss Franks, Bitcoin, Litecoin, Etherium, Dogecoin or Ripple)</p>
-			    <ul>
-				    <li>Lottery Ticket Price
+			    <div class="row">
+				    <blockquote class="col col-md-4 col-sm-12">Lottery Ticket Price
 				    	<ul>
 				    		<li>40% to the current lottery's pool.</li>
 				    		<li>30% to The World Lottery Foundation.</li>
 				    		<li>25% to The World Lottery's Pool.</li>
 				    		<li>5% max to the payment system.</li>
 				    	</ul>
-				    </li>
-				    <li>Raffle Ticket Price
+				    </blockquote>
+				    <blockquote class="col col-md-4 col-sm-12">Raffle Ticket Price
 				    	<ul>
 				    		<li>50% to The World Lottery Foundation.</li>
 			    			<li>45% to The World Lottery's Pool.</li>
 			    			<li>5% max to the payment system.</li>
 				    	</ul>
-				    </li>
-				    <li>The World Lottery Ticket Price
+				    </blockquote>
+				    <blockquote class="col col-md-4 col-sm-12">The World Lottery Ticket Price
 				    	<ul>
 			    			<li>50% to The World Lottery Foundation.</li>
 			    			<li>45% to The World Lottery's Pool.</li>
 			    			<li>5% max to the payment system.</li>	
 				    	</ul>
-				    </li>
-			    </ul>
+				    </blockquote>
+			    </div>
 			</div>
 			<div id="menu1" class="tab-pane fade" style="text-align: center;">
 				<h3>Our Sources and Technologies</h3>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>Gittip</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M100,0 C44.771524,3.03201907e-14 0,44.771524 0,100 C0,155.228476 44.771524,200 100,200 C155.228476,200 200,155.228476 200,100 C200,44.771524 155.228476,-3.41060513e-14 100,0 Z M112,61 C109.521576,62.9686136 105.879588,65.855445 99,66 C92.1254861,65.855445 88.4834976,62.9686136 86,61 C80.6569527,53.9447419 69.7784621,48.2720172 58,56 C44.88815,64.5567074 48.8014225,80.4578325 53,85 L99,147 L145,85 C149.196869,80.4578325 153.110142,64.5567074 140,56 C128.21983,48.2720172 117.341339,53.9447419 112,61 Z" id="Gittip" fill="#009BCD"></path>
+    </g>
+</svg>

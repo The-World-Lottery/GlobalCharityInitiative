@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>Email</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M39.1505729,62.4229088 C41.1453601,59.7295748 44.3500481,58 48,58 L157,58 C159.763994,58 162.270653,58.9897964 164.190625,60.6378851 L100,94.9315068 L39.1505729,62.4229088 Z M37.2807483,66.4924546 C37.0969682,67.2966225 37,68.1358617 37,69 L37,129 C37,135.125779 41.8725615,140 48,140 L157,140 C163.133618,140 168,135.125779 168,129 L168,69 C168,67.2886687 167.620203,65.6750153 166.939081,64.2380252 L100,100 L37.2807483,66.4924546 Z M100,0 C44.7714,0 0,44.7714 0,100 C0,155.2286 44.7714,200 100,200 C155.2286,200 200,155.2286 200,100 C200,44.7714 155.2286,0 100,0 Z" id="Email" fill="#009BCD"></path>
+    </g>
+</svg>
