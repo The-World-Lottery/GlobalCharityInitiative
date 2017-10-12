@@ -21,14 +21,13 @@
 		<div class="row">
 			@include('layouts.partials._header')	
 		</div>
-		<div class="row" style="background-color:rgba(0,0,0,.6);">
+		<div class="row" style="margin-top:4em;background-color:rgba(0,0,0,.6);">
 			@if(Auth::check() && Auth::user()->is_admin)
-					@include('layouts.partials._adminBar')
-				@endif
-				@if(\Auth::check())
-					@include('layouts.partials._wallet')
-				@endif
-			
+				@include('layouts.partials._adminBar')
+			@endif
+			@if(\Auth::check())
+				@include('layouts.partials._wallet')
+			@endif
 			<div class="col col-xs-12 col-sm-8" style="height:100%;padding-top: 4em;">
 				<div style="text-align:center;margin-top:2em;">
 					<h1 style="font-size:4em;color:lightgreen">World Lottery Jackpot is <br>(USD) ${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}
@@ -37,6 +36,9 @@
 	  					Drawing in:
 	  					<span id="clock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
 					</h4>
+				{{-- <div class="text-center col col-xs-12">
+					@include('layouts.partials._carousel')
+				</div> --}}
 
 				</div>
 				<div class="row">
@@ -62,7 +64,8 @@
 			<div id="sidebar" class="col col-sm-4 col-xs-12 {{-- gameAndChatInfo --}} chatInfoContSpacing" style="margin-top: 1em;">
 					<form action="{{ action('UsersController@comment') }}">
 					{!! csrf_field() !!}
-						<input type="text" autofocus style="padding:.5em;margin-bottom:.5em;border:0;border-bottom:1px solid white;color:white;width:100%;background-color:rgba(0,0,0,0);" placeholder="Say Something!" name="comment"><button hidden type="submit">Add comment</button>
+						<input type="text" autofocus style="padding:.5em;margin-bottom:.5em;border:0;border-bottom:1px solid white;color:white;width:100%;background-color:rgba(0,0,0,0);" placeholder="Say Something!" name="comment">
+						<button hidden type="submit">Add comment</button>
 					</form>
 				<div class="chatInfoMargins borderOpac" id="chat">
 					{{-- <div id="chatArea"> --}}
