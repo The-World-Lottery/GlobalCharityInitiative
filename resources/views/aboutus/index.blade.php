@@ -23,7 +23,8 @@
 			    <p style="text-align:center;">Our mission is to eliminate the man power that is usually necessary for fund-raising, for all types of worth-while charities and human interest projects by providing massive monetary donations (from The World Lottery Foundation) directly to the source of the charitable work. We will accomplish this by running a large number of simultaneous lotteries and raffles whose ticket prices will be split thusly.</p>
 			    <p style="text-align:center;" >The ticket price for all games is $2 US (or the current equivalency of 2 USD in Euros, Japanese Yen, Pounds, Swiss Franks, Bitcoin, Litecoin, Etherium, Dogecoin or Ripple)</p>
 			    <div class="row">
-				    <blockquote class="col col-md-4 col-sm-12">Lottery Ticket Price
+				    <blockquote class="col col-md-4 col-sm-12">
+				    	<h2 class="infoHeaders">Lottery Ticket Price</h2>
 				    	<ul>
 				    		<li>40% to the current lottery's pool.</li>
 				    		<li>30% to The World Lottery Foundation.</li>
@@ -31,14 +32,16 @@
 				    		<li>5% max to the payment system.</li>
 				    	</ul>
 				    </blockquote>
-				    <blockquote class="col col-md-4 col-sm-12">Raffle Ticket Price
+				    <blockquote class="col col-md-4 col-sm-12">
+				    	<h2 class="infoHeaders">Raffle Ticket Price</h2>
 				    	<ul>
 				    		<li>50% to The World Lottery Foundation.</li>
 			    			<li>45% to The World Lottery's Pool.</li>
 			    			<li>5% max to the payment system.</li>
 				    	</ul>
 				    </blockquote>
-				    <blockquote class="col col-md-4 col-sm-12">The World Lottery Ticket Price
+				    <blockquote class="col col-md-4 col-sm-12">
+				    	<h2 class="infoHeaders">The World Lottery Ticket Price</h2>
 				    	<ul>
 			    			<li>50% to The World Lottery Foundation.</li>
 			    			<li>45% to The World Lottery's Pool.</li>
@@ -47,35 +50,35 @@
 				    </blockquote>
 			    </div>
 			</div>
-			<div id="menu1" class="tab-pane fade" style="text-align: center;">
-				<h3>Our Sources and Technologies</h3>
-				<div>
-					<h3>Sources</h3>
-					<a target="_blank" href="http://www.theperfecttitle.com/money/money.shtml"><h5>Lottery Quotes</h5></a>
-					<a target="_blank" href="https://www.cryptonator.com/?utm_referrer=http%3a%2f%2ftheworldlottery.dev%2fcurrencyconversion"><h5>Currency Conversion Widgets</h5></a>
-					<a target="_blank" href="https://www.cryptocompare.com/api/#-api-data-price-"><h5>Currency conversion API Call for point of sale transactions</h5></a>
-					<a target="_blank" href="https://www.filestack.com"><h5>Profile and Raffle Image Hosting</h5></a>
-					<a target="_blank" href="http://hilios.github.io/jQuery.countdown/"><h5>Games timer Countdown</h5></a>
-
-					<h3>Technologies</h3>
-					
+			<div id="menu1" class="tab-pane fade">
+				<div class="row">
+					<blockquote class="col col-sm-6 col-xs-12">
+						<h1 class="infoHeaders">Sources</h1>
+						<a target="_blank" href="http://www.theperfecttitle.com/money/money.shtml"><h5>Lottery Quotes</h5></a>
+						<a target="_blank" href="https://www.cryptonator.com/?utm_referrer=http%3a%2f%2ftheworldlottery.dev%2fcurrencyconversion"><h5>Currency Conversion Widgets</h5></a>
+						<a target="_blank" href="https://www.cryptocompare.com/api/#-api-data-price-"><h5>Currency conversion API Call for point of sale transactions</h5></a>
+						<a target="_blank" href="https://www.filestack.com"><h5>Profile and Raffle Image Hosting</h5></a>
+						<a target="_blank" href="http://hilios.github.io/jQuery.countdown/"><h5>Games timer Countdown</h5></a>
+					</blockquote>
+					<blockquote class="col col-sm-6 col-xs-12">
+						<h1 class="infoHeaders">Technologies</h1>	
 						<h5>Laravel framework for PHP</h5>
+						<h5>Object Oriented</h5>
 						<h5>Cron Jobs for game timeouts</h5>
-						<h5>Jquery h5brary for Javascript</h5>
-						<h5>Bootstrap and custom styh5ngs for mobile responsiveness</h5>
+						<h5>Jquery library for Javascript</h5>
+						<h5>Bootstrap and custom media breakpoints<br>for mobile responsiveness</h5>
 						<h5>Role based authentication</h5>
 						<h5>MVC (Model View Controller)</h5>
-						<h5>Events/task sched</h5>
-						<h5>14db tables and db stuff</h5>
-						<h5>120+ Merges, 300+ commits - Github Version control</h5>
-
-					
+						<h5>Events/task scheduling</h5>
+						<h5>14 related database tables</h5>
+						<h5>140+ Merges, 450+ commits - Github Version control</h5>	
+					</blockquote>
 				</div>
 			</div>
 			<div id="menu2" class="tab-pane fade">
 				<div class="row" id="theCreatorsContainer">
 					<div class="col col-sm-4 col-xs-12">
-					<h4>Emmett</h4>
+					<h2 class="infoHeaders">Emmett Peters</h2>
 						<img src="/images/Emmett.jpg">
 						<br>
 						<br>
@@ -85,7 +88,7 @@
 						</div><br>
 					</div>
 					<div class="col col-sm-4 col-xs-12" >
-					<h4>Avery</h4>
+					<h2 class="infoHeaders">Avery Hankins</h2>
 						<img src="/images/avery.png">
 						<br>
 						<br>
@@ -96,7 +99,7 @@
 						<p></p>
 					</div> 	
 					<div class="col col-sm-4 col-xs-12" style="">
-					<h4>Cody</h4>
+					<h2 class="infoHeaders">Cody Hastings</h2>
 						<img src="/images/Cody.jpg">
 						<br>
 						<br>

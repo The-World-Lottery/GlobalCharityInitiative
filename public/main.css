@@ -66,7 +66,7 @@ a {
 }
 
 #white {
-	color:white;
+	color:yellow;
 }
 
 #white:hover {
@@ -181,9 +181,9 @@ a {
 	top:0;
 }
 	
-#random_quote {
+/*#random_quote {
 	margin:0px;
-}
+}*/
 
 #myCarousel {
 	height:auto;
@@ -191,6 +191,10 @@ a {
 	width:100%;
 	overflow:hidden;
 	margin-bottom: 2em;
+}
+
+.infoHeaders {
+	color:yellow;
 }
 
  /*content right side*/
@@ -368,7 +372,7 @@ a:hover, a:active {color:lightgreen;}
 
 #zeroO {
 	background-color:rgba(0,0,0,0);
-	color:lightgreen;
+	color:yellow;
 }
 
 .walletShow {

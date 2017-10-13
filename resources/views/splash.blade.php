@@ -10,25 +10,22 @@
 	{{-- <link rel="stylesheet" href="/theWorldLottery.css"> --}}
 	<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
 </head>
-	<body class="container-fluid" style="width:100%;height:120%;margin-top:-10vh;padding:0;">
-			<video style="width:110%;height:120%;position:fixed;z-index:10;opacity:.75;" poster="IMGS/magnifyingGlass.png" autoplay="autoplay" muted="muted" loop="loop">
+	<body class="container-fluid" style="height:100vh">
+			{{-- <video style="width:110%;height:120%;position:fixed;z-index:10;opacity:.75;" poster="IMGS/magnifyingGlass.png" autoplay="autoplay" muted="muted" loop="loop">
 	            <source src="/images/earth2.mp4" type="video/mp4">     
-	        </video>
-	<div id="splashCont" style="opacity:1;color:white;">
-		<div style="position:relative;height:100vh;z-index:10;position:fixed;width:100%;opacity:1;top:20%;z-index:10;">
-			<div style="min-height:50vh;width:100%;z-index:20;text-align:center;">
+	        </video> --}}
+		<div class="row" style="text-align: center;">
+			<div class="col col-xs-12">
 				<h1 style="font-family: 'Racing Sans One', cursive;color:lightblue;font-size:5em;">The World Lottery For Charity</h1>
 				<p class="splashPar">ALL proceeds go to selected charities, human interest projects and TWL staff, development, maintenence and security.</p>
-				<form action="{{action('RafflesController@index')}}"><button class="navLink" id="splashButton" style="margin:2em 0 3em 0;width:70%;height:2em;color:lightgreen;border:3px solid lightgreen;border-radius:2em;text-align:center;font-size:2em;background-color:rgba(0,0,0,0);">Click here to enter site</button></form>
-			</div>
-				
-			<div style="z-index:30;width:100%;">
-			    <div style="background-color:rgba(0,0,0,.4);padding:1em;margin:auto;" id="random_quote"></div>
-			</div>
+				<form action="{{action('RafflesController@index')}}"><button id="splashButton" style="margin:1em 0 1em 0;color:lightgreen;border:3px solid lightgreen;width:100%;border-radius:2em;text-align:center;font-size:2em;background-color:rgba(0,0,0,0);padding:.5em;">Enter Site</button></form>	
+				<div style="z-index:30;width:100%;">
+				    <div style="background-color:rgba(0,0,0,.4);padding-top:margin:auto;" id="random_quote"></div>
+				</div>
 
 
+			</div>
 		</div>
-	</div>
 <script
 	  src="https://code.jquery.com/jquery-3.2.1.js"
 	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
