@@ -42,8 +42,8 @@
 
 				</div>
 				<div class="row">
-					<div class="col col-xs-12">
-						<a id="googlepos" href="{{action('CurrencyConversionController@index')}}">
+					<div style="margin-top:2em;" class="col col-xs-12">
+						<a id="googlepos"  href="{{action('CurrencyConversionController@index')}}">
 							<div>
 							<img class="navIcons" src="/images/coins.png">
 								Currency Conversions

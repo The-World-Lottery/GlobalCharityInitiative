@@ -16,14 +16,14 @@
 @section('content')
 
  	<main class="container" style="max-width:100%;">
-    <div style="padding:1em;">
+    <div>
         @if (session()->has('errorMessage'))
             <div class="alert alert-error">{{ session('errorMessage') }}</div>
         @endif
 
         <form method="POST" action="/auth/login">
             {!! csrf_field() !!}
-            <div style="margin-top:3em;" class="row">
+            <div style="margin-top:2em;" class="row">
                 <div class="form-group col col-sm-6 col-sm-offset-3 col-xs-12">
                     <label><h2>Email</h2></label>
                     {!! $errors->first('email', '<span class="help-block">:message</span>')!!}
@@ -41,7 +41,7 @@
                 <input type="checkbox" name="remember"> Remember Me
             </div>
             <div class="form-group" style="display:flex;justify-content: center;">
-                <button style="width:5em;height:3em;" class="btn btn-success" type="submit">Login</button>
+                <button style="margin-bottom:2em;width:5em;height:3em;" class="btn btn-success" type="submit">Login</button>
             </div>
             
         </form>

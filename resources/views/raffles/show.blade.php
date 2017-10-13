@@ -25,12 +25,7 @@
 			<img style="height:12em;border-radius:1em;margin-bottom:" src={!! $raffle->img !!}>
 		</div>
 		<div class="col-xs-12 col-sm-6 col">
-				{{-- <h3>{{$raffle['content']}}</h3> --}}
-				{{-- <p>By: {{$raffle->user->name}}</p> --}}
-				{{-- <p>Posted On: {{$raffle->created_at}}</p> --}}
 				<h2>{{$raffle->product}}</h2>
-				{{-- <p>Last updated on: {{$raffle->updated_at}}</p> --}}
-				{{-- <p>Ends on: {{$raffle->end_date}}</p> --}}
 				<form action="{{ action('RafflesController@addUserToEntries', $raffle->id) }}">
 				
 				<h5 style="color:yellow;font-size:1.5em;">What currency would you like to purchase a ticket with?</h5>
