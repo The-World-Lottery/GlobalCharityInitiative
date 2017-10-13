@@ -88,18 +88,26 @@
 			</div>
 		</div>
 		<div class="row" style="background-color:rgba(0,0,0,.6);height:5em;">
-			<div class="col-xs-12 col-sm-4">
+			<div class="col col-xs-12 col-sm-4">
 				
 			</div>
-			<div class="col-xs-12 col-sm-4">
+			<div class="col col-xs-12 col-sm-4">
 				<div style="display:flex;justify-content: space-around;">
-					<img src="/images/Blue Icons/GitHub.svg" alt="" class="socialIcon">
-					<img src="/images/Blue Icons/Instagram.svg" alt="" class="socialIcon">
-					<img src="/images/Blue Icons/Twitter.svg" alt="" class="socialIcon">
-					<img src="/images/Blue Icons/Facebook.svg" alt="" class="socialIcon">
+					<a target="_blank" href="https://github.com/The-World-Lottery/TheWorldLottery">
+						<img src="/images/Blue Icons/GitHub.svg" alt="" class="socialIcon">
+					</a>
+					<a target="_blank" href="">
+						<img src="/images/Blue Icons/Instagram.svg" alt="" class="socialIcon">
+					</a>
+					<a target="_blank" href="">
+						<img src="/images/Blue Icons/Twitter.svg" alt="" class="socialIcon">
+					</a>
+					<a target="_blank" href="">
+						<img src="/images/Blue Icons/Facebook.svg" alt="" class="socialIcon">
+					</a>
 				</div>
 			</div>
-			<div class="col-xs-12 col-sm-4">
+			<div class="col col-xs-12 col-sm-4">
 				
 			</div>
 		</div>

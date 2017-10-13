@@ -52,7 +52,7 @@
 			</div>
 			<div id="menu1" class="tab-pane fade">
 				<div class="row">
-					<blockquote class="col col-sm-6 col-xs-12">
+					<blockquote class="col col-sm-5 col-sm-offset-1 col-xs-12">
 						<h1 class="infoHeaders">Sources</h1>
 						<a target="_blank" href="http://www.theperfecttitle.com/money/money.shtml"><h5>Lottery Quotes</h5></a>
 						<a target="_blank" href="https://www.cryptonator.com/?utm_referrer=http%3a%2f%2ftheworldlottery.dev%2fcurrencyconversion"><h5>Currency Conversion Widgets</h5></a>
@@ -60,7 +60,7 @@
 						<a target="_blank" href="https://www.filestack.com"><h5>Profile and Raffle Image Hosting</h5></a>
 						<a target="_blank" href="http://hilios.github.io/jQuery.countdown/"><h5>Games timer Countdown</h5></a>
 					</blockquote>
-					<blockquote class="col col-sm-6 col-xs-12">
+					<blockquote class="col col-sm-5 col-xs-12">
 						<h1 class="infoHeaders">Technologies</h1>	
 						<h5>Laravel framework for PHP</h5>
 						<h5>Object Oriented</h5>
