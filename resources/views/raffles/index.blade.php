@@ -30,7 +30,7 @@
 	
 		<a style="" href="{{ action('RafflesController@show', $raffle->id) }}">
 			<div class="col-sm-6 col-md-4 text-center" style="margin:1em 0 1em 0;">
-				<figure class="raffleCont" style='padding:.3em;border:2px solid black;border-radius:1em;background-image:url("{{$raffle->img}}");'>
+				<figure class="raffleCont" style='box-shadow: 8px 8px 8px rgba(0,0,0,.4);padding:.3em;border-radius:1em;background-image:url("{{$raffle->img}}");'>
 					<div style="border-radius:1em;background-color:rgba(0,0,0,.8);height:100%;display:none;">
 						<div style="position:relative;height:100%;width:100%;">
 							<div style="padding-top: 10%;">

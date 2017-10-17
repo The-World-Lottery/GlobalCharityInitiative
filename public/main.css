@@ -5,14 +5,13 @@ body {
 	font-size:1.7em;
 	font-family: 'PT Sans Narrow', sans-serif !important; 
 	letter-spacing:1px;
+	/*text-shadow: 2px 2px rgba(0,0,0,.40);*/
 }
 
 h1,h2,h3,h4,h5,h6 {
 	font-family: 'PT Sans Narrow', sans-serif !important; 
 	letter-spacing:2px;
 }
-
-
 
 ::-webkit-input-placeholder {
     color:white;
@@ -40,21 +39,10 @@ h1,h2,h3,h4,h5,h6 {
 
 html {
 	height:100vh;
-	/*background-image:url("/images/earthAtNight.jpg");
-	background-attachment: fixed;
-	background-size: cover;
-	background-position: center;
-	color:white;
-	margin:0;
-	padding:0;
-	position: relative;
-	padding-bottom: 6rem;
-	min-height: 100%;*/
 }
 
 a {
 	color:lightblue;
-	/*text-decoration: underline*/;
 }
 
 
@@ -386,9 +374,9 @@ a:hover, a:active {color:lightgreen;}
 	color:yellow;
 }
 
-.walletShow {
+/*.walletShow {
 	display:hidden;
-}
+}*/
 
 
 
@@ -422,7 +410,13 @@ input, button {
 	padding:1em 0 1em 0;
 	border-radius: .5em;
 	text-align: center;
+	box-shadow:0px 0px;
 }
+
+#mainHolder{
+	box-shadow: 0px 4px 4px rgba(0,0,0,.6);
+}
+
 
 
 
@@ -471,9 +465,7 @@ input, button {
 		/*position: fixed;*/
 	}
 
-	#googlepos {
-		
-	}
+	
 
 	.chatInfoContSpacing {
 		clear:right;

@@ -25,9 +25,9 @@
 			@if(Auth::check() && Auth::user()->is_admin)
 				@include('layouts.partials._adminBar')
 			@endif
-			@if(\Auth::check())
+			{{-- @if(\Auth::check())
 				@include('layouts.partials._wallet')
-			@endif
+			@endif --}}
 			<div class="col col-xs-12 col-sm-8" style="height:100%;padding-top: 4em;">
 				<div style="text-align:center;margin-top:2em;">
 					<h1 style="font-size:4em;color:lightgreen">World Lottery Jackpot is <br>(USD) ${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}
@@ -61,19 +61,17 @@
 					</div>
 				</div>
 			</div>
-			<div id="sidebar" class="col col-sm-4 col-xs-12 {{-- gameAndChatInfo --}} chatInfoContSpacing" style="margin-top: 1em;">
+			<div id="sidebar" class="col col-sm-4 col-xs-12 chatInfoContSpacing" style="margin-top: 1em;">
 					<form action="{{ action('UsersController@comment') }}">
 					{!! csrf_field() !!}
 						<input type="text" style="padding:.5em;margin-bottom:.5em;border:0;border-bottom:1px solid white;color:white;width:100%;background-color:rgba(0,0,0,0);" placeholder="Say Something!" name="comment">
 						<button hidden type="submit">Add comment</button>
 					</form>
 				<div class="chatInfoMargins borderOpac" id="chat">
-					{{-- <div id="chatArea"> --}}
 					@foreach(\App\Models\UserComment::orderBy('created_at','desc')->limit(60)->get() as $comment)
 						<span style="padding-left:.5em;"><u style="color:lightgreen;">{{ \App\User::select('username')->where('id',$comment->user_id )->get()[0]['username']}}-</u></span>
 						<span class="commentSpacing" style="padding-left:.2em;">{{$comment->content}}</span><br>
 					@endforeach
-					{{-- </div> --}}
 				</div>
 			</div>
 		</div>
