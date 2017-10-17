@@ -28,16 +28,22 @@
 		@foreach($raffles as $raffle)
 		
 
-			<div class=" col-sm-6 col-md-4 text-center">
 					<a style="margin:1em;" href="{{ action('RafflesController@show', $raffle->id) }}">
+			<div class=" col-sm-6 col-md-4 text-center">
 						<div class="raffleCont" style='background-image:url("{{$raffle->img}}");'>
-							<h4 style="color:yellow;border-radius:6px;padding:8px;background-color:rgba(0,0,0,.5);">{{$raffle->title}}</h4>
-							<p style="border-radius:6px;width:88%;position:absolute;bottom:0;background-color:rgba(0,0,0,.5);padding:4px;">Drawing Happens 
-							<span style="color:#00ffc4;">{{$raffle->end_date->diffForHumans()}}</span>
-							</p>
+							<div style="border-radius:1em;background-color:rgba(0,0,0,.5);height:100%;display:none;">
+								<div style="height:100%;width:100%;">
+									<div style="padding-top: 25%;">
+										<h4 class="white" style="margin:0;">{{$raffle->title}}</h4>
+										<p style="margin-top: 20%;">Drawing Happens<br>
+											<span style="color:#00ffc4;">{{$raffle->end_date->diffForHumans()}}</span>
+										</p>
+									</div>
+								</div>
+							</div>
 						</div>
-					</a>
 		</div>
+					</a>
 
 		@endforeach
 	</div>

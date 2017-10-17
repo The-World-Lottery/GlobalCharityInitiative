@@ -15,16 +15,16 @@
 @section('content')
 
 	<main class="row" style="text-align:center;">
-		<div class="col-xs-12 col-sm-6 col">
+		<div class="col-xs-12 col-sm-6 col" style="min-height:60vh;">
 			<h1>{{$raffle['title']}}</h1>
 				<div class="countdown"><h2>
 					This Drawing ends in : 
 					<span class="raffleClock" data-clock-id="{{$raffle->end_date}}"></span>
 					</h2>
+			<img style="max-height:16em;border-radius:1em;margin-bottom:" src={!! $raffle->img !!}>
 				</div>
-			<img style="height:12em;border-radius:1em;margin-bottom:" src={!! $raffle->img !!}>
 		</div>
-		<div class="col-xs-12 col-sm-6 col">
+		<div class="col-xs-12 col-sm-6 col" style="padding-top:4em;">
 				<h2>{{$raffle->product}}</h2>
 				<form action="{{ action('RafflesController@addUserToEntries', $raffle->id) }}">
 				

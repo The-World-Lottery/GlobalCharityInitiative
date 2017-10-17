@@ -200,5 +200,12 @@ $(document).ready(function(){
         $(this).find('div:first').hide()
     });
 
+    //hover for raffles
+    $('.raffleCont').hover(function() {
+        $(this).find('div:first').show();
+    }, function() {
+        $(this).find('div:first').hide();
+    });
+
 
 });

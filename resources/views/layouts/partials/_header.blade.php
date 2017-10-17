@@ -59,7 +59,7 @@
 
 
 
-<div style="color:yellow;" class="row" id="main">
+<div style="color:lightblue;" class="row" id="main">
 	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
 		<div class="navButton">
 			@if (Auth::check())
@@ -72,7 +72,7 @@
 					</span>
 				</span>
 			@else
-				<a class="imageTrigger" id="white" href="{{action('Auth\AuthController@getLogin')}}">Login/Register</a>	
+				<a class="imageTrigger"  id="white" href="{{action('Auth\AuthController@getLogin')}}">Login/Register</a>	
 			@endif
 		</div>
 	</div>

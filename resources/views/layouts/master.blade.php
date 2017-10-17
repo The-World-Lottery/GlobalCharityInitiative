@@ -21,7 +21,7 @@
 		<div class="row">
 			@include('layouts.partials._header')	
 		</div>
-		<div class="row" style="margin-top:4em;background-color:rgba(0,0,0,.6);">
+		<div class="row" id="mainHolder">
 			@if(Auth::check() && Auth::user()->is_admin)
 				@include('layouts.partials._adminBar')
 			@endif
@@ -42,7 +42,7 @@
 
 				</div>
 				<div class="row">
-					<div style="margin-top:2em;" class="col col-xs-12">
+					<div style="margin-top:6em;" class="col col-xs-12">
 						<a id="googlepos"  href="{{action('CurrencyConversionController@index')}}">
 							<div>
 							<img class="navIcons" src="/images/coins.png">

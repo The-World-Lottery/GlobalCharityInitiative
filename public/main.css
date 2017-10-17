@@ -67,7 +67,7 @@ a {
 }
 
 #white {
-	color:yellow;
+	color:lightblue;
 }
 
 #white:hover {
@@ -103,6 +103,7 @@ a {
 }
 
 .raffleCont {
+	/*display:hidden;*/
 	position:relative;
 	color:white;
 	background-position:center;
@@ -110,9 +111,14 @@ a {
 	text-align:center;
 	border-radius:1em;
 	height:35vh;
-	padding:0em 1em 1em 1em ;
+	padding:.1em .1em .1em .1em ;
 	margin:1%;
 	overflow:hidden;
+	transition: background-size .5s ease-in;
+}
+
+.raffleContents	{
+	display:none;
 }
 
 .raffleCont:hover {
@@ -195,7 +201,7 @@ a {
 }
 
 .infoHeaders {
-	color:yellow;
+	color:lightblue;
 }
 
  /*content right side*/
@@ -461,7 +467,9 @@ input, button {
 		/*position: fixed;*/
 	}
 
-
+	#googlepos {
+		
+	}
 
 	.chatInfoContSpacing {
 		clear:right;
@@ -512,6 +520,10 @@ input, button {
 	.navButton {
 		padding:3px 0 3px 0;
 		text-align: center;
+	}
+
+	#mainHolder{
+		margin-top:4em;background-color:rgba(0,0,0,.6);
 	}
 
 	
