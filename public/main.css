@@ -159,9 +159,10 @@ a {
 	height:4em;
 	padding-top:.5em;
 	padding-bottom:.5em;
+	transition: all 1s ease;
 }
 .col1:hover {
-	background-color: rgba(0,55,255,.2);
+	background-color: rgba(0,55,255,.4);
 /*	border-radius: 4em;*/
 }
 
@@ -174,7 +175,7 @@ a {
 }
 
 #main {
-	background-color:rgba(0,0,0,.85);
+	background-color:rgba(0,0,0,1);
 	color:white;
 	z-index:10;
 	top:0;
@@ -449,7 +450,7 @@ input, button {
 	#main {
 
 		width:100%;
-		background-color:rgba(0,0,0,.85);
+		/*background-color:rgba(0,0,0,.85);*/
 		font-size:1em;
 		position:fixed;
 		

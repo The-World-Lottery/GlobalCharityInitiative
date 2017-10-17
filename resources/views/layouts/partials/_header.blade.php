@@ -1,4 +1,4 @@
-<div style="color:lightblue;" class="row" id="main">
+<div style="" class="row" id="main">
 	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
 		<div class="navButton">
 			@if (Auth::check())
