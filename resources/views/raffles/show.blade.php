@@ -52,15 +52,17 @@
 				<input hidden id="usdDoge" name="dogeConv">
 				<input hidden id="usdBCH" name="bchConv">
 				<input hidden id="usdXRP" name="xrpConv"><br><br>
-				<button type="submit" class="btn btn-success">BUY TICKET!!!</button>
+				@if (Auth::check() && Auth::user()->is_admin)
+				<a href="{{ action('RafflesController@edit', $raffle->id) }}"><div  class="btn btn-warning">Edit</div></a>
+				@endif
+				<br>
+				<br>
+				<button style="margin-bottom:3em;" type="submit" class="btn btn-success">BUY TICKET!!!</button>
 			
 			</form>
 			
 			<br>
 
-			@if (Auth::check() && Auth::user()->is_admin)
-			<a href="{{ action('RafflesController@edit', $raffle->id) }}"><button style="margin-bottom:3em;" class="btn btn-warning">Edit</button></a>
-			@endif
 		</div>
 
 		

@@ -27,23 +27,23 @@
 	
 		@foreach($raffles as $raffle)
 		
-
-					<a style="margin:1em;" href="{{ action('RafflesController@show', $raffle->id) }}">
-			<div class=" col-sm-6 col-md-4 text-center">
-						<div class="raffleCont" style='background-image:url("{{$raffle->img}}");'>
-							<div style="border-radius:1em;background-color:rgba(0,0,0,.5);height:100%;display:none;">
-								<div style="height:100%;width:100%;">
-									<div style="padding-top: 25%;">
-										<h4 class="white" style="margin:0;">{{$raffle->title}}</h4>
-										<p style="margin-top: 20%;">Drawing Happens<br>
-											<span style="color:#00ffc4;">{{$raffle->end_date->diffForHumans()}}</span>
-										</p>
-									</div>
-								</div>
+	
+		<a style="" href="{{ action('RafflesController@show', $raffle->id) }}">
+			<div class="col-sm-6 col-md-4 text-center" style="margin:1em 0 1em 0;">
+				<figure class="raffleCont" style='padding:.3em;border:2px solid black;border-radius:1em;background-image:url("{{$raffle->img}}");'>
+					<div style="border-radius:1em;background-color:rgba(0,0,0,.8);height:100%;display:none;">
+						<div style="position:relative;height:100%;width:100%;">
+							<div style="padding-top: 10%;">
+								<h2 class="white" style="margin:0 .5em 0 .5em;">{{$raffle->title}}</h2>
 							</div>
+							<p style="position:absolute;bottom:5%;width:100%;">Drawing Happens<br>
+								<span style="color:#00ffc4;">{{$raffle->end_date->diffForHumans()}}</span>
+							</p>
 						</div>
-		</div>
-					</a>
+					</div>
+				</figure>
+			</div>
+		</a>
 
 		@endforeach
 	</div>

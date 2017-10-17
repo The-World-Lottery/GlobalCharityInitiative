@@ -64,7 +64,7 @@
 			<div id="sidebar" class="col col-sm-4 col-xs-12 {{-- gameAndChatInfo --}} chatInfoContSpacing" style="margin-top: 1em;">
 					<form action="{{ action('UsersController@comment') }}">
 					{!! csrf_field() !!}
-						<input type="text" autofocus style="padding:.5em;margin-bottom:.5em;border:0;border-bottom:1px solid white;color:white;width:100%;background-color:rgba(0,0,0,0);" placeholder="Say Something!" name="comment">
+						<input type="text" style="padding:.5em;margin-bottom:.5em;border:0;border-bottom:1px solid white;color:white;width:100%;background-color:rgba(0,0,0,0);" placeholder="Say Something!" name="comment">
 						<button hidden type="submit">Add comment</button>
 					</form>
 				<div class="chatInfoMargins borderOpac" id="chat">

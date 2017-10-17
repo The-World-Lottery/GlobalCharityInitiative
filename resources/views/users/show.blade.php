@@ -30,9 +30,9 @@
 				<div id="showProfImg">
 					<img src='{{$user->image}}' id="profImg">
 				</div><br>
-				<div>
+				<h1>
 					{{$user->name}}
-				</div>
+				</h1>
 				<div>
 					<strong>Email:</strong> {{$user->email}}
 				</div>
@@ -45,20 +45,20 @@
 			
 			<div class="col col-sm-7">
 	
-				<h2 style="text-align:center;">Your tickets:</h2>
+				<h2 style="text-align:center;color:yellow;">Your tickets:</h2>
 				<div  class="row" style="width:100%;text-align:center;">
-					<div class="col col-xs-12 col-sm-4"> <u>World Lottery</u><br>
+					<div class="col col-xs-12 col-sm-4"> <u class="ticketHead">World Lottery</u><br>
 						@foreach($user->worldLotteryEntries->unique('title') as $worldLotteryEntry)
 						{{-- {{dd($worldLotteryEntry)}} --}}
 						<a href="{{action('TheWorldLotterysController@index')}}">{{$worldLotteryEntry->theworldlottery->title}}</a><br>
 						@endforeach
 					</div>
-					<div class="col col-xs-12 col-sm-4"> <u>Raffles</u><br>
+					<div class="col col-xs-12 col-sm-4"> <u class="ticketHead">Raffles</u><br>
 						@foreach($user->raffleEntries->unique('raffles_id') as $raffleEntry)
 						<a href="{{action('RafflesController@show', $raffleEntry->raffle->id)}}">{{$raffleEntry->raffle->title}}</a><br>
 						@endforeach
 					</div>
-					<div class="col col-xs-12 col-sm-4"> <u>Lotteries</u><br>
+					<div class="col col-xs-12 col-sm-4"> <u class="ticketHead">Lotteries</u><br>
 						@foreach($user->lotteryEntries->unique('lottery_id') as $lotteryEntry)
 						{{-- {{dd($lotteryEntry)}} --}}
 						<a href="{{action('LotteriesController@show', $lotteryEntry->lottery->id)}}">{{$lotteryEntry->lottery->title}}</a><br>
