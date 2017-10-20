@@ -25,7 +25,7 @@
             <div class="form-group">
                 {!! $errors->first('name', '<span class="help-block">:message</span>')!!}
                 <label for="Input1">Your Name</label>
-                <input class="form-control" type="text" name="name" id="Input1" value="{{old('name')}}">
+                <input class="form-control" autofocus type="text" name="name" id="Input1" value="{{old('name')}}">
             </div>
 
 

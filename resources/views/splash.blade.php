@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html style="background-color: black">
+<html lang="en">
+
 <head>
 	<title>Welcome!</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	{{-- <link rel="stylesheet" type="text/css" href="/bootstrap.min.css"> --}}
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="/main.css">
-	{{-- <link rel="stylesheet" href="/theWorldLottery.css"> --}}
-	<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
+	
 </head>
 	<body class="container-fluid" style="height:100vh">
-			{{-- <video style="width:110%;height:120%;position:fixed;z-index:10;opacity:.75;" poster="IMGS/magnifyingGlass.png" autoplay="autoplay" muted="muted" loop="loop">
-	            <source src="/images/earth2.mp4" type="video/mp4">     
-	        </video> --}}
+		 
 		<div class="row" style="text-align: center;">
 			<div class="col col-xs-12">
 				<h1 style="font-family: 'Racing Sans One', cursive;color:lightblue;font-size:5em;">The World Lottery For Charity</h1>
@@ -31,7 +29,7 @@
 	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
 	  crossorigin="anonymous"></script>
 	  {{-- <script type="text/javascript" src="theWorldLottery.js"></script> --}}
-	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
 	<script src="https://static.filestackapi.com/v3/filestack.js"></script>
 	<script src="/main.js" type="text/javascript"></script>

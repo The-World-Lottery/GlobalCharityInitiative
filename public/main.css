@@ -41,11 +41,6 @@ html {
 	height:100vh;
 }
 
-a {
-	color:lightblue;
-}
-
-
 .imageTrigger {
 	font-size:2em;
 }
@@ -54,14 +49,14 @@ a {
 	font-size: 20px;
 }
 
-#white {
+/*#white {
 	color:lightblue;
 }
 
 #white:hover {
 	color:lightgreen;
 }
-
+*/
 
 .btn-custom {
 	background-color:rgba(0,0,0,0);
@@ -84,10 +79,15 @@ a {
 }
 
 .navLink {
-	padding-top:.2em;
-	padding-bottom: 1em;
-	margin-right: 1em;
-	margin-left: 1em;
+	color:#3cc2d0;
+}
+
+.modal-backdrop {
+	z-index:0;
+}
+
+.navLink:hover {
+	color:white;
 }
 
 .raffleCont {
@@ -113,9 +113,9 @@ a {
 	display:none;
 }
 
-/*.raffleCont:hover {
+.raffleCont:hover {
 	background-size: 130% 130%;
-}*/
+}
 
 .socialIcon {
 	height:3em;
@@ -166,31 +166,11 @@ a {
 /*	border-radius: 4em;*/
 }
 
-
-#main2 {
-	background-color:rgba(0,0,0,.5);
-	color:white;
-	z-index:0;
-	text-align: center;
-}
-
 #main {
 	background-color:rgba(0,0,0,1);
 	color:white;
-	z-index:10;
+	z-index:0;
 	top:0;
-}
-	
-/*#random_quote {
-	margin:0px;
-}*/
-
-#myCarousel {
-	height:auto;
-	max-height: 25em;
-	width:100%;
-	overflow:hidden;
-	margin-bottom: 2em;
 }
 
 .infoHeaders {
@@ -231,7 +211,7 @@ a {
 
 }
 
-.col-sm-4 {
+.col-sm-4> {
 	padding-right:0;
 }
 
@@ -295,9 +275,6 @@ ul.pagination {
 	padding: 1em;
 }
 
-/*.form-group {
-	width:80%;
-}*/
 
 td {
 	background-color:rgba(0,0,0,0);
@@ -322,9 +299,10 @@ img {
 }
 
 #headImg {
-	width:4em;
-	height:3.3em;
+	width:3.8em;
+	height:3em;
 	border-radius: 10em;
+	margin-top:.2em;
 }
 
 #showProfImg {
@@ -375,10 +353,6 @@ a:hover, a:active {color:lightgreen;}
 	color:yellow;
 }
 
-/*.walletShow {
-	display:hidden;
-}*/
-
 
 
 input, button {
@@ -396,12 +370,10 @@ input, button {
 
 .navButton {
 	margin:.18em 0 .18em 0;
-	
-	/*height:3em;*/
+
 }
 
 .auto2 {
-	/*margin-top;*/
 	display:none;
 	padding:.2em;
 	font-size: 1.5em;
@@ -416,23 +388,14 @@ input, button {
 
 #mainHolder{
 	box-shadow: 0px 4px 4px rgba(0,0,0,.6);
+	padding-top:3.5em;
+	background-color: rgba(0,0,0,.6);
+	text-align:center;
 }
-
-
 
 
 @media screen and (min-width: 900px) {
 
-	.navButton {
-		/*float:none;*/
-	}
-
-	#gameArea {
-		/*margin-left: 21.2vw;*/
-		/*width:52.6vw;*/
-		/*margin-top: 3em;*/
-
-	}
 
 	#jackpot {
 		font-size:4em;
@@ -455,23 +418,12 @@ input, button {
 		position:fixed;
 		
 	}
-
-	#main2 {
-
-		width:100%;
-		background-color:rgba(0,0,0,.5);
-		font-size:1em;
-		display: flex;
-		justify-content: space-around;
-		/*position: fixed;*/
-	}
-
 	
 
 	.chatInfoContSpacing {
 		clear:right;
 		padding-right:0;
-		height:60vh;
+		/*height:60vh;*/
 	}
 
 	.chatInfoMargins {
@@ -482,7 +434,7 @@ input, button {
 	#chat {
 		padding-right:0;
 		overflow-y:scroll;
-		height:50vh;
+		height:20em;
 	}
 
 	#backgroundPic {
@@ -519,9 +471,6 @@ input, button {
 		text-align: center;
 	}
 
-	#mainHolder{
-		margin-top:4em;background-color:rgba(0,0,0,.6);
-	}
 
 	
 

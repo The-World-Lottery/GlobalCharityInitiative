@@ -15,40 +15,29 @@
 
 </head>
 <body>
+
 	<img id="backgroundPic" style="opacity:.41;height:100%;width:100%;" src="/images/earthAtNight.jpg">
-	<div class="container-fluid" style="padding:0;">
-		
+	<div class="container-fluid" style="padding:0;">	
 		<div class="row">
 			@include('layouts.partials._header')	
 		</div>
-		<div class="row" id="mainHolder">
-			@if(Auth::check() && Auth::user()->is_admin)
-				@include('layouts.partials._adminBar')
-			@endif
-			{{-- @if(\Auth::check())
-				@include('layouts.partials._wallet')
-			@endif --}}
-			<div class="col col-xs-12 col-sm-8" style="height:100%;padding-top: 4em;">
-				<div style="text-align:center;margin-top:2em;">
+		<div class="row" style="padding-top: 4em;padding-bottom: 2em;">
+			<div class="col col-xs-12 col-sm-8">
+				<div class="row" style="text-align:center;padding-top:4em;">
 					<h1 style="font-size:4em;color:lightgreen">World Lottery Jackpot is <br>(USD) ${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}
 					</h1>
 					<h4 class="countdown">
 	  					Drawing in:
 	  					<span id="clock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
 					</h4>
-				{{-- <div class="text-center col col-xs-12">
-					@include('layouts.partials._carousel')
-				</div> --}}
-
 				</div>
 				<div class="row">
-					<div style="margin-top:6em;" class="col col-xs-12">
-						<a id="googlepos"  href="{{action('CurrencyConversionController@index')}}">
-							<div>
-							<img class="navIcons" src="/images/coins.png">
-								Currency Conversions
-							</div>
-						</a>
+					<div class="col col-xs-12">
+						<div class="text-center">
+						<form action="{{action('TheWorldLotterysController@index')}}">
+							<button class="btn btn-success">Pick Your Numbers!</button>
+						</form>
+						</div>
 					</div>
 					<div class="col col-xs-12">
 						<div id="googlepos">
@@ -61,7 +50,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="sidebar" class="col col-sm-4 col-xs-12 chatInfoContSpacing" style="margin-top: 1em;">
+			<div id="sidebar" class="col col-sm-4 col-xs-12 chatInfoContSpacing">
 					<form action="{{ action('UsersController@comment') }}">
 					{!! csrf_field() !!}
 						<input type="text" style="padding:.5em;margin-bottom:.5em;border:0;border-bottom:1px solid white;color:white;width:100%;background-color:rgba(0,0,0,0);" placeholder="Say Something!" name="comment">
@@ -75,7 +64,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="row">
+		<div  style="background-color:rgba(0,0,0,.5);" class="row">
 			<div style="font-size:1.5em;" class="col col-sm-12 col-xs-12" id="gameArea">
 				<div style="margin-top:1em;" class="areaHeader">
 					@yield('divHead')
@@ -85,7 +74,7 @@
 				</div>	
 			</div>
 		</div>
-		<div class="row" style="background-color:rgba(0,0,0,.6);height:5em;">
+		<div class="row" style="height:5em;">
 			<div class="col col-xs-12 col-sm-4">
 				
 			</div>
@@ -115,7 +104,6 @@
 	  src="https://code.jquery.com/jquery-3.2.1.js"
 	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
 	  crossorigin="anonymous"></script>
-	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
 	<script src="https://static.filestackapi.com/v3/filestack.js"></script>
 	<script src="/main.js" type="text/javascript"></script>
@@ -129,5 +117,6 @@
 	//     }
 	// }
 	</script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

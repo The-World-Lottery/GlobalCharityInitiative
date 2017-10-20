@@ -21,7 +21,7 @@
 					This Drawing ends in : 
 					<span class="raffleClock" data-clock-id="{{$raffle->end_date}}"></span>
 					</h2>
-			<img style="max-height:16em;border-radius:1em;margin-bottom:" src={!! $raffle->img !!}>
+			<img style="max-height:16em;border-radius:1em;box-shadow: 20px 20px 20px rgba(0,0,0,.6);" src={!! $raffle->img !!}>
 				</div>
 		</div>
 		<div class="col-xs-12 col-sm-6 col" style="padding-top:4em;">

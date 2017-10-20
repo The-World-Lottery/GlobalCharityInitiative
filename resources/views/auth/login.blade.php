@@ -27,7 +27,7 @@
                 <div class="form-group col col-sm-6 col-sm-offset-3 col-xs-12">
                     <label><h2>Email</h2></label>
                     {!! $errors->first('email', '<span class="help-block">:message</span>')!!}
-                    <input class="form-control" type="email" name="email" value="{{ old('email') }}">
+                    <input class="form-control" autofocus type="email" name="email" value="{{ old('email') }}">
                 </div>
             </div>
             <div class="row">
