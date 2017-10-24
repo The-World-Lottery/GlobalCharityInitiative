@@ -135,7 +135,41 @@ Modal practice
       </div>
       <div class="collapse navbar-collapse justify-content-end" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-    	@if(Auth::check() && Auth::user()->is_admin)
+        	@if(Auth::check() && Auth::user()->is_admin)
+        	<li class="dropdown">
+	          <a href="#" class="dropdown-toggle" style="color:white;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin Functions<span class="caret"></span></a>
+	          <ul class="dropdown-menu" style="background-color:black;">
+	          	<li>
+	    			<a href="{{action('LotteriesController@adminIndex')}}">
+					<span class="navLink">Manage Lotteries</span>
+					</a>
+				</li>
+				<li>
+					<a href="{{action('RafflesController@adminIndex')}}">
+					<span class="navLink">Manage Raffles</span>
+					</a>
+				</li>
+				<li>
+					<a href="{{action('UsersController@index')}}">
+					<span class="navLink">Manage Users</span>
+					</a>
+				</li>
+				<li>
+					<a href="{{action('SuggestionsController@adminIndex')}}">
+					<span class="navLink">Manage Suggestions</span>
+					</a>
+				</li>
+	            {{-- <li><a href="#">Action</a></li>
+	            <li><a href="#">Another action</a></li>
+	            <li><a href="#">Something else here</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="#">Separated link</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="#">One more separated link</a></li> --}}
+	          </ul>
+	        </li>
+	        @endif
+    {{-- 	@if(Auth::check() && Auth::user()->is_admin)
     		<li>
     			<a href="{{action('LotteriesController@adminIndex')}}">
 				<span class="navLink">Manage Lotteries</span>
@@ -156,24 +190,24 @@ Modal practice
 				<span class="navLink">Manage Suggestions</span>
 				</a>
 			</li>
-		@endif
-          <li>
+		@endif --}}
+          <li class="headLinks">
           	<a href="{{action('RafflesController@index')}}"><span class="navLink">Raffles</span></a>
           </li>
-          <li>
+          <li class="headLinks">
           	<a href="{{action('LotteriesController@index')}}"><span class="navLink">Lotteries</span></a>
           </li>
-          {{-- <li>
+          {{-- class="headLinks" <li>
           	<a href="{{action('TheWorldLotterysController@index')}}"><span class="navLink">The World Lottery</span></a>
           </li> --}}
-          <li>
+          <li class="headLinks">
           	<a href="{{action('SuggestionsController@index')}}"><span class="navLink">Suggestion Box</span></a>
           </li>
-          <li>
+          <li class="headLinks">
           	<a href="{{action('AboutUsController@index')}}"><span class="navLink">About Us</span></a>
           </li>
           @if (Auth::check())
-          <li>
+          <li class="headLinks">
 			<a data-toggle="modal" data-target="#myModal"><span class="navLink">My Wallets</span></a>	
 		  </li>
 		  <div id="myModal" class="modal fade" role="dialog" style="color:black;">

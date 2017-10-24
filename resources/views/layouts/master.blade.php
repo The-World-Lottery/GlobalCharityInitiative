@@ -23,19 +23,19 @@
 		</div>
 		<div class="row" style="padding-top: 4em;padding-bottom: 2em;">
 			<div class="col col-xs-12 col-sm-8">
-				<div class="row" style="text-align:center;padding-top:4em;">
-					<h1 style="font-size:4em;color:lightgreen">World Lottery Jackpot is <br>(USD) ${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}
+				<div class="row" style="text-align:center;padding-top:2em;">
+					<h1 style="font-size:4em;color:lightgreen">World Lottery Jackpot is <br><em>(USD) ${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}</em>
 					</h1>
-					<h4 class="countdown">
+					<h1 class="countdown">
 	  					Drawing in:
 	  					<span id="clock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
-					</h4>
+					</h1>
 				</div>
 				<div class="row">
 					<div class="col col-xs-12">
 						<div class="text-center">
 						<form action="{{action('TheWorldLotterysController@index')}}">
-							<button class="btn btn-success">Pick Your Numbers!</button>
+							<button class="btn btn-lg btn-success" style="height:2em;font-size:2em;">Pick Your Numbers!</button>
 						</form>
 						</div>
 					</div>
@@ -64,12 +64,12 @@
 				</div>
 			</div>
 		</div>
-		<div  style="background-color:rgba(0,0,0,.5);" class="row">
+		<div  style="background-color:rgba(0,0,0,.5);padding-bottom: 2em;" class="row">
 			<div style="font-size:1.5em;" class="col col-sm-12 col-xs-12" id="gameArea">
 				<div style="margin-top:1em;" class="areaHeader">
 					@yield('divHead')
 				</div>
-				<div >
+				<div style="padding:0 0 2em 0;" >
 					@yield('content')
 				</div>	
 			</div>

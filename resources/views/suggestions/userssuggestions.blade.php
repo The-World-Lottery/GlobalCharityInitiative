@@ -17,7 +17,7 @@
 
     <main class="container" style="max-width:100%;">
 
-    
+    <div class="row" style="padding:2em 0 2em 0;">
 
       @if(count($suggestions))
         @foreach($suggestions as $suggestion)
@@ -43,6 +43,7 @@
        </div>
       @endif
         <br>
+    </div>
 
     </main>
 
