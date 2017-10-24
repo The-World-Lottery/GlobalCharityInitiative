@@ -46,7 +46,7 @@ html {
 }
 
 #clock{
-	font-size: 1.5em;
+	font-size: 1.3em;
 }
 
 /*#white {
@@ -86,13 +86,7 @@ html {
 	z-index:0;
 }
 
-/*.navLink:hover {
-	color:white;
-}*/
-
 .raffleCont {
-	/*display:hidden;*/
-	/*position:relative;*/
 	color:white;
 	background-position:center;
 	background-size:105% 105%;
@@ -142,24 +136,23 @@ html {
 	background-size:110% 110%;
 	text-align:center;
 	width:100%;
-	float:left;
 	border:1px solid white;
 	border-radius:1em;
-	height:9em;
-	padding:.3em .5em .5em 0em ;
+	/*height:9em;*/
+	padding:.3em 0em .5em 0em ;
 	margin:1%;
-	overflow:hidden;
+	/*overflow:hidden;*/
 	background-color:rgba(255,255,255,.08);
 }
 
-.indivLottoCont::hover{
-	background-color:rgba(255,255,255,.5);
+.indivLottoCont:hover{
+	background-color:rgba(255,255,255,.2);
+	border:1px solid lightgreen;
 
 }
 
 .col1 {
 	text-align: center;
-	/*border:1px solid white;*/
 	height:4em;
 	padding-top:.5em;
 	padding-bottom:.5em;
@@ -167,7 +160,6 @@ html {
 }
 .col1:hover {
 	background-color: rgba(0,55,255,.4);
-/*	border-radius: 4em;*/
 }
 
 #main {
@@ -187,12 +179,8 @@ html {
 	}
 
 	#chat {
-		/*min-height:70vh;
-		max-height:75vh;*/
-		/*border-radius:1.5em 1.5em 0 0;*/
 		margin-right:-.8em;
 		color:white;
-
 	}
 
 	#info {
@@ -204,7 +192,6 @@ html {
 }
 
 .raffleContent {
-	/*opacity:0;*/
 	color:white;
 	margin-top:15%;
 }
@@ -307,6 +294,7 @@ img {
 	height:3em;
 	border-radius: 10em;
 	margin-top:.2em;
+	float:left;
 }
 
 #showProfImg {
@@ -346,7 +334,11 @@ select {
 	margin-right:1em;
 }
 
-/*a:hover, a:active {color:lightgreen;}*/
+.user:hover {
+	background-color:white;
+}
+
+a:hover, a:active {color:lightgreen;}
 
 #jackpot {
 	font-size:2em;
@@ -388,7 +380,7 @@ input, button {
 }
 
 #googlepos {
-	padding:1em 0 1em 0;
+	padding:1.6em 0 1.6em 0;
 	border-radius: .5em;
 	text-align: center;
 	box-shadow:0px 0px;

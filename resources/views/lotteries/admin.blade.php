@@ -22,7 +22,7 @@ table, th, td {
 
 	<main class="container" style="max-width:100%;">
 
-	<span><a class="btn btn-block btn-success" href="{{action('LotteriesController@create')}}" >Create New Lottery</a></span>
+	<a class="btn btn-block btn-success" href="{{action('LotteriesController@create')}}" >Create New Lottery</a>
 	<span style="float:right;padding-right:1em;">{!! $lotteries->appends(Request::except('page'))->render() !!}</span>
 
 		<table class="table table-condensed">

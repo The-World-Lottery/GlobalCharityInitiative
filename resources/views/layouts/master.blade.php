@@ -23,12 +23,18 @@
 		</div>
 		<div class="row" style="padding-top: 4em;padding-bottom: 2em;">
 			<div class="col col-xs-12 col-sm-8">
-				<div class="row" style="text-align:center;padding-top:2em;">
-					<h1 style="font-size:4em;color:lightgreen">World Lottery Jackpot is <br><em>(USD) ${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}</em>
+				<div class="row" style="text-align:center;padding-top:.5em;">
+					<h1 style="font-size:4em;color:lightgreen">
+						World Lottery Jackpot
 					</h1>
-					<h1 class="countdown">
+					<h1 style="font-size:5em;color:lightgreen">
+						<b>${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}</b>
+					</h1>
+					<h2 class="countdown">
 	  					Drawing in:
-	  					<span id="clock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
+	  				</h2>
+	  				<h1>
+	  					<span id="clock" style="color:#fff257;" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
 					</h1>
 				</div>
 				<div class="row">
@@ -39,7 +45,7 @@
 						</form>
 						</div>
 					</div>
-					<div class="col col-xs-12">
+					{{-- <div class="col col-xs-12">
 						<div id="googlepos">
 							<div  id="google_translate_element"></div><script type="text/javascript">
 							function googleTranslateElementInit() {
@@ -47,7 +53,7 @@
 							}
 							</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 						</div>
-					</div>
+					</div> --}}
 				</div>
 			</div>
 			<div id="sidebar" class="col col-sm-4 col-xs-12 chatInfoContSpacing">
@@ -75,8 +81,8 @@
 			</div>
 		</div>
 		<div class="row" style="height:5em;">
-			<div class="col col-xs-12 col-sm-4">
-				
+			<div class="col col-xs-12 col-sm-4 text-center">
+				<h5 style="margin-top:1.6em;">We're trying to save the world. You can bet on that.</h5>
 			</div>
 			<div class="col col-xs-12 col-sm-4">
 				<div style="display:flex;justify-content: space-around;">
@@ -95,7 +101,15 @@
 				</div>
 			</div>
 			<div class="col col-xs-12 col-sm-4">
-				
+				<div class="col col-xs-12">
+						<div id="googlepos">
+							<div  id="google_translate_element"></div><script type="text/javascript">
+							function googleTranslateElementInit() {
+							  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+							}
+							</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+						</div>
+					</div>
 			</div>
 		</div>
 		
