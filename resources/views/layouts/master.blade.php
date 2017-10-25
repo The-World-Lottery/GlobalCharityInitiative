@@ -64,7 +64,7 @@
 					</div>
 				</div>
 			</div>
-			<div style="height:85.5vh;overflow:scroll;padding: 1em 0 0 0;font-size:1.5em;" class=" col col-sm-8">
+			<div id="gameScroll" style="padding: 1em 0 0 0;font-size:1.5em;" class=" col col-sm-8">
 			{{-- </div>
 			<div   class="row"> --}}
 				{{-- <div style="font-size:1.5em;" class="col col-sm-12 col-xs-12" id="gameArea"> --}}

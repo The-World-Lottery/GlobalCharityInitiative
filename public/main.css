@@ -409,6 +409,10 @@ input, button {
 		float:right;
 		z-index:10;"
 	}
+	#gameScroll {
+		overflow:scroll;
+		height:85.5vh;
+	}
 
 
 	#main {

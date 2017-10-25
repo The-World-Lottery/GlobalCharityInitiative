@@ -15,9 +15,9 @@
 			@endif
        
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span> 
+          <span class="icon-bar headLinks"></span>
+          <span class="icon-bar headLinks"></span>
+          <span class="icon-bar headLinks"></span> 
         </button>
       </div>
       <div class="collapse navbar-collapse justify-content-end" id="myNavbar">
