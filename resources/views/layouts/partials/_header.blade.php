@@ -3,10 +3,10 @@
     <div class="container-fluid">
       <div class="navbar-header">
       		@if (Auth::check())
-					<img src='{{Auth::user()->image}}' id="headImg">
+					{{-- <img src='{{Auth::user()->image}}' id="headImg"> --}}
       		
 				
-				<a class="navbar-brand user navLink" style="margin-left:1em;" href="{{action('UsersController@show' , Auth::id())}}" ><span class="navLink">
+				<a class="navbar-brand user navLink" style="margin-left:.3em;" href="{{action('UsersController@show' , Auth::id())}}" ><span class="navLink">
 					{{Auth::user()->name}}</span>
 				</a>
 			
@@ -14,7 +14,7 @@
 				<a class="navbar-brand user"  id="white" href="{{action('Auth\AuthController@getLogin')}}"><span class="navLink">Login/Register</span></a>	
 			@endif
        
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="border:1px solid #3cc2d0;">
           <span class="icon-bar headLinks"></span>
           <span class="icon-bar headLinks"></span>
           <span class="icon-bar headLinks"></span> 
@@ -93,7 +93,15 @@
           <li class="headLinks">
           	<a href="{{action('AboutUsController@index')}}"><span class="navLink">About Us</span></a>
           </li>
-          @if (Auth::check())
+          @if(Auth::check() && count(App\Models\UserWallet::where('user_id', '=', \Auth::id())->get()) === 0)
+          <li class="headLinks">
+	          {{-- <form method="GET" action="{{action('UsersController@saveUserWallet')}}">
+	          {!! csrf_field() !!}
+          	  <button type="submit"><span class="navLink">About Us</span></button>
+          	  </form> --}}
+          	  <a href="/saveWallet"><span class="navLink">Create Wallets</span></a>
+          </li>
+          @elseif (Auth::check())
           <li class="headLinks">
 			<a data-toggle="modal" data-target="#myModal"><span class="navLink">My Wallets</span></a>	
 		  </li>

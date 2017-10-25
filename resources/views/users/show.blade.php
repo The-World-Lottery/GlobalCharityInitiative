@@ -10,9 +10,9 @@
 @section('content')
 
 	<main class="container" style="max-width:100%;display:flex;justify-content: center;">
-		<div class="row"  style="text-align:center;padding-top:0;width:100%;">
+		<div class="row"  style="text-align:center;padding-top:10%;width:100%;">
 	
-			<div class="col col-sm-5">
+			<div class="col col-sm-4">
 				<div style="display: flex;justify-content:center;">
 					<div>
 						@if(Auth::id() == $user->id)
@@ -43,9 +43,9 @@
 				</div>
 			</div>
 			
-			<div class="col col-sm-7">
+			<div class="col col-sm-8">
 	
-				<h2 style="text-align:center;color:yellow;">Your tickets:</h2>
+				<h1 style="text-align:center;color:yellow;">YOUR TICKETS</h1>
 				<div  class="row" style="width:100%;text-align:center;">
 					<div class="col col-xs-12 col-sm-4"> <u class="ticketHead">World Lottery</u><br>
 						@foreach($user->worldLotteryEntries->unique('title') as $worldLotteryEntry)

@@ -8,15 +8,15 @@
 
 @section('divHead')
 
-<ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
-  <li class="active"><a  id="zeroO"  data-toggle="tab" href="#home">Our Mission</a></li>
-  <li><a  id="zeroO"  data-toggle="tab" href="#menu1">About The World Lottery</a></li>
-  <li><a  id="zeroO"  data-toggle="tab" href="#menu2">The Creators</a></li>
-</ul>
 
 @stop
 
 @section('content')
+	<ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
+	  <li class="active"><a  id="zeroO"  data-toggle="tab" href="#home">Our Mission</a></li>
+	  <li><a  id="zeroO"  data-toggle="tab" href="#menu1">About The World Lottery</a></li>
+	  <li><a  id="zeroO"  data-toggle="tab" href="#menu2">The Creators</a></li>
+	</ul>
 	<div style="padding:1em;">
 		<div class="tab-content">
 		  	<div id="home" class="tab-pane fade in active">

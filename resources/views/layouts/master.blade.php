@@ -15,7 +15,6 @@
 
 </head>
 <body>
-
 	<img id="backgroundPic" style="opacity:.41;height:100%;width:100%;" src="/images/earthAtNight.jpg">
 	<div class="container-fluid" style="padding:0;">	
 		<div class="row">
@@ -27,7 +26,7 @@
 					<div class="col col-xs-12 col-sm-12">
 						<div class="row" style="text-align:center;padding-top:1em;">
 							<h1 style="font-size:2.5em;color:lightgreen">
-								World Lottery Jackpot
+								World Lottery
 							</h1>
 							<h1 style="font-size:3em;color:lightgreen">
 								<b>${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}</b>
@@ -64,23 +63,32 @@
 					</div>
 				</div>
 			</div>
-			<div id="gameScroll" style="padding: 1em 0 0 0;font-size:1.5em;" class=" col col-sm-8">
+			<div id="gameScroll" style="font-size:1.5em;" class=" col col-sm-8">
 			{{-- </div>
 			<div   class="row"> --}}
 				{{-- <div style="font-size:1.5em;" class="col col-sm-12 col-xs-12" id="gameArea"> --}}
-					<div style="" class="areaHeader">
+					{{-- <div style="" class="areaHeader">
 						@yield('divHead')
-					</div>
-					<div style="padding:0 0 2em 0;" >
+					</div> --}}
+					<div style="padding:0 0 0em 0;" >
 						@yield('content')
 					</div>	
 				{{-- </div> --}}
 			</div>
 		</div>
 		<div class="row"  style="background-color:rgba(0,0,0,.5);height:5em">
-			<div class="col col-xs-12 col-sm-4 text-center">
-				<h5 style="margin-top:1.6em;">We're trying to save the world. You can bet on that.</h5>
+			<div class="col col-xs-12 col-sm-4">
+				<div class="col col-xs-12">
+						<div id="googlepos">
+							<div  id="google_translate_element"></div><script type="text/javascript">
+							function googleTranslateElementInit() {
+							  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+							}
+							</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+						</div>
+					</div>
 			</div>
+			
 			<div class="col col-xs-12 col-sm-4">
 				<div style="display:flex;justify-content: space-around;">
 					<a target="_blank" href="https://github.com/The-World-Lottery/TheWorldLottery">
@@ -97,16 +105,8 @@
 					</a>
 				</div>
 			</div>
-			<div class="col col-xs-12 col-sm-4">
-				<div class="col col-xs-12">
-						<div id="googlepos">
-							<div  id="google_translate_element"></div><script type="text/javascript">
-							function googleTranslateElementInit() {
-							  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-							}
-							</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-						</div>
-					</div>
+			<div class="col col-xs-12 col-sm-4 text-center">
+				<h5 style="margin-top:1.6em;">We're trying to help the world. You can bet on that.</h5>
 			</div>
 		</div>
 		

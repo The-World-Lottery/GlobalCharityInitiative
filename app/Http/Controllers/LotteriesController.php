@@ -63,8 +63,6 @@ class LotteriesController extends Controller
 
     public function addUserToEntries(Request $request, $id)
     { 
-        var_dump("some shit happened");
-
 
         $currency = $request->input()['currency'];
 
@@ -72,7 +70,7 @@ class LotteriesController extends Controller
 
             switch ($currency){
                 case "usd":
-                $currConv = 1.3;
+                $currConv = 1;
                 break;
                 case "eur":
                 $currConv = $request->input()['eurConv'];
@@ -110,7 +108,7 @@ class LotteriesController extends Controller
             $userId = \Auth::id();
 
             $userWallet = UserWallet::find($userId);
-            $userWallet->$currency -= (2 * $currConv);
+            $userWallet->currency -= (2 * $currConv);
             $userWallet->save();
 
             $twlWallet = UserWallet::find(1);

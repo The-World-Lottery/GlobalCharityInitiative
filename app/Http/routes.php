@@ -28,6 +28,8 @@ Route::get('/destroyAdmin/{id}','UsersController@destroyAdmin');
 Route::get('/comment/{id}','UsersController@comment');
 Route::get('/comments','UsersController@showComments');
 
+Route::get('/saveWallet','UsersController@saveUserWallet');
+
 Route::get('/openAddress/{id}','SuggestionsController@openAddress');
 Route::get('/closeAddress/{id}','SuggestionsController@closeAddress');
 Route::get('/suggestions/adminIndex','SuggestionsController@adminIndex');

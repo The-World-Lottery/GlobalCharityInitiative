@@ -42,4 +42,6 @@ class LotteryEntry extends Model
    		return true;
 
    }
+
+   
 }

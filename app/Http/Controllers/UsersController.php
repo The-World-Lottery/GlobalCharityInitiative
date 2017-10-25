@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\User;
 use App\Models\UserComment;
+use App\Models\UserWallet;
 
 class UsersController extends Controller
 {
@@ -63,6 +64,31 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function saveUserWallet()
+    {
+        if(count(UserWallet::where('user_id', '=', \Auth::id())->get()) === 0){  
+            $wallet = new UserWallet();
+            $wallet->user_id = \Auth::id();
+            $wallet->usd = 0;
+            $wallet->eur = 0;
+            $wallet->jpy = 0;
+            $wallet->gbp = 0;
+            $wallet->chf = 0;
+            $wallet->btc = 0;
+            $wallet->ltc = 0;
+            $wallet->eth = 0;
+            $wallet->doge = 0;
+            $wallet->xrp = 0;
+            $wallet->bch = 0;
+            $wallet->save();
+        };
+
+        return \Redirect::action('RafflesController@index');
+
+
+
+    }
+
     public function show($id)
     {
         

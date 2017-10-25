@@ -46,7 +46,16 @@ html {
 }
 
 #clock{
-	font-size: 1.3em;
+	font-size: 1.1em;
+}
+.icon-bar {
+	color:#3cc2d0;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #3cc2d0;
+    color: #3cc2d0;
+  	border-color: #3cc2d0;
 }
 
 /*#white {
