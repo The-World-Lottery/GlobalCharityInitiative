@@ -21,9 +21,10 @@ table, th, td {
 
 
 	<main class="container" style="max-width:100%;">
-
-	<a class="btn btn-block btn-success" href="{{action('LotteriesController@create')}}" >Create New Lottery</a>
-	<span style="float:right;padding-right:1em;">{!! $lotteries->appends(Request::except('page'))->render() !!}</span>
+	<div style="display: flex;justify-content: center;">
+		<a class="btn btn-success" href="{{action('LotteriesController@create')}}" >Create New Lottery</a>
+	</div>
+	<div>{!! $lotteries->appends(Request::except('page'))->render() !!}</div>
 
 		<table class="table table-condensed">
 			<tr>
@@ -42,7 +43,7 @@ table, th, td {
 			<tr>
 				
 				<td>
-					<a class="btn btn-success" href="{{action('LotteriesController@edit',$lottery->id)}}">Edit</a>
+					<a class="btn btn-warning" href="{{action('LotteriesController@edit',$lottery->id)}}">Edit</a>
 				</td>
 				<td>{{$lottery->id}}</td>
 				{{-- <td>{{$lottery->content}}</td> --}}

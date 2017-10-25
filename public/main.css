@@ -179,7 +179,7 @@ html {
 	}
 
 	#chat {
-		margin-right:-.8em;
+		margin-right:-1em;
 		color:white;
 	}
 
@@ -226,6 +226,7 @@ html {
 	/*padding-top: .5em;*/
 	padding-bottom: .5em;
 	text-align: center;
+	font-size:1.4em;
 }
 
 ul.pagination {
@@ -421,9 +422,7 @@ input, button {
 	
 
 	.chatInfoContSpacing {
-		clear:right;
-		padding-right:0;
-		/*height:60vh;*/
+		padding:0;
 	}
 
 	.chatInfoMargins {
@@ -434,7 +433,7 @@ input, button {
 	#chat {
 		padding-right:0;
 		overflow-y:scroll;
-		height:20em;
+		height:37vh;
 	}
 
 	#backgroundPic {

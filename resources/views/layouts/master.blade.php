@@ -21,66 +21,63 @@
 		<div class="row">
 			@include('layouts.partials._header')	
 		</div>
-		<div class="row" style="padding-top: 4em;padding-bottom: 2em;">
-			<div class="col col-xs-12 col-sm-8">
-				<div class="row" style="text-align:center;padding-top:.5em;">
-					<h1 style="font-size:4em;color:lightgreen">
-						World Lottery Jackpot
-					</h1>
-					<h1 style="font-size:5em;color:lightgreen">
-						<b>${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}</b>
-					</h1>
-					<h2 class="countdown">
-	  					Drawing in:
-	  				</h2>
-	  				<h1>
-	  					<span id="clock" style="color:#fff257;" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
-					</h1>
-				</div>
+		<div class="row" style="padding-top: 3em;">
+			<div style="min-height:85.5vh;background-color:rgba(0,0,0,.5);" class="col col-sm-4">
 				<div class="row">
-					<div class="col col-xs-12">
-						<div class="text-center">
-						<form action="{{action('TheWorldLotterysController@index')}}">
-							<button class="btn btn-lg btn-success" style="height:2em;font-size:2em;">Pick Your Numbers!</button>
-						</form>
+					<div class="col col-xs-12 col-sm-12">
+						<div class="row" style="text-align:center;padding-top:1em;">
+							<h1 style="font-size:2.5em;color:lightgreen">
+								World Lottery Jackpot
+							</h1>
+							<h1 style="font-size:3em;color:lightgreen">
+								<b>${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}</b>
+							</h1>
+							<h2 class="countdown">
+			  					Drawing in:
+			  				</h2>
+			  				<h1>
+			  					<span id="clock" style="color:#fff257;" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
+							</h1>
+						</div>
+						<div class="row">
+							<div class="col col-xs-12">
+								<div class="text-center">
+									<form action="{{action('TheWorldLotterysController@index')}}">
+										<button class="btn btn-lg btn-success" style="height:2em;font-size:2em;">Pick Your Numbers!</button>
+									</form>
+								</div>
+							</div>
 						</div>
 					</div>
-					{{-- <div class="col col-xs-12">
-						<div id="googlepos">
-							<div  id="google_translate_element"></div><script type="text/javascript">
-							function googleTranslateElementInit() {
-							  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-							}
-							</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+					<div class="col col-sm-12 col-xs-12 chatInfoContSpacing">
+						<form style="padding:2em 0 0 0;" action="{{ action('UsersController@comment') }}">
+						{!! csrf_field() !!}
+							<input type="text" style="padding:.5em;margin-bottom:.5em;border:0;border-bottom:1px solid white;color:white;width:100%;background-color:rgba(0,0,0,0);" placeholder="Say Something!" name="comment">
+							<button hidden type="submit">Add comment</button>
+						</form>
+						<div class="chatInfoMargins borderOpac" id="chat">
+							@foreach(\App\Models\UserComment::orderBy('created_at','desc')->limit(60)->get() as $comment)
+								<span style="padding-left:.5em;"><u style="color:lightgreen;">{{ \App\User::select('username')->where('id',$comment->user_id )->get()[0]['username']}}-</u></span>
+								<span class="commentSpacing" style="padding-left:.2em;">{{$comment->content}}</span><br>
+							@endforeach
 						</div>
-					</div> --}}
+					</div>
 				</div>
 			</div>
-			<div id="sidebar" class="col col-sm-4 col-xs-12 chatInfoContSpacing">
-					<form action="{{ action('UsersController@comment') }}">
-					{!! csrf_field() !!}
-						<input type="text" style="padding:.5em;margin-bottom:.5em;border:0;border-bottom:1px solid white;color:white;width:100%;background-color:rgba(0,0,0,0);" placeholder="Say Something!" name="comment">
-						<button hidden type="submit">Add comment</button>
-					</form>
-				<div class="chatInfoMargins borderOpac" id="chat">
-					@foreach(\App\Models\UserComment::orderBy('created_at','desc')->limit(60)->get() as $comment)
-						<span style="padding-left:.5em;"><u style="color:lightgreen;">{{ \App\User::select('username')->where('id',$comment->user_id )->get()[0]['username']}}-</u></span>
-						<span class="commentSpacing" style="padding-left:.2em;">{{$comment->content}}</span><br>
-					@endforeach
-				</div>
-			</div>
-		</div>
-		<div  style="background-color:rgba(0,0,0,.5);padding-bottom: 2em;" class="row">
-			<div style="font-size:1.5em;" class="col col-sm-12 col-xs-12" id="gameArea">
-				<div style="margin-top:1em;" class="areaHeader">
-					@yield('divHead')
-				</div>
-				<div style="padding:0 0 2em 0;" >
-					@yield('content')
-				</div>	
+			<div style="height:85.5vh;overflow:scroll;padding: 1em 0 0 0;font-size:1.5em;" class=" col col-sm-8">
+			{{-- </div>
+			<div   class="row"> --}}
+				{{-- <div style="font-size:1.5em;" class="col col-sm-12 col-xs-12" id="gameArea"> --}}
+					<div style="" class="areaHeader">
+						@yield('divHead')
+					</div>
+					<div style="padding:0 0 2em 0;" >
+						@yield('content')
+					</div>	
+				{{-- </div> --}}
 			</div>
 		</div>
-		<div class="row" style="height:5em;">
+		<div class="row"  style="background-color:rgba(0,0,0,.5);height:5em">
 			<div class="col col-xs-12 col-sm-4 text-center">
 				<h5 style="margin-top:1.6em;">We're trying to save the world. You can bet on that.</h5>
 			</div>

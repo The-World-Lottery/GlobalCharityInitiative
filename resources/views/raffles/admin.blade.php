@@ -20,10 +20,12 @@ table, th, td {
 @section('content')
 
 	<main class="container adminTables" style="max-width:100%;">
-
-	<span><a class="btn btn-block btn-success" href="{{action('RafflesController@create')}}" >Create New Raffle</a></span>
-	<span style="float:right;padding-right:1em;">{!! $raffles->appends(Request::except('page'))->render() !!}</span>
-		<table class="table table-condensed" style="width:90%">
+	<div style="display: flex;justify-content: center;">
+		<a class="btn btn-success" href="{{action('RafflesController@create')}}" >Create New Raffle</a>
+	</div>
+	<div>{!! $raffles->appends(Request::except('page'))->render() !!}</div>
+	<div>
+		<table class="table" style="width:90%">
 			<tr>
 				<th>Edit</th>
 				<th>ID</th>
@@ -39,7 +41,7 @@ table, th, td {
 			<tr>
 				
 				<td>
-					<a class="btn btn-success" href="{{action('RafflesController@edit',$raffle->id)}}">Edit</a>
+					<a class="btn btn-warning" href="{{action('RafflesController@edit',$raffle->id)}}">Edit</a>
 				</td>
 				<td>{{$raffle->id}}</td>
 				<td>{{$raffle->content}}</td>
@@ -56,7 +58,7 @@ table, th, td {
 			</tr>
 	@endforeach
 		</table>
-		<span style="float:right;padding-right:1em;">{!! $raffles->appends(Request::except('page'))->render() !!}</span>
+	</div>
 
 	</main>
 
