@@ -70,7 +70,7 @@
 					{{-- <div style="" class="areaHeader">
 						@yield('divHead')
 					</div> --}}
-					<div style="padding:0 0 0em 0;" >
+					<div style="padding:1em 0 0em 0;" >
 						@yield('content')
 					</div>	
 				{{-- </div> --}}
