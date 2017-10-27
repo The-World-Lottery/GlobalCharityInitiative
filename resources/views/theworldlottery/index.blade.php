@@ -17,14 +17,14 @@
 	
 
 	<main style="text-align:center;">
-		<div>
-			<h1 style="color:#00ffc4;">Drawing takes place in: <span class="worldLottoClock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span></h1>
+		<div id="twlSpacer">
 			
 			<h4 id="jackpot" style="color:lightgreen;"><strong >Jackpot</strong><br>$ {{number_format($theWorldLottery->current_value,2,".",",")}}</h4>
 			
+			<h1 style="color:#00ffc4;">Drawing takes place in: <span class="worldLottoClock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span></h1>
 		
 
-			<a href="{{ action('TheWorldLotterysController@addUserToEntries', $theWorldLottery->id) }}"><button class="btn btn-success">Pick Your Numbers!</button></a><br><br>
+			<a href="{{ action('TheWorldLotterysController@addUserToEntries', $theWorldLottery->id) }}"><button class="btn btn-success cleargreenBtn">Pick Your Numbers!</button></a><br><br>
 
 			@if ((Auth::check()) && (Auth::user()->is_admin))
 			  <a href="{{ action('TheWorldLotterysController@edit', $theWorldLottery->id) }}"><button style="margin-bottom: 2em;" class="btn btn-warning">Edit</button></a>

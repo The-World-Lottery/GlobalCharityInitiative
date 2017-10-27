@@ -21,7 +21,7 @@
 					ALL proceeds go to selected charities, human interest projects and TWL staff, development, maintenence and security.
 				</p>
 				<form action="{{action('RafflesController@index')}}">
-					<button class="cleargreenBtn">Enter Site</button>
+					<button class="btn-success cleargreenBtn">Enter Site</button>
 				</form>	
 				<div style="margin-top:1em;">
 				    <div style="background-color:rgba(0,0,0,.4);padding:1.1em 0 .1em 0;" id="random_quote">

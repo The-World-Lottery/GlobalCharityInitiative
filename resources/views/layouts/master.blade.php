@@ -94,13 +94,13 @@
 					<a target="_blank" href="https://github.com/The-World-Lottery/TheWorldLottery">
 						<img src="/images/Blue Icons/GitHub.svg" alt="" class="socialIcon">
 					</a>
-					<a target="_blank" href="">
+					<a {{-- target="_blank" --}} href="">
 						<img src="/images/Blue Icons/Instagram.svg" alt="" class="socialIcon">
 					</a>
-					<a target="_blank" href="">
+					<a {{-- target="_blank" --}} href="">
 						<img src="/images/Blue Icons/Twitter.svg" alt="" class="socialIcon">
 					</a>
-					<a target="_blank" href="">
+					<a {{-- target="_blank" --}} href="">
 						<img src="/images/Blue Icons/Facebook.svg" alt="" class="socialIcon">
 					</a>
 				</div>

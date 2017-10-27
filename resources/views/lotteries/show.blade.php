@@ -16,7 +16,7 @@
 
 	<main class="container" style="text-align:center;max-width:100%;display:flex;justify-content: center;">
 		<div class="row">
-			<div class="col-sm-6 paddingMobile">
+			<div class="col-sm-6 paddingMobile2">
 				<h1 style="color:lightgreen;">Current Pot<br><strong style="font-size:2em;">${{number_format($lottery->current_value,2,".",",")}}</strong>
 				</h1>
 				<div class="countdown">
@@ -26,7 +26,7 @@
 					</h2>
 				</div>
 			</div>
-			<div class="col-sm-6 paddingMobile">
+			<div class="col-sm-6 paddingMobile2">
 				{{-- <div><strong>Human Comment:<br> </strong>"{{$lottery->content}}"</div> --}}
 				<form action="{{ action('LotteriesController@addUserToEntries', $lottery->id) }}">
 			
@@ -54,7 +54,7 @@
 					<input hidden id="usdDoge" name="dogeConv">
 					<input hidden id="usdBCH" name="bchConv">
 					<input hidden id="usdXRP" name="xrpConv"><br><br>
-					<button type="submit" class="btn btn-success">BUY TICKET!!!</button>	@if ((Auth::check()) && (Auth::user()->is_admin))
+					<button type="submit" class="btn btn-success cleargreenBtn">BUY TICKET!!!</button>	@if ((Auth::check()) && (Auth::user()->is_admin))
 				  <a href="{{ action('LotteriesController@edit', $lottery->id) }}"><button class="btn btn-warning">Edit</button></a>
 
 				@endif

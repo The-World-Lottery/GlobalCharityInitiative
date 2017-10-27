@@ -107,10 +107,13 @@ button.navbar-toggle {
 	text-align:center;
 	border-radius:1em;
 	height:35vh;
-	padding:.1em .1em .1em .1em ;
+	min-width:14em;
+	padding:.2em ;
 	margin:1%;
 	overflow:hidden;
 	transition: background-size .5s ease-in;
+	box-shadow: 12px 12px 12px rgba(0,0,0,.8);
+	border-radius:1em;
 }
 
 .ticketHead {
@@ -187,17 +190,21 @@ button.navbar-toggle {
 	top:0;
 }
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: white;
-}
-::-moz-placeholder { /* Firefox 19+ */
-  color: white;
+::-webkit-input-placeholder { /* Chrome */
+  color: lightgreen !important;
+  opacity:1;
 }
 :-ms-input-placeholder { /* IE 10+ */
-  color: white;
+  color: lightgreen !important;
+  opacity:1;
 }
-:-moz-placeholder { /* Firefox 18- */
-  color: white;
+::-moz-placeholder { /* Firefox 19+ */
+  color: lightgreen !important;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: lightgreen !important;
+  opacity: 1;
 }
 
 .infoHeaders {
@@ -205,19 +212,20 @@ button.navbar-toggle {
 }
 
  /*content right side*/
-	.gameAndChatInfo {
-		min-height:100vh; 
-	}
+.gameAndChatInfo {
+	min-height:100vh; 
+}
 
-	#chat {
-		margin-right:-1em;
-		color:white;
-	}
+#chat {
+	margin-right:-1em;
+	color:white;
+}
 
-	#info {
-		max-height:10vh;
-		border-radius:0 0 1.5em 1.5em;
-	}
+#info {
+	max-height:10vh;
+	border-radius:0 0 1.5em 1.5em;
+}
+	
 .splashPar {
 	font-size:1.5em;
 }
@@ -310,7 +318,15 @@ td {
 }
 
 .cleargreenBtn {
-	margin:0em 0 0em 0;color:lightgreen;border:3px solid lightgreen;min-width:8em;border-radius:2em;text-align:center;font-size:2em;background-color:rgba(0,0,0,0);padding:.2em;
+	margin:0em 0 0em 0;
+	color:lightgreen;
+	border:3px solid lightgreen;
+	min-width:6em;
+	border-radius:2em;
+	text-align:center;
+	font-size:1.5em;
+	background-color:rgba(0,0,0,0);
+	padding:.5em;
 }
 
 /*#headLinks {
@@ -386,7 +402,7 @@ select {
 	background-color:white;
 }
 
-a:hover, a:active {color:lightgreen;}
+/*a:hover, a:active {color:lightgreen;}*/
 
 #jackpot {
 	font-size:2em;
@@ -442,8 +458,11 @@ input, button {
 }
 
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 768px) {
 
+	#twlSpacer {
+		padding-top: 5em;
+	}
 
 	#jackpot {
 		font-size:4em;
@@ -463,12 +482,10 @@ input, button {
 
 
 	#main {
-
 		width:100%;
 		/*background-color:rgba(0,0,0,.85);*/
 		font-size:1em;
-		position:fixed;
-		
+		position:fixed;		
 	}
 	
 
@@ -534,11 +551,14 @@ input, button {
 		padding-top:5em;
 	}
 
-	
+	.paddingMobile2 {
+		padding-top:8em;
+	}
 
+}
 
-
-
-
-
+@media screen and (max-width: 768px) {
+	.raffleCont {
+		max-width:16em;
+	}
 }
