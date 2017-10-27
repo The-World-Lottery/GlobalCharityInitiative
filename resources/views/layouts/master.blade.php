@@ -51,7 +51,7 @@
 					<div id="mobileChatHide" class="col col-sm-12 col-xs-12 chatInfoContSpacing">
 						<form style="padding:2em 0 0 0;" action="{{ action('UsersController@comment') }}">
 						{!! csrf_field() !!}
-							<input type="text" style="padding:.5em;margin-bottom:.5em;border:0;border-bottom:1px solid white;color:white;width:100%;background-color:rgba(0,0,0,0);" placeholder="Say Something!" name="comment">
+							<input type="text" autocomplete="off" style="padding:.5em;margin-bottom:.5em;border:0;border-bottom:1px solid white;color:white;width:100%;background-color:rgba(0,0,0,0);" placeholder="Say Something!" name="comment">
 							<button hidden type="submit">Add comment</button>
 						</form>
 						<div class="chatInfoMargins borderOpac" id="chat">
@@ -76,7 +76,7 @@
 				{{-- </div> --}}
 			</div>
 		</div>
-		<div class="row"  style="background-color:rgba(0,0,0,.5);min-height:5em">
+		<div class="row"  style="background-color:rgba(0,0,0,.5);min-height:7.5vh">
 			<div class="col col-xs-12 col-sm-4">
 				<div class="col col-xs-12">
 					<div id="googlepos">
@@ -97,7 +97,7 @@
 					<a {{-- target="_blank" --}} href="">
 						<img src="/images/Blue Icons/Instagram.svg" alt="" class="socialIcon">
 					</a>
-					<a {{-- target="_blank" --}} href="">
+					<a {{-- target="_blank" --}} href="https://twitter.com/Emmett_J_Peters?lang=en">
 						<img src="/images/Blue Icons/Twitter.svg" alt="" class="socialIcon">
 					</a>
 					<a {{-- target="_blank" --}} href="">
@@ -106,7 +106,7 @@
 				</div>
 			</div>
 			<div class="col col-xs-12 col-sm-4 text-center">
-				<h5 style="margin-top:1.6em;">We're trying to help the world. You can bet on that.</h5>
+				<h5 style="margin-top:1.6em;">We're trying to help the world. You can bet on that!</h5>
 			</div>
 		</div>
 		

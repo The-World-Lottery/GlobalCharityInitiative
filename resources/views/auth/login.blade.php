@@ -7,15 +7,15 @@
 @stop
 
 @section('divHead')
-<ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
-  <li class="active"><a id="zeroO" href="{{action('Auth\AuthController@getLogin')}}">Login</a></li>
-  <li><a id="zeroO" href="{{action('Auth\AuthController@getRegister')}}">Register</a></li>
-</ul>
 @stop
 
 @section('content')
 
- 	<main class="container" style="max-width:100%;">
+<ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
+  <li class="active"><a id="zeroO" href="{{action('Auth\AuthController@getLogin')}}">Login</a></li>
+  <li><a id="zeroO" href="{{action('Auth\AuthController@getRegister')}}">Register</a></li>
+</ul>
+ 	<main class="container authSpacer" style="max-width:100%;">
     <div>
         @if (session()->has('errorMessage'))
             <div class="alert alert-error">{{ session('errorMessage') }}</div>

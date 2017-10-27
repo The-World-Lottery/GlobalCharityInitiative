@@ -18,7 +18,7 @@
 					The World Lottery For Charity
 				</h1>
 				<p class="splashPar">
-					ALL proceeds go to selected charities, human interest projects and TWL staff, development, maintenence and security.
+					ALL proceeds go to the game winners and selected charities, human interest projects.
 				</p>
 				<form action="{{action('RafflesController@index')}}">
 					<button class="btn-success cleargreenBtn">Enter Site</button>

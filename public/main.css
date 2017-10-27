@@ -317,6 +317,8 @@ td {
 
 }
 
+
+
 .cleargreenBtn {
 	margin:0em 0 0em 0;
 	color:lightgreen;
@@ -324,7 +326,7 @@ td {
 	min-width:6em;
 	border-radius:2em;
 	text-align:center;
-	font-size:1.5em;
+	font-size:1.2em;
 	background-color:rgba(0,0,0,0);
 	padding:.5em;
 }
@@ -402,7 +404,7 @@ select {
 	background-color:white;
 }
 
-/*a:hover, a:active {color:lightgreen;}*/
+a:hover, a:active {color:lightgreen;}
 
 #jackpot {
 	font-size:2em;
@@ -430,6 +432,7 @@ input, button {
 
 #menu {
 	background-color: black;
+	min-height:5vh;
 }
 
 .navButton {
@@ -459,6 +462,9 @@ input, button {
 
 
 @media screen and (min-width: 768px) {
+	.authSpacer {
+		margin-top:4em;
+	}
 
 	#twlSpacer {
 		padding-top: 5em;
@@ -477,7 +483,7 @@ input, button {
 	}
 	#gameScroll {
 		overflow:scroll;
-		height:85.5vh;
+		height:86.5vh;
 	}
 
 
@@ -501,7 +507,7 @@ input, button {
 	#chat {
 		padding-right:0;
 		overflow-y:scroll;
-		height:37vh;
+		height:40vh;
 	}
 
 	#backgroundPic {
@@ -543,7 +549,7 @@ input, button {
 	}
 	
 	#hider {
-		min-height:85.5vh;
+		min-height:86.5vh;
 		padding-bottom: 0em;
 	}
 

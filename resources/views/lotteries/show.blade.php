@@ -54,7 +54,7 @@
 					<input hidden id="usdDoge" name="dogeConv">
 					<input hidden id="usdBCH" name="bchConv">
 					<input hidden id="usdXRP" name="xrpConv"><br><br>
-					<button type="submit" class="btn btn-success cleargreenBtn">BUY TICKET!!!</button>	@if ((Auth::check()) && (Auth::user()->is_admin))
+					<button type="submit" class="btn btn-success cleargreenBtn">GET YOUR TICKET</button>	@if ((Auth::check()) && (Auth::user()->is_admin))
 				  <a href="{{ action('LotteriesController@edit', $lottery->id) }}"><button class="btn btn-warning">Edit</button></a>
 
 				@endif
