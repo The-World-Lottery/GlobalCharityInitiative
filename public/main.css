@@ -49,13 +49,13 @@ html {
 	font-size: 1.1em;
 }
 .icon-bar {
-	color:#3cc2d0;
+	/*color:#3cc2d0;*/
+
 }
 
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: #3cc2d0;
-    color: #3cc2d0;
-  	border-color: #3cc2d0;
+button.navbar-toggle {
+   
+  	border:0px solid white;
 }
 
 /*#white {
@@ -130,8 +130,12 @@ html {
 	margin-left:.5em;
 }
 
-.headLinks:hover {
+#headLinks:hover {
 	background-color:rgba(255,255,255,1);
+}
+
+#mobileChatHide {
+	display:none;
 }
 
 
@@ -252,6 +256,11 @@ ul.pagination {
 	border:1px solid white;
 	border-top:0;
 	padding:1em;
+}
+
+#hider {
+	padding-bottom: 2em;
+	background-color:rgba(0,0,0,.5);
 }
 
 .img-circle {
@@ -463,6 +472,10 @@ input, button {
 
 	}
 
+	#mobileChatHide {
+		display:block;
+	}
+
 	#chatArea {
 		
 	}
@@ -482,7 +495,11 @@ input, button {
 		padding:3px 0 3px 0;
 		text-align: center;
 	}
-
+	
+	#hider {
+		min-height:85.5vh;
+		padding-bottom: 0em;
+	}
 
 	
 

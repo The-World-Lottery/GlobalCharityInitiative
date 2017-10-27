@@ -14,10 +14,10 @@
 				<a class="navbar-brand user"  id="white" href="{{action('Auth\AuthController@getLogin')}}"><span class="navLink">Login/Register</span></a>	
 			@endif
        
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="border:1px solid #3cc2d0;">
-          <span class="icon-bar headLinks"></span>
-          <span class="icon-bar headLinks"></span>
-          <span class="icon-bar headLinks"></span> 
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="border:0px;">
+          <span class="icon-bar" id="headLinks"></span>
+          <span class="icon-bar" id="headLinks"></span>
+          <span class="icon-bar" id="headLinks"></span> 
         </button>
       </div>
       <div class="collapse navbar-collapse justify-content-end" id="myNavbar">

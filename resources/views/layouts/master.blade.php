@@ -21,7 +21,7 @@
 			@include('layouts.partials._header')	
 		</div>
 		<div class="row" style="padding-top: 3em;">
-			<div style="min-height:85.5vh;background-color:rgba(0,0,0,.5);" class="col col-sm-4">
+			<div id="hider" style="" class="col col-sm-4">
 				<div class="row">
 					<div class="col col-xs-12 col-sm-12">
 						<div class="row" style="text-align:center;padding-top:1em;">
@@ -48,7 +48,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col col-sm-12 col-xs-12 chatInfoContSpacing">
+					<div id="mobileChatHide" class="col col-sm-12 col-xs-12 chatInfoContSpacing">
 						<form style="padding:2em 0 0 0;" action="{{ action('UsersController@comment') }}">
 						{!! csrf_field() !!}
 							<input type="text" style="padding:.5em;margin-bottom:.5em;border:0;border-bottom:1px solid white;color:white;width:100%;background-color:rgba(0,0,0,0);" placeholder="Say Something!" name="comment">
