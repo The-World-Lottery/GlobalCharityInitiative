@@ -46,7 +46,7 @@ html {
 }
 
 #clock{
-	font-size: 1.1em;
+	/*font-size: 1.1em;*/
 }
 .icon-bar {
 	/*color:#3cc2d0;*/
@@ -290,6 +290,18 @@ td {
 	background-color:rgba(0,0,0,0);
 	overflow:hidden;
 
+}
+
+.cleargreenBtn {
+	margin:0em 0 0em 0;color:lightgreen;border:3px solid lightgreen;min-width:8em;border-radius:2em;text-align:center;font-size:2em;background-color:rgba(0,0,0,0);padding:.2em;
+}
+
+#headLinks {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #cccccc;
+  border-radius: 1px;
 }
 
 .headUN {

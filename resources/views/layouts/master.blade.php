@@ -26,9 +26,9 @@
 					<div class="col col-xs-12 col-sm-12">
 						<div class="row" style="text-align:center;padding-top:1em;">
 							<h1 style="font-size:2.5em;color:lightgreen">
-								World Lottery
+								The World Lottery
 							</h1>
-							<h1 style="font-size:3em;color:lightgreen">
+							<h1 style="font-size:2em;color:lightgreen">
 								<b>${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}</b>
 							</h1>
 							<h2 class="countdown">
@@ -42,7 +42,7 @@
 							<div class="col col-xs-12">
 								<div class="text-center">
 									<form action="{{action('TheWorldLotterysController@index')}}">
-										<button class="btn btn-lg btn-success" style="height:2em;font-size:2em;">Pick Your Numbers!</button>
+										<button class="btn btn-lg btn-success cleargreenBtn" {{-- style="height:2em;font-size:2em;" --}}>Pick Your Numbers!</button>
 									</form>
 								</div>
 							</div>
