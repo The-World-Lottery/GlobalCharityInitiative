@@ -15,7 +15,7 @@
 @section('content')
 
 	<main class="row" style="text-align:center;">
-		<div class="col-xs-12 col-sm-6 col" style="min-height:60vh;">
+		<div class="col-xs-12 col-sm-6 col paddingMobile" >
 			<h1>{{$raffle['title']}}</h1>
 				<div class="countdown"><h2>
 					This Drawing ends in : 
@@ -24,11 +24,11 @@
 			<img style="max-height:16em;border-radius:1em;box-shadow: 20px 20px 20px rgba(0,0,0,.6);" src={!! $raffle->img !!}>
 				</div>
 		</div>
-		<div class="col-xs-12 col-sm-6 col" style="padding-top:4em;">
+		<div class="col-xs-12 col-sm-6 col paddingMobile" >
 				<h2>{{$raffle->product}}</h2>
 				<form action="{{ action('RafflesController@addUserToEntries', $raffle->id) }}">
 				
-				<h5 style="color:yellow;font-size:1.5em;">What currency would you like to purchase a ticket with?</h5>
+				<h5 style="color:#3cc2d0;font-size:1.5em;">What currency would you like to purchase a ticket with?</h5>
 				<select name="currency">
 					<option value="usd">Dollars</option>
 					<option value="eur">Euros</option>
@@ -55,9 +55,7 @@
 				@if (Auth::check() && Auth::user()->is_admin)
 				<a href="{{ action('RafflesController@edit', $raffle->id) }}"><div  class="btn btn-warning">Edit</div></a>
 				@endif
-				<br>
-				<br>
-				<button style="margin-bottom:3em;" type="submit" class="btn btn-success">BUY TICKET!!!</button>
+				<button type="submit" class="btn btn-success">BUY TICKET!!!</button>
 			
 			</form>
 			

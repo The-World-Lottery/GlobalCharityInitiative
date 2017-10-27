@@ -79,19 +79,27 @@
 			</li>
 		@endif --}}
           <li class="headLinks">
-          	<a href="{{action('RafflesController@index')}}"><span class="navLink">Raffles</span></a>
+          	<a href="{{action('RafflesController@index')}}">
+          	<span class="glyphicon glyphicon-gift" aria-hidden="true"></span>
+          	<span class="navLink">Raffles</span></a>
           </li>
           <li class="headLinks">
-          	<a href="{{action('LotteriesController@index')}}"><span class="navLink">Lotteries</span></a>
+          	<a href="{{action('LotteriesController@index')}}">
+          	<span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
+          	<span class="navLink">Lotteries</span></a>
           </li>
           {{-- class="headLinks" <li>
           	<a href="{{action('TheWorldLotterysController@index')}}"><span class="navLink">The World Lottery</span></a>
           </li> --}}
           <li class="headLinks">
-          	<a href="{{action('SuggestionsController@index')}}"><span class="navLink">Suggestion Box</span></a>
+          	<a href="{{action('SuggestionsController@index')}}">
+          	<span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+          	<span class="navLink">Suggestion Box</span></a>
           </li>
           <li class="headLinks">
-          	<a href="{{action('AboutUsController@index')}}"><span class="navLink">About Us</span></a>
+          	<a href="{{action('AboutUsController@index')}}">
+          	<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+          	<span class="navLink">About Us</span></a>
           </li>
           @if(Auth::check() && count(App\Models\UserWallet::where('user_id', '=', \Auth::id())->get()) === 0)
           <li class="headLinks">

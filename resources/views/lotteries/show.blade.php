@@ -16,7 +16,7 @@
 
 	<main class="container" style="text-align:center;max-width:100%;display:flex;justify-content: center;">
 		<div class="row">
-			<div class="col-sm-6">
+			<div class="col-sm-6 paddingMobile">
 				<h1 style="color:lightgreen;">Current Pot<br><strong style="font-size:2em;">${{number_format($lottery->current_value,2,".",",")}}</strong>
 				</h1>
 				<div class="countdown">
@@ -26,11 +26,11 @@
 					</h2>
 				</div>
 			</div>
-			<div class="col-sm-6">
+			<div class="col-sm-6 paddingMobile">
 				{{-- <div><strong>Human Comment:<br> </strong>"{{$lottery->content}}"</div> --}}
 				<form action="{{ action('LotteriesController@addUserToEntries', $lottery->id) }}">
 			
-					<h5 style="color:yellow;font-size:1.5em;">What currency would you like to purchase a ticket with?</h5>
+					<h5 style="color:#3cc2d0;font-size:1.5em;">What currency would you like to purchase a ticket with?</h5>
 					<select name="currency">
 						<option value="usd">Dollars</option>
 						<option value="eur">Euros</option>

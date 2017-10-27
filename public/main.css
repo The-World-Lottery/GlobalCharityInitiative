@@ -95,6 +95,11 @@ button.navbar-toggle {
 	z-index:0;
 }
 
+.icon-bar#headLinks {
+  background: #3cc2d0 !important;
+  color: #3cc2d0 !important;
+}
+
 .raffleCont {
 	color:white;
 	background-position:center;
@@ -130,7 +135,7 @@ button.navbar-toggle {
 	margin-left:.5em;
 }
 
-#headLinks:hover {
+.headLinks:hover {
 	background-color:rgba(255,255,255,1);
 }
 
@@ -182,6 +187,19 @@ button.navbar-toggle {
 	top:0;
 }
 
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: white;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: white;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: white;
+}
+
 .infoHeaders {
 	color:lightblue;
 }
@@ -212,11 +230,6 @@ button.navbar-toggle {
 .raffleContent:hover {
 	background-color:rgba(0,0,0,.5);
 	opacity:1;
-
-}
-
-.col-sm-4> {
-	padding-right:0;
 }
 
 #gameArea {
@@ -245,6 +258,10 @@ button.navbar-toggle {
 ul.pagination {
 	margin-top:1em;
 	max-height:1em;
+}
+
+.glyphicon {
+	color:#3cc2d0;
 }
 
 .suggHead {
@@ -296,13 +313,13 @@ td {
 	margin:0em 0 0em 0;color:lightgreen;border:3px solid lightgreen;min-width:8em;border-radius:2em;text-align:center;font-size:2em;background-color:rgba(0,0,0,0);padding:.2em;
 }
 
-#headLinks {
+/*#headLinks {
   display: block;
   width: 22px;
   height: 2px;
   background-color: #cccccc;
   border-radius: 1px;
-}
+}*/
 
 .headUN {
 	margin-top: 3em;
@@ -377,7 +394,7 @@ a:hover, a:active {color:lightgreen;}
 
 #zeroO {
 	background-color:rgba(0,0,0,0);
-	color:yellow;
+	color:#3cc2d0;
 }
 
 
@@ -511,6 +528,10 @@ input, button {
 	#hider {
 		min-height:85.5vh;
 		padding-bottom: 0em;
+	}
+
+	.paddingMobile {
+		padding-top:5em;
 	}
 
 	

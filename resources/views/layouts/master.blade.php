@@ -35,7 +35,7 @@
 			  					Drawing in:
 			  				</h2>
 			  				<h1>
-			  					<span id="clock" style="color:#fff257;" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
+			  					<span id="clock" class="countdown" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
 							</h1>
 						</div>
 						<div class="row">
@@ -76,17 +76,17 @@
 				{{-- </div> --}}
 			</div>
 		</div>
-		<div class="row"  style="background-color:rgba(0,0,0,.5);height:5em">
+		<div class="row"  style="background-color:rgba(0,0,0,.5);min-height:5em">
 			<div class="col col-xs-12 col-sm-4">
 				<div class="col col-xs-12">
-						<div id="googlepos">
-							<div  id="google_translate_element"></div><script type="text/javascript">
-							function googleTranslateElementInit() {
-							  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-							}
-							</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-						</div>
+					<div id="googlepos">
+						<div  id="google_translate_element"></div><script type="text/javascript">
+						function googleTranslateElementInit() {
+						  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+						}
+						</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 					</div>
+				</div>
 			</div>
 			
 			<div class="col col-xs-12 col-sm-4">
