@@ -1,6 +1,6 @@
 
   <nav id="menu" style="color:lightgreen;" class="navbar navbar-fixed-top navbar-inverse bg-inverse">
-    <div class="container-fluid">
+ 
       <div class="navbar-header">
       		@if (Auth::check())
 					{{-- <img src='{{Auth::user()->image}}' id="headImg"> --}}
@@ -162,7 +162,7 @@
 		  @endif
         </ul>        
       </div>
-    </div>
+
   </nav>
 
   

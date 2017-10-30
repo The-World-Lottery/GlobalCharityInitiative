@@ -16,11 +16,11 @@
 </head>
 <body>
 	<img id="backgroundPic" style="opacity:.41;height:100%;width:100%;" src="/images/earthAtNight.jpg">
-	<div class="container-fluid" style="padding:0;">	
-		<div class="row">
 			@include('layouts.partials._header')	
-		</div>
-		<div class="row" style="padding-top: 3em;">
+	<div class="container-fluid" style="padding:0;">	
+		{{-- <div class="row"> --}}
+		{{-- </div> --}}
+		<div class="row" style="margin-top: 6vh;">
 			<div id="hider" style="" class="col col-sm-4">
 				<div class="row">
 					<div class="col col-xs-12 col-sm-12">
@@ -63,7 +63,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="gameScroll" style="font-size:1.5em;" class=" col col-sm-8">
+			<div id="gameScroll" style="font-size:1.2em;" class=" col col-sm-8">
 			{{-- </div>
 			<div   class="row"> --}}
 				{{-- <div style="font-size:1.5em;" class="col col-sm-12 col-xs-12" id="gameArea"> --}}
@@ -106,7 +106,7 @@
 				</div>
 			</div>
 			<div class="col col-xs-12 col-sm-4 text-center">
-				<h5 style="margin-top:1.6em;">We're trying to help the world. You can bet on that!</h5>
+				<h5 style="padding-top:2vh;">We're trying to help the world. You can bet on that!</h5>
 			</div>
 		</div>
 		
