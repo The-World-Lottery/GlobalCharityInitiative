@@ -45,27 +45,11 @@ html {
 	font-size:2em;
 }
 
-#clock{
-	/*font-size: 1.1em;*/
-}
-.icon-bar {
-	/*color:#3cc2d0;*/
-
-}
 
 button.navbar-toggle {
    
   	border:0px solid white;
 }
-
-/*#white {
-	color:lightblue;
-}
-
-#white:hover {
-	color:lightgreen;
-}
-*/
 
 .btn-custom {
 	background-color:rgba(0,0,0,0);
@@ -106,8 +90,8 @@ button.navbar-toggle {
 	background-size:105% 105%;
 	text-align:center;
 	border-radius:1em;
-	min-height:12em;
-	min-width:14em;
+	min-height:30vh;
+	min-width:90%;
 	padding:.2em ;
 	margin:1%;
 	overflow:hidden;

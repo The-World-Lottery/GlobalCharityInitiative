@@ -24,11 +24,11 @@
 			<div id="hider" style="" class="col col-sm-4">
 				<div class="row">
 					<div class="col col-xs-12 col-sm-12">
-						<div class="row" style="text-align:center;padding-top:1em;">
-							<h1 style="font-size:2.5em;color:lightgreen">
+						<div class="row" style="text-align:center;padding-top:2vh;">
+							<h1 style="font-size:5vh;color:lightgreen">
 								The World Lottery
 							</h1>
-							<h1 style="font-size:3em;color:lightgreen">
+							<h1 style="font-size:6vh;color:lightgreen">
 								<b>${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}</b>
 							</h1>
 							<h2 class="countdown">
@@ -38,15 +38,15 @@
 			  					<span id="clock" class="countdown" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
 							</h1>
 						</div>
-						<div class="row">
-							<div class="col col-xs-12">
+						{{-- <div class="row">
+							<div class="col col-xs-12"> --}}
 								<div class="text-center">
 									<form action="{{action('TheWorldLotterysController@index')}}">
-										<button class="btn btn-lg btn-success cleargreenBtn" {{-- style="height:2em;font-size:2em;" --}}>Pick Your Numbers!</button>
+										<button class="btn btn-lg btn-success cleargreenBtn" style="min-width:60%;">Pick Your Numbers!</button>
 									</form>
 								</div>
-							</div>
-						</div>
+						{{-- 	</div>
+						</div> --}}
 					</div>
 					<div id="mobileChatHide" class="col col-sm-12 col-xs-12 chatInfoContSpacing">
 						<form style="padding:2em 0 0 0;" action="{{ action('UsersController@comment') }}">
@@ -106,7 +106,7 @@
 				</div>
 			</div>
 			<div class="col col-xs-12 col-sm-4 text-center">
-				<h5 style="padding-top:1.5vh;">We're trying to help the world. You can bet on that!</h5>
+				<h5 style="font-size:2vh;padding-top:1.5vh;">We're trying to help the world. You can bet on that!</h5>
 			</div>
 		</div>
 		
