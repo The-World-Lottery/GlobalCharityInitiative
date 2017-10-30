@@ -17,10 +17,10 @@
 <body>
 	<img id="backgroundPic" style="opacity:.41;height:100%;width:100%;" src="/images/earthAtNight.jpg">
 			@include('layouts.partials._header')	
-	<div class="container-fluid" style="padding:0;">	
+	{{-- <div class="container-fluid" style="padding:0;">	 --}}
 		{{-- <div class="row"> --}}
 		{{-- </div> --}}
-		<div class="row" style="margin-top: 6vh;">
+		<div class="row" style="padding-top: 6vh;">
 			<div id="hider" style="" class="col col-sm-4">
 				<div class="row">
 					<div class="col col-xs-12 col-sm-12">
@@ -28,7 +28,7 @@
 							<h1 style="font-size:2.5em;color:lightgreen">
 								The World Lottery
 							</h1>
-							<h1 style="font-size:2em;color:lightgreen">
+							<h1 style="font-size:3em;color:lightgreen">
 								<b>${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}</b>
 							</h1>
 							<h2 class="countdown">
@@ -76,7 +76,7 @@
 				{{-- </div> --}}
 			</div>
 		</div>
-		<div class="row"  style="background-color:rgba(0,0,0,.5);min-height:7.5vh">
+		<div class="row"  id="footer" style="background-color:rgba(0,0,0,.5);">
 			<div class="col col-xs-12 col-sm-4">
 				<div class="col col-xs-12">
 					<div id="googlepos">
@@ -106,11 +106,11 @@
 				</div>
 			</div>
 			<div class="col col-xs-12 col-sm-4 text-center">
-				<h5 style="padding-top:2vh;">We're trying to help the world. You can bet on that!</h5>
+				<h5 style="padding-top:1.5vh;">We're trying to help the world. You can bet on that!</h5>
 			</div>
 		</div>
 		
-	</div>
+	{{-- </div> --}}
 	<script
 	  src="https://code.jquery.com/jquery-3.2.1.js"
 	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="

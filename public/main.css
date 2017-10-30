@@ -129,9 +129,9 @@ button.navbar-toggle {
 }
 
 .socialIcon {
-	height:3em;
-	width:3em;
-	margin-top: 1.05em;
+	height:4vh;
+	width:4vh;
+	margin-top: 2vh;
 }
 
 #nameAndWall {
@@ -455,7 +455,7 @@ input, button {
 }
 
 #googlepos {
-	padding:1.6em 0 1.6em 0;
+	padding:2vh 0 2vh 0;
 	border-radius: .5em;
 	text-align: center;
 	box-shadow:0px 0px;
@@ -570,6 +570,11 @@ input, button {
 
 	.paddingMobile2 {
 		padding-top:8em;
+	}
+
+	#footer {
+		height:7.5vh;
+		overflow: scroll;
 	}
 
 }
