@@ -108,7 +108,7 @@ class LotteriesController extends Controller
             $userId = \Auth::id();
 
             $userWallet = UserWallet::find($userId);
-            $userWallet->currency -= (2 * $currConv);
+            $userWallet->$currency -= (2 * $currConv);
             $userWallet->save();
 
             $twlWallet = UserWallet::find(1);

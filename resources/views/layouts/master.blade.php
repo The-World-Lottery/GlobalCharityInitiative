@@ -38,15 +38,11 @@
 			  					<span id="clock" class="countdown" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
 							</h1>
 						</div>
-						{{-- <div class="row">
-							<div class="col col-xs-12"> --}}
-								<div class="text-center">
-									<form action="{{action('TheWorldLotterysController@index')}}">
-										<button class="btn btn-lg btn-success cleargreenBtn" style="min-width:60%;">Pick Your Numbers!</button>
-									</form>
-								</div>
-						{{-- 	</div>
-						</div> --}}
+						<div class="text-center">
+							<form action="{{action('TheWorldLotterysController@index')}}">
+								<button class="btn btn-lg btn-success cleargreenBtn" style="min-width:60%;">Pick Your Numbers!</button>
+							</form>
+						</div>
 					</div>
 					<div id="mobileChatHide" class="col col-sm-12 col-xs-12 chatInfoContSpacing">
 						<form style="padding:2em 0 0 0;" action="{{ action('UsersController@comment') }}">
@@ -64,16 +60,9 @@
 				</div>
 			</div>
 			<div id="gameScroll" style="font-size:1.2em;" class=" col col-sm-8">
-			{{-- </div>
-			<div   class="row"> --}}
-				{{-- <div style="font-size:1.5em;" class="col col-sm-12 col-xs-12" id="gameArea"> --}}
-					{{-- <div style="" class="areaHeader">
-						@yield('divHead')
-					</div> --}}
-					<div style="padding:1em 0 0em 0;" >
-						@yield('content')
-					</div>	
-				{{-- </div> --}}
+				<div style="padding:1em 0 0em 0;" >
+					@yield('content')
+				</div>	
 			</div>
 		</div>
 		<div class="row"  id="footer" style="background-color:rgba(0,0,0,.5);">

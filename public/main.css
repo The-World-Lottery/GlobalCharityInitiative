@@ -140,7 +140,7 @@ button.navbar-toggle {
 	background-position:center;
 	background-size:110% 110%;
 	text-align:center;
-	width:100%;
+	width:90%;
 	border:1px solid white;
 	border-radius:1em;
 	/*height:9em;*/
@@ -389,6 +389,10 @@ select {
 	width:3em;
 	float:left;
 	margin-right:1em;
+}
+
+.creatorPics {
+	border-radius: 2em;
 }
 
 .user:hover {

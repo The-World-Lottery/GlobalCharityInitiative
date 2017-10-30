@@ -31,6 +31,7 @@
 				<form action="{{ action('LotteriesController@addUserToEntries', $lottery->id) }}">
 			
 					<h5 style="color:#3cc2d0;font-size:1.5em;">What currency would you like to purchase a ticket with?</h5>
+					<br>
 					<select name="currency">
 						<option value="usd">Dollars</option>
 						<option value="eur">Euros</option>
@@ -54,10 +55,12 @@
 					<input hidden id="usdDoge" name="dogeConv">
 					<input hidden id="usdBCH" name="bchConv">
 					<input hidden id="usdXRP" name="xrpConv"><br><br>
-					<button type="submit" class="btn btn-success cleargreenBtn">GET YOUR TICKET</button>	@if ((Auth::check()) && (Auth::user()->is_admin))
-				  <a href="{{ action('LotteriesController@edit', $lottery->id) }}"><button class="btn btn-warning">Edit</button></a>
-
-				@endif
+					<button type="submit" class="btn btn-success cleargreenBtn">GET YOUR TICKET</button>
+					@if ((Auth::check()) && (Auth::user()->is_admin))
+						<br>
+						<br>
+						<a href="{{ action('LotteriesController@edit', $lottery->id) }}"><button class="btn btn-warning">Edit</button></a>
+					@endif
 				</form>
 				<br>
 			</div>

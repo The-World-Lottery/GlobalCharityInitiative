@@ -79,7 +79,7 @@
 				<div class="row" id="theCreatorsContainer">
 					<div class="col col-sm-4 col-xs-12">
 					<h2 class="infoHeaders">Emmett Peters</h2>
-						<img src="/images/Emmett.jpg">
+						<img class="creatorPics" src="/images/Emmett.jpg">
 						<br>
 						<br>
 						<div class="">
@@ -89,7 +89,7 @@
 					</div>
 					<div class="col col-sm-4 col-xs-12" >
 					<h2 class="infoHeaders">Avery Hankins</h2>
-						<img src="/images/avery.png">
+						<img class="creatorPics" src="/images/avery.png">
 						<br>
 						<br>
 						<div class="">
@@ -100,7 +100,7 @@
 					</div> 	
 					<div class="col col-sm-4 col-xs-12" style="">
 					<h2 class="infoHeaders">Cody Hastings</h2>
-						<img src="/images/Cody.jpg">
+						<img class="creatorPics" src="/images/Cody.jpg">
 						<br>
 						<br>
 						<div class="">

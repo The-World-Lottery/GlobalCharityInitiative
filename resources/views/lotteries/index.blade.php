@@ -23,20 +23,14 @@
 				@foreach($lotteries as $lottery)
 					
 				<a class="" href="{{ action('LotteriesController@show', $lottery->id) }}">
-				<div class="indivLottoCont col col-sm-4  col-xs-12"
-				style=''
-				>
+					<div class="indivLottoCont col col-sm-4  col-xs-12" style=''>
 
-					<h2>{{$lottery->title}}</h2>
-				<p style="background-color:rgba(0,0,0,.5);border-radius:1em;">Current Estimated Value <br><strong style="font-size:2.5em;color:lightgreen">${{number_format(($lottery->current_value),2,".",",")}}</strong></p>
-				<p>Lottery Ends : <strong style="color:#00ffc4;margin-bottom: .5em;">{{$lottery->end_date->diffForHumans()}}</strong></p>
-				{{-- <p>"{{$lottery->content}}"</p> --}}
-				</div>
+						<h2>{{$lottery->title}}</h2>
+						<p style="background-color:rgba(0,0,0,.5);border-radius:1em;">Current Estimated Value <br><strong style="font-size:2.5em;color:lightgreen">${{number_format(($lottery->current_value),2,".",",")}}</strong></p>
+						<p>Lottery Ends : <strong style="color:#00ffc4;margin-bottom: .5em;">{{$lottery->end_date->diffForHumans()}}</strong></p>
+					{{-- <p>"{{$lottery->content}}"</p> --}}
+					</div>
 				</a>
-				
-
-
-
 
 					{{-- <p>Initial Value : {{$lottery->init_value}}</p> --}}
 				@endforeach

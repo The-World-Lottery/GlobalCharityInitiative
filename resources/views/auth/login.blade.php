@@ -17,13 +17,13 @@
 </ul>
  	<main class="container authSpacer" style="max-width:100%;">
     <div>
-        @if (session()->has('errorMessage'))
-            <div class="alert alert-error">{{ session('errorMessage') }}</div>
-        @endif
 
         <form method="POST" action="/auth/login">
             {!! csrf_field() !!}
             <div style="margin-top:2em;" class="row">
+                @if (session()->has('errorMessage'))
+                    <div class="alert alert-error text-center">{{ session('errorMessage') }}</div>
+                @endif
                 <div class="form-group col col-sm-6 col-sm-offset-3 col-xs-12">
                     <label><h2>Email</h2></label>
                     {!! $errors->first('email', '<span class="help-block">:message</span>')!!}
