@@ -41,7 +41,7 @@
 						</div>
 						<div class="text-center">
 							<form action="{{action('TheWorldLotterysController@index')}}">
-								<button class="btn btn-lg btn-success cleargreenBtn" style="min-width:60%;">Pick Your Numbers</button>
+								<button id="twlButton" class="btn btn-lg btn-success cleargreenBtn" style="min-width:60%;">Pick Your Numbers</button>
 							</form>
 						</div>
 					</div>
@@ -67,7 +67,7 @@
 			</div>
 		</div>
 
-		<div class="row color"  id="footer" style="">
+		<div class="row"  id="footer" style="">
 			<div class="col col-xs-12 col-sm-4">
 				<div class="col col-xs-12">
 					<div id="googlepos">
