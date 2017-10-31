@@ -54,7 +54,7 @@
 						@endforeach
 					</div>
 					<div class="col col-xs-12 col-sm-4"> <u class="ticketHead">Raffles</u><br>
-						@foreach($user->raffleEntries->unique('raffles_id') as $raffleEntry)
+						@foreach($user->raffleEntries->unique('raffle_id') as $raffleEntry)
 						<a href="{{action('RafflesController@show', $raffleEntry->raffle->id)}}">{{$raffleEntry->raffle->title}}</a><br>
 						@endforeach
 					</div>

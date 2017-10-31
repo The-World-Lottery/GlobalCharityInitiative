@@ -15,7 +15,7 @@ class LotterysTableSeeder extends Seeder
         $month = 11;
 
 
-        for($i = 0;$i <= 29;$i++) {
+        for($i = 0;$i <= 100;$i++) {
          
            	$lottery = new \App\Models\Lottery();
             $lottery->title = 'Daily Lottery';

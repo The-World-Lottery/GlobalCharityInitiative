@@ -327,6 +327,10 @@ td {
 	padding:.5em;
 }
 
+.cleargreenButton:hover {
+	border:2px lightgreen;
+}
+
 /*#headLinks {
   display: block;
   width: 22px;
