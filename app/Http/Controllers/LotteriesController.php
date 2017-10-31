@@ -30,7 +30,7 @@ class LotteriesController extends Controller
         // } else {
         //     $lotterys = Lottery::with('user')->paginate(6);  
         // }
-
+        // var_dump(\Carbon\Carbon::now());
         $lotteries = Lottery::where('end_date','>',\Carbon\Carbon::now())->paginate(16);
         return view('lotteries.index')->with(array('lotteries' => $lotteries));
        
@@ -128,7 +128,7 @@ class LotteriesController extends Controller
             $newEntry->user_id = $userId;
             $newEntry->lottery_id = $id;
             $newEntry->save();
-            
+
         } else {
             $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
             return \Redirect::action('Auth\AuthController@getLogin');
