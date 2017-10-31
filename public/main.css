@@ -1,11 +1,13 @@
-
 body {
 	color:#e0fff8;
-	background-color:#1d5c92;
+	background-color:#1d5c92 !important;
 	font-size:1.2em;
 	font-family: 'PT Sans Narrow', sans-serif !important; 
 	letter-spacing:1px;
 	/*text-shadow: 2px 2px rgba(0,0,0,.40);*/
+	/*background-image:url("/images/earthatnight.jpg");*/
+	background-size:100vw 100vh;
+	/*background-blend-mode: color;*/
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -140,7 +142,7 @@ button.navbar-toggle {
 	background-position:center;
 	background-size:110% 110%;
 	text-align:center;
-	width:90%;
+	width:100%;
 	border:1px solid white;
 	border-radius:1em;
 	/*height:9em;*/
@@ -156,7 +158,7 @@ button.navbar-toggle {
 
 }
 
-.col1 {
+/*.col1 {
 	text-align: center;
 	height:4em;
 	padding-top:.5em;
@@ -165,10 +167,10 @@ button.navbar-toggle {
 }
 .col1:hover {
 	background-color: rgba(0,55,255,.4);
-}
+}*/
 
 #main {
-	background-color:rgba(0,0,0,1);
+	/*background-color:rgba(0,0,0,1);*/
 	color:white;
 	z-index:0;
 	top:0;
@@ -196,9 +198,9 @@ button.navbar-toggle {
 }
 
  /*content right side*/
-.gameAndChatInfo {
+/*.gameAndChatInfo {
 	min-height:100vh; 
-}
+}*/
 
 #chat {
 	margin-right:-1em;
@@ -275,7 +277,10 @@ ul.pagination {
 }
 
 #hider {
-	padding-bottom: 2em;
+	padding-bottom:0em;
+}
+
+.color {
 	background-color:rgba(0,0,0,.5);
 }
 

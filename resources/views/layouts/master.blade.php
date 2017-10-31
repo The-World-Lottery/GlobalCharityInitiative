@@ -15,20 +15,21 @@
 
 </head>
 <body>
+	<div style="height:100%;width: 100%;">
 	<img id="backgroundPic" style="opacity:.41;height:100%;width:100%;" src="/images/earthAtNight.jpg">
 			@include('layouts.partials._header')	
 	{{-- <div class="container-fluid" style="padding:0;">	 --}}
 		{{-- <div class="row"> --}}
 		{{-- </div> --}}
 		<div class="row" style="padding-top: 6vh;">
-			<div id="hider" style="" class="col col-sm-4">
+			<div id="hider" style="" class="col col-sm-4 color">
 				<div class="row">
 					<div class="col col-xs-12 col-sm-12">
 						<div class="row" style="text-align:center;padding-top:2vh;">
 							<h1 style="font-size:5vh;color:lightgreen">
 								The World Lottery
 							</h1>
-							<h1 style="font-size:6vh;color:lightgreen">
+							<h1 style="font-size:5vh;color:lightgreen">
 								<b>${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}</b>
 							</h1>
 							<h2 class="countdown">
@@ -40,7 +41,7 @@
 						</div>
 						<div class="text-center">
 							<form action="{{action('TheWorldLotterysController@index')}}">
-								<button class="btn btn-lg btn-success cleargreenBtn" style="min-width:60%;">Pick Your Numbers!</button>
+								<button class="btn btn-lg btn-success cleargreenBtn" style="min-width:60%;">Pick Your Numbers</button>
 							</form>
 						</div>
 					</div>
@@ -65,7 +66,8 @@
 				</div>	
 			</div>
 		</div>
-		<div class="row"  id="footer" style="background-color:rgba(0,0,0,.5);">
+
+		<div class="row color"  id="footer" style="">
 			<div class="col col-xs-12 col-sm-4">
 				<div class="col col-xs-12">
 					<div id="googlepos">
@@ -95,11 +97,11 @@
 				</div>
 			</div>
 			<div class="col col-xs-12 col-sm-4 text-center">
-				<h5 style="font-size:2vh;padding-top:1.5vh;">We're trying to help the world. You can bet on that!</h5>
+				<h5 style="font-size:2vh;padding-top:1.5vh;">"The answer to vice is virtue"</h5>
 			</div>
 		</div>
 		
-	{{-- </div> --}}
+	</div>
 	<script
 	  src="https://code.jquery.com/jquery-3.2.1.js"
 	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="

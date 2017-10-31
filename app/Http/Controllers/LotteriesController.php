@@ -128,6 +128,7 @@ class LotteriesController extends Controller
             $newEntry->user_id = $userId;
             $newEntry->lottery_id = $id;
             $newEntry->save();
+            
         } else {
             $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
             return \Redirect::action('Auth\AuthController@getLogin');
