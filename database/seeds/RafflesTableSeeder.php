@@ -36,7 +36,7 @@ class RafflesTableSeeder extends Seeder
         $raffle1= new \App\Models\Raffle();
         $raffle1->title = 'A Day With Samuel L. Jackson';
         $raffle1->content = 'Hilarity for Charity';
-        $raffle1->product ='Samuel L. Jackson has put aside a day to the winner shadow him on the set of Avengers 4';
+        $raffle1->product ='Samuel L. Jackson has put aside a day for the winner to shadow him on the set of Avengers 4!';
         $raffle1->end_date = date("Y-").$month ."-" . $day ." 09:00:00";
         $raffle1->img = "/images/samuel.jpg";
         $raffle1->user_id = 1;

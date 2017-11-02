@@ -25,19 +25,19 @@
 			<div id="hider" style="" class="col col-sm-4 color">
 				<div class="row">
 					<div class="col col-xs-12 col-sm-12">
-						<div class="row" style="text-align:center;padding-top:2vh;">
-							<h1 style="font-size:5vh;color:lightgreen">
+						<div class="row" style="text-shadow:1px 1px 1px;text-align:center;padding-top:2vh;">
+							<div class="fontSize" style="color:lightgreen;">
 								The World Lottery
-							</h1>
-							<h1 style="font-size:5vh;color:lightgreen">
+							</div>
+							<div class="fontSize" style="color:lightgreen;">
 								<b>${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}</b>
-							</h1>
-							<h2 class="countdown">
+							</div>
+							<div class="countdown fontSize" >
 			  					Drawing in:
-			  				</h2>
-			  				<h1>
+			  				</div>
+			  				<div class="fontSize">
 			  					<span id="clock" class="countdown" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
-							</h1>
+							</div>
 						</div>
 						<div class="text-center">
 							<form action="{{action('TheWorldLotterysController@index')}}">

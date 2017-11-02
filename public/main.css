@@ -1,7 +1,7 @@
 body {
 	color:#e0fff8;
 	background-color:#1d5c92 !important;
-	font-size:1.2em;
+	font-size:1.3em;
 	font-family: 'PT Sans Narrow', sans-serif !important; 
 	letter-spacing:1px;
 	/*text-shadow: 2px 2px rgba(0,0,0,.40);*/
@@ -22,6 +22,11 @@ h1,h2,h3,h4,h5,h6 {
 
 .auto {
 	line-height: 2em;
+}
+
+.btn {
+	background-color: rgba(0,0,0,0);
+	border-width:3px;
 }
 
 .navIcons {
@@ -327,8 +332,13 @@ td {
 	padding:.5em;
 }
 
-.cleargreenButton:hover {
-	border:2px lightgreen;
+.btn-success:hover {
+	border-color:green;
+	background-color:green;
+}
+
+.btn {
+	border-radius:10em;
 }
 
 /*#headLinks {
@@ -355,6 +365,10 @@ img {
 	max-height:100%;
 }
 
+.fontSize {
+	font-size:4.5vh; 
+}
+
 #headImg {
 	width:3.8em;
 	height:3em;
@@ -374,8 +388,8 @@ img {
 
 #checkWrapper {
 	max-width: 100%;
-
 }
+
 label {
 	vertical-align: bottom;
 }
@@ -394,8 +408,8 @@ select {
 }
 
 .creatorsSocialIcons {
-	height:3em;
-	width:3em;
+	height:1.4em;
+	width:1.4em;
 	float:left;
 	margin-right:1em;
 }
@@ -559,19 +573,10 @@ input, button {
 		text-align: center;
 	}
 	
-	#hider {
-		
+	#hider {	
 		height:86.5vh;
 		padding-bottom: 0em;
 		overflow:scroll;
-	}
-
-	.paddingMobile {
-		padding-top:5em;
-	}
-
-	.paddingMobile2 {
-		padding-top:8em;
 	}
 
 	#footer {
@@ -592,5 +597,15 @@ input, button {
 
 	#twlButton {
 		margin-bottom:2em;
+	}
+}
+
+@media screen and (min-width:992px){
+	.paddingMobile {
+		padding-top:5em;
+	}
+
+	.paddingMobile2 {
+		padding-top:8em;
 	}
 }

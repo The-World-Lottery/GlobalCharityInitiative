@@ -29,6 +29,8 @@
 				</div>
 				<div id="showProfImg">
 					<img src='{{$user->image}}' id="profImg">
+					<img src='{{substr($user->image,1,-1)}}' id="profImg">
+
 				</div><br>
 				<h1>
 					{{$user->name}}
