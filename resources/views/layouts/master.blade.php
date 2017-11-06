@@ -20,10 +20,7 @@
 <body>
 	<div style="height:100%;width: 100%;">
 	<img id="backgroundPic" style="opacity:.41;height:100%;width:100%;" src="/images/earthAtNight.jpg">
-			@include('layouts.partials._header')	
-	{{-- <div class="container-fluid" style="padding:0;">	 --}}
-		{{-- <div class="row"> --}}
-		{{-- </div> --}}
+		@include('layouts.partials._header')	
 		<div class="row" style="padding-top: 6vh;">
 			<div id="hider" style="" class="col col-sm-4 color">
 				<div class="row">
