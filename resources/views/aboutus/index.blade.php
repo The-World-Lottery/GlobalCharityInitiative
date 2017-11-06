@@ -52,16 +52,21 @@
 			</div>
 			<div id="menu1" class="tab-pane fade">
 				<div class="row">
-					<blockquote class="col col-sm-5 col-sm-offset-1 col-xs-12">
+					<div class="col col-sm-5 col-sm-offset-1 col-xs-12">
 						<h1 class="infoHeaders">Sources</h1>
+						<blockquote>
+						{{-- <br> --}}
 						<a target="_blank" href="http://www.theperfecttitle.com/money/money.shtml"><h5>Lottery Quotes</h5></a>
 						<a target="_blank" href="https://www.cryptonator.com/?utm_referrer=http%3a%2f%2ftheworldlottery.dev%2fcurrencyconversion"><h5>Currency Conversion Widgets</h5></a>
 						<a target="_blank" href="https://www.cryptocompare.com/api/#-api-data-price-"><h5>Currency conversion API Call for point of sale transactions</h5></a>
 						<a target="_blank" href="https://www.filestack.com"><h5>Profile and Raffle Image Hosting</h5></a>
 						<a target="_blank" href="http://hilios.github.io/jQuery.countdown/"><h5>Games timer Countdown</h5></a>
-					</blockquote>
-					<blockquote class="col col-sm-5 col-xs-12">
-						<h1 class="infoHeaders">Technologies</h1>	
+						</blockquote>
+					</div>
+					<div class="col col-sm-5 col-xs-12">
+						<h1 class="infoHeaders">Technologies</h1>
+						<blockquote>
+						{{-- <br> --}}	
 						<h5>Laravel framework for PHP</h5>
 						<h5>Object Oriented</h5>
 						<h5>Cron Jobs for game timeouts</h5>
@@ -72,7 +77,8 @@
 						<h5>Events/task scheduling</h5>
 						<h5>14 related database tables</h5>
 						<h5>140+ Merges, 450+ commits - Github Version control</h5>	
-					</blockquote>
+						</blockquote>
+					</div>
 				</div>
 			</div>
 			<div id="menu2" class="tab-pane fade">

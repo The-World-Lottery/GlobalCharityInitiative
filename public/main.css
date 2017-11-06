@@ -3,6 +3,7 @@ body {
 	background-color:#1d5c92 !important;
 	font-size:1.3em;
 	font-family: 'PT Sans Narrow', sans-serif !important; 
+	/*font-family: 'Josefin Sans', sans-serif bold italic !important;*/
 	letter-spacing:1px;
 	/*text-shadow: 2px 2px rgba(0,0,0,.40);*/
 	/*background-image:url("/images/earthatnight.jpg");*/
@@ -11,7 +12,7 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-	font-family: 'PT Sans Narrow', sans-serif !important; 
+	/*font-family: 'PT Sans Narrow', sans-serif !important; */
 	letter-spacing:2px;
 }
 
@@ -97,7 +98,7 @@ button.navbar-toggle {
 	background-size:105% 105%;
 	text-align:center;
 	border-radius:1em;
-	min-height:30vh;
+	min-height:10.5em;
 	min-width:90%;
 	padding:.2em ;
 	margin:1%;
@@ -120,8 +121,8 @@ button.navbar-toggle {
 }
 
 .socialIcon {
-	height:4vh;
-	width:4vh;
+	height:2.3em;
+	width:2.3em;
 	margin-top: 2vh;
 }
 
@@ -366,7 +367,7 @@ img {
 }
 
 .fontSize {
-	font-size:4.5vh; 
+	font-size:2.5em; 
 }
 
 #headImg {
@@ -488,6 +489,10 @@ input, button {
 @media screen and (min-width: 768px) {
 	.authSpacer {
 		margin-top:4em;
+	}
+
+	.raffleCont {
+		min-height: 30vh;
 	}
 
 	#twlSpacer {

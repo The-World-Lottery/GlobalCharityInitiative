@@ -8,22 +8,23 @@
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	
 </head>
-	<body class="container-fluid" style="height:100vh">
+	<body class="container-fluid" style="height:100vh;font-size:2em;">
 		 
 		<div class="row text-center">
-			<div class="col col-xs-12" style="font-size: 4vw;">
-				<h1 style="font-family: 'Racing Sans One', cursive;color:lightblue;font-size:2em;">
+			<div class="col col-xs-12" >
+				<h1 id="splashHeader">
 					The World Lottery For Charity
 				</h1>
-				<p class="splashPar">
+				<div style="font-family:'Open Sans', sans-serif;">
 					ALL proceeds go to the game winners and selected charities, human interest projects.
-				</p>
+				</div>
 				<form action="{{action('RafflesController@index')}}">
-					<button class="btn-success cleargreenBtn">Enter Site</button>
+					<button class="btn-success">Enter Site</button>
 				</form>	
-				<div style="margin-top:1em;">
+				<div>
 				    <div style="background-color:rgba(0,0,0,.4);" id="random_quote">
 				    </div>
 				</div>
