@@ -24,7 +24,8 @@ table, th, td {
 	<div style="display: flex;justify-content: center;">
 		<a class="btn btn-success" href="{{action('LotteriesController@create')}}" >Create New Lottery</a>
 	</div>
-	<div>{!! $lotteries->appends(Request::except('page'))->render() !!}</div>
+	<br>
+	{{-- <div>{!! $lotteries->appends(Request::except('page'))->render() !!}</div> --}}
 
 		<table class="table table-condensed">
 			<tr>

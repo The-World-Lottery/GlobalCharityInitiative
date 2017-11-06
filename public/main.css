@@ -2,25 +2,21 @@ body {
 	color:#e0fff8;
 	background-color:#1d5c92;
 	font-size:1.3em;
-	font-family: 'PT Sans Narrow', sans-serif !important; 
-	
+	font-family: 'PT Sans Narrow', sans-serif !important; 	
 	letter-spacing:1px;
-	/*text-shadow: 2px 2px rgba(0,0,0,.40);*/
-	/*background-image:url("/images/earthatnight.jpg");*/
-	background-size:100vw 100vh;
-	/*background-blend-mode: color;*/
 }
 
 h1,h2,h3,h4,h5,h6 {
 	/*font-family: 'PT Sans Narrow', sans-serif !important; */
 	letter-spacing:2px;
+	text-shadow: 3px 3px 3px black;
 	font-family: 'Josefin Sans', sans-serif !important;
 }
 
-/*::-webkit-input-placeholder {
-    color:white;
-    text-align:center;
-}*/
+
+input[type=checkbox] {
+  zoom:1.5;
+}
 
 .auto {
 	line-height: 2em;
@@ -122,9 +118,9 @@ button.navbar-toggle {
 }
 
 .socialIcon {
-	height:2.3em;
-	width:2.3em;
-	margin-top: 2vh;
+	height:2.5em;
+	width:2.5em;
+	margin-top: 1.7vh;
 }
 
 #nameAndWall {
@@ -458,6 +454,7 @@ input, button {
 	background-color: black;
 	min-height:6vh;
 	padding:0 1em 0 1em;
+
 }
 
 .navButton {

@@ -15,40 +15,47 @@
 @section('content')
 
 	<main class="container" style="max-width:100%;"><br>
+	<div class="col col-sm-8 col-sm-offset-2 text-center">
 		<form method="POST" action="{{ action('LotteriesController@store') }}">
 			{!! csrf_field() !!}
 			{!! $errors->first('title', '<span class="help-block">:message</span>')!!}
 
-			<input class="form-control" type="text" name="title" id="title" value="{{ old('title') }}" placeholder="title"><br>
+			<div class="form-group">
+    			<label for="title">Title</label>
+    			<input class="form-control" type="text" name="title" id="title" value="{{ old('title') }}">
+    		</div>
 
 			{!! $errors->first('init_value', '<span class="help-block">:message</span>')!!}
 
-			<input class="form-control" type="text" name="init_value" id="init_value" value="{{ old('init_value') }}" placeholder="init_value"><br>
+			<div class="form-group">
+    			<label for="init_value">Initial Value</label>
+    			<input class="form-control" type="text" name="init_value" id="init_value" value="{{ old('init_value') }}">
+    		</div>
 
 			{!! $errors->first('end_date', '<span class="help-block">:message</span>')!!}
 
-			<input class="form-control" type="date" name="end_date" id="end_date" value="{{ old('end_date') }}"><br>
+			<div class="form-group">
+    			<label for="eend_date">End Date</label>
+    			<input class="form-control" type="date" name="end_date" id="end_date" value="{{ old('end_date') }}">			
+    		</div>
 
-			<input class="form-control" type="time" name="end_time" id="end_time" value="{{ old('end_time') }}"><br>
+			<div class="form-group">
+    			<label for="end_time">End Time</label>
+    			<input class="form-control" type="time" name="end_time" id="end_time" value="{{ old('end_time') }}">			
+    		</div>
 
 			{!! $errors->first('content', '<span class="help-block">:message</span>')!!}
 
 			
-			<textarea class="form-control" type="text" name="content" id="content" placeholder="content">{{ old('content') }}</textarea><br>
+			<div class="form-group">
+    			<label for="content">Content</label>
+    			<textarea class="form-control" type="text" name="content" id="content">{{ old('content') }}</textarea>
+    		</div>
 
 
 			<button class="btn btn-success">Submit</button>
 		</form>
-		<div class="well">
-		  <div id="datetimepicker1" class="input-append date">
-		    <input data-format="dd/MM/yyyy hh:mm:ss" type="text"></input>
-		    <span class="add-on">
-		      <i data-time-icon="icon-time" data-date-icon="icon-calendar">
-		      </i>
-		    </span>
-		  </div>
-		</div>
-
+	</div>
 	</main>
 
 @stop

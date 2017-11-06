@@ -23,6 +23,7 @@ table, th, td {
 	<div style="display: flex;justify-content: center;">
 		<a class="btn btn-success" href="{{action('RafflesController@create')}}" >Create New Raffle</a>
 	</div>
+	<br>
 	<div>{!! $raffles->appends(Request::except('page'))->render() !!}</div>
 	<div>
 		<table class="table" style="width:90%">

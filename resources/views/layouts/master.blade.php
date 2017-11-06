@@ -19,13 +19,13 @@
 </head>
 <body>
 	<div style="height:100%;width: 100%;">
-	<img id="backgroundPic" style="opacity:.41;height:100%;width:100%;" src="/images/earthAtNight.jpg">
+	<img id="backgroundPic" class="center-block" style="opacity:.41;height:100%;" src="/images/earthAtNight.jpg">
 		@include('layouts.partials._header')	
 		<div class="row" style="padding-top: 6vh;">
 			<div id="hider" style="" class="col col-sm-4 color">
 				<div class="row">
 					<div class="col col-xs-12 col-sm-12">
-						<div class="row" style="text-shadow:1px 1px 1px;text-align:center;padding-top:2vh;">
+						<div class="row" style="text-shadow:3px 3px 3px black;text-align:center;padding-top:2vh;">
 							<div class="fontSize" style="color:lightgreen;">
 								The World Lottery
 							</div>
@@ -61,7 +61,7 @@
 				</div>
 			</div>
 			<div id="gameScroll" style="font-size:1.2em;" class=" col col-sm-8">
-				<div style="padding:1em 0 0em 0;" >
+				<div style="padding:1em 0 1em 0;" >
 					@yield('content')
 				</div>	
 			</div>
@@ -110,9 +110,6 @@
 	<script src="https://static.filestackapi.com/v3/filestack.js"></script>
 	<script src="/main.js" type="text/javascript"></script>
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
-	<script type="text/javascript"
-     src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
-    </script>
+	
 </body>
 </html>

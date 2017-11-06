@@ -23,31 +23,37 @@
 			    <p style="text-align:center;">Our mission is to eliminate the man power that is usually necessary for fund-raising, for all types of worth-while charities and human interest projects by providing massive monetary donations (from The World Lottery Foundation) directly to the source of the charitable work. We will accomplish this by running a large number of simultaneous lotteries and raffles whose ticket prices will be split thusly.</p>
 			    <p style="text-align:center;" >The ticket price for all games is $2 US (or the current equivalency of 2 USD in Euros, Japanese Yen, Pounds, Swiss Franks, Bitcoin, Litecoin, Etherium, Dogecoin or Ripple)</p>
 			    <div class="row">
-				    <blockquote class="col col-md-4 col-sm-12">
+				    <div class="col col-md-4 col-sm-12">
 				    	<h2 class="infoHeaders">Lottery Ticket Price</h2>
-				    	<ul>
-				    		<li>40% to the current lottery's pool.</li>
-				    		<li>30% to The World Lottery Foundation.</li>
-				    		<li>25% to The World Lottery's Pool.</li>
-				    		<li>5% max to the payment system.</li>
-				    	</ul>
-				    </blockquote>
-				    <blockquote class="col col-md-4 col-sm-12">
+				    	<blockquote>
+				    	
+				    		<div>40% goes to<br>the current lottery's pool.</div>
+				    		<div>30% goes to<br>The World Lottery Foundation.</div>
+				    		<div>25% goes to<br>The World Lottery's Pool.</div>
+				    		<div>5% goes to<br>the payment system.</div>
+				    	
+				    	</blockquote>
+				    </div>
+				    <div class="col col-md-4 col-sm-12">
 				    	<h2 class="infoHeaders">Raffle Ticket Price</h2>
-				    	<ul>
-				    		<li>50% to The World Lottery Foundation.</li>
-			    			<li>45% to The World Lottery's Pool.</li>
-			    			<li>5% max to the payment system.</li>
-				    	</ul>
-				    </blockquote>
-				    <blockquote class="col col-md-4 col-sm-12">
+				    	<blockquote>
+				    	
+				    		<div>50% goes to<br>The World Lottery Foundation.</div>
+			    			<div>45% goes to<br>The World Lottery's Pool.</div>
+			    			<div>5% goes to<br>the payment system.</div>
+				    	
+				    	</blockquote>
+				    </div>
+				    <div class="col col-md-4 col-sm-12">
 				    	<h2 class="infoHeaders">The World Lottery Ticket Price</h2>
-				    	<ul>
-			    			<li>50% to The World Lottery Foundation.</li>
-			    			<li>45% to The World Lottery's Pool.</li>
-			    			<li>5% max to the payment system.</li>	
-				    	</ul>
-				    </blockquote>
+				    	<blockquote>
+				    	
+			    			<div>50% goes to<br>The World Lottery Foundation.</div>
+			    			<div>45% goes to<br>The World Lottery's Pool.</div>
+			    			<div>5% goes to<br>the payment system.</div>	
+				    	
+				    	</blockquote>
+				    </div>
 			    </div>
 			</div>
 			<div id="menu1" class="tab-pane fade">
