@@ -8,10 +8,12 @@
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	{{-- <link rel="stylesheet" type="text/css" href="/bootstrap.min.css"> --}}
 	<link rel="stylesheet" type="text/css" href="/main.css">
+	<link rel="stylesheet" type="text/css" href="/bootstrap-datetimepicker.min.css">
 	{{-- <link rel="stylesheet" href="/theWorldLottery.css"> --}}
 	<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
@@ -98,7 +100,7 @@
 				</div>
 			</div>
 			<div class="col col-xs-12 col-sm-4 text-center">
-				<h5 style="font-size:2vh;padding-top:1.5vh;">"The answer to vice is virtue"</h5>
+				<h5 style="font-size:1.3em;padding-top:1.5vh;">"The answer to vice is virtue"</h5>
 			</div>
 		</div>
 		
@@ -110,16 +112,10 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
 	<script src="https://static.filestackapi.com/v3/filestack.js"></script>
 	<script src="/main.js" type="text/javascript"></script>
-	<script>
-	// 	function myFunction(id) {
-	//     var x = document.getElementById(id);
-	//     if (x.className.indexOf("w3-show") == -1) {
-	//         x.className += " w3-show";
-	//     } else { 
-	//         x.className = x.className.replace(" w3-show", "");
-	//     }
-	// }
-	</script>
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+	<script type="text/javascript"
+     src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
+    </script>
 </body>
 </html>

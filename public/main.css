@@ -1,9 +1,9 @@
 body {
 	color:#e0fff8;
-	background-color:#1d5c92 !important;
+	background-color:#1d5c92;
 	font-size:1.3em;
 	font-family: 'PT Sans Narrow', sans-serif !important; 
-	/*font-family: 'Josefin Sans', sans-serif bold italic !important;*/
+	
 	letter-spacing:1px;
 	/*text-shadow: 2px 2px rgba(0,0,0,.40);*/
 	/*background-image:url("/images/earthatnight.jpg");*/
@@ -14,12 +14,13 @@ body {
 h1,h2,h3,h4,h5,h6 {
 	/*font-family: 'PT Sans Narrow', sans-serif !important; */
 	letter-spacing:2px;
+	font-family: 'Josefin Sans', sans-serif !important;
 }
 
-::-webkit-input-placeholder {
+/*::-webkit-input-placeholder {
     color:white;
     text-align:center;
-}
+}*/
 
 .auto {
 	line-height: 2em;
@@ -183,19 +184,19 @@ button.navbar-toggle {
 }
 
 ::-webkit-input-placeholder { /* Chrome */
-  color: lightgreen !important;
+  /*color: lightblue !important;*/
   opacity:1;
 }
 :-ms-input-placeholder { /* IE 10+ */
-  color: lightgreen !important;
+  /*color: lightblue !important;*/
   opacity:1;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-  color: lightgreen !important;
+  /*color: lightblue !important;*/
   opacity: 1;
 }
 :-moz-placeholder { /* Firefox 4 - 18 */
-  color: lightgreen !important;
+  /*color: lightblue !important;*/
   opacity: 1;
 }
 
@@ -323,8 +324,9 @@ td {
 
 .cleargreenBtn {
 	margin:0em 0 0em 0;
-	color:lightgreen;
+	color:lightgreen !important;
 	border:3px solid lightgreen;
+
 	min-width:6em;
 	border-radius:2em;
 	text-align:center;
@@ -333,9 +335,12 @@ td {
 	padding:.5em;
 }
 
+
+
 .btn-success:hover {
-	border-color:green;
-	background-color:green;
+	color:white !important;
+	border-color:lightgreen;
+	background-color:lightgreen;
 }
 
 .btn {

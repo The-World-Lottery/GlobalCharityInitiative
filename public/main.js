@@ -1,6 +1,12 @@
 	
 $(document).ready(function(){
 
+	$(function() {
+	    $('#datetimepicker1').datetimepicker({
+	      language: 'pt-BR'
+	    });
+	  });
+
 	//filestack js for click on register
 	var client = filestack.init('A5gY0fZEnTzWuvzsVI5Ttz');
  

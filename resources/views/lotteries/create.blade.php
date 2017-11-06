@@ -27,7 +27,9 @@
 
 			{!! $errors->first('end_date', '<span class="help-block">:message</span>')!!}
 
-			<input class="form-control" type="datetime-local" name="end_date" id="end_date" value="{{ old('end_date') }}" placeholder="end_date"><br>
+			<input class="form-control" type="date" name="end_date" id="end_date" value="{{ old('end_date') }}"><br>
+
+			<input class="form-control" type="time" name="end_time" id="end_time" value="{{ old('end_time') }}"><br>
 
 			{!! $errors->first('content', '<span class="help-block">:message</span>')!!}
 
@@ -37,5 +39,16 @@
 
 			<button class="btn btn-success">Submit</button>
 		</form>
+		<div class="well">
+		  <div id="datetimepicker1" class="input-append date">
+		    <input data-format="dd/MM/yyyy hh:mm:ss" type="text"></input>
+		    <span class="add-on">
+		      <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+		      </i>
+		    </span>
+		  </div>
+		</div>
+
 	</main>
+
 @stop

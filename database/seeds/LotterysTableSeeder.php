@@ -20,7 +20,7 @@ class LotterysTableSeeder extends Seeder
            	$lottery = new \App\Models\Lottery();
             $lottery->title = 'Daily Lottery';
             $lottery->content = $quoteArr[array_rand($quoteArr)];
-            $initVal = 40000 - $i * 1237.32;
+            $initVal = 400000 - $i * 2237.32;
             $lottery->init_value = $initVal;
             $lottery->current_value =$initVal;
           

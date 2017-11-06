@@ -41,7 +41,7 @@
                 <input type="checkbox" name="remember"> Remember Me
             </div>
             <div class="form-group" style="display:flex;justify-content: center;">
-                <button style="margin-bottom:2em;width:5em;height:3em;" class="btn btn-success" type="submit">Login</button>
+                <button style="margin-bottom:2em;" class="btn btn-success cleargreenBtn" type="submit">Login</button>
             </div>
             
         </form>

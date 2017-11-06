@@ -55,7 +55,7 @@
 				@if (Auth::check() && Auth::user()->is_admin)
 				<a href="{{ action('RafflesController@edit', $raffle->id) }}"><div  class="btn btn-warning">Edit</div></a>
 				@endif
-				<button type="submit" class="btn btn-success">BUY TICKET!!!</button>
+				<button type="submit" class="btn btn-success cleargreenBtn">GET A TICKET</button>
 			
 			</form>
 			
