@@ -24,15 +24,15 @@ table, th, td {
 
 		<table class="table table-condensed">
 			<tr>
-				<th>Edit</th>
-				<th>Name</th>
-				<th>UserName</th>
-				<th>Email</th>
-				<th>User ID</th>
-				<th># of Posts</th>
-				<th>Admin</th>
+				<th><h5>Edit</h5></th>
+				<th><h5>Name</h5></th>
+				<th><h5>UserName</h5></th>
+				<th style="max-width:6em;overflow:scroll;"><h5>Email</h5></th>
+				<th><h5>User ID</h5></th>
+				<th><h5># of Posts</h5></th>
+				<th><h5>Admin</h5></th>
 				@if(Auth::user()->is_super_admin)
-					<th>Change Status</th>
+					<th><h5>Change Status</h5></th>
 				@endif
 			</tr>
 	@foreach($users as $user)
@@ -41,7 +41,7 @@ table, th, td {
 				<td><a class="btn btn-success btn-xs" href="{{action('UsersController@show',$user->id)}}" >Edit</a></td>
 				<td>{{$user->name}}</td>
 				<td>{{$user->username}}</td>
-				<td>{{$user->email}}</td>
+				<td style="max-width:6em;overflow:scroll;">{{$user->email}}</td>
 				<td>{{$user->id}}</td>
 				<td>{{$user->suggestions->count()}}</td>
 				@if($user->is_admin)

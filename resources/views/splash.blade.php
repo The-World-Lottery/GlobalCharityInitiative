@@ -1,31 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="">
 
 <head>
 	<title>Welcome!</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 	
 	<link rel="stylesheet" type="text/css" href="/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	
 </head>
-	<body class="container-fluid" style="height:100vh;font-size:2em;">
+	<body style="color:white;height:100vh;font-family: 'Josefin Sans', sans-serif !important;">
+	<img id="splashImage" src='images/view.jpg' class="" style="position:fixed;min-height:103vh;">
+
 		 
-		<div class="row text-center">
-			<div class="col col-xs-12" >
-				<h1 id="splashHeader">
+		<div id="splashHeader" class="row text-center">
+			<div class="col col-xs-12"  style="padding:0;">
+				<h1 style="font-size:5em;">
 					The World Lottery For Charity
 				</h1>
-				<div style="font-family:'Open Sans', sans-serif;">
-					ALL proceeds go to the game winners and selected charities, human interest projects.
+				<br>
+				<div style="font-size:2em;">
+					ALL proceeds go to the game winners and, selected charities human interest projects.
 				</div>
+				<br>
 				<form action="{{action('RafflesController@index')}}">
-					<button class="btn-success">Enter Site</button>
+					<button class="btn-success btn cleargreenBtn" style="font-size:2em;">Check Us Out!</button>
 				</form>	
-				<div>
-				    <div style="background-color:rgba(0,0,0,.4);" id="random_quote">
+				<br>
+				<div style="padding:2em 0 .1em 0;background-color:rgba(0,0,0,.4);">
+				    <div style="" id="random_quote">
 				    </div>
 				</div>
 			</div>

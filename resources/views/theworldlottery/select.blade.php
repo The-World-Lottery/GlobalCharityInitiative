@@ -32,7 +32,7 @@
 				</div>
 				<div style="margin-bottom: 2em;" class="text-center col col-md-3 col-xs-12">
 					<h2>Select a<br>POWER NUMBER!!!</h2>
-					<select name="powerNumber"> 
+					<select class="selectpicker text-center" name="powerNumber"> 
 						@for($i = 1; $i <= 100; $i++)
 							<option value="{{$i}}">{{$i}}</option>
 						@endfor

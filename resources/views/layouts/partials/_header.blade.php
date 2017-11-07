@@ -4,12 +4,9 @@
       <div class="navbar-header">
       		@if (Auth::check())
 					{{-- <img src='{{Auth::user()->image}}' id="headImg"> --}}
-      		
-				
 				<a class="navbar-brand user navLink" style="margin-left:.3em;" href="{{action('UsersController@show' , Auth::id())}}" ><span class="navLink">
 					{{Auth::user()->name}}</span>
 				</a>
-			
 			@else
 				<a class="navbar-brand user"  id="white" href="{{action('Auth\AuthController@getLogin')}}"><span class="navLink">Login/Register</span></a>	
 			@endif
@@ -120,7 +117,7 @@
 				    <div class="modal-content">
 				      <div class="modal-header">
 				        <button type="button" class="close" data-dismiss="modal">&times;</button>
-				        <h4 class="modal-title">Your Currency Wallets</h4>
+				        <div class="modal-title">Your Currency Wallets</div>
 				      </div>
 				      <div class="modal-body">
 				 

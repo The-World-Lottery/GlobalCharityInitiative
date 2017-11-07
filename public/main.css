@@ -2,7 +2,7 @@ body {
 	color:#e0fff8;
 	background-color:#1d5c92;
 	font-size:1.3em;
-	font-family: 'PT Sans Narrow', sans-serif !important; 	
+	/*font-family: 'PT Sans Narrow', sans-serif !important; 	*/
 	letter-spacing:1px;
 }
 
@@ -23,8 +23,8 @@ input[type=checkbox] {
 }
 
 .btn {
-	background-color: rgba(0,0,0,0);
-	border-width:3px;
+	/*background-color: rgba(0,0,0,0);*/
+	/*border-width:3px;*/
 }
 
 .navIcons {
@@ -95,14 +95,14 @@ button.navbar-toggle {
 	background-size:105% 105%;
 	text-align:center;
 	border-radius:1em;
-	min-height:10.5em;
-	min-width:90%;
+	min-height:12.5em;
+	min-width:100%;
 	padding:.2em ;
 	margin:1%;
 	overflow:hidden;
 	transition: background-size .5s ease-in;
 	box-shadow: 12px 12px 12px rgba(0,0,0,.8);
-	border-radius:1em;
+
 }
 
 .ticketHead {
@@ -135,10 +135,6 @@ button.navbar-toggle {
 	display:none;
 }
 
-
-.btn {
-	font-size: 1em;
-}
 
 .indivLottoCont{
 	position:relative;
@@ -180,19 +176,19 @@ button.navbar-toggle {
 }
 
 ::-webkit-input-placeholder { /* Chrome */
-  /*color: lightblue !important;*/
+  color: lightgreen !important;
   opacity:1;
 }
 :-ms-input-placeholder { /* IE 10+ */
-  /*color: lightblue !important;*/
+  color: lightgreen !important;
   opacity:1;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-  /*color: lightblue !important;*/
+  color: lightgreen !important;
   opacity: 1;
 }
 :-moz-placeholder { /* Firefox 4 - 18 */
-  /*color: lightblue !important;*/
+  color: lightgreen !important;
   opacity: 1;
 }
 
@@ -228,6 +224,8 @@ button.navbar-toggle {
 	background-color:rgba(0,0,0,.5);
 	opacity:1;
 }
+
+
 
 #gameArea {
 	padding:0;
@@ -316,6 +314,10 @@ td {
 
 }
 
+.btn {
+	font-size:1em;
+}
+
 
 
 .cleargreenBtn {
@@ -328,8 +330,10 @@ td {
 	text-align:center;
 	font-size:1.2em;
 	background-color:rgba(0,0,0,0);
-	padding:.5em;
+	padding:.2em 1em 0em 1em;
 }
+
+
 
 
 
@@ -340,16 +344,10 @@ td {
 }
 
 .btn {
-	border-radius:10em;
+	/*border-radius:10em;*/
 }
 
-/*#headLinks {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background-color: #cccccc;
-  border-radius: 1px;
-}*/
+
 
 .headUN {
 	margin-top: 3em;
@@ -405,8 +403,8 @@ label {
 }
 
 select {
-	background-color:rgba(0,0,0,0);
-	margin-bottom:2em;
+	/*background-color:rgba(0,0,0,0);*/
+	/*margin-bottom:2em;*/
 }
 
 .creatorsSocialIcons {
@@ -487,14 +485,39 @@ input, button {
 	text-align:center;
 }
 
+#splashImage{
+	min-width:1280px;
+}
+
+#backgroundPic {
+	min-width:1280px;
+}
+
 
 @media screen and (min-width: 768px) {
+
+	#backgroundPic {
+		min-width:100vw;
+	}
+	#checkWrapper {
+		padding-top: 10vh;
+	}
+
+
+	#splashHeader {
+		padding-top: 25vh;
+	}
+
+	#splashImage{
+		min-width:100vw;
+	}
+
 	.authSpacer {
 		margin-top:4em;
 	}
 
 	.raffleCont {
-		min-height: 30vh;
+		min-height: 34vh;
 	}
 
 	#twlSpacer {
@@ -609,10 +632,10 @@ input, button {
 
 @media screen and (min-width:992px){
 	.paddingMobile {
-		padding-top:5em;
+		padding-top:6em;
 	}
 
 	.paddingMobile2 {
-		padding-top:8em;
+		padding-top:9em;
 	}
 }
