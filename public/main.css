@@ -506,6 +506,9 @@ input, button {
 
 	#splashHeader {
 		padding-top: 25vh;
+		padding-bottom: 25vh;
+		position:fixed;
+		width:100%;
 	}
 
 	#splashImage{

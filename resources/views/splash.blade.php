@@ -10,24 +10,29 @@
 	
 	<link rel="stylesheet" type="text/css" href="/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<style type="text/css">
+		body {
+            background-image: url("/images/360Mts.jpg");
+        }
+	</style>
 	
 </head>
 	<body style="color:white;height:100vh;font-family: 'Josefin Sans', sans-serif !important;">
-	<img id="splashImage" src='images/view.jpg' class="" style="position:fixed;min-height:103vh;">
+	{{-- <img id="splashImage" src='images/view.jpg' class="" style="position:fixed;min-height:103vh;"> --}}
 
 		 
 		<div id="splashHeader" class="row text-center">
 			<div class="col col-xs-12"  style="padding:0;">
-				<h1 style="font-size:5em;">
-					The World Lottery For Charity
+				<h1 style="font-size:5em;color:#59c161;font-weight: bold;">
+					The World<span style="color:white;"> Lottery</span> For Charity
 				</h1>
 				<br>
 				<div style="font-size:2em;">
-					ALL proceeds go to the game winners and, selected charities human interest projects.
+					ALL proceeds go to the game winners and, selected charities and global interest projects.
 				</div>
 				<br>
 				<form action="{{action('RafflesController@index')}}">
-					<button class="btn-success btn cleargreenBtn" style="font-size:2em;">Check Us Out!</button>
+					<button class="btn-success btn {{-- cleargreenBtn --}}" style="font-size:2em;">Check Us Out!</button>
 				</form>	
 				<br>
 				<div style="padding:2em 0 .1em 0;background-color:rgba(0,0,0,.4);">
@@ -51,5 +56,15 @@
 
 	</script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		
+		$(function(){
+		    var x = 0;
+		    setInterval(function(){
+		        x-=1;
+		        $('body').css('background-position', x + 'px 0');
+		    }, 100);
+		});
+	</script>
 </body>
 </html>
