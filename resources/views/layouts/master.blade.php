@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
-<body style="font-family: 'Josefin Sans', sans-serif;">
+<body id="master" style="font-family: 'Josefin Sans', sans-serif;">
 	<div style="height:100%;">
 	<img id="backgroundPic" class="center-block" style="opacity:.41;height:100%;" src="/images/earthAtNight.jpg">
 		@include('layouts.partials._header')	

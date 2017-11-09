@@ -1,9 +1,16 @@
-body {
+body#master {
 	color:#e0fff8;
 	background-color:#1d5c92;
-	font-size:1.3em;
+	font-size:1em;
 	/*font-family: 'PT Sans Narrow', sans-serif !important; 	*/
 	letter-spacing:1px;
+}
+
+body#splashBod {
+	color:white;
+	font-family: 'Josefin Sans', sans-serif !important;
+	/*width:100vw;padding:0;*/
+	/*font-size:4vw;*/
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -485,13 +492,85 @@ input, button {
 	text-align:center;
 }
 
-#splashImage{
-	min-width:1280px;
-}
+
 
 #backgroundPic {
 	min-width:1280px;
 }
+
+#splashImage {
+	height:10em;
+	width:10em;
+	opacity:.2;
+	
+}
+
+#splashImageHolder {
+	display: flex;
+	justify-content: center;
+	position:fixed;
+	bottom:0;
+	width:100%;
+	
+}
+
+.splashInfo {
+	min-width:50%;
+	padding:0em;
+	min-height:16em;
+	/*border:1px solid black;*/
+	text-align: center;
+}
+
+.stepInfoBoxes {
+	border-radius: 2em;
+	padding:1em 4em 4em 4em;
+	/*border:2px solid white;*/
+}
+
+.infoRows {
+	padding:0em 0 0em 0;
+}
+
+#splash1 {
+	background-color: #32809a;
+	padding:0 0 1em 0;
+	
+}
+
+#splashHeader {
+	margin-top:10vh;
+}
+
+#splash2 {
+	background-color: #175a91;
+	/*box-shadow: 0px -10px 10px #175a91;*/
+	/*border-radius:1em 1em 0 0;*/
+	
+}
+
+#myCarousel {
+	min-height:20em;
+}
+
+#splash3 {
+	background-color: #175a91;
+}
+
+#splashTitle {
+	color:#59c161;
+	font-weight: bold;
+}
+#splashPar {
+		font-size: 1.5em;
+	}
+
+.splashPar {
+	font-size: 1.4em;
+}
+
+
+
 
 
 @media screen and (min-width: 768px) {
@@ -499,20 +578,25 @@ input, button {
 	#backgroundPic {
 		min-width:100vw;
 	}
+
 	#checkWrapper {
 		padding-top: 10vh;
 	}
 
-
-	#splashHeader {
-		padding-top: 25vh;
-		padding-bottom: 25vh;
-		position:fixed;
-		width:100%;
+	#splashTitle {
+		font-size:4.5em;
 	}
 
-	#splashImage{
-		min-width:100vw;
+	#splashPar {
+		font-size:2em;
+	}
+
+
+
+	#splashHeader {
+		margin-top: 20vh;
+		width:100%;
+		height:80vh;
 	}
 
 	.authSpacer {
