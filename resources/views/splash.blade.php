@@ -13,7 +13,7 @@
 	<style type="text/css">
 		main {
             background-image: url("/images/360Mts.jpg");
-            /*position:fixed;*/
+            background-position: 
         }
 	</style>
 	
@@ -31,7 +31,9 @@
 					</div>
 					<br>
 					<form action="{{action('RafflesController@index')}}">
-						<button class="btn-success btn {{-- cleargreenBtn --}}" style="font-size:1.5em;padding-top:.5em;">CREATE YOUR ACCOUNT</button>
+						{{-- <button class="btn-success btn" style="font-size:1.5em;padding-top:.5em;">LOGIN</button>  
+						- OR - --}}
+						<a type="submit" class="btn-success btn" style="font-size:1.5em;padding-top:.5em;">CREATE YOUR ACCOUNT</a> 
 					</form>	
 					<br>
 					<div id="splash2" class="row">
@@ -106,17 +108,18 @@
 		<section style="z-index:100;position:absolute;width:100%;">
 			<div id="splash4" class="row infoRows text-center">
 				<div class="col col-sm-9">
-					<h1>The <span style="color:lightgreen;">World Lottery </span>Jackpot is <b>${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}</b></h1>
+					<h1>The <span style="color:lightgreen;">World Lottery </span>Jackpot is <b><span style="color:lightgreen;">${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}</span></b></h1>
 				</div>
 				<div class="col col-sm-3">
 					<button class="btn-success btn" style="font-size:1.5em;padding-top:.5em;margin:.5em 0 .5em 0;">Pick Numbers</button>
 				</div>
 			</div>
+
 			<div id="splash3" class="row infoRows">
 				<div class="col col-xs-12 col-sm-8 col-sm-offset-2">
 					<div class="" style="font-size:2.5em;padding:2.5em 0 3em 0;">
-						"Why does gambling benefit the MOST fortunate? Also, the internet is a thing, so how are lotteries not paperless yet?"<sub>
-						 -Emmett J. Peters (Nov 2014)</sub>
+						"Which industry sells nothing tangible, offers no direct services, and has never died? Gambling. Now how can we put this industry to the best use?"
+						<sub>-Emmett J. Peters (Jan 2015)</sub>
 					</div>
 				</div>
 			</div>
@@ -125,19 +128,64 @@
 				<div class="col col-xs-12 col-sm-4">
 					<div class="splashInfo">
 						<h2>Mixed Lotteries</h2>
-						<blockquote>Each Mixed Lottery is created with an initial donation from TWL. Each ticket purchase increases that individual lottery's jackpot and the current World Lottery Jackpot. There will always be a winner of each mixed lottery as long as even on ticket is purchased.</blockquote>
+						<blockquote>Each Mixed Lottery is created with an initial donation from TWL. Each ticket purchase increases that individual lottery's jackpot and the current World Lottery Jackpot. There will always be a winner of each mixed lottery as long as even one ticket is purchased.</blockquote>
+						{{-- <div>{{print_r(\App\Models\Lottery::orderBy('current_value','desc')->limit(1)->get()[0]['current_value'])}}
+						</div> --}}
 					</div>
 				</div>
 				<div class="col col-xs-12 col-sm-4">
 					<div class="splashInfo">
 						<h2>Raffles</h2>
-						<blockquote>When a company wishes to advertise through us they may donate one of their products or services to be raffled off. Celebrities may  donate a day of their time to be raffled off for fans. There will always be a winner of each raffle as long as even on ticket is purchased.</blockquote>
+						<blockquote>When a company wishes to advertise through us they may donate one of their products or services to be raffled off. Celebrities may  donate a day of their time to be raffled off for fans. There will always be a winner of each raffle as long as even one ticket is purchased.</blockquote>
+						
 					</div>
 				</div>
 				<div class="col col-xs-12 col-sm-4">
 					<div class="splashInfo">
 						<h2>The World Lottery</h2>
 						<blockquote>The World Lottery is a classic "Pick Six" drawing where players select 5 numbers 1-100 and a power number. The numbers will be selected every two weeks on Saturdays. </blockquote>
+						
+					</div>
+				</div>
+			</div>
+
+			<div id="splash3" class="row infoRows">
+				<div class="col col-xs-12 col-sm-8 col-sm-offset-2">
+					<div class="" style="font-size:2.5em;padding:2.5em 0 3em 0;">
+						"Why does gambling benefit the MOST fortunate? Also, the internet is a thing, so how are lotteries not paperless yet?"
+						<sub>-Emmett J. Peters (Nov 2014)</sub>
+					</div>
+				</div>
+			</div>
+		
+			
+			<div id="splash1" class="row infoRows">
+				<div class="col col-xs-12 col-sm-4">
+					<div class="splashInfo">
+						<h2>Our Missions</h2>
+						<blockquote style="text-align:left;">
+							<ol>
+								<li>Reduce the manpower usually necessary for fund raising by providing massive monetary donations straight to the source of the charitable work.</li>
+								<li>Eliminate the waste the paper driven "state lotteries" generate. (paper consumption, carbon emissions, factory upkeep/utility costs, etc...)</li>
+								<li>Help those who need it most.</li>
+							</ol>
+						</blockquote>
+						{{-- <div>{{print_r(\App\Models\Lottery::orderBy('current_value','desc')->limit(1)->get()[0]['current_value'])}}
+						</div> --}}
+					</div>
+				</div>
+				<div class="col col-xs-12 col-sm-4">
+					<div class="splashInfo">
+						<h2>Suggestion Box</h2>
+						<blockquote>In an effort to keep the website up to date and more user friendly we have included a "suggestion box" we people can leave ideas on site functionality and/or new charities that could use our help. Users can vote in the suggestions and the admins will address the ones with the highest rating.</blockquote>
+						
+					</div>
+				</div>
+				<div class="col col-xs-12 col-sm-4">
+					<div class="splashInfo">
+						<h2>The Creator</h2>
+						<blockquote>The World Lottery is a classic "Pick Six" drawing where players select 5 numbers 1-100 and a power number. The numbers will be selected every two weeks on Saturdays. </blockquote>
+						
 					</div>
 				</div>
 			</div>
@@ -146,8 +194,8 @@
 			    </div>
 			</div>
 			
-
-		</div>
+		</section>
+	</div>
 
 <script
 	  src="https://code.jquery.com/jquery-3.2.1.js"
