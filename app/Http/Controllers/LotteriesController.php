@@ -39,6 +39,30 @@ class LotteriesController extends Controller
         // return view('lotteries.index',$data);
     }
 
+    public function chargeCard()
+    {
+        print_r(\Input::all());
+
+        \Stripe\Stripe::setApiKey(env("STRIPE_PUBLIC",""));
+
+        $token = \Input::get('stripeToken');
+        $amount = \Input::get('amount');
+
+        try {
+            $charge = \Stripe\Charge::create(array(
+                    "amount"=> $amount,
+                    "currency"=>"usd",
+                    "card"=> $token,
+                    "description"=>"this guy"
+                ));
+        } catch (\Stripe\Error\Card $e){
+            dd($e);
+        }
+
+        dd($charge);
+
+    }
+
     public function adminIndex()
     {
         if(\Auth::user()->is_admin){

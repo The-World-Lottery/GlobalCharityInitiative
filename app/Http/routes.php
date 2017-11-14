@@ -13,9 +13,14 @@
 
 // Route::get('/', 'LotteriesController@index');
 
+
+
 Route::get('/',function(){
 	return view('splash');
 });
+
+// Stripe routes
+Route::post('checkout','LotteriesController@chargeCard');
 
 Route::get('/suggestions/userssuggestions/{id}','SuggestionsController@userssuggestions');
 

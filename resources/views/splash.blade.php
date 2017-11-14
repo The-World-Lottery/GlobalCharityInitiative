@@ -20,7 +20,28 @@
 </head>
 	<body id="splashBod">
 		<main style="z-index:0;height:100vh;width:100%;position:fixed;">
+
 			<div id="splashHeader" class="row text-center">
+
+			{{-- Stripe testing --}}
+			<form action="/checkout" method="POST">
+			  <script
+			    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+			    data-key="{{ env("STRIPE_PUBLIC","") }}"
+			    data-amount="200"
+			    data-name="Demo Site"
+			    data-description="Widget"
+			    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+			    data-locale="auto"
+			    data-zip-code="true">
+			  </script>
+			  <input type="hidden" name="_token" value="{{ csrf_token() }}">
+			  <input type="hidden" name="amount" value="200">
+			</form>
+			{{-- Stripe testing --}}
+
+
+
 				<div class="col col-xs-12"  style="padding:0;">
 					<h1 id="splashTitle" style="">
 						The<span style="color:white;"> World Lottery</span> For Charity
@@ -33,7 +54,7 @@
 					<form action="{{action('RafflesController@index')}}">
 						{{-- <button class="btn-success btn" style="font-size:1.5em;padding-top:.5em;">LOGIN</button>  
 						- OR - --}}
-						<a type="submit" class="btn-success btn" style="font-size:1.5em;padding-top:.5em;">CREATE YOUR ACCOUNT</a> 
+						<a type="submit" class="btn-success btn" style="font-size:1.5em;padding-top:.5em;">SIGN UP</a> 
 					</form>	
 					<br>
 					<div id="splash2" class="row">
@@ -124,13 +145,12 @@
 				</div>
 			</div>
 			
-			<div id="splash1" class="row infoRows">
+			<div id="splash1" class="row infoRows">	
 				<div class="col col-xs-12 col-sm-4">
 					<div class="splashInfo">
-						<h2>Mixed Lotteries</h2>
-						<blockquote>Each Mixed Lottery is created with an initial donation from TWL. Each ticket purchase increases that individual lottery's jackpot and the current World Lottery Jackpot. There will always be a winner of each mixed lottery as long as even one ticket is purchased.</blockquote>
-						{{-- <div>{{print_r(\App\Models\Lottery::orderBy('current_value','desc')->limit(1)->get()[0]['current_value'])}}
-						</div> --}}
+						<h2>The World Lottery</h2>
+						<blockquote>The World Lottery is a classic "Pick Six" drawing where players select 5 numbers 1-100 and a power number. The numbers will be selected every two weeks on Saturdays. </blockquote>
+						
 					</div>
 				</div>
 				<div class="col col-xs-12 col-sm-4">
@@ -142,9 +162,10 @@
 				</div>
 				<div class="col col-xs-12 col-sm-4">
 					<div class="splashInfo">
-						<h2>The World Lottery</h2>
-						<blockquote>The World Lottery is a classic "Pick Six" drawing where players select 5 numbers 1-100 and a power number. The numbers will be selected every two weeks on Saturdays. </blockquote>
-						
+						<h2>Mixed Lotteries</h2>
+						<blockquote>Each Mixed Lottery is created with an initial donation from TWL. Each ticket purchase increases that individual lottery's jackpot and the current World Lottery Jackpot. There will always be a winner of each mixed lottery as long as even one ticket is purchased.</blockquote>
+						{{-- <div>{{print_r(\App\Models\Lottery::orderBy('current_value','desc')->limit(1)->get()[0]['current_value'])}}
+						</div> --}}
 					</div>
 				</div>
 			</div>
@@ -160,6 +181,13 @@
 		
 			
 			<div id="splash1" class="row infoRows">
+				<div class="col col-xs-12 col-sm-4">
+					<div class="splashInfo">
+						<h2>The Idea</h2>
+						<blockquote>All ticket purchases increase both the value of the jackpot for the game bought into and The World Lottery Foundation. Its is from the foundation that we will allocate funds to selected charities and projects arounf the globe.</blockquote>
+						
+					</div>
+				</div>
 				<div class="col col-xs-12 col-sm-4">
 					<div class="splashInfo">
 						<h2>Our Missions</h2>
@@ -178,13 +206,6 @@
 					<div class="splashInfo">
 						<h2>Suggestion Box</h2>
 						<blockquote>In an effort to keep the website up to date and more user friendly we have included a "suggestion box" we people can leave ideas on site functionality and/or new charities that could use our help. Users can vote in the suggestions and the admins will address the ones with the highest rating.</blockquote>
-						
-					</div>
-				</div>
-				<div class="col col-xs-12 col-sm-4">
-					<div class="splashInfo">
-						<h2>The Creator</h2>
-						<blockquote>The World Lottery is a classic "Pick Six" drawing where players select 5 numbers 1-100 and a power number. The numbers will be selected every two weeks on Saturdays. </blockquote>
 						
 					</div>
 				</div>
