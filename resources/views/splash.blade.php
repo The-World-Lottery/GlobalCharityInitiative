@@ -22,6 +22,11 @@
 		<main style="z-index:0;height:100vh;width:100%;position:fixed;">
 
 			<div id="splashHeader" class="row text-center">
+
+			
+
+
+
 				<div class="col col-xs-12"  style="padding:0;">
 					<h1 id="splashTitle" style="">
 						The<span style="color:white;"> World Lottery</span> For Charity
@@ -54,7 +59,7 @@
 							      <div class="splashInfo stepInfoBoxes">
 									<h2>1. Check Us Out Free</h2>
 									<hr>
-									<p class="splashPar">Look at all the games and drawings we have available. Maybe you'd like to try your luck at a daily lottery or a raffle for that celebrity you've always wanted to meet. Or is it the huge world lottery jackpot that catches your eye?</p>
+									<p class="splashPar">Look at all the games and drawings we have available.<br> Maybe you'd like to try your luck at a daily lottery or a raffle for that celebrity you've always wanted to meet.<br> Or is it the huge world lottery jackpot that catches your eye?</p>
 								</div>
 							    </div>
 
@@ -62,7 +67,7 @@
 							      <div class="splashInfo stepInfoBoxes">
 									<h2>2. Create An Account</h2>
 									<hr>
-									<p class="splashPar">All personal information will be confidential and only used to alert users when they have won a game.You may choose to be alerted by phone and/or email.</p>
+									<p class="splashPar">All personal information will be confidential and only used to alert users when they have won a game.<br>You may choose to be alerted by phone and/or email.</p>
 								  </div>
 							    </div>
 
@@ -70,7 +75,7 @@
 							      <div class="splashInfo stepInfoBoxes">
 									<h2>3. Choose Your Game</h2>
 									<hr>
-									<p class="splashPar">Purchase a ticket to a daily lottery, raffle, or world lottery in any currency you choose. All payments and payment information will be handled by Stripe. The World Lottery will never ask you for personal payment information.</p>
+									<p class="splashPar">Purchase a ticket to a daily lottery, raffle, or world lottery in any currency you choose.<br> All payments and payment information will be handled by Stripe. <br>The World Lottery will never ask you for personal payment information.</p>
 								</div>
 							    </div>
 
@@ -78,7 +83,7 @@
 							      <div class="splashInfo stepInfoBoxes">
 									<h2>Good Luck!</h2>
 									<hr>
-									<p class="splashPar">Once you've got your ticket all you have to do is wait for the drawing.Thank you for participating in Earth's largest ongoing charitable event EVER.</p>
+									<p class="splashPar">Once you've got your ticket all you have to do is wait for the drawing.<br>Thank you for participating in Earth's largest ongoing charitable event EVER.</p>
 								</div>
 							    </div>
 							  </div>
@@ -202,7 +207,7 @@
 	  src="https://code.jquery.com/jquery-3.2.1.js"
 	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
 	  crossorigin="anonymous"></script>
-	  <script type="text/javascript" src="theWorldLottery.js"></script>
+	  {{-- <script type="text/javascript" src="theWorldLottery.js"></script> --}}
 	
 	{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script> --}}
 	{{-- <script src="https://static.filestackapi.com/v3/filestack.js"></script> --}}
@@ -247,7 +252,7 @@
 
 		$(document).scroll(function() {
 	    	$("#splashHeader").css("opacity", 1 - .0026 * $(document).scrollTop());
-	    	$("#splashHeader").css("margin-top", (-1 * $(document).scrollTop()/100) + 'em')
+	    	$("#splashHeader").css("margin-top", (-1 * $(document).scrollTop()/100) + "em");
 	    	console.log($(document).scrollTop());
 	    });
 		
