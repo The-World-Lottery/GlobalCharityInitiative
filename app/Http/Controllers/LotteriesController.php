@@ -43,7 +43,7 @@ class LotteriesController extends Controller
     {
         // print_r(\Input::all());
 
-        \Stripe\Stripe::setApiKey(ENV("STRIPE_PUBLIC"));
+        \Stripe\Stripe::setApiKey("sk_test_ZzKGRiePc0b4mGyYiwkRnPEy");
 
         $token = \Input::get('stripeToken');
         $amount = \Input::get('amount');
@@ -59,7 +59,7 @@ class LotteriesController extends Controller
             dd($e);
         }
 
-        dd($charge);
+        var_dump($charge::_values());
 
     }
 
@@ -87,6 +87,8 @@ class LotteriesController extends Controller
 
     public function addUserToEntries(Request $request, $id)
     { 
+
+        
 
         $currency = $request->input()['currency'];
 

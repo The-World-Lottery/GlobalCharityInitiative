@@ -531,7 +531,7 @@ input, button {
 .infoRows {
 	padding:0em 0 0em 0;
 	background-color:rgba(23,90,145,.4);
-	font-size: 120%;
+	font-size: 100%;
 }
 
 #splash1 {
@@ -556,8 +556,8 @@ blockquote {
 
 
 #myCarousel {
-	min-height:19em;
-	padding:0 0 3em 0;
+	min-height:16em;
+	padding:0 1em 3em 1em;
 }
 
 #splash3 {
@@ -567,14 +567,14 @@ blockquote {
 #splashTitle {
 	color:#59c161;
 	font-weight: bold;
-	font-size:2em;
+	font-size:2.7em;
 }
 #splashPar {
-		font-size: 1.2em;
+		font-size: 1.5em;
 	}
 
 .splashPar {
-	font-size: 1.4em;
+	font-size: 1.5em;
 }
 
 #splashBod {
@@ -606,10 +606,15 @@ blockquote {
 
 	.stepInfoBoxes {
 		border-radius: 2em;
-		padding:1em 2em 4em 2em;
+		padding:1em 2em 3em 2em;
 		/*border:2px solid white;*/
-		font-size:1.2em;
+		font-size:1.1em;
 	}
+
+	#myCarousel {
+	min-height:16em;
+	padding:0 10em 1em 10em;
+}
 
 
 	#backgroundPic {
@@ -621,19 +626,17 @@ blockquote {
 	}
 
 	#splashTitle {
-		font-size:4.5em;
+		font-size:3.5em;
 	}
 
 	#splashPar {
-		font-size:2em;
+		font-size:1.5em;
 	}
 
-
-
 	#splashHeader {
-		margin-top: 10vh;
+		padding-top: 7vh;
 		width:100%;
-		height:90vh;
+		height:100vh;
 	}
 
 	.authSpacer {
