@@ -22,11 +22,11 @@ class LotteryEntry extends Model
     $user_id = LotteryEntry::select('user_id')->where('lottery_id', $id)->get();
     $arr = (array)$user_id;
     if (!empty($arr)) {
-    $weener = rand(0,count($user_id)-1);
-    $winner = $user_id[$weener]['user_id'];
-    $victor = \App\User::find($winner);
-    return $victor;
-    }
+      $weener = rand(0,count($user_id)-1);
+      $winner = $user_id[$weener]['user_id'];
+      $victor = \App\User::find($winner);
+      return $victor;
+    }  
     return false;
    }
 

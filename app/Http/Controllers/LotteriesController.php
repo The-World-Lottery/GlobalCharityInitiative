@@ -31,7 +31,7 @@ class LotteriesController extends Controller
         //     $lotterys = Lottery::with('user')->paginate(6);  
         // }
         // var_dump(\Carbon\Carbon::now());
-        $lotteries = Lottery::where('end_date','>',\Carbon\Carbon::now())->paginate(16);
+        $lotteries = Lottery::where('end_date','>',\Carbon\Carbon::now())->paginate(6);
         return view('lotteries.index')->with(array('lotteries' => $lotteries));
        
 
@@ -39,9 +39,15 @@ class LotteriesController extends Controller
         // return view('lotteries.index',$data);
     }
 
-    public function chargeCard()
+    // public function one(Request $request)
+    // {   
+    //     $lottery = Lottery::where('end_date','>',\Carbon\Carbon::now())->limit(1)->get();
+    //     var_dump($lottery);
+    //     return view('lotteries.one')->with(array('lottery' => $lottery)); 
+    // }
+
+    public function chargeCard(Request $request, $id)
     {
-        // print_r(\Input::all());
 
         \Stripe\Stripe::setApiKey("sk_test_ZzKGRiePc0b4mGyYiwkRnPEy");
 
@@ -49,17 +55,43 @@ class LotteriesController extends Controller
         $amount = \Input::get('amount');
 
         try {
+            $userId = \Auth::id();
+
             $charge = \Stripe\Charge::create(array(
                     "amount"=> $amount,
                     "currency"=>"usd",
                     "card"=> $token,
-                    "description"=>"this guy",
+                    "description"=>$userId,
                 ));
+
+
+            // $userWallet = UserWallet::find($userId);
+            // $userWallet->$currency -= (2 * $currConv);
+            // $userWallet->save();
+
+            $twlWallet = UserWallet::find(1);
+            $twlWallet->usd += .70;
+            $twlWallet->save();
+
+            
+            $currLottery = Lottery::find($id);
+            $currLottery->current_value += .5;
+            $currLottery->save();
+
+            $currWorldLottery = TheWorldLottery::find(1);
+            $currWorldLottery->current_value += .50;
+            $currWorldLottery->save();
+
+            $newEntry = new LotteryEntry();
+            $newEntry->user_id = $userId;
+            $newEntry->lottery_id = $id;
+            $newEntry->save();
+
         } catch (\Stripe\Error\Card $e){
             dd($e);
         }
 
-        var_dump($charge::_values());
+        return \Redirect::action('LotteriesController@index');
 
     }
 
@@ -82,13 +114,8 @@ class LotteriesController extends Controller
         return view('lotteries.create');
     }
 
-
-
-
     public function addUserToEntries(Request $request, $id)
     { 
-
-        
 
         $currency = $request->input()['currency'];
 

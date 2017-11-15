@@ -144,7 +144,7 @@ button.navbar-toggle {
 
 
 .indivLottoCont{
-	position:relative;
+	/*position:relative;*/
 	background-position:center;
 	background-size:110% 110%;
 	text-align:center;
@@ -152,28 +152,17 @@ button.navbar-toggle {
 	border:1px solid white;
 	border-radius:1em;
 	/*height:9em;*/
-	padding:.3em 0em .5em 0em ;
-	margin:1%;
+	padding:.5em 0em .6em 0em ;
+	margin:% 1% 3% 1%;
 	/*overflow:hidden;*/
 	background-color:rgba(255,255,255,.08);
 }
 
 .indivLottoCont:hover{
-	background-color:rgba(255,255,255,.4);
-	border:1px solid lightgreen;
+	/*background-color:rgba(255,255,255,.4);
+	border:1px solid lightgreen;*/
 
 }
-
-/*.col1 {
-	text-align: center;
-	height:4em;
-	padding-top:.5em;
-	padding-bottom:.5em;
-	transition: all 1s ease;
-}
-.col1:hover {
-	background-color: rgba(0,55,255,.4);
-}*/
 
 #main {
 	/*background-color:rgba(0,0,0,1);*/
@@ -592,6 +581,14 @@ blockquote {
 	background-color: rgba(0,0,0,.6);
 }
 
+.stripe-button-el span {
+	display:none !important;
+}
+
+#gameScroll {
+	padding-top:2em;
+}
+
 
 
 
@@ -612,9 +609,11 @@ blockquote {
 	}
 
 	#myCarousel {
-	min-height:16em;
-	padding:0 10em 1em 10em;
-}
+		min-height:16em;
+		padding:0 10em 1em 10em;
+	}
+
+
 
 
 	#backgroundPic {
@@ -634,7 +633,7 @@ blockquote {
 	}
 
 	#splashHeader {
-		padding-top: 7vh;
+		padding-top: 10vh;
 		width:100%;
 		height:100vh;
 	}
@@ -663,6 +662,7 @@ blockquote {
 		z-index:10;"
 	}
 	#gameScroll {
+		padding-top:1em;
 		overflow:scroll;
 		height:86.5vh;
 	}
@@ -701,10 +701,10 @@ blockquote {
 		text-align:center;
 	}
 
-	.indivLottoCont{
+	/*.indivLottoCont{
 		width:48%;
 
-	}
+	}*/
 
 	#mobileChatHide {
 		display:block;

@@ -11,8 +11,9 @@
 |
 */
 
-// Route::get('/', 'LotteriesController@index');
 
+
+// Route::get('/','LotteriesController@one');
 
 
 Route::get('/',function(){
@@ -20,7 +21,7 @@ Route::get('/',function(){
 });
 
 // Stripe routes
-Route::post('checkout','LotteriesController@chargeCard');
+Route::post('checkout/{id}','LotteriesController@chargeCard');
 
 Route::get('/suggestions/userssuggestions/{id}','SuggestionsController@userssuggestions');
 

@@ -22,7 +22,7 @@
 	<img id="backgroundPic" class="center-block" style="opacity:.41;height:100%;" src="/images/earthAtNight.jpg">
 		@include('layouts.partials._header')	
 		<div class="row" style="padding-top: 6vh;">
-			<div id="hider" style="" class="col col-sm-4 color">
+			{{-- <div id="hider" style="" class="col col-sm-4 color">
 				<div class="row">
 					<div class="col col-xs-12 col-sm-12">
 						<div class="row" style="text-shadow:3px 3px 3px black;text-align:center;padding-top:2vh;">
@@ -59,9 +59,12 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div id="gameScroll" style="font-size:1.2em;" class=" col col-sm-8">
-				<div style="padding:1em 0 1em 0;" >
+			</div> --}}
+			<div id="gameScroll" style="font-size:1.2em;" class="col col-sm-12">
+				<div class="text-center">
+					@yield('divHead')
+				</div>
+				<div>
 					@yield('content')
 				</div>	
 			</div>

@@ -29,15 +29,15 @@ class Lottery extends Model
    		//change status to complete,
    		Lottery::where('id', $id)->update(['complete' => true]);
    		//pick a weener
-   		$ween = \App\Models\LotteryEntry::pickWinner($id);
+   		$win = \App\Models\LotteryEntry::pickWinner($id);
 
    		$winAmount = Lottery::where('id', $id)->value('current_value');
-   		$userAmount = \App\Models\UserWallet::where('user_id',$ween->id)->value('usd');
+   		$userAmount = \App\Models\UserWallet::where('user_id',$win->id)->value('usd');
    		$userTotal = $winAmount + $userAmount; 
-   		\App\Models\UserWallet::where('user_id',$ween->id)->update(['usd' => $userTotal]);
+   		\App\Models\UserWallet::where('user_id',$win->id)->update(['usd' => $userTotal]);
 
    		//add money to user wallets
-      Lottery::where('id', $id)->update(['winner_id' => $ween->id]);
+      Lottery::where('id', $id)->update(['winner_id' => $win->id]);
 
        // \Mail::raw("Congrats! You've won a Lottery", function($message){
        //  $message->subject('Please return to the site and Login to claim you prize!');
