@@ -41,9 +41,9 @@ class LotteriesController extends Controller
 
     public function chargeCard()
     {
-        print_r(\Input::all());
+        // print_r(\Input::all());
 
-        \Stripe\Stripe::setApiKey(env("STRIPE_PUBLIC",""));
+        \Stripe\Stripe::setApiKey(ENV("STRIPE_PUBLIC"));
 
         $token = \Input::get('stripeToken');
         $amount = \Input::get('amount');
@@ -53,7 +53,7 @@ class LotteriesController extends Controller
                     "amount"=> $amount,
                     "currency"=>"usd",
                     "card"=> $token,
-                    "description"=>"this guy"
+                    "description"=>"this guy",
                 ));
         } catch (\Stripe\Error\Card $e){
             dd($e);
