@@ -17,11 +17,14 @@
 
 
 Route::get('/',function(){
-	return view('splash');
+	$lottery = App\Models\Lottery::where('end_date','>',\Carbon\Carbon::now())->first();
+	return view('splash')->with(array('lottery' => $lottery));
 });
 
+Route::get('/testone', 'LotteriesController@one');
+
 // Stripe routes
-Route::post('checkout/{id}','LotteriesController@chargeCard');
+Route::post('/checkout/{id}','LotteriesController@chargeCard');
 
 Route::get('/suggestions/userssuggestions/{id}','SuggestionsController@userssuggestions');
 

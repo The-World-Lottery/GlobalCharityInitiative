@@ -1,8 +1,5 @@
-@extends('splash')
 
-@section('lottery1')
 
-	@for($lottery)
 
 		<h2>
 			{{$lottery->title}}
@@ -12,7 +9,3 @@
 			<br><strong style="font-size:2.5em;color:lightgreen">${{number_format(($lottery->current_value),2,".",",")}}</strong>
 			<br>Lottery Ends : <strong style="color:#00ffc4;margin-bottom: .5em;">{{$lottery->end_date->diffForHumans()}}</strong>
 		</p>
-
-	@endfor
-
-@stop

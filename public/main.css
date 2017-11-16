@@ -68,6 +68,10 @@ button.navbar-toggle {
 	color:white;
 }
 
+.navbar-inverse {
+	border:none;
+}
+
 .yellow{
 	background-color: #B19E25;
 }
@@ -84,7 +88,7 @@ button.navbar-toggle {
 }
 
 .navLink {
-	color:#3cc2d0;
+	color:white;
 }
 
 .modal-backdrop {
@@ -135,7 +139,7 @@ button.navbar-toggle {
 }
 
 .headLinks:hover {
-	background-color:rgba(255,255,255,1);
+	background-color:lightblue;
 }
 
 #mobileChatHide {
@@ -153,7 +157,7 @@ button.navbar-toggle {
 	border-radius:1em;
 	/*height:9em;*/
 	padding:.5em 0em .6em 0em ;
-	margin:% 1% 3% 1%;
+	margin:0% 1% 3% 1%;
 	/*overflow:hidden;*/
 	background-color:rgba(255,255,255,.08);
 }
@@ -252,7 +256,7 @@ ul.pagination {
 }
 
 .glyphicon {
-	color:#3cc2d0;
+	color:white;
 }
 
 .suggHead {
@@ -445,7 +449,8 @@ input, button {
 }
 
 #menu {
-	background-color: black;
+	/*background-color: rgba(0,0,0,.62);*/
+	background-color: #32809a;
 	min-height:6vh;
 	padding:0 1em 0 1em;
 
@@ -470,7 +475,8 @@ input, button {
 }
 
 #footer {
-	background-color: rgba(0,0,0,.62);
+	/*background-color: rgba(0,0,0,.62);*/
+	background-color: #32809a;
 }
 
 
@@ -519,7 +525,7 @@ input, button {
 
 .infoRows {
 	padding:0em 0 0em 0;
-	background-color:rgba(23,90,145,.4);
+	/*background-color:rgba(23,90,145,.4);*/
 	font-size: 100%;
 }
 
@@ -586,7 +592,7 @@ blockquote {
 }
 
 #gameScroll {
-	padding-top:2em;
+	padding-top:1.5em;
 }
 
 

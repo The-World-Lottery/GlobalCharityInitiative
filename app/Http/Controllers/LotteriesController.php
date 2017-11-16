@@ -39,12 +39,11 @@ class LotteriesController extends Controller
         // return view('lotteries.index',$data);
     }
 
-    // public function one(Request $request)
-    // {   
-    //     $lottery = Lottery::where('end_date','>',\Carbon\Carbon::now())->limit(1)->get();
-    //     var_dump($lottery);
-    //     return view('lotteries.one')->with(array('lottery' => $lottery)); 
-    // }
+    public function one(Request $request)
+    {   
+        $lottery = Lottery::where('end_date','>',\Carbon\Carbon::now())->first();
+        return view('lotteries.one')->with(array('lottery' => $lottery)); 
+    }
 
     public function chargeCard(Request $request, $id)
     {
@@ -56,7 +55,6 @@ class LotteriesController extends Controller
 
         try {
             $userId = \Auth::id();
-
             $charge = \Stripe\Charge::create(array(
                     "amount"=> $amount,
                     "currency"=>"usd",

@@ -35,21 +35,7 @@
 						</p>
 						@if (\Auth::check())
 						{{-- Stripe testing --}}
-						<form action="/checkout/{!! $lottery->id !!}" method="POST">
-						  <script
-						    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-						    data-key="pk_test_9QXLVB6tbq67JmuGwWGco2uX"
-						    data-amount="200"
-						    data-name="Daily Lottery"
-						    data-description="Widget"
-						    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-						    data-locale="auto"
-						    data-zip-code="true">
-						  </script>
-						  <input type="hidden" name="_token" value="{{ csrf_token() }}">
-						  <input type="hidden" name="amount" value="200">
-						  <button type="submit" class="cleargreenBtn btn-success btn">GET TICKET</button>
-						</form>
+						  <button type="button" id="submit{{ $lottery->id }}" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET</button>
 						{{-- Stripe testing --}}
 						@endif
 						</div>
@@ -61,5 +47,33 @@
 		<br>
 		</div>
 	</main>
+	
+	<form id="lotteryForm" method="POST">
+	  <script
+	    src="https://checkout.stripe.com/checkout.js"
+	  	class="stripe-button"
+		data-key="pk_test_9QXLVB6tbq67JmuGwWGco2uX"
+		data-amount="200"
+		data-name="Daily Lottery"
+		data-description="Widget"
+		data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+		data-locale="auto"
+		data-zip-code="true">
+	  </script>
+	  <input type="hidden" name="_token" value="{{ csrf_token() }}">
+	  <input type="hidden" name="amount" value="200">
+	</form>
+@stop
+
+@section('bottomscript')
+
+<script>
+	$('.aSubmitButton').click(function() {
+		var lotteryid = $(this).attr('id').replace('submit', '');
+		var newAction = '/checkout/' + lotteryid;
+		$('#lotteryForm').attr('action', newAction);
+		$('.stripe-button-el')[0].click();
+	});
+</script>
 
 @stop

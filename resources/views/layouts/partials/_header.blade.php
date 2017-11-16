@@ -1,5 +1,5 @@
 
-  <nav id="menu" style="color:lightgreen;box-shadow: 4px 4px 4px black;" class="navbar navbar-fixed-top navbar-inverse bg-inverse">
+  <nav id="menu" style="" class="navbar navbar-fixed-top navbar-inverse">
  
       <div class="navbar-header">
       		@if (Auth::check())
@@ -21,8 +21,8 @@
         <ul class="nav navbar-nav navbar-right">
         	@if(Auth::check() && Auth::user()->is_admin)
         	<li class="dropdown headLinks">
-	          <a href="#" class="dropdown-toggle" style="color:#3cc2d0;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin Functions<span class="caret"></span></a>
-	          <ul class="dropdown-menu" style="background-color:black;">
+	          <a href="#" class="dropdown-toggle navLink" style="color:white"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin Functions<span class="caret"></span></a>
+	          <ul class="dropdown-menu" style="background-color: #32809a;">
 	          	<li>
 	    			<a href="{{action('LotteriesController@adminIndex')}}">
 					<span class="navLink">Manage Lotteries</span>

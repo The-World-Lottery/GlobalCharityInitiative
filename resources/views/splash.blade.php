@@ -37,9 +37,9 @@
 					</div>
 					<br>
 					<form action="{{action('RafflesController@index')}}">
-						<button class="btn-success btn" style="font-size:1.5em;padding-top:.5em;">SIGN IN</button>  
-						- OR -
-						<input type="submit" value="SIGN UP" class="btn-success btn" style="font-size:1.5em;padding-top:.5em;">
+						<button class="btn-success btn" style="font-size:1.5em;padding-top:.5em;">VIEW SITE</button>  
+						{{-- - OR -
+						<input type="submit" value="SIGN UP" class="btn-success btn" style="font-size:1.5em;padding-top:.5em;"> --}}
 					</form>	
 					<br>
 					<div id="splash2" class="row">
@@ -151,7 +151,7 @@
 						<blockquote>Each Mixed Lottery is created with an initial donation from TWL. Each ticket purchase increases that individual lottery's jackpot and the current World Lottery Jackpot. There will always be a winner of each mixed lottery as long as even one ticket is purchased.</blockquote>
 						{{-- <div>{{print_r(\App\Models\Lottery::orderBy('current_value','desc')->limit(1)->get()[0]['current_value'])}}
 						</div> --}}
-						
+						@include('lotteries.one')
 					</div>
 				</div>
 			</div>
