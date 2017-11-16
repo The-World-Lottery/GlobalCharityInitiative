@@ -12,7 +12,7 @@
 @stop
 
 @section('content')
- 	
+
 <ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
   <li><a  id="zeroO" href="{{action('SuggestionsController@index')}}">All Suggestions</a></li>
   <li><a  id="zeroO" href="{{action('SuggestionsController@highest')}}">Top 5 Suggestions</a></li>
@@ -22,6 +22,7 @@
 	@endif
 </ul>
 	<main class="container" style="max-width:80%;"><br>
+		<div class="container">
 		<form method="POST" action="{{ action('SuggestionsController@store') }}">
 			{!! csrf_field() !!}
 			{!! $errors->first('title', '<span class="help-block">:message</span>')!!}
@@ -38,5 +39,6 @@
 				<button class="btn btn-primary">Submit</button>
 			</div>
 		</form>
+		</div>
 	</main>
 @stop

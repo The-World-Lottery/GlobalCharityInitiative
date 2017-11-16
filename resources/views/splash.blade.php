@@ -13,7 +13,7 @@
 	<style type="text/css">
 		main {
             background-image: url("/images/360Mts.jpg");
-            background-position: 
+            background-size: 200% 120%;
         }
 	</style>
 	
@@ -22,10 +22,6 @@
 		<main style="z-index:0;height:100vh;width:100%;position:fixed;">
 
 			<div id="splashHeader" class="row text-center">
-
-			
-
-
 
 				<div class="col col-xs-12"  style="padding:0;">
 					<h1 id="splashTitle" style="">
@@ -114,7 +110,7 @@
 		<section style="z-index:100;position:absolute;width:100%;">
 			<div id="splash4" class="row infoRows text-center">
 				<div class="col col-sm-9">
-					<h1>The <span style="color:lightgreen;">World Lottery </span>Jackpot is <b><span style="color:lightgreen;">${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}</span></b></h1>
+					<h1>The <span style="color:lightgreen;">World Lottery </span>Jackpot is <b><span style="color:lightgreen;">${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),0,".",",")}}</span></b></h1>
 				</div>
 				<div class="col col-sm-3">
 					<button class="btn-success btn" style="font-size:1.5em;padding-top:.5em;margin:.5em 0 .5em 0;">Pick Numbers</button>
@@ -137,7 +133,7 @@
 						<blockquote>The World Lottery is a classic "Pick Six" drawing where players select 5 numbers 1-100 and a power number. The numbers will be selected every two weeks on Saturdays. </blockquote>
 						
 						{{-- Test --}}
-						<p style="font-size:2.7em;padding:1em .3em 1em .3em;margin-top:2em;background-color:rgba(0,0,0,.5);">The <span style="color:lightgreen;">World Lottery </span>Jackpot is <b><span style="color:lightgreen;">${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}</span></b>
+						<p style="font-size:2.7em;padding:1em .3em 1em .3em;margin-top:1em;background-color:rgba(0,0,0,.5);">The <span style="color:lightgreen;">World Lottery </span>Jackpot is <b><span style="color:lightgreen;">${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),0,".",",")}}</span></b>
 						<br>Drawing : <strong style="color:#00ffc4;margin-bottom: .5em;">{{$twl[0]->end_date->diffForHumans()}}</strong></p>
 						{{-- Test --}}
 

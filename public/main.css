@@ -98,7 +98,7 @@ button.navbar-toggle {
 
 .icon-bar#headLinks {
   background: white !important;
-  color: white !important;
+  /*color: white !important;*/
 }
 
 .raffleCont {
@@ -139,8 +139,9 @@ button.navbar-toggle {
 	margin-left:.5em;
 }
 
-.headLinks:hover {
-	background-color:lightblue;
+li a:hover {
+	background-color:lightblue !important;
+	color:black !important;
 }
 
 #mobileChatHide {
@@ -559,6 +560,7 @@ blockquote {
 #myCarousel {
 	min-height:16em;
 	padding:0 1em 3em 1em;
+	font-size:.9em;
 }
 
 #splash3 {
@@ -625,6 +627,7 @@ blockquote {
 	#myCarousel {
 		min-height:16em;
 		padding:0 10em 1em 10em;
+		font-size:1em;
 	}
 
 

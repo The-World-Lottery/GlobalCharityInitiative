@@ -98,12 +98,9 @@
           	<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
           	<span class="navLink">About Us</span></a>
           </li>
-          @if(Auth::check() && count(App\Models\UserWallet::where('user_id', '=', \Auth::id())->get()) === 0)
+          {{-- @if(Auth::check() && count(App\Models\UserWallet::where('user_id', '=', \Auth::id())->get()) === 0)
           <li class="headLinks">
-	          {{-- <form method="GET" action="{{action('UsersController@saveUserWallet')}}">
-	          {!! csrf_field() !!}
-          	  <button type="submit"><span class="navLink">About Us</span></button>
-          	  </form> --}}
+	          
           	  <a href="/saveWallet"><span class="navLink">Create Wallets</span></a>
           </li>
           @elseif (Auth::check())
@@ -156,7 +153,7 @@
 
 				  </div>
 				</div>
-		  @endif
+		  @endif --}}
         </ul>        
       </div>
 
