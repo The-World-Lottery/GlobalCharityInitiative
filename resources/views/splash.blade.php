@@ -13,8 +13,36 @@
 	<style type="text/css">
 		main {
             background-image: url("/images/360Mts.jpg");
-            background-size: 200% 120%;
+            /*background-size: 200% 120%;*/
         }
+
+        .parallax { 
+		    /* The image used */
+		    background-image: url("/images/tree.jpg");
+
+		    /* Set a specific height */
+		    /*height: 500px; */
+
+		    /* Create the parallax scrolling effect */
+		    background-attachment: fixed;
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    background-size: cover;
+		}
+
+		.parallax2 { 
+		    /* The image used */
+		    background-image: url("/images/dock.jpeg");
+
+		    /* Set a specific height */
+		    /*height: 500px; */
+
+		    /* Create the parallax scrolling effect */
+		    background-attachment: fixed;
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    background-size: cover;
+		}
 	</style>
 	
 </head>
@@ -38,63 +66,8 @@
 						<input type="submit" value="SIGN UP" class="btn-success btn" style="font-size:1.5em;padding-top:.5em;"> --}}
 					</form>	
 					<br>
-					<div id="splash2" class="row">
-						<div class="row">
-							<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-			  				<!-- Indicators -->
-							  <ol class="carousel-indicators">
-							    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-							    <li data-target="#myCarousel" data-slide-to="1"></li>
-							    <li data-target="#myCarousel" data-slide-to="2"></li>
-							    <li data-target="#myCarousel" data-slide-to="3"></li>
-							  </ol>
-
-							  <!-- Wrapper for slides -->
-							  <div class="carousel-inner">
-							    <div class="item active">
-							      <div class="splashInfo stepInfoBoxes">
-									<h2>1. Check Us Out Free</h2>
-									<hr>
-									<p class="splashPar">Look at all the games and drawings we have available. Maybe you'd like to try your luck at a daily lottery or a raffle for that celebrity you've always wanted to meet. Or is it the huge world lottery jackpot that catches your eye?</p>
-								</div>
-							    </div>
-
-							    <div class="item">
-							      <div class="splashInfo stepInfoBoxes">
-									<h2>2. Create An Account</h2>
-									<hr>
-									<p class="splashPar">All personal information will be confidential and only used to alert users when they have won a game.You may choose to be alerted by phone and/or email.</p>
-								  </div>
-							    </div>
-
-							    <div class="item">
-							      <div class="splashInfo stepInfoBoxes">
-									<h2>3. Choose Your Game</h2>
-									<hr>
-									<p class="splashPar">Purchase a ticket to a daily lottery, raffle, or world lottery in any currency you choose. All payments and payment information will be handled by Stripe. The World Lottery will never ask you for personal payment information.</p>
-								</div>
-							    </div>
-
-							     <div class="item">
-							      <div class="splashInfo stepInfoBoxes">
-									<h2>Good Luck!</h2>
-									<hr>
-									<p class="splashPar">Once you've got your ticket all you have to do is wait for the drawing.Thank you for participating in Earth's largest ongoing charitable event EVER.</p>
-								</div>
-							    </div>
-							  </div>
-
-							  <!-- Left and right controls -->
-							  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-							    <span class="glyphicon glyphicon-chevron-left"></span>
-							    <span class="sr-only">Previous</span>
-							  </a>
-							  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-							    <span class="glyphicon glyphicon-chevron-right"></span>
-							    <span class="sr-only">Next</span>
-							  </a>
-							</div>
-						</div>
+					<div id="mobileCar1">
+						@include('layouts.partials.carousel')
 					</div>
 					
 
@@ -109,15 +82,15 @@
 		<div class="text-center" style="padding-top:100vh;width:100%;"></div>
 		<section style="z-index:100;position:absolute;width:100%;">
 			<div id="splash4" class="row infoRows text-center">
-				<div class="col col-sm-9">
-					<h1>The <span style="color:lightgreen;">World Lottery </span>Jackpot is <b><span style="color:lightgreen;">${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),0,".",",")}}</span></b></h1>
-				</div>
-				<div class="col col-sm-3">
-					<button class="btn-success btn" style="font-size:1.5em;padding-top:.5em;margin:.5em 0 .5em 0;">Pick Numbers</button>
+				<div class="col col-sm-12">
+					<h1>How It All Works</h1>
 				</div>
 			</div>
+			<div id="mobileCar2">
+				@include('layouts.partials.carousel')
+			</div>
 
-			<div id="splash3" class="row infoRows">
+			<div id="splash3" class="row infoRows parallax">
 				<div class="col col-xs-12 col-sm-8 col-sm-offset-2">
 					<div class="" style="font-size:2.5em;padding:2.5em 0 3em 0;">
 						"Which industry sells nothing tangible, offers no direct services, and has never died? Gambling. Now how can we put this industry to the best use?"
@@ -133,7 +106,7 @@
 						<blockquote>The World Lottery is a classic "Pick Six" drawing where players select 5 numbers 1-100 and a power number. The numbers will be selected every two weeks on Saturdays. </blockquote>
 						
 						{{-- Test --}}
-						<p style="font-size:2.7em;padding:1em .3em 1em .3em;margin-top:1em;background-color:rgba(0,0,0,.5);">The <span style="color:lightgreen;">World Lottery </span>Jackpot is <b><span style="color:lightgreen;">${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),0,".",",")}}</span></b>
+						<p style="font-size:2.7em;padding:1em .3em 1em .3em;margin-top:.5em;background-color:rgba(0,0,0,.5);border-radius: 1em;">The <span style="color:lightgreen;">World Lottery </span>Jackpot is <b><span style="color:lightgreen;">${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),0,".",",")}}</span></b>
 						<br>Drawing : <strong style="color:#00ffc4;margin-bottom: .5em;">{{$twl[0]->end_date->diffForHumans()}}</strong></p>
 						{{-- Test --}}
 
@@ -158,7 +131,7 @@
 				</div>
 			</div>
 
-			<div id="splash3" class="row infoRows">
+			<div id="splash3" class="row infoRows parallax2">
 				<div class="col col-xs-12 col-sm-8 col-sm-offset-2">
 					<div class="" style="font-size:2.5em;padding:2.5em 0 3em 0;">
 						"Why does gambling benefit the MOST fortunate? Also, the internet is a thing, so how are lotteries not paperless yet?"
@@ -256,7 +229,7 @@
 		$(document).scroll(function() {
 	    	$("#splashHeader").css("opacity", 1 - .0026 * $(document).scrollTop());
 	    	$("#splashHeader").css("margin-top", (-1 * $(document).scrollTop()/100) + "em");
-	    	console.log($(document).scrollTop());
+	    	// console.log($(document).scrollTop());
 	    });
 		
 

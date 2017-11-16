@@ -92,6 +92,10 @@ button.navbar-toggle {
 	color:white;
 }
 
+/*#mobileCar1 {
+	display:none;
+}*/
+
 .modal-backdrop {
 	z-index:0;
 }
@@ -221,6 +225,7 @@ li a:hover {
 
 .splashPar {
 	font-size:1em;
+	padding:1em;
 }
 
 .raffleContent {
@@ -630,7 +635,9 @@ blockquote {
 		font-size:1em;
 	}
 
-
+	#mobileCar2 {
+		display:none;
+	}
 
 
 	#backgroundPic {
@@ -647,6 +654,7 @@ blockquote {
 
 	#splashPar {
 		font-size:1.5em;
+
 	}
 
 	#splashHeader {
@@ -767,6 +775,14 @@ blockquote {
 @media screen and (max-width: 768px) {
 	.raffleCont {
 		max-width:16em;
+	}
+
+	#mobileCar1 {
+		display:none;
+	}
+
+	#splashTitle {
+		margin-top:3em;
 	}
 
 	#twlButton {
