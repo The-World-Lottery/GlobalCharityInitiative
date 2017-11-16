@@ -136,12 +136,18 @@
 						<h2>The World Lottery</h2>
 						<blockquote>The World Lottery is a classic "Pick Six" drawing where players select 5 numbers 1-100 and a power number. The numbers will be selected every two weeks on Saturdays. </blockquote>
 						
+						{{-- Test --}}
+						<p style="font-size:2.7em;padding:1em .3em 1em .3em;margin-top:2em;background-color:rgba(0,0,0,.5);">The <span style="color:lightgreen;">World Lottery </span>Jackpot is <b><span style="color:lightgreen;">${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}</span></b>
+						<br>Drawing : <strong style="color:#00ffc4;margin-bottom: .5em;">{{$twl[0]->end_date->diffForHumans()}}</strong></p>
+						{{-- Test --}}
+
 					</div>
 				</div>
 				<div class="col col-xs-12 col-sm-4">
 					<div class="splashInfo">
 						<h2>Raffles</h2>
 						<blockquote>When a company wishes to advertise through us they may donate one of their products or services to be raffled off. Celebrities may  donate a day of their time to be raffled off for fans. There will always be a winner of each raffle as long as even one ticket is purchased.</blockquote>
+						@include('raffles.one')
 						
 					</div>
 				</div>

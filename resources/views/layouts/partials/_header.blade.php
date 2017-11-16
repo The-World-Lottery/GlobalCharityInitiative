@@ -1,5 +1,5 @@
 
-  <nav id="menu" style="" class="navbar navbar-fixed-top navbar-inverse">
+  <nav id="menu" style="" class="navbar navbar-fixed-top">
  
       <div class="navbar-header">
       		@if (Auth::check())
