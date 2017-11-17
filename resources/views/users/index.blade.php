@@ -41,7 +41,7 @@ table, th, td {
 				<td><a class="btn btn-success btn-xs" href="{{action('UsersController@show',$user->id)}}" >Edit</a></td>
 				<td>{{$user->name}}</td>
 				<td>{{$user->username}}</td>
-				<td style="max-width:6em;overflow:scroll;">{{$user->email}}</td>
+				<td>{{$user->email}}</td>
 				<td>{{$user->id}}</td>
 				<td>{{$user->suggestions->count()}}</td>
 				@if($user->is_admin)
