@@ -323,7 +323,7 @@ ul.pagination {
 
 td {
 	background-color:rgba(0,0,0,0);
-	overflow:hidden;
+	/*overflow:hidden;*/
 
 }
 
@@ -452,9 +452,7 @@ input, button {
 	outline:none;
 }
 
-.adminTables {
-	overflow:scroll;
-}
+
 
 .adminNavs {
 	padding:.5em;
@@ -787,6 +785,10 @@ blockquote {
 
 	#twlButton {
 		margin-bottom:2em;
+	}
+
+	.adminTables {
+		overflow:scroll;
 	}
 }
 
