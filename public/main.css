@@ -577,9 +577,11 @@ blockquote {
 	font-size:2.7em;
 }
 #splashPar {
-		font-size: 1.5em;
-		
-	}
+	font-size: 1.5em;
+	
+}
+
+
 
 .splashPar {
 	font-size: 1.5em;
@@ -608,6 +610,11 @@ blockquote {
 	padding-top:1.5em;
 }
 
+.par3 {
+	font-size:1.4em;
+	padding:2em .5em 2.5em .5em;
+}
+
 
 
 
@@ -618,6 +625,11 @@ blockquote {
 
 	#splash2 {
 		font-size:100%;
+	}
+
+	.par3 {
+		font-size:2.5em;
+		padding:2.5em 1em 3em 1em;
 	}
 
 	.stepInfoBoxes {

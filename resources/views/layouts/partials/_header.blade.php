@@ -4,11 +4,11 @@
       <div class="navbar-header">
       		@if (Auth::check())
 					{{-- <img src='{{Auth::user()->image}}' id="headImg"> --}}
-				<a class="navbar-brand user navLink" style="margin-left:.3em;" href="{{action('UsersController@show' , Auth::id())}}" ><span class="navLink">
+				<a class="navbar-brand user navLink" style="margin-left:.3em;" href="{{action('UsersController@show' , Auth::id())}}" ><span>
 					{{Auth::user()->name}}</span>
 				</a>
 			@else
-				<a class="navbar-brand user"  id="white" href="{{action('Auth\AuthController@getLogin')}}"><span class="navLink">Login/Register</span></a>	
+				<a class="navbar-brand user navLink"  id="white" href="{{action('Auth\AuthController@getLogin')}}"><span class="navLink">Login/Register</span></a>	
 			@endif
        
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="border:0px;">

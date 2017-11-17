@@ -74,15 +74,14 @@
 					<h1>How It All Works</h1>
 				</div>
 			</div>
-			<div id="mobileCar2">
-				@include('layouts.partials.carousel')
-			</div>
 
 			<div id="splash3" class="row infoRows parallax">
+					<div id="mobileCar2">
+						@include('layouts.partials.carousel')
+					</div>
 				<div class="col col-xs-12 col-sm-8 col-sm-offset-2" style="background-color: rgba(0,0,0,.5);">
-					<div class="" style="font-size:2.5em;padding:2.5em 1em 3em 1em;">
-						"Which industry sells nothing tangible, offers no direct services, and has never died? Gambling. Now how can we put this industry to the best use?"
-						<sub>-Emmett J. Peters (Jan 2015)</sub>
+					<div class="par3">
+						We're the first FULLY non-profit gambling organization in history. All earnings are allocated to charitable projects around the globe. The groups we work with will be decided by the world through our social media outlets and in our own suggestion box.  
 					</div>
 				</div>
 			</div>
@@ -121,9 +120,8 @@
 
 			<div id="splash3" class="row infoRows parallax2">
 				<div class="col col-xs-12 col-sm-8 col-sm-offset-2" style="background-color: rgba(0,0,0,.5);">
-					<div class="" style="font-size:2.5em;padding:2.5em 1em 3em 1em;">
-						"Why does gambling benefit the MOST fortunate? Also, the internet is a thing, so how are lotteries not paperless yet?"
-						<sub>-Emmett J. Peters (Nov 2016)</sub>
+					<div class="par3">
+						We've created a carbon-neutral, worldwide gambling system that benefits the LEAST fortunate. There's no need for a large factory because our tickets aren't made of paper, they're virtual and of no threat to forests. We also don't need vehicles burning fuel to deliver our tickets because everything is online. On top of that, you dont have to drive your own personal vehicle to go buy a ticket. That little rectangle you carry around everywhere and can't stop looking at is the only device you need to play! 
 					</div>
 				</div>
 			</div>
@@ -133,7 +131,7 @@
 				<div class="col col-xs-12 col-sm-4">
 					<div class="splashInfo">
 						<h2>The Idea</h2>
-						<blockquote>All ticket purchases increase both the value of the jackpot for the game bought into and The World Lottery Foundation. Its is from the foundation that we will allocate funds to selected charities and projects around the globe.</blockquote>
+						<blockquote>All ticket purchases increase both the value of the jackpot for the game bought into, the value of the current world lottery, and The World Lottery Foundation Fund. Its is from the foundation that we will allocate funds to selected charities and projects around the globe.</blockquote>
 						
 					</div>
 				</div>
