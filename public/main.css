@@ -688,7 +688,7 @@ blockquote {
 	}
 	#gameScroll {
 		padding-top:1em;
-		overflow:scroll;
+		overflow-y:scroll;
 		height:86.5vh;
 	}
 
@@ -763,7 +763,7 @@ blockquote {
 
 	#footer {
 		height:7.5vh;
-		overflow: scroll;
+		/*overflow: scroll;*/
 	}
 
 	#twlButton {
