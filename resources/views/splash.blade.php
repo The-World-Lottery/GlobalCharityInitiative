@@ -17,13 +17,7 @@
         }
 
         .parallax { 
-		    /* The image used */
 		    background-image: url("/images/tree.jpg");
-
-		    /* Set a specific height */
-		    /*height: 500px; */
-
-		    /* Create the parallax scrolling effect */
 		    background-attachment: fixed;
 		    background-position: center;
 		    background-repeat: no-repeat;
@@ -31,13 +25,7 @@
 		}
 
 		.parallax2 { 
-		    /* The image used */
-		    background-image: url("/images/dock.jpeg");
-
-		    /* Set a specific height */
-		    /*height: 500px; */
-
-		    /* Create the parallax scrolling effect */
+		    background-image: url("/images/reef.jpg");
 		    background-attachment: fixed;
 		    background-position: center;
 		    background-repeat: no-repeat;
@@ -91,8 +79,8 @@
 			</div>
 
 			<div id="splash3" class="row infoRows parallax">
-				<div class="col col-xs-12 col-sm-8 col-sm-offset-2">
-					<div class="" style="font-size:2.5em;padding:2.5em 0 3em 0;">
+				<div class="col col-xs-12 col-sm-8 col-sm-offset-2" style="background-color: rgba(0,0,0,.5);">
+					<div class="" style="font-size:2.5em;padding:2.5em 1em 3em 1em;">
 						"Which industry sells nothing tangible, offers no direct services, and has never died? Gambling. Now how can we put this industry to the best use?"
 						<sub>-Emmett J. Peters (Jan 2015)</sub>
 					</div>
@@ -132,8 +120,8 @@
 			</div>
 
 			<div id="splash3" class="row infoRows parallax2">
-				<div class="col col-xs-12 col-sm-8 col-sm-offset-2">
-					<div class="" style="font-size:2.5em;padding:2.5em 0 3em 0;">
+				<div class="col col-xs-12 col-sm-8 col-sm-offset-2" style="background-color: rgba(0,0,0,.5);">
+					<div class="" style="font-size:2.5em;padding:2.5em 1em 3em 1em;">
 						"Why does gambling benefit the MOST fortunate? Also, the internet is a thing, so how are lotteries not paperless yet?"
 						<sub>-Emmett J. Peters (Nov 2016)</sub>
 					</div>
@@ -171,9 +159,13 @@
 					</div>
 				</div>
 			</div>
-			<div style="padding:2em 0 .1em 0;background-color:rgba(23,90,145,.4);">
-			    <div style="" id="random_quote">
-			    </div>
+			<div id="splash3" class="row infoRows">
+				<div class="col col-xs-12 col-sm-8 col-sm-offset-2" style="background-color: rgba(0,0,0,.5);">
+					<div style="padding:2em 0 .1em 0;">
+					    <div style="" id="random_quote">
+					    </div>
+					</div>
+				</div>
 			</div>
 			
 		</section>
@@ -195,6 +187,8 @@
 	</script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
+
+	$( document ).ready(function() {
 		
 		$(function(){
 		    var x = 0;
@@ -231,7 +225,39 @@
 	    	$("#splashHeader").css("margin-top", (-1 * $(document).scrollTop()/100) + "em");
 	    	// console.log($(document).scrollTop());
 	    });
-		
+
+	    //random quote
+		function randomQuote() {
+	      $.ajax({
+	          url: "https://api.forismatic.com/api/1.0/?",
+	          dataType: "jsonp",
+	          data: "method=getQuote&format=jsonp&lang=en&jsonp=?",
+	          success: function( response ) {
+	            $("#random_quote").html("<p id='random_quote' class='lead text-center'>" +
+	              response.quoteText + "<br/>&dash; " + response.quoteAuthor + " &dash;</p>");
+	          }
+	      });
+	    }
+
+	    $(function() {
+	      randomQuote();
+	    });
+
+	    //setting interval of ajax quote call
+	    var t = 0;
+	    setInterval(function(){
+	        if (t % 15 == 14){
+	            $('.quote').fadeOut();
+	            randomQuote();
+	            setTimeout(function(){
+	                $('.quote').fadeIn();
+	            },700);
+	        };  
+	        t++;
+	    },1000);
+
+	});
+			
 
 	</script>
 </body>
