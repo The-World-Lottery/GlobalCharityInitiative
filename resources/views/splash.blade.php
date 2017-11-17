@@ -86,42 +86,44 @@
 				</div>
 			</div>
 			
-			<div id="splash1" class="row infoRows">	
-				<div class="col col-xs-12 col-sm-4">
+			<div id="splash1" class="row infoRows gamePositioning text-center">	
+				<div class="col col-xs-12 col-sm-4" id="gameHold">
 					<div class="splashInfo">
 						<h2>The World Lottery</h2>
 						<blockquote>The World Lottery is a classic "Pick Six" drawing where players select 5 numbers 1-100 and a power number. The numbers will be selected every two weeks on Saturdays. </blockquote>
 						
 						{{-- Test --}}
-						<p style="font-size:2.7em;padding:1em .3em 1em .3em;margin-top:.5em;background-color:rgba(0,0,0,.5);border-radius: 1em;">The <span style="color:lightgreen;">World Lottery </span>Jackpot is <b><span style="color:lightgreen;">${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),0,".",",")}}</span></b>
-						<br>Drawing : <strong style="color:#00ffc4;margin-bottom: .5em;">{{$twl[0]->end_date->diffForHumans()}}</strong></p>
 						{{-- Test --}}
 
 					</div>
+					<div class="bottomPos">
+						<p style="font-size:2.7em;padding:1em .3em 1em .3em;margin-top:.5em;background-color:rgba(0,0,0,.5);border-radius: 1em;">The <span style="color:lightgreen;">World Lottery </span>Jackpot is <b><span style="color:lightgreen;">${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),0,".",",")}}</span></b>
+						<br><strong style="color:#00ffc4;margin-bottom: .5em;">{{$twl[0]->end_date->diffForHumans()}}</strong></p>
+					</div>
 				</div>
-				<div class="col col-xs-12 col-sm-4">
+				<div class="col col-xs-12 col-sm-4" id="gameHold" ">
 					<div class="splashInfo">
 						<h2>Raffles</h2>
 						<blockquote>When a company wishes to advertise through us they may donate one of their products or services to be raffled off. Celebrities may  donate a day of their time to be raffled off for fans. There will always be a winner of each raffle as long as even one ticket is purchased.</blockquote>
-						@include('raffles.one')
 						
 					</div>
+					<div class="bottomPos">@include('raffles.one')</div>
 				</div>
-				<div class="col col-xs-12 col-sm-4">
+				<div class="col col-xs-12 col-sm-4" id="gameHold" ">
 					<div class="splashInfo">
 						<h2>Mixed Lotteries</h2>
 						<blockquote>Each Mixed Lottery is created with an initial donation from TWL. Each ticket purchase increases that individual lottery's jackpot and the current World Lottery Jackpot. There will always be a winner of each mixed lottery as long as even one ticket is purchased.</blockquote>
 						{{-- <div>{{print_r(\App\Models\Lottery::orderBy('current_value','desc')->limit(1)->get()[0]['current_value'])}}
 						</div> --}}
-						@include('lotteries.one')
-					</div>
+					</div class="bottomPos">
+					@include('lotteries.one')
 				</div>
 			</div>
 
 			<div id="splash3" class="row infoRows parallax2">
 				<div class="col col-xs-12 col-sm-8 col-sm-offset-2" style="background-color: rgba(0,0,0,.5);">
 					<div class="par3">
-						We've created a carbon-neutral, worldwide gambling system that benefits the LEAST fortunate. There's no need for a large factory because our tickets aren't made of paper, they're virtual and of no threat to forests. We also don't need vehicles burning fuel to deliver our tickets because everything is online. On top of that, you dont have to drive your own personal vehicle to go buy a ticket. That little rectangle you carry around everywhere and can't stop looking at is the only device you need to play! 
+						We've created a carbon-neutral, worldwide gambling system that benefits the LEAST fortunate. There's no need for a large factory because our tickets aren't made of paper, they're virtual and of no threat to forests. We also don't need vehicles burning fuel to deliver our tickets because everything is online. You don't even have to drive your own personal vehicle to go buy a ticket. That little rectangle you carry around everywhere and can't stop looking at is the only device you need to play! 
 					</div>
 				</div>
 			</div>
@@ -131,7 +133,7 @@
 				<div class="col col-xs-12 col-sm-4">
 					<div class="splashInfo">
 						<h2>The Idea</h2>
-						<blockquote>All ticket purchases increase both the value of the jackpot for the game bought into, the value of the current world lottery, and The World Lottery Foundation Fund. Its is from the foundation that we will allocate funds to selected charities and projects around the globe.</blockquote>
+						<blockquote>All ticket purchases increase the value of the jackpot for the game bought into, the value of the current world lottery, and The World Lottery Foundation Fund. Its is from the foundation that we will allocate funds to selected charities and projects around the globe.</blockquote>
 						
 					</div>
 				</div>

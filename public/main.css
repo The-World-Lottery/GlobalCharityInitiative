@@ -543,13 +543,16 @@ input, button {
 #splash1 {
 	background-color: #32809a;
 	padding:0 0 1em 0;
-	box-shadow: 5px 5px 5px #32809a;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 #splash4 {
 	background-color: #32809a;
 	/*background-color: rgba(23,90,145,.4)*/
+}
+
+#gameHold {
+	height:100%;
 }
 
 #splashHeader {
