@@ -462,7 +462,7 @@ input, button {
 #menu {
 	/*background-color: rgba(0,0,0,.62);*/
 	background-color: #32809a;
-	min-height:6vh;
+	/*min-height:6vh;*/
 	padding:0 1em 0 1em;
 
 }
