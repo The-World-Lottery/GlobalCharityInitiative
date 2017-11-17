@@ -27,7 +27,7 @@ table, th, td {
 				<th><h5>Edit</h5></th>
 				<th><h5>Name</h5></th>
 				<th><h5>UserName</h5></th>
-				<th style="max-width:6em;overflow:scroll;"><h5>Email</h5></th>
+				<th><h5>Email</h5></th>
 				<th><h5>User ID</h5></th>
 				<th><h5># of Posts</h5></th>
 				<th><h5>Admin</h5></th>
