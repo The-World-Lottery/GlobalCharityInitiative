@@ -64,9 +64,7 @@
 				<div class="text-center">
 					@yield('divHead')
 				</div>
-				<div>
-					@yield('content')
-				</div>	
+				@yield('content')	
 			</div>
 		</div>
 
@@ -85,18 +83,7 @@
 			
 			<div class="col col-xs-12 col-sm-4">
 				<div style="display:flex;justify-content: space-around;">
-					<a target="_blank" href="https://github.com/The-World-Lottery/TheWorldLottery">
-						<img src="/images/Blue Icons/GitHub.svg" alt="" class="socialIcon">
-					</a>
-					<a {{-- target="_blank" --}} href="">
-						<img src="/images/Blue Icons/Instagram.svg" alt="" class="socialIcon">
-					</a>
-					<a {{-- target="_blank" --}} href="https://twitter.com/Emmett_J_Peters?lang=en">
-						<img src="/images/Blue Icons/Twitter.svg" alt="" class="socialIcon">
-					</a>
-					<a {{-- target="_blank" --}} href="">
-						<img src="/images/Blue Icons/Facebook.svg" alt="" class="socialIcon">
-					</a>
+				
 				</div>
 			</div>
 			<div class="col col-xs-12 col-sm-4 text-center">
@@ -105,7 +92,7 @@
 		</div>
 		
 	</div>
-	
+
 	<script
 	  src="https://code.jquery.com/jquery-3.2.1.js"
 	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="

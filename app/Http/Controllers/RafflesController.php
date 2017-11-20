@@ -45,6 +45,49 @@ class RafflesController extends Controller
         return \Redirect::action('LotteriesController@index');
     }
 
+    public function chargeCard(Request $request, $id)
+    {
+
+        \Stripe\Stripe::setApiKey("sk_test_ZzKGRiePc0b4mGyYiwkRnPEy");
+
+        $token = \Input::get('stripeToken');
+        $amount = \Input::get('amount');
+
+        try {
+            $userId = \Auth::id();
+            $charge = \Stripe\Charge::create(array(
+                    "amount"=> $amount,
+                    "currency"=>"usd",
+                    "card"=> $token,
+                    "description"=>$userId,
+                ));
+
+
+            // $userWallet = UserWallet::find($userId);
+            // $userWallet->$currency -= (2 * $currConv);
+            // $userWallet->save();
+
+            $twlWallet = UserWallet::find(1);
+            $twlWallet->usd += .44;
+            $twlWallet->save();
+
+            $currWorldLottery = TheWorldLottery::find(1);
+            $currWorldLottery->current_value += .90;
+            $currWorldLottery->save();
+
+            $newEntry = new RaffleEntry();
+            $newEntry->user_id = $userId;
+            $newEntry->raffles_id = $id;
+            $newEntry->save();
+
+        } catch (\Stripe\Error\Card $e){
+            dd($e);
+        }
+
+        return \Redirect::action('RafflesController@index');
+
+    }
+
     /**
      * Show the form for creating a new resource.
      *

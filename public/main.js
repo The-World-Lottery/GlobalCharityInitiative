@@ -144,12 +144,10 @@ $(document).ready(function(){
 		coinPriceConversion();
 	},30000);
 
-
     //click for summaries
     $('#hoverTrigger').click(function(){
     	$('#hoverSumm').slideToggle();
 	})
-
 
 	//click for wallets
 	 $('#walletTrigger').click(function(){
@@ -171,11 +169,10 @@ $(document).ready(function(){
     });
 
     //hover for raffles
-    $('.raffleCont').hover(function() {
-        $(this).find('div:first').show();
-    }, function() {
-        $(this).find('div:first').hide();
-    });
-
+    // $('.raffleCont').hover(function() {
+    //     $(this).find('div:first').show();
+    // }, function() {
+    //     $(this).find('div:first').hide();
+    // });
 
 });

@@ -13,6 +13,22 @@
 
 @section('content')
 <div class="container">
+	<div style="display:flex;justify-content: space-around;">
+		<a target="_blank" href="https://github.com/The-World-Lottery/TheWorldLottery">
+			<img src="/images/Blue Icons/GitHub.svg" alt="" class="socialIcon">
+		</a>
+		<a {{-- target="_blank" --}} href="">
+			<img src="/images/Blue Icons/Instagram.svg" alt="" class="socialIcon">
+		</a>
+		<a {{-- target="_blank" --}} href="https://twitter.com/Emmett_J_Peters?lang=en">
+			<img src="/images/Blue Icons/Twitter.svg" alt="" class="socialIcon">
+		</a>
+		<a {{-- target="_blank" --}} href="">
+			<img src="/images/Blue Icons/Facebook.svg" alt="" class="socialIcon">
+		</a>
+	</div>
+	<br>
+	<br>
 	<ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
 	  <li class="active"><a  id="zeroO"  data-toggle="tab" href="#home">Our Mission</a></li>
 	  <li><a  id="zeroO"  data-toggle="tab" href="#menu1">About TWL</a></li>

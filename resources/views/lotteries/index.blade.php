@@ -46,7 +46,7 @@
 		<div style="text-align:center;padding-right:1em;">{!! $lotteries->appends(Request::except('page'))->render() !!}</div>
 		<br>
 		</div>
-	</main>
+	{{-- </main> --}}
 	
 	<form id="lotteryForm" method="POST">
 	  <script
@@ -63,6 +63,7 @@
 	  <input type="hidden" name="_token" value="{{ csrf_token() }}">
 	  <input type="hidden" name="amount" value="200">
 	</form>
+</div>
 @stop
 
 @section('bottomscript')
@@ -70,7 +71,7 @@
 <script>
 	$('.aSubmitButton').click(function() {
 		var lotteryid = $(this).attr('id').replace('submit', '');
-		var newAction = '/checkout/' + lotteryid;
+		var newAction = '/lotteryCheckout/' + lotteryid;
 		$('#lotteryForm').attr('action', newAction);
 		$('.stripe-button-el')[0].click();
 	});

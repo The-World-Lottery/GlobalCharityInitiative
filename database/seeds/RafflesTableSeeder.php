@@ -88,7 +88,7 @@ class RafflesTableSeeder extends Seeder
         $raffle4->save();
 
         $raffle5= new \App\Models\Raffle();
-        $raffle5->title = 'Lifetime Dave&Busters Gamecard';
+        $raffle5->title = 'Lifetime Dave & Busters Gamecard';
         $raffle5->content = 'The World Lottery Foundation';
         $raffle5->product ='D&B has donated a one-of-a-kind limitless gamecard';
         $raffle5->end_date = date("Y-").$month ."-" . $day  ." 11:45:00";

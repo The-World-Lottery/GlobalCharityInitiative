@@ -14,44 +14,67 @@
 @stop
 
 @section('content')
-	
-	<main class="container" style="max-width:100%;">
-	
-            
+
+<div class="container">
 
 		@if (session()->has('successMessage'))
             <div class="alert alert-success">{{ session('successMessage') }}</div>
         @endif
-	<div class="row">
-		
-	
-		@foreach($raffles as $raffle)
-		
-	
-		<a style="" href="{{ action('RafflesController@show', $raffle->id) }}">
-			<div class="col-sm-6 col-md-4 text-center" style="margin:1em 0 1em 0;display:flex;justify-content: center;">
-				<figure class="raffleCont" style='background-image:url("{{$raffle->img}}");'>
-					<div style="border-radius:1em;background-color:rgba(0,0,0,.8);height:100%;display:none;">
-						<div style="position:relative;height:100%;width:100%;">
-							<div style="padding-top: 10%;">
-								<h2 class="white" style="margin:0 .5em 0 .5em;">{{$raffle->title}}</h2>
-							</div>
-							<p style="position:absolute;bottom:5%;width:100%;">Drawing Happens<br>
-								<span style="color:#00ffc4;">{{$raffle->end_date->diffForHumans()}}</span>
-							</p>
-						</div>
-					</div>
-				</figure>
-			</div>
-		</a>
 
+	<div class="row">
+		@foreach($raffles as $raffle)
+			{{-- <a style="" href="{{ action('RafflesController@show', $raffle->id) }}"> --}}
+			<div class="col-sm-6 col-md-4 text-center">
+				<div id="raffleHolder">
+					<div class="raffleCont" style='background-image:url("{{$raffle->img}}");'>
+					</div>
+					<div class="raffleInfo">
+						@if (\Auth::check())
+						<div style="margin-bottom:1em;">
+						  <button type="button" id="submit{{ $raffle->id }}" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET</button>
+						</div>
+						@endif
+						<h2>{{$raffle->title}}</h2>
+						<p>Drawing Happens<br>
+							<span style="color:#00ffc4;">{{$raffle->end_date->diffForHumans()}}</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			{{-- </a> --}}
 		@endforeach
 	</div>
-		<br>
-		<br>
-	
-
 		{!! $raffles->appends(Request::except('page'))->render() !!} 
-	</main>
+
+	<form id="raffleForm" method="POST">
+	  <script
+	    src="https://checkout.stripe.com/checkout.js"
+	  	class="stripe-button"
+		data-key="pk_test_9QXLVB6tbq67JmuGwWGco2uX"
+		data-amount="200"
+		data-name="Raffle"
+		data-description="Widget"
+		data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+		data-locale="auto"
+		data-zip-code="true">
+	  </script>
+	  <input type="hidden" name="_token" value="{{ csrf_token() }}">
+	  <input type="hidden" name="amount" value="200">
+	</form>
+
+</div>
+
+@stop
+
+@section('bottomscript')
+
+	<script>
+		$('.aSubmitButton').click(function() {
+			var raffleid = $(this).attr('id').replace('submit', '');
+			var newAction = '/raffleCheckout/' + raffleid;
+			$('#raffleForm').attr('action', newAction);
+			$('.stripe-button-el')[0].click();
+		});
+	</script>
 
 @stop

@@ -160,11 +160,16 @@
 				</div>
 			</div>
 			<div id="splash3" class="row infoRows">
-				<div class="col col-xs-12 col-sm-8 col-sm-offset-2" style="background-color: rgba(0,0,0,.5);">
+				<div class="col col-xs-12 col-sm-8 col-sm-offset-2 text-center" style="background-color: rgba(0,0,0,.5);">
 					<div style="padding:2em 0 .1em 0;">
 					    <div style="" id="random_quote">
 					    </div>
 					</div>
+					<form action="{{action('RafflesController@index')}}">
+						<button class="btn-success btn" style="margin-bottom:1em;font-size:1.5em;padding-top:.5em;">VIEW SITE</button>  
+						{{-- - OR -
+						<input type="submit" value="SIGN UP" class="btn-success btn" style="font-size:1.5em;padding-top:.5em;"> --}}
+					</form>	
 				</div>
 			</div>
 			
