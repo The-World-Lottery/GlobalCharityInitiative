@@ -28,6 +28,7 @@ Route::get('/testone', 'LotteriesController@one');
 // Stripe routes
 Route::post('/lotteryCheckout/{id}','LotteriesController@chargeCard');
 Route::post('/raffleCheckout/{id}','RafflesController@chargeCard');
+Route::get('/ticketFail','RafflesController@notLoggedIn');
 
 
 Route::get('/suggestions/userssuggestions/{id}','SuggestionsController@userssuggestions');

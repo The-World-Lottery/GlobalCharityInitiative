@@ -30,9 +30,13 @@
 					</div>
 					<div class="raffleInfo">
 						@if (\Auth::check())
-						<div style="margin-bottom:1em;">
-						  <button type="button" id="submit{{ $raffle->id }}" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET</button>
-						</div>
+							<div style="margin-bottom:1em;">
+							  <button type="button" id="submit{{ $raffle->id }}" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET</button>
+							</div>
+						@else
+							<div style="margin-bottom:1em;">
+							  <a  href="/ticketFail" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET</a>
+							</div>
 						@endif
 						<h2>{{$raffle->title}}</h2>
 						<p>Drawing Happens<br>

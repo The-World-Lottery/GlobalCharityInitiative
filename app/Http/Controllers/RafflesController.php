@@ -48,6 +48,11 @@ class RafflesController extends Controller
     public function chargeCard(Request $request, $id)
     {
 
+        if(!\Auth::check()){
+            $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
+            return \Redirect::action('Auth\AuthController@getLogin');
+        }
+
         \Stripe\Stripe::setApiKey("sk_test_ZzKGRiePc0b4mGyYiwkRnPEy");
 
         $token = \Input::get('stripeToken');
@@ -98,74 +103,75 @@ class RafflesController extends Controller
         return view('raffles.create');
     }
 
-    public function addUserToEntries(Request $request, $id)
+    public function notLoggedIn(Request $request)
     {
 
-        $currency = $request->input()['currency'];
+        // $currency = $request->input()['currency'];
 
-        if(\Auth::check()){
+        // if(\Auth::check()){
 
-            switch ($currency){
-                case "usd":
-                $currConv = 1;
-                break;
-                case "eur":
-                $currConv = $request->input()['eurConv'];
-                break;
-                case "jpy":
-                $currConv = $request->input()['jpyConv'];
-                break;
-                case "gbp":
-                $currConv = $request->input()['gbpConv'];
-                break;
-                case "chf":
-                $currConv = $request->input()['chfConv'];
-                break;
-                case "btc":
-                $currConv = $request->input()['btcConv'];
-                break;
-                case "ltc":
-                $currConv = $request->input()['ltcConv'];
-                break;
-                case "eth":
-                $currConv = $request->input()['ethConv'];
-                break;
-                case "doge":
-                $currConv = $request->input()['dogeConv'];
-                break;
-                case "bch":
-                $currConv = $request->input()['bchConv'];
-                break;
-                case "xrp":
-                $currConv = $request->input()['xrpConv'];
-                break;
+        //     switch ($currency){
+        //         case "usd":
+        //         $currConv = 1;
+        //         break;
+        //         case "eur":
+        //         $currConv = $request->input()['eurConv'];
+        //         break;
+        //         case "jpy":
+        //         $currConv = $request->input()['jpyConv'];
+        //         break;
+        //         case "gbp":
+        //         $currConv = $request->input()['gbpConv'];
+        //         break;
+        //         case "chf":
+        //         $currConv = $request->input()['chfConv'];
+        //         break;
+        //         case "btc":
+        //         $currConv = $request->input()['btcConv'];
+        //         break;
+        //         case "ltc":
+        //         $currConv = $request->input()['ltcConv'];
+        //         break;
+        //         case "eth":
+        //         $currConv = $request->input()['ethConv'];
+        //         break;
+        //         case "doge":
+        //         $currConv = $request->input()['dogeConv'];
+        //         break;
+        //         case "bch":
+        //         $currConv = $request->input()['bchConv'];
+        //         break;
+        //         case "xrp":
+        //         $currConv = $request->input()['xrpConv'];
+        //         break;
 
-            }
+        //     }
 
-            $userId = \Auth::id();
+        //     $userId = \Auth::id();
 
-            $userWallet = UserWallet::find($userId);
-            $userWallet->$currency -= (2 * $currConv);
-            $userWallet->save();
+        //     $userWallet = UserWallet::find($userId);
+        //     $userWallet->$currency -= (2 * $currConv);
+        //     $userWallet->save();
 
-            $twlWallet = UserWallet::find(1);
-            $twlWallet->usd += 1;
-            $twlWallet->save();
+        //     $twlWallet = UserWallet::find(1);
+        //     $twlWallet->usd += 1;
+        //     $twlWallet->save();
 
-            $newEntry = new RaffleEntry();
-            $newEntry->user_id = $userId;
-            $newEntry->raffles_id = $id;
-            $newEntry->save();
+        //     $newEntry = new RaffleEntry();
+        //     $newEntry->user_id = $userId;
+        //     $newEntry->raffles_id = $id;
+        //     $newEntry->save();
 
-            $currWorldLottery = TheWorldLottery::find(1);
-            $currWorldLottery->current_value += .90;
-            $currWorldLottery->save();
-        } else {
-                $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
-                return \Redirect::action('Auth\AuthController@getLogin');
-        }
-        $request->session()->flash('successMessage', 'You have successfully purchased a RAFFLE ticket! Thank you for your donation and good luck!');
-        return \Redirect::action('RafflesController@index');
+        //     $currWorldLottery = TheWorldLottery::find(1);
+        //     $currWorldLottery->current_value += .90;
+        //     $currWorldLottery->save();
+        // } else {
+
+        $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
+        return \Redirect::action('Auth\AuthController@getLogin');
+        // }
+        // $request->session()->flash('successMessage', 'You have successfully purchased a RAFFLE ticket! Thank you for your donation and good luck!');
+        // return \Redirect::action('RafflesController@index');
 
     }
 

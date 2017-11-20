@@ -34,9 +34,13 @@
 							<br>Ends : <strong style="color:#00ffc4;margin-bottom: .5em;">{{$lottery->end_date->diffForHumans()}}</strong>
 						</p>
 						@if (\Auth::check())
-						{{-- Stripe testing --}}
-						  <button type="button" id="submit{{ $lottery->id }}" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET</button>
-						{{-- Stripe testing --}}
+							<div style="margin-bottom:1em;">
+							  <button type="button" id="submit{{ $lottery->id }}" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET</button>
+							</div>
+						@else
+							<div style="margin-bottom:1em;">
+							  <a  href="/ticketFail" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET</a>
+							</div>
 						@endif
 						</div>
 					</div>
