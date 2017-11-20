@@ -28,6 +28,7 @@
 				<div id="raffleHolder">
 					<div class="raffleCont" style='background-image:url("{{$raffle->img}}");'>
 					</div>
+					
 					<div class="raffleInfo">
 						@if (\Auth::check())
 							<div style="margin-bottom:1em;">

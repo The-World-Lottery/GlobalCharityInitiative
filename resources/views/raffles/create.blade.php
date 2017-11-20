@@ -1,3 +1,4 @@
+
 @if(Auth::user()->is_admin)
 @extends('layouts.master')
 
@@ -18,14 +19,37 @@
 	<main class="container" style="max-width:100%;"><br>
 		<form method="POST" action="{{ action('RafflesController@store') }}">
 			{!! csrf_field() !!}
+
 			{!! $errors->first('title', '<span class="help-block">:message</span>')!!}
-			<input class="form-control" type="text" name="title" id="title" value="{{ old('title') }}" placeholder="title"><br>
+
+			<div class="form-group">
+    			<label for="title">Title</label>
+    			<input class="form-control" type="text" name="title" id="title" value="{{ old('title') }}">
+    		</div>
+
 			{!! $errors->first('content', '<span class="help-block">:message</span>')!!}
-			<input class="form-control" type="text" name="content" id="content" value="{{ old('content') }}" placeholder="content"><br>
+			<div class="form-group">
+	    		<label for="content">Content</label>
+				<input class="form-control" type="text" name="content" id="content" value="{{ old('content') }}" placeholder="content">
+			</div>
+
 			{!! $errors->first('product', '<span class="help-block">:message</span>')!!}
-			<input class="form-control" type="text" name="product" id="product" value="{{ old('product') }}" placeholder="product"><br>
+			<div class="form-group">
+	    		<label for="product">Product</label>
+				<input class="form-control" type="text" name="product" id="product" value="{{ old('product') }}" placeholder="product">
+			</div>
+
 			{!! $errors->first('end-date', '<span class="help-block">:message</span>')!!}
-			<input class="form-control" type="datetime-local" name="end-date" id="end-date" value="{{ old('end-date') }}" placeholder="end-date"><br>
+			<div class="form-group">
+    			<label for="end_date">End Date</label>
+    			<input class="form-control" type="date" name="end_date" id="end_date" value="{{ old('end_date') }}">			
+    		</div>
+
+			<div class="form-group">
+    			<label for="end_time">End Time</label>
+    			<input class="form-control" type="time" name="end_time" id="end_time" value="{{ old('end_time') }}">			
+    		</div>
+
 
 			<div class="form-group">
 		        Raffle Image

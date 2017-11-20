@@ -14,6 +14,7 @@
 
 @section('content')
 
+
 	<main class="container" style="max-width:100%;"><br>
 	<div class="col col-sm-8 col-sm-offset-2 text-center">
 		<form method="POST" action="{{ action('LotteriesController@store') }}">
