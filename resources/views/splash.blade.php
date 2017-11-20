@@ -13,8 +13,10 @@
 	<link rel="icon" href="{!! asset('images/globe.png') !!}"/>
 	<style type="text/css">
 		main {
-            background-image: url("/images/360Mts.jpg");
-            /*background-size: 200% 120%;*/
+            background-image: url("/images/view.jpg");
+            background-size: 100% 105%;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         .parallax { 
@@ -196,13 +198,13 @@
 
 	$( document ).ready(function() {
 		
-		$(function(){
-		    var x = 0;
-		    setInterval(function(){
-		        x-=1;
-		        $('main').css('background-position', x + 'px 0');
-		    }, 50);
-		});
+		// $(function(){
+		//     var x = 0;
+		//     setInterval(function(){
+		//         x-=1;
+		//         $('main').css('background-position', x + 'px 0');
+		//     }, 50);
+		// });
 
 	
 		var timer = 0;
