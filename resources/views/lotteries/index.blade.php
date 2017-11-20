@@ -14,7 +14,7 @@
 
 @section('content')
 	<main class="container" style="max-width:100%;">
-		<div>
+		{{-- <div> --}}
 			@if (session()->has('successMessage'))
             <div class="alert alert-success">{{ session('successMessage') }}</div>
         	@endif
@@ -23,15 +23,15 @@
 				@foreach($lotteries as $lottery)
 					
 				{{-- <a class="" href="{{ action('LotteriesController@show', $lottery->id) }}"> --}}
-					<div class="col col-sm-4  col-xs-12">
+					<div class="col col-sm-4  col-xs-12 lotteryPadding">
 						<div class="indivLottoCont">
 						<h2>
 							{{$lottery->title}}
 						</h2>
 						<p class="lottoInfo">
-							Current Estimated Value 
+							Current Value 
 							<br><strong style="font-size:2.5em;color:lightgreen">${{number_format(($lottery->current_value),0,".",",")}}</strong>
-							<br>Lottery Ends : <strong style="color:#00ffc4;margin-bottom: .5em;">{{$lottery->end_date->diffForHumans()}}</strong>
+							<br>Ends : <strong style="color:#00ffc4;margin-bottom: .5em;">{{$lottery->end_date->diffForHumans()}}</strong>
 						</p>
 						@if (\Auth::check())
 						{{-- Stripe testing --}}
@@ -42,11 +42,11 @@
 					</div>
 				{{-- </a> --}}
 				@endforeach
-			</div>
+		</div>
 		<div style="text-align:center;padding-right:1em;">{!! $lotteries->appends(Request::except('page'))->render() !!}</div>
 		<br>
-		</div>
-	{{-- </main> --}}
+	
+	</main>
 	
 	<form id="lotteryForm" method="POST">
 	  <script
