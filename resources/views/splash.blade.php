@@ -10,6 +10,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="icon" href="{!! asset('images/globe.png') !!}"/>
 	<style type="text/css">
 		main {
             background-image: url("/images/360Mts.jpg");

@@ -6,15 +6,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	{{-- <link rel="stylesheet" type="text/css" href="/bootstrap.min.css"> --}}
 	<link rel="stylesheet" type="text/css" href="/main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.css">
-	{{-- <link rel="stylesheet" href="/theWorldLottery.css"> --}}
-	<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="icon" href="{!! asset('images/globe.png') !!}"/>
 
 </head>
 <body id="master" style="font-family: 'Josefin Sans', sans-serif;">
