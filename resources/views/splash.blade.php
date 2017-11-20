@@ -64,7 +64,7 @@
 
 				</div>
 				<div id="splashImageHolder">
-					<img id="splashImage" src="images/downArrow.png">
+					<img id="splashImage" src="images/downArrows.png">
 				</div>
 
 			</div>
@@ -213,19 +213,19 @@
 		        timer++;
 		        if(timer % 2 == 0){
 		        	$("#splashImage").animate({
-			            opacity:.8
-			        },500);
+			            opacity:.5
+			        },800);
 		        } else {
 		        	$("#splashImage").animate({
-		        		opacity:.2
-		        	},500);
+		        		opacity:.0
+		        	},800);
 		        }
 
 		        if (timer > 100){
 		        	timer = 0;
 		        }
 
-		    }, 550);
+		    }, 1000);
 		});
 
 		$(document).scroll(function() {
