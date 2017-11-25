@@ -438,11 +438,6 @@ label {
 
 }
 
-select {
-	/*background-color:rgba(0,0,0,0);*/
-	/*margin-bottom:2em;*/
-}
-
 .creatorsSocialIcons {
 	height:2em;
 	width:2em;
@@ -460,7 +455,9 @@ select {
 	background-color:lightblue;
 }
 
-a:hover, a:active {color:lightgreen;}
+a:hover, a:active {
+	color:lightgreen;
+}
 
 #jackpot {
 	font-size:2em;
@@ -485,9 +482,7 @@ input, button {
 }
 
 #menu {
-	/*background-color: rgba(0,0,0,.62);*/
 	background-color: #32809a;
-	/*min-height:6vh;*/
 	padding:0 1em 0 1em;
 
 }
@@ -540,7 +535,7 @@ input, button {
 	display: flex;
 	justify-content: center;
 	position:fixed;
-	bottom:0;
+	bottom:2vh;
 	width:100%;
 	
 }
@@ -671,7 +666,7 @@ blockquote {
 	}
 
 	#myCarousel {
-		min-height:16em;
+		min-height:40vh;
 		padding:0 10em 1em 10em;
 		font-size:1em;
 	}

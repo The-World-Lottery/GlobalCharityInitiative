@@ -16,7 +16,9 @@
             background-image: url("/images/view.jpg");
             background-size: 100% 105%;
             background-position: center;
+            background-attachment: fixed;
             background-repeat: no-repeat;
+            background-size: cover;
         }
 
         .parallax { 
@@ -217,7 +219,7 @@
 		        timer++;
 		        if(timer % 2 == 0){
 		        	$("#splashImage").animate({
-			            opacity:.5
+			            opacity:.4
 			        },800);
 		        } else {
 		        	$("#splashImage").animate({
