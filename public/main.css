@@ -136,7 +136,7 @@ button.navbar-toggle {
 
 .raffleInfo {
 	padding:.7em .5em .5em .5em;
-	min-height:13em;
+	height:13em;
 	overflow:hidden;
 	background-color: rgba(0,0,0,.3);
 }
@@ -172,6 +172,10 @@ li a:hover {
 	display:none;
 }
 
+span.help-block {
+	color:yellow !important;
+}
+
 
 .indivLottoCont{
 	/*position:relative;*/
@@ -182,7 +186,7 @@ li a:hover {
 	border:1px solid white;
 	/*border-radius:1em;*/
 	/*height:9em;*/
-	padding:.7em 0em .9em 0em ;
+	padding:.7em 0em 0em 0em ;
 	margin:0 0 10px 0;
 	/*overflow:hidden;*/
 	background-color:rgba(255,255,255,.08);
@@ -207,22 +211,22 @@ li a:hover {
 	top:0;
 }
 
-::-webkit-input-placeholder { /* Chrome */
+/*::-webkit-input-placeholder {
   color: lightgreen !important;
   opacity:1;
 }
-:-ms-input-placeholder { /* IE 10+ */
+:-ms-input-placeholder {
   color: lightgreen !important;
   opacity:1;
 }
-::-moz-placeholder { /* Firefox 19+ */
+::-moz-placeholder {
   color: lightgreen !important;
   opacity: 1;
 }
-:-moz-placeholder { /* Firefox 4 - 18 */
+:-moz-placeholder {
   color: lightgreen !important;
   opacity: 1;
-}
+}*/
 
 .infoHeaders {
 	color:lightblue;
@@ -448,6 +452,8 @@ select {
 
 .creatorPics {
 	border-radius: 2em;
+	width:70%;
+	height:auto;
 }
 
 .user:hover {
@@ -589,7 +595,6 @@ blockquote {
 }
 
 #splash3 {
-	background-color: rgba(0,0,0,.5) !important;
 	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
@@ -621,7 +626,7 @@ blockquote {
 #splash2 {
 	font-size:75%;
 	padding:0 0 0 0;
-	background-color: rgba(0,0,0,.6);
+	background-color: rgba(0,0,0,.8);
 }
 
 .stripe-button-el span {
@@ -689,12 +694,12 @@ blockquote {
 	}
 
 	#splashPar {
-		font-size:1.5em;
+		font-size:2em;
 
 	}
 
 	#splashHeader {
-		padding-top: 10vh;
+		padding-top: 5vh;
 		width:100%;
 		height:100vh;
 	}

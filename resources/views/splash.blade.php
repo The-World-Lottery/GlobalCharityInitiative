@@ -82,7 +82,7 @@
 					<div id="mobileCar2">
 						@include('layouts.partials.carousel')
 					</div>
-				<div class="col col-xs-12 col-sm-8 col-sm-offset-2" style="background-color: rgba(0,0,0,.5);">
+				<div class="col col-xs-12 col-sm-8 col-sm-offset-2" style="background-color: rgba(0,0,0,.8);">
 					<div class="par3">
 						We're the first FULLY non-profit gambling organization in history. All earnings are allocated to charitable projects around the globe. The groups we work with will be decided by the world through our social media outlets and in our own suggestion box.  
 					</div>
@@ -124,7 +124,7 @@
 			</div>
 
 			<div id="splash3" class="row infoRows parallax2">
-				<div class="col col-xs-12 col-sm-8 col-sm-offset-2" style="background-color: rgba(0,0,0,.5);">
+				<div class="col col-xs-12 col-sm-8 col-sm-offset-2" style="background-color: rgba(0,0,0,.8);">
 					<div class="par3">
 						We've created a carbon-neutral, worldwide gambling system that benefits the LEAST fortunate. There's no need for a large factory because our tickets aren't made of paper, they're virtual and of no threat to forests. We also don't need vehicles burning fuel to deliver our tickets because everything is online. You don't even have to drive your own personal vehicle to go buy a ticket. That little rectangle you carry around everywhere and can't stop looking at is the only device you need to play! 
 					</div>
@@ -163,7 +163,7 @@
 				</div>
 			</div>
 			<div id="splash3" class="row infoRows">
-				<div class="col col-xs-12 col-sm-8 col-sm-offset-2 text-center" style="background-color: rgba(0,0,0,.5);">
+				<div class="col col-xs-12 col-sm-8 col-sm-offset-2 text-center" style="background-color: rgba(0,0,0,.8);">
 					<div style="padding:2em 0 .1em 0;">
 					    <div style="" id="random_quote">
 					    </div>

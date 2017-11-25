@@ -22,7 +22,7 @@
 	@endif
 </ul>
 	<main class="container" style="max-width:80%;"><br>
-		<div class="container">
+		<div class="col col-md-6 col-md-offset-3">
 		<form method="POST" action="{{ action('SuggestionsController@store') }}">
 			{!! csrf_field() !!}
 			{!! $errors->first('title', '<span class="help-block">:message</span>')!!}
@@ -35,7 +35,7 @@
 			
 			<label class="form-group">Content</label><textarea class="form-control" type="text" name="content" id="content" placeholder="CONTENT">{{ old('content') }}</textarea><br>
 
-			<div style="display:flex;justify-content:center;">
+			<div style="display:flex;justify-content:center;margin-bottom: 3em;">
 				<button class="btn btn-primary">Submit</button>
 			</div>
 		</form>
