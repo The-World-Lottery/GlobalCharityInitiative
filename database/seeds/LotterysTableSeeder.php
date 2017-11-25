@@ -20,13 +20,12 @@ class LotterysTableSeeder extends Seeder
            	$lottery = new \App\Models\Lottery();
             $lottery->title = 'Daily Lottery';
             $lottery->content = $quoteArr[array_rand($quoteArr)];
-            $initVal = 400000 - $i * 23237.32;
+            $initVal = 400000 - $i * 12237.32;
             $lottery->init_value = $initVal;
             $lottery->current_value =$initVal;
           
             // $lottery->end_date = date("Y-"). $month . '-' . ($i+1) .' 0'. $i.':00:00';
-            $lottery->end_date = date("Y-m_d", time()+(86400*$i));
-        	
+            $lottery->end_date = date("Y-m_d", time()+(86400*$i));    	
             $lottery->user_id = 1;
             $lottery->save();
     	}

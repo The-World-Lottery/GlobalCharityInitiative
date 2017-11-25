@@ -104,22 +104,26 @@
 						<br><strong style="color:#00ffc4;margin-bottom: .5em;">{{$twl[0]->end_date->diffForHumans()}}</strong></p>
 					</div>
 				</div>
-				<div class="col col-xs-12 col-sm-4" id="gameHold" ">
+				<div class="col col-xs-12 col-sm-4" id="gameHold">
 					<div class="splashInfo">
 						<h2>Raffles</h2>
 						<blockquote>When a company wishes to advertise through us they may donate one of their products or services to be raffled off. Celebrities may  donate a day of their time to be raffled off for fans. There will always be a winner of each raffle as long as even one ticket is purchased.</blockquote>
 						
 					</div>
-					<div class="bottomPos">@include('raffles.one')</div>
+					<div class="bottomPos">
+						@include('raffles.one')
+					</div>
 				</div>
-				<div class="col col-xs-12 col-sm-4" id="gameHold" ">
+				<div class="col col-xs-12 col-sm-4" id="gameHold">
 					<div class="splashInfo">
 						<h2>Mixed Lotteries</h2>
 						<blockquote>Each Mixed Lottery is created with an initial donation from TWL. Each ticket purchase increases that individual lottery's jackpot and the current World Lottery Jackpot. There will always be a winner of each mixed lottery as long as even one ticket is purchased.</blockquote>
 						{{-- <div>{{print_r(\App\Models\Lottery::orderBy('current_value','desc')->limit(1)->get()[0]['current_value'])}}
 						</div> --}}
-					</div class="bottomPos">
-					@include('lotteries.one')
+					</div>
+					<div class="bottomPos">
+						@include('lotteries.one')
+					</div>
 				</div>
 			</div>
 
