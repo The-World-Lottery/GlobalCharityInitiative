@@ -53,28 +53,11 @@
 	          </ul>
 	        </li>
 	        @endif
-    {{-- 	@if(Auth::check() && Auth::user()->is_admin)
-    		<li>
-    			<a href="{{action('LotteriesController@adminIndex')}}">
-				<span class="navLink">Manage Lotteries</span>
-				</a>
-			</li>
-			<li>
-				<a href="{{action('RafflesController@adminIndex')}}">
-				<span class="navLink">Manage Raffles</span>
-				</a>
-			</li>
-			<li>
-				<a href="{{action('UsersController@index')}}">
-				<span class="navLink">Manage Users</span>
-				</a>
-			</li>
-			<li>
-				<a href="{{action('SuggestionsController@adminIndex')}}">
-				<span class="navLink">Manage Suggestions</span>
-				</a>
-			</li>
-		@endif --}}
+	      <li class="headLinks">
+          	<a href="{{action('TheWorldLotterysController@selectNumbers')}}">
+          	<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+          	<span class="navLink">World Lottery</span></a>
+          </li>
           <li class="headLinks">
           	<a href="{{action('RafflesController@index')}}">
           	<span class="glyphicon glyphicon-gift" aria-hidden="true"></span>

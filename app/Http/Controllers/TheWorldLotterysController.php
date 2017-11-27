@@ -158,9 +158,8 @@ class TheWorldLotterysController extends Controller
 
     public function selectNumbers()
     {
-
-
-        return view('theworldlottery.select');
+        $theWorldLottery = TheWorldLottery::find(1);
+        return view('theworldlottery.select')->with(array('theWorldLottery' => $theWorldLottery));
     }
 
         public function storeNumbers(Request $request)
@@ -173,6 +172,10 @@ class TheWorldLotterysController extends Controller
             $newArr = array_keys($requestArr);
             array_shift($newArr);
 
+            if(count($newArr) != 6){
+                $request->session()->flash('errorMessage', 'You must select 5 numbers AND a POWER NUMBER!');
+                return \Redirect::action('TheWorldLotterysController@selectNumbers');
+            };
 
             $userId = \Auth::id();
             $userWallet = UserWallet::find($userId);
@@ -200,8 +203,8 @@ class TheWorldLotterysController extends Controller
             return \Redirect::action('Auth\AuthController@getLogin');
         }
 
-        $request->session()->flash('successMessage', 'You have successfully purchased a LOTTERY ticket! Thank you for your donation and good luck!');
-        return \Redirect::action('TheWorldLotterysController@index');
+        $request->session()->flash('successMessage', 'You have successfully purchased a WORLD LOTTERY ticket! Thank you for your donation and good luck!');
+        return \Redirect::action('TheWorldLotterysController@selectNumbers');
 
        
     }
