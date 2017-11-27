@@ -23,7 +23,7 @@
         @foreach($suggestions as $suggestion)
 
             <a href="{{ action('SuggestionsController@show', $suggestion->id) }}">
-                <h3 class ="suggHead">{{$suggestion->title}}</h3>
+                <div class ="suggHead">{{$suggestion->title}}</div>
             </a>
             <a href="{{action('SuggestionsController@upvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
             <a href="{{action('SuggestionsController@downvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-down"></span></a>

@@ -300,6 +300,7 @@ ul.pagination {
 	color:#3cc2d0;
 	margin-top: .5em;
 	text-decoration:underline;
+	font-size:1.2em;
 }
 
 .suggHead:hover {
@@ -355,13 +356,17 @@ td {
 	font-size:1em;
 }
 
+.greenTxt {
+	color:lightgreen;
+}
+
 
 
 .cleargreenBtn {
 	margin:0em 0 0em 0;
 	color:lightgreen !important;
 	border:3px solid lightgreen;
-	min-width:6em;
+	min-width:4em;
 	/*border-radius:2em;*/
 	text-align:center;
 	font-size:1.2em;

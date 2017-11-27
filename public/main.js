@@ -175,4 +175,9 @@ $(document).ready(function(){
     //     $(this).find('div:first').hide();
     // });
 
+    $('.nav.navbar-nav > li > a').on('click', function(e) {
+	    $('.nav.navbar-nav > li > a').removeClass('active');
+	    $(this).addClass('active');
+	}); 
+
 });
