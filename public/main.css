@@ -30,11 +30,6 @@ input[type=checkbox] {
 	line-height: 2em;
 }
 
-.btn {
-	/*background-color: rgba(0,0,0,0);*/
-	/*border-width:3px;*/
-}
-
 .navIcons {
 	width:2.5em;
 	height:2.5em;
@@ -92,9 +87,6 @@ button.navbar-toggle {
 	color:white;
 }
 
-/*#mobileCar1 {
-	display:none;
-}*/
 
 .modal-backdrop {
 	z-index:0;
@@ -110,7 +102,6 @@ button.navbar-toggle {
 	background-position:center top;
 	background-size: auto 100%;
 	text-align:center;
-	/*border-radius:1em;*/
 	min-height:14.5em;
 	min-width:100%;
 	/*padding:.2em ;*/
@@ -127,6 +118,7 @@ button.navbar-toggle {
 	border:1px solid white;
 	min-height:100%;
 	margin-bottom:1em;
+	padding-top:.5em;
 }
 
 .lotteryPadding {
@@ -148,10 +140,6 @@ button.navbar-toggle {
 .raffleContents	{
 	display:none;
 }
-
-/*.raffleCont:hover {
-	background-size: 130% 130%;
-}*/
 
 .socialIcon {
 	height:2.5em;
@@ -178,17 +166,16 @@ span.help-block {
 
 
 .indivLottoCont{
-	/*position:relative;*/
+
 	background-position:center;
 	background-size:110% 110%;
 	text-align:center;
 	width:100%;
 	border:1px solid white;
-	/*border-radius:1em;*/
-	/*height:9em;*/
+
 	padding:.7em 0em 0em 0em ;
 	margin:0 0 10px 0;
-	/*overflow:hidden;*/
+
 	background-color:rgba(255,255,255,.08);
 }
 
@@ -198,12 +185,6 @@ span.help-block {
 	/*border-radius: 1em;*/
 }
 
-.indivLottoCont:hover{
-	/*background-color:rgba(255,255,255,.4);
-	border:1px solid lightgreen;*/
-
-}
-
 #main {
 	/*background-color:rgba(0,0,0,1);*/
 	color:white;
@@ -211,31 +192,11 @@ span.help-block {
 	top:0;
 }
 
-/*::-webkit-input-placeholder {
-  color: lightgreen !important;
-  opacity:1;
-}
-:-ms-input-placeholder {
-  color: lightgreen !important;
-  opacity:1;
-}
-::-moz-placeholder {
-  color: lightgreen !important;
-  opacity: 1;
-}
-:-moz-placeholder {
-  color: lightgreen !important;
-  opacity: 1;
-}*/
+
 
 .infoHeaders {
 	color:lightblue;
 }
-
- /*content right side*/
-/*.gameAndChatInfo {
-	min-height:100vh; 
-}*/
 
 #chat {
 	margin-right:-1em;
@@ -261,8 +222,6 @@ span.help-block {
 	background-color:rgba(0,0,0,.5);
 	opacity:1;
 }
-
-
 
 #gameArea {
 	padding:0;
@@ -345,11 +304,8 @@ ul.pagination {
 	padding: 1em;
 }
 
-
 td {
 	background-color:rgba(0,0,0,0);
-	/*overflow:hidden;*/
-
 }
 
 .btn {
@@ -360,35 +316,22 @@ td {
 	color:lightgreen;
 }
 
-
-
 .cleargreenBtn {
 	margin:0em 0 0em 0;
 	color:lightgreen !important;
 	border:3px solid lightgreen;
 	min-width:4em;
-	/*border-radius:2em;*/
 	text-align:center;
 	font-size:1.2em;
 	background-color:rgba(0,0,0,0);
 	padding:.2em 1em 0em 1em;
 }
 
-
-
-
-
 .btn-success:hover {
 	color:white !important;
 	border-color:lightgreen;
 	background-color:lightgreen;
 }
-
-.btn {
-	/*border-radius:10em;*/
-}
-
-
 
 .headUN {
 	margin-top: 3em;
@@ -439,8 +382,6 @@ label {
 	width: 20px;
 	height: 50px;
 	vertical-align: -18px;
-	
-
 }
 
 .creatorsSocialIcons {
@@ -473,17 +414,8 @@ a:hover, a:active {
 	color:#3cc2d0;
 }
 
-
-
 input, button {
 	outline:none;
-}
-
-
-
-.adminNavs {
-	padding:.5em;
-	/*color:yellow;*/
 }
 
 #menu {
@@ -494,7 +426,6 @@ input, button {
 
 .navButton {
 	margin:.18em 0 .18em 0;
-
 }
 
 .auto2 {
@@ -511,7 +442,6 @@ input, button {
 }
 
 #footer {
-	/*background-color: rgba(0,0,0,.62);*/
 	background-color: #32809a;
 }
 
@@ -523,8 +453,6 @@ input, button {
 	text-align:center;
 }
 
-
-
 #backgroundPic {
 	min-width:1280px;
 }
@@ -533,7 +461,6 @@ input, button {
 	height:7em;
 	width:7em;
 	opacity:.0;
-	
 }
 
 #splashImageHolder {
@@ -541,27 +468,22 @@ input, button {
 	justify-content: center;
 	position:fixed;
 	bottom:2vh;
-	width:100%;
-	
+	width:100%;	
 }
 
 .splashInfo {
 	padding:0em;
 	min-height:16em;
-	/*border:1px solid black;*/
 	text-align: center;
 }
 
 .stepInfoBoxes {
 	border-radius: 2em;
 	padding:0em 2em 0em 2em;
-	/*border:2px solid white;*/
-	/*font-size:1.2em;*/
 }
 
 .infoRows {
 	padding:0em 0 0em 0;
-	/*background-color:rgba(23,90,145,.4);*/
 	font-size: 100%;
 }
 
@@ -573,7 +495,6 @@ input, button {
 
 #splash4 {
 	background-color: #32809a;
-	/*background-color: rgba(23,90,145,.4)*/
 }
 
 #gameHold {
@@ -603,20 +524,13 @@ blockquote {
 	font-weight: bold;
 	font-size:2.7em;
 }
+
 #splashPar {
 	font-size: 1.5em;
-	
 }
-
-
 
 .splashPar {
 	font-size: 1.5em;
-}
-
-#splashBod {
-	/*text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;*/
-
 }
 
 #splashBod a {
@@ -642,17 +556,7 @@ blockquote {
 	padding:2em .5em 2.5em .5em;
 }
 
-
-
-
-
-
-
 @media screen and (min-width: 768px) {
-
-	#raffleHolder {
-		/*min-height: em;*/
-	}
 
 	#splash2 {
 		font-size:100%;
@@ -666,7 +570,6 @@ blockquote {
 	.stepInfoBoxes {
 		border-radius: 2em;
 		padding:1em 2em 3em 2em;
-		/*border:2px solid white;*/
 		font-size:1.1em;
 	}
 
@@ -679,7 +582,6 @@ blockquote {
 	#mobileCar2 {
 		display:none;
 	}
-
 
 	#backgroundPic {
 		min-width:100vw;
@@ -695,7 +597,6 @@ blockquote {
 
 	#splashPar {
 		font-size:2em;
-
 	}
 
 	#splashHeader {
@@ -705,7 +606,7 @@ blockquote {
 	}
 
 	.authSpacer {
-		margin-top:4em;
+		margin-top:1em;
 	}
 
 	.raffleCont {
@@ -733,15 +634,12 @@ blockquote {
 		height:86.5vh;
 	}
 
-
 	#main {
 		width:100%;
-		/*background-color:rgba(0,0,0,.85);*/
 		font-size:1em;
 		position:fixed;		
 	}
 	
-
 	.chatInfoContSpacing {
 		padding:0;
 	}
@@ -758,27 +656,12 @@ blockquote {
 		height:38vh;
 	}
 
-	#backgroundPic {
-	}
-
-	.flip-container, .front, .back {
-		width: 13.3em;
-		height: 37vh;
-		text-align:center;
-	}
-
 	#mobileChatHide {
 		display:block;
 	}
 
 	.walletPadding {
 		margin:.1em;
-	}
-
-	#sidebar {
-		/*background-color:rgba(0,0,0,.6);*/
-		/*position:fixed;
-		right:0;*/
 	}
 
 	.navButton {
@@ -794,7 +677,6 @@ blockquote {
 
 	#footer {
 		height:7.5vh;
-		/*overflow: scroll;*/
 	}
 
 	#twlButton {
@@ -833,4 +715,42 @@ blockquote {
 	.paddingMobile2 {
 		padding-top:9em;
 	}
+}
+
+@media (max-width: 991px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
 }

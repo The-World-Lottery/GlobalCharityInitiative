@@ -16,8 +16,11 @@
 	<main class="container" style="max-width:100%;">
 		{{-- <div> --}}
 			@if (session()->has('successMessage'))
-            <div class="alert alert-success">{{ session('successMessage') }}</div>
-        	@endif
+		        <div class="alert alert-success text-center">{{ session('successMessage') }}</div>
+		    @endif
+		    @if (session()->has('errorMessage'))
+		        <div class="alert alert-warning text-center">{{ session('errorMessage') }}</div>
+		    @endif
 			<div class="row">
 				
 				@foreach($lotteries as $lottery)

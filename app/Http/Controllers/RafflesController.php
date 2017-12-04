@@ -89,6 +89,7 @@ class RafflesController extends Controller
             dd($e);
         }
 
+        $request->session()->flash('successMessage', 'You have successfully purchased a Raffle Ticket');
         return \Redirect::action('RafflesController@index');
 
     }
@@ -275,7 +276,7 @@ class RafflesController extends Controller
 
         // $request->session()->flash('successMessage', 'lottery updated');
 
-        return \Redirect::action('LotteriesController@show', $lottery->id);
+        return \Redirect::action('RafflesController@show', $raffle->id);
     }
 
     /**

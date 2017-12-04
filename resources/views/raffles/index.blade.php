@@ -17,9 +17,12 @@
 
 <div class="container">
 
-		@if (session()->has('successMessage'))
-            <div class="alert alert-success">{{ session('successMessage') }}</div>
-        @endif
+	@if (session()->has('successMessage'))
+        <div class="alert alert-success text-center">{{ session('successMessage') }}</div>
+    @endif
+    @if (session()->has('errorMessage'))
+        <div class="alert alert-warning text-center">{{ session('errorMessage') }}</div>
+    @endif
 
 	<div class="row">
 		@foreach($raffles as $raffle)
@@ -28,7 +31,7 @@
 				<div id="raffleHolder">
 					<div class="raffleCont" style='background-image:url("{{$raffle->img}}");'>
 					</div>
-					
+
 					<div class="raffleInfo">
 						@if (\Auth::check())
 							<div style="margin-bottom:1em;">

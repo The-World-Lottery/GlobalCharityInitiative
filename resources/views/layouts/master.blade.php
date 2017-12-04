@@ -18,44 +18,6 @@
 	<img id="backgroundPic" class="center-block" style="opacity:.41;height:100%;" src="/images/earthAtNight.jpg">
 		@include('layouts.partials._header')	
 		<div class="row" style="padding-top: 6vh;">
-			{{-- <div id="hider" style="" class="col col-sm-4 color">
-				<div class="row">
-					<div class="col col-xs-12 col-sm-12">
-						<div class="row" style="text-shadow:3px 3px 3px black;text-align:center;padding-top:2vh;">
-							<div class="fontSize" style="color:lightgreen;">
-								The World Lottery
-							</div>
-							<div class="fontSize" style="color:lightgreen;">
-								<b>${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),2,".",",")}}</b>
-							</div>
-							<div class="countdown fontSize" >
-			  					Drawing in:
-			  				</div>
-			  				<div class="fontSize">
-			  					<span id="clock" class="countdown" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span>
-							</div>
-						</div>
-						<div class="text-center">
-							<form action="{{action('TheWorldLotterysController@index')}}">
-								<button id="twlButton" class="btn btn-lg btn-success cleargreenBtn" style="min-width:60%;">Pick Your Numbers</button>
-							</form>
-						</div>
-					</div>
-					<div id="mobileChatHide" class="col col-sm-12 col-xs-12 chatInfoContSpacing">
-						<form style="padding:2em 0 0 0;" action="{{ action('UsersController@comment') }}">
-						{!! csrf_field() !!}
-							<input type="text" autocomplete="off" style="padding:.5em;margin-bottom:.5em;border:0;border-bottom:1px solid white;color:white;width:100%;background-color:rgba(0,0,0,0);" placeholder="Say Something!" name="comment">
-							<button hidden type="submit">Add comment</button>
-						</form>
-						<div class="chatInfoMargins borderOpac" id="chat">
-							@foreach(\App\Models\UserComment::orderBy('created_at','desc')->limit(60)->get() as $comment)
-								<span style="padding-left:.5em;"><u style="color:lightgreen;">{{ \App\User::select('username')->where('id',$comment->user_id )->get()[0]['username']}}-</u></span>
-								<span class="commentSpacing" style="padding-left:.2em;">{{$comment->content}}</span><br>
-							@endforeach
-						</div>
-					</div>
-				</div>
-			</div> --}}
 			<div id="gameScroll" style="font-size:1.2em;" class="col col-sm-12">
 				<div class="text-center">
 					@yield('divHead')
@@ -68,11 +30,15 @@
 			<div class="col col-xs-12 col-sm-4">
 				<div class="col col-xs-12">
 					<div id="googlepos">
-						<div  id="google_translate_element"></div><script type="text/javascript">
+
+						<div  id="google_translate_element"></div>
+						<script type="text/javascript">
 						function googleTranslateElementInit() {
 						  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
 						}
 						</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
 					</div>
 				</div>
 			</div>

@@ -7,7 +7,7 @@
 @stop
 
 @section('divHead')
-<h2>The World Lottery</h2>
+<h1>The World Lottery</h1>
 
 @stop
 
@@ -35,11 +35,9 @@
 
 			<form method="GET" action="{{action('TheWorldLotterysController@storeNumbers')}}">
 				<div style="margin-bottom: 2em;" class="col col-md-9 col-xs-12">
-					<h2>Pick any <span class="greenTxt"> 5</span> numbers!</h2>
+					<h2>Pick any <span class="greenTxt"> 5</span> numbers</h2>
 					{!! csrf_field() !!}
 					@for($i = 1; $i <= 100; $i++)
-
-				
 						<div style="float:left;position:relative;display:flex;justify-content:center;">
 							<span style="position:absolute;top:10%;">{{$i}}</span>
 							<input class="numCheckbox" type="checkbox" name="{{$i}}">
@@ -48,14 +46,14 @@
 					@endfor
 				</div>
 				<div style="margin-bottom: 2em;" class="text-center col col-md-3 col-xs-12">
-					<h2>And select your<br><span class="greenTxt">KEY</span> NUMBER</h2>
+					<h2>And select your<br><span class="greenTxt">KEY</span> number</h2>
 					<select class="selectpicker text-center" name="powerNumber"> 
 						@for($i = 1; $i <= 100; $i++)
 							<option value="{{$i}}">{{$i}}</option>
 						@endfor
 					</select>
 					<br>
-					<br>
+					<h2>Then</h2>
 					<button class="btn btn-success cleargreenBtn">Submit Numbers</button><br><br>
 					@if ((Auth::check()) && (Auth::user()->is_admin))
 						<a href="{{ action('TheWorldLotterysController@edit', $theWorldLottery->id) }}"><button style="margin-bottom: 2em;" class="btn btn-warning">Edit</button></a>

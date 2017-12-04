@@ -10,20 +10,21 @@
 @stop
 
 @section('content')
-<ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
+{{-- <ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
   <li ><a id="zeroO" href="{{action('Auth\AuthController@getLogin')}}">Login</a></li>
   <li class="active"><a  id="zeroO"  href="{{action('Auth\AuthController@getRegister')}}">Register</a></li>
-</ul>
+</ul> --}}
 
 
  <main class="container authSpacer" style="max-width:100%;padding-top:2em;">
+    <h1>Sign In</h1>
     <div class="row">
         <form method="POST" action="/auth/register">
         <div class="col col-xs-12 col-sm-5 col-sm-offset-1">
         {!! csrf_field() !!}
 
             <div class="form-group">
-                {!! $errors->first('name', '<span class="help-block">:message</span>')!!}
+                {!! $errors->first('name', '<span style="color:yellow;" class="help-block">:message</span>')!!}
                 <label for="Input1">Your Name</label>
                 <input class="form-control" autofocus type="text" name="name" id="Input1" value="{{old('name')}}">
             </div>

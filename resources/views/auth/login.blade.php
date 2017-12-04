@@ -11,41 +11,101 @@
 
 @section('content')
 
-<ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
+{{-- <ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
   <li class="active"><a id="zeroO" href="{{action('Auth\AuthController@getLogin')}}">Login</a></li>
   <li><a id="zeroO" href="{{action('Auth\AuthController@getRegister')}}">Register</a></li>
-</ul>
+</ul> --}}
  	<main class="container authSpacer" style="max-width:100%;">
-    <div>
+        <div class="col col-sm-12">
+        <h1>Already have an account?</h1>
 
-        <form method="POST" action="/auth/login">
+           
+            @if (session()->has('errorMessage'))
+                <div class="alert alert-warning text-center">{{ session('errorMessage') }}</div>
+            @endif
+            <form method="POST" action="/auth/login">
             {!! csrf_field() !!}
-            <div style="margin-top:2em;" class="row">
-                @if (session()->has('errorMessage'))
-                    <div class="alert alert-error text-center">{{ session('errorMessage') }}</div>
-                @endif
-                <div class="form-group col col-sm-6 col-sm-offset-3 col-xs-12">
-                    <label><h2>Email</h2></label>
+                <div class="form-group col col-sm-6">
+                    <label>Email</label>
                     {!! $errors->first('email', '<span class="help-block">:message</span>')!!}
                     <input class="form-control" autofocus type="email" name="email" value="{{ old('email') }}">
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col col-sm-6 col-sm-offset-3 col-xs-12">
-                    <label><h2>Password</h2></label>
+                </div>  
+                <div class="form-group col col-sm-6">
+                    <label>Password</label>
                     {!! $errors->first('password', '<span class="help-block">:message</span>')!!}
                     <input class="form-control" type="password" name="password" id="password">
                 </div>
+                <div class="form-group">
+                    <input type="checkbox" name="remember"> Remember Me
+                </div>
+                <div class="form-group" style="display:flex;justify-content: center;">
+                    <button style="margin-bottom:.5em;" class="btn btn-success cleargreenBtn" type="submit">Login</button>
+                </div>
+            </form>
+        </div>   
+
+
+    {{-- //register --}}
+
+
+        <div class="col col-sm-12">
+            <h1>Dont have an aacount?</h1>
+            <div class="col col-xs-12 col-sm-6">
+
+            <form method="POST" action="/auth/register">
+                {!! csrf_field() !!}
+
+                <div class="form-group">
+                    {!! $errors->first('name', '<span style="color:yellow;" class="help-block">:message</span>')!!}
+                    <label for="Input1">Your Name</label>
+                    <input class="form-control" autofocus type="text" name="name" id="Input1" value="{{old('name')}}">
+                </div>
+
+
+                <div class="form-group">
+                    {!! $errors->first('email', '<span class="help-block">:message</span>')!!}
+                    <label for="Input2">Email</label>
+                    <input class="form-control" type="email" name="email" id="Input2" value="{{old('email')}}">
+                </div>
+
+                <div class="form-group">
+                    {!! $errors->first('username', '<span class="help-block">:message</span>')!!}
+                    <label for="Input3">Username</label>
+                    <input class="form-control" type="text" name="username" id="Input3" value="{{old('username')}}">
+                </div>
+                <div class="form-group" hidden>
+                    <label for="Input5">Profile Image</label>
+                    <input class="form-control" id="img" type="text" name="image" id="Input5" value="{{old('image')}}"><br>
+                </div>
+                    <a id="filestackButton" class="btn btn-secondary">Use Filestack Image Hosting</a>
             </div>
-            <div class=" col-sm-offset-5 form-group">
-                <input type="checkbox" name="remember"> Remember Me
+            <div class="col col-xs-12 col-sm-6">
+
+                <div class="form-group">
+                    {!! $errors->first('phone_number', '<span class="help-block">:message</span>')!!}
+                    <label for="Input4">Phone Number</label>
+                    <input class="form-control" type="text" name="phone_number" id="Input4" value="{{old('phone_number')}}">
+                </div>
+
+
+                <div class="form-group">
+                    {!! $errors->first('password', '<span class="help-block">:message</span>')!!}
+                    <label for="Input6">Password</label>
+                    <input class="form-control" type="password" name="password" id="Input6" value="{{old('password')}}">
+                </div>
+
+                <div class="form-group">
+                    {!! $errors->first('password', '<span class="help-block">:message</span>')!!}
+                    <label for="formGroupExampleInput7">Confirm Password</label>
+                    <input class="form-control" type="password" name="password_confirmation" id="formGroupExampleInput7" value="">
+                </div>
+
             </div>
-            <div class="form-group" style="display:flex;justify-content: center;">
-                <button style="margin-bottom:2em;" class="btn btn-success cleargreenBtn" type="submit">Login</button>
+            <div class="form-group col col-sm-12" style="margin-bottom:3em;display:flex;justify-content: center;">
+                <button type="submit" class="btn btn-success cleargreenBtn">Register Account</button>
             </div>
-            
-        </form>
-         </div>   
+            </form>
+        </div>
     </main>
 
 @stop
