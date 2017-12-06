@@ -26,7 +26,7 @@
 				@foreach($lotteries as $lottery)
 					
 				{{-- <a class="" href="{{ action('LotteriesController@show', $lottery->id) }}"> --}}
-					<div class="col col-sm-4  col-xs-12 lotteryPadding">
+					<div class="col col-sm-4 col-xs-12 lotteryPadding">
 						<div class="indivLottoCont">
 						<h2>
 							{{$lottery->title}}
@@ -50,7 +50,9 @@
 				{{-- </a> --}}
 				@endforeach
 		</div>
-		<div style="text-align:center;padding-right:1em;">{!! $lotteries->appends(Request::except('page'))->render() !!}</div>
+		<div style="text-align:center;padding-right:1em;">
+			{!! $lotteries->appends(Request::except('page'))->render() !!}
+		</div>
 		<br>
 	
 	</main>

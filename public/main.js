@@ -1,4 +1,4 @@
-	
+
 $(document).ready(function(){
 
 	//filestack js for click on register
@@ -25,14 +25,12 @@ $(document).ready(function(){
 	    }
 	});
 
-
 	$('body').on('click', function(){
 		// console.log("stuff");
 		if($('#img').val().length > 5){
 			var sanitizedSource = $('#img').val().replace(/"/g, "");
 			$('#editImg').attr('src', sanitizedSource);
 		}
-
 	});
 
 	//countdown times for end_date

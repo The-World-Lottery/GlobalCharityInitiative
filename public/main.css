@@ -1,3 +1,12 @@
+body {
+    opacity: 1;
+    transition: 1s opacity;
+}
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
 body#master {
 	color:#e0fff8;
 	background-color:#1b446f;
@@ -87,14 +96,12 @@ button.navbar-toggle {
 	color:white;
 }
 
-
 .modal-backdrop {
 	z-index:0;
 }
 
 .icon-bar#headLinks {
   background: white !important;
-  /*color: white !important;*/
 }
 
 .raffleCont {
@@ -104,14 +111,9 @@ button.navbar-toggle {
 	text-align:center;
 	min-height:14.5em;
 	min-width:100%;
-	/*padding:.2em ;*/
-	/*margin:1%;*/
 	overflow:hidden;
-	/*transition: background-size .5s ease-in;*/
-	/*box-shadow: 12px 12px 12px rgba(0,0,0,.8);*/
-	 background-repeat: no-repeat;
-	 background-color: rgba(0,0,0,.3);
-
+	background-repeat: no-repeat;
+	background-color: rgba(0,0,0,.3);
 }
 
 #raffleHolder {
@@ -131,14 +133,6 @@ button.navbar-toggle {
 	height:13em;
 	overflow:hidden;
 	background-color: rgba(0,0,0,.3);
-}
-
-.ticketHead {
-	color:yellow;
-}
-
-.raffleContents	{
-	display:none;
 }
 
 .socialIcon {
@@ -166,33 +160,26 @@ span.help-block {
 
 
 .indivLottoCont{
-
 	background-position:center;
 	background-size:110% 110%;
 	text-align:center;
 	width:100%;
 	border:1px solid white;
-
 	padding:.7em 0em 0em 0em ;
 	margin:0 0 10px 0;
-
 	background-color:rgba(255,255,255,.08);
 }
 
 .lottoInfo {
 	background-color:rgba(0,0,0,.5);
 	padding:.5em .2em .5em .2em;
-	/*border-radius: 1em;*/
 }
 
 #main {
-	/*background-color:rgba(0,0,0,1);*/
 	color:white;
 	z-index:0;
 	top:0;
 }
-
-
 
 .infoHeaders {
 	color:lightblue;
