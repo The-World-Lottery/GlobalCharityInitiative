@@ -164,48 +164,64 @@ class TheWorldLotterysController extends Controller
 
         public function storeNumbers(Request $request)
     {
-        if(\Auth::check()){
+        if(!\Auth::check()){
+            $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
+            return \Redirect::action('Auth\AuthController@getLogin');
+        } else {
             $requestArr = $request->input();
 
             $powerNum = $requestArr['powerNumber'];
 
             $newArr = array_keys($requestArr);
             array_shift($newArr);
-
-            if(count($newArr) != 6){
+            if(count($newArr) != 10)
+            {
                 $request->session()->flash('errorMessage', 'You must select 5 numbers AND a POWER NUMBER!');
                 return \Redirect::action('TheWorldLotterysController@selectNumbers');
-            };
+            } else {
 
-            $userId = \Auth::id();
-            $userWallet = UserWallet::find($userId);
-            $userWallet->usd -= 2;
-            $userWallet->save();
+                try {
+                    \Stripe\Stripe::setApiKey("sk_test_ZzKGRiePc0b4mGyYiwkRnPEy");
+
+                    $token = \Input::get('stripeToken');
+                    // $amount = \Input::get('amount');
+
+                    $userId = \Auth::id();
+                    $charge = \Stripe\Charge::create(array(
+                            "amount"=> 200,
+                            "currency"=>"usd",
+                            "card"=> $token,
+                            "description"=>$userId ));
+
+                    $userId = \Auth::id();
+                    $userWallet = UserWallet::find($userId);
+                    $userWallet->usd -= 2;
+                    $userWallet->save();
 
 
-            $currLottery = TheWorldLottery::find(1);
-            $currLottery->current_value += 2;
-            $currLottery->save();
+                    $currLottery = TheWorldLottery::find(1);
+                    $currLottery->current_value += 2;
+                    $currLottery->save();
 
 
-            $entry = new TheWorldLotteryEntry();
-            $entry->first_num = $newArr[0];
-            $entry->second_num = $newArr[1];
-            $entry->third_num = $newArr[2];
-            $entry->fourth_num = $newArr[3];
-            $entry->fifth_num = $newArr[4];
-            $entry->key_num = $powerNum;
-            $entry->user_id = \Auth::id();
-            $entry->the_world_lottery_id = 1;
-            $entry->save();
-        } else {
-            $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
-            return \Redirect::action('Auth\AuthController@getLogin');
-        }
+                    $entry = new TheWorldLotteryEntry();
+                    $entry->first_num = $newArr[0];
+                    $entry->second_num = $newArr[1];
+                    $entry->third_num = $newArr[2];
+                    $entry->fourth_num = $newArr[3];
+                    $entry->fifth_num = $newArr[4];
+                    $entry->key_num = $powerNum;
+                    $entry->user_id = \Auth::id();
+                    $entry->the_world_lottery_id = 1;
+                    $entry->save();
+
+                } catch (\Stripe\Error\Card $e){
+                dd($e);
+            }
 
         $request->session()->flash('successMessage', 'You have successfully purchased a WORLD LOTTERY ticket! Thank you for your donation and good luck!');
         return \Redirect::action('TheWorldLotterysController@selectNumbers');
-
-       
+        }
+    }
     }
 }

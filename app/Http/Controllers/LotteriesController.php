@@ -47,6 +47,10 @@ class LotteriesController extends Controller
 
     public function chargeCard(Request $request, $id)
     {
+        if(!\Auth::check()){
+            $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
+            return \Redirect::action('Auth\AuthController@getLogin');
+        }
 
         \Stripe\Stripe::setApiKey("sk_test_ZzKGRiePc0b4mGyYiwkRnPEy");
 
@@ -89,6 +93,7 @@ class LotteriesController extends Controller
             dd($e);
         }
 
+        $request->session()->flash('successMessage', 'You have successfully purchased a Lottery Ticket');
         return \Redirect::action('LotteriesController@index');
 
     }

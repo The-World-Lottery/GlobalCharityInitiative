@@ -33,7 +33,18 @@
 
 		<div class="row" id="checkWrapper">
 
-			<form method="GET" action="{{action('TheWorldLotterysController@storeNumbers')}}">
+			<form method="POST" action="/twlCheckout">
+			<script
+			    src="https://checkout.stripe.com/checkout.js"
+			  	class="stripe-button"
+				data-key="pk_test_9QXLVB6tbq67JmuGwWGco2uX"
+				data-amount="200"
+				data-name="WorldLottery"
+				data-description="Widget"
+				data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+				data-locale="auto"
+				data-zip-code="true">
+			  </script>
 				<div style="margin-bottom: 2em;" class="col col-md-9 col-xs-12">
 					<h2>Pick any <span class="greenTxt"> 5</span> numbers</h2>
 					{!! csrf_field() !!}
@@ -54,17 +65,23 @@
 					</select>
 					<br>
 					<h2>Then</h2>
+
 					<button class="btn btn-success cleargreenBtn">Submit Numbers</button><br><br>
+				</div>
+			  <input type="hidden" name="_token" value="{{ csrf_token() }}">
+			  <input type="hidden" name="amount" value="200">
+			</form>
 					@if ((Auth::check()) && (Auth::user()->is_admin))
 						<a href="{{ action('TheWorldLotterysController@edit', $theWorldLottery->id) }}"><button style="margin-bottom: 2em;" class="btn btn-warning">Edit</button></a>
 
 					@endif
-				</div>
-			</form>
 		</div>
 		<br>
 
 
 	</main>
-	
+
+	{{-- <form id="twlForm" method="POST">
+	  
+	</form>	 --}}
 @stop

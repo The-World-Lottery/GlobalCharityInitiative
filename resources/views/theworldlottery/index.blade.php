@@ -34,4 +34,21 @@
 
 	</main>
 
+	<form id="twlForm" method="POST" action="/twlCheckout">
+	  <script
+	    src="https://checkout.stripe.com/checkout.js"
+	  	class="stripe-button"
+		data-key="pk_test_9QXLVB6tbq67JmuGwWGco2uX"
+		data-amount="200"
+		data-name="Raffle"
+		data-description="Widget"
+		data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+		data-locale="auto"
+		data-zip-code="true">
+	  </script>
+	  <input type="hidden" name="_token" value="{{ csrf_token() }}">
+	  <input type="hidden" name="amount" value="200">
+	</form>
+
 @stop
+
