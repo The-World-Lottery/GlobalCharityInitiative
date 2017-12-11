@@ -162,7 +162,7 @@ class TheWorldLotterysController extends Controller
         return view('theworldlottery.select')->with(array('theWorldLottery' => $theWorldLottery));
     }
 
-        public function storeNumbers(Request $request)
+    public function storeNumbers(Request $request)
     {
         if(!\Auth::check()){
             $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');

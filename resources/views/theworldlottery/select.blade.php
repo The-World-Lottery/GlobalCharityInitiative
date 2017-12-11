@@ -53,7 +53,6 @@
 							<span style="position:absolute;top:10%;">{{$i}}</span>
 							<input class="numCheckbox" type="checkbox" name="{{$i}}">
 						</div>
-				
 					@endfor
 				</div>
 				<div style="margin-bottom: 2em;" class="text-center col col-md-3 col-xs-12">
@@ -65,7 +64,6 @@
 					</select>
 					<br>
 					<h2>Then</h2>
-
 					<button class="btn btn-success cleargreenBtn">Submit Numbers</button><br><br>
 				</div>
 			  <input type="hidden" name="_token" value="{{ csrf_token() }}">
