@@ -96,6 +96,10 @@ button.navbar-toggle {
 	color:white;
 }
 
+a.navLink:hover {
+	color:white;
+}
+
 .modal-backdrop {
 	z-index:0;
 }
