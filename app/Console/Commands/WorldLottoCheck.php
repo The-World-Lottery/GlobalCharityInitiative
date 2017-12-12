@@ -39,6 +39,7 @@ class GameTimeCheck extends Command
     {
         $now = date('Y-m-d H:i:s');
         $worldLottos = \App\Models\TheWorldLottery::TheWorldLotteryFunction($now);
+        var_dump($worldLottos);
         if(isset($worldLottos[0]->id)){
             \App\Models\TheWorldLottery::TheWorldLotteryWin($worldLottos[0]->id);
         }                 

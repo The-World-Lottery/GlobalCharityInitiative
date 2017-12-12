@@ -15,6 +15,7 @@ class TheWorldLottery extends Model
 
    	public static function TheWorldLotteryFunction($time){
    		//Find expired World lottos
+      var_dump(TheWorldLottery::where('end_date', '<', $time)->where('complete',0)->get());
    		return TheWorldLottery::where('end_date', '<', $time)->where('complete',0)->get();
    	}
 

@@ -25,10 +25,7 @@
 	</div>
 
 	<main class="container" style="max-width:100%;display:flex;justify-content: center;">
-
-
 		<div class="row" id="checkWrapper">
-
 			<form method="POST" action="/twlCheckout">
 			<script
 			    src="https://checkout.stripe.com/checkout.js"
@@ -71,11 +68,5 @@
 			@endif
 		</div>
 		<br>
-
-
 	</main>
-
-	{{-- <form id="twlForm" method="POST">
-	  
-	</form>	 --}}
 @stop
