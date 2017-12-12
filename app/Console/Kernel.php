@@ -15,7 +15,7 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         Commands\Inspire::class,
         Commands\GameTimeCheck::class,
-        // Commands\WorldLottoCheck::class
+        Commands\WorldLottoCheck::class
     ];
 
     /**
