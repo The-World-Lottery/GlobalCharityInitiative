@@ -33,114 +33,114 @@ $(document).ready(function(){
 		}
 	});
 
-	//countdown times for end_date
-	var wlEndDate = $('#clock').data("clock-id");
-	var wLottoEndDate = $('.worldLottoClock').data("clock-id")
-	var lottoEndDate = $('.lottoClock').data("clock-id")
-	var raffleEndDate = $('.raffleClock').data("clock-id")
+	// //countdown times for end_date
+	// var wlEndDate = $('#clock').data("clock-id");
+	// var wLottoEndDate = $('.worldLottoClock').data("clock-id")
+	// var lottoEndDate = $('.lottoClock').data("clock-id")
+	// var raffleEndDate = $('.raffleClock').data("clock-id")
 
-	$('#clock').countdown(wlEndDate)
-	.on('update.countdown', function(event) {
-		var format = '%H:%M:%S';
-			if(event.offset.totalDays > 0) {
-		format = '%-d day%!d ' + format;
-		}
-		if(event.offset.weeks > 0) {
-		format = '%-w week%!w ' + format;
-		}
-		$(this).html(event.strftime(format));
-	})
-	.on('finish.countdown', function(event) {
-			$(this).html('Drawing Complete!')
-	.parent().addClass('disabled');
+	// $('#clock').countdown(wlEndDate)
+	// .on('update.countdown', function(event) {
+	// 	var format = '%H:%M:%S';
+	// 		if(event.offset.totalDays > 0) {
+	// 	format = '%-d day%!d ' + format;
+	// 	}
+	// 	if(event.offset.weeks > 0) {
+	// 	format = '%-w week%!w ' + format;
+	// 	}
+	// 	$(this).html(event.strftime(format));
+	// })
+	// .on('finish.countdown', function(event) {
+	// 		$(this).html('Drawing Complete!')
+	// .parent().addClass('disabled');
 
-	});
+	// });
 
-	$('.worldLottoClock').countdown(wLottoEndDate)
-	.on('update.countdown', function(event) {
-		var format = '%H:%M:%S';
-			if(event.offset.totalDays > 0) {
-		format = '%-d day%!d ' + format;
-		}
-		if(event.offset.weeks > 0) {
-		format = '%-w week%!w ' + format;
-		}
-		$(this).html(event.strftime(format));
-	})
-	.on('finish.countdown', function(event) {
-			$(this).html('Drawing Complete!')
-	.parent().addClass('disabled');
+	// $('.worldLottoClock').countdown(wLottoEndDate)
+	// .on('update.countdown', function(event) {
+	// 	var format = '%H:%M:%S';
+	// 		if(event.offset.totalDays > 0) {
+	// 	format = '%-d day%!d ' + format;
+	// 	}
+	// 	if(event.offset.weeks > 0) {
+	// 	format = '%-w week%!w ' + format;
+	// 	}
+	// 	$(this).html(event.strftime(format));
+	// })
+	// .on('finish.countdown', function(event) {
+	// 		$(this).html('Drawing Complete!')
+	// .parent().addClass('disabled');
 
-	});
+	// });
 
-	$('.lottoClock').countdown(lottoEndDate)
-	.on('update.countdown', function(event) {
-		var format = '%H:%M:%S';
-			if(event.offset.totalDays > 0) {
-		format = '%-d day%!d ' + format;
-		}
-		if(event.offset.weeks > 0) {
-		format = '%-w week%!w ' + format;
-		}
-		$(this).html(event.strftime(format));
-	})
-	.on('finish.countdown', function(event) {
-			$(this).html('Drawing Complete!')
-	.parent().addClass('disabled');
+	// $('.lottoClock').countdown(lottoEndDate)
+	// .on('update.countdown', function(event) {
+	// 	var format = '%H:%M:%S';
+	// 		if(event.offset.totalDays > 0) {
+	// 	format = '%-d day%!d ' + format;
+	// 	}
+	// 	if(event.offset.weeks > 0) {
+	// 	format = '%-w week%!w ' + format;
+	// 	}
+	// 	$(this).html(event.strftime(format));
+	// })
+	// .on('finish.countdown', function(event) {
+	// 		$(this).html('Drawing Complete!')
+	// .parent().addClass('disabled');
 
-	});
+	// });
 
-		$('.raffleClock').countdown(raffleEndDate)
-	.on('update.countdown', function(event) {
-		var format = '%H:%M:%S';
-			if(event.offset.totalDays > 0) {
-		format = '%-d day%!d ' + format;
-		}
-		if(event.offset.weeks > 0) {
-		format = '%-w week%!w ' + format;
-		}
-		$(this).html(event.strftime(format));
-	})
-	.on('finish.countdown', function(event) {
-			$(this).html('Drawing Complete!')
-	.parent().addClass('disabled');
+	// 	$('.raffleClock').countdown(raffleEndDate)
+	// .on('update.countdown', function(event) {
+	// 	var format = '%H:%M:%S';
+	// 		if(event.offset.totalDays > 0) {
+	// 	format = '%-d day%!d ' + format;
+	// 	}
+	// 	if(event.offset.weeks > 0) {
+	// 	format = '%-w week%!w ' + format;
+	// 	}
+	// 	$(this).html(event.strftime(format));
+	// })
+	// .on('finish.countdown', function(event) {
+	// 		$(this).html('Drawing Complete!')
+	// .parent().addClass('disabled');
 
-	});
+	// });
 
-	//current currency value
-	function coinPriceConversion(){
-		$.ajax({
-			url: 'https://min-api.cryptocompare.com/data/price?fsym=USD&tsyms=BTC,ETH,LTC,BCC,EUR,JPY,GBP,CHF,DOGE,XRP',
-			type: 'GET',
-			dataType: 'json'
-		})
-		.done(function(response) {
-			console.log("success");
-			$('#usdEUR').val(response.EUR);
-			$('#usdJPY').val(response.JPY);
-			$('#usdGBP').val(response.GBP);
-			$('#usdCHF').val(response.CHF);
-			$('#usdBTC').val(response.BTC);
-			$('#usdETH').val(response.ETH);
-			$('#usdLTC').val(response.LTC);
-			$('#usdBCH').val(response.BCC);
-			$('#usdDoge').val(response.DOGE);
-			$('#usdXRP').val(response.XRP);
+	// //current currency value
+	// function coinPriceConversion(){
+	// 	$.ajax({
+	// 		url: 'https://min-api.cryptocompare.com/data/price?fsym=USD&tsyms=BTC,ETH,LTC,BCC,EUR,JPY,GBP,CHF,DOGE,XRP',
+	// 		type: 'GET',
+	// 		dataType: 'json'
+	// 	})
+	// 	.done(function(response) {
+	// 		console.log("success");
+	// 		$('#usdEUR').val(response.EUR);
+	// 		$('#usdJPY').val(response.JPY);
+	// 		$('#usdGBP').val(response.GBP);
+	// 		$('#usdCHF').val(response.CHF);
+	// 		$('#usdBTC').val(response.BTC);
+	// 		$('#usdETH').val(response.ETH);
+	// 		$('#usdLTC').val(response.LTC);
+	// 		$('#usdBCH').val(response.BCC);
+	// 		$('#usdDoge').val(response.DOGE);
+	// 		$('#usdXRP').val(response.XRP);
 
-		})
-		.fail(function() {
-			console.log("error");
-		})
-		.always(function() {
-			console.log("complete");
-		});
-	}
+	// 	})
+	// 	.fail(function() {
+	// 		console.log("error");
+	// 	})
+	// 	.always(function() {
+	// 		console.log("complete");
+	// 	});
+	// }
 
-	coinPriceConversion();
+	// coinPriceConversion();
 
-	setInterval(function(){
-		coinPriceConversion();
-	},30000);
+	// setInterval(function(){
+	// 	coinPriceConversion();
+	// },30000);
 
     //click for summaries
     $('#hoverTrigger').click(function(){

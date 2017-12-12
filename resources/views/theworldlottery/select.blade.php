@@ -12,15 +12,10 @@
 @stop
 
 @section('content')
-	
-
 	<div class="container text-center">
-		{{-- <div class="col-sm-7 col"> --}}
-			<h4 id="jackpot" style="color:lightgreen;"><strong >Jackpot - </strong>${{number_format($theWorldLottery->current_value,0,".",",")}}</h4>
-		{{-- </div>
-		<div class="col-sm-5 col"> --}}		
-			<h4 style="color:#00ffc4;">Drawing takes place in: <span class="worldLottoClock" data-clock-id="{{\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']}}"></span></h4>
-		{{-- </div> --}}
+		<h4 id="jackpot" style="color:lightgreen;"><strong >Jackpot - </strong>${{number_format($theWorldLottery->current_value,0,".",",")}}</h4>		
+		<h4 style="color:#00ffc4;">Drawing takes place:<br>
+		{{ \App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']->diffForHumans() }}</h4>
 		@if (session()->has('successMessage'))
 	        <div class="alert alert-success text-center">{{ session('successMessage') }}</div>
 	    @endif
@@ -28,6 +23,7 @@
 	        <div class="alert alert-warning text-center">{{ session('errorMessage') }}</div>
 	    @endif
 	</div>
+
 	<main class="container" style="max-width:100%;display:flex;justify-content: center;">
 
 

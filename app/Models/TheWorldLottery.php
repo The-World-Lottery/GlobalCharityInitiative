@@ -42,9 +42,13 @@ class TheWorldLottery extends Model
         $theWorldLottery->title = 'TheWorldLottery';
         $theWorldLottery->init_value = $nextWorldCut;
         $theWorldLottery->current_value = $nextWorldCut;
-        $theWorldLottery->end_date = date("Y-m_d", time() + 1209600);
+
+        $date = new DateTime(date('Y-m-d H:i:s'));
+        $date->add(new DateInterval('P14D'));
+        $theWorldLottery->end_date = $date->format('Y-m-d H:i:s');
+
         $theWorldLottery->user_id = 1;
-        $theWorldLottery->winner_id = 1;
+        $theWorldLottery->winner_id = $winners[0]['id'];
         $theWorldLottery->save();
 	   		TheWorldLottery::where('id', $id)->update(['winner_id' => $winner[0]]);
 
@@ -54,7 +58,11 @@ class TheWorldLottery extends Model
         $theWorldLottery->title = 'TheWorldLottery' + ($id + 1);
         $theWorldLottery->init_value = $biglot;
         $theWorldLottery->current_value = $biglot;
-        $theWorldLottery->end_date = date("Y-m_d", time()+ 1209600);
+
+        $date = new DateTime(date('Y-m-d H:i:s'));
+        $date->add(new DateInterval('P14D'));
+        $theWorldLottery->end_date = $date->format('Y-m-d H:i:s');
+
         $theWorldLottery->user_id = 1;
         $theWorldLottery->complete = 0;
         $theWorldLottery->winner_id = 0;
@@ -70,16 +78,13 @@ class TheWorldLottery extends Model
    	
 
    	public function theWorldLotteryEntries()
-
     {
         return $this->hasMany('App\Models\TheWorldLotteryEntry','the_world_lottery_id');
     }
 
-	public function getEndDateAttribute($value)
-	{
-		$utc = \Carbon\Carbon::createFromFormat($this->getDateFormat(), $value);
-
-		return $utc;
-	
-	}
+  	public function getEndDateAttribute($value)
+  	{
+  		$utc = \Carbon\Carbon::createFromFormat($this->getDateFormat(), $value);
+  		return $utc;
+  	}
 }
