@@ -8,7 +8,7 @@
 
 @section('divHead')
 
-<span>Raffle #{!! $raffle->id !!} </span>
+{{-- <span>Raffle #{!! $raffle->id !!} </span> --}}
 
 @stop
 

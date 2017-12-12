@@ -162,7 +162,6 @@ span.help-block {
 	color:yellow !important;
 }
 
-
 .indivLottoCont{
 	background-position:center;
 	background-size:110% 110%;
@@ -255,7 +254,6 @@ ul.pagination {
 
 .suggHead:hover {
 	color:lightgreen;
-	font-style: italic;
 }
 
 
@@ -547,6 +545,16 @@ blockquote {
 	padding:2em .5em 2.5em .5em;
 }
 
+.paddingMobile {
+	padding-top:2em;
+	padding-bottom:3em;
+}
+
+.paddingMobile2 {
+	padding-top:2em;
+	padding-bottom:3em;
+}
+
 @media screen and (min-width: 768px) {
 
 	#splash2 {
@@ -704,7 +712,7 @@ blockquote {
 	}
 
 	.paddingMobile2 {
-		padding-top:4em;
+		padding-top:6em;
 	}
 }
 

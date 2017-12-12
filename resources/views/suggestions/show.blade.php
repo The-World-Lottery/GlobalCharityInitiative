@@ -2,7 +2,7 @@
 
 @section('title')
 
-<title>Single suggestion</title>
+{{-- <title>Suggestion</title> --}}
 
 @stop
 
@@ -16,10 +16,12 @@
 
 	<main class="container" style="max-width:100%;">
 
-		<h2>{{$suggestion['title']}}</h2>
+		<h2 class="text-center">{{$suggestion['title']}}</h2>
 		@if(Auth::check())
+		<div style="display:flex;justify-content: center;">
 			<a href="{{action('SuggestionsController@upvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
 	        <a href="{{action('SuggestionsController@downvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-down"></span></a>
+	    </div>
 	    @endif
 		<p>{{$suggestion['content']}}</p>
 		<p>By {{$suggestion->user->name}}</p>

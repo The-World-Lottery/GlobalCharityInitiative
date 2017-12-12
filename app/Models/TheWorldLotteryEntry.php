@@ -18,40 +18,46 @@ class TheWorldLotteryEntry extends Model
    		return $this->belongsTo('App\Models\TheWorldLottery','the_world_lottery_id');
     }
 
-    public static function findWinners(){
+    public static function findWinners($id){
     	$numb = [];
-      	for($i = 0;$i < 6; $i++){
-      		$numb[] = rand(0,100);
-  		}
+      	for($i = 0;$i < 5; $i++){
+          $randNum = rand(0,100);
+          if(!in_array($randNum, $mainNumArray)){
+      		  $mainNumArray[] = $randNum;
+          }
+    		}
+        $key = rand(0,100);
   		$peeps = TheWorldLotteryEntry::where('the_world_lottery_id' , $id)->get();
   		foreach ($peeps as $peep) {
   			$x = 0;
-  			if($peep->first_num == $numb[0]){
-  				$x++; 
-  			}
-  			if($peep->second_num == $numb[1]){
-  				$x++; 
-  			}
-  			if($peep->third_num == $numb[2]){
-  				$x++; 
-  			}
-  			if($peep->fourth_num == $numb[3]){
-  				$x++; 
-  			}
-  			if($peep->fifth_num == $numb[4]){
-  				$x++; 
-  			}
-  			if($peep->key_num == $numb[5]){
+        if (in_array($peep->first_num, $mainNumArray)) {
+            $x++;
+        }
+        if (in_array($peep->second_num, $mainNumArray)) {
+            $x++;
+        }
+        if (in_array($peep->third_num, $mainNumArray)) {
+            $x++;
+        }
+        if (in_array($peep->fourth_num, $mainNumArray)) {
+            $x++;
+        }
+        if (in_array($peep->fifth_num, $mainNumArray)) {
+            $x++;
+        }	
+  			if($peep->key_num == $key){
   				$x++; 
   			}
   			if($x === 6){
   				$winners[] = $peep->user_id;
   			}
   		}
-  		if(isset($winners)){
+  		if(isset($winners))
+      {
      		return $winners;
      	}
-     	else{
+     	else
+      {
      		return null;
      	}
    }

@@ -69,10 +69,10 @@
 			  <input type="hidden" name="_token" value="{{ csrf_token() }}">
 			  <input type="hidden" name="amount" value="200">
 			</form>
-					@if ((Auth::check()) && (Auth::user()->is_admin))
-						<a href="{{ action('TheWorldLotterysController@edit', $theWorldLottery->id) }}"><button style="margin-bottom: 2em;" class="btn btn-warning">Edit</button></a>
+			@if ((Auth::check()) && (Auth::user()->is_admin))
+				<a href="{{ action('TheWorldLotterysController@edit', $theWorldLottery->id) }}"><button style="margin-bottom: 2em;" class="btn btn-warning">Edit</button></a>
 
-					@endif
+			@endif
 		</div>
 		<br>
 
