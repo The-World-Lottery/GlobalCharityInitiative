@@ -4,7 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class WorldLottoCheck extends Command
+class WorldLottoCheck    extends Command
 {
     /**
      * The name and signature of the console command.
@@ -41,6 +41,7 @@ class WorldLottoCheck extends Command
         $worldLottos = \App\Models\TheWorldLottery::TheWorldLotteryFunction($now);
         var_dump($worldLottos);
         if(isset($worldLottos[0]->id)){
+            var_dump('hello');
             \App\Models\TheWorldLottery::TheWorldLotteryWin($worldLottos[0]->id);
         }                 
     }
