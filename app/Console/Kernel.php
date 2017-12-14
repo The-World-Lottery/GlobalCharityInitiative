@@ -15,7 +15,7 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         Commands\Inspire::class,
         Commands\GameTimeCheck::class,
-        Commands\WorldLottoCheck::class
+        Commands\WorldLottoCheck::class,
     ];
 
     /**
@@ -33,8 +33,8 @@ class Kernel extends ConsoleKernel
                  ->everyMinute();
 
         $schedule->command('world:check')
-                 // ->weekly()->saturdays()->at('14:00');
-                ->everyMinute();
+                 ->weekly()->saturdays()->at('14:00');
+                // ->everyMinute();
     }
 
 }

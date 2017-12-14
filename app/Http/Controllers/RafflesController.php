@@ -76,7 +76,7 @@ class RafflesController extends Controller
             $twlWallet->usd += .44;
             $twlWallet->save();
 
-            $currWorldLottery = TheWorldLottery::find(1);
+            $currWorldLottery = TheWorldLottery::orderBy('id','desc')->limit(1)->get()[0];
             $currWorldLottery->current_value += .90;
             $currWorldLottery->save();
 

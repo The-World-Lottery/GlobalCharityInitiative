@@ -13,15 +13,15 @@ class WinnersCircle extends Migration
     public function up()
     {
          Schema::table('raffles', function (Blueprint $table) {
-            $table->integer('winner_id')->unsigned();
+            $table->integer('winner_id')->nullable();
             $table->foreign('winner_id')->references('id')->on('users');
         });
           Schema::table('lotteries', function (Blueprint $table) {
-            $table->integer('winner_id')->unsigned();
+            $table->integer('winner_id')->nullable();
             $table->foreign('winner_id')->references('id')->on('users');
         });
            Schema::table('the_world_lotteries', function (Blueprint $table) {
-            $table->integer('winner_id')->unsigned();
+            $table->integer('winner_id')->nullable();
             $table->foreign('winner_id')->references('id')->on('users');
         });
     }

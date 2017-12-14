@@ -22,27 +22,27 @@ class TheWorldLotteryEntry extends Model
     	$numb = [];
       	for($i = 0;$i < 5; $i++){
           $randNum = rand(0,100);
-          if(!in_array($randNum, $mainNumArray)){
-      		  $mainNumArray[] = $randNum;
+          if(!in_array($randNum, $numb)){
+      		  $numb[] = $randNum;
           }
     		}
-        $key = rand(0,100);
+      $key = rand(0,100);
   		$peeps = TheWorldLotteryEntry::where('the_world_lottery_id' , $id)->get();
   		foreach ($peeps as $peep) {
   			$x = 0;
-        if (in_array($peep->first_num, $mainNumArray)) {
+        if (in_array($peep->first_num, $numb)) {
             $x++;
         }
-        if (in_array($peep->second_num, $mainNumArray)) {
+        if (in_array($peep->second_num, $numb)) {
             $x++;
         }
-        if (in_array($peep->third_num, $mainNumArray)) {
+        if (in_array($peep->third_num, $numb)) {
             $x++;
         }
-        if (in_array($peep->fourth_num, $mainNumArray)) {
+        if (in_array($peep->fourth_num, $numb)) {
             $x++;
         }
-        if (in_array($peep->fifth_num, $mainNumArray)) {
+        if (in_array($peep->fifth_num, $numb)) {
             $x++;
         }	
   			if($peep->key_num == $key){

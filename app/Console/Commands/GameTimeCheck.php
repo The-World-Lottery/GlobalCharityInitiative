@@ -38,6 +38,7 @@ class GameTimeCheck extends Command
     public function handle()
     {
         $now = date('Y-m-d H:i:s');
+        var_dump($now);
 
         $raffles = \App\Models\Raffle::raffleFunction($now);
         foreach ($raffles as $raffle) {

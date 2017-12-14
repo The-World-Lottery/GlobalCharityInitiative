@@ -15,7 +15,7 @@
 	<div class="container text-center">
 		<h4 id="jackpot" style="color:lightgreen;"><strong >Jackpot - </strong>${{number_format($theWorldLottery->current_value,0,".",",")}}</h4>		
 		<h4 style="color:#00ffc4;">Drawing takes place:<br>
-		{{ \App\Models\TheWorldLottery::where('id','=','1')->get()[0]['end_date']->diffForHumans() }}</h4>
+		{{ $theWorldLottery->end_date->diffForHumans() }}</h4>
 		@if (session()->has('successMessage'))
 	        <div class="alert alert-success text-center">{{ session('successMessage') }}</div>
 	    @endif
@@ -37,7 +37,7 @@
 				data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
 				data-locale="auto"
 				data-zip-code="true">
-			  </script>
+			</script>
 				<div style="margin-bottom: 2em;" class="col col-md-9 col-xs-12">
 					<h2>Pick any <span class="greenTxt"> 5</span> numbers</h2>
 					{!! csrf_field() !!}

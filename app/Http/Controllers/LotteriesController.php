@@ -75,12 +75,11 @@ class LotteriesController extends Controller
             $twlWallet->usd += .70;
             $twlWallet->save();
 
-            
             $currLottery = Lottery::find($id);
             $currLottery->current_value += .5;
             $currLottery->save();
 
-            $currWorldLottery = TheWorldLottery::find(1);
+            $currWorldLottery = TheWorldLottery::orderBy('id','desc')->limit(1)->get()[0];
             $currWorldLottery->current_value += .50;
             $currWorldLottery->save();
 
@@ -210,9 +209,6 @@ class LotteriesController extends Controller
         $content = $request->input('content');
         $init_value = $request->input('init_value');
         $end_date = $request->input('end_date') . " " . $request->input('end_time') . ":00";
-        // $end_date = $request->input('end_date');
-// var_dump($end_date);
-//         $end_date = str_replace("T","",$end_date);
         $lottery = new Lottery();
         $lottery->title = $title;
         $lottery->winner_id = 1;

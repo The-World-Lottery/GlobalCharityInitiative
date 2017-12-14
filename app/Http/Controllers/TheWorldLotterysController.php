@@ -127,9 +127,6 @@ class TheWorldLotterysController extends Controller
             abort(404);
         }
 
-
-
-
         $title = $request->input('title');
         $content = $request->input('content');
         $init_value = $request->input('init_value');
@@ -158,7 +155,7 @@ class TheWorldLotterysController extends Controller
 
     public function selectNumbers()
     {
-        $theWorldLottery = TheWorldLottery::find(1);
+        $theWorldLottery = TheWorldLottery::orderBy('id','desc')->limit(1)->get()[0];
         return view('theworldlottery.select')->with(array('theWorldLottery' => $theWorldLottery));
     }
 
@@ -193,16 +190,9 @@ class TheWorldLotterysController extends Controller
                             "card"=> $token,
                             "description"=>$userId ));
 
-                    $userId = \Auth::id();
-                    $userWallet = UserWallet::find($userId);
-                    $userWallet->usd -= 2;
-                    $userWallet->save();
-
-
-                    $currLottery = TheWorldLottery::find(1);
-                    $currLottery->current_value += 2;
+                    $currLottery = TheWorldLottery::orderBy('id','desc')->limit(1)->get()[0];
+                    $currLottery->current_value += 1.3;
                     $currLottery->save();
-
 
                     $entry = new TheWorldLotteryEntry();
                     $entry->first_num = $newArr[0];
@@ -212,7 +202,7 @@ class TheWorldLotterysController extends Controller
                     $entry->fifth_num = $newArr[4];
                     $entry->key_num = $powerNum;
                     $entry->user_id = \Auth::id();
-                    $entry->the_world_lottery_id = 1;
+                    $entry->the_world_lottery_id = TheWorldLottery::orderBy('id','desc')->limit(1)->get()[0]['id'];
                     $entry->save();
 
                 } catch (\Stripe\Error\Card $e){

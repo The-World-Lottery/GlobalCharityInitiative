@@ -38,10 +38,13 @@ class WorldLottoCheck    extends Command
     public function handle()
     {
         $now = date('Y-m-d H:i:s');
-        $id = \App\Models\TheWorldLottery::TheWorldLotteryFunction($now);
-        // if(isset($worldLottos)){
-            var_dump('Its then Illegal?');
-            \App\Models\TheWorldLottery::TheWorldLotteryWin($id);
-        // }                 
+        $worldLottos = \App\Models\TheWorldLottery::TheWorldLotteryFunction($now);
+        var_dump($worldLottos);
+
+        if(isset($worldLottos)
+        {
+            var_dump('hello');
+            \App\Models\TheWorldLottery::TheWorldLotteryWin($worldLottos);
+        }                 
     }
 }
