@@ -23,15 +23,15 @@ class TheWorldLottery extends Model
    	public static function TheWorldLotteryWin($id)
     {
    		//change status to complete,
+   		TheWorldLottery::where('id', $id)->update(['complete' => true]);
 
-   		// TheWorldLottery::where('id', $id)->update(['complete' => true]);
-   		
+      
       $biglot = TheWorldLottery::where('id',$id)->value('current_value');
       $winners = \App\Models\TheWorldLotteryEntry::findWinners($id);
       // var_dump($winners);
 
       if(isset($winners)){
-        // var_dump("Its gabi this dumb language!");
+        var_dump("Its gabi this dumb language!");
    			$nextWorldCut = $biglot * .2; 
    			$biglot -= $nextWorldCut;
         // var_dump($nextWorldCut);
@@ -45,7 +45,7 @@ class TheWorldLottery extends Model
    			}
 
    			$theWorldLottery = new \App\Models\TheWorldLottery();
-        $theWorldLottery->title = 'TheWorldLottery';
+        $theWorldLottery->title = 'TheWorldLottery' . ($id + 1);
         $theWorldLottery->init_value = $nextWorldCut;
         $theWorldLottery->current_value = $nextWorldCut;
 
@@ -54,16 +54,17 @@ class TheWorldLottery extends Model
         $theWorldLottery->end_date = $date->format('Y-m-d H:i:s');
 
         $theWorldLottery->user_id = 1;
-        $theWorldLottery->winner_id = $winners[0]['id'];
-        $theWorldLottery->winner_id = 2;
+        // $theWorldLottery->winner_id = $winners[0]['id'];
+        // $theWorldLottery->winner_id = 2;
         $theWorldLottery->save();
-	   		TheWorldLottery::where('id', $id)->update(['winner_id' => 2]);
+	   		TheWorldLottery::where('id', $id)->update(['winner_id' => $winners[0]['id']]);
 
    		} else {
 
         // var_dump("Hello?");
         $theWorldLottery = new \App\Models\TheWorldLottery();
-        $theWorldLottery->title = 'TheWorldLottery';
+
+        $theWorldLottery->title = 'TheWorldLottery' . ($id + 1);
         $theWorldLottery->user_id = 1;
         $theWorldLottery->init_value = $biglot;
         $theWorldLottery->current_value = $biglot;

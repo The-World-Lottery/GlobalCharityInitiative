@@ -34,7 +34,7 @@ class Kernel extends ConsoleKernel
 
         $schedule->command('world:check')
                  ->weekly()->saturdays()->at('14:00');
-                ->everyMinute();
+                // ->everyMinute();
     }
 
 }

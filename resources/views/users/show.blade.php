@@ -50,7 +50,7 @@
 				<h1 style="text-align:center;color:yellow;">YOUR TICKETS</h1>
 				<div  class="row" style="width:100%;text-align:center;">
 					<div class="col col-xs-12 col-sm-4"> <u class="ticketHead">World Lottery</u><br>
-						@foreach($user->worldLotteryEntries->unique('title') as $worldLotteryEntry)
+						@foreach($user->worldLotteryEntries->unique('the_world_lottery_id') as $worldLotteryEntry)
 						{{-- {{dd($worldLotteryEntry)}} --}}
 						<a href="{{action('TheWorldLotterysController@index')}}">{{$worldLotteryEntry->theworldlottery->title}}</a><br>
 						@endforeach
