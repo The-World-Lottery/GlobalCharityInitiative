@@ -20,7 +20,7 @@ class TheWorldLotteriesTableSeeder extends Seeder
         // $date->add(new DateInterval('PT1M')); 
         $date->add(new DateInterval('PT20S')); 
         $theWorldLottery->end_date = $date->format('Y-m-d H:i:s');
-        
+        // $theWorldLottery->winner_id = null;
         $theWorldLottery->user_id = 1;
         $theWorldLottery->save();
     }

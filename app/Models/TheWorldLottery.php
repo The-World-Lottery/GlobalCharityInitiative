@@ -15,7 +15,7 @@ class TheWorldLottery extends Model
 
    	public static function TheWorldLotteryFunction($now){
    		//Find expired World lottos
-      var_dump(TheWorldLottery::orderBy('id','desc')->limit(1)->get()[0]['id']);
+      // var_dump(TheWorldLottery::orderBy('id','desc')->limit(1)->get()[0]['id']);
       // var_dump(TheWorldLottery::where('end_date', '<', $now)->where('complete',0)->get());
    		return TheWorldLottery::orderBy('id','desc')->limit(1)->get()[0]['id'];
    	}
@@ -31,10 +31,10 @@ class TheWorldLottery extends Model
       // var_dump($winners);
 
       if(isset($winners)){
-        var_dump("Its gabi this dumb language!");
+        // var_dump("Its gabi this dumb language!");
    			$nextWorldCut = $biglot * .2; 
    			$biglot -= $nextWorldCut;
-        var_dump($nextWorldCut);
+        // var_dump($nextWorldCut);
    			$numbOfWinners = count($winners);
    			$cut = $biglot / $numbOfWinners;
 
@@ -61,13 +61,13 @@ class TheWorldLottery extends Model
 
    		} else {
 
-        var_dump("Hello?");
+        // var_dump("Hello?");
         $theWorldLottery = new \App\Models\TheWorldLottery();
         $theWorldLottery->title = 'TheWorldLottery';
         $theWorldLottery->user_id = 1;
         $theWorldLottery->init_value = $biglot;
         $theWorldLottery->current_value = $biglot;
-        var_dump($biglot);
+        // var_dump($biglot);
 
         $date = new \DateTime(date('Y-m-d H:i:s'));
         $date->add(new \DateInterval('P14D'));
