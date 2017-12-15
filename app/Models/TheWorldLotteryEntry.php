@@ -26,9 +26,11 @@ class TheWorldLotteryEntry extends Model
       		  $numb[] = $randNum;
           }
     		}
+        var_dump($numb);
       $key = rand(0,100);
+        var_dump($key);
   		$peeps = TheWorldLotteryEntry::where('the_world_lottery_id' , $id)->get();
-  		foreach ($peeps as $peep) {
+      foreach ($peeps as $peep) {
   			$x = 0;
         if (in_array($peep->first_num, $numb)) {
             $x++;
@@ -45,10 +47,10 @@ class TheWorldLotteryEntry extends Model
         if (in_array($peep->fifth_num, $numb)) {
             $x++;
         }	
-  			if($peep->key_num == $key){
+  			if($peep->key_num == $key) {
   				$x++; 
   			}
-  			if($x === 6){
+  			if($x === 6) {
   				$winners[] = $peep->user_id;
   			}
   		}
