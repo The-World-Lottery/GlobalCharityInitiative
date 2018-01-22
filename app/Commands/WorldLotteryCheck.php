@@ -11,7 +11,7 @@ class WorldLottoCheck    extends Command
      *
      * @var string
      */
-    protected $signature = 'world:check2';
+    protected $signature = 'world:check1';
 
     /**
      * The console command description.
