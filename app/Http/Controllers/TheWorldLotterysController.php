@@ -181,17 +181,17 @@ class TheWorldLotterysController extends Controller
                     \Stripe\Stripe::setApiKey("sk_test_ZzKGRiePc0b4mGyYiwkRnPEy");
 
                     $token = \Input::get('stripeToken');
-                    // $amount = \Input::get('amount');
+                    $amount = \Input::get('amount');
 
                     $userId = \Auth::id();
                     $charge = \Stripe\Charge::create(array(
-                            "amount"=> 200,
+                            "amount"=> $amount,
                             "currency"=>"usd",
                             "card"=> $token,
                             "description"=>$userId ));
 
                     $currLottery = TheWorldLottery::orderBy('id','desc')->limit(1)->get()[0];
-                    $currLottery->current_value += 1.3;
+                    $currLottery->current_value += 2;
                     $currLottery->save();
 
                     $entry = new TheWorldLotteryEntry();
