@@ -206,6 +206,8 @@
 
 
 	$( document ).ready(function() {
+
+		alert("At this moment, This website is for demonstration of coding capability only. The payment system (Stripe) is not live and we do not have any of the items for raffles or lotteries running. However, we do hope to have 2 raffles for time with celebrities running soon. Non-profits are legally allowed to run 2 per year so were going to try and start there. Any celebrity seeing this that is interested in helping this cause please contact me at ejp8611@gmail.com");
 		
 		$(function() {
 		    $('body').removeClass('fade-out');

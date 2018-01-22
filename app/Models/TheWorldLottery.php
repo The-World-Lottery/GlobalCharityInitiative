@@ -31,7 +31,7 @@ class TheWorldLottery extends Model
       // var_dump($winners);
 
       if(isset($winners)){
-        var_dump("Its gabi this dumb language!");
+        // var_dump("Its gabi this dumb language!");
    			$nextWorldCut = $biglot * .2; 
    			$biglot -= $nextWorldCut;
         // var_dump($nextWorldCut);
@@ -63,7 +63,6 @@ class TheWorldLottery extends Model
 
         // var_dump("Hello?");
         $theWorldLottery = new \App\Models\TheWorldLottery();
-
         $theWorldLottery->title = 'TheWorldLottery' . ($id + 1);
         $theWorldLottery->user_id = 1;
         $theWorldLottery->init_value = $biglot;
