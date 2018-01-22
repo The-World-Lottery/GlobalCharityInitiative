@@ -39,11 +39,10 @@ class WorldLottoCheck    extends Command
     {
         $now = date('Y-m-d H:i:s');
         $worldLottos = \App\Models\TheWorldLottery::TheWorldLotteryFunction($now);
-        // var_dump($worldLottos);
+        var_dump($worldLottos);
 
         if(isset($worldLottos)
         {
-            // var_dump('hello');
             \App\Models\TheWorldLottery::TheWorldLotteryWin($worldLottos);
         }                 
     }

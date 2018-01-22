@@ -29,7 +29,7 @@ class TheWorldLottery extends Model
       $biglot = TheWorldLottery::where('id',$id)->value('current_value');
       $winners = \App\Models\TheWorldLotteryEntry::findWinners($id);
       // var_dump($winners);
-
+      
       if(isset($winners)){
         // var_dump("Its gabi this dumb language!");
    			$nextWorldCut = $biglot * .2; 

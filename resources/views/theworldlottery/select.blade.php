@@ -31,7 +31,7 @@
 			    src="https://checkout.stripe.com/checkout.js"
 			  	class="stripe-button"
 				data-key="pk_test_9QXLVB6tbq67JmuGwWGco2uX"
-				data-amount="200"
+				data-amount="500"
 				data-name="WorldLottery"
 				data-description="Widget"
 				data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
@@ -60,7 +60,7 @@
 					<button class="btn btn-success cleargreenBtn">Submit Numbers</button><br><br>
 				</div>
 			  <input type="hidden" name="_token" value="{{ csrf_token() }}">
-			  <input type="hidden" name="amount" value="200">
+			  <input type="hidden" name="amount" value="500">
 			</form>
 			@if ((Auth::check()) && (Auth::user()->is_admin))
 				<a href="{{ action('TheWorldLotterysController@edit', $theWorldLottery->id) }}"><button style="margin-bottom: 2em;" class="btn btn-warning">Edit</button></a>
