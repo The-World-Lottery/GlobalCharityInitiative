@@ -17,7 +17,7 @@
 </ul> --}}
  	<main class="container authSpacer" style="max-width:100%;">
         <div class="col col-sm-12">
-        <h1>Already have an account?</h1>
+        <h1 style="color:lightgreen;">Already have an account?</h1>
 
            
             @if (session()->has('errorMessage'))
@@ -49,7 +49,7 @@
 
 
         <div class="col col-sm-12">
-            <h1>Dont have an aacount?</h1>
+            <h1 style="color:lightgreen;">Dont have an account?</h1>
             <div class="col col-xs-12 col-sm-6">
 
             <form method="POST" action="/auth/register">
