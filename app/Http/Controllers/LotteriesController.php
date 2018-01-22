@@ -211,7 +211,7 @@ class LotteriesController extends Controller
         $end_date = $request->input('end_date') . " " . $request->input('end_time') . ":00";
         $lottery = new Lottery();
         $lottery->title = $title;
-        $lottery->winner_id = 1;
+        $lottery->winner_id = null;
         $lottery->content = $content;
         $lottery->init_value = $init_value;
         $lottery->current_value = $init_value;

@@ -42,9 +42,7 @@ class Raffle extends Model
 		public function getEndDateAttribute($value)
 		{
 			$utc = \Carbon\Carbon::createFromFormat($this->getDateFormat(), $value);
-
 			return $utc;
-		
 		}
 
 }

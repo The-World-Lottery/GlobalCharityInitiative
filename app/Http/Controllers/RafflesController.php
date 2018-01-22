@@ -187,13 +187,12 @@ class RafflesController extends Controller
         $title = $request->input('title');
         $content = $request->input('content');
         $end_date = $request->input('end_date') . " " . $request->input('end_time') . ":00";
-
         $product = $request->input('product');
         $image = $request->input('image');
         $image = str_replace('"',"",$image);
         // $end_date = str_replace("T","",$end_date);
         $raffle = new Raffle();
-        $raffle->winner_id = 1;
+        $raffle->winner_id = null;
         $raffle->title = $title;
         $raffle->content = $content;
         $raffle->product = $product;
