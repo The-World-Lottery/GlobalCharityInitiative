@@ -36,10 +36,20 @@
 		    background-repeat: no-repeat;
 		    background-size: cover;
 		}
+
+		#myModal {
+			border:1px solid white;
+			width:33vw;
+			/*left:-33vw;*/
+			position:relative;
+		}
+
 	</style>
 	
 </head>
 	<body id="splashBod">
+		
+
 		<main style="z-index:0;height:100vh;width:100%;position:fixed;">
 
 			<div id="splashHeader" class="row text-center">
@@ -76,7 +86,7 @@
 		<section style="z-index:100;position:absolute;width:100%;">
 			<div id="splash4" class="row infoRows text-center">
 				<div class="col col-sm-12">
-					<h1>How It All Works</h1>
+					<h1>Who we are and what we do</h1>
 				</div>
 			</div>
 
@@ -204,11 +214,13 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
 
+	
+    $('#myModal').modal('show');
 
 	$( document ).ready(function() {
 
 		alert("At this moment, This website is for demonstration of coding capability only. The payment system (Stripe) is not live and we do not have any of the items for raffles or lotteries running. However, we do hope to have 2 raffles for time with celebrities running soon. Non-profits are legally allowed to run 2 per year so were going to try and start there. Any celebrity seeing this that is interested in helping this cause please contact me at ejp8611@gmail.com");
-		
+	
 		$(function() {
 		    $('body').removeClass('fade-out');
 		});
