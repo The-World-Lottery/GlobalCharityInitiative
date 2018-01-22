@@ -38,6 +38,11 @@
 						</p>
 						@if (\Auth::check())
 							<div style="margin-bottom:1em;">
+
+								<label>How many?
+								  	<input id="amount{{ $lottery->id }}" type="text" name="amount" value="1">
+								</label>
+
 							  <button type="button" id="submit{{ $lottery->id }}" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET</button>
 							</div>
 						@else
@@ -64,13 +69,12 @@
 		data-key="pk_test_9QXLVB6tbq67JmuGwWGco2uX"
 		data-amount="500"
 		data-name="Daily Lottery"
-		data-description="Widget"
+		data-description="Price Per Ticket"
 		data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
 		data-locale="auto"
 		data-zip-code="true">
 	  </script>
 	  <input type="hidden" name="_token" value="{{ csrf_token() }}">
-	  <input type="hidden" name="amount" value="500">
 	</form>
 </div>
 @stop
@@ -78,9 +82,11 @@
 @section('bottomscript')
 
 <script>
+
 	$('.aSubmitButton').click(function() {
 		var lotteryid = $(this).attr('id').replace('submit', '');
-		var newAction = '/lotteryCheckout/' + lotteryid;
+		var count = $('#amount' + lotteryid).val();
+		var newAction = '/lotteryCheckout/' + lotteryid + '/' + count;
 		$('#lotteryForm').attr('action', newAction);
 		$('.stripe-button-el')[0].click();
 	});

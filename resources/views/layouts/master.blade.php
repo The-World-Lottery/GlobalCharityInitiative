@@ -49,7 +49,7 @@
 				</div>
 			</div>
 			<div class="col col-xs-12 col-sm-4 text-center">
-				<h5 style="font-size:1.3em;padding-top:1.5vh;">"The answer to vice is virtue"</h5>
+				<h5 style="font-size:1.3em;padding-top:1.5vh;">Bitcoin pay coming soon!</h5>
 			</div>
 		</div>
 		

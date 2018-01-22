@@ -407,10 +407,13 @@ input, button {
 	outline:none;
 }
 
+input {
+	color:black;
+}
+
 #menu {
 	background-color: #32809a;
 	padding:0 1em 0 1em;
-
 }
 
 .navButton {

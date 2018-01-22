@@ -35,7 +35,13 @@
 					<div class="raffleInfo">
 						@if (\Auth::check())
 							<div style="margin-bottom:1em;">
-							  <button type="button" id="submit{{ $raffle->id }}" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET</button>
+
+
+
+						  <label>How many?
+						  	<input id="amount{{ $raffle->id }}" type="text" name="amount" value="1">
+						  </label>
+							  <button type="button" id="submit{{ $raffle->id }}" class="aSubmitButton cleargreenBtn btn-success btn">PURCHASE</button>
 							</div>
 						@else
 							<div style="margin-bottom:1em;">
@@ -67,7 +73,8 @@
 		data-zip-code="true">
 	  </script>
 	  <input type="hidden" name="_token" value="{{ csrf_token() }}">
-	  <input type="hidden" name="amount" value="500">
+
+
 	</form>
 
 </div>
@@ -79,7 +86,8 @@
 	<script>
 		$('.aSubmitButton').click(function() {
 			var raffleid = $(this).attr('id').replace('submit', '');
-			var newAction = '/raffleCheckout/' + raffleid;
+			var count = $('#amount' + raffleid).val();
+			var newAction = '/raffleCheckout/' + raffleid + '/' + count;
 			$('#raffleForm').attr('action', newAction);
 			$('.stripe-button-el')[0].click();
 		});

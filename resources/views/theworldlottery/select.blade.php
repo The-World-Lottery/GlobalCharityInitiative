@@ -70,3 +70,23 @@
 		<br>
 	</main>
 @stop
+
+@section('bottomscript')
+	<script type="text/javascript">
+			//checkbox controllers for the world lottery numbers selection
+		$('input[type=checkbox]').on('change', function (e) {
+		    if ($('input[type=checkbox]:checked').length > 5) {
+		        $(this).prop('checked', false);
+		        alert("allowed only 5");
+		    }
+		});
+
+		$('body').on('click', function(){
+			// console.log("stuff");
+			if($('#img').val().length > 5){
+				var sanitizedSource = $('#img').val().replace(/"/g, "");
+				$('#editImg').attr('src', sanitizedSource);
+			}
+		});
+	</script>
+@stop

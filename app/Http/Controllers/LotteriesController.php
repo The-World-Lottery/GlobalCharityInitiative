@@ -45,7 +45,7 @@ class LotteriesController extends Controller
         return view('lotteries.one')->with(array('lottery' => $lottery)); 
     }
 
-    public function chargeCard(Request $request, $id)
+    public function chargeCard(Request $request, $id, $count)
     {
         if(!\Auth::check()){
             $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
@@ -55,12 +55,11 @@ class LotteriesController extends Controller
         \Stripe\Stripe::setApiKey("sk_test_ZzKGRiePc0b4mGyYiwkRnPEy");
 
         $token = \Input::get('stripeToken');
-        $amount = \Input::get('amount');
 
         try {
             $userId = \Auth::id();
             $charge = \Stripe\Charge::create(array(
-                    "amount"=> $amount,
+                    "amount"=> 500 * $count,
                     "currency"=>"usd",
                     "card"=> $token,
                     "description"=>$userId,
@@ -83,10 +82,13 @@ class LotteriesController extends Controller
             $currWorldLottery->current_value += 1.35;
             $currWorldLottery->save();
 
-            $newEntry = new LotteryEntry();
-            $newEntry->user_id = $userId;
-            $newEntry->lottery_id = $id;
-            $newEntry->save();
+
+            for ($i = 0; $i < $count; $i++){
+                $newEntry = new LotteryEntry();
+                $newEntry->user_id = $userId;
+                $newEntry->lottery_id = $id;
+                $newEntry->save();
+            }
 
         } catch (\Stripe\Error\Card $e){
             dd($e);

@@ -18,20 +18,19 @@ $(document).ready(function(){
 	});
 	
 	//checkbox controllers for the world lottery numbers selection
-	$('input[type=checkbox]').on('change', function (e) {
-	    if ($('input[type=checkbox]:checked').length > 5) {
-	        $(this).prop('checked', false);
-	        alert("allowed only 5");
-	    }
-	});
+	// $('input[type=checkbox]').on('change', function (e) {
+	//     if ($('input[type=checkbox]:checked').length > 5) {
+	//         $(this).prop('checked', false);
+	//         alert("allowed only 5");
+	//     }
+	// });
 
-	$('body').on('click', function(){
-		// console.log("stuff");
-		if($('#img').val().length > 5){
-			var sanitizedSource = $('#img').val().replace(/"/g, "");
-			$('#editImg').attr('src', sanitizedSource);
-		}
-	});
+	// $('body').on('click', function(){
+	// 			if($('#img').val().length > 5){
+	// 		var sanitizedSource = $('#img').val().replace(/"/g, "");
+	// 		$('#editImg').attr('src', sanitizedSource);
+	// 	}
+	// });
 
 	// //countdown times for end_date
 	// var wlEndDate = $('#clock').data("clock-id");

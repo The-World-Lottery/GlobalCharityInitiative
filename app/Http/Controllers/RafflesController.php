@@ -45,7 +45,7 @@ class RafflesController extends Controller
         return \Redirect::action('LotteriesController@index');
     }
 
-    public function chargeCard(Request $request, $id)
+    public function chargeCard(Request $request, $id, $count)
     {
 
         if(!\Auth::check()){
@@ -56,21 +56,15 @@ class RafflesController extends Controller
         \Stripe\Stripe::setApiKey("sk_test_ZzKGRiePc0b4mGyYiwkRnPEy");
 
         $token = \Input::get('stripeToken');
-        $amount = \Input::get('amount');
 
         try {
             $userId = \Auth::id();
             $charge = \Stripe\Charge::create(array(
-                    "amount"=> $amount,
+                    "amount"=> 500 * $count,
                     "currency"=>"usd",
                     "card"=> $token,
                     "description"=>$userId,
                 ));
-
-
-            // $userWallet = UserWallet::find($userId);
-            // $userWallet->$currency -= (2 * $currConv);
-            // $userWallet->save();
 
             $twlWallet = UserWallet::find(1);
             $twlWallet->usd += 2.5;
@@ -80,10 +74,12 @@ class RafflesController extends Controller
             $currWorldLottery->current_value += 2.05;
             $currWorldLottery->save();
 
-            $newEntry = new RaffleEntry();
-            $newEntry->user_id = $userId;
-            $newEntry->raffles_id = $id;
-            $newEntry->save();
+            for ($i = 0; $i < $count; $i++){
+                $newEntry = new RaffleEntry();
+                $newEntry->user_id = $userId;
+                $newEntry->raffles_id = $id;
+                $newEntry->save();
+            }
 
         } catch (\Stripe\Error\Card $e){
             dd($e);
