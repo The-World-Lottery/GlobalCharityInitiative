@@ -124,7 +124,7 @@ a.navLink:hover {
 	border:1px solid white;
 	min-height:100%;
 	margin-bottom:1em;
-	padding-top:.5em;
+	/*padding-top:.5em;*/
 }
 
 .lotteryPadding {
@@ -133,9 +133,9 @@ a.navLink:hover {
 }
 
 .raffleInfo {
-	padding:.7em .5em .5em .5em;
-	height:13em;
-	overflow:hidden;
+	padding:.6em .5em .5em .5em;
+	height:11em;
+	overflow:scroll;
 	background-color: rgba(0,0,0,.3);
 }
 
@@ -306,14 +306,14 @@ td {
 }
 
 .cleargreenBtn {
-	margin:0em 0 0em 0;
+	margin:.5em 0 0em 0;
 	color:lightgreen !important;
 	border:3px solid lightgreen;
 	min-width:4em;
 	text-align:center;
 	font-size:1.2em;
 	background-color:rgba(0,0,0,0);
-	padding:.2em 1em 0em 1em;
+	padding:.2em .5em 0em .5em;
 }
 
 .btn-success:hover {

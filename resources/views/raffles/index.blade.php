@@ -30,28 +30,25 @@
 			<div class="col-sm-6 col-md-4 text-center">
 				<div id="raffleHolder">
 					<div class="raffleCont" style='background-image:url("{{$raffle->img}}");'>
+						<h3 style="background-color: rgba(0,0,0,.4);margin:0;padding:.3em;">{{$raffle->title}}</h3>
+						
+						
 					</div>
 
 					<div class="raffleInfo">
+						<h3 style="color:#00ffc4;position:relative;bottom:0;">{{$raffle->end_date->diffForHumans()}}</h3>
 						@if (\Auth::check())
 							<div style="margin-bottom:1em;">
-
-
-
-						  <label>How many?
-						  	<input id="amount{{ $raffle->id }}" type="text" name="amount" value="1">
-						  </label>
-							  <button type="button" id="submit{{ $raffle->id }}" class="aSubmitButton cleargreenBtn btn-success btn">PURCHASE</button>
+						  	<label>How many?
+						  	<input class="form-control text-center" id="amount{{ $raffle->id }}" type="text" name="amount" value="1">
+						  	</label>
+							  <button type="button" id="submit{{ $raffle->id }}" class="aSubmitButton cleargreenBtn btn-success">PURCHASE</button>
 							</div>
 						@else
 							<div style="margin-bottom:1em;">
 							  <a  href="/ticketFail" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET</a>
 							</div>
 						@endif
-						<h2>{{$raffle->title}}</h2>
-						<p>Drawing Happens<br>
-							<span style="color:#00ffc4;">{{$raffle->end_date->diffForHumans()}}</span>
-						</p>
 					</div>
 				</div>
 			</div>

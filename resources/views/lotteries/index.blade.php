@@ -38,12 +38,11 @@
 						</p>
 						@if (\Auth::check())
 							<div style="margin-bottom:1em;">
-
 								<label>How many?
-								  	<input id="amount{{ $lottery->id }}" type="text" name="amount" value="1">
+								  	<input class="form-control text-center" id="amount{{ $lottery->id }}" type="text" name="amount" value="1">
 								</label>
-
-							  <button type="button" id="submit{{ $lottery->id }}" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET</button>
+								<br>
+							 	<button type="button" id="submit{{ $lottery->id }}" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET</button>
 							</div>
 						@else
 							<div style="margin-bottom:1em;">

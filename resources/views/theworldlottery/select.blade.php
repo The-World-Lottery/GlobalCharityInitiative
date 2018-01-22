@@ -26,7 +26,7 @@
 
 	<main class="container" style="max-width:100%;display:flex;justify-content: center;">
 		<div class="row" id="checkWrapper">
-			<form method="POST" action="/twlCheckout">
+			<form id="thisForm" method="POST" action="/twlCheckout">
 			<script
 			    src="https://checkout.stripe.com/checkout.js"
 			  	class="stripe-button"
@@ -81,12 +81,12 @@
 		    }
 		});
 
-		$('body').on('click', function(){
-			// console.log("stuff");
-			if($('#img').val().length > 5){
-				var sanitizedSource = $('#img').val().replace(/"/g, "");
-				$('#editImg').attr('src', sanitizedSource);
-			}
-		});
+		// $('#thisForm').on('click', function(){
+		// 	// console.log("stuff");
+		// 	if($('#img').val().length > 5){
+		// 		var sanitizedSource = $('#img').val().replace(/"/g, "");
+		// 		$('#editImg').attr('src', sanitizedSource);
+		// 	}
+		// });
 	</script>
 @stop
