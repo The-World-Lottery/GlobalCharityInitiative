@@ -49,18 +49,18 @@
 	
 				<h1 style="text-align:center;color:yellow;">YOUR CURRENT TICKETS</h1>
 				<div  class="row">
-					<div class="col col-xs-12 col-sm-4"><h3 class="ticketHead">Raffles</h3><br>
-						@foreach($user->raffleEntries->unique('raffles_id') as $raffleEntry)
-							@if(\App\Models\Raffle::where('id', $raffleEntry->raffle->id)->get()[0]->complete == 0)
-								<a href="{{action('RafflesController@show', $raffleEntry->raffle->id)}}">{{$raffleEntry->raffle->title}} x{{\app\Models\RaffleEntry::where('raffles_id',$raffleEntry->raffle->id)->count()}}</a><br>
-							@endif
-						@endforeach
-					</div>
-					<div class="col col-xs-12 col-sm-4"> <h3 class="ticketHead">Lotteries</h3><br>
+					<div class="col col-xs-12 col-sm-3"> <h3 class="ticketHead">Lotteries</h3><br>
 						@foreach($user->lotteryEntries->unique('lottery_id') as $lotteryEntry)
 						{{-- {{dd($lotteryEntry)}} --}}
 							@if(\App\Models\Lottery::where('id', $lotteryEntry->lottery->id)->get()[0]->complete == 0)
-								<a href="{{action('LotteriesController@show', $lotteryEntry->lottery->id)}}">{{$lotteryEntry->lottery->title}}</a><br>
+								<a href="{{action('LotteriesController@show', $lotteryEntry->lottery->id)}}">{{$lotteryEntry->lottery->title}} #{{$lotteryEntry->lottery->id}}  <span style="color:lightgreen;">x{{\App\Models\LotteryEntry::where('lottery_id',$lotteryEntry->lottery->id)->count()}}</span></a><br>
+							@endif
+						@endforeach
+					</div>
+					<div class="col col-xs-12 col-sm-5"><h3 class="ticketHead">Raffles</h3><br>
+						@foreach($user->raffleEntries->unique('raffles_id') as $raffleEntry)
+							@if(\App\Models\Raffle::where('id', $raffleEntry->raffle->id)->get()[0]->complete == 0)
+								<a href="{{action('RafflesController@show', $raffleEntry->raffle->id)}}">{{$raffleEntry->raffle->title}}  <span style="color:lightgreen;">x{{\app\Models\RaffleEntry::where('raffles_id',$raffleEntry->raffle->id)->count()}}</span></a><br>
 							@endif
 						@endforeach
 					</div>
