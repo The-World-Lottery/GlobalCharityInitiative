@@ -79,7 +79,7 @@
           <li class="headLinks">
           	<a href="{{action('AboutUsController@index')}}">
           	<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-          	<span class="navLink">About Us</span></a>
+          	</a>
           </li>
           {{-- @if(Auth::check() && count(App\Models\UserWallet::where('user_id', '=', \Auth::id())->get()) === 0)
           <li class="headLinks">

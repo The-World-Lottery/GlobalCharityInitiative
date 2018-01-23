@@ -94,7 +94,7 @@ class LotteriesController extends Controller
             dd($e);
         }
 
-        $request->session()->flash('successMessage', 'You have successfully purchased a Lottery Ticket');
+        $request->session()->flash('successMessage', 'You have successfully purchased ' . $count . ' Lottery Ticket(s)');
         return \Redirect::action('LotteriesController@index');
 
     }

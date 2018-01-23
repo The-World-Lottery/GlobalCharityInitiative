@@ -28,7 +28,7 @@ class RafflesController extends Controller
             $q = $request->q;
             $raffles = Raffle::search($q);    
         } else {
-            $raffles = Raffle::with('user')->where('end_date','>',\Carbon\Carbon::now())->orderBy('end_date','asc')->paginate(16);  
+            $raffles = Raffle::with('user')->where('end_date','>',\Carbon\Carbon::now())->orderBy('end_date','asc')->paginate(16);
         }
         
 
@@ -85,7 +85,7 @@ class RafflesController extends Controller
             dd($e);
         }
 
-        $request->session()->flash('successMessage', 'You have successfully purchased a Raffle Ticket');
+        $request->session()->flash('successMessage', 'You have successfully purchased ' . $count . ' Raffle Ticket(s)');
         return \Redirect::action('RafflesController@index');
 
     }

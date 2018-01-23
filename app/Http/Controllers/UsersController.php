@@ -98,9 +98,12 @@ class UsersController extends Controller
             abort(404);
         }
 
+        
+
 
 
         $data['user'] = $user;
+
         // $entries = \App\User::getEntries($user->id);
         // $newArr = [];
         // foreach ($entries as $entry){

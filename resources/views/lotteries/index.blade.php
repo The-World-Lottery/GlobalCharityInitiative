@@ -8,7 +8,10 @@
 
 @section('divHead')
 
-<h2 id="hoverTrigger"><strong>All Lotteries</strong></h2>
+<h2 id="hoverTrigger"><strong>All Lotteries</strong>
+	<div style="font-size:50%;">$5 USD per entry</div>
+</h2>
+
 <p  id="hoverSumm" hidden class="suggBox">Lotteries are created with an initial value coming from the world lottery foundation. When the date/time of each lottery is reached, one user will be randomly selected from the pool of entrys. This ensures there will always be a winner. Each ticket you have to the lottery increases your chances of winning. Good Luck!</p>
 @stop
 
@@ -41,14 +44,14 @@
 								<label>How many?
 								  	<input class="form-control text-center" id="amount{{ $lottery->id }}" type="text" name="amount" value="1">
 								</label>
-								<br>
-							 	<button type="button" id="submit{{ $lottery->id }}" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET</button>
+							 	<button type="button" id="submit{{ $lottery->id }}" class="aSubmitButton cleargreenBtn btn-success btn">PURCHASE</button>
 							</div>
 						@else
 							<div style="margin-bottom:1em;">
 							  <a  href="/ticketFail" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET</a>
 							</div>
 						@endif
+						<h5 style="color:yellow">Entries so far : {{ \App\Models\LotteryEntry::where('lottery_id','=', $lottery->id)->count() }} </h5>
 						</div>
 					</div>
 				{{-- </a> --}}
