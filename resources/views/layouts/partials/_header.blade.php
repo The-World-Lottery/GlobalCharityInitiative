@@ -21,7 +21,7 @@
         <ul class="nav navbar-nav navbar-right">
         	@if(Auth::check() && Auth::user()->is_admin)
         	<li class="dropdown headLinks">
-	          <a href="#" class="dropdown-toggle navLink" style="color:white"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin Functions<span class="caret"></span></a>
+	          <a href="#" class="dropdown-toggle navLink" style="color:white"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
 	          <ul class="dropdown-menu" style="background-color: #32809a;">
 	          	<li>
 	    			<a href="{{action('LotteriesController@adminIndex')}}">
@@ -74,7 +74,7 @@
           <li class="headLinks">
           	<a href="{{action('SuggestionsController@index')}}">
           	<span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
-          	<span class="navLink">Suggestion Box</span></a>
+          	<span class="navLink">Suggestions</span></a>
           </li>
           <li class="headLinks">
           	<a href="{{action('AboutUsController@index')}}">

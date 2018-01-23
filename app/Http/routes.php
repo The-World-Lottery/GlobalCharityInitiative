@@ -19,7 +19,7 @@
 Route::get('/',function(){
 	$lottery = App\Models\Lottery::where('end_date','>',\Carbon\Carbon::now())->where('complete','=','0')->first();
 	$raffle = App\Models\Raffle::where('end_date','>',\Carbon\Carbon::now())->first();
-	$twl = App\Models\TheWorldLottery::where('id','=','1')->get();
+	$twl = App\Models\TheWorldLottery::orderBy('id','desc')->limit(1)->get();
 	return view('splash')->with(array('lottery' => $lottery, 'raffle' => $raffle, 'twl' => $twl));
 });
 

@@ -106,13 +106,9 @@
 					<div class="splashInfo">
 						<h2>The World Lottery</h2>
 						<blockquote>The World Lottery is a classic "Pick Six" drawing where players select 5 numbers 1-100 and a power number. The numbers will be selected every two weeks on Saturdays. </blockquote>
-						
-						{{-- Test --}}
-						{{-- Test --}}
-
 					</div>
 					<div class="bottomPos">
-						<p style="font-size:2.7em;padding:1em .3em 1em .3em;margin-top:.5em;background-color:rgba(0,0,0,.5);border-radius: 1em;">The <span style="color:lightgreen;">World Lottery </span>Jackpot is <b><span style="color:lightgreen;">${{number_format((\App\Models\TheWorldLottery::where('id','=','1')->get()[0]['current_value']),0,".",",")}}</span></b>
+						<p style="font-size:2.7em;padding:1em .3em 1em .3em;margin-top:.5em;background-color:rgba(0,0,0,.5);border-radius: 1em;">The <span style="color:lightgreen;">World Lottery </span>Jackpot is <b><span style="color:lightgreen;">${{number_format((\App\Models\TheWorldLottery::orderBy('id','desc')->first()->get()[0]['current_value']),0,".",",")}}</span></b>
 						<br><strong style="color:#00ffc4;margin-bottom: .5em;">{{$twl[0]->end_date->diffForHumans()}}</strong></p>
 					</div>
 				</div>

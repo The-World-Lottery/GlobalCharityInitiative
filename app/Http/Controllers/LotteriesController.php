@@ -71,15 +71,15 @@ class LotteriesController extends Controller
             // $userWallet->save();
 
             $twlWallet = UserWallet::find(1);
-            $twlWallet->usd += 2;
+            $twlWallet->usd += 2 * $count;
             $twlWallet->save();
 
             $currLottery = Lottery::find($id);
-            $currLottery->current_value += 1.2;
+            $currLottery->current_value += 1.2 * $count;
             $currLottery->save();
 
             $currWorldLottery = TheWorldLottery::orderBy('id','desc')->limit(1)->get()[0];
-            $currWorldLottery->current_value += 1.35;
+            $currWorldLottery->current_value += 1.35 * $count;
             $currWorldLottery->save();
 
 
