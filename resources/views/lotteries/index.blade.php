@@ -37,11 +37,11 @@
 						<p class="lottoInfo">
 							Current Value 
 							<br><strong style="font-size:2.5em;color:lightgreen">${{number_format(($lottery->current_value),0,".",",")}}</strong>
-							<br>Ends : <strong style="color:#00ffc4;margin-bottom: .5em;">{{$lottery->end_date->diffForHumans()}}</strong>
+							<br>Ends: <strong style="color:#00ffc4;margin-bottom: .5em;">{{$lottery->end_date->diffForHumans()}}</strong>
 						</p>
 						@if (\Auth::check())
 							<div style="margin-bottom:1em;">
-								<label>How many?
+								<label>HOW MANY?
 								  	<input class="form-control text-center" id="amount{{ $lottery->id }}" type="text" name="amount" value="1">
 								</label>
 							 	<button type="button" id="submit{{ $lottery->id }}" class="aSubmitButton cleargreenBtn btn-success btn">PURCHASE</button>
@@ -51,10 +51,9 @@
 							  <a  href="/ticketFail" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET</a>
 							</div>
 						@endif
-						<h5 style="color:yellow">Entries so far : {{ \App\Models\LotteryEntry::where('lottery_id','=', $lottery->id)->count() }} </h5>
+						<h5 style="color:yellow">ENTRIES SO FAR: {{ \App\Models\LotteryEntry::where('lottery_id','=', $lottery->id)->count() }} </h5>
 						</div>
 					</div>
-				{{-- </a> --}}
 				@endforeach
 		</div>
 		<div style="text-align:center;padding-right:1em;">

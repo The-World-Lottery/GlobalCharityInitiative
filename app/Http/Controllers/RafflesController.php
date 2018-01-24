@@ -53,6 +53,11 @@ class RafflesController extends Controller
             return \Redirect::action('Auth\AuthController@getLogin');
         }
 
+         if(!is_int((int)$count)){
+            $request->session()->flash('errorMessage', 'You need to enter an integer amount. No decimals, no letters, and NO SCRIPTS!');
+            return \Redirect::action('LotteriesController@index');
+        }
+
         \Stripe\Stripe::setApiKey("sk_test_ZzKGRiePc0b4mGyYiwkRnPEy");
 
         $token = \Input::get('stripeToken');
@@ -102,74 +107,8 @@ class RafflesController extends Controller
 
     public function notLoggedIn(Request $request)
     {
-
-        // $currency = $request->input()['currency'];
-
-        // if(\Auth::check()){
-
-        //     switch ($currency){
-        //         case "usd":
-        //         $currConv = 1;
-        //         break;
-        //         case "eur":
-        //         $currConv = $request->input()['eurConv'];
-        //         break;
-        //         case "jpy":
-        //         $currConv = $request->input()['jpyConv'];
-        //         break;
-        //         case "gbp":
-        //         $currConv = $request->input()['gbpConv'];
-        //         break;
-        //         case "chf":
-        //         $currConv = $request->input()['chfConv'];
-        //         break;
-        //         case "btc":
-        //         $currConv = $request->input()['btcConv'];
-        //         break;
-        //         case "ltc":
-        //         $currConv = $request->input()['ltcConv'];
-        //         break;
-        //         case "eth":
-        //         $currConv = $request->input()['ethConv'];
-        //         break;
-        //         case "doge":
-        //         $currConv = $request->input()['dogeConv'];
-        //         break;
-        //         case "bch":
-        //         $currConv = $request->input()['bchConv'];
-        //         break;
-        //         case "xrp":
-        //         $currConv = $request->input()['xrpConv'];
-        //         break;
-
-        //     }
-
-        //     $userId = \Auth::id();
-
-        //     $userWallet = UserWallet::find($userId);
-        //     $userWallet->$currency -= (2 * $currConv);
-        //     $userWallet->save();
-
-        //     $twlWallet = UserWallet::find(1);
-        //     $twlWallet->usd += 1;
-        //     $twlWallet->save();
-
-        //     $newEntry = new RaffleEntry();
-        //     $newEntry->user_id = $userId;
-        //     $newEntry->raffles_id = $id;
-        //     $newEntry->save();
-
-        //     $currWorldLottery = TheWorldLottery::find(1);
-        //     $currWorldLottery->current_value += .90;
-        //     $currWorldLottery->save();
-        // } else {
-
         $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
-        return \Redirect::action('Auth\AuthController@getLogin');
-        // }
-        // $request->session()->flash('successMessage', 'You have successfully purchased a RAFFLE ticket! Thank you for your donation and good luck!');
-        // return \Redirect::action('RafflesController@index');
-
+        return \Redirect::action('Auth\AuthController@getLogin');  
     }
 
     /**
@@ -184,9 +123,10 @@ class RafflesController extends Controller
         $content = $request->input('content');
         $end_date = $request->input('end_date') . " " . $request->input('end_time') . ":00";
         $product = $request->input('product');
+
         $image = $request->input('image');
         $image = str_replace('"',"",$image);
-        // $end_date = str_replace("T","",$end_date);
+
         $raffle = new Raffle();
         $raffle->winner_id = null;
         $raffle->title = $title;
@@ -195,12 +135,12 @@ class RafflesController extends Controller
         $raffle->end_date = $end_date;
         $raffle->img = $image;
         $raffle->user_id = \Auth::id();
+
         if(\Auth::user()->is_admin){
             $raffle->save();
         }
 
         return redirect()->action('RafflesController@show',$raffle->id);
-    
     }
 
     /**

@@ -22,7 +22,7 @@ table, th, td {
 
 	<main class="container" style="max-width:100%;">
 	<div style="display: flex;justify-content: center;">
-		<a class="btn btn-success" href="{{action('LotteriesController@create')}}" >Create New Lottery</a>
+		<a class="btn btn-success cleargreenBtn" href="{{action('LotteriesController@create')}}" >Create New Lottery</a>
 	</div>
 	<br>
 	{{-- <div>{!! $lotteries->appends(Request::except('page'))->render() !!}</div> --}}

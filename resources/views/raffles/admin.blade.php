@@ -21,7 +21,7 @@ table, th, td {
 
 	<main class="container adminTables" style="max-width:100%;">
 	<div style="display: flex;justify-content: center;">
-		<a class="btn btn-success" href="{{action('RafflesController@create')}}" >Create New Raffle</a>
+		<a class="btn btn-success cleargreenBtn" href="{{action('RafflesController@create')}}" >Create New Raffle</a>
 	</div>
 	<br>
 	<div>{!! $raffles->appends(Request::except('page'))->render() !!}</div>

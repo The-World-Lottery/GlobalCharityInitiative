@@ -7,8 +7,9 @@
 @stop
 
 @section('divHead')
-<h1>The World Lottery</h1>
-
+<h1>The World Lottery
+<div style="font-size:50%;margin-bottom: 1em;">$5 USD per entry</div>
+</h1>
 @stop
 
 @section('content')
@@ -58,14 +59,14 @@
 					<br>
 					<h2>Then</h2>
 					<button class="btn btn-success cleargreenBtn">Submit Numbers</button><br><br>
+					@if ((Auth::check()) && (Auth::user()->is_admin))
+						<a href="{{ action('TheWorldLotterysController@edit', $theWorldLottery->id) }}"><button style="margin-bottom: 2em;" class="btn btn-warning">Edit</button></a>
+					@endif
 				</div>
 			  <input type="hidden" name="_token" value="{{ csrf_token() }}">
 			  <input type="hidden" name="amount" value="500">
 			</form>
-			@if ((Auth::check()) && (Auth::user()->is_admin))
-				<a href="{{ action('TheWorldLotterysController@edit', $theWorldLottery->id) }}"><button style="margin-bottom: 2em;" class="btn btn-warning">Edit</button></a>
-
-			@endif
+			
 		</div>
 		<br>
 	</main>

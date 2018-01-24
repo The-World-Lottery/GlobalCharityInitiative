@@ -47,9 +47,15 @@ class LotteriesController extends Controller
 
     public function chargeCard(Request $request, $id, $count)
     {
+
         if(!\Auth::check()){
             $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
             return \Redirect::action('Auth\AuthController@getLogin');
+        }
+
+        if(!is_int((int)$count)){
+            $request->session()->flash('errorMessage', 'You need to enter an integer amount. No decimals, no letters, and NO SCRIPTS!');
+            return \Redirect::action('LotteriesController@index');
         }
 
         \Stripe\Stripe::setApiKey("sk_test_ZzKGRiePc0b4mGyYiwkRnPEy");
@@ -57,7 +63,7 @@ class LotteriesController extends Controller
         $token = \Input::get('stripeToken');
 
         try {
-            $userId = \Auth::id();
+            $userId = \Auth::id(); 
             $charge = \Stripe\Charge::create(array(
                     "amount"=> 500 * $count,
                     "currency"=>"usd",

@@ -22,8 +22,7 @@
 				</h1>
 				<div class="countdown">
 					<h2>
-					The Drawing ends in : <br>
-					<span class="lottoClock" data-clock-id="{{$lottery->end_date}}"></span>
+					The Drawing ends: {{ $lottery->end_date->diffForHumans() }}
 					</h2>
 				</div>
 			</div>

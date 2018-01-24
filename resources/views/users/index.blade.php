@@ -38,7 +38,7 @@ table, th, td {
 	@foreach($users as $user)
 			<tr>
 				
-				<td><a class="btn btn-success btn-xs" href="{{action('UsersController@show',$user->id)}}" >Edit</a></td>
+				<td><a class="btn btn-success btn-xs cleargreenBtn" href="{{action('UsersController@show',$user->id)}}" >Edit</a></td>
 				<td>{{$user->name}}</td>
 				<td>{{$user->username}}</td>
 				<td>{{$user->email}}</td>

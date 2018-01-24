@@ -18,8 +18,8 @@
 		<div class="col-xs-12 col-sm-12 col paddingMobile text-center" >
 			<h1>{{$raffle['title']}}</h1>
 			<div class="countdown">
-				<h2>This Drawing ends in :<br> 
-					<span class="raffleClock" data-clock-id="{{$raffle->end_date}}"></span>
+				<h2>
+					The Drawing Ends: <br> {{ $raffle->end_date->diffForHumans() }}
 				</h2>
 				<img style="max-height:16em;border-radius:1em;box-shadow: 20px 20px 20px rgba(0,0,0,.6);" src={!! $raffle->img !!}>
 			</div>
