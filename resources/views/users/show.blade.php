@@ -35,24 +35,32 @@
 			<div class="col col-sm-12">
 				<h1 style="padding-top:.5em;text-align:center;color:lightgreen;">YOUR CURRENT TICKETS</h1>
 				<div  class="row">
-					<div class="col-xs-12 col-sm-4"> <h3 class="ticketHead">Lotteries</h3>
+					{{-- <div class="col-xs-12 col-sm-4"> <h3 class="ticketHead">Lotteries</h3>
 						@foreach($user->lotteryEntries->unique('lottery_id') as $lotteryEntry)
 							@if(\App\Models\Lottery::where('id', $lotteryEntry->lottery->id)->get()[0]->complete == 0)
-								<a href="{{action('LotteriesController@show', $lotteryEntry->lottery->id)}}"><span style="color:lightgreen;">x{{\App\Models\LotteryEntry::where('lottery_id',$lotteryEntry->lottery->id)->count()}}</span> - {{$lotteryEntry->lottery->title}} #{{$lotteryEntry->lottery->id}}</a><br>
+								<a href="{{action('LotteriesController@show', $lotteryEntry->lottery->id)}}">
+									<span style="color:lightgreen;">x{{\App\Models\LotteryEntry::where('lottery_id',$lotteryEntry->lottery->id)->where('user_id', $user->id)->count()}}</span> - {{$lotteryEntry->lottery->title}} #{{$lotteryEntry->lottery->id}}
+								</a>
+								<br>
 							@endif
 						@endforeach
-					</div>
-					<div class="col-xs-12 col-sm-5"><h3 class="ticketHead">Raffles</h3>
+					</div> --}}
+					<div class="col-xs-12 col-sm-8"><h3 class="ticketHead">Raffles</h3>
 						@foreach($user->raffleEntries->unique('raffles_id') as $raffleEntry)
 							@if(\App\Models\Raffle::where('id', $raffleEntry->raffle->id)->get()[0]->complete == 0)
-								<a href="{{action('RafflesController@show', $raffleEntry->raffle->id)}}"><span style="color:lightgreen;">x{{\app\Models\RaffleEntry::where('raffles_id',$raffleEntry->raffle->id)->count()}}</span> - {{$raffleEntry->raffle->title}}  </a><br>
+								<a href="{{action('RafflesController@show', $raffleEntry->raffle->id)}}">
+									<span style="color:lightgreen;">x{{\app\Models\RaffleEntry::where('raffles_id',$raffleEntry->raffle->id)->where('user_id', $user->id)->count()}}</span> - {{$raffleEntry->raffle->title}}
+								</a>
+								<br>
 							@endif
 						@endforeach
 					</div>
-					<div class="col-xs-12 col-sm-3"> <h3 class="ticketHead">World Lottery</h3>
+					<div class="col-xs-12 col-sm-4"> <h3 class="ticketHead">World Lottery</h3>
 						@foreach($user->worldLotteryEntries->unique('the_world_lottery_id') as $worldLotteryEntry)
 							@if(\App\Models\TheWorldLottery::orderBy('id','desc')->limit(1)->get()[0]->id == $worldLotteryEntry->theworldlottery->id)
-								<a href="{{action('TheWorldLotterysController@index')}}">{{$worldLotteryEntry->theworldlottery->title}}</a><br>
+								<a href="{{action('TheWorldLotterysController@index')}}">{{$worldLotteryEntry->theworldlottery->title}}
+								</a>
+								<br>
 							@endif
 						@endforeach
 					</div>

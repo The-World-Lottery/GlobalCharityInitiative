@@ -144,16 +144,16 @@ $(document).ready(function(){
     //click for summaries
     $('#clickTrigger').click(function(){
     	$(this).hide();
-    	$('#registerHolder').slideToggle();
-    	$('#loginHolder').slideToggle();
-    	$('#clickTrigger2').slideToggle();
+    	$('#registerHolder').slideToggle(650);
+    	$('#loginHolder').slideToggle(650);
+    	$('#clickTrigger2').slideToggle(650);
 	})
 
 	 $('#clickTrigger2').click(function(){
     	$(this).hide();
-    	$('#loginHolder').slideToggle();
-    	$('#registerHolder').slideToggle();
-    	$('#clickTrigger').slideToggle();
+    	$('#loginHolder').slideToggle(650);
+    	$('#registerHolder').slideToggle(650);
+    	$('#clickTrigger').slideToggle(650);
 	})
 
 	//click for wallets

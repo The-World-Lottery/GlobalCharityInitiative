@@ -23,11 +23,11 @@
         	<li class="dropdown headLinks">
 	          <a href="#" class="dropdown-toggle navLink" style="color:white"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
 	          <ul class="dropdown-menu" style="background-color: #32809a;">
-	          	<li>
+	          	{{-- <li>
 	    			<a href="{{action('LotteriesController@adminIndex')}}">
 					<span class="navLink">Manage Lotteries</span>
 					</a>
-				</li>
+				</li> --}}
 				<li>
 					<a href="{{action('RafflesController@adminIndex')}}">
 					<span class="navLink">Manage Raffles</span>
@@ -63,11 +63,11 @@
           	<span class="glyphicon glyphicon-gift" aria-hidden="true"></span>
           	<span class="navLink">Raffles</span></a>
           </li>
-          <li class="headLinks">
+          {{-- <li class="headLinks">
           	<a href="{{action('LotteriesController@index')}}">
           	<span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
           	<span class="navLink">Lotteries</span></a>
-          </li>
+          </li> --}}
           {{-- class="headLinks" <li>
           	<a href="{{action('TheWorldLotterysController@index')}}"><span class="navLink">The World Lottery</span></a>
           </li> --}}
