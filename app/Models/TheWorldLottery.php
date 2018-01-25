@@ -25,7 +25,6 @@ class TheWorldLottery extends Model
    		//change status to complete,
    		TheWorldLottery::where('id', $id)->update(['complete' => true]);
 
-      
       $biglot = TheWorldLottery::where('id',$id)->value('current_value');
       $winners = \App\Models\TheWorldLotteryEntry::findWinners($id);
       // var_dump($winners);
