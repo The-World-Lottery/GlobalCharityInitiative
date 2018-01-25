@@ -45,12 +45,12 @@ class TheWorldLottery extends Model
    			}
 
    			$theWorldLottery = new \App\Models\TheWorldLottery();
-        $theWorldLottery->title = 'TheWorldLottery' . ($id + 1);
+        $theWorldLottery->title = 'TheWorldCharityDrawing' . ($id + 1);
         $theWorldLottery->init_value = $nextWorldCut;
         $theWorldLottery->current_value = $nextWorldCut;
 
         $date = new \DateTime(date('Y-m-d H:i:s'));
-        $date->add(new \DateInterval('P14D'));
+        $date->add(new \DateInterval('P28D'));
         $theWorldLottery->end_date = $date->format('Y-m-d H:i:s');
 
         $theWorldLottery->user_id = 1;
@@ -63,18 +63,18 @@ class TheWorldLottery extends Model
 
         // var_dump("Hello?");
         $theWorldLottery = new \App\Models\TheWorldLottery();
-        $theWorldLottery->title = 'TheWorldLottery' . ($id + 1);
+        $theWorldLottery->title = 'TheWorldCharityDrawing' . ($id + 1);
         $theWorldLottery->user_id = 1;
         $theWorldLottery->init_value = $biglot;
         $theWorldLottery->current_value = $biglot;
         // var_dump($biglot);
 
         $date = new \DateTime(date('Y-m-d H:i:s'));
-        $date->add(new \DateInterval('P14D'));
+        $date->add(new \DateInterval('P28D'));
         $theWorldLottery->end_date = $date->format('Y-m-d H:i:s');
 
         $theWorldLottery->complete = 0;
-        $theWorldLottery->winner_id = 1;
+        $theWorldLottery->winner_id = null;
         $theWorldLottery->save();
 
    		}

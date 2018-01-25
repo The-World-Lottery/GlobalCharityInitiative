@@ -31,16 +31,16 @@
 	<br>
 	<ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
 	  <li class="active"><a  id="zeroO"  data-toggle="tab" href="#home">Our Mission</a></li>
-	  <li><a  id="zeroO"  data-toggle="tab" href="#menu1">About TWL</a></li>
+	  <li><a  id="zeroO"  data-toggle="tab" href="#menu1">About GCI</a></li>
 	  <li><a  id="zeroO"  data-toggle="tab" href="#menu2">The Creators</a></li>
 	</ul>
 	<div style="padding:1em;">
 		<div class="tab-content">
 		  	<div id="home" class="tab-pane fade in active">
-			    <p style="text-align:center;">Our mission is to eliminate the man power that is usually necessary for fund-raising, for all types of worth-while charities and human interest projects by providing massive monetary donations (from The World Lottery Foundation) directly to the source of the charitable work. We will accomplish this by running a large number of simultaneous lotteries and raffles whose ticket prices will be split thusly.</p>
-			    <p style="text-align:center;" >The ticket price for all games is $2 US (or the current equivalency of 2 USD in Euros, Japanese Yen, Pounds, Swiss Franks, Bitcoin, Litecoin, Etherium, Dogecoin or Ripple)</p>
+			    <p style="text-align:center;">Our mission is to eliminate the man power that is usually necessary for fund-raising, for all types of worth-while charities and human interest projects by providing massive monetary donations (from The Global Charity Initiative Foundation) directly to the source of the charitable work. We will accomplish this by running a number of simultaneous raffles whose ticket prices will be split thusly.</p>
+			    <p style="text-align:center;" >The ticket price for all games is $5 USD (or equivalent)</p>
 			    <div class="row">
-				    <div class="col col-md-4 col-sm-12">
+				    {{-- <div class="col col-md-4 col-sm-12">
 				    	<h2 class="infoHeaders">Lottery Ticket Price</h2>
 				    	<blockquote>
 				    	
@@ -50,47 +50,44 @@
 				    		<div>5% goes to<br>the payment system.</div>
 				    	
 				    	</blockquote>
-				    </div>
-				    <div class="col col-md-4 col-sm-12">
+				    </div> --}}
+				    <div class="col col-md-6 col-sm-12">
 				    	<h2 class="infoHeaders">Raffle Ticket Price</h2>
 				    	<blockquote>
-				    	
-				    		<div>50% goes to<br>The World Lottery Foundation.</div>
-			    			<div>45% goes to<br>The World Lottery's Pool.</div>
+				    		<div>60% goes to<br>GCI Foundation Fund.</div>
+			    			<div>35% goes to<br>The World Charity Drawing.</div>
 			    			<div>5% goes to<br>the payment system.</div>
-				    	
 				    	</blockquote>
 				    </div>
-				    <div class="col col-md-4 col-sm-12">
+				    <div class="col col-md-6 col-sm-12">
 				    	<h2 class="infoHeaders">The World Lottery Ticket Price</h2>
 				    	<blockquote>
-				    	
-			    			<div>50% goes to<br>The World Lottery Foundation.</div>
-			    			<div>45% goes to<br>The World Lottery's Pool.</div>
-			    			<div>5% goes to<br>the payment system.</div>	
-				    	
+			    			<div>60% goes to<br>The World Lottery Foundation.</div>
+			    			<div>35% goes to<br>The World Lottery's Pool.</div>
+			    			<div>5% goes to<br>the payment system.</div>
 				    	</blockquote>
 				    </div>
 			    </div>
 			</div>
+
 			<div id="menu1" class="tab-pane fade">
 				<div class="row">
 					<div class="col col-sm-5 col-sm-offset-1 col-xs-12">
-						<h1 class="infoHeaders">Sources</h1>
+						<h1 class="infoHeaders">Our Donors</h1>
 						<blockquote>
-						{{-- <br> --}}
-						<a target="_blank" href="http://www.theperfecttitle.com/money/money.shtml"><h5>Lottery Quotes</h5></a>
+						Samuel L. Jackson
+						{{-- <a target="_blank" href="http://www.theperfecttitle.com/money/money.shtml"><h5>Lottery Quotes</h5></a>
 						<a target="_blank" href="https://www.cryptonator.com/?utm_referrer=http%3a%2f%2ftheworldlottery.dev%2fcurrencyconversion"><h5>Currency Conversion Widgets</h5></a>
 						<a target="_blank" href="https://www.cryptocompare.com/api/#-api-data-price-"><h5>Currency conversion API Call for point of sale transactions</h5></a>
 						<a target="_blank" href="https://www.filestack.com"><h5>Profile and Raffle Image Hosting</h5></a>
-						<a target="_blank" href="http://hilios.github.io/jQuery.countdown/"><h5>Games timer Countdown</h5></a>
+						<a target="_blank" href="http://hilios.github.io/jQuery.countdown/"><h5>Games timer Countdown</h5></a> --}}
 						</blockquote>
 					</div>
 					<div class="col col-sm-5 col-xs-12">
-						<h1 class="infoHeaders">Technologies</h1>
+						<h1 class="infoHeaders">Charitable Partners</h1>
 						<blockquote>
-						{{-- <br> --}}	
-						<h5>Laravel framework for PHP</h5>
+						Hilarity of charity
+						{{-- <h5>Laravel framework for PHP</h5>
 						<h5>Object Oriented</h5>
 						<h5>Cron Jobs for game timeouts</h5>
 						<h5>Jquery library for Javascript</h5>
@@ -99,7 +96,7 @@
 						<h5>MVC (Model View Controller)</h5>
 						<h5>Events/task scheduling</h5>
 						<h5>14 related database tables</h5>
-						<h5>140+ Merges, 450+ commits - Github Version control</h5>	
+						<h5>140+ Merges, 450+ commits - Github Version control</h5> --}}	
 						</blockquote>
 					</div>
 				</div>

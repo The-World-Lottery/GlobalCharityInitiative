@@ -22,23 +22,27 @@
 </ul>
 
 	<span style="float:right;padding-right:1em;">{!! $suggestions->appends(Request::except('page'))->render() !!}</span>
-	<main class="container" style="max-width:100%;">
-
-		@foreach($suggestions as $suggestion)
-
-			<a href="{{ action('SuggestionsController@show', $suggestion->id) }}">
-				<div class ="suggHead">{{$suggestion->title}}</div>
-			</a>
-			@if(Auth::check())
-				<a href="{{action('SuggestionsController@upvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
-	            <a href="{{action('SuggestionsController@downvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-down"></span></a>
-			@endif
-
-			<p>{{$suggestion->content}}</p>
-			<p>__By {{$suggestion->user->name}}</p>
-		@endforeach
+	<main class="container">
 		<br>
+		<div class="row">
+			@foreach($suggestions as $suggestion)
+			<div class="col col-sm-6">
+				<div style="background-color: rgba(0,0,0,.2);padding:0 1em 1em 1em;height:200px;overflow:scroll;">
+					<a href="{{ action('SuggestionsController@show', $suggestion->id) }}">
+						<div class ="suggHead">{{$suggestion->title}}</div>
+					</a>
+					@if(Auth::check())
+						<a href="{{action('SuggestionsController@upvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
+			            <a href="{{action('SuggestionsController@downvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-down"></span></a>
+					@endif
 
+					<p>{{$suggestion->content}}</p>
+					<p>__By {{$suggestion->user->name}}</p>
+				</div>
+			</div>
+			@endforeach
+		</div>
 	</main>
+
 
 @stop

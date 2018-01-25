@@ -422,7 +422,7 @@ a:hover, a:active {
 
 #zeroO {
 	background-color:rgba(0,0,0,0);
-	color:lightgreen;
+	color:lightblue;
 }
 
 input, button {
@@ -434,8 +434,10 @@ input {
 }
 
 #menu {
-	background-color: #32809a;
+	/*background-color: #32809a;*/
+	background-color:#31d5cd;
 	padding:0 1em 0 1em;
+
 }
 
 .navButton {
@@ -624,7 +626,7 @@ blockquote {
 	}
 
 	#splashHeader {
-		padding-top: 10vh;
+		padding-top: 27vh;
 		width:100%;
 		height:100vh;
 	}
@@ -652,10 +654,11 @@ blockquote {
 		float:right;
 		z-index:10;"
 	}
+
 	#gameScroll {
 		padding-top:1em;
 		overflow-y:scroll;
-		height:86.5vh;
+		height:94.5vh;
 	}
 
 	#main {

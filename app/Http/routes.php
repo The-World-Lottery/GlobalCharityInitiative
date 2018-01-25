@@ -23,10 +23,10 @@ Route::get('/',function(){
 	return view('splash')->with(array('lottery' => $lottery, 'raffle' => $raffle, 'twl' => $twl));
 });
 
-Route::get('/testone', 'LotteriesController@one');
+// Route::get('/testone', 'LotteriesController@one');
 
 // Stripe routes
-Route::post('/lotteryCheckout/{id}/{count}','LotteriesController@chargeCard');
+// Route::post('/lotteryCheckout/{id}/{count}','LotteriesController@chargeCard');
 Route::post('/raffleCheckout/{id}/{count}','RafflesController@chargeCard');
 Route::post('/twlCheckout','TheWorldLotterysController@storeNumbers');
 Route::get('/ticketFail','RafflesController@notLoggedIn');
@@ -50,13 +50,13 @@ Route::get('/closeAddress/{id}','SuggestionsController@closeAddress');
 Route::get('/suggestions/adminIndex','SuggestionsController@adminIndex');
 
 Route::get('/raffles/adminIndex','RafflesController@adminIndex');
-Route::get('/lotteries/adminIndex','LotteriesController@adminIndex');
+// Route::get('/lotteries/adminIndex','LotteriesController@adminIndex');
 
 Route::get('/picknumbers', 'TheWorldLotterysController@selectNumbers');
 Route::get('/TheWorldLottery', 'TheWorldLotterysController@storeNumbers');
 
 
-Route::get('/lotteryTicket/{id}','LotteriesController@addUserToEntries');
+// Route::get('/lotteryTicket/{id}','LotteriesController@addUserToEntries');
 Route::get('/raffleTicket/{id}','RafflesController@addUserToEntries');
 Route::get('/worldLotteryTicket/{id}','TheWorldLotterysController@addUserToEntries');
 
@@ -66,7 +66,7 @@ Route::resource('suggestions', 'SuggestionsController');
 
 Route::resource('users', 'UsersController');
 
-Route::resource('lotteries', 'LotteriesController');
+// Route::resource('lotteries', 'LotteriesController');
 
 Route::resource('raffles', 'RafflesController');
 

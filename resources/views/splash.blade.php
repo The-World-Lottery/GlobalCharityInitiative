@@ -48,19 +48,15 @@
 	
 </head>
 	<body id="splashBod">
-		
-
 		<main style="z-index:0;height:100vh;width:100%;position:fixed;">
-
 			<div id="splashHeader" class="row text-center">
-
 				<div class="col col-xs-12"  style="padding:0;">
 					<h1 id="splashTitle" style="">
-						The<span style="color:white;"> World Lottery</span> For Charity
+						The<span style="color:white;"> Global Charity</span> Initiative
 					</h1>
 					<br>
 					<div id="splashPar" >
-						ALL proceeds go to the game winners and, selected charities and global interest projects.
+						ALL proceeds go to the <span style="color:#0af794;">charities</span> and <span style="color:#0af794;">human interest projects</span> around the world.
 					</div>
 					<br>
 					<form action="{{action('RafflesController@index')}}">
@@ -69,18 +65,14 @@
 						<input type="submit" value="SIGN UP" class="btn-success btn" style="font-size:1.5em;padding-top:.5em;"> --}}
 					</form>	
 					<br>
-					<div id="mobileCar1">
+					{{-- <div id="mobileCar1">
 						@include('layouts.partials.carousel')
-					</div>
-					
-
+					</div> --}}
 				</div>
 				<div id="splashImageHolder">
 					<img id="splashImage" src="images/downArrows.png">
 				</div>
-
 			</div>
-
 		</main>
 		<div class="text-center" style="padding-top:100vh;width:100%;"></div>
 		<section style="z-index:100;position:absolute;width:100%;">
@@ -89,56 +81,52 @@
 					<h1>Who we are and what we do</h1>
 				</div>
 			</div>
-
 			<div id="splash3" class="row infoRows parallax">
-					<div id="mobileCar2">
+					{{-- <div id="mobileCar2">
 						@include('layouts.partials.carousel')
-					</div>
+					</div> --}}
 				<div class="col col-xs-12 col-sm-8 col-sm-offset-2" style="background-color: rgba(0,0,0,.8);">
 					<div class="par3">
-						We're the first FULLY non-profit gambling organization in history. All earnings are allocated to charitable projects around the globe. The groups we work with will be decided by the world through our social media outlets and in our own suggestion box.  
+						We a small group of individuals who saw a need to improve the efficiency of charitable fund raising. All earnings are allocated to charitable projects around the globe. The groups we work with will be decided by the world through our social media outlets and in our own suggestion box. 
 					</div>
 				</div>
 			</div>
 			
 			<div id="splash1" class="row infoRows gamePositioning text-center">	
-				<div class="col col-xs-12 col-sm-4" id="gameHold">
+				<div class="col col-xs-12 col-sm-6" id="gameHold">
+					<div class="splashInfo">
+						<h2>Raffles</h2>
+						<blockquote>When a company wishes to advertise through us they may donate one of their products or services to be raffled off. Celebrities may donate a day of their time to be raffled off for fans. There will always be a winner of each raffle as long as even one ticket is purchased. A small portion of each ticket price will increase the value of the currently running World Lottery. </blockquote>		
+					</div>
+					<div class="bottomPos">
+						@include('raffles.one')
+					</div>
+				</div>
+				<div class="col col-xs-12 col-sm-6" id="gameHold">
 					<div class="splashInfo">
 						<h2>The World Lottery</h2>
-						<blockquote>The World Lottery is a classic "Pick Six" drawing where players select 5 numbers 1-100 and a power number. The numbers will be selected every two weeks on Saturdays. </blockquote>
+						<blockquote>The World Lottery is a classic "Pick Six" drawing where players select 5 numbers 1-100 and a power number. The drawings will happen on the first day of each month. </blockquote>
 					</div>
 					<div class="bottomPos">
 						<p style="font-size:2.7em;padding:1em .3em 1em .3em;margin-top:.5em;background-color:rgba(0,0,0,.5);border-radius: 1em;">The <span style="color:lightgreen;">World Lottery </span>Jackpot is <b><span style="color:lightgreen;">${{number_format((\App\Models\TheWorldLottery::orderBy('id','desc')->first()->get()[0]['current_value']),0,".",",")}}</span></b>
 						<br><strong style="color:#00ffc4;margin-bottom: .5em;">{{$twl[0]->end_date->diffForHumans()}}</strong></p>
 					</div>
 				</div>
-				<div class="col col-xs-12 col-sm-4" id="gameHold">
-					<div class="splashInfo">
-						<h2>Raffles</h2>
-						<blockquote>When a company wishes to advertise through us they may donate one of their products or services to be raffled off. Celebrities may  donate a day of their time to be raffled off for fans. There will always be a winner of each raffle as long as even one ticket is purchased.</blockquote>
-						
-					</div>
-					<div class="bottomPos">
-						@include('raffles.one')
-					</div>
-				</div>
-				<div class="col col-xs-12 col-sm-4" id="gameHold">
+			{{-- 	<div class="col col-xs-12 col-sm-4" id="gameHold">
 					<div class="splashInfo">
 						<h2>Mixed Lotteries</h2>
 						<blockquote>Each Mixed Lottery is created with an initial donation from TWL. Each ticket purchase increases that individual lottery's jackpot and the current World Lottery Jackpot. There will always be a winner of each mixed lottery as long as even one ticket is purchased.</blockquote>
-						{{-- <div>{{print_r(\App\Models\Lottery::orderBy('current_value','desc')->limit(1)->get()[0]['current_value'])}}
-						</div> --}}
 					</div>
 					<div class="bottomPos">
 						@include('lotteries.one')
 					</div>
-				</div>
+				</div> --}}
 			</div>
 
 			<div id="splash3" class="row infoRows parallax2">
 				<div class="col col-xs-12 col-sm-8 col-sm-offset-2" style="background-color: rgba(0,0,0,.8);">
 					<div class="par3">
-						We've created a carbon-neutral, worldwide gambling system that benefits the LEAST fortunate. There's no need for a large factory because our tickets aren't made of paper, they're virtual and of no threat to forests. We also don't need vehicles burning fuel to deliver our tickets because everything is online. You don't even have to drive your own personal vehicle to go buy a ticket. That little rectangle you carry around everywhere and can't stop looking at is the only device you need to play! 
+						We've created a green, worldwide charity hub. The first one-stop-shop to learn about and help out multiple charitable projects. Maybe even have a little fun doing it. There's no need for a large factory because our tickets aren't made of paper, they're virtual and of no threat to forests. You don't even have to drive your personal vehicle to go buy a ticket. That little rectangle you carry around everywhere and can't stop looking at is the only device you need to participate!
 					</div>
 				</div>
 			</div>
@@ -148,7 +136,7 @@
 				<div class="col col-xs-12 col-sm-4">
 					<div class="splashInfo">
 						<h2>The Idea</h2>
-						<blockquote>All ticket purchases increase the value of the jackpot for the game bought into, the value of the current world lottery, and The World Lottery Foundation Fund. Its is from the foundation that we will allocate funds to selected charities and projects around the globe.</blockquote>
+						<blockquote>All raffle ticket purchases increase the value of the current world charity drawing and The GCI Foundation Fund. Its is from the foundation that we will allocate funds to selected charities and projects around the globe.</blockquote>
 						
 					</div>
 				</div>
@@ -158,7 +146,6 @@
 						<blockquote style="text-align:left;">
 							<ol>
 								<li>Reduce the manpower usually necessary for fund raising by providing massive monetary donations straight to the source of the charitable work.</li>
-								<li>Eliminate the waste the paper driven "state lotteries" generate. (paper consumption, carbon emissions, factory upkeep/utility costs, etc...)</li>
 								<li>Help those who need it most.</li>
 							</ol>
 						</blockquote>

@@ -26,7 +26,7 @@
 			</div>
 		</div>
 
-		<div class="row"  id="footer" style="">
+		{{-- <div class="row"  id="footer" style="">
 			<div class="col col-xs-12 col-sm-4">
 				<div class="col col-xs-12">
 					<div id="googlepos">
@@ -52,7 +52,7 @@
 				<h5 style="font-size:1.3em;padding-top:1.5vh;">Bitcoin pay coming soon!</h5>
 			</div>
 		</div>
-		
+ --}}		
 	</div>
 	<script
 	  src="https://code.jquery.com/jquery-3.2.1.js"

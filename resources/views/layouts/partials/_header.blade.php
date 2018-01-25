@@ -56,7 +56,7 @@
 	      <li class="headLinks">
           	<a href="{{action('TheWorldLotterysController@selectNumbers')}}">
           	<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
-          	<span class="navLink">World Lottery</span></a>
+          	<span class="navLink">World Charity Drawing</span></a>
           </li>
           <li class="headLinks">
           	<a href="{{action('RafflesController@index')}}">

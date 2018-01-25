@@ -7,7 +7,7 @@
 @stop
 
 @section('divHead')
-<h1>The World Lottery
+<h1>The World Charity Drawing
 <div style="font-size:50%;margin-bottom: 1em;">$5 USD per entry</div>
 </h1>
 @stop
