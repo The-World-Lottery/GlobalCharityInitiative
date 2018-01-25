@@ -142,8 +142,18 @@ $(document).ready(function(){
 	// },30000);
 
     //click for summaries
-    $('#hoverTrigger').click(function(){
-    	$('#hoverSumm').slideToggle();
+    $('#clickTrigger').click(function(){
+    	$(this).hide();
+    	$('#registerHolder').slideToggle();
+    	$('#loginHolder').slideToggle();
+    	$('#clickTrigger2').slideToggle();
+	})
+
+	 $('#clickTrigger2').click(function(){
+    	$(this).hide();
+    	$('#loginHolder').slideToggle();
+    	$('#registerHolder').slideToggle();
+    	$('#clickTrigger').slideToggle();
 	})
 
 	//click for wallets

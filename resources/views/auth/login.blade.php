@@ -16,10 +16,12 @@
   <li><a id="zeroO" href="{{action('Auth\AuthController@getRegister')}}">Register</a></li>
 </ul> --}}
  	<main class="container authSpacer" style="max-width:100%;">
-        <div class="col col-sm-12">
-        <h1 style="color:lightgreen;">Already have an account?</h1>
+        <h1 style="color:lightgreen;text-align:center;">Already have an account?</h1>
+        <div class="text-center" >
+            <button id="clickTrigger2" style="display:none;" class="btn btn-success cleargreenBtn">Login</button>
+        </div>
 
-           
+        <div id="loginHolder" class="col col-sm-12">
             @if (session()->has('errorMessage'))
                 <div class="alert alert-warning text-center">{{ session('errorMessage') }}</div>
             @endif
@@ -47,9 +49,13 @@
 
     {{-- //register --}}
 
+        
+        <h1 style="color:lightgreen;text-align:center;">Dont have an account?</h1>
+        <div class="text-center">
+            <button id="clickTrigger" class="btn btn-success cleargreenBtn">Register</button>
+        </div>
 
-        <div class="col col-sm-12">
-            <h1 style="color:lightgreen;">Dont have an account?</h1>
+        <div  id="registerHolder" class="col col-sm-12">
             <div class="col col-xs-12 col-sm-6">
 
             <form method="POST" action="/auth/register">
