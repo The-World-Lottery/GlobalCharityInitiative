@@ -35,7 +35,7 @@ class SuggestionsController extends Controller
     public function adminIndex()
     {
         if(\Auth::user()->is_admin){
-            $suggestions = Suggestion::where('addressed','0')->paginate(16);
+            $suggestions = Suggestion::where('id','>',0)->paginate(16);
             return view('suggestions.admin')->with(array('suggestions' => $suggestions));    
         }
         return \Redirect::action('LotteriesController@index');

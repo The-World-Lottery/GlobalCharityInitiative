@@ -10,9 +10,9 @@ body.fade-out {
 body#master {
 	color:#e0fff8;
 	background-color:#1b446f;
-	font-size:1em;
 	/*font-family: 'PT Sans Narrow', sans-serif !important; 	*/
 	letter-spacing:1px;
+	font-size:90%;
 }
 
 body#splashBod {
@@ -35,7 +35,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 input[type=checkbox] {
-  zoom:1.5;
+  zoom:1.4;
 }
 
 .auto {
@@ -121,14 +121,15 @@ a.navLink:hover {
 	overflow:hidden;
 	background-repeat: no-repeat;
 	background-color: rgba(0,0,0,.2);
+	border-radius: 1em 1em 0 0;
 }
 
 #raffleHolder {
-	border:1px solid white;
+	border:1px solid #31b7d5;
 	min-height:100%;
 	margin-bottom:1em;
 	/*padding-top:.5em;*/
-	border-radius: 2px;
+	border-radius: 1em;
 }
 
 .lotteryPadding {
@@ -154,8 +155,7 @@ a.navLink:hover {
 }
 
 li a:hover {
-	background-color:lightblue !important;
-	color:black !important;
+	background-color:#247b8e !important;
 }
 
 #mobileChatHide {
@@ -256,11 +256,6 @@ ul.pagination {
 	text-decoration:underline;
 	font-size:1.2em;
 }
-
-.suggHead:hover {
-	color:lightgreen;
-}
-
 
 .aboutUs {
 	border:1px solid white;
@@ -409,11 +404,11 @@ label {
 }
 
 .user:hover {
-	background-color:lightblue;
+	background-color:#247b8e;
 }
 
 a:hover, a:active {
-	color:lightgreen;
+	color:white;
 }
 
 #jackpot {
@@ -435,7 +430,7 @@ input {
 
 #menu {
 	/*background-color: #32809a;*/
-	background-color:#31d5cd;
+	background-color:#31b7d5;
 	padding:0 1em 0 1em;
 
 }
@@ -582,6 +577,10 @@ blockquote {
 	padding-bottom:3em;
 }
 
+#navSuggMobile {
+	display:none;
+}
+
 @media screen and (min-width: 768px) {
 
 	#splash2 {
@@ -658,7 +657,7 @@ blockquote {
 	#gameScroll {
 		padding-top:1em;
 		overflow-y:scroll;
-		height:94.5vh;
+		height:94vh;
 	}
 
 	#main {
@@ -709,6 +708,7 @@ blockquote {
 	#twlButton {
 		margin-top:1em;
 	}
+
 
 }
 
@@ -780,4 +780,5 @@ blockquote {
     .collapsing {
         overflow: hidden!important;
     }
+
 }

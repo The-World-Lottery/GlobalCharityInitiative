@@ -54,17 +54,17 @@
 				    <div class="col col-md-6 col-sm-12">
 				    	<h2 class="infoHeaders">Raffle Ticket Price</h2>
 				    	<blockquote>
-				    		<div>60% goes to<br>GCI Foundation Fund.</div>
+				    		<div>60% goes to<br>GCI Foundation.</div>
 			    			<div>35% goes to<br>The World Charity Drawing.</div>
-			    			<div>5% goes to<br>the payment system.</div>
+			    			<div>5% goes to<br>The Payment System (Stripe)</div>
 				    	</blockquote>
 				    </div>
 				    <div class="col col-md-6 col-sm-12">
-				    	<h2 class="infoHeaders">The World Lottery Ticket Price</h2>
+				    	<h2 class="infoHeaders">The World Charity Drawing</h2>
 				    	<blockquote>
-			    			<div>60% goes to<br>The World Lottery Foundation.</div>
-			    			<div>35% goes to<br>The World Lottery's Pool.</div>
-			    			<div>5% goes to<br>the payment system.</div>
+			    			<div>60% goes to<br>GCI Foundation.</div>
+			    			<div>35% goes to<br>The World Charity Drawing's Pool.</div>
+			    			<div>5% goes to<br>the payment system (Stripe)</div>
 				    	</blockquote>
 				    </div>
 			    </div>

@@ -21,10 +21,9 @@
 
 	<span style="float:right;padding-right:1em;">{!! $suggestions->appends(Request::except('page'))->render() !!}</span>
 	<main class="container">
-		<br>
 		<div class="row">
 			@foreach($suggestions as $suggestion)
-			<div class="col col-sm-6">
+			<div class="col col-sm-6" style="margin-top:1em;">
 				<div style="background-color: rgba(0,0,0,.2);padding:0 1em 1em 1em;height:200px;overflow:scroll;">
 					<a href="{{ action('SuggestionsController@show', $suggestion->id) }}">
 						<div class ="suggHead">{{$suggestion->title}}</div>

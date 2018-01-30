@@ -23,6 +23,13 @@
 				</h2>
 				<img style="max-height:16em;border-radius:1em;box-shadow: 20px 20px 20px rgba(0,0,0,.6);" src={!! $raffle->img !!}>
 			</div>
+			<h3 style="margin-top: 1em;">Description: </h3>
+			<p>{{$raffle['product']}}</p>
+			<h3>Charity:</h3>
+			<p>{{$raffle['content']}}</p>
+			@if (Auth::check() && Auth::user()->is_admin)
+			<a href="{{ action('RafflesController@edit', $raffle->id) }}"><div  class="btn btn-warning">Edit</div></a>
+			@endif
 		</div>
 		{{-- <div class="col-xs-12 col-sm-6 col paddingMobile" >
 				<h2>{{$raffle->product}}</h2>
@@ -56,9 +63,6 @@
 				<input hidden id="usdDoge" name="dogeConv">
 				<input hidden id="usdBCH" name="bchConv">
 				<input hidden id="usdXRP" name="xrpConv"><br><br>
-				@if (Auth::check() && Auth::user()->is_admin)
-				<a href="{{ action('RafflesController@edit', $raffle->id) }}"><div  class="btn btn-warning">Edit</div></a>
-				@endif
 				<button type="submit" class="btn btn-success">GET A TICKET</button>
 			
 			</form>

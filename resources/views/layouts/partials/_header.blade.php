@@ -5,6 +5,7 @@
       		@if (Auth::check())
 					{{-- <img src='{{Auth::user()->image}}' id="headImg"> --}}
 				<a class="navbar-brand user navLink" style="margin-left:.3em;" href="{{action('UsersController@show' , Auth::id())}}" >
+					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
 					{{Auth::user()->name}}
 				</a>
 			@else
@@ -53,15 +54,15 @@
 	          </ul>
 	        </li>
 	        @endif
-	      <li class="headLinks">
-          	<a href="{{action('TheWorldLotterysController@selectNumbers')}}">
-          	<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
-          	<span class="navLink">World Charity Drawing</span></a>
-          </li>
           <li class="headLinks">
           	<a href="{{action('RafflesController@index')}}">
           	<span class="glyphicon glyphicon-gift" aria-hidden="true"></span>
           	<span class="navLink">Raffles</span></a>
+          </li>
+	      <li class="headLinks">
+          	<a href="{{action('TheWorldLotterysController@selectNumbers')}}">
+          	<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+          	<span class="navLink">Global Drawing - <span style="color:lightgreen;">${{ number_format((int) App\Models\TheWorldLottery::orderBy('id','desc')->get()[0]['current_value'],0,".",",") }}</span></span></a>
           </li>
           {{-- <li class="headLinks">
           	<a href="{{action('LotteriesController@index')}}">
@@ -79,8 +80,10 @@
           <li class="headLinks">
           	<a href="{{action('AboutUsController@index')}}">
           	<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+          	<span id="navSuggMobile" class="navLink">About Us</span>
           	</a>
           </li>
+
           {{-- @if(Auth::check() && count(App\Models\UserWallet::where('user_id', '=', \Auth::id())->get()) === 0)
           <li class="headLinks">
 	          

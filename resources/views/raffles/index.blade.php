@@ -29,17 +29,16 @@
 
 	<div class="row">
 		@foreach($raffles as $raffle)
-			{{-- <a style="" href="{{ action('RafflesController@show', $raffle->id) }}"> --}}
 			<div class="col-sm-6 col-md-4 text-center">
 				<div id="raffleHolder">
-					<div class="raffleCont" style='background-image:url("{{$raffle->img}}");'>
-						<h3 style="background-color: rgba(0,0,0,.4);margin:0;padding:.6em;">{{$raffle->title}}</h3>
-						
-						
-					</div>
 
+					<div class="raffleCont" style='background-image:url("{{$raffle->img}}");'>
+						<a style="" href="{{ action('RafflesController@show', $raffle->id) }}">
+							<h3 style="/*color:#31b7d5;*/background-color: rgba(0,0,0,.4);margin:0;padding:.6em;">{{$raffle->title}}</h3>
+						</a>	
+					</div>
 					<div class="raffleInfo">
-						<h3 style="color:#00ffc4;position:relative;bottom:0;">{{$raffle->end_date->diffForHumans()}}</h3>
+						<h3 style="color:lightgreen;position:relative;bottom:0;">{{$raffle->end_date->diffForHumans()}}</h3>
 						@if (\Auth::check())
 							<div style="margin-bottom:1em;">
 						  	<label>
@@ -53,11 +52,14 @@
 							  <a  href="/ticketFail" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET</a>
 							</div>
 						@endif
-						 <h5 style="color:yellow">ENTRY COUNT : {{ \App\Models\RaffleEntry::where('raffles_id','=', $raffle->id)->count() }} </h5>
+						 <h5>
+						 	<span style="color:#31b7d5">ENTRY COUNT :</span> 
+						 	{{ \App\Models\RaffleEntry::where('raffles_id','=', $raffle->id)->count() }} 
+						 </h5>
 					</div>
+
 				</div>
 			</div>
-			{{-- </a> --}}
 		@endforeach
 	</div>
 		{!! $raffles->appends(Request::except('page'))->render() !!} 
