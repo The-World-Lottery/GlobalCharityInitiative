@@ -80,7 +80,7 @@
           <li class="headLinks">
           	<a href="{{action('AboutUsController@index')}}">
           	<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-          	<span id="navSuggMobile" class="navLink">About Us</span>
+          	<span id="{{-- navSuggMobile --}}" class="navLink">About Us</span>
           	</a>
           </li>
 

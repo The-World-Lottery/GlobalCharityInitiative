@@ -16,14 +16,14 @@
 
 	<main class="row" style="text-align:center;">
 		<div class="col-xs-12 col-sm-12 col paddingMobile text-center" >
-			<h1>{{$raffle['title']}}</h1>
+			<h1 style="font-size: 250%;margin-bottom:1em;">{{$raffle['title']}}</h1>
 			<div class="countdown">
-				<h2>
+				<h3>
 					The Drawing Ends: <br> {{ $raffle->end_date->diffForHumans() }}
-				</h2>
+				</h3>
 				<img style="max-height:16em;border-radius:1em;box-shadow: 20px 20px 20px rgba(0,0,0,.6);" src={!! $raffle->img !!}>
 			</div>
-			<h3 style="margin-top: 1em;">Description: </h3>
+			<h3 style="margin-top: 1.5em;">Description: </h3>
 			<p>{{$raffle['product']}}</p>
 			<h3>Charity:</h3>
 			<p>{{$raffle['content']}}</p>

@@ -9,7 +9,7 @@
 @section('divHead')
 
 	<h2 id="hoverTrigger"><strong>All Raffles</strong>
-	<div style="font-size:50%;margin-bottom: 1em;">$5 USD per entry</div>
+	<div style="font-size:50%;margin-bottom: 1em;">$5 USD per ticket/entry</div>
 	</h2>
 	<p id="hoverSumm" hidden class="suggBox">
 	Raffles are created by a company who wishes to advertise through us by donating a product or service they provide. Our hope is that we will become large enough for celebrities to donate "A day with a fan" or something of the like. When the date/time of each Raffle is reached, one user will be randomly selected from the pool of entrys. This ensures there will always be a winner. Each ticket you have to the lottery increases your chances of winning. Good Luck!
@@ -42,7 +42,7 @@
 						@if (\Auth::check())
 							<div style="margin-bottom:1em;">
 						  	<label>
-						  		HOW MANY?
+						  		HOW MANY TICKETS?
 							  	<input class="form-control text-center" id="amount{{ $raffle->id }}" type="text" name="amount" value="1">
 						  	</label><br>
 							  <button type="button" id="submit{{ $raffle->id }}" class="aSubmitButton cleargreenBtn btn-success btn">PURCHASE</button>

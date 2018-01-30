@@ -125,11 +125,12 @@ a.navLink:hover {
 }
 
 #raffleHolder {
-	border:1px solid #31b7d5;
+	border:2px solid #31b7d5;
 	min-height:100%;
 	margin-bottom:1em;
 	/*padding-top:.5em;*/
 	border-radius: 1em;
+	overflow:hidden;
 }
 
 .lotteryPadding {
@@ -736,7 +737,7 @@ blockquote {
 
 @media screen and (min-width:992px){
 	.paddingMobile {
-		padding-top:4em;
+		padding-top:1em;
 	}
 
 	.paddingMobile2 {
