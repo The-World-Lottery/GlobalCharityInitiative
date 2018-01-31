@@ -143,12 +143,12 @@ $(document).ready(function(){
 
 	var t = 0;
     setInterval(function(){
-        if (t % 11 == 4){
+        if (t % 8 == 4){
             $('#drawinghover1').fadeOut('fast',function(){
             	$('#drawinghover2').fadeIn('fast');
             });
         };
-        if (t % 11 == 0){
+        if (t % 8 == 0){
             $('#drawinghover2').fadeOut('fast',function(){
             	$('#drawinghover1').fadeIn('fast');
             });

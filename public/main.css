@@ -125,12 +125,13 @@ a.navLink:hover {
 }
 
 #raffleHolder {
-	border:2px solid #31b7d5;
+	border:2px solid rgba(49,183,213,.4);
 	min-height:100%;
 	margin-bottom:1em;
 	/*padding-top:.5em;*/
 	border-radius: 1em;
 	overflow:hidden;
+	box-shadow:2px 2px 4px rgba(49,183,213,.4);
 }
 
 .lotteryPadding {
@@ -315,6 +316,7 @@ td {
 	font-size:1.2em;
 	background-color:rgba(0,0,0,0);
 	padding:.2em .5em 0em .5em;
+	box-shadow:1px 1px 2px lightgreen;
 }
 
 .btn-warning {
@@ -326,6 +328,7 @@ td {
 	min-width:4em;
 	text-align:center;
 	font-size:1.2em;
+	box-shadow:1px 1px 2px orange;
 }
 
 .btn-warning:hover {

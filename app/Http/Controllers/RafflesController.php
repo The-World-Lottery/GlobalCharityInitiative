@@ -233,9 +233,4 @@ class RafflesController extends Controller
         $request->session()->flash('successMessage', 'raffle deleted');
         return redirect()->action('RafflesController@index');
     }
-    
-
-    public function runRaffle(){
-
-    }
 }

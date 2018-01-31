@@ -13,7 +13,7 @@ table, th, td {
 
 @section('divHead')
 
-<span>Manage Raffles </span>
+<h1>Manage Raffles </h1 style="margin-top:1em;">
 
 @stop
 
