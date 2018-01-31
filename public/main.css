@@ -301,6 +301,7 @@ td {
 
 .btn {
 	font-size:1em;
+	transition-duration: 200ms;
 }
 
 .greenTxt {
@@ -333,6 +334,7 @@ td {
 
 .btn-warning:hover {
 	background-color:orange !important;
+	border-color: orange;
 }
 
 .btn-success:hover {
