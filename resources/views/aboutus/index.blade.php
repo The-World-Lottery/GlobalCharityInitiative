@@ -28,7 +28,6 @@
 		</a>
 	</div>
 	<br>
-	<br>
 	<ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
 	  <li class="active"><a  id="zeroO"  data-toggle="tab" href="#home">Our Mission</a></li>
 	  <li><a id="zeroO" data-toggle="tab" href="#menu1">About GCI</a></li>
