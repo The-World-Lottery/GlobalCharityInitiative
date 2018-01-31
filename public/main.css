@@ -160,6 +160,10 @@ li a:hover {
 	background-color:#247b8e !important;
 }
 
+#ddm {
+	background-color:#31b7d5;
+}
+
 #mobileChatHide {
 	display:none;
 }
@@ -616,6 +620,10 @@ blockquote {
 	padding-bottom:3em;
 }
 
+#adminBtn:focus {
+	background-color: #32809a;
+}
+
 
 @media screen and (min-width: 768px) {
 
@@ -779,7 +787,7 @@ blockquote {
 	}
 
 	#drawinghover1 {
-		margin-left: 1em;
+		margin-left: .8em;
 	}
 
 	.paddingMobile2 {

@@ -44,8 +44,8 @@
           </li> --}}
         	@if(Auth::check() && Auth::user()->is_admin)
         	<li class="dropdown headLinks">
-	          <a href="#" class="dropdown-toggle navLink" style="color:white"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
-	          <ul class="dropdown-menu" style="background-color: #32809a;">
+	          <a href="#" class="dropdown-toggle navLink" style="color:white"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="adminBtn">Admin<span class="caret"></span></a>
+	          <ul class="dropdown-menu" id="ddm">
 	          	{{-- <li>
 	    			<a href="{{action('LotteriesController@adminIndex')}}">
 					<span class="navLink">Manage Lotteries</span>
