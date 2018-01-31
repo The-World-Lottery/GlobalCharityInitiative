@@ -19,9 +19,6 @@
 		@include('layouts.partials._header')	
 		<div class="row" style="padding-top: 6vh;">
 			<div id="gameScroll" style="font-size:1.2em;" class="col col-sm-12">
-				<div class="text-center">
-					@yield('divHead')
-				</div>
 				@yield('content')	
 			</div>
 		</div>
