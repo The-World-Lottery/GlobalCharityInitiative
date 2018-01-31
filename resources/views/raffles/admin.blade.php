@@ -31,7 +31,7 @@ table, th, td {
 				<th>Edit</th>
 				<th>ID</th>
 				<th>Description</th>
-				{{-- <th>Product</th> --}}
+				<th>Product</th>
 				<th>Created By</th>
 				<th>Created At</th>
 				<th>Updated At</th>
@@ -46,7 +46,7 @@ table, th, td {
 				</td>
 				<td>{{$raffle->id}}</td>
 				<td>{{$raffle->content}}</td>
-				{{-- <td>{{$raffle->product}}</td> --}}
+				<td style="width:50em;overflow:hidden;">{{$raffle->product}}</td>
 				<td>{{$raffle->user->name}}</td>
 				<td>{{$raffle->created_at->diffForHumans()}}</td>
 				<td>{{$raffle->updated_at->diffForHumans()}}</td>

@@ -13,9 +13,6 @@
   @if(Auth::check())
   <li><a  id="zeroO" href="{{action('SuggestionsController@create')}}">Add a Suggestion</a></li>
   @endif
-  @if(Auth::check())
-      <li><a  id="zeroO" href="{{action('SuggestionsController@userssuggestions')}}">Your Suggestions</a></li>
-  @endif
 </ul>
 	{{-- <span style="float:right;padding-right:1em;">{!! $suggestions->appends(Request::except('page'))->render() !!}</span> --}}
     <main class="container" style="max-width:100%;">

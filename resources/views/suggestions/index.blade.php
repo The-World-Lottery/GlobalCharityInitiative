@@ -15,7 +15,6 @@
   <li><a  id="zeroO" href="{{action('SuggestionsController@highest')}}">Top 5 Suggestions</a></li>
 	@if(Auth::check())
 	  <li><a  id="zeroO" href="{{action('SuggestionsController@create')}}">Add a Suggestion</a></li>
-	  <li><a  id="zeroO" href="{{action('SuggestionsController@userssuggestions')}}">Your Suggestions</a></li>
 	@endif
 </ul>
 

@@ -9,7 +9,7 @@
 
 @section('content')
 
-	@if(Auth::id() == $user->id)
+	@if(Auth::id() == $user->id || Auth::user()->isAdmin)
 	<main class="container" style="max-width:100%;display:flex;justify-content: center;">
 		<div class="row">	
 			<div class="col-sm-12 text-center">
@@ -19,18 +19,28 @@
 				@endif
 			</div>
 			<div class="col-sm-12 col" style="background-color:rgba(0,0,0,.4);padding:1em 0 1em 0;margin-top: 1.5em;border-radius: 2em;">
-				<div class="col-sm-4 col-sm-offset-2 col" {{-- id="showProfImg" --}}>
+				<div class="col-sm-4 col" style="display:flex;justify-content:center;" {{-- id="showProfImg" --}}>
 					<img src='{{$user->image}}' id="profImg">
 					{{-- <img src='{{substr($user->image,1,-1)}}' id="profImg"> --}}
 				</div>
-				<blockquote class="col-sm-6 col" style="">
-					<h2>
-						{{$user->name}}
-					</h2>
-					<b><u>Email:</u></b><br> {{$user->email}}<br>
-					<b><u>User Name:</u></b><br> {{$user->username}}<br>
-					<b><u>Phone Number:</u></b><br> {{$user->phone_number}}<br>
-				</blockquote>
+				<div class="col-sm-4 col">
+					<blockquote style="margin-left:1em;">
+						<h2>
+							{{$user->name}}
+						</h2>
+						<b><u>Email : </u></b><br> {{$user->email}}<br>
+						<b><u>User Name : </u></b><br> {{$user->username}}<br>
+						<b><u>Phone Number : </u></b><br> {{$user->phone_number}}<br>
+					</blockquote>
+				</div>
+				<div class="col-sm-4 col">
+					<blockquote style="margin-left : 1em;">
+						<h2>Your Stats</h2>
+						<b><u>Raffle Entries : </u></b><br> {{\App\Models\RaffleEntry::where('user_id',$user->id)->count()}}<br>
+						<b><u>Global Drawing Entries : </u></b><br> {{\App\Models\TheWorldLotteryEntry::where('user_id',$user->id)->count()}}<br>
+						<b><u>Suggestion Count : </u></b><br> {{\App\Models\Suggestion::where('user_id',$user->id)->count()}} <br>
+					</blockquote>
+				</div>
 			</div>
 			<div class="col col-sm-12">
 				<h1 style="padding-top:.5em;text-align:center;color:lightgreen;">YOUR CURRENT TICKETS</h1>

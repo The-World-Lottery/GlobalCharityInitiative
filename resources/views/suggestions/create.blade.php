@@ -17,9 +17,6 @@
   <li><a  id="zeroO" href="{{action('SuggestionsController@index')}}">All Suggestions</a></li>
   <li><a  id="zeroO" href="{{action('SuggestionsController@highest')}}">Top 5 Suggestions</a></li>
   <li class="active"><a  id="zeroO" href="{{action('SuggestionsController@create')}}">Add a Suggestion</a></li>
- 	@if(Auth::check())
-  		<li><a  id="zeroO" href="{{action('SuggestionsController@userssuggestions')}}">Your Suggestions</a></li>
-	@endif
 </ul>
 	<main class="container" style="max-width:80%;"><br>
 		<div class="col col-md-6 col-md-offset-3">
@@ -36,7 +33,7 @@
 			<label class="form-group">Content</label><textarea class="form-control" type="text" name="content" id="content" placeholder="CONTENT">{{ old('content') }}</textarea><br>
 
 			<div style="display:flex;justify-content:center;margin-bottom: 3em;">
-				<button class="btn btn-primary">Submit</button>
+				<button class="btn btn-success cleargreenBtn">Submit</button>
 			</div>
 		</form>
 		</div>
