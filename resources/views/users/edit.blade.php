@@ -27,13 +27,13 @@
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" >
 				<div class="row">	
 					<div class="col-xs-4">
-					 	<strong>Name</strong>
+					 	<strong style="color:green;">Name</strong>
 					</div>					
 					<div class="col-xs-4">
 						{{$User->name}}
 					</div>
 					<div class="col-xs-4">
-						<span class="glyphicon glyphicon-pencil">Edit</span>
+						<span class=" orange glyphicon glyphicon-pencil">Edit</span>
 					</div>
 				</div>
 			</a>
@@ -49,13 +49,13 @@
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" >
 				<div class="row">
 					 <div class="col-xs-4">
-					 	<strong>User Name</strong>
+					 	<strong style="color:green;">User Name</strong>
 					</div>
 					<div class="col-xs-4">
 					 	{{$User->username}}
 					</div>
 					<div class="col-xs-4">
-					 	<span class="glyphicon glyphicon-pencil">Edit</span>
+					 	<span class=" orange glyphicon glyphicon-pencil">Edit</span>
 					</div>
 				</div>
 			</a>
@@ -71,13 +71,13 @@
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" >
 				<div class="row">
 					 <div class="col-xs-4">
-					 	<strong>Email</strong>
+					 	<strong style="color:green;">Email</strong>
 					</div>
 					<div class="col-xs-4">
 					 	{{$User->email}}
 					</div>
 					<div class="col-xs-4">
-					 	<span class="glyphicon glyphicon-pencil">Edit</span>
+					 	<span class=" orange glyphicon glyphicon-pencil">Edit</span>
 					</div>
 				</div>
 			</a>
@@ -96,20 +96,21 @@
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour" >
 				<div class="row">
 					 <div class="col-xs-4">
-					 	<strong>Profile Image</strong>
+					 	<strong style="color:green;">Profile Image</strong>
 					</div>
 					<div class="col-xs-4">
 					 
 					</div>
 					<div class="col-xs-4">
-					 	<span class="glyphicon glyphicon-pencil">Edit</span>
+					 	<span class=" orange glyphicon glyphicon-pencil">Edit</span>
 					</div>
 				</div>
 			</a>
 			<div class="collapse" id="collapseFour">
 				<div class="panel-body">
 					<img src='{{substr($User->image,1,-1)}}' id="editImg">
-					<input id="img" type="text" name="image">
+					<img src='{{$User->image}}' id="editImg">
+					<input id="img" type="text" name="image" value="{{$User->image}}">
         			<a id="filestackButton" class="btn btn-secondary">Filestack Image Hosting</a>
 				</div>
 			</div>
@@ -120,13 +121,13 @@
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive" >
 				<div class="row">
 					 <div class="col-xs-4">
-					 	<strong>Phone Number</strong>
+					 	<strong style="color:green;">Phone Number</strong>
 					</div>
 					<div class="col-xs-4">
 					 	{{$User->phone_number}}
 					</div>
 					<div class="col-xs-4">
-					 	<span class="glyphicon glyphicon-pencil">Edit</span>
+					 	<span class=" orange glyphicon glyphicon-pencil">Edit</span>
 					</div>
 				</div>
 			</a>
@@ -144,14 +145,14 @@
 
 			<br>
 
-			<button class="btn btn-success">Save Changes</button>
+			<button class="btn cleargreenBtn btn-success">Save Changes</button>
 		</form>
 		<br>
 
 		<form method="POST" action="{{ action('UsersController@destroy', $User->id )}}">
 		{!! csrf_field() !!}
 		{{ method_field('DELETE') }}
-		<button class="btn btn-danger">DELETE ACCOUNT</button>
+		<button class="btn btn-warning">DELETE ACCOUNT</button>
 		</form>
 
 	</main>

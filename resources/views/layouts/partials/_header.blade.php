@@ -20,6 +20,28 @@
       </div>
       <div class="collapse navbar-collapse justify-content-end" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
+          <li class="headLinks">
+          	<a href="{{action('RafflesController@index')}}">
+          	<span class="glyphicon glyphicon-gift" aria-hidden="true"></span>
+          	<span class="navLink">Raffles</span></a>
+          </li>
+	      <li id="navSpecialHoverLink" class="headLinks">
+          	<a  href="{{action('TheWorldLotterysController@selectNumbers')}}">
+	          	<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+	          	<span id="navSpecialHover" class="navLink">
+	          		<span id="drawinghover1">  Global Drawing</span>
+	          		<span id="drawinghover2" style="font-size:110%;display:none;color:lightgreen;">${{ number_format((int) App\Models\TheWorldLottery::orderBy('id','desc')->get()[0]['current_value'],0,".",",") }}</span>
+	          	</span>
+          	</a>
+          </li>
+          {{-- <li class="headLinks">
+          	<a href="{{action('LotteriesController@index')}}">
+          	<span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
+          	<span class="navLink">Lotteries</span></a>
+          </li> --}}
+          {{-- class="headLinks" <li>
+          	<a href="{{action('TheWorldLotterysController@index')}}"><span class="navLink">The World Lottery</span></a>
+          </li> --}}
         	@if(Auth::check() && Auth::user()->is_admin)
         	<li class="dropdown headLinks">
 	          <a href="#" class="dropdown-toggle navLink" style="color:white"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
@@ -54,28 +76,6 @@
 	          </ul>
 	        </li>
 	        @endif
-          <li class="headLinks">
-          	<a href="{{action('RafflesController@index')}}">
-          	<span class="glyphicon glyphicon-gift" aria-hidden="true"></span>
-          	<span class="navLink">Raffles</span></a>
-          </li>
-	      <li id="navSpecialHoverLink" class="headLinks">
-          	<a  href="{{action('TheWorldLotterysController@selectNumbers')}}">
-	          	<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
-	          	<span id="navSpecialHover" class="navLink">
-	          		<span id="drawinghover1">Global Drawing</span>
-	          		<span id="drawinghover2" style="display:none;color:lightgreen;">${{ number_format((int) App\Models\TheWorldLottery::orderBy('id','desc')->get()[0]['current_value'],0,".",",") }}</span>
-	          	</span>
-          	</a>
-          </li>
-          {{-- <li class="headLinks">
-          	<a href="{{action('LotteriesController@index')}}">
-          	<span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
-          	<span class="navLink">Lotteries</span></a>
-          </li> --}}
-          {{-- class="headLinks" <li>
-          	<a href="{{action('TheWorldLotterysController@index')}}"><span class="navLink">The World Lottery</span></a>
-          </li> --}}
           <li class="headLinks">
           	<a href="{{action('SuggestionsController@index')}}">
           	<span class="glyphicon glyphicon-comment" aria-hidden="true"></span>

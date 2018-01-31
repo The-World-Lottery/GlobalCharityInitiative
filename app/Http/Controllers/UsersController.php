@@ -98,11 +98,12 @@ class UsersController extends Controller
             abort(404);
         }
 
-        
+        $id = \Auth::id();
 
-
+        $suggestions = User::find($id)->suggestions;
 
         $data['user'] = $user;
+        $data['suggestions'] = $suggestions;
 
         // $entries = \App\User::getEntries($user->id);
         // $newArr = [];
@@ -137,7 +138,7 @@ class UsersController extends Controller
             return view('Users.edit',$data);
         }
 
-        return \Redirect::action('LotteriesController@index');
+        return \Redirect::action('RafflesController@index');
 
     }
 
@@ -181,8 +182,8 @@ class UsersController extends Controller
         // $user->user_id = \Auth::id();
         $user->save();
         // $request->session()->flash('successMessage', 'Your Post was a successfully updated!');
-        
-       return \Redirect::action('LotteriesController@index');
+
+        return \Redirect::action('RafflesController@index');
 
     }
 
@@ -204,7 +205,7 @@ class UsersController extends Controller
         $user->delete();
         // $request->session()->flash('successMessage', 'Your user was a successfully destroyed!');
 
-        return \Redirect::action('LotteriesController@index');
+        return \Redirect::action('RafflesController@index');
     }
 
     public function makeAdmin($id)

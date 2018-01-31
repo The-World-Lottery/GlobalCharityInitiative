@@ -25,13 +25,13 @@
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" >
 				<div class="row">	
 					<div class="col-xs-4">
-					 	<strong>Title</strong>
+					 	<strong style="color:green;">Title</strong>
 					</div>					
 					<div class="col-xs-4">
 						{{$raffle->title}}
 					</div>
 					<div class="col-xs-4">
-						<span class="glyphicon glyphicon-pencil">Edit</span>
+						<span class="glyphicon glyphicon-pencil orange">Edit</span>
 					</div>
 				</div>
 			</a>
@@ -46,13 +46,13 @@
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" >
 				<div class="row">
 					 <div class="col-xs-4">
-					 	<strong>Content</strong>
+					 	<strong style="color:green;">Content</strong>
 					</div>
 					<div class="col-xs-4">
 					 	{{$raffle->content}}
 					</div>
 					<div class="col-xs-4">
-					 	<span class="glyphicon glyphicon-pencil">Edit</span>
+					 	<span class="glyphicon glyphicon-pencil orange">Edit</span>
 					</div>
 				</div>
 			</a>
@@ -66,13 +66,13 @@
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" >
 				<div class="row">
 					 <div class="col-xs-4">
-					 	<strong>product</strong>
+					 	<strong style="color:green;">Product</strong>
+					</div>
+					<div class="col-xs-4" style="overflow:hidden;">
+					 	{{$raffle->product}}
 					</div>
 					<div class="col-xs-4">
-					 	{{-- {{$raffle->product}} --}}
-					</div>
-					<div class="col-xs-4">
-					 	<span class="glyphicon glyphicon-pencil">Edit</span>
+					 	<span class="glyphicon glyphicon-pencil orange">Edit</span>
 					</div>
 				</div>
 			</a>
@@ -86,13 +86,13 @@
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapsefour" aria-expanded="false" aria-controls="collapsefour" >
 				<div class="row">
 					 <div class="col-xs-4">
-					 	<strong>end_date</strong>
+					 	<strong style="color:green;">End Date</strong>
 					</div>
 					<div class="col-xs-4">
 					 	{{$raffle->end_date}}
 					</div>
 					<div class="col-xs-4">
-					 	<span class="glyphicon glyphicon-pencil">Edit</span>
+					 	<span class="glyphicon glyphicon-pencil orange">Edit</span>
 					</div>
 				</div>
 			</a>
@@ -103,14 +103,14 @@
 			</div>
 
         <br>
-			<button class="btn btn-success">Submit</button>
+			<button class="btn btn-success cleargreenBtn">Submit</button>
 		</form>
 		<br>
 		@if((\App\Models\RaffleEntry::filterEntrants($raffle->id)))
 		<form method="POST" action="{{ action('RafflesController@destroy', $raffle->id )}}">
 		{!! csrf_field() !!}
 		{{ method_field('DELETE') }}
-		<button class="btn btn-danger">DELETE RAFFLE</button>
+		<button class="btn clearorangeBtn btn-warning">DELETE RAFFLE</button>
 		</form>
 		@endif
 

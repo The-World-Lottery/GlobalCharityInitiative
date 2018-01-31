@@ -45,11 +45,11 @@
 						  		HOW MANY TICKETS?
 							  	<input class="form-control text-center" id="amount{{ $raffle->id }}" type="text" name="amount" value="1">
 						  	</label><br>
-							  <button type="button" id="submit{{ $raffle->id }}" class="aSubmitButton cleargreenBtn btn-success btn">PURCHASE</button>
+							  <button type="button" id="submit{{ $raffle->id }}" class="aSubmitButton cleargreenBtn btn-success btn">DONATE</button>
 							</div>
 						@else
 							<div style="margin-bottom:1em;">
-							  <a  href="/ticketFail" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET</a>
+							  <a  href="/ticketFail" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET(s)</a>
 							</div>
 						@endif
 						 <h5>

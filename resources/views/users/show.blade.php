@@ -9,21 +9,21 @@
 
 @section('content')
 
-				@if(Auth::id() == $user->id)
+	@if(Auth::id() == $user->id)
 	<main class="container" style="max-width:100%;display:flex;justify-content: center;">
 		<div class="row">	
 			<div class="col-sm-12 text-center">
 				<a style="margin-right:1em;" href="{{action('Auth\AuthController@getLogout')}}"><button class="btn btn-success cleargreenBtn">Logout</button></a>
 				@if(Auth::id() == $user->id || Auth::user()->is_admin) 
-					<a href="{{action('UsersController@edit' , $user->id)}}"><button class="btn btn-warning">Edit</button></a>
+					<a href="{{action('UsersController@edit', $user->id)}}"><button class="btn btn-warning">Edit</button></a>
 				@endif
 			</div>
-			<div class="col-sm-6 col-sm-offset-3" style="padding-top:1em;display:flex;justify-content:space-around;">
-				<div id="showProfImg">
+			<div class="col-sm-12 col" style="background-color:rgba(0,0,0,.4);padding:1em 0 1em 0;margin-top: 1.5em;border-radius: 2em;">
+				<div class="col-sm-4 col-sm-offset-2 col" {{-- id="showProfImg" --}}>
 					<img src='{{$user->image}}' id="profImg">
 					{{-- <img src='{{substr($user->image,1,-1)}}' id="profImg"> --}}
 				</div>
-				<blockquote>
+				<blockquote class="col-sm-6 col" style="">
 					<h2>
 						{{$user->name}}
 					</h2>
@@ -66,9 +66,30 @@
 					</div>
 				</div>
 			</div>
+			<div class="col col-sm-12" style="margin-bottom:3em;">
+				@if(count($suggestions))
+					<div style="margin-top:1em;">
+					<h1 style="text-align:center;color:lightgreen;margin-top:2em;">YOUR SUGGESTIONS</h1>
+			        @foreach($suggestions as $suggestion)
+			            <a href="{{ action('SuggestionsController@show', $suggestion->id) }}">
+			                <div class ="suggHead">{{$suggestion->title}}</div>
+			            </a>
+			            <a href="{{action('SuggestionsController@upvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
+			            <a href="{{action('SuggestionsController@downvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-down"></span></a>
+			            <p>{{$suggestion->content}}</p>
+			        @endforeach
+			        </div>
+			    @else
+			        <div style="text-align:center;margin-top:2em;">
+				        <h1 style="color:lightgreen">YOU HAVE NO SUGGESTIONS</h1>
+				        <br>
+				        <div>CLICK TO ADD A SUGGESTION</div>
+				       	<a href="{{action('SuggestionsController@create')}}"> <button class="btn btn-success cleargreenBtn">GO!</button></a>
+			       	</div>
+			    @endif
+			</div>
 		</div>
-
 	</main>
-				@endif
+	@endif
 
 @stop

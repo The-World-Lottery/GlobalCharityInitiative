@@ -35,7 +35,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 input[type=checkbox] {
-  zoom:1.4;
+  zoom:1.6;
 }
 
 .auto {
@@ -125,7 +125,7 @@ a.navLink:hover {
 }
 
 #raffleHolder {
-	border:2px solid rgba(49,183,213,.4);
+	border:2px solid rgba(49,183,213,.5);
 	min-height:100%;
 	margin-bottom:1em;
 	/*padding-top:.5em;*/
@@ -299,9 +299,15 @@ td {
 	background-color:rgba(0,0,0,0);
 }
 
+a {
+	transition-duration: 400ms;
+	transition-timing-function: cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
 .btn {
 	font-size:1em;
 	transition-duration: 200ms;
+	transition-timing-function: cubic-bezier(0.02, 0.01, 0.47, 1);
 }
 
 .greenTxt {
@@ -332,15 +338,22 @@ td {
 	box-shadow:1px 1px 2px orange;
 }
 
+.orange {
+	color:orange;
+}
+
 .btn-warning:hover {
+	color:black !important;
 	background-color:orange !important;
 	border-color: orange;
+	box-shadow:0px 0px;
 }
 
 .btn-success:hover {
-	color:white !important;
+	color:black !important;
 	border-color:lightgreen;
 	background-color:lightgreen;
+	box-shadow:0px 0px;
 }
 
 .headUN {
@@ -430,23 +443,31 @@ input, button {
 	outline:none;
 }
 
+.glyphicon-thumbs-up, .glyphicon-thumbs-down {
+	font-size:25px;
+}
+
+.glyphicon-thumbs-up {
+	color:lightgreen;
+	margin:5px;
+}
+
+.glyphicon-thumbs-down {
+	color:red;
+	margin:5px;
+}
+
 input {
 	color:black;
 }
 
 #navSpecialHoverLink {
-	min-width:170px;
+	min-width:180px;
 }
 
-/*.navbar-brand {
-	float:right;
-}
-*/
 #menu {
-	/*background-color: #32809a;*/
 	background-color:#31b7d5;
 	padding:0 1em 0 0;
-
 }
 
 .navButton {
@@ -755,6 +776,10 @@ blockquote {
 @media screen and (min-width:992px){
 	.paddingMobile {
 		padding-top:1em;
+	}
+
+	#drawinghover1 {
+		margin-left: 1em;
 	}
 
 	.paddingMobile2 {
