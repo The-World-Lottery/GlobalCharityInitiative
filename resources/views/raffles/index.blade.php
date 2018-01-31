@@ -71,7 +71,7 @@
 		data-key="pk_test_9QXLVB6tbq67JmuGwWGco2uX"
 		data-amount="500"
 		data-name="Raffle"
-		data-description="Widget"
+		data-description="Entry"
 		data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
 		data-locale="auto"
 		data-zip-code="true">

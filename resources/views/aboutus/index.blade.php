@@ -37,8 +37,10 @@
 	<div style="padding:1em;">
 		<div class="tab-content">
 		  	<div id="home" class="tab-pane fade in active">
-			    <p style="text-align:center;">Our mission is to eliminate the man power that is usually necessary for charitable fund-raising by providing massive monetary donations (from The Global Charity Initiative Foundation) directly to various  sources of charitable work. Raffles will be created by companies donating a product/service they wish to advertise or celebrities donating some of their time to spend with one or more lucky fans. Ticket prices to these drawings will be split thusly.</p>
-			    <p style="text-align:center;" >All games are $5 USD (or equivalent) per entry.</p>
+			    <p style="">Our mission is to eliminate the man power that is usually necessary for charitable fund-raising by providing massive monetary donations (from The Global Charity Initiative Foundation) directly to various  sources of charitable work. Raffles will be created by companies donating a product/service they wish to advertise or celebrities donating some of their time to spend with one or more lucky fans. Ticket prices to these drawings will be split thusly.
+			    <br>
+			    All games are $5 USD (or equivalent) per entry.
+			    </p>
 			    <div class="row">
 				    {{-- <div class="col col-md-4 col-sm-12">
 				    	<h2 class="infoHeaders">Lottery Ticket Price</h2>

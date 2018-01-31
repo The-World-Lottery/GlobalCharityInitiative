@@ -143,7 +143,7 @@ $(document).ready(function(){
 
 	var t = 0;
     setInterval(function(){
-        if (t % 11 == 6){
+        if (t % 11 == 4){
             $('#drawinghover1').fadeOut('fast',function(){
             	$('#drawinghover2').fadeIn('fast');
             });

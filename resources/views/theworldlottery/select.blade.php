@@ -7,9 +7,9 @@
 @stop
 
 @section('divHead')
-<h1>The Global Charity Drawing
+<h1 style="margin-top: 1em;">The Global Charity Drawing
 </h1>
-<div style="margin-bottom: 1em;">$5 USD per entry</div>
+<div>$5 USD per entry</div>
 @stop
 
 @section('content')

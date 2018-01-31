@@ -91,7 +91,7 @@ class RafflesController extends Controller
 
 
 
-        $request->session()->flash('successMessage', 'You have successfully purchased ' . $count . ' Ticket(s) to ' . $raffTitle);
+        $request->session()->flash('successMessage', 'You have successfully purchased ' . $count . ' Ticket(s) for ' . $raffTitle);
         return \Redirect::action('RafflesController@index');
 
     }

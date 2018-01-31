@@ -590,11 +590,10 @@ blockquote {
 	padding-bottom:3em;
 }
 
-#navSuggMobile {
-	display:none;
-}
 
 @media screen and (min-width: 768px) {
+
+
 
 	#splash2 {
 		font-size:100%;
@@ -726,6 +725,7 @@ blockquote {
 }
 
 @media screen and (max-width: 768px) {
+
 	.raffleCont {
 		max-width:16em;
 	}
@@ -754,6 +754,10 @@ blockquote {
 
 	.paddingMobile2 {
 		padding-top:6em;
+	}
+
+	#navSuggMobile {
+		display:none;
 	}
 }
 
