@@ -7,15 +7,15 @@
 @stop
 
 @section('divHead')
-<h1>The World Charity Drawing
-<div style="font-size:50%;margin-bottom: 1em;">$5 USD per entry</div>
+<h1>The Global Charity Drawing
 </h1>
+<div style="margin-bottom: 1em;">$5 USD per entry</div>
 @stop
 
 @section('content')
 	<div class="container text-center">
-		<h4 id="jackpot" style="color:lightgreen;"><strong >Jackpot - </strong>${{number_format($theWorldLottery->current_value,0,".",",")}}</h4>		
-		<h4 style="color:#00ffc4;">Drawing takes place:<br>
+		<h4 id="jackpot" style="color:lightgreen;">{{-- <strong >Jackpot - </strong> --}}${{number_format($theWorldLottery->current_value,0,".",",")}}</h4>		
+		<h4 style="color:#00ffc4;">{{-- Drawing takes place:<br> --}}
 		{{ $theWorldLottery->end_date->diffForHumans() }}</h4>
 		@if (session()->has('successMessage'))
 	        <div class="alert alert-success text-center">{{ session('successMessage') }}</div>

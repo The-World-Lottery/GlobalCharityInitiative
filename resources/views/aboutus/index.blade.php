@@ -31,14 +31,14 @@
 	<br>
 	<ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
 	  <li class="active"><a  id="zeroO"  data-toggle="tab" href="#home">Our Mission</a></li>
-	  <li><a  id="zeroO"  data-toggle="tab" href="#menu1">About GCI</a></li>
-	  <li><a  id="zeroO"  data-toggle="tab" href="#menu2">The Creators</a></li>
+	  <li><a id="zeroO" data-toggle="tab" href="#menu1">About GCI</a></li>
+	  <li><a id="zeroO" data-toggle="tab" href="#menu2">The Creators</a></li>
 	</ul>
 	<div style="padding:1em;">
 		<div class="tab-content">
 		  	<div id="home" class="tab-pane fade in active">
-			    <p style="text-align:center;">Our mission is to eliminate the man power that is usually necessary for fund-raising, for all types of worth-while charities and human interest projects by providing massive monetary donations (from The Global Charity Initiative Foundation) directly to the source of the charitable work. We will accomplish this by running a number of simultaneous raffles whose ticket prices will be split thusly.</p>
-			    <p style="text-align:center;" >The ticket price for all games is $5 USD (or equivalent)</p>
+			    <p style="text-align:center;">Our mission is to eliminate the man power that is usually necessary for charitable fund-raising by providing massive monetary donations (from The Global Charity Initiative Foundation) directly to various  sources of charitable work. Raffles will be created by companies donating a product/service they wish to advertise or celebrities donating some of their time to spend with one or more lucky fans. Ticket prices to these drawings will be split thusly.</p>
+			    <p style="text-align:center;" >All games are $5 USD (or equivalent) per entry.</p>
 			    <div class="row">
 				    {{-- <div class="col col-md-4 col-sm-12">
 				    	<h2 class="infoHeaders">Lottery Ticket Price</h2>
@@ -75,7 +75,7 @@
 					<div class="col col-sm-5 col-sm-offset-1 col-xs-12">
 						<h1 class="infoHeaders">Our Donors</h1>
 						<blockquote>
-						Samuel L. Jackson
+						Samuel L. Jackson<br>
 						{{-- <a target="_blank" href="http://www.theperfecttitle.com/money/money.shtml"><h5>Lottery Quotes</h5></a>
 						<a target="_blank" href="https://www.cryptonator.com/?utm_referrer=http%3a%2f%2ftheworldlottery.dev%2fcurrencyconversion"><h5>Currency Conversion Widgets</h5></a>
 						<a target="_blank" href="https://www.cryptocompare.com/api/#-api-data-price-"><h5>Currency conversion API Call for point of sale transactions</h5></a>
@@ -86,7 +86,7 @@
 					<div class="col col-sm-5 col-xs-12">
 						<h1 class="infoHeaders">Charitable Partners</h1>
 						<blockquote>
-						Hilarity of charity
+						Hilarity of charity<br>
 						{{-- <h5>Laravel framework for PHP</h5>
 						<h5>Object Oriented</h5>
 						<h5>Cron Jobs for game timeouts</h5>

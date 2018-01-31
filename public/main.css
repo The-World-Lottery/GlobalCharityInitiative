@@ -121,7 +121,7 @@ a.navLink:hover {
 	overflow:hidden;
 	background-repeat: no-repeat;
 	background-color: rgba(0,0,0,.2);
-	border-radius: 1em 1em 0 0;
+	/*border-radius: 1em 1em 0 0;*/
 }
 
 #raffleHolder {
@@ -429,10 +429,18 @@ input {
 	color:black;
 }
 
+#navSpecialHoverLink {
+	min-width:170px;
+}
+
+/*.navbar-brand {
+	float:right;
+}
+*/
 #menu {
 	/*background-color: #32809a;*/
 	background-color:#31b7d5;
-	padding:0 1em 0 1em;
+	padding:0 1em 0 0;
 
 }
 
@@ -560,7 +568,11 @@ blockquote {
 }
 
 #gameScroll {
-	padding:1.5em 0 0 0;
+	/*padding:1.5em 0 0 0;*/
+}
+
+.navbar {
+	padding-left:0px;
 }
 
 .par3 {
@@ -613,9 +625,9 @@ blockquote {
 		min-width:100vw;
 	}
 
-	#checkWrapper {
+	/*#checkWrapper {
 		padding-top: 2vh;
-	}
+	}*/
 
 	#splashTitle {
 		font-size:3.5em;

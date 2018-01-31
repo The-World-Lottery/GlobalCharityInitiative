@@ -209,7 +209,7 @@ class TheWorldLotterysController extends Controller
                 dd($e);
             }
 
-        $request->session()->flash('successMessage', 'You have successfully purchased a WORLD LOTTERY ticket! Thank you for your donation and good luck!');
+        $request->session()->flash('successMessage', 'You have successfully purchased a GLOBAL CHARITY DRAWING ticket! Thank you for your donation and good luck!');
         return \Redirect::action('TheWorldLotterysController@selectNumbers');
         }
     }

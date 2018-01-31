@@ -141,6 +141,21 @@ $(document).ready(function(){
 	// 	coinPriceConversion();
 	// },30000);
 
+	var t = 0;
+    setInterval(function(){
+        if (t % 11 == 6){
+            $('#drawinghover1').fadeOut('fast',function(){
+            	$('#drawinghover2').fadeIn('fast');
+            });
+        };
+        if (t % 11 == 0){
+            $('#drawinghover2').fadeOut('fast',function(){
+            	$('#drawinghover1').fadeIn('fast');
+            });
+        };
+        t++;
+    },1000);
+
     //click for summaries
     $('#clickTrigger').click(function(){
     	$(this).hide();
@@ -148,6 +163,7 @@ $(document).ready(function(){
     	$('#loginHolder').slideToggle(650);
     	$('#clickTrigger2').slideToggle(650);
 	})
+
 
 	 $('#clickTrigger2').click(function(){
     	$(this).hide();

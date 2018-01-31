@@ -30,8 +30,6 @@ class RafflesController extends Controller
         } else {
             $raffles = Raffle::with('user')->where('end_date','>',\Carbon\Carbon::now())->orderBy('end_date','asc')->paginate(16);
         }
-        
-
         $data['raffles']= $raffles;
         return view('raffles.index',$data);
     }
@@ -47,7 +45,6 @@ class RafflesController extends Controller
 
     public function chargeCard(Request $request, $id, $count)
     {
-
         if(!\Auth::check()){
             $request->session()->flash('errorMessage', 'You must be LOGGED IN to purchase a ticket!');
             return \Redirect::action('Auth\AuthController@getLogin');
@@ -86,11 +83,15 @@ class RafflesController extends Controller
                 $newEntry->save();
             }
 
+            $raffTitle = Raffle::where('id',$id)->get()[0]['title'];
+
         } catch (\Stripe\Error\Card $e){
             dd($e);
         }
 
-        $request->session()->flash('successMessage', 'You have successfully purchased ' . $count . ' Raffle Ticket(s)');
+
+
+        $request->session()->flash('successMessage', 'You have successfully purchased ' . $count . ' Ticket(s) to ' . $raffTitle);
         return \Redirect::action('RafflesController@index');
 
     }

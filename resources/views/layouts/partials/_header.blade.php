@@ -4,7 +4,7 @@
       <div class="navbar-header">
       		@if (Auth::check())
 					{{-- <img src='{{Auth::user()->image}}' id="headImg"> --}}
-				<a class="navbar-brand user navLink" style="margin-left:.3em;" href="{{action('UsersController@show' , Auth::id())}}" >
+				<a class="navbar-brand user navLink" href="{{action('UsersController@show' , Auth::id())}}" >
 					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
 					{{Auth::user()->name}}
 				</a>
@@ -59,10 +59,14 @@
           	<span class="glyphicon glyphicon-gift" aria-hidden="true"></span>
           	<span class="navLink">Raffles</span></a>
           </li>
-	      <li class="headLinks">
-          	<a href="{{action('TheWorldLotterysController@selectNumbers')}}">
-          	<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
-          	<span class="navLink">Global Drawing - <span style="color:lightgreen;">${{ number_format((int) App\Models\TheWorldLottery::orderBy('id','desc')->get()[0]['current_value'],0,".",",") }}</span></span></a>
+	      <li id="navSpecialHoverLink" class="headLinks">
+          	<a  href="{{action('TheWorldLotterysController@selectNumbers')}}">
+	          	<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+	          	<span id="navSpecialHover" class="navLink">
+	          		<span id="drawinghover1">Global Drawing</span>
+	          		<span id="drawinghover2" style="display:none;color:lightgreen;">${{ number_format((int) App\Models\TheWorldLottery::orderBy('id','desc')->get()[0]['current_value'],0,".",",") }}</span>
+	          	</span>
+          	</a>
           </li>
           {{-- <li class="headLinks">
           	<a href="{{action('LotteriesController@index')}}">
@@ -80,7 +84,7 @@
           <li class="headLinks">
           	<a href="{{action('AboutUsController@index')}}">
           	<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-          	<span id="{{-- navSuggMobile --}}" class="navLink">About Us</span>
+          	<span id="navSuggMobile" class="navLink">About Us</span>
           	</a>
           </li>
 
