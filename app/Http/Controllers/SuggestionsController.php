@@ -176,8 +176,12 @@ class SuggestionsController extends Controller
 
     public function upvote($id)
     {
+
+
         $suggestion = Suggestion::find($id);
         $user_id = \Auth::id();
+
+        dd(Vote::where('user_id',$user_id)->where('vote',1)->get()->count());
         $suggestion_id = Suggestion::find($id)->id;
         $currVotes = Vote::where('suggestion_id',$id)->where('user_id',$user_id)->get();
 
@@ -198,7 +202,6 @@ class SuggestionsController extends Controller
             $vote->save();
         };
 
-        $data['suggestion'] = $suggestion;
         return \Redirect::action('SuggestionsController@index');
     }
 
@@ -226,8 +229,6 @@ class SuggestionsController extends Controller
             $vote->save();
         };
 
-
-        $data['suggestion'] = $suggestion;
         return \Redirect::action('SuggestionsController@index');
     }
 

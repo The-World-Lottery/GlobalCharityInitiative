@@ -19,9 +19,12 @@
 				@endif
 			</div>
 			<div class="col-sm-12 col" style="background-color:rgba(0,0,0,.4);padding:1em 0 1em 0;margin-top: 1.5em;border-radius: 2em;">
-				<div class="col-sm-4 col" style="display:flex;justify-content:center;" {{-- id="showProfImg" --}}>
-					<img src='{{$user->image}}' id="profImg">
+				<div class="col-sm-4 col" style="display:flex;justify-content: center;">
+				<div>
+					<img src='{{$user->image}}' id="profImg"><br><br>
 					{{-- <img src='{{substr($user->image,1,-1)}}' id="profImg"> --}}
+					<div>Imaginary Internet Points : <span class="greenTxt" style="font-size:150%;">{{ \App\Models\Vote::where('user_id',$user->id)->where('vote',1)->get()->count()}}</span></div>
+				</div>
 				</div>
 				<div class="col-sm-4 col">
 					<blockquote style="margin-left:1em;">
@@ -81,12 +84,21 @@
 					<div style="margin-top:1em;">
 					<h1 style="text-align:center;color:lightgreen;margin-top:2em;">YOUR SUGGESTIONS</h1>
 			        @foreach($suggestions as $suggestion)
+			        <div class="col col-sm-6" style="margin-top:1em;">
+					<div style="background-color: rgba(0,0,0,.3);border-radius:1em;padding:0 1em 1em 1em;height:150px;overflow:scroll;">
 			            <a href="{{ action('SuggestionsController@show', $suggestion->id) }}">
 			                <div class ="suggHead">{{$suggestion->title}}</div>
 			            </a>
 			            <a href="{{action('SuggestionsController@upvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
+			            <span style="font-size: 180%;">{!!
+		                  \App\Models\Vote::where('suggestion_id',$suggestion->id)->where('vote',1)->get()->count() -
+		                  \App\Models\Vote::where('suggestion_id',$suggestion->id)->where('vote',-1)->get()->count()
+		                 !!}
+		                </span>
 			            <a href="{{action('SuggestionsController@downvote',$suggestion->id)}}"><span class="glyphicon glyphicon-thumbs-down"></span></a>
 			            <p>{{$suggestion->content}}</p>
+			        </div>
+			        </div>
 			        @endforeach
 			        </div>
 			    @else
