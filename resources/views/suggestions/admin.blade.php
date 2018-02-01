@@ -39,13 +39,16 @@ table, th, td {
 				
 				<td>
 
-					<a class="btn btn-warning" href="{{action('SuggestionsController@show',$suggestion->id)}}">Edit</a>
+					<a class="btn btn-warning clearorangeBtn" href="{{action('SuggestionsController@show',$suggestion->id)}}">EDIT</a>
 
 				</td>
 				<td>{{$suggestion->title}}</td>
 				{{-- <td>{{$suggestion->content}}</td> --}}
 				<td>{{$suggestion->user->name}}</td>
-				<td>#</td>
+				<td>{!!
+                  \App\Models\Vote::where('suggestion_id',$suggestion->id)->where('vote',1)->get()->count() -
+                  \App\Models\Vote::where('suggestion_id',$suggestion->id)->where('vote',-1)->get()->count()
+                 !!}</td>
 				<td>{{$suggestion->created_at}}</td>
 				<td>{{$suggestion->updated_at}}</td>
 				@if($suggestion->addressed)

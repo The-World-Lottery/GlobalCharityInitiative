@@ -19,8 +19,6 @@
 		<form method="POST" action="{{ action('SuggestionsController@update', $suggestion->id)}}">
 			{!! csrf_field() !!}
 			{{ method_field('PUT') }}
-
-
 			{!! $errors->first('title', '<span class="help-block">:message</span>')!!}
 			
 			<a class="btn btn-default active btn-block" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" >

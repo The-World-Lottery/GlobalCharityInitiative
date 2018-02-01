@@ -19,8 +19,6 @@
 		<form method="POST" action="{{ action('UsersController@update', $User->id)}}">
 			{!! csrf_field() !!}
 			{{ method_field('PUT') }}
-
-
 			{!! $errors->first('name', '<span class="help-block">:message</span>')!!}
 			
 			<br>

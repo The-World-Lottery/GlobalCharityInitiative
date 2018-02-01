@@ -38,11 +38,11 @@ table, th, td {
 				<th>End Date</th>
 				<th>In Progress?</th>
 			</tr>
-	@foreach($raffles as $raffle)
+		@foreach($raffles as $raffle)
 			<tr>
 				
 				<td>
-					<a class="btn btn-warning" href="{{action('RafflesController@edit',$raffle->id)}}">Edit</a>
+					<a class="btn btn-warning" href="{{action('RafflesController@edit',$raffle->id)}}">EDIT</a>
 				</td>
 				<td>{{$raffle->id}}</td>
 				<td>{{$raffle->content}}</td>
@@ -57,7 +57,7 @@ table, th, td {
 				<td>N</td>
 				@endif
 			</tr>
-	@endforeach
+		@endforeach
 		</table>
 	</div>
 

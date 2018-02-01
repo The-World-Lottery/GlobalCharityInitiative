@@ -24,13 +24,15 @@
 				<img style="max-height:16em;border-radius:1em;box-shadow: 20px 20px 20px rgba(0,0,0,.6);" src={!! $raffle->img !!}>
 			</div>
 			<div class="row" style="margin-top: 1.5em;">
-				<div class="col-sm-6 col">
+				<div class="col-sm-4 col">
 					<h3>Description: </h3>
 					<p>{{$raffle->product}}</p>
+				</div>
+				<div class="col-sm-4 col">
 					<h3>Charity:</h3>
 					<p>{{$raffle['content']}}</p>
 				</div>
-				<div class="col-sm-6 col">
+				<div class="col-sm-4 col">
 					@if (\Auth::check())
 						<div style="margin-bottom:1em;">
 					  	<label style='color:lightgreen'>
@@ -41,11 +43,11 @@
 						</div>
 					@else
 						<div style="margin-bottom:1em;">
-						  <a  href="/ticketFail" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET(s)</a>
+						  <a  href="/ticketFail" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET(S)</a>
 						</div>
 					@endif
 					@if (Auth::check() && Auth::user()->is_admin)
-					<a href="{{ action('RafflesController@edit', $raffle->id) }}"><div  class="btn btn-warning">Edit</div></a>
+					<a href="{{ action('RafflesController@edit', $raffle->id) }}"><div  class="btn btn-warning">EDIT</div></a>
 					@endif
 				</div>
 			</div>

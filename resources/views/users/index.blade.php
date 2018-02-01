@@ -13,7 +13,7 @@ table, th, td {
 
 @section('divHead')
 
-<span>User profile </span>
+<h1>User profiles </h1>
 <span style="float:right;padding-right:1em;">{!! $users->appends(Request::except('page'))->render() !!}</span>
 
 @stop
@@ -38,7 +38,7 @@ table, th, td {
 	@foreach($users as $user)
 			<tr>
 				
-				<td><a class="btn btn-warning" href="{{action('UsersController@show',$user->id)}}" >Edit</a></td>
+				<td><a class="btn btn-warning" href="{{action('UsersController@show',$user->id)}}" >EDIT</a></td>
 				<td>{{$user->name}}</td>
 				<td>{{$user->username}}</td>
 				<td>{{$user->email}}</td>
