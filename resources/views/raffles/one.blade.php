@@ -1,6 +1,6 @@
 <a style="" href="{{ action('RafflesController@show', $raffle->id) }}">
 	<div class="col-sm-12 col-md-12 text-center" style="margin:1em 0 1em 0;display:flex;justify-content: center;">
-		<figure class="raffleCont" style='background-image:url("{{$raffle->img}}");'>
+		<figure id="splashOne" class="raffleCont" style='background-image:url("{{$raffle->img}}");background-size: auto 100% !important;'>
 			<div style="border-radius:1em;background-color:rgba(0,0,0,.8);height:100%;display:none;">
 				<div style="position:relative;height:100%;width:100%;">
 					<div style="padding-top: 10%;">

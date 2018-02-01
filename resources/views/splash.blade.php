@@ -108,7 +108,7 @@
 				</div>
 				<div class="col col-xs-12 col-sm-5" id="gameHold">
 					<div class="splashInfo">
-						<h2>The Global Charity Drawing</h2>
+						<h2>Upcoming Drawing Value</h2>
 						<blockquote>A monthly drawing where players select 5 numbers 1-100 and a power number. Our hope is that this will eventualy grow to a huge number and we can provide a world record breaking donation. As far as we can tell, that record is held by Warren Buffet. For now...</blockquote>
 					</div>
 					<div class="bottomPos">

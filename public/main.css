@@ -116,12 +116,16 @@ a.navLink:hover {
 	background-position:center top;
 	background-size: cover;
 	text-align:center;
-	min-height:17em;
+	height:17em;
 	min-width:100%;
 	overflow:hidden;
 	background-repeat: no-repeat;
 	background-color: rgba(0,0,0,.2);
 	/*border-radius: 1em 1em 0 0;*/
+}
+
+.raffleCont#splash1 {
+	height:14em;
 }
 
 #raffleHolder {
@@ -297,7 +301,7 @@ td {
 
 .btn, #profImg, a {
 	font-size:1em;
-	transition-duration: 200ms;
+	transition-duration: 300ms;
 	transition-timing-function: cubic-bezier(0.02, 0.01, 0.47, 1);
 }
 
@@ -411,6 +415,8 @@ label {
 
 a:hover, a:active {
 	color:white;
+	text-decoration: none;
+	color:lightgreen;
 }
 
 #jackpot {
@@ -660,7 +666,7 @@ blockquote {
 	}
 
 	.raffleCont {
-		height: 220px;
+		height: 300px;
 	}
 
 	#twlSpacer {
