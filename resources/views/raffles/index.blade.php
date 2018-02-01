@@ -31,9 +31,8 @@
 		@foreach($raffles as $raffle)
 			<div class="col-sm-6 col-md-4 text-center">
 				<div id="raffleHolder">
-
 					<div class="raffleCont" style='background-image:url("{{$raffle->img}}");'>
-						<a style="" href="{{ action('RafflesController@show', $raffle->id) }}">
+						<a  id="raffleAnchor" style="" href="{{ action('RafflesController@show', $raffle->id) }}">
 							<h3 style="/*color:#31b7d5;*/background-color: rgba(0,0,0,.4);margin:0;padding:.6em;">{{$raffle->title}}</h3>
 						</a>	
 					</div>
@@ -49,7 +48,7 @@
 							</div>
 						@else
 							<div style="margin-bottom:1em;">
-							  <a  href="/ticketFail" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET(s)</a>
+							  <a  href="/ticketFail" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET(S)</a>
 							</div>
 						@endif
 						 <h5>

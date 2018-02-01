@@ -91,7 +91,7 @@
 					</div> --}}
 				<div class="col col-xs-12 col-sm-8 col-sm-offset-2" style="background-color: rgba(0,0,0,.8);">
 					<div class="par3">
-						We a small group of individuals who saw a need to improve the efficiency of charitable fund raising. All earnings are allocated to charitable projects around the globe. The groups we work with will be decided by the world through our social media outlets and in our own suggestion box. 
+						We a small group of individuals who saw a need to improve the efficiency of charitable fund raising of every sort. All earnings are allocated to charitable projects around the globe. The groups we work with will be decided by the world through our social media outlets and in our own suggestion box. 
 					</div>
 				</div>
 			</div>
@@ -100,7 +100,7 @@
 				<div class="col col-xs-12 col-sm-7" id="gameHold">
 					<div class="splashInfo">
 						<h2>Raffles</h2>
-						<blockquote>When a company wishes to advertise through us they may donate one of their products or services to be raffled off. Celebrities may donate a day of their time to be raffled off for fans. There will always be a winner of each raffle as long as even one ticket is purchased. A small portion of each ticket price will increase the value of the currently running World Lottery. </blockquote>		
+						<blockquote>When a company wishes to advertise through us they may donate one of their products or services to be raffled off. Celebrities may donate a day of their time to be raffled off for fans. There will always be a winner of each raffle as long as even one ticket is purchased. A small portion of each ticket price will increase the value of the currently running Global Charity drawing. The proceeds will be donated to selected charities.</blockquote>		
 					</div>
 					<div class="bottomPos">
 						@include('raffles.one')
@@ -108,11 +108,11 @@
 				</div>
 				<div class="col col-xs-12 col-sm-5" id="gameHold">
 					<div class="splashInfo">
-						<h2>The World Lottery</h2>
-						<blockquote>The World Lottery is a classic "Pick Six" drawing where players select 5 numbers 1-100 and a power number. The drawings will happen on the first day of each month. </blockquote>
+						<h2>The Global Charity Drawing</h2>
+						<blockquote>A monthly drawing where players select 5 numbers 1-100 and a power number. Our hope is that this will eventualy grow to a huge number and we can provide a world record breaking donation. As far as we can tell, that record is held by Warren Buffet. For now...</blockquote>
 					</div>
 					<div class="bottomPos">
-						<p style="font-size:2.7em;padding:1em .3em 1em .3em;background-color:rgba(0,0,0,.5);border-radius: 1em;margin-top:.5em;">The <span style="color:lightgreen;">World Lottery </span>Jackpot is <b><span style="color:lightgreen;">${{number_format((\App\Models\TheWorldLottery::orderBy('id','desc')->first()->get()[0]['current_value']),0,".",",")}}</span></b>
+						<p style="font-size:2.7em;padding:1em .3em 1em .3em;background-color:rgba(0,0,0,.5);border-radius: 1em;margin-top:.5em;">The <span style="color:lightgreen;">Global Charity </span>Drawing <b><span style="color:lightgreen;">${{number_format((\App\Models\TheWorldLottery::orderBy('id','desc')->first()->get()[0]['current_value']),0,".",",")}}</span></b>
 						<br><strong style="color:#00ffc4;margin-bottom: .5em;">{{$twl[0]->end_date->diffForHumans()}}</strong></p>
 					</div>
 				</div>
@@ -156,7 +156,7 @@
 						<h2>Our Missions</h2>
 						<blockquote style="text-align:left;">
 							<ol>
-								<li>Reduce the manpower usually necessary for fund raising by providing massive monetary donations straight to the source of the charitable work.</li>
+								<li>Reduce the overhead that is usually necessary for fund raising by providing massive monetary donations straight to the source of the charitable work.</li>
 								<li>Help those who need it most.</li>
 							</ol>
 						</blockquote>

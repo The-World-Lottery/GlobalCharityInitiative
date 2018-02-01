@@ -114,9 +114,9 @@ a.navLink:hover {
 .raffleCont {
 	color:white;
 	background-position:center top;
-	background-size: auto 100%;
+	background-size: cover;
 	text-align:center;
-	min-height:14.5em;
+	min-height:17em;
 	min-width:100%;
 	overflow:hidden;
 	background-repeat: no-repeat;
@@ -660,7 +660,7 @@ blockquote {
 	}
 
 	.raffleCont {
-		min-height: 34vh;
+		height: 220px;
 	}
 
 	#twlSpacer {
