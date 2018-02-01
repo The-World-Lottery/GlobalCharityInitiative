@@ -179,22 +179,24 @@ class SuggestionsController extends Controller
         $suggestion = Suggestion::find($id);
         $user_id = \Auth::id();
         $suggestion_id = Suggestion::find($id)->id;
-
-
-        
-        // $voteCount = Vote::select('suggestion_id')->groupBy('suggestion_id')->orderBy('')->get();
-
-        // dd(DB::table('votes')->select('vote')->where('suggestion_id',$suggestion_id)->sum('vote'));
-
-
         $currVotes = Vote::where('suggestion_id',$id)->where('user_id',$user_id)->get();
-        // if($currVotes->isEmpty()){
+
+        $hasOtherVote = false;
+
+        if(!$currVotes->isEmpty()){
+            if($currVotes[0]['vote'] == -1){
+                $hasOtherVote = true;
+                $vote = Vote::find($currVotes[0]['id']);
+                $vote->vote = 1;
+                $vote->save();
+            }
+        } elseif ($currVotes->isEmpty() || $hasOtherVote) {
             $vote = new Vote;
             $vote->user_id = $user_id;
             $vote->suggestion_id = $suggestion_id;
             $vote->vote = 1;
             $vote->save();
-        // };
+        };
 
         $data['suggestion'] = $suggestion;
         return \Redirect::action('SuggestionsController@index');
@@ -206,13 +208,23 @@ class SuggestionsController extends Controller
         $user_id = \Auth::id();
         $suggestion_id = Suggestion::find($id)->id;
         $currVotes = Vote::where('suggestion_id',$id)->where('user_id',$user_id)->get();
-        // if($currVotes->isEmpty()){
+    
+        $hasOtherVote = false;
+
+        if(!$currVotes->isEmpty()){
+            if($currVotes[0]['vote'] == 1){
+                $hasOtherVote = true;
+                $vote = Vote::find($currVotes[0]['id']);
+                $vote->vote = -1;
+                $vote->save();
+            }
+        } elseif ($currVotes->isEmpty() || $hasOtherVote) {
             $vote = new Vote;
             $vote->user_id = $user_id;
             $vote->suggestion_id = $suggestion_id;
             $vote->vote = -1;
             $vote->save();
-        // };
+        };
 
 
         $data['suggestion'] = $suggestion;
