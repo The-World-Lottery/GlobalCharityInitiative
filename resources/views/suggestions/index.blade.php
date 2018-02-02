@@ -17,9 +17,11 @@
 	  <li><a  id="zeroO" href="{{action('SuggestionsController@create')}}">Add a Suggestion</a></li>
 	@endif
 </ul>
-
-	<span style="float:right;padding-right:1em;">{!! $suggestions->appends(Request::except('page'))->render() !!}</span>
+	
 	<main class="container">
+		<div style="display: flex;justify-content: center;">
+			<span>{!! $suggestions->appends(Request::except('page'))->render() !!}</span>
+		</div>
 		<div class="row">
 			@foreach($suggestions as $suggestion)
 			<div class="col col-sm-6" style="margin-top:1em;">

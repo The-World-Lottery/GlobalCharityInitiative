@@ -111,26 +111,6 @@ class SuggestionsController extends Controller
 
     public function highest()
     {
-        //initial way of euserping a join query w/ 2 queries
-        // $votes = DB::table('votes')
-        //              ->select(DB::raw('count(*) as total, suggestion_id'))
-        //              ->groupBy('suggestion_id')
-        //              ->orderBy('total','desc')
-        //              ->take(5)
-        //              ->get();
-
-        // $suggIds = [];
-
-        // foreach($votes as $vote){
-            
-        //     $suggIds[] = $vote->suggestion_id;
-
-        // }
-
-        // $suggestions = Suggestion::where('id',$suggIds[0])->orWhere('id',$suggIds[1])->orWhere('id',$suggIds[2])->orWhere('id',$suggIds[3])->orWhere('id',$suggIds[4])->get();
-
-    
-
         $suggestions = DB::table('suggestions')
                     ->where('addressed','0')
                     ->leftJoin('votes', 'votes.suggestion_id', '=', 'suggestions.id')
@@ -144,10 +124,6 @@ class SuggestionsController extends Controller
         foreach ($suggestions as $suggest) {
             $suggObjs[] = Suggestion::find($suggest->id);
         }
-
-        // foreach ($suggestions as $suggestion) {
-        //     var_dump($suggestion->title);
-        // }
 
         $data['suggestions']= $suggObjs;
         return view('suggestions.highest', $data);
@@ -176,12 +152,8 @@ class SuggestionsController extends Controller
 
     public function upvote($id)
     {
-
-
         $suggestion = Suggestion::find($id);
         $user_id = \Auth::id();
-
-        dd(Vote::where('user_id',$user_id)->where('vote',1)->get()->count());
         $suggestion_id = Suggestion::find($id)->id;
         $currVotes = Vote::where('suggestion_id',$id)->where('user_id',$user_id)->get();
 

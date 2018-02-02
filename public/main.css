@@ -263,9 +263,26 @@ ul.pagination {
 .suggHead {
 	color:#3cc2d0;
 	margin-top: .5em;
-	text-decoration:underline;
 	font-size:1.2em;
 }
+
+
+
+.pagination > li > a,
+.pagination > li > span {
+    color: #31b7d5; // use your own color here
+}
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+    background-color: #31b7d5;
+    border-color: #31b7d5;
+}
+
 
 .aboutUs {
 	border:1px solid white;
@@ -582,7 +599,7 @@ blockquote {
 }
 
 #gameScroll {
-	padding-top:1em;
+	padding-top:1.5em;
 }
 
 .navbar {
@@ -751,7 +768,7 @@ blockquote {
 		padding:1em 0 0 0;
 	}
 
-	.col-sm-6, .col-sm-4 {
+	.col-sm-6, .col-sm-4, .col-sm-8 {
 		padding:0 ;
 	}
 

@@ -46,7 +46,7 @@
 				</div>
 			</div>
 			<div class="col col-sm-12">
-				<h1 style="padding-top:.5em;text-align:center;color:lightgreen;">YOUR CURRENT TICKETS</h1>
+				<h1 style="padding-top:1.5em;text-align:center;color:lightgreen;">YOUR CURRENT TICKETS</h1>
 				<div  class="row">
 					{{-- <div class="col-xs-12 col-sm-4"> <h3 class="ticketHead">Lotteries</h3>
 						@foreach($user->lotteryEntries->unique('lottery_id') as $lotteryEntry)
@@ -58,7 +58,8 @@
 							@endif
 						@endforeach
 					</div> --}}
-					<div class="col-xs-12 col-sm-8"><h3 class="ticketHead">Raffles</h3>
+					<div class="col-xs-12 col-sm-8">
+						<h3 class="ticketHead">Raffles</h3>
 						@foreach($user->raffleEntries->unique('raffles_id') as $raffleEntry)
 							@if(\App\Models\Raffle::where('id', $raffleEntry->raffle->id)->get()[0]->complete == 0)
 								<a href="{{action('RafflesController@show', $raffleEntry->raffle->id)}}">
@@ -68,7 +69,8 @@
 							@endif
 						@endforeach
 					</div>
-					<div class="col-xs-12 col-sm-4"> <h3 class="ticketHead">World Lottery</h3>
+					<div class="col-xs-12 col-sm-4">
+						<h3 class="ticketHead">World Lottery</h3>
 						@foreach($user->worldLotteryEntries->unique('the_world_lottery_id') as $worldLotteryEntry)
 							@if(\App\Models\TheWorldLottery::orderBy('id','desc')->limit(1)->get()[0]->id == $worldLotteryEntry->theworldlottery->id)
 								<a href="{{action('TheWorldLotterysController@index')}}">{{$worldLotteryEntry->theworldlottery->title}}
@@ -85,7 +87,7 @@
 					<h1 style="text-align:center;color:lightgreen;margin-top:2em;">YOUR SUGGESTIONS</h1>
 			        @foreach($suggestions as $suggestion)
 			        <div class="col col-sm-6" style="margin-top:1em;">
-					<div style="background-color: rgba(0,0,0,.3);border-radius:1em;padding:0 1em 1em 1em;height:150px;overflow:scroll;">
+					<div style="background-color: rgba(0,0,0,.4);border-radius:1em;padding:0 1em 1em 1em;height:150px;overflow:scroll;">
 			            <a href="{{ action('SuggestionsController@show', $suggestion->id) }}">
 			                <div class ="suggHead">{{$suggestion->title}}</div>
 			            </a>

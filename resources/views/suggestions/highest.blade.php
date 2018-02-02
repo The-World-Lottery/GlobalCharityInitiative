@@ -18,7 +18,8 @@
     <main class="container" style="max-width:100%;">
 
         @foreach($suggestions as $suggestion)
-
+        <div class="col col-sm-6" style="margin-top:1em;">
+          <div style="background-color: rgba(0,0,0,.2);padding:0 1em 1em 1em;height:200px;overflow:scroll;">
             <a href="{{ action('SuggestionsController@show', $suggestion->id) }}">
                 <div class ="suggHead">{{$suggestion->title}}</div>
             </a>
@@ -34,6 +35,8 @@
 
             <p>{{$suggestion->content}}</p>
             <p>__By {{$suggestion->user->name}}</p>
+          </div>
+        </div>
         @endforeach
         <br>
 
