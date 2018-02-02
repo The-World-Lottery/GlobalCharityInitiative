@@ -20,6 +20,9 @@
 @section('content')
 
 <div class="container">
+	<div style="display:flex;justify-content:center; ">
+		{!! $raffles->appends(Request::except('page'))->render() !!}
+	</div>
 	@if (session()->has('successMessage'))
         <div class="alert alert-success text-center">{{ session('successMessage') }}</div>
     @endif
@@ -61,7 +64,9 @@
 			</div>
 		@endforeach
 	</div>
-		{!! $raffles->appends(Request::except('page'))->render() !!} 
+	<div style="height:3em;">
+	</div>
+
 
 	<form id="raffleForm" method="POST">
 	  <script

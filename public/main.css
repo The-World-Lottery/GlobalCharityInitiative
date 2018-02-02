@@ -294,6 +294,10 @@ ul.pagination {
 	padding-bottom:0em;
 }
 
+#hoverTrigger {
+	margin-bottom: 1em;
+}
+
 .color {
 	background-color:rgba(0,0,0,.5);
 }

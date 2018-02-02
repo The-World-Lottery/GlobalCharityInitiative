@@ -29,22 +29,30 @@
             {!! csrf_field() !!}
                 <div class="form-group col col-sm-6">
                     <label>Email</label>
-                    {!! $errors->first('email', '<span class="help-block">:message</span>')!!}
                     <input class="form-control" autofocus type="email" name="email" value="{{ old('email') }}">
+                    {!! $errors->first('email', '<span class="help-block">:message</span>')!!}
                 </div>  
                 <div class="form-group col col-sm-6">
                     <label>Password</label>
-                    {!! $errors->first('password', '<span class="help-block">:message</span>')!!}
                     <input class="form-control" type="password" name="password" id="password">
+                    {!! $errors->first('password', '<span class="help-block">:message</span>')!!}
                 </div>
-                <div class="form-group">
+                {{-- <div class="form-group col-sm-6">
                     <input type="checkbox" name="remember"> Remember Me
+                </div> --}}
+                <div class="form-group col-sm-6">
+                    <a href="/password/email">
+                        Forgot Your Password?
+                    </a>
                 </div>
-                <div class="form-group" style="display:flex;justify-content: center;">
+                <div class="form-group col-sm-12" style="display:flex;justify-content: center;">
                     <button style="margin-bottom:.5em;" class="btn btn-success cleargreenBtn" type="submit">Login</button>
                 </div>
             </form>
-        </div>   
+        </div> 
+
+        
+
 
 
     {{-- //register --}}
@@ -56,8 +64,13 @@
         </div>
 
         <div  id="registerHolder" class="col col-sm-12">
-            <div class="col col-xs-12 col-sm-6">
+            <p class="text-center">
+                *Your personal information will never be shared with anyone.
+            </p>
+            
+            <br>
 
+            <div class="col col-xs-12 col-sm-6">
             <form method="POST" action="/auth/register">
                 {!! csrf_field() !!}
 
@@ -83,7 +96,7 @@
                     <label for="Input5">Profile Image</label>
                     <input class="form-control" id="img" type="text" name="image" id="Input5" value="{{old('image')}}"><br>
                 </div>
-                    <a id="filestackButton" class="btn btn-secondary">Use Filestack Image Hosting</a>
+                    <a id="filestackButton">Select Profile Image</a>
             </div>
             <div class="col col-xs-12 col-sm-6">
 

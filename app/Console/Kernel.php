@@ -33,8 +33,8 @@ class Kernel extends ConsoleKernel
                  ->everyMinute();
 
         $schedule->command('world:check')
-                 ->monthly()->at('12:00');
-                // ->everyMinute();
+                 // ->monthly()->at('12:00');
+                ->everyMinute();
     }
 
 }

@@ -24,13 +24,13 @@
 			{!! csrf_field() !!}
 			{!! $errors->first('title', '<span class="help-block">:message</span>')!!}
 
-			<label class="form-group">Title</label><input style="width:100%;" class="form-control" type="text" name="title" id="title" value="{{ old('title') }}" placeholder="TITLE"><br>
+			<label class="form-group">Title</label><input style="width:100%;" class="form-control" type="text" name="title" id="title" value="{{ old('title') }}"><br>
 
 
 			{!! $errors->first('content', '<span class="help-block">:message</span>')!!}
 
 			
-			<label class="form-group">Content</label><textarea class="form-control" type="text" name="content" id="content" placeholder="CONTENT">{{ old('content') }}</textarea><br>
+			<label class="form-group">Content</label><textarea class="form-control" type="text" name="content" id="content">{{ old('content') }}</textarea><br>
 
 			<div style="display:flex;justify-content:center;margin-bottom: 3em;">
 				<button class="btn btn-success cleargreenBtn">Submit</button>
@@ -38,4 +38,6 @@
 		</form>
 		</div>
 	</main>
+	<div style="height:3em;">
+    </div>
 @stop

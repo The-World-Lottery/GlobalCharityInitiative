@@ -20,6 +20,8 @@ class PasswordController extends Controller
 
     use ResetsPasswords;
 
+    protected $redirectTo = '/raffles';
+
     /**
      * Create a new password controller instance.
      *
@@ -29,4 +31,10 @@ class PasswordController extends Controller
     {
         $this->middleware('guest');
     }
+
+    // public function getReset($token)
+    // {
+    //     return view('auth.reset')->with(['token' => $token]);
+    // }
+
 }

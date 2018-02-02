@@ -19,13 +19,13 @@
 </ul>
 	
 	<main class="container">
-		<div style="display: flex;justify-content: center;">
+		<div style="display:flex;justify-content:center; ">
 			<span>{!! $suggestions->appends(Request::except('page'))->render() !!}</span>
 		</div>
 		<div class="row">
 			@foreach($suggestions as $suggestion)
 			<div class="col col-sm-6" style="margin-top:1em;">
-				<div style="background-color: rgba(0,0,0,.2);padding:0 1em 1em 1em;height:200px;overflow:scroll;">
+				<div style="background-color: rgba(0,0,0,.4);padding:0 1em 1em 1em;height:200px;overflow:scroll;">
 					<a href="{{ action('SuggestionsController@show', $suggestion->id) }}">
 						<div class ="suggHead">{{$suggestion->title}}</div>
 					</a>
@@ -43,6 +43,8 @@
 				</div>
 			</div>
 			@endforeach
+		</div>
+		<div style="height:3em;">
 		</div>
 	</main>
 
