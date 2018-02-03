@@ -8,9 +8,9 @@
 @section('content')
 
 <ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
-  <li><a  id="zeroO" href="{{action('SuggestionsController@index')}}">All Suggestions</a></li>
-  <li><a  id="zeroO" href="{{action('SuggestionsController@highest')}}">Top 5 Suggestions</a></li>
-  <li><a  id="zeroO" href="{{action('SuggestionsController@create')}}">Add a Suggestion</a></li>
+  <li><a  id="zeroO" href="{{action('SuggestionsController@index')}}">All</a></li>
+  <li><a  id="zeroO" href="{{action('SuggestionsController@highest')}}">Top 5</a></li>
+  <li><a  id="zeroO" href="{{action('SuggestionsController@create')}}">Add Suggestion</a></li>
   <li class="active"><a href="{{action('SuggestionsController@userssuggestions')}}">Your Suggestions</a></li>
 </ul>
 {{-- 	<span style="float:right;padding-right:1em;">{!! $suggestions->appends(Request::except('page'))->render() !!}</span> --}}

@@ -14,9 +14,9 @@
 @section('content')
 
 <ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
-  <li><a  id="zeroO" href="{{action('SuggestionsController@index')}}">All Suggestions</a></li>
-  <li><a  id="zeroO" href="{{action('SuggestionsController@highest')}}">Top 5 Suggestions</a></li>
-  <li class="active"><a  id="zeroO" href="{{action('SuggestionsController@create')}}">Add a Suggestion</a></li>
+  <li><a  id="zeroO" href="{{action('SuggestionsController@index')}}">All</a></li>
+  <li><a  id="zeroO" href="{{action('SuggestionsController@highest')}}">Top 5</a></li>
+  <li class="active"><a  id="zeroO" href="{{action('SuggestionsController@create')}}">Add Suggestion</a></li>
 </ul>
 	<main class="container" style="max-width:80%;"><br>
 		<div class="col col-md-6 col-md-offset-3">

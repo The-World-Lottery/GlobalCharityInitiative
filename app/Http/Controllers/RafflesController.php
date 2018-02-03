@@ -123,6 +123,7 @@ class RafflesController extends Controller
         $title = $request->input('title');
         $content = $request->input('content');
         $end_date = $request->input('end_date') . " " . $request->input('end_time') . ":00";
+    var_dump($end_date);
         $product = $request->input('product');
 
         $image = $request->input('image');

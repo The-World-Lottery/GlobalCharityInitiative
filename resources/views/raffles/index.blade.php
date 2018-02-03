@@ -37,7 +37,7 @@
 					<div class="raffleCont" style='background-image:url("{{$raffle->img}}");'>
 						<img src="{{$raffle->img}}" style="height:0;width:0;" alt="{{$raffle->product}}">
 						<a  id="raffleAnchor" style="" href="{{ action('RafflesController@show', $raffle->id) }}">
-							<h3 title="{{$raffle->product}}" style="/*color:#31b7d5;*/background-color: rgba(0,0,0,.4);margin:0;padding:.6em;">{{$raffle->title}}</h3>
+							<h3 title="{{$raffle->product}}" style="/*color:#31b7d5;*/background-color: rgba(0,0,0,.5);margin:-.7em 0 0 0;padding:.6em;">{{$raffle->title}}</h3>
 						</a>	
 					</div>
 					<div class="raffleInfo">

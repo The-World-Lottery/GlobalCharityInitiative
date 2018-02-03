@@ -31,17 +31,17 @@
 						<h2>
 							{{$user->name}}
 						</h2>
-						<b><u>Email : </u></b><br> {{$user->email}}<br>
-						<b><u>User Name : </u></b><br> {{$user->username}}<br>
-						<b><u>Phone Number : </u></b><br> {{$user->phone_number}}<br>
+						<b><u><span class="greenTxt">Email : </span></u></b><br> {{$user->email}}<br>
+						<b><u><span class="greenTxt">User Name : </span></u></b><br> {{$user->username}}<br>
+						<b><u><span class="greenTxt">Phone Number : </span></u></b><br> {{$user->phone_number}}<br>
 					</blockquote>
 				</div>
 				<div class="col-sm-4 col">
 					<blockquote style="margin-left : 1em;">
 						<h2>Your Stats</h2>
-						<b><u>Raffle Entries : </u></b><br> {{\App\Models\RaffleEntry::where('user_id',$user->id)->count()}}<br>
-						<b><u>Global Drawing Entries : </u></b><br> {{\App\Models\TheWorldLotteryEntry::where('user_id',$user->id)->count()}}<br>
-						<b><u>Suggestion Count : </u></b><br> {{\App\Models\Suggestion::where('user_id',$user->id)->count()}} <br>
+						<b><u><span class="greenTxt">Raffle Entries : </span></u></b><br> {{\App\Models\RaffleEntry::where('user_id',$user->id)->count()}}<br>
+						<b><u><span class="greenTxt">Global Drawing Entries : </span></u></b><br> {{\App\Models\TheWorldLotteryEntry::where('user_id',$user->id)->count()}}<br>
+						<b><u><span class="greenTxt">Suggestion Count : </span></u></b><br> {{\App\Models\Suggestion::where('user_id',$user->id)->count()}} <br>
 					</blockquote>
 				</div>
 			</div>
