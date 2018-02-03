@@ -146,7 +146,6 @@ a.navLink:hover {
 .raffleInfo {
 	padding:.6em .5em .5em .5em;
 	/*height:11em;*/
-	overflow:scroll;
 	background-color: rgba(0,0,0,.2);
 }
 
