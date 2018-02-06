@@ -2,14 +2,14 @@
 
 @section('title')
 
-<title>The World Lottery</title>
+<title>Global Charity</title>
 
 @stop
 
 @section('divHead')
-<h1 style="margin-top: 1em;">The Global Charity Drawing
+<h1 id="hoverTrigger"><strong>Global Charity Drawing</strong>
+<div style="font-size:50%;margin-bottom: 1em;">$5 USD per entry</div>
 </h1>
-<div>$5 USD per entry</div>
 @stop
 
 @section('content')
@@ -40,7 +40,7 @@
 				data-zip-code="true">
 			</script>
 				<div style="margin-bottom: 2em;" class="col col-md-9 col-xs-12">
-					<h2>Pick any <span class="greenTxt"> 5</span> numbers</h2>
+					<h2>Pick <span class="greenTxt">ANY 5</span> numbers (1 - 100)</h2>
 					{!! csrf_field() !!}
 					@for($i = 1; $i <= 100; $i++)
 						<div style="float:left;position:relative;display:flex;justify-content:center;">
@@ -53,14 +53,14 @@
 					<h2>And select your<br><span class="greenTxt">KEY</span> number</h2>
 					<select class="selectpicker text-center" name="powerNumber"> 
 						@for($i = 1; $i <= 100; $i++)
-							<option value="{{$i}}">{{$i}}</option>
+							<option value="{{$i}}" style="display: flex;justify-content: center;"><span>{{$i}}</span></option>
 						@endfor
 					</select>
 					<br>
 					<h2>Then</h2>
-					<button class="btn btn-success cleargreenBtn">Submit Numbers</button><br><br>
+					<button class="btn btn-success cleargreenBtn">SUBMIT NUMBERS</button><br><br>
 					@if ((Auth::check()) && (Auth::user()->is_admin))
-						<a href="{{ action('TheWorldLotterysController@edit', $theWorldLottery->id) }}"><button style="margin-bottom: 2em;" class="btn btn-warning">Edit</button></a>
+						<a href="{{ action('TheWorldLotterysController@edit', $theWorldLottery->id) }}"><button style="margin-bottom: 2em;" class="btn btn-warning">EDIT</button></a>
 					@endif
 				</div>
 			  <input type="hidden" name="_token" value="{{ csrf_token() }}">

@@ -14,18 +14,18 @@
 @section('content')
 <div class="container">
 	<div style="display:flex;justify-content: space-around;text-align:center;">
-		<a target="_blank" href="https://github.com/The-World-Lottery/TheWorldLottery">GitHub<br>
-			<img src="/images/Blue Icons/GitHub.svg" alt="" class="socialIcon">
+		<a {{-- target="_blank" --}} href="https://twitter.com/Emmett_J_Peters?lang=en">Twitter<br>
+			<img src="/images/Blue Icons/Twitter.svg" alt="global charity twitter" class="socialIcon">
 		</a>
 		<a {{-- target="_blank" --}} href="">Instagram<br>
-			<img src="/images/Blue Icons/Instagram.svg" alt="" class="socialIcon">
+			<img src="/images/Blue Icons/Instagram.svg" alt="global charity instagram" class="socialIcon">
 		</a>
-		<a {{-- target="_blank" --}} href="https://twitter.com/Emmett_J_Peters?lang=en">Twitter<br>
-			<img src="/images/Blue Icons/Twitter.svg" alt="" class="socialIcon">
+		<a target="_blank" href="https://github.com/The-World-Lottery/TheWorldLottery">GitHub<br>
+			<img src="/images/Blue Icons/GitHub.svg" alt="global charity GitHub" class="socialIcon">
 		</a>
-		<a {{-- target="_blank" --}} href="">Facebook<br>
+		{{-- <a href="">Facebook<br>
 			<img src="/images/Blue Icons/Facebook.svg" alt="" class="socialIcon">
-		</a>
+		</a> --}}
 	</div>
 	<br>
 	<ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">

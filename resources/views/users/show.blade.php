@@ -106,9 +106,7 @@
 			    @else
 			        <div style="text-align:center;margin-top:2em;">
 				        <h1 style="color:lightgreen">YOU HAVE NO SUGGESTIONS</h1>
-				        <br>
-				        <div>CLICK TO ADD A SUGGESTION</div>
-				       	<a href="{{action('SuggestionsController@create')}}"> <button class="btn btn-success cleargreenBtn">GO!</button></a>
+				       	<a href="{{action('SuggestionsController@create')}}"> <button class="btn btn-success cleargreenBtn">ADD SUGGESTION</button></a>
 			       	</div>
 			    @endif
 			</div>

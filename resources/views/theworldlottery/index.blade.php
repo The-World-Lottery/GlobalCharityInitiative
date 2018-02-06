@@ -8,7 +8,7 @@
 
 @section('divHead')
 
-<h3 id="hoverTrigger">The World Charity Drawing</h3>
+<h3 id="hoverTrigger">Global Charity Drawing</h3>
 	<p id="hoverSumm" hidden class="suggBox" style="padding:0 5em 0 5em ;text-align:center;">The World Lottery drawing happens every two weeks. Winning numbers selected with a random number generator. The Jackpot value is fed by ticket purchases to any Lottery, Raffle or currently running World Lottery.</p>
 
 @stop

@@ -16,9 +16,9 @@
   <li><a id="zeroO" href="{{action('Auth\AuthController@getRegister')}}">Register</a></li>
 </ul> --}}
  	<main class="container authSpacer" style="max-width:100%;">
-        <h1 style="color:lightgreen;text-align:center;">Already have an account?</h1>
+        <h1 style="text-align:center;">Already have an account?</h1>
         <div class="text-center" >
-            <button id="clickTrigger2" style="display:none;" class="btn btn-success cleargreenBtn">Login</button>
+            <button id="clickTrigger2" style="display:none;" class="btn btn-success cleargreenBtn">SIGN IN</button>
         </div>
 
         <div id="loginHolder" class="col col-sm-12">
@@ -37,30 +37,19 @@
                     <input class="form-control" type="password" name="password" id="password">
                     {!! $errors->first('password', '<span class="help-block">:message</span>')!!}
                 </div>
-                {{-- <div class="form-group col-sm-6">
-                    <input type="checkbox" name="remember"> Remember Me
-                </div> --}}
                 <div class="form-group col-sm-6">
                     <a href="/password/email">
                         Forgot Your Password?
                     </a>
                 </div>
                 <div class="form-group col-sm-12" style="display:flex;justify-content: center;">
-                    <button style="margin-bottom:.5em;" class="btn btn-success cleargreenBtn" type="submit">Login</button>
+                    <button style="margin-bottom:.5em;" class="btn btn-success cleargreenBtn" type="submit">SIGN IN</button>
                 </div>
             </form>
-        </div> 
-
-        
-
-
-
-    {{-- //register --}}
-
-        
-        <h1 style="color:lightgreen;text-align:center;">Dont have an account?</h1>
+        </div>
+        <h1 style="text-align:center;">Dont have an account?</h1>
         <div class="text-center">
-            <button id="clickTrigger" class="btn btn-success cleargreenBtn">Register</button>
+            <button id="clickTrigger" class="btn btn-success cleargreenBtn">SIGN UP!</button>
         </div>
 
         <div  id="registerHolder" class="col col-sm-12">
@@ -121,7 +110,7 @@
 
             </div>
             <div class="form-group col col-sm-12" style="margin-bottom:3em;display:flex;justify-content: center;">
-                <button type="submit" class="btn btn-success cleargreenBtn">Register Account</button>
+                <button type="submit" class="btn btn-success cleargreenBtn">REGISTER THIS ACCOUNT</button>
             </div>
             </form>
         </div>

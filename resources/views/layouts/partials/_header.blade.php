@@ -2,6 +2,9 @@
   <nav id="menu" style="" class="navbar navbar-fixed-top">
  
       <div class="navbar-header">
+			<span id="logoHolder" style='margin-left:.5em;margin-right:.5em;float:left;'>
+				<img src="\images\logo.png" width="50" alt="Logo Thing main logo">
+			</span>
       		@if (Auth::check())
 					{{-- <img src='{{Auth::user()->image}}' id="headImg"> --}}
 				<a class="navbar-brand user navLink" href="{{action('UsersController@show' , Auth::id())}}" >
@@ -9,7 +12,7 @@
 					{{Auth::user()->name}}
 				</a>
 			@else
-				<a class="navbar-brand user navLink" href="{{action('Auth\AuthController@getLogin')}}"><span class="navLink">Login/Register</span></a>	
+				<a class="navbar-brand user navLink" href="{{action('Auth\AuthController@getLogin')}}"><span class="navLink">Login / Register</span></a>	
 			@endif
        
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="border:0px;">
@@ -18,6 +21,8 @@
           <span class="icon-bar" id="headLinks"></span> 
         </button>
       </div>
+		
+
       <div class="collapse navbar-collapse justify-content-end" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
           <li class="headLinks">
@@ -29,7 +34,7 @@
           	<a  href="{{action('TheWorldLotterysController@selectNumbers')}}">
 	          	<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
 	          	<span id="navSpecialHover" class="navLink">
-	          		<span id="drawinghover1">  Global Drawing</span>
+	          		<span id="drawinghover1"> Global Drawing</span>
 	          		<span id="drawinghover2" style="font-size:110%;display:none;color:lightgreen;">${{ number_format((int) App\Models\TheWorldLottery::orderBy('id','desc')->get()[0]['current_value'],0,".",",") }}</span>
 	          	</span>
           	</a>

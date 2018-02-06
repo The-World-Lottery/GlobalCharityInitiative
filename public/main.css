@@ -15,6 +15,18 @@ body#master {
 	font-size:90%;
 }
 
+
+select { width: 70px; text-align:center; }
+
+#logoHolder {
+	margin-top:4px;
+	height: 6vh;
+	display:inline;
+	/*width:6vh;*/
+	/*background-image: url(images/logo.png);*/
+	/*background-size: cover;*/
+}
+
 body#splashBod {
 	color:white;
 	font-family: 'Josefin Sans', sans-serif !important;
@@ -282,7 +294,6 @@ ul.pagination {
     border-color: #31b7d5;
 }
 
-
 .aboutUs {
 	border:1px solid white;
 	border-top:0;
@@ -320,7 +331,7 @@ td {
 
 .btn, #profImg, a {
 	font-size:1em;
-	transition-duration: 300ms;
+	transition-duration: 400ms;
 	transition-timing-function: cubic-bezier(0.02, 0.01, 0.47, 1);
 }
 
@@ -357,14 +368,14 @@ td {
 }
 
 .btn-warning:hover {
-	color:black !important;
+	color:#0f294e !important;
 	background-color:orange !important;
 	border-color: orange;
 	box-shadow:0px 0px;
 }
 
 .btn-success:hover {
-	color:black !important;
+	color:#0f294e !important;
 	border-color:lightgreen;
 	background-color:lightgreen;
 	box-shadow:0px 0px;

@@ -154,7 +154,7 @@ $(document).ready(function(){
             });
         };
         t++;
-    },800);
+    }, 700);
 
     //click for summaries
     $('#clickTrigger').click(function(){
