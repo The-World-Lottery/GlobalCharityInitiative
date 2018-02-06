@@ -19,8 +19,8 @@ body#master {
 select { width: 70px; text-align:center; }
 
 #logoHolder {
-	margin-top:4px;
-	height: 6vh;
+	margin-top:3px;
+	height: 3.3em;
 	display:inline;
 	/*width:6vh;*/
 	/*background-image: url(images/logo.png);*/
@@ -486,7 +486,7 @@ input {
 
 #menu {
 	background-color:#31b7d5;
-	padding:0 1em 0 0;
+	padding:0 0 0 0;
 }
 
 .navButton {

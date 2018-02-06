@@ -3,7 +3,7 @@
  
       <div class="navbar-header">
 			<span id="logoHolder" style='margin-left:.5em;margin-right:.5em;float:left;'>
-				<img src="\images\logo.png" width="50" alt="Logo Thing main logo">
+				<img src="\images\logo2.png" width="55" height="60" alt="Logo Thing main logo">
 			</span>
       		@if (Auth::check())
 					{{-- <img src='{{Auth::user()->image}}' id="headImg"> --}}
@@ -86,7 +86,7 @@
           	<span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
           	<span class="navLink">Suggestions</span></a>
           </li>
-          <li class="headLinks">
+          <li class="headLinks" style="margin-right:1em;">
           	<a href="{{action('AboutUsController@index')}}">
           	<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
           	<span id="navSuggMobile" class="navLink">About Us</span>
