@@ -1,3 +1,7 @@
+$(document).on("load",function(){
+	
+});
+
 
 $(document).ready(function(){
 
