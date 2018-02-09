@@ -8,7 +8,7 @@
 
 @section('divHead')
 
-<span>Edit Raffle #{!! $raffle->id !!} </span>
+<h1>Edit Raffle #{!! $raffle->id !!} </h1>
 
 @stop
 
@@ -103,7 +103,7 @@
 			</div>
 
         <br>
-			<button class="btn btn-success cleargreenBtn">Submit</button>
+			<button class="btn btn-success cleargreenBtn">SAVE CHANGES</button>
 		</form>
 		<br>
 		@if((\App\Models\RaffleEntry::filterEntrants($raffle->id)))

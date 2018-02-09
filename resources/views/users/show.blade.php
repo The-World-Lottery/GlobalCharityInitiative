@@ -9,13 +9,13 @@
 
 @section('content')
 
-	@if(Auth::id() == $user->id || Auth::user()->isAdmin)
+	@if(Auth::user()->isAdmin || Auth::id() == $user->id )
 	<main class="container" style="max-width:100%;display:flex;justify-content: center;">
 		<div class="row">	
 			<div class="col-sm-12 text-center">
-				<a style="margin-right:1em;" href="{{action('Auth\AuthController@getLogout')}}"><button class="btn btn-success cleargreenBtn">Logout</button></a>
+				<a style="margin-right:1em;" href="{{action('Auth\AuthController@getLogout')}}"><button class="btn btn-success cleargreenBtn">LOG OUT</button></a>
 				@if(Auth::id() == $user->id || Auth::user()->is_admin) 
-					<a href="{{action('UsersController@edit', $user->id)}}"><button class="btn btn-warning">Edit</button></a>
+					<a href="{{action('UsersController@edit', $user->id)}}"><button class="btn btn-warning">EDIT</button></a>
 				@endif
 			</div>
 			<div class="col-sm-12 col" style="background-color:rgba(0,0,0,.4);padding:1em 0 1em 0;margin-top: 1.5em;border-radius: 2em;">

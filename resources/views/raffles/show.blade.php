@@ -47,7 +47,7 @@
 						</div>
 					@endif
 					@if (Auth::check() && Auth::user()->is_admin)
-					<a href="{{ action('RafflesController@edit', $raffle->id) }}"><div  class="btn btn-warning">EDIT</div></a>
+					<a href="{{ action('RafflesController@edit', $raffle->id) }}"><divs class="btn btn-warning">EDIT</div></a>
 					@endif
 				</div>
 			</div>

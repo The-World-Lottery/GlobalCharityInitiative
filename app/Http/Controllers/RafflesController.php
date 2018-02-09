@@ -178,9 +178,9 @@ class RafflesController extends Controller
                 abort(404);
             }
             $data['raffle'] = $raffle;
-            return view('Raffles.edit',$data);
+            return view('raffles.edit',$data);
         }
-            return \Redirect::action('LotteriesController@index');
+            return \Redirect::action('RafflesController@index');
         
     }
 

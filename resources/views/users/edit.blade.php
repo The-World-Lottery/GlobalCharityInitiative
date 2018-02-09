@@ -143,7 +143,7 @@
 
 			<br>
 
-			<button class="btn cleargreenBtn btn-success">Save Changes</button>
+			<button class="btn cleargreenBtn btn-success">SAVE CHANGES</button>
 		</form>
 		<br>
 
