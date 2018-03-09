@@ -37,11 +37,11 @@ class WorldLottoCheck    extends Command
      */
     public function handle()
     {
-        $now = date('Y-m-d H:i:s');
-        $worldLottos = \App\Models\TheWorldLottery::TheWorldLotteryFunction($now);
-        if(isset($worldLottos)
-        {
-            \App\Models\TheWorldLottery::TheWorldLotteryWin($worldLottos);
-        }                 
+        // $now = date('Y-m-d H:i:s');
+        // $worldLottos = \App\Models\TheWorldLottery::TheWorldLotteryFunction($now);
+        // if(isset($worldLottos)
+        // {
+        //     \App\Models\TheWorldLottery::TheWorldLotteryWin($worldLottos);
+        // }                 
     }
 }

@@ -156,6 +156,7 @@ class TheWorldLotterysController extends Controller
     public function selectNumbers()
     {
         $theWorldLottery = TheWorldLottery::orderBy('id','desc')->limit(1)->get()[0];
+        // var_dump($theWorldLottery);
         return view('theworldlottery.select')->with(array('theWorldLottery' => $theWorldLottery));
     }
 

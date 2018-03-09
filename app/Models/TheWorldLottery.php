@@ -13,19 +13,13 @@ class TheWorldLottery extends Model
 		return $this->belongsTo('App\User','user_id');
    	}
 
-   	public static function TheWorldLotteryFunction($now){
-   		//Find expired World lottos
-      // var_dump(TheWorldLottery::orderBy('id','desc')->limit(1)->get()[0]['id']);
-      // var_dump(TheWorldLottery::where('end_date', '<', $now)->where('complete',0)->get());
-   		return TheWorldLottery::orderBy('id','desc')->limit(1)->get()[0]['id'];
-   	}
 
    	public static function TheWorldLotteryWin($id)
     {
    		//change status to complete,
    		TheWorldLottery::where('id', $id)->update(['complete' => true]);
 
-      $biglot = TheWorldLottery::where('id',$id)->value('current_value');
+      $biglot = \App\Models\TheWorldLottery::where('id',$id)->value('current_value');
       $winners = \App\Models\TheWorldLotteryEntry::findWinners($id);
       // var_dump($winners);
       
@@ -53,30 +47,32 @@ class TheWorldLottery extends Model
         $theWorldLottery->end_date = $date->format('Y-m-d H:i:s');
 
         $theWorldLottery->user_id = 1;
-        // $theWorldLottery->winner_id = $winners[0]['id'];
+        $theWorldLottery->winner_id = $winners[0]['id'];
         // $theWorldLottery->winner_id = 2;
         $theWorldLottery->save();
 	   		TheWorldLottery::where('id', $id)->update(['winner_id' => $winners[0]['id']]);
 
    		} else {
+      
 
-        // var_dump("Hello?");
-        $theWorldLottery = new \App\Models\TheWorldLottery();
-        $theWorldLottery->title = 'TheWorldCharityDrawing' . ($id + 1);
-        $theWorldLottery->user_id = 1;
-        $theWorldLottery->init_value = $biglot;
-        $theWorldLottery->current_value = $biglot;
-        // var_dump($biglot);
+          // var_dump("Hello?");
+          $theWorldLottery = new \App\Models\TheWorldLottery();
+          $theWorldLottery->title = 'TheWorldCharityDrawing' . ($id + 1);
+          $theWorldLottery->user_id = 1;
+          $theWorldLottery->init_value = $biglot;
+          $theWorldLottery->current_value = $biglot;
+          // // var_dump($biglot);
+          $date = new \DateTime(date('Y-m-d H:i:s'));
+          $date->add(new \DateInterval('P28D'));
+          $theWorldLottery->end_date = $date->format('Y-m-d H:i:s');
+          $theWorldLottery->save();
 
-        $date = new \DateTime(date('Y-m-d H:i:s'));
-        $date->add(new \DateInterval('P28D'));
-        $theWorldLottery->end_date = $date->format('Y-m-d H:i:s');
+        }
 
-        $theWorldLottery->complete = 0;
-        $theWorldLottery->winner_id = null;
-        $theWorldLottery->save();
 
-   		}
+
+
+   		
 
    		 // \Mail::raw("Congrats! You've won the World Lottery!", function($message){
        //  $message->subject('Please return to the site and Login to claim you prize!');

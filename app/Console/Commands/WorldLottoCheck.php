@@ -37,8 +37,9 @@ class WorldLottoCheck    extends Command
      */
     public function handle()
     {
-        $now = date('Y-m-d H:i:s');
-        $id = \App\Models\TheWorldLottery::TheWorldLotteryFunction($now);
-        \App\Models\TheWorldLottery::TheWorldLotteryWin($id);              
+        if(\App\Models\TheWorldLottery::orderBy('id','desc')->limit(1)->get()[0]['end_date'] <= date('Y-m-d H:i:s')){
+            $id = \App\Models\TheWorldLottery::orderBy('id','desc')->limit(1)->get()[0]['id'];
+            \App\Models\TheWorldLottery::TheWorldLotteryWin($id);              
+        }
     }
 }
