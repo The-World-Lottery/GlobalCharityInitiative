@@ -12,15 +12,19 @@
 <div style="font-size:50%;margin-bottom: 1em;">$5 USD per entry</div>
 </h1>
 
-{{ var_dump(\App\Models\TheWorldLottery::orderBy('id','desc')->limit(1)->get()[0]['end_date'] <= date('Y-m-d H:i:s'))}}
 
 @stop
 
 @section('content')
 	<div class="container text-center">
-		<h4 id="jackpot" style="color:lightgreen;">{{-- <strong >Jackpot - </strong> --}}{{-- ${{number_format($theWorldLottery->current_value,0,".",",")}} --}}{{$theWorldLottery->title}}</h4>		
+		<h4 id="jackpot" style="color:lightgreen;">
+			${{number_format($theWorldLottery->current_value,0,".",",")}}</h4>		
 		<h4 style="color:#00ffc4;">{{-- Drawing takes place:<br> --}}
-		{{ $theWorldLottery->end_date->diffForHumans() }}</h4>
+		@if(\App\Models\TheWorldLottery::orderBy('id','desc')->limit(1)->get()[0]['end_date'] <= date('Y-m-d H:i:s'))
+			<h1>Drawing in Progress</h1>
+		@else
+				{{ $theWorldLottery->end_date->diffForHumans() }}</h4>
+		@endif
 		@if (session()->has('successMessage'))
 	        <div class="alert alert-success text-center">{{ session('successMessage') }}</div>
 	    @endif
