@@ -2,24 +2,21 @@
 
 @section('title')
 
-<title>All Raffles</title>
+<title>Donations</title>
 
 @stop
 
 @section('divHead')
 
-	<h2 id="hoverTrigger"><strong>All Raffles</strong>
-	<div style="font-size:50%;margin-bottom: 1em;">$5 USD per entry</div>
-	</h2>
-	<p id="hoverSumm" hidden class="suggBox">
-	Raffles are created by a company who wishes to advertise through us by donating a product or service they provide. Our hope is that we will become large enough for celebrities to donate "A day with a fan" or something of the like. When the date/time of each Raffle is reached, one user will be randomly selected from the pool of entrys. This ensures there will always be a winner. Each ticket you have to the lottery increases your chances of winning. Good Luck!
-	</p>
+	{{-- <h2 id="hoverTrigger"> --}}
+	{{-- <div style="font-size:50%;margin-bottom: 1em;">$5 USD per entry</div> --}}
+	{{-- </h2> --}}
 
 @stop
 
 @section('content')
 
-<div class="container">
+<div class="container-fluid">
 	<div style="display:flex;justify-content:center; ">
 		{!! $raffles->appends(Request::except('page'))->render() !!}
 	</div>
@@ -30,9 +27,9 @@
         <div class="alert alert-warning text-center">{{ session('errorMessage') }}</div>
     @endif
 
-	<div class="row">
+	<div class="row" style="margin-top: 2em;">
 		@foreach($raffles as $raffle)
-			<div class="col-sm-6 col-md-4 text-center">
+			<div class="col-sm-6 col-md-4 col-lg-3 text-center">
 				<div id="raffleHolder">
 					<div class="raffleCont" style='background-image:url("{{$raffle->img}}");'>
 						<img src="{{$raffle->img}}" style="height:0;width:0;" alt="{{$raffle->product}}">
@@ -45,7 +42,7 @@
 						@if (\Auth::check())
 							<div style="margin-bottom:1em;">
 						  	<label>
-						  		HOW MANY TICKETS?
+						  		HOW MANY TIMES?
 							  	<input class="form-control text-center" id="amount{{ $raffle->id }}" type="text" name="amount" value="1">
 						  	</label><br>
 							  <button type="button" id="submit{{ $raffle->id }}" class="aSubmitButton cleargreenBtn btn-success btn">DONATE</button>
@@ -75,7 +72,7 @@
 	  	class="stripe-button"
 		data-key="pk_test_9QXLVB6tbq67JmuGwWGco2uX"
 		data-amount="500"
-		data-name="Raffle"
+		data-name="Global Charity"
 		data-description="Entry"
 		data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
 		data-locale="auto"

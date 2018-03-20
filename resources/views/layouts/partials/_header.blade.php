@@ -28,7 +28,7 @@
           <li class="headLinks">
           	<a href="{{action('RafflesController@index')}}">
           	<span class="glyphicon glyphicon-gift" aria-hidden="true"></span>
-          	<span class="navLink">Raffles</span></a>
+          	<span class="navLink">Donations</span></a>
           </li>
 	      <li id="navSpecialHoverLink" class="headLinks">
           	<a  href="{{action('TheWorldLotterysController@selectNumbers')}}">
