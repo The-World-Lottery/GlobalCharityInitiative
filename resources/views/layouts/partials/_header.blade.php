@@ -2,17 +2,17 @@
   <nav id="menu" style="" class="navbar navbar-fixed-top">
  
       <div class="navbar-header">
-			<span id="logoHolder" style='margin-left:.5em;margin-right:.5em;float:left;'>
+			{{-- <span id="logoHolder" style='margin-left:.5em;margin-right:.5em;float:left;'>
 				<img src="\images\logo2.png" width="55" height="60" alt="Logo Thing main logo">
-			</span>
+			</span> --}}
       		@if (Auth::check())
 					{{-- <img src='{{Auth::user()->image}}' id="headImg"> --}}
-				<a class="navbar-brand user navLink" href="{{action('UsersController@show' , Auth::id())}}" >
+				<a style="border-radius:0 0 2px 2px" class="navbar-brand user navLink" href="{{action('UsersController@show' , Auth::id())}}" >
 					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
 					{{Auth::user()->name}}
 				</a>
 			@else
-				<a class="navbar-brand user navLink" href="{{action('Auth\AuthController@getLogin')}}"><span class="navLink">Login / Register</span></a>	
+				<a style="border-radius:0 0 2px 2px" class="navbar-brand user navLink" href="{{action('Auth\AuthController@getLogin')}}"><span class="navLink">Login / Register</span></a>	
 			@endif
        
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="border:0px;">
@@ -26,12 +26,12 @@
       <div class="collapse navbar-collapse justify-content-end" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
           <li class="headLinks">
-          	<a href="{{action('RafflesController@index')}}">
+          	<a style="border-radius:0 0 2px 2px" href="{{action('RafflesController@index')}}">
           	<span class="glyphicon glyphicon-gift" aria-hidden="true"></span>
           	<span class="navLink">Donations</span></a>
           </li>
 	      <li id="navSpecialHoverLink" class="headLinks">
-          	<a  href="{{action('TheWorldLotterysController@selectNumbers')}}">
+          	<a style="border-radius:0 0 2px 2px" href="{{action('TheWorldLotterysController@selectNumbers')}}">
 	          	<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
 	          	<span id="navSpecialHover" class="navLink">
 	          		<span id="drawinghover1"> Global Drawing</span>
@@ -48,8 +48,8 @@
           	<a href="{{action('TheWorldLotterysController@index')}}"><span class="navLink">The World Lottery</span></a>
           </li> --}}
         	@if(Auth::check() && Auth::user()->is_admin)
-        	<li class="dropdown headLinks">
-	          <a href="#" class="dropdown-toggle navLink" style="color:white"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="adminBtn">Admin<span class="caret"></span></a>
+        	<li   class="dropdown headLinks">
+	          <a  style="border-radius:0 0 2px 2px" href="#" class="dropdown-toggle navLink" style="color:white"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="adminBtn">Admin<span class="caret"></span></a>
 	          <ul class="dropdown-menu" id="ddm">
 	          	{{-- <li>
 	    			<a href="{{action('LotteriesController@adminIndex')}}">
@@ -57,18 +57,18 @@
 					</a>
 				</li> --}}
 				<li>
-					<a href="{{action('RafflesController@adminIndex')}}">
-					<span class="navLink">Manage Raffles</span>
+					<a  href="{{action('RafflesController@adminIndex')}}">
+					<span  class="navLink">Manage Raffles</span>
 					</a>
 				</li>
 				<li>
-					<a href="{{action('UsersController@index')}}">
-					<span class="navLink">Manage Users</span>
+					<a  href="{{action('UsersController@index')}}">
+					<span  class="navLink">Manage Users</span>
 					</a>
 				</li>
 				<li>
-					<a href="{{action('SuggestionsController@adminIndex')}}">
-					<span class="navLink">Manage Suggestions</span>
+					<a  href="{{action('SuggestionsController@adminIndex')}}">
+					<span  class="navLink">Manage Suggestions</span>
 					</a>
 				</li>
 	            {{-- <li><a href="#">Action</a></li>
@@ -81,13 +81,13 @@
 	          </ul>
 	        </li>
 	        @endif
-          <li class="headLinks">
-          	<a href="{{action('SuggestionsController@index')}}">
+          <li   class="headLinks">
+          	<a style="border-radius:0 0 2px 2px" style="border-radius:0 0 2px 2px" href="{{action('SuggestionsController@index')}}">
           	<span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
           	<span class="navLink">Suggestions</span></a>
           </li>
-          <li class="headLinks" style="margin-right:1em;">
-          	<a href="{{action('AboutUsController@index')}}">
+          <li   class="headLinks" style="margin-right:1em;">
+          	<a style="border-radius:0 0 2px 2px" style="border-radius:0 0 2px 2px" href="{{action('AboutUsController@index')}}">
           	<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
           	<span id="navSuggMobile" class="navLink">About Us</span>
           	</a>

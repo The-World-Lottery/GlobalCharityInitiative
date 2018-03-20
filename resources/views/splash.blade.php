@@ -90,8 +90,12 @@
 						@include('layouts.partials.carousel')
 					</div> --}}
 				<div class="col col-xs-12 col-sm-8 col-sm-offset-2" style="background-color: rgba(0,0,0,.8);">
-					<div class="par3">
-						We a small group of individuals who saw a need to improve the efficiency of charitable fund raising of every sort. All earnings are allocated to charitable projects around the globe. The groups we work with will be decided by the world through our social media outlets and in our own suggestion box. 
+					<div class="par3 text-center">
+						<p>We a small group of individuals who saw a need to improve the efficiency of charitable fund raising of every sort. All earnings are allocated to charitable projects around the globe.</p>
+						<br>
+						<p>A GoFundMe account will be up an running soon. All donations here will go to staffing and operational costs.</p> 
+						<br>
+						<p>The groups we work with will be decided by the world through our social media outlets and in our own suggestion box.</p>
 					</div>
 				</div>
 			</div>
@@ -99,7 +103,7 @@
 			<div id="splash1" class="row infoRows gamePositioning text-center">	
 				<div class="col col-xs-12 col-sm-7" id="gameHold">
 					<div class="splashInfo">
-						<h2>Raffles</h2>
+						<h2>Donations</h2>
 						<blockquote>When a company wishes to advertise through us they may donate one of their products or services to be raffled off. Celebrities may donate a day of their time to be raffled off for fans. There will always be a winner of each raffle as long as even one ticket is purchased. A small portion of each ticket price will increase the value of the currently running Global Charity drawing. The proceeds will be donated to selected charities.</blockquote>		
 					</div>
 					<div class="bottomPos">
@@ -109,7 +113,7 @@
 				<div class="col col-xs-12 col-sm-5" id="gameHold">
 					<div class="splashInfo">
 						<h2>Upcoming Drawing Value</h2>
-						<blockquote>A monthly drawing where players select 5 numbers 1-100 and a power number. Our hope is that this will eventualy grow to a huge number and we can provide a world record breaking donation. As far as we can tell, that record is held by Warren Buffet. For now...</blockquote>
+						<blockquote>A monthly drawing where players select 5 numbers 1-100 and a key number. Our hope is that this will eventualy grow to a huge number and we can provide a world record breaking donation. As far as we can tell, that record is held by Warren Buffet. For now...</blockquote>
 					</div>
 					<div class="bottomPos">
 						<p style="font-size:2.7em;padding:1em .3em 1em .3em;background-color:rgba(0,0,0,.5);border-radius: 1em;margin-top:.5em;">The <span style="color:lightgreen;">Global Charity </span>Drawing <b><span style="color:lightgreen;">${{number_format((\App\Models\TheWorldLottery::orderBy('id','desc')->first()->get()[0]['current_value']),0,".",",")}}</span></b>
@@ -130,7 +134,7 @@
 			<div id="splash3" class="row infoRows parallax2">
 				<div class="col col-xs-12 col-sm-8 col-sm-offset-2" style="background-color: rgba(0,0,0,.8);">
 					<div class="par3">
-						We've created a green, worldwide charity hub. The first one-stop-shop to learn about and help out multiple charitable projects. Maybe even have a little fun doing it. There's no need for a large factory because our tickets aren't made of paper, they're virtual and of no threat to forests. You don't even have to drive your personal vehicle to go buy a ticket. That little rectangle you carry around everywhere and can't stop looking at is the only device you need to participate!
+						We've created a green, worldwide charity hub. A one-stop-shop to learn about and help out multiple charitable projects. Maybe even have a little fun doing it. There's no need for a large factory because our tickets aren't made of paper, they're virtual and of no threat to forests. You don't even have to drive your personal vehicle to play. That little rectangle you carry around everywhere and can't stop looking at is the only device you need to participate!
 					</div>
 				</div>
 			</div>
@@ -140,7 +144,7 @@
 				<div class="col col-xs-12 col-sm-4">
 					<div class="splashInfo">
 						<h2>The Idea</h2>
-						<blockquote>All raffle ticket purchases increase the value of the current world charity drawing and The GCI Foundation Fund. Its is from the foundation that we will allocate funds to selected charities and projects around the globe.</blockquote>
+						<blockquote>All ticket purchases increase the value of the current world charity drawing and The GCI Foundation Fund. Its is from the foundation that we will allocate funds to selected charities and projects around the globe.</blockquote>
 						
 					</div>
 				</div>
