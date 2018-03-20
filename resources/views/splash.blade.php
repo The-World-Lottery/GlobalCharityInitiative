@@ -59,6 +59,10 @@
 						The<span style="color:white;"> Global Charity</span> Initiative
 					</h1>
 					<br>
+					<h3 >
+						NOW IN <span style="color:#0af794;">ALPHA</span> TESTING STAGES! ALL DONATIONS AT THIS TIME ARE FILLER DATA AND THE PAYMENT SYSTEM IS NOT OPERATIONAL, IT IS IN <span style="color:#0af794;">TEST MODE</span> AND <span style="color:#0af794;">WILL NOT CHARGE</span> YOU FOR AND TRANSACTIONS YOU SIMULATE. THAT IS TO SAY, WE'RE NOT IN CONTACT WITH <span style="color:#0af794;">SAMUEL L. JACKSON....</span> YET....
+					</h3>
+					<br>
 					<div id="splashPar" >
 						ALL proceeds go to the <span style="color:#0af794;">charities</span> and <span style="color:#0af794;">human interest projects</span> around the world.
 					</div>
@@ -210,7 +214,7 @@
 
 	$( document ).ready(function() {
 
-		alert("At this moment, This website is for demonstration of coding capability only. The payment system (Stripe) is not live and we do not have any of the items for raffles or lotteries running. However, we do hope to have 2 raffles for time with celebrities running soon. Non-profits are legally allowed to run 2 per year so were going to try and start there. Any celebrity seeing this that is interested in helping this cause please contact me at ejp8611@gmail.com");
+		alert("NOW IN ALPHA TESTING STAGES! Any charity, celebrity, or comapny seeing this that is interested in helping this cause please contact me at ejp8611@gmail.com");
 	
 		$(function() {
 		    $('body').removeClass('fade-out');
@@ -253,34 +257,34 @@
 	    });
 
 	    //random quote
-		function randomQuote() {
-	      $.ajax({
-	          url: "https://api.forismatic.com/api/1.0/?",
-	          dataType: "jsonp",
-	          data: "method=getQuote&format=jsonp&lang=en&jsonp=?",
-	          success: function( response ) {
-	            $("#random_quote").html("<p id='random_quote' class='lead text-center'>" +
-	              response.quoteText + "<br/>&dash; " + response.quoteAuthor + " &dash;</p>");
-	          }
-	      });
-	    }
+		// function randomQuote() {
+	 //      $.ajax({
+	 //          url: "https://api.forismatic.com/api/1.0/?",
+	 //          dataType: "jsonp",
+	 //          data: "method=getQuote&format=jsonp&lang=en&jsonp=?",
+	 //          success: function( response ) {
+	 //            $("#random_quote").html("<p id='random_quote' class='lead text-center'>" +
+	 //              response.quoteText + "<br/>&dash; " + response.quoteAuthor + " &dash;</p>");
+	 //          }
+	 //      });
+	 //    }
 
-	    $(function() {
-	      randomQuote();
-	    });
+	 //    $(function() {
+	 //      randomQuote();
+	 //    });
 
 	    //setting interval of ajax quote call
-	    var t = 0;
-	    setInterval(function(){
-	        if (t % 15 == 14){
-	            $('.quote').fadeOut();
-	            randomQuote();
-	            setTimeout(function(){
-	                $('.quote').fadeIn();
-	            },700);
-	        };  
-	        t++;
-	    },1000);
+	    // var t = 0;
+	    // setInterval(function(){
+	    //     if (t % 15 == 14){
+	    //         $('.quote').fadeOut();
+	    //         randomQuote();
+	    //         setTimeout(function(){
+	    //             $('.quote').fadeIn();
+	    //         },700);
+	    //     };  
+	    //     t++;
+	    // },1000);
 
 	});
 			

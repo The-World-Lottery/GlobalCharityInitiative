@@ -532,7 +532,7 @@ input {
 	display: flex;
 	justify-content: center;
 	position:fixed;
-	bottom:15vh;
+	bottom:3vh;
 	width:100%;	
 }
 
@@ -686,7 +686,7 @@ blockquote {
 	}
 
 	#splashHeader {
-		padding-top: 27vh;
+		padding-top: 17vh;
 		width:100%;
 		height:100vh;
 	}
