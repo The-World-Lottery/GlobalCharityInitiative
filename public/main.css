@@ -435,7 +435,7 @@ label {
 
 .creatorPics {
 	border-radius: 2em;
-	width:70%;
+	width:100%;
 	height:auto;
 }
 
@@ -612,9 +612,9 @@ blockquote {
 	display:none !important;
 }
 
-#gameScroll {
+/*#gameScroll {
 	padding-top:1.5em;
-}
+}*/
 
 .navbar {
 	padding-left:0px;
@@ -717,7 +717,7 @@ blockquote {
 
 	#gameScroll {
 		overflow-y:scroll;
-		height:94vh;
+		height:93vh;
 	}
 
 	#main {

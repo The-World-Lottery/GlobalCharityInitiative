@@ -17,7 +17,7 @@
 	<div style="height:100%;">
 	<img id="backgroundPic" class="center-block" style="opacity:.41;height:100%;" src="/images/earthAtNight.jpg">
 		@include('layouts.partials._header')	
-		<div class="row" style="padding-top: 8vh;">
+		<div class="row" style="padding-top: 7vh;">
 			<div id="gameScroll" style="font-size:1.2em;" class="col col-sm-12">
 				<div class="text-center">
 					@yield('divHead')
