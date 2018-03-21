@@ -2,7 +2,7 @@
 
 @section('title')
 
-<title>Single Raffle</title>
+<title>{{$raffle->title}}</title>
 
 @stop
 

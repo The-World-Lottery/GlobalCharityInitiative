@@ -68,7 +68,7 @@ Route::resource('users', 'UsersController');
 
 // Route::resource('lotteries', 'LotteriesController');
 
-Route::resource('raffles', 'RafflesController');
+Route::resource('donations', 'RafflesController');
 
 Route::resource('aboutus', 'AboutUsController');
 
