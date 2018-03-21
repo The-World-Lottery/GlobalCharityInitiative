@@ -172,7 +172,7 @@ a.navLink:hover {
 }
 
 li a:hover {
-	background-color:#247b8e !important;
+	background-color:rgba(36,123,142,.5) !important;
 }
 
 #ddm {

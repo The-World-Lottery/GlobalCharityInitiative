@@ -14,18 +14,14 @@
 @section('content')
 <div class="container">
 	<div style="display:flex;justify-content: space-around;text-align:center;">
-		<a {{-- target="_blank" --}} href="https://twitter.com/Emmett_J_Peters?lang=en">Twitter<br>
+		<a target="_blank" href="https://twitter.com/Emmett_J_Peters?lang=en">Twitter<br>
 			<img src="/images/Blue Icons/Twitter.svg" alt="global charity twitter" class="socialIcon">
 		</a>
-		<a {{-- target="_blank" --}} href="">Instagram<br>
-			<img src="/images/Blue Icons/Instagram.svg" alt="global charity instagram" class="socialIcon">
-		</a>
+		
 		<a target="_blank" href="https://github.com/The-World-Lottery/TheWorldLottery">GitHub<br>
 			<img src="/images/Blue Icons/GitHub.svg" alt="global charity GitHub" class="socialIcon">
 		</a>
-		{{-- <a href="">Facebook<br>
-			<img src="/images/Blue Icons/Facebook.svg" alt="" class="socialIcon">
-		</a> --}}
+		
 	</div>
 	<br>
 	<ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
@@ -42,17 +38,6 @@
 			    Ticket prices to these drawings will be split thusly.
 			    </p>
 			    <div class="row">
-				    {{-- <div class="col col-md-4 col-sm-12">
-				    	<h2 class="infoHeaders">Lottery Ticket Price</h2>
-				    	<blockquote>
-				    	
-				    		<div>40% goes to<br>the current lottery's pool.</div>
-				    		<div>30% goes to<br>The World Lottery Foundation.</div>
-				    		<div>25% goes to<br>The World Lottery's Pool.</div>
-				    		<div>5% goes to<br>the payment system.</div>
-				    	
-				    	</blockquote>
-				    </div> --}}
 				    <div class="col col-md-6 col-sm-12">
 				    	<h2 class="infoHeaders">Raffle Ticket Price</h2>
 				    	<blockquote>
@@ -78,27 +63,12 @@
 						<h1 class="infoHeaders">Our Past Donations!</h1>
 						<blockquote>
 						Samuel L. Jackson<br>
-						{{-- <a target="_blank" href="http://www.theperfecttitle.com/money/money.shtml"><h5>Lottery Quotes</h5></a>
-						<a target="_blank" href="https://www.cryptonator.com/?utm_referrer=http%3a%2f%2ftheworldlottery.dev%2fcurrencyconversion"><h5>Currency Conversion Widgets</h5></a>
-						<a target="_blank" href="https://www.cryptocompare.com/api/#-api-data-price-"><h5>Currency conversion API Call for point of sale transactions</h5></a>
-						<a target="_blank" href="https://www.filestack.com"><h5>Profile and Raffle Image Hosting</h5></a>
-						<a target="_blank" href="http://hilios.github.io/jQuery.countdown/"><h5>Games timer Countdown</h5></a> --}}
 						</blockquote>
 					</div>
 					<div class="col col-sm-5 col-xs-12">
 						<h1 class="infoHeaders">Charitable Partners</h1>
 						<blockquote>
 						Hilarity of charity<br>
-						{{-- <h5>Laravel framework for PHP</h5>
-						<h5>Object Oriented</h5>
-						<h5>Cron Jobs for game timeouts</h5>
-						<h5>Jquery library for Javascript</h5>
-						<h5>Bootstrap and custom media breakpoints<br>for mobile responsiveness</h5>
-						<h5>Role based authentication</h5>
-						<h5>MVC (Model View Controller)</h5>
-						<h5>Events/task scheduling</h5>
-						<h5>14 related database tables</h5>
-						<h5>140+ Merges, 450+ commits - Github Version control</h5> --}}	
 						</blockquote>
 					</div>
 				</div>
