@@ -60,6 +60,8 @@ Route::get('/TheWorldLottery', 'TheWorldLotterysController@storeNumbers');
 Route::get('/raffleTicket/{id}','RafflesController@addUserToEntries');
 Route::get('/worldLotteryTicket/{id}','TheWorldLotterysController@addUserToEntries');
 
+Route::get('/winners','RafflesController@winners');
+
 Route::resource('currencyconversion','CurrencyConversionController');
 
 Route::resource('suggestions', 'SuggestionsController');

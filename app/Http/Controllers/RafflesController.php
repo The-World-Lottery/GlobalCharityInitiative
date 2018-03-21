@@ -34,6 +34,14 @@ class RafflesController extends Controller
         return view('raffles.index',$data);
     }
 
+    public function winners()
+    { 
+        $winners = Raffle::where('complete','1')->get();
+        
+        return view('winners.winners')->with(array('winners' => $winners));
+    }
+     
+
     public function adminIndex()
     {
         if(\Auth::user()->is_admin){
