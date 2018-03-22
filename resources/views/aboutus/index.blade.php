@@ -13,21 +13,12 @@
 
 @section('content')
 <div class="container">
-	<div style="display:flex;justify-content: space-around;text-align:center;">
-		<a target="_blank" href="https://twitter.com/Emmett_J_Peters?lang=en">Twitter<br>
-			<img src="/images/Blue Icons/Twitter.svg" alt="global charity twitter" class="socialIcon">
-		</a>
-		
-		<a target="_blank" href="https://github.com/The-World-Lottery/TheWorldLottery">GitHub<br>
-			<img src="/images/Blue Icons/GitHub.svg" alt="global charity GitHub" class="socialIcon">
-		</a>
-		
-	</div>
+	<br>
 	<br>
 	<ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
 	  <li class="active"><a  id="zeroO"  data-toggle="tab" href="#home">Our Mission</a></li>
-	  <li><a id="zeroO" data-toggle="tab" href="#menu1">About GCI</a></li>
-	  <li><a id="zeroO" data-toggle="tab" href="#menu2">The Creators</a></li>
+	  <li><a id="zeroO" data-toggle="tab" href="#menu1">Previous Winners</a></li>
+	  <li><a id="zeroO" data-toggle="tab" href="#menu2">The Creator</a></li>
 	</ul>
 	<div style="padding:1em;">
 		<div class="tab-content">
@@ -55,22 +46,37 @@
 				    	</blockquote>
 				    </div>
 			    </div>
+			    <br>
+			    <br>
+			    <div style="display:flex;justify-content: space-around;text-align:center;">
+					<a target="_blank" href="https://twitter.com/Emmett_J_Peters?lang=en">Twitter<br>
+						<img src="/images/Blue Icons/Twitter.svg" alt="global charity twitter" class="socialIcon">
+					</a>
+					
+					<a target="_blank" href="https://github.com/The-World-Lottery/TheWorldLottery">GitHub<br>
+						<img src="/images/Blue Icons/GitHub.svg" alt="global charity GitHub" class="socialIcon">
+					</a>
+					
+				</div>
+				<br>
 			</div>
 
 			<div id="menu1" class="tab-pane fade">
 				<div class="row">
-					<div class="col col-sm-5 col-sm-offset-1 col-xs-12">
-						<h1 class="infoHeaders">Our Past Donations!</h1>
-						<blockquote>
-						Samuel L. Jackson<br>
-						</blockquote>
-					</div>
-					<div class="col col-sm-5 col-xs-12">
-						<h1 class="infoHeaders">Charitable Partners</h1>
-						<blockquote>
-						Hilarity of charity<br>
-						</blockquote>
-					</div>
+					
+					 @foreach(\App\Models\Raffle::where('complete','1')->get() as $winner)
+						<div class="col col-sm-6 col-xs-12">
+						<h5><span style="color:#0af794;">{{ \App\User::select('username')->where('id',$winner->winner_id)->get()[0]['username'] }}</span>
+
+						</h5> 
+
+						won {{$winner->product}}
+
+						<span style="color:#0af794;">{{$winner->end_date->diffForHumans()}}</span>
+						<br>
+						<br>
+						</div>
+					@endforeach
 				</div>
 			</div>
 			<div id="menu2" class="tab-pane fade">
