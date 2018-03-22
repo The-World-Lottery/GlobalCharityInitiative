@@ -60,7 +60,7 @@
 					</h1>
 					<br>
 					<h3 >
-						NOW IN <span style="color:#0af794;">ALPHA</span> TESTING STAGES! ALL DONATIONS AT THIS TIME ARE FILLER DATA AND THE PAYMENT SYSTEM IS NOT OPERATIONAL, IT IS IN <span style="color:#0af794;">TEST MODE</span> AND <span style="color:#0af794;">WILL NOT CHARGE</span> YOU FOR AND TRANSACTIONS YOU SIMULATE. THAT IS TO SAY, WE'RE NOT IN CONTACT WITH <span style="color:#0af794;">SAMUEL L. JACKSON....</span> YET....
+						NOW IN <span style="color:#0af794;">ALPHA</span> TESTING STAGES! ALL DONATIONS AT THIS TIME ARE FILLER DATA AND THE PAYMENT SYSTEM IS NOT OPERATIONAL, IT IS IN <span style="color:#0af794;">TEST MODE</span> AND <span style="color:#0af794;">WILL NOT CHARGE</span> YOU FOR <u>ANY </u>TRANSACTIONS YOU SIMULATE. THAT IS TO SAY, WE'RE NOT IN CONTACT WITH <span style="color:#0af794;">SAMUEL L. JACKSON....</span> YET....
 					</h3>
 					<br>
 					<div id="splashPar" >
