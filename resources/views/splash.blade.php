@@ -210,11 +210,11 @@
 	<script type="text/javascript">
 
 	
-    $('#myModal').modal('show');
+    // $('#myModal').modal('show');
 
 	$( document ).ready(function() {
 
-		alert("NOW IN ALPHA TESTING STAGES! Any charity, celebrity, or comapny seeing this that is interested in helping this cause please contact me at ejp8611@gmail.com");
+		// alert("NOW IN ALPHA TESTING STAGES! Any charity, celebrity, or comapny seeing this that is interested in helping this cause please contact me at ejp8611@gmail.com");
 	
 		$(function() {
 		    $('body').removeClass('fade-out');
