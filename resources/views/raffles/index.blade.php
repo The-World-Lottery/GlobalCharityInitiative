@@ -43,7 +43,7 @@
 						</a>	
 					</div>
 					<div class="raffleInfo">
-						<h3 style="color:lightgreen;position:relative;bottom:0;">{{$raffle->end_date->diffForHumans()}}</h3>
+						<h3 style="position:relative;bottom:0;">{{$raffle->end_date->diffForHumans()}}</h3>
 						@if (\Auth::check())
 							<div style="margin-bottom:1em;">
 						  	<label>

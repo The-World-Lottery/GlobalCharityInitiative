@@ -567,7 +567,7 @@ input {
 }
 
 #splashHeader {
-	margin-top:0vh;
+	padding-top:2vh;
 }
 
 blockquote {
@@ -801,7 +801,7 @@ blockquote {
 	}
 
 	#splashTitle {
-		margin-top:1em;
+		margin-top:0em;
 	}
 
 	#twlButton {
