@@ -52,7 +52,7 @@
 	
 </head>
 	<body id="splashBod">
-		<main style="z-index:0;height:100vh;width:100%;position:fixed;">
+		<main style="z-index:0;height:110vh;width:100%;position:fixed;">
 			<div id="splashHeader" class="row text-center">
 				<div class="col col-xs-12"  style="padding:0;">
 					<h1 id="splashTitle" style="">
@@ -82,7 +82,7 @@
 				</div>
 			</div>
 		</main>
-		<div class="text-center" style="padding-top:100vh;width:100%;"></div>
+		<div class="text-center" style="padding-top:98vh;width:100%;"></div>
 		<section style="z-index:100;position:absolute;width:100%;">
 			<div id="splash4" class="row infoRows text-center">
 				<div class="col col-sm-12">
@@ -112,16 +112,16 @@
 			</div>
 			
 			<div id="splash1" class="row infoRows gamePositioning text-center">	
-				<div class="col col-xs-12 col-sm-7" id="gameHold">
+				<div class="col col-xs-12 col-sm-8" id="gameHold">
 					<div class="splashInfo">
 						<h2>Donations</h2>
-						<blockquote>When a company wishes to advertise through us they may donate one of their products or services to be raffled off. Celebrities may donate a day of their time to be raffled off for fans. There will always be a winner of each raffle as long as even one ticket is purchased. A small portion of each ticket price will increase the value of the currently running Global Charity drawing. The proceeds will be donated to selected charities.</blockquote>		
+						<blockquote>When a company wishes to advertise through us they may donate one of their products or services. We will create a drawing for the sponsored donation and all proceeds will go to charity. Celebrities may donate a day of their time", or something of the like, to for one or more lucky donors to win! There will always be a winner of each drawing as long as even one ticket is purchased. A small portion of each ticket price will increase the value of the currently running Global Charity drawing. The proceeds will be donated to selected charities.</blockquote>		
 					</div>
 					<div class="bottomPos">
 						@include('raffles.one')
 					</div>
 				</div>
-				<div class="col col-xs-12 col-sm-5" id="gameHold">
+				<div class="col col-xs-12 col-sm-4" id="gameHold">
 					<div class="splashInfo">
 						<h2>Upcoming Drawing Value</h2>
 						<blockquote>A monthly drawing where players select 5 numbers 1-100 and a key number. Our hope is that this will eventualy grow to a huge number and we can provide a world record breaking donation. As far as we can tell, that record is held by Warren Buffet. For now...</blockquote>
