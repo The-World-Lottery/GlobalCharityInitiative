@@ -28,7 +28,7 @@ Route::get('/',function(){
 // Stripe routes
 // Route::post('/lotteryCheckout/{id}/{count}','LotteriesController@chargeCard');
 Route::post('/raffleCheckout/{id}/{count}','RafflesController@chargeCard');
-Route::post('/twlCheckout','TheWorldLotterysController@storeNumbers');
+Route::post('/gcdCheckout','TheWorldLotterysController@storeNumbers');
 Route::get('/ticketFail','RafflesController@notLoggedIn');
 
 

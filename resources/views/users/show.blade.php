@@ -13,20 +13,21 @@
 	<main class="container" style="max-width:100%;display:flex;justify-content: center;">
 		<div class="row">	
 			<div class="col-sm-12 text-center">
+				<br>
 				<a style="margin-right:1em;" href="{{action('Auth\AuthController@getLogout')}}"><button class="btn btn-success cleargreenBtn">LOG OUT</button></a>
 				@if(Auth::id() == $user->id || Auth::user()->is_admin) 
 					<a href="{{action('UsersController@edit', $user->id)}}"><button class="btn btn-warning">EDIT</button></a>
 				@endif
 			</div>
 			<div class="col-sm-12 col" style="background-color:rgba(0,0,0,.4);padding:1em 0 1em 0;margin-top: 1.5em;border-radius: 2em;">
-				<div class="col-sm-4 col" style="display:flex;justify-content: center;">
+				{{-- <div class="col-sm-4 col" style="display:flex;justify-content: center;">
 				<div>
 					<img src='{{$user->image}}' id="profImg"><br><br>
-					{{-- <img src='{{substr($user->image,1,-1)}}' id="profImg"> --}}
+					<img src='{{substr($user->image,1,-1)}}' id="profImg">
 					<div>Imaginary Internet Points : <span class="greenTxt" style="font-size:150%;">{{ \App\Models\Vote::where('user_id',$user->id)->where('vote',1)->get()->count()}}</span></div>
 				</div>
-				</div>
-				<div class="col-sm-4 col">
+				</div> --}}
+				<div class="col-sm-5 col-sm-offset-1 col">
 					<blockquote style="margin-left:1em;">
 						<h2>
 							{{$user->name}}
@@ -36,17 +37,18 @@
 						<b><u><span class="greenTxt">Phone Number : </span></u></b><br> {{$user->phone_number}}<br>
 					</blockquote>
 				</div>
-				<div class="col-sm-4 col">
+				<div class="col-sm-5 col">
 					<blockquote style="margin-left : 1em;">
-						<h2>Your Stats</h2>
-						<b><u><span class="greenTxt">Raffle Entries : </span></u></b><br> {{\App\Models\RaffleEntry::where('user_id',$user->id)->count()}}<br>
-						<b><u><span class="greenTxt">Global Drawing Entries : </span></u></b><br> {{\App\Models\TheWorldLotteryEntry::where('user_id',$user->id)->count()}}<br>
+						<b><u><span class="greenTxt" style="">Imaginary Internet Points :</span></u><br>{{ \App\Models\Vote::where('user_id',$user->id)->where('vote',1)->get()->count()}}</span>
+						<br>
+						<b><u><span class="greenTxt">Donation Drawing Entries : </span></u><br>{{\App\Models\RaffleEntry::where('user_id',$user->id)->count()}}</b> <br>
+						<b><u><span class="greenTxt">Global Charity Drawing Entries : </span></u></b><br> {{\App\Models\TheWorldLotteryEntry::where('user_id',$user->id)->count()}}<br>
 						<b><u><span class="greenTxt">Suggestion Count : </span></u></b><br> {{\App\Models\Suggestion::where('user_id',$user->id)->count()}} <br>
 					</blockquote>
 				</div>
 			</div>
 			<div class="col col-sm-12">
-				<h1 style="padding-top:1.5em;text-align:center;color:lightgreen;">YOUR CURRENT TICKETS</h1>
+				<h1 style="padding-top:1em;text-align:center;color:lightgreen;">YOUR CURRENT TICKETS</h1>
 				<div  class="row">
 					{{-- <div class="col-xs-12 col-sm-4"> <h3 class="ticketHead">Lotteries</h3>
 						@foreach($user->lotteryEntries->unique('lottery_id') as $lotteryEntry)
@@ -59,7 +61,7 @@
 						@endforeach
 					</div> --}}
 					<div class="col-xs-12 col-sm-8">
-						<h3 class="ticketHead">Raffles</h3>
+						<h3 class="ticketHead">Donation Drawings</h3>
 						@foreach($user->raffleEntries->unique('raffles_id') as $raffleEntry)
 							@if(\App\Models\Raffle::where('id', $raffleEntry->raffle->id)->get()[0]->complete == 0)
 								<a href="{{action('RafflesController@show', $raffleEntry->raffle->id)}}">
@@ -70,7 +72,7 @@
 						@endforeach
 					</div>
 					<div class="col-xs-12 col-sm-4">
-						<h3 class="ticketHead">World Lottery</h3>
+						<h3 class="ticketHead">Global Charity Drawing</h3>
 						@foreach($user->worldLotteryEntries->unique('the_world_lottery_id') as $worldLotteryEntry)
 							@if(\App\Models\TheWorldLottery::orderBy('id','desc')->limit(1)->get()[0]->id == $worldLotteryEntry->theworldlottery->id)
 								<a href="{{action('TheWorldLotterysController@index')}}">{{$worldLotteryEntry->theworldlottery->title}}

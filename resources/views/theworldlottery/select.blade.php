@@ -7,9 +7,9 @@
 @stop
 
 @section('divHead')
-
+<br>
 <h1 id="hoverTrigger"><strong>Global Charity Drawing</strong>
-<div style="font-size:50%;margin-bottom: 1em;">$5 USD per entry</div>
+<div style="font-size:50%;margin-bottom: 0em;">Requires $5 donation to participate.</div>
 </h1>
 
 
@@ -35,7 +35,7 @@
 
 	<main class="container" style="max-width:100%;display:flex;justify-content: center;">
 		<div class="row" id="checkWrapper">
-			<form id="thisForm" method="POST" action="/twlCheckout">
+			<form id="thisForm" method="POST" action="/gcdCheckout">
 			<script
 			    src="https://checkout.stripe.com/checkout.js"
 			  	class="stripe-button"

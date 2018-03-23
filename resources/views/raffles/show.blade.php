@@ -17,34 +17,38 @@
 	<main class="row" style="text-align:center;">
 		<div class="col-xs-12 col-sm-12 col paddingMobile text-center" >
 			<h1 style="font-size: 250%;margin-bottom:.5em;">{{$raffle->title}}</h1>
-			<div class="countdown">
+			<div class="countdown col col-sm-6">
 				<h3>
 					The Drawing Ends: <br> {{ $raffle->end_date->diffForHumans() }}
 				</h3>
-				<img style="max-height:16em;border-radius:1em;box-shadow: 20px 20px 20px rgba(0,0,0,.6);" src={!! $raffle->img !!}>
+				<img style="max-height:20em;border-radius:1em;box-shadow: 20px 20px 20px rgba(0,0,0,.6);" src={!! $raffle->img !!}>
 			</div>
-			<div class="row" style="margin-top: 1.5em;">
-				<div class="col-sm-4 col">
+			<div class="col col-sm-6" style="margin-top: 1.5em;">
+				<div class="">
 					<h3>Description: </h3>
 					<p>{{$raffle->product}}</p>
 				</div>
-				<div class="col-sm-4 col">
-					<h3>Charity:</h3>
+				<div class="">
+					<h3>Charity Benefited:</h3>
 					<p>{{$raffle['content']}}</p>
 				</div>
-				<div class="col-sm-4 col">
+				<div class="">
 					@if (\Auth::check())
 						<div style="margin-bottom:1em;">
 					  	<label style='color:lightgreen'>
-					  		<h5>HOW MANY TICKETS?</h5>
+					  		<h5>HOW MANY ENTRIES?</h5>
 						  	<input class="form-control text-center" id="amount{{ $raffle['id'] }}" type="text" name="amount" value="1">
 					  	</label><br>
 						  <button type="button" id="submit{{ $raffle['id'] }}" class="aSubmitButton cleargreenBtn btn-success btn">DONATE</button>
 						</div>
 					@else
 						<div style="margin-bottom:1em;">
-						  <a  href="/ticketFail" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET(S)</a>
+						  <a  href="/ticketFail" class="aSubmitButton cleargreenBtn btn-success btn">DONATE</a>
+						  <div>
+						  	
+						  </div>
 						</div>
+
 					@endif
 					@if (Auth::check() && Auth::user()->is_admin)
 					<a href="{{ action('RafflesController@edit', $raffle->id) }}"><divs class="btn btn-warning">EDIT</div></a>

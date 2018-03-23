@@ -51,7 +51,7 @@
 			    </p>
 			    <div class="row">
 				    <div class="col col-md-6 col-sm-12">
-				    	<h2 class="infoHeaders">Raffle Ticket Price</h2>
+				    	<h4 class="infoHeaders">Drawing Donations</h4>
 				    	<blockquote>
 				    		<div>60% goes to<br>GCI Foundation.</div>
 			    			<div>35% goes to<br>The World Charity Drawing.</div>
@@ -59,7 +59,7 @@
 				    	</blockquote>
 				    </div>
 				    <div class="col col-md-6 col-sm-12">
-				    	<h2 class="infoHeaders">The Global Charity Drawing</h2>
+				    	<h4 class="infoHeaders">The Global Charity Drawing Donations</h4>
 				    	<blockquote>
 			    			<div>60% goes to<br>GCI Foundation.</div>
 			    			<div>35% goes to<br>The Global Charity Drawing's Pool.</div>
