@@ -68,7 +68,7 @@
 					</div>
 					<br>
 					<form action="{{action('RafflesController@index')}}">
-						<button class="btn-success btn" style="font-size:1.5em;padding-top:.5em;">VIEW SITE</button>  
+						<button class="btn-success btn" style="font-size:1.5em;padding-top:.5em;">JOIN IN!</button>  
 						{{-- - OR -
 						<input type="submit" value="SIGN UP" class="btn-success btn" style="font-size:1.5em;padding-top:.5em;"> --}}
 					</form>	
@@ -86,7 +86,7 @@
 		<section style="z-index:100;position:absolute;width:100%;">
 			<div id="splash4" class="row infoRows text-center">
 				<div class="col col-sm-12">
-					<h1>Who we are and what we do</h1>
+					<h1>WHY and HOW</h1>
 				</div>
 			</div>
 			<div id="splash3" class="row infoRows parallax">
@@ -95,11 +95,18 @@
 					</div> --}}
 				<div class="col col-xs-12 col-sm-8 col-sm-offset-2" style="background-color: rgba(0,0,0,.8);">
 					<div class="par3 text-center">
-						<p>We a small group of individuals who saw a need to improve the efficiency of charitable fund raising of every sort. All earnings are allocated to charitable projects around the globe.</p>
+						<p>I saw a need to improve the efficiency of charitable fund raising of every sort. So I created this website in the hopes that we can do just that. All donations are allocated to charitable projects around the globe.</p>
 						<br>
-						<p>A <a target="_blank" href="https://www.gofundme.com/global-charity-initiative">GoFundMe</a> has been created for our cause. All donations here will go to staffing and operational costs. (right now its just me running everything). Hoping to hire the first two employees as I get into the Beta testing stages.</p> 
+						<p>A <a target="_blank" href="https://www.gofundme.com/global-charity-initiative">GoFundMe</a> has been created for the cause. All donations here will go to staffing and operational costs. (right now its just me running everything). Hoping to hire the first two employees as I get into the Beta testing stages.</p> 
 						<br>
 						<p>The groups we work with will be decided by the world through our social media outlets and in our own suggestion box.</p>
+						<br>
+						<p>The two types of sponsors were currently looking for are
+							<ul>
+								<li>Celebrities willing to donate a "day with a fan" or something of the like</li>
+								<li>Companies that have a new service or product they wish to advertise</li>
+							</ul>
+						</p>
 					</div>
 				</div>
 			</div>
@@ -176,7 +183,7 @@
 			<div id="splash3" class="row infoRows">
 				<div class="col col-xs-12 col-sm-8 col-sm-offset-2 text-center" style="background-color: rgba(0,0,0,.8);">
 					<form action="{{action('RafflesController@index')}}">
-						<button class="btn-success btn" style="margin:1em 0 1em 0;font-size:1.5em;padding-top:.5em;">VIEW SITE</button>  
+						<button class="btn-success btn" style="margin:1em 0 1em 0;font-size:1.5em;padding-top:.5em;">JOIN IN!</button>  
 						{{-- - OR -
 						<input type="submit" value="SIGN UP" class="btn-success btn" style="font-size:1.5em;padding-top:.5em;"> --}}
 					</form>	

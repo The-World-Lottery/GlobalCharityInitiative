@@ -16,10 +16,11 @@
 </ul> --}}
 
 
- <main class="container authSpacer" style="max-width:100%;padding-top:2em;">
-    <h1>Sign In</h1>
+ <main class="container authSpacer" style="max-width:100%;">
+    <h1 style="text-align:center;">Register</h1>
+    <br>
+    <form method="POST" action="/auth/register">
     <div class="row">
-        <form method="POST" action="/auth/register">
         <div class="col col-xs-12 col-sm-5 col-sm-offset-1">
         {!! csrf_field() !!}
 
@@ -41,11 +42,11 @@
                 <label for="Input3">Username</label>
                 <input class="form-control" type="text" name="username" id="Input3" value="{{old('username')}}">
             </div>
-            <div class="form-group" hidden>
+            {{-- <div class="form-group" hidden>
                 <label for="Input5">Profile Image</label>
                 <input class="form-control" id="img" type="text" name="image" id="Input5" value="{{old('image')}}"><br>
             </div>
-                <a id="filestackButton" class="btn btn-secondary">Use Filestack Image Hosting</a>
+                <a id="filestackButton" class="btn btn-secondary">Use Filestack Image Hosting</a> --}}
         </div>
         <div class="col col-xs-12 col-sm-5">
 
@@ -57,23 +58,23 @@
 
 
             <div class="form-group">
-                {!! $errors->first('password', '<span class="help-block">:message</span>')!!}
                 <label for="Input6">Password</label>
                 <input class="form-control" type="password" name="password" id="Input6" value="{{old('password')}}">
             </div>
 
             <div class="form-group">
-                {!! $errors->first('password', '<span class="help-block">:message</span>')!!}
                 <label for="formGroupExampleInput7">Confirm Password</label>
                 <input class="form-control" type="password" name="password_confirmation" id="formGroupExampleInput7" value="">
-            </div>
-
-            <div class="form-group" style="margin-bottom:3em;display:flex;justify-content: center;">
-                <button type="submit" class="btn btn-success">Register Your Account</button>
+                {!! $errors->first('password', '<span class="help-block">:message</span>')!!}
             </div>
         </div>
-        </form>
     </div>
+    <br>
+    <div style="display: flex;justify-content: center;">
+        <button type="submit" class="btn btn-success cleargreenBtn">Register Your Account</button>
+    </div>
+    </div>
+    </form>
 </main>
 
 @stop

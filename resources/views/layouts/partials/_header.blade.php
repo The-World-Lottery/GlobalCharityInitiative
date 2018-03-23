@@ -12,7 +12,7 @@
 					{{Auth::user()->name}}
 				</a>
 			@else
-				<a style="border-radius:0 0 2px 2px" class="navbar-brand user navLink" href="{{action('Auth\AuthController@getLogin')}}"><span class="navLink">Login / Register</span></a>	
+				<a style="border-radius:0 0 2px 2px" class="navbar-brand user navLink" href="{{action('Auth\AuthController@getLogin')}}"><span class="navLink">LOGIN</span></a>	
 			@endif
        
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="border:0px;">
@@ -85,6 +85,11 @@
           	<a style="border-radius:0 0 2px 2px" style="border-radius:0 0 2px 2px" href="{{action('SuggestionsController@index')}}">
           	<span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
           	<span class="navLink">Suggestions</span></a>
+          </li>
+          <li class="headLinks">
+          	<a style="border-radius:0 0 2px 2px" href="/">
+          	<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+          	<span class="navLink">Home</span></a>
           </li>
           <li   class="headLinks" style="margin-right:1em;">
           	<a style="border-radius:0 0 2px 2px" style="border-radius:0 0 2px 2px" href="{{action('AboutUsController@index')}}">

@@ -16,7 +16,8 @@
   <li><a id="zeroO" href="{{action('Auth\AuthController@getRegister')}}">Register</a></li>
 </ul> --}}
  	<main class="container authSpacer" style="max-width:100%;">
-        <h1 style="text-align:center;">Already have an account?</h1>
+        <h1 style="text-align:center;">Login</h1>
+        <br>
         <div class="text-center" >
             <button id="clickTrigger2" style="display:none;" class="btn btn-success cleargreenBtn">SIGN IN</button>
         </div>
@@ -37,7 +38,10 @@
                     <input class="form-control" type="password" name="password" id="password">
                     {!! $errors->first('password', '<span class="help-block">:message</span>')!!}
                 </div>
-                <div class="form-group col-sm-6">
+                <div class="form-group col-sm-12" style="display:flex;justify-content: space-around;">
+                    <a href="/auth/register">
+                        Dont Have An Account?
+                    </a>
                     <a href="/password/email">
                         Forgot Your Password?
                     </a>
@@ -47,7 +51,7 @@
                 </div>
             </form>
         </div>
-        <h1 style="text-align:center;">Dont have an account?</h1>
+        {{-- <h1 style="text-align:center;">Dont have an account?</h1>
         <div class="text-center">
             <button id="clickTrigger" class="btn btn-success cleargreenBtn">SIGN UP!</button>
         </div>
@@ -113,7 +117,7 @@
                 <button type="submit" class="btn btn-success cleargreenBtn">REGISTER THIS ACCOUNT</button>
             </div>
             </form>
-        </div>
+        </div> --}}
     </main>
 
 @stop

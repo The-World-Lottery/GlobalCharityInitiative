@@ -2,14 +2,19 @@
 
 @section('title')
 
-<title>Donations</title>
+<title>Donations Drawings</title>
 
 @stop
 
 @section('divHead')
+	<br>
+	<div class="container">
+		<h2>Donation Drawings</h2>
 
 	{{-- <h2 id="hoverTrigger"> --}}
-	{{-- <div style="font-size:50%;margin-bottom: 1em;">$5 USD per entry</div> --}}
+		<div style="margin-bottom: 1em;">Each donation of 5 dollars gets you one entry in the drawing of your choice. If hold the only entry or enties when the drawing times you, you have 100% chance to win. See a list of our previous winners HERE.</div>
+
+	</div>
 	{{-- </h2> --}}
 
 @stop
@@ -49,7 +54,7 @@
 							</div>
 						@else
 							<div style="margin-bottom:1em;">
-							  <a  href="/ticketFail" class="aSubmitButton cleargreenBtn btn-success btn">GET TICKET(S)</a>
+							  <a  href="/ticketFail" class="aSubmitButton cleargreenBtn btn-success btn">DONATE</a>
 							</div>
 						@endif
 						 <h5>
