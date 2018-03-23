@@ -486,6 +486,7 @@ input {
 
 #menu {
 	padding:0 0 0 0;
+	background-color:#31b7d5;
 }
 
 .navButton {
@@ -771,9 +772,9 @@ blockquote {
 }
 
 @media screen and (max-width: 768px) {
-	#menu {
+	/*#menu {
 		background-color:#31b7d5;
-	}
+	}*/
 
 	.raffleCont {
 		max-width:16em;
