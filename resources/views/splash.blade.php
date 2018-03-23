@@ -59,9 +59,9 @@
 						The<span style="color:white;"> Global Charity</span> Initiative
 					</h1>
 					<br>
-					<h3 >
+					<h4 style="border-radius:1em;margin:0 5em 0 5em;padding:1em 1em 1em 1em;background-color: rgba(0,0,0,.5);">
 						NOW IN <span style="color:#0af794;">ALPHA</span> TESTING STAGES! ALL DONATIONS AT THIS TIME ARE FILLER DATA AND THE PAYMENT SYSTEM IS NOT OPERATIONAL, IT IS IN <span style="color:#0af794;">TEST MODE</span> AND <span style="color:#0af794;">WILL NOT CHARGE</span> YOU FOR <u>ANY </u>TRANSACTIONS YOU SIMULATE. THAT IS TO SAY, WE'RE NOT IN CONTACT WITH <span style="color:#0af794;">SAMUEL L. JACKSON....</span> YET....
-					</h3>
+					</h4>
 					<br>
 					<div id="splashPar" >
 						ALL proceeds go to the <span style="color:#0af794;">charities</span> and <span style="color:#0af794;">human interest projects</span> around the world.
@@ -97,7 +97,7 @@
 					<div class="par3 text-center">
 						<p>We a small group of individuals who saw a need to improve the efficiency of charitable fund raising of every sort. All earnings are allocated to charitable projects around the globe.</p>
 						<br>
-						<p>A <a target="_blank" href="https://www.gofundme.com/global-charity-initiative">GoFundMe</a> hes been created for our cause. All donations here will go to staffing and operational costs. (right now its just me running everything). Hoping to hire the first two employees as I get into the Beta testing stages.</p> 
+						<p>A <a target="_blank" href="https://www.gofundme.com/global-charity-initiative">GoFundMe</a> has been created for our cause. All donations here will go to staffing and operational costs. (right now its just me running everything). Hoping to hire the first two employees as I get into the Beta testing stages.</p> 
 						<br>
 						<p>The groups we work with will be decided by the world through our social media outlets and in our own suggestion box.</p>
 					</div>
