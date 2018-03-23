@@ -242,11 +242,11 @@
 		        timer++;
 		        if(timer % 2 == 0){
 		        	$("#splashImage").animate({
-			            opacity:.4
+			            opacity:.7
 			        },800);
 		        } else {
 		        	$("#splashImage").animate({
-		        		opacity:.0
+		        		opacity:.15
 		        	},800);
 		        }
 

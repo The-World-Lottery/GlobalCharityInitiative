@@ -177,7 +177,6 @@ class TheWorldLotterysController extends Controller
                 $request->session()->flash('errorMessage', 'You must select 5 numbers AND a POWER NUMBER!');
                 return \Redirect::action('TheWorldLotterysController@selectNumbers');
             } else {
-
                 try {
                     \Stripe\Stripe::setApiKey("sk_test_ZzKGRiePc0b4mGyYiwkRnPEy");
 
@@ -207,12 +206,11 @@ class TheWorldLotterysController extends Controller
                     $entry->save();
 
                 } catch (\Stripe\Error\Card $e){
-                dd($e);
+                    dd($e);
+                }
+            $request->session()->flash('successMessage', 'You have successfully purchased a GLOBAL CHARITY DRAWING ticket! Thank you for your donation and good luck!');
+            return \Redirect::action('TheWorldLotterysController@selectNumbers');
             }
-
-        $request->session()->flash('successMessage', 'You have successfully purchased a GLOBAL CHARITY DRAWING ticket! Thank you for your donation and good luck!');
-        return \Redirect::action('TheWorldLotterysController@selectNumbers');
         }
-    }
     }
 }
