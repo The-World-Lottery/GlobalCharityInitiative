@@ -642,6 +642,10 @@ blockquote {
 
 @media screen and (min-width: 768px) {
 
+	#alphaAlert {
+		margin:0 5em 0 5em;
+	}
+
 
 	#splash2 {
 		font-size:100%;
@@ -776,6 +780,10 @@ blockquote {
 		background-color:#31b7d5;
 	}*/
 
+	#alphaAlert {
+		margin:0 1em 0 1em;
+	}
+
 	.raffleCont {
 		max-width:16em;
 	}
@@ -793,7 +801,7 @@ blockquote {
 	}
 
 	#splashTitle {
-		margin-top:3em;
+		margin-top:1em;
 	}
 
 	#twlButton {

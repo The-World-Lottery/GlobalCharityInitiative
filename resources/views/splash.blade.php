@@ -59,7 +59,7 @@
 						The<span style="color:white;"> Global Charity</span> Initiative
 					</h1>
 					<br>
-					<h4 style="border-radius:1em;margin:0 5em 0 5em;padding:1em 1em 1em 1em;background-color: rgba(0,0,0,.5);">
+					<h4 id="alphaAlert" style="border-radius:1em;padding:1em 1em 1em 1em;background-color: rgba(0,0,0,.5);">
 						NOW IN <span style="color:#0af794;">ALPHA</span> TESTING STAGES! ALL DONATIONS AT THIS TIME ARE FILLER DATA AND THE PAYMENT SYSTEM IS NOT OPERATIONAL, IT IS IN <span style="color:#0af794;">TEST MODE</span> AND <span style="color:#0af794;">WILL NOT CHARGE</span> YOU FOR <u>ANY </u>TRANSACTIONS YOU SIMULATE. THAT IS TO SAY, WE'RE NOT IN CONTACT WITH <span style="color:#0af794;">SAMUEL L. JACKSON....</span> YET....
 					</h4>
 					<br>
