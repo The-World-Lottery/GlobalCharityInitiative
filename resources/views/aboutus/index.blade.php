@@ -16,14 +16,35 @@
 	<br>
 	<br>
 	<ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
-	  <li class="active"><a  id="zeroO"  data-toggle="tab" href="#home">Our Mission</a></li>
-	  <li><a id="zeroO" data-toggle="tab" href="#menu1">Previous Winners</a></li>
+	  <li class="active"><a  id="zeroO"  data-toggle="tab" href="#home">Previous Winners </a></li>
+	  <li><a id="zeroO" data-toggle="tab" href="#menu1">Our Mission</a></li>
 	  <li><a id="zeroO" data-toggle="tab" href="#menu2">The Creator</a></li>
 	</ul>
 	<div style="padding:1em;">
 		<div class="tab-content">
 		  	<div id="home" class="tab-pane fade in active">
-			    <p style="">Our mission is to eliminate the man power that is usually necessary for charitable fund-raising by providing massive monetary donations (from The Global Charity Initiative Foundation) directly to various sources of charitable work. Raffles will be created by companies donating a product/service they wish to advertise or celebrities donating some of their time to spend with one or more lucky fans.
+				<div class="row">
+					
+					 @foreach(\App\Models\Raffle::where('complete','1')->get() as $winner)
+						<div class="col col-sm-6 col-xs-12">
+						<h5><span style="color:#0af794;">{{ \App\User::select('username')->where('id',$winner->winner_id)->get()[0]['username'] }}</span>
+
+						</h5> 
+
+						won {{$winner->product}}
+
+						<span style="color:#0af794;">{{$winner->end_date->diffForHumans()}}</span>
+						<br>
+						<br>
+						</div>
+					@endforeach
+				</div>
+			    
+			</div>
+
+			<div id="menu1" class="tab-pane fade">
+
+				<p style="">Our mission is to eliminate the man power that is usually necessary for charitable fund-raising by providing massive monetary donations (from The Global Charity Initiative Foundation) directly to various sources of charitable work. Raffles will be created by companies donating a product/service they wish to advertise or celebrities donating some of their time to spend with one or more lucky fans.
 			    <br>
 			    All games are $5 USD (or equivalent) per entry.<br>
 			    Ticket prices to these drawings will be split thusly.
@@ -59,25 +80,8 @@
 					
 				</div>
 				<br>
-			</div>
 
-			<div id="menu1" class="tab-pane fade">
-				<div class="row">
-					
-					 @foreach(\App\Models\Raffle::where('complete','1')->get() as $winner)
-						<div class="col col-sm-6 col-xs-12">
-						<h5><span style="color:#0af794;">{{ \App\User::select('username')->where('id',$winner->winner_id)->get()[0]['username'] }}</span>
 
-						</h5> 
-
-						won {{$winner->product}}
-
-						<span style="color:#0af794;">{{$winner->end_date->diffForHumans()}}</span>
-						<br>
-						<br>
-						</div>
-					@endforeach
-				</div>
 			</div>
 			<div id="menu2" class="tab-pane fade">
 				<div class="row" id="theCreatorsContainer">
