@@ -13,7 +13,7 @@
 @stop --}}
 
 @section('content')
-
+	<br>
 	<main class="container" style="max-width:100%;font-size:120%;">
 
 		<h2 class="text-center">{{$suggestion['title']}}</h2>

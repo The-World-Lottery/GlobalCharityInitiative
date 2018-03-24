@@ -101,7 +101,7 @@ class RafflesTableSeeder extends Seeder
         $raffle6->content = 'Tesla Foundation';
         $raffle6->product ='Tesla had donated their newest sportscar model';
         $raffle6->end_date = date("Y-").$month ."-" . ($day+8 ) ." 12:00:00";
-        $raffle6->img = "/images/tesla.png";
+        $raffle6->img = "/images/tesla2.jpeg";
         $raffle6->user_id = 1;
         $raffle6->save();
 

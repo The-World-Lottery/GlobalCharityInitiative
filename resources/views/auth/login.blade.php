@@ -28,26 +28,31 @@
             @endif
             <form method="POST" action="/auth/login">
             {!! csrf_field() !!}
-                <div class="form-group col col-sm-6">
+                <div class="form-group col col-sm-offset-3 col-sm-6">
                     <label>Email</label>
                     <input class="form-control" autofocus type="email" name="email" value="{{ old('email') }}">
                     {!! $errors->first('email', '<span class="help-block">:message</span>')!!}
                 </div>  
-                <div class="form-group col col-sm-6">
+                <div class="form-group col  col-sm-offset-3 col-sm-6">
                     <label>Password</label>
                     <input class="form-control" type="password" name="password" id="password">
                     {!! $errors->first('password', '<span class="help-block">:message</span>')!!}
                 </div>
                 <div class="form-group col-sm-12" style="display:flex;justify-content: space-around;">
-                    <a href="/auth/register">
+                    {{-- <a href="/auth/register">
                         Dont Have An Account?
-                    </a>
+                    </a> --}}
                     <a href="/password/email">
                         Forgot Your Password?
                     </a>
                 </div>
-                <div class="form-group col-sm-12" style="display:flex;justify-content: center;">
+                <div class="form-group col-sm-12" style="display:flex;justify-content: center;margin-top:1em;">
                     <button style="margin-bottom:.5em;" class="btn btn-success cleargreenBtn" type="submit">SIGN IN</button>
+                </div>
+                <div class="form-group col-sm-12" style="display:flex;justify-content: space-around;">
+                    <a style="color:yellow;" href="/auth/register">
+                        Dont Have An Account?
+                    </a>
                 </div>
             </form>
         </div>

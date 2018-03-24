@@ -13,7 +13,7 @@
 @stop --}}
 
 @section('content')
-
+	<br>
 	<main class="container" style="max-width:100%;padding-top:1.5em;">
 		<h1 style="margin-bottom: .5em;text-align: center;">Edit Suggestion</h1>
 		<form method="POST" action="{{ action('SuggestionsController@update', $suggestion->id)}}">
