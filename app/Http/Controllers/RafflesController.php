@@ -58,9 +58,9 @@ class RafflesController extends Controller
             return \Redirect::action('Auth\AuthController@getLogin');
         }
 
-         if(!is_int((int)$count)){
+         if(!is_int($count)){
             $request->session()->flash('errorMessage', 'You need to enter an integer amount. No decimals, no letters, and NO SCRIPTS!');
-            return \Redirect::action('LotteriesController@index');
+            return \Redirect::action('RafflesController@index');
         }
 
         \Stripe\Stripe::setApiKey("sk_test_ZzKGRiePc0b4mGyYiwkRnPEy");
