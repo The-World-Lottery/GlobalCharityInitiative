@@ -87,7 +87,7 @@
 		$('input[type=checkbox]').on('change', function (e) {
 		    if ($('input[type=checkbox]:checked').length > 5) {
 		        $(this).prop('checked', false);
-		        alert("allowed only 5");
+		        // alert("allowed only 5");
 		    }
 		});
 
