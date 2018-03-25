@@ -21,7 +21,7 @@
     <br>
     <form method="POST" action="/auth/register">
     <div class="row">
-        <div class="col col-sm-6 col-sm-offset-3">
+        <div class="col col-sm-4 col-sm-offset-4">
         {!! csrf_field() !!}
 
             <div class="form-group">
@@ -48,7 +48,7 @@
             </div>
                 <a id="filestackButton" class="btn btn-secondary">Use Filestack Image Hosting</a> --}}
         </div>
-        <div class="col col-sm-6 col-sm-offset-3">
+        <div class="col col-sm-4 col-sm-offset-4">
 
             <div class="form-group">
                 {!! $errors->first('phone_number', '<span class="help-block">:message</span>')!!}
@@ -71,7 +71,7 @@
     </div>
     <br>
     <div style="display: flex;justify-content: center;">
-        <button type="submit" class="btn btn-success cleargreenBtn">Register Your Account</button>
+        <button type="submit" class="btn btn-success cleargreenBtn">Register Account</button>
     </div>
     </div>
     </form>

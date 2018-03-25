@@ -44,26 +44,26 @@
 
 			<div id="menu1" class="tab-pane fade">
 
-				<p style="">Our mission is to eliminate the man power that is usually necessary for charitable fund-raising by providing massive monetary donations (from The Global Charity Initiative Foundation) directly to various sources of charitable work. Raffles will be created by companies donating a product/service they wish to advertise or celebrities donating some of their time to spend with one or more lucky fans.
+				<p style="">Our mission is to eliminate the man power that is usually necessary for charitable fund-raising by providing massive monetary donations directly to various sources of charitable work. Drawings will be created by companies donating a product/service they wish to advertise or celebrities donating some of their time to spend with one or more lucky fans.
 			    <br>
-			    All games are $5 USD (or equivalent) per entry.<br>
+			    Every donation of $5 USD gets you one entry in the drawing of your choice.<br>
 			    Ticket prices to these drawings will be split thusly.
 			    </p>
 			    <div class="row">
 				    <div class="col col-md-6 col-sm-12">
 				    	<h4 class="infoHeaders">Drawing Donations</h4>
 				    	<blockquote>
-				    		<div>60% goes to<br>GCI Foundation.</div>
-			    			<div>35% goes to<br>The World Charity Drawing.</div>
-			    			<div>5% goes to<br>The Payment System (Stripe)</div>
+				    		<div><span style="font-size:120%;color:#00ffc4;"> 75%</span><br> goes to Charity</div>
+			    			<div><span style="font-size:120%;color:#00ffc4;"> 20%</span><br> goes to The World Charity Drawing Pool</div>
+			    			<div><span style="font-size:120%;color:#00ffc4;"> 5%</span><br> goes to the payment system (Stripe)</div>
 				    	</blockquote>
 				    </div>
 				    <div class="col col-md-6 col-sm-12">
 				    	<h4 class="infoHeaders">The Global Charity Drawing Donations</h4>
 				    	<blockquote>
-			    			<div>60% goes to<br>GCI Foundation.</div>
-			    			<div>35% goes to<br>The Global Charity Drawing's Pool.</div>
-			    			<div>5% goes to<br>the payment system (Stripe)</div>
+			    			<div><span style="font-size:120%;color:#00ffc4;"> 65%</span><br> goes to Charity</div>
+			    			<div><span style="font-size:120%;color:#00ffc4;"> 30%</span><br> goes to The Global Charity Drawing's Pool.</div>
+			    			<div><span style="font-size:120%;color:#00ffc4;"> 5%</span><br> goes to the payment system (Stripe)</div>
 				    	</blockquote>
 				    </div>
 			    </div>

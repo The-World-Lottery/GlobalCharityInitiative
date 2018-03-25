@@ -28,12 +28,12 @@
             @endif
             <form method="POST" action="/auth/login">
             {!! csrf_field() !!}
-                <div class="form-group col col-sm-offset-3 col-sm-6">
+                <div class="form-group col col-sm-offset-4 col-sm-4">
                     <label>Email</label>
                     <input class="form-control" autofocus type="email" name="email" value="{{ old('email') }}">
                     {!! $errors->first('email', '<span class="help-block">:message</span>')!!}
                 </div>  
-                <div class="form-group col  col-sm-offset-3 col-sm-6">
+                <div class="form-group col  col-sm-offset-4 col-sm-4">
                     <label>Password</label>
                     <input class="form-control" type="password" name="password" id="password">
                     {!! $errors->first('password', '<span class="help-block">:message</span>')!!}

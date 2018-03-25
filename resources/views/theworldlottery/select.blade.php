@@ -8,9 +8,10 @@
 
 @section('divHead')
 <br>
-<h1 id="hoverTrigger"><strong>Global Charity Drawing</strong>
-<div style="font-size:50%;margin-bottom: 0em;">Requires $5 donation to participate.</div>
-</h1>
+<h2 id="hoverTrigger">
+	Global Charity Drawing
+	<div style="font-size:50%;margin-bottom: 0em;">Requires $5 donation to participate.</div>
+</h2>
 
 
 @stop
@@ -23,7 +24,7 @@
 		@if(\App\Models\TheWorldLottery::orderBy('id','desc')->limit(1)->get()[0]['end_date'] <= date('Y-m-d H:i:s'))
 			<h1>Drawing in Progress</h1>
 		@else
-				{{ $theWorldLottery->end_date->diffForHumans() }}</h4>
+			{{ $theWorldLottery->end_date->diffForHumans() }}</h4>
 		@endif
 		@if (session()->has('successMessage'))
 	        <div class="alert alert-success text-center">{{ session('successMessage') }}</div>
