@@ -60,7 +60,8 @@
 					</h1>
 					<br>
 					<h4 id="alphaAlert" style="border-radius:1em;padding:1em 1em 1em 1em;background-color: rgba(0,0,0,.5);">
-						NOW IN <span style="color:#0af794;">ALPHA</span> TESTING STAGES! ALL DRAWINGS AT THIS TIME ARE FAKE FILLER DATA FOR TESTING AND THE PAYMENT SYSTEM IS NOT OPERATIONAL, IT IS IN <span style="color:#0af794;">TEST MODE</span> AND <span style="color:#0af794;">WILL NOT CHARGE</span> YOU FOR <u>ANY </u>TRANSACTIONS YOU SIMULATE. THAT IS TO SAY, WE'RE NOT IN CONTACT WITH <span style="color:#0af794;">SAMUEL L. JACKSON....</span> YET....
+						NOW IN <span style="color:#0af794;">ALPHA</span> TESTING STAGES! ALL DRAWINGS AT THIS TIME ARE FAKE FILLER DATA FOR TESTING AND THE PAYMENT SYSTEM IS NOT OPERATIONAL, IT IS IN <span style="color:#0af794;">TEST MODE</span> AND <span style="color:#0af794;">WILL NOT CHARGE</span> YOU FOR <u>ANY </u>TRANSACTIONS YOU SIMULATE. THAT IS TO SAY, WE'RE NOT IN CONTACT WITH <span style="color:#0af794;">SAMUEL L. JACKSON....</span> YET....<br><br>
+						<div class="sharethis-inline-follow-buttons"></div>
 					</h4>
 					<br>
 					<div id="splashPar" >
@@ -99,7 +100,9 @@
 						<br>
 						<p>A <a target="_blank" href="https://www.gofundme.com/global-charity-initiative">GoFundMe</a> has been created for the cause. All donations here will go to staffing and operational costs. (right now its just me running everything). Hoping to hire the first two employees as I get into the Beta testing stages.</p> 
 						<br>
-						<p>The groups we work with will be decided by the world through our social media outlets and in our own suggestion box.</p>
+						<p>The groups we work with will be decided by the world through our social media outlets.<br> <a target="_blank" href="https://twitter.com/WorldwideGiving?lang=en">Twitter<br>
+						<img src="/images/Blue Icons/Twitter.svg" alt="global world charity twitter" class="socialIcon">
+					</a></p>
 						<br>
 						<p>The two types of sponsors were currently looking for are
 							<ul>
@@ -214,6 +217,9 @@
 
 	</script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5ab7bc091fff98001395a45f&product=inline-follow-buttons"></script>
+
 	<script type="text/javascript">
 
 	

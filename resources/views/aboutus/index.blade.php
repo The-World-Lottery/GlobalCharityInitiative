@@ -70,7 +70,7 @@
 			    <br>
 			    <br>
 			    <div style="display:flex;justify-content: space-around;text-align:center;">
-					<a target="_blank" href="https://twitter.com/Emmett_J_Peters?lang=en">Twitter<br>
+					<a target="_blank" href="https://twitter.com/WorldwideCharity?lang=en">Twitter<br>
 						<img src="/images/Blue Icons/Twitter.svg" alt="global charity twitter" class="socialIcon">
 					</a>
 					
