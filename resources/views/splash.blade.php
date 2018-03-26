@@ -96,7 +96,7 @@
 					</div> --}}
 				<div class="col col-xs-12 col-sm-8 col-sm-offset-2" style="background-color: rgba(0,0,0,.8);">
 					<div class="par3 text-center">
-						<p>I saw a need to improve the efficiency of charitable fund raising of every sort. So I created this website in the hopes that we can do just that. All donations are allocated to charitable projects around the globe.</p>
+						<p>I saw a need to improve the efficiency of charitable fund-raising of every sort. So I created this website in the hopes that we can do just that. All donations are allocated to charitable projects around the globe.</p>
 						<br>
 						<p>A <a target="_blank" href="https://www.gofundme.com/global-charity-initiative">GoFundMe</a> has been created for the cause. All donations here will go to staffing and operational costs. (right now its just me running everything). Hoping to hire the first two employees as I get into the Beta testing stages.</p> 
 						<br>
