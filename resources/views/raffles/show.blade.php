@@ -18,9 +18,10 @@
 		<div class="col-xs-12 col-sm-12 col paddingMobile text-center" >
 			<h1 style="font-size: 250%;margin-bottom:.5em;">{{$raffle->title}}</h1>
 			<br>
-			<div class="countdown col col-sm-6">
+			<br>
+			<div class="countdown col col-sm-6" style="padding-right: 3.5em;">
 				<h2>
-					The Drawing Ends: <br> {{ $raffle->end_date->diffForHumans() }}
+					{{ $raffle->end_date->diffForHumans() }}
 				</h2>
 				<img style="max-height:20em;border-radius:1em;box-shadow: 20px 20px 20px rgba(0,0,0,.6);" src={!! $raffle->img !!}>
 			</div>
