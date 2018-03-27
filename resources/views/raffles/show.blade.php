@@ -17,19 +17,20 @@
 	<main class="row" style="text-align:center;">
 		<div class="col-xs-12 col-sm-12 col paddingMobile text-center" >
 			<h1 style="font-size: 250%;margin-bottom:.5em;">{{$raffle->title}}</h1>
+			<br>
 			<div class="countdown col col-sm-6">
-				<h3>
+				<h2>
 					The Drawing Ends: <br> {{ $raffle->end_date->diffForHumans() }}
-				</h3>
+				</h2>
 				<img style="max-height:20em;border-radius:1em;box-shadow: 20px 20px 20px rgba(0,0,0,.6);" src={!! $raffle->img !!}>
 			</div>
-			<div class="col col-sm-6" style="margin-top: 1.5em;">
+			<div class="col col-sm-6" style="margin-top: 1.5em;background-color: rgba(0,0,0,.5);padding:1em 2em 2em 2em;border-radius: 1em;">
 				<div class="">
-					<h3>Description: </h3>
+					<h2>Description: </h2>
 					<p>{{$raffle->product}}</p>
 				</div>
 				<div class="">
-					<h3>Charity Benefited:</h3>
+					<h2>Charity Benefited:</h2>
 					<p>{{$raffle['content']}}</p>
 				</div>
 				<div class="">

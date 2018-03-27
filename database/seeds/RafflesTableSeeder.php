@@ -53,7 +53,7 @@ class RafflesTableSeeder extends Seeder
 
         $raffle10= new \App\Models\Raffle();
         $raffle10->title = 'Trip to Fiji (for 5)';
-        $raffle10->content = 'TWL Foundation';
+        $raffle10->content = 'GCI Foundation';
         $raffle10->product ='Radisson Blu Resort Fiji Denarau Island has donated an all expense paid, 5 day trip.';
         $raffle10->end_date = date("Y-").$month ."-" . ($day+3 ) ." 08:00:02";
         $raffle10->img = "/images/fiji.jpg";
@@ -62,7 +62,7 @@ class RafflesTableSeeder extends Seeder
 
         $raffle11= new \App\Models\Raffle();
         $raffle11->title = 'Blue Chrome Nissan GT-R';
-        $raffle11->content = 'TWL Foundation';
+        $raffle11->content = 'GCI Foundation';
         $raffle11->product ='Nissan has donated one of their new gt-rs to be auctioned off';
         $raffle11->end_date = date("Y-").$month ."-" . ($day+4 ) ." 10:00:00";
         $raffle11->img = "/images/nissan.jpg";
@@ -107,7 +107,7 @@ class RafflesTableSeeder extends Seeder
 
         $raffle7= new \App\Models\Raffle();
         $raffle7->title = 'CodeUp Bootcamp Entry';
-        $raffle7->content = 'TWL Foundation';
+        $raffle7->content = 'GCI Foundation';
         $raffle7->product ='CodeUp has donated one entry into their next Java class. Valued at $22,500.00';
         $raffle7->end_date = date("Y-").$month ."-" . ($day+9 ) ." 12:00:00";
         $raffle7->img = "/images/codeup.jpg";
@@ -116,7 +116,7 @@ class RafflesTableSeeder extends Seeder
 
         $raffle8= new \App\Models\Raffle();
         $raffle8->title = 'All expense paid trip to Hawaii';
-        $raffle8->content = 'TWL Foundation';
+        $raffle8->content = 'GCI Foundation';
         $raffle8->product ='A five night stay at Ko"a Kea Hotel Resort at Poipu Beach';
         $raffle8->end_date = date("Y-").$month ."-" . ($day+10)  ." 11:30:00";
         $raffle8->img = "/images/hawaii.png";
@@ -125,7 +125,7 @@ class RafflesTableSeeder extends Seeder
 
         $raffle8= new \App\Models\Raffle();
         $raffle8->title = 'KISS Ticket & Backstage Pass (x4)';
-        $raffle8->content = 'TWL Foundation';
+        $raffle8->content = 'GCI Foundation';
         $raffle8->product ='Kiss has donated 4 all access passes for their next show in Washington. Transport provided as well.';
         $raffle8->end_date = date("Y-").$month ."-" . ($day+11)  ." 11:11:00";
         $raffle8->img = "/images/kiss.jpg";
@@ -134,12 +134,39 @@ class RafflesTableSeeder extends Seeder
 
         $raffle9= new \App\Models\Raffle();
         $raffle9->title = 'KB Homes House';
-        $raffle9->content = 'TWL Foundation';
+        $raffle9->content = 'GCI Foundation';
         $raffle9->product ='KB Homes has donated a fully built house valued at $260,000, in Austin, Texas';
         $raffle9->end_date = date("Y-").$month ."-" . ($day+12) ." 11:00:00";
         $raffle9->img = "/images/home.jpg";
         $raffle9->user_id = 1;
         $raffle9->save();
+
+        $raffle10= new \App\Models\Raffle();
+        $raffle10->title = 'On the set with Chris Pratt';
+        $raffle10->content = 'Save the Dinosaurs';
+        $raffle10->product ='Chris Pratt has donated a day for a lucky fan to view the filming of Jurassic World 3!';
+        $raffle10->end_date = date("Y-").$month ."-" . ($day) ." 11:00:00";
+        $raffle10->img = "/images/chris.jpg";
+        $raffle10->user_id = 1;
+        $raffle10->save();
+
+        $raffle11= new \App\Models\Raffle();
+        $raffle11->title = 'Skii day with Shaun White';
+        $raffle11->content = 'Slopes Up';
+        $raffle11->product ='While Mr.White is in Denver Colorado he has set aside a day to just hang out on the slopes with a lucky fan (winner must be able to skii or snowboard)';
+        $raffle11->end_date = date("Y-").$month ."-" . ($day+4) ." 11:00:00";
+        $raffle11->img = "/images/sean.jpg";
+        $raffle11->user_id = 1;
+        $raffle11->save();
+
+        $raffle12= new \App\Models\Raffle();
+        $raffle12->title = 'First Civilian Ticket to Mars';
+        $raffle12->content = 'Get us off this rock foundation';
+        $raffle12->product ='Space X has donated the very first civilian ticket to Mars.';
+        $raffle12->end_date = date("Y-").$month ."-" . ($day) ." 01:00:00";
+        $raffle12->img = "/images/mars.jpg";
+        $raffle12->user_id = 1;
+        $raffle12->save();
 
 
 
