@@ -67,7 +67,8 @@
 					</select>
 					<br>
 					<h2>Then</h2>
-					<button class="btn btn-success cleargreenBtn">SUBMIT NUMBERS</button><br><br>
+					<h2 id="sub">SUBMIT YOUR NUMBERS!</h2>
+					<button id="sub2" style="display:none;" class="btn btn-success cleargreenBtn">SUBMIT NUMBERS</button><br><br>
 					@if ((Auth::check()) && (Auth::user()->is_admin))
 						<a href="{{ action('TheWorldLotterysController@edit', $theWorldLottery->id) }}"><button style="margin-bottom: 2em;" class="btn btn-warning">EDIT</button></a>
 					@endif
@@ -89,7 +90,17 @@
 		        $(this).prop('checked', false);
 		        // alert("allowed only 5");
 		    }
+
+		    if ($('input[type=checkbox]:checked').length == 5) {
+		    	$('#sub').hide();
+		    	$('#sub2').show();
+		    } else {
+		    	$('#sub2').hide();
+		    	$('#sub').show();
+		    }
 		});
+
+
 
 		// $('#thisForm').on('click', function(){
 		// 	// console.log("stuff");

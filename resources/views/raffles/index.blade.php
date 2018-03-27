@@ -12,7 +12,7 @@
 		<h2>Donation Drawings</h2>
 
 	{{-- <h2 id="hoverTrigger"> --}}
-		<div style="margin-bottom: 1em;">Each donation of 5 dollars gets you one entry in the drawing of your choice. If you hold the only entry or enties when the drawing times out, you have a 100% chance to win that drawing. See a list of our previous winners <a href="/aboutus"><span style="color:#0af794;"><u>HERE</u></span></a>.<br>Thank you for your donation!</div>
+		<div style="margin-bottom: 1em;padding:0 2em 0 2em;">Each donation of 5 dollars gets you one entry in the drawing of your choice. If you hold the only entry or enties when the drawing times out, you have a 100% chance to win that drawing. See a list of our previous winners <a href="/aboutus"><span style="color:#0af794;"><u>HERE</u></span></a>.<br>Thank you for your donation!</div>
 
 	</div>
 	{{-- </h2> --}}
