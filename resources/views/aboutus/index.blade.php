@@ -25,7 +25,7 @@
 		  	<div id="home" class="tab-pane fade in active">
 				<div class="row">
 					
-					 @foreach(\App\Models\Raffle::where('complete','1')->get() as $winner)
+					 @foreach(\App\Models\Raffle::where('complete','1')->where('winner_id','>','0')->get() as $winner)
 						<div class="col col-sm-6 col-xs-12">
 						<h5><span style="color:#0af794;">{{ \App\User::select('username')->where('id',$winner->winner_id)->get()[0]['username'] }}</span>
 
