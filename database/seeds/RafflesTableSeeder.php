@@ -168,7 +168,14 @@ class RafflesTableSeeder extends Seeder
         $raffle12->user_id = 1;
         $raffle12->save();
 
-
+        $raffle13= new \App\Models\Raffle();
+        $raffle13->title = '4 day trip to Vegas (x4)';
+        $raffle13->content = 'Poor Green Whale Guns Books';
+        $raffle13->product ='4 days and 4 nights stay donated by Caesars Palace. All expenses paid + $1000 gambling money per night, per person';
+        $raffle13->end_date = date("Y-").$month ."-" . ($day+13) ." 01:00:00";
+        $raffle13->img = "/images/vegas.jpg";
+        $raffle13->user_id = 1;
+        $raffle13->save();
 
     }
 }

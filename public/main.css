@@ -640,10 +640,13 @@ blockquote {
 }
 
 
+
+
 @media screen and (min-width: 768px) {
 
 	#alphaAlert {
-		margin:0 8em 0 8em;
+		padding:2em 10em 2em 10em;
+		border-radius: 0;
 	}
 
 
@@ -783,6 +786,8 @@ blockquote {
 	#alphaAlert {
 		margin:0 1em 0 1em;
 		font-size:75%;
+		border-radius:1em;
+		padding:1em 1em 1em 1em;
 	}
 
 	.raffleCont {

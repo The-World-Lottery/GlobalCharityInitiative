@@ -7,8 +7,8 @@
 @stop
 
 @section('divHead')
+	<div id="raffHead" class="container">
 	<br>
-	<div class="container">
 		<h2>Donation Drawings</h2>
 
 	{{-- <h2 id="hoverTrigger"> --}}
@@ -102,6 +102,13 @@
 			$('#raffleForm').attr('action', newAction);
 			$('.stripe-button-el')[0].click();
 		});
+
+		$(document).scroll(function() {
+	    	$('#raffHead').css('opacity', 1 - .0026 * $(document).scrollTop());
+	    	$('#raffHead').css('margin-top', (-1 * $(document).scrollTop()/100) + 'em');
+	    	// console.log($(document).scrollTop());
+	    });
+
 	</script>
 
 @stop

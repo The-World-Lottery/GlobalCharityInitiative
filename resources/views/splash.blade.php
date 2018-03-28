@@ -60,7 +60,7 @@
 						The<span style="color:white;"> Global Charity</span> Initiative
 					</h1>
 					<br>
-					<div id="alphaAlert" style="border-radius:1em;padding:1em 1em 1em 1em;background-color: rgba(0,0,0,.5);">
+					<div id="alphaAlert" style="background-color: rgba(0,0,0,.7);">
 						<h4>NOW IN <span style="color:#0af794;">ALPHA</span> TESTING STAGES! ALL DRAWINGS AT THIS TIME ARE JUST FILLER DATA FOR TESTING AND THE PAYMENT SYSTEM IS NOT OPERATIONAL, IT IS IN <span style="color:#0af794;">TEST MODE</span> AND <span style="color:#0af794;">WILL NOT CHARGE</span> YOU FOR <u>ANY </u>TRANSACTIONS YOU SIMULATE. THAT IS TO SAY, WE'RE NOT IN CONTACT WITH <span style="color:#0af794;">SAMUEL L. JACKSON....</span> YET....<br><br><h4>
 						<div class="sharethis-inline-follow-buttons"></div>
 					{{-- <div id="splashPar" >
