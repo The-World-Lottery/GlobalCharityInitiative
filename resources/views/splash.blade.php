@@ -60,7 +60,7 @@
 					</h1>
 					<br>
 					<h4 id="alphaAlert" style="border-radius:1em;padding:1em 1em 1em 1em;background-color: rgba(0,0,0,.5);">
-						NOW IN <span style="color:#0af794;">ALPHA</span> TESTING STAGES! ALL DRAWINGS AT THIS TIME ARE FAKE FILLER DATA FOR TESTING AND THE PAYMENT SYSTEM IS NOT OPERATIONAL, IT IS IN <span style="color:#0af794;">TEST MODE</span> AND <span style="color:#0af794;">WILL NOT CHARGE</span> YOU FOR <u>ANY </u>TRANSACTIONS YOU SIMULATE. THAT IS TO SAY, WE'RE NOT IN CONTACT WITH <span style="color:#0af794;">SAMUEL L. JACKSON....</span> YET....<br><br>
+						NOW IN <span style="color:#0af794;">ALPHA</span> TESTING STAGES! ALL DRAWINGS AT THIS TIME ARE JUST FILLER DATA FOR TESTING AND THE PAYMENT SYSTEM IS NOT OPERATIONAL, IT IS IN <span style="color:#0af794;">TEST MODE</span> AND <span style="color:#0af794;">WILL NOT CHARGE</span> YOU FOR <u>ANY </u>TRANSACTIONS YOU SIMULATE. THAT IS TO SAY, WE'RE NOT IN CONTACT WITH <span style="color:#0af794;">SAMUEL L. JACKSON....</span> YET....<br><br>
 						<div class="sharethis-inline-follow-buttons"></div>
 					</h4>
 					<br>
@@ -96,20 +96,19 @@
 					</div> --}}
 				<div class="col col-xs-12 col-sm-8 col-sm-offset-2" style="background-color: rgba(0,0,0,.8);">
 					<div class="par3 text-center">
-						<p>I saw a need to improve the efficiency of charitable fund-raising of every sort. So I created this website in the hopes that we can do just that. All donations are allocated to charitable projects around the globe.</p>
-						<br>
+						<p>We saw a need to improve the efficiency of charitable fund-raising of every sort. This non-profit website was created in the hopes that we can do just that. All donations are allocated to charitable projects around the globe.</p>
+
 						<p>A <a target="_blank" href="https://www.gofundme.com/global-charity-initiative">GoFundMe</a> has been created for the cause. All donations here will go to staffing and operational costs. (right now its just me running everything). Hoping to hire the first two employees as I get into the Beta testing stages.</p> 
-						<br>
 						<p>The groups we work with will be decided by the world through our social media outlets.<br> <a target="_blank" href="https://twitter.com/WorldwideGiving?lang=en">Twitter<br>
 						<img src="/images/Blue Icons/Twitter.svg" alt="global world charity twitter" class="socialIcon">
 					</a></p>
-						<br>
+						{{-- <br>
 						<p>The two types of sponsors were currently looking for are
 							<ul>
 								<li>Celebrities willing to donate a "day with a fan" or something of the like</li>
 								<li>Companies that have a new service or product they wish to advertise</li>
 							</ul>
-						</p>
+						</p> --}}
 					</div>
 				</div>
 			</div>
@@ -155,21 +154,21 @@
 		
 			
 			<div id="splash1" class="row infoRows">
-				<div class="col col-xs-12 col-sm-4">
+				<div class="col col-xs-12 col-sm-6">
 					<div class="splashInfo">
 						<h2>The Idea</h2>
 						<blockquote>All ticket purchases increase the value of the current world charity drawing and The GCI Foundation Fund. Its is from the foundation that we will allocate funds to selected charities and projects around the globe.</blockquote>
 						
 					</div>
 				</div>
-				<div class="col col-xs-12 col-sm-4">
+				{{-- <div class="col col-xs-12 col-sm-4">
 					<div class="splashInfo">
 						<h2>Suggestion Box</h2>
 						<blockquote>In an effort to keep the website up to date and more user friendly we have included a "suggestion box" we people can leave ideas on site functionality and/or new charities that could use our help. Users can vote in the suggestions and the admins will address the ones with the highest rating.</blockquote>
 						
 					</div>
-				</div>
-				<div class="col col-xs-12 col-sm-4">
+				</div> --}}
+				<div class="col col-xs-12 col-sm-6">
 					<div class="splashInfo">
 						<h2>Our Missions</h2>
 						<blockquote style="text-align:left;">
