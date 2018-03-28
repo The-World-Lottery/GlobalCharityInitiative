@@ -115,6 +115,7 @@ a.navLink:hover {
 	color:white;
 }
 
+
 .modal-backdrop {
 	z-index:0;
 }
@@ -445,7 +446,7 @@ label {
 
 a:hover, a:active {
 	color:white;
-	text-decoration: none;
+	text-decoration: underline;
 	color:lightgreen;
 }
 

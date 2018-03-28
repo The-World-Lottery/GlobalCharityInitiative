@@ -1,16 +1,11 @@
 <a style="" href="{{ action('RafflesController@show', $raffle->id) }}">
-	<div class="col-sm-12 col-md-12 text-center" style="margin:1em 0 1em 0;display:flex;justify-content: center;">
-		<figure id="splashOne" class="raffleCont" style='background-image:url("{{$raffle->img}}");background-size: auto 100% !important;'>
-			<div style="border-radius:1em;background-color:rgba(0,0,0,.8);height:100%;display:none;">
-				<div style="position:relative;height:100%;width:100%;">
-					<div style="padding-top: 10%;">
-						<h2 class="white" style="margin:0 .5em 0 .5em;">{{$raffle->title}}</h2>
+	<div class="col-sm-12 col-md-12 text-center" style="/*margin:1em 0 1em 0*/;">
+		<figure id="splashOne" class="raffleCont" style='position:relative;background-image:url("{{$raffle->img}}");background-size: auto 100% !important;'>
+					<div style="position:absolute;width:100%;bottom:0;background-color:rgba(0,0,0,.4);">
+						<h2 style="width:100%">{{$raffle->title}}</h2>
+					
+						<span style="font-size:150%;color:#00ffc4;">{{$raffle->end_date->diffForHumans()}}</span>
 					</div>
-					<p style="position:absolute;bottom:5%;width:100%;">Drawing Happens<br>
-						<span style="color:#00ffc4;">{{$raffle->end_date->diffForHumans()}}</span>
-					</p>
-				</div>
-			</div>
 		</figure>
 	</div>
 </a>

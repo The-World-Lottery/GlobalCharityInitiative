@@ -124,11 +124,13 @@
 				<div class="col col-xs-12 col-sm-4" id="gameHold">
 					<div class="splashInfo">
 						<h2>Upcoming Drawing Value</h2>
-						<blockquote>A monthly drawing where players select 5 numbers 1-100 and a key number. Our hope is that this will eventualy grow to a huge number and we can provide a world record breaking donation. As far as we can tell, that record is held by Warren Buffet. For now...</blockquote>
+						<blockquote>A monthly drawing where players select 5 numbers 1-100 and a key number. Our hope is that this will eventualy grow to a huge number and we can provide a world record breaking donation. The record is held by Warren Buffet. For now...</blockquote>
 					</div>
 					<div class="bottomPos">
-						<p style="font-size:2.7em;padding:1em .3em 1em .3em;background-color:rgba(0,0,0,.5);border-radius: 1em;margin-top:.5em;">The <span style="color:lightgreen;">Global Charity </span>Drawing <b><span style="color:lightgreen;">${{number_format((\App\Models\TheWorldLottery::orderBy('id','desc')->first()->get()[0]['current_value']),0,".",",")}}</span></b>
-						<br><strong style="color:#00ffc4;margin-bottom: .5em;">{{$twl[0]->end_date->diffForHumans()}}</strong></p>
+						<a href="/picknumbers">
+						<p style="font-size:2.7em;padding:1em .3em 1em .3em;background-color:rgba(0,0,0,.5);border-radius: 1em;margin-top:.5em;"><span style="color:white">The <span style="color:lightgreen;">Global Charity </span>Drawing <b><span style="color:lightgreen;">${{number_format((\App\Models\TheWorldLottery::orderBy('id','desc')->first()->get()[0]['current_value']),0,".",",")}}</span></b>
+						<br><strong style="color:#00ffc4;margin-bottom: .5em;">{{$twl[0]->end_date->diffForHumans()}}</strong></span></p>
+						</a>
 					</div>
 				</div>
 			{{-- 	<div class="col col-xs-12 col-sm-4" id="gameHold">
@@ -265,6 +267,21 @@
 	    	$("#splashHeader").css("margin-top", (-1 * $(document).scrollTop()/100) + "em");
 	    	// console.log($(document).scrollTop());
 	    });
+
+	    var t = 0;
+	    setInterval(function(){
+	        if (t % 8 == 4){
+	            $('#drawinghover1').fadeOut('fast',function(){
+	            	$('#drawinghover2').fadeIn('fast');
+	            });
+	        };
+	        if (t % 8 == 0){
+	            $('#drawinghover2').fadeOut('fast',function(){
+	            	$('#drawinghover1').fadeIn('fast');
+	            });
+	        };
+	        t++;
+	    }, 700);
 
 	    //random quote
 		// function randomQuote() {
