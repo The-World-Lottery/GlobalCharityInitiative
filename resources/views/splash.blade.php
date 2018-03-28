@@ -54,26 +54,24 @@
 	<body id="splashBod">
 		<main style="z-index:0;height:110vh;width:100%;position:fixed;">
 			<div id="splashHeader" class="row text-center">
+				@include('layouts.partials._header')
 				<div class="col col-xs-12"  style="padding:0;">
 					<h1 id="splashTitle" style="">
 						The<span style="color:white;"> Global Charity</span> Initiative
 					</h1>
 					<br>
-					<h4 id="alphaAlert" style="border-radius:1em;padding:1em 1em 1em 1em;background-color: rgba(0,0,0,.5);">
-						NOW IN <span style="color:#0af794;">ALPHA</span> TESTING STAGES! ALL DRAWINGS AT THIS TIME ARE JUST FILLER DATA FOR TESTING AND THE PAYMENT SYSTEM IS NOT OPERATIONAL, IT IS IN <span style="color:#0af794;">TEST MODE</span> AND <span style="color:#0af794;">WILL NOT CHARGE</span> YOU FOR <u>ANY </u>TRANSACTIONS YOU SIMULATE. THAT IS TO SAY, WE'RE NOT IN CONTACT WITH <span style="color:#0af794;">SAMUEL L. JACKSON....</span> YET....<br><br>
+					<div id="alphaAlert" style="border-radius:1em;padding:1em 1em 1em 1em;background-color: rgba(0,0,0,.5);">
+						<h4>NOW IN <span style="color:#0af794;">ALPHA</span> TESTING STAGES! ALL DRAWINGS AT THIS TIME ARE JUST FILLER DATA FOR TESTING AND THE PAYMENT SYSTEM IS NOT OPERATIONAL, IT IS IN <span style="color:#0af794;">TEST MODE</span> AND <span style="color:#0af794;">WILL NOT CHARGE</span> YOU FOR <u>ANY </u>TRANSACTIONS YOU SIMULATE. THAT IS TO SAY, WE'RE NOT IN CONTACT WITH <span style="color:#0af794;">SAMUEL L. JACKSON....</span> YET....<br><br><h4>
 						<div class="sharethis-inline-follow-buttons"></div>
-					</h4>
-					<br>
-					<div id="splashPar" >
+					{{-- <div id="splashPar" >
 						ALL proceeds go to the <span style="color:#0af794;">charities</span> and <span style="color:#0af794;">human interest projects</span> around the world.
+					</div> --}}
 					</div>
 					<br>
-					<form action="{{action('RafflesController@index')}}">
+					{{-- <form action="{{action('RafflesController@index')}}">
 						<button class="btn-success btn" style="font-size:1.5em;padding-top:.5em;">JOIN IN!</button>  
-						{{-- - OR -
-						<input type="submit" value="SIGN UP" class="btn-success btn" style="font-size:1.5em;padding-top:.5em;"> --}}
 					</form>	
-					<br>
+					<br> --}}
 					{{-- <div id="mobileCar1">
 						@include('layouts.partials.carousel')
 					</div> --}}
@@ -83,7 +81,7 @@
 				</div>
 			</div>
 		</main>
-		<div class="text-center" style="padding-top:98vh;width:100%;"></div>
+		<div class="text-center" style="padding-top:100vh;width:100%;"></div>
 		<section style="z-index:100;position:absolute;width:100%;">
 			<div id="splash4" class="row infoRows text-center">
 				<div class="col col-sm-12">
@@ -185,7 +183,7 @@
 			<div id="splash3" class="row infoRows">
 				<div class="col col-xs-12 col-sm-8 col-sm-offset-2 text-center" style="background-color: rgba(0,0,0,.8);">
 					<form action="{{action('RafflesController@index')}}">
-						<button class="btn-success btn" style="margin:1em 0 1em 0;font-size:1.5em;padding-top:.5em;">JOIN IN!</button>  
+						<button class="btn-success btn" style="margin:1em 0 1em 0;font-size:1.5em;padding-top:.5em;">CHECK US OUT!</button>  
 						{{-- - OR -
 						<input type="submit" value="SIGN UP" class="btn-success btn" style="font-size:1.5em;padding-top:.5em;"> --}}
 					</form>	
