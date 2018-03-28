@@ -9,12 +9,13 @@
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 	
 	<link rel="stylesheet" type="text/css" href="/main.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="icon" href="{!! asset('images/globe.png') !!}"/>
 	<style type="text/css">
 		main {
             background-image: url("/images/view.jpg");
-            background-size: 100% 105%;
+            background-size: 100% 110%;
             background-position: center;
             background-attachment: fixed;
             background-repeat: no-repeat;
@@ -52,9 +53,9 @@
 	
 </head>
 	<body id="splashBod">
+		@include('layouts.partials._header')
 		<main style="z-index:0;height:110vh;width:100%;position:fixed;">
 			<div id="splashHeader" class="row text-center">
-				@include('layouts.partials._header')
 				<div class="col col-xs-12"  style="padding:0;">
 					<h1 id="splashTitle" style="">
 						The<span style="color:white;"> Global Charity</span> Initiative

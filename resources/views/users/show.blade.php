@@ -83,7 +83,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col col-sm-12" style="margin-bottom:3em;">
+			{{-- <div class="col col-sm-12" style="margin-bottom:3em;">
 				@if(count($suggestions))
 					<div style="margin-top:1em;">
 					<h1 style="text-align:center;color:lightgreen;margin-top:2em;">YOUR SUGGESTIONS</h1>
@@ -111,7 +111,7 @@
 				       	<a href="{{action('SuggestionsController@create')}}"> <button class="btn btn-success cleargreenBtn">ADD SUGGESTION</button></a>
 			       	</div>
 			    @endif
-			</div>
+			</div> --}}
 		</div>
 	</main>
 	@endif

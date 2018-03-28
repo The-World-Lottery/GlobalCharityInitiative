@@ -47,7 +47,7 @@ Route::get('/saveWallet','UsersController@saveUserWallet');
 
 Route::get('/openAddress/{id}','SuggestionsController@openAddress');
 Route::get('/closeAddress/{id}','SuggestionsController@closeAddress');
-Route::get('/suggestions/adminIndex','SuggestionsController@adminIndex');
+// Route::get('/suggestions/adminIndex','SuggestionsController@adminIndex');
 
 Route::get('/raffles/adminIndex','RafflesController@adminIndex');
 // Route::get('/lotteries/adminIndex','LotteriesController@adminIndex');
@@ -64,7 +64,7 @@ Route::get('/winners','RafflesController@winners');
 
 Route::resource('currencyconversion','CurrencyConversionController');
 
-Route::resource('suggestions', 'SuggestionsController');
+// Route::resource('suggestions', 'SuggestionsController');
 
 Route::resource('users', 'UsersController');
 

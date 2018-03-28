@@ -66,11 +66,11 @@
 					<span  class="navLink">Manage Users</span>
 					</a>
 				</li>
-				<li>
+				{{-- <li>
 					<a  href="{{action('SuggestionsController@adminIndex')}}">
 					<span  class="navLink">Manage Suggestions</span>
 					</a>
-				</li>
+				</li> --}}
 	            {{-- <li><a href="#">Action</a></li>
 	            <li><a href="#">Another action</a></li>
 	            <li><a href="#">Something else here</a></li>
@@ -81,11 +81,11 @@
 	          </ul>
 	        </li>
 	        @endif
-          <li   class="headLinks">
+          {{-- <li   class="headLinks">
           	<a style="border-radius:0 0 2px 2px" style="border-radius:0 0 2px 2px" href="{{action('SuggestionsController@index')}}">
           	<span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
           	<span class="navLink">Suggestions</span></a>
-          </li>
+          </li> --}}
           <li class="headLinks">
           	<a style="border-radius:0 0 2px 2px" href="/">
           	<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
