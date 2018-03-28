@@ -12,8 +12,8 @@ table, th, td {
 @stop
 
 @section('divHead')
-
-<h1>User profiles </h1>
+<br>
+<h2>User profiles </h2>
 <span style="float:right;padding-right:1em;">{!! $users->appends(Request::except('page'))->render() !!}</span>
 
 @stop
