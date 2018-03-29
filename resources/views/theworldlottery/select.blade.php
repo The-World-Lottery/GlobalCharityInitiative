@@ -36,7 +36,7 @@
 		<div class="row" id="checkWrapper">
 			<form id="thisForm" method="POST" action="/gcdCheckout">
 				<div style="margin-bottom: 2em;" class="col col-md-8 col-xs-12">
-					<h2>Pick <span class="greenTxt">ANY 5</span> numbers (1 - 100) and then...</h2>
+					<h2>Pick <span class="greenTxt">ANY 5</span> numbers (1 - 100) and...</h2>
 					{!! csrf_field() !!}
 					@for($i = 1; $i <= 100; $i++)
 						<div style="float:left;position:relative;display:flex;justify-content:center;">
@@ -53,7 +53,8 @@
 						@endfor
 					</select>
 					<br>
-					<h2>Then</h2><br>
+					<br>
+					<h2>Then</h2>
 					<h2 id="sub">SUBMIT YOUR NUMBERS!</h2>
 					<button id="sub2" style="display:none;" class="btn btn-success cleargreenBtn">SUBMIT NUMBERS</button><br><br>
 					@if ((Auth::check()) && (Auth::user()->is_admin))
