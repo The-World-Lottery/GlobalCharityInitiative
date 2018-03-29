@@ -27,7 +27,7 @@ class TheWorldLotteryEntry extends Model
           }
     		}
         // var_dump($numb);
-      $key = rand(0,100);
+      $key = rand(1,50);
         // var_dump($key);
   		$peeps = TheWorldLotteryEntry::where('the_world_lottery_id' , $id)->get();
       foreach ($peeps as $peep) {

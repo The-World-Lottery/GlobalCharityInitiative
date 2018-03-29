@@ -12,13 +12,11 @@
 	Global Charity Drawing
 	<div style="font-size:50%;margin-bottom: 0em;">Requires $5 donation to participate.</div>
 </h2>
-
-
 @stop
 
 @section('content')
 	<div class="container text-center">
-		<h4 id="jackpot" style="color:lightgreen;">
+		<h4 id="jackpot" style="margin-top:-.4em;color:lightgreen;">
 			${{number_format($theWorldLottery->current_value,0,".",",")}}</h4>		
 		<h4 style="color:#00ffc4;">{{-- Drawing takes place:<br> --}}
 		@if(\App\Models\TheWorldLottery::orderBy('id','desc')->limit(1)->get()[0]['end_date'] <= date('Y-m-d H:i:s'))
@@ -37,6 +35,33 @@
 	<main class="container" style="max-width:100%;display:flex;justify-content: center;">
 		<div class="row" id="checkWrapper">
 			<form id="thisForm" method="POST" action="/gcdCheckout">
+				<div style="margin-bottom: 2em;" class="col col-md-8 col-xs-12">
+					<h2>Pick <span class="greenTxt">ANY 5</span> numbers (1 - 100) and then...</h2>
+					{!! csrf_field() !!}
+					@for($i = 1; $i <= 100; $i++)
+						<div style="float:left;position:relative;display:flex;justify-content:center;">
+							<span style="position:absolute;top:10%;">{{$i}}</span>
+							<input class="numCheckbox" type="checkbox" name="{{$i}}">
+						</div>
+					@endfor
+				</div>
+				<div style="margin-bottom: 2em;" class="text-center col col-md-4 col-xs-12">
+					<h2>Select a <span class="greenTxt">KEY</span> number</h2>
+					<select class="selectpicker text-center" name="powerNumber" style="z-index: 10000;"> 
+						@for($i = 1; $i <= 50; $i++)
+							<option value="{{$i}}" style="display: flex;justify-content: center;">{{$i}}</option>
+						@endfor
+					</select>
+					<br>
+					<h2>Then</h2><br>
+					<h2 id="sub">SUBMIT YOUR NUMBERS!</h2>
+					<button id="sub2" style="display:none;" class="btn btn-success cleargreenBtn">SUBMIT NUMBERS</button><br><br>
+					@if ((Auth::check()) && (Auth::user()->is_admin))
+						<a href="{{ action('TheWorldLotterysController@edit', $theWorldLottery->id) }}"><button style="margin-bottom: 2em;" class="btn btn-warning">EDIT</button></a>
+					@endif
+				</div>
+			  <input type="hidden" name="_token" value="{{ csrf_token() }}">
+			  <input type="hidden" name="amount" value="500">
 			<script
 			    src="https://checkout.stripe.com/checkout.js"
 			  	class="stripe-button"
@@ -48,33 +73,6 @@
 				data-locale="auto"
 				data-zip-code="true">
 			</script>
-				<div style="margin-bottom: 2em;" class="col col-md-9 col-xs-12">
-					<h2>Pick <span class="greenTxt">ANY 5</span> numbers (1 - 100)</h2>
-					{!! csrf_field() !!}
-					@for($i = 1; $i <= 100; $i++)
-						<div style="float:left;position:relative;display:flex;justify-content:center;">
-							<span style="position:absolute;top:10%;">{{$i}}</span>
-							<input class="numCheckbox" type="checkbox" name="{{$i}}">
-						</div>
-					@endfor
-				</div>
-				<div style="margin-bottom: 2em;" class="text-center col col-md-3 col-xs-12">
-					<h2>And select your<br><span class="greenTxt">KEY</span> number</h2>
-					<select class="selectpicker text-center" name="powerNumber"> 
-						@for($i = 1; $i <= 100; $i++)
-							<option value="{{$i}}" style="display: flex;justify-content: center;"><span>{{$i}}</span></option>
-						@endfor
-					</select>
-					<br>
-					<h2>Then</h2>
-					<h2 id="sub">SUBMIT YOUR NUMBERS!</h2>
-					<button id="sub2" style="display:none;" class="btn btn-success cleargreenBtn">SUBMIT NUMBERS</button><br><br>
-					@if ((Auth::check()) && (Auth::user()->is_admin))
-						<a href="{{ action('TheWorldLotterysController@edit', $theWorldLottery->id) }}"><button style="margin-bottom: 2em;" class="btn btn-warning">EDIT</button></a>
-					@endif
-				</div>
-			  <input type="hidden" name="_token" value="{{ csrf_token() }}">
-			  <input type="hidden" name="amount" value="500">
 			</form>
 			
 		</div>
