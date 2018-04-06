@@ -60,19 +60,18 @@
 					<h1 id="splashTitle" style="">
 						The<span style="color:white;"> Global Charity</span> Initiative
 					</h1>
-					<br>
-					<div id="alphaAlert" style="background-color: rgba(0,0,0,.7);">
+					{{-- <div id="alphaAlert" style="background-color: rgba(0,0,0,.7);">
 						<h4>NOW IN <span style="color:#0af794;">ALPHA</span> TESTING STAGES! ALL DRAWINGS AT THIS TIME ARE JUST FILLER DATA FOR TESTING AND THE PAYMENT SYSTEM IS NOT OPERATIONAL, IT IS IN <span style="color:#0af794;">TEST MODE</span> AND <span style="color:#0af794;">WILL NOT CHARGE</span> YOU FOR <u>ANY </u>TRANSACTIONS YOU SIMULATE. THAT IS TO SAY, WE'RE NOT IN CONTACT WITH <span style="color:#0af794;">SAMUEL L. JACKSON....</span> YET....<br><br><h4>
 						<div class="sharethis-inline-follow-buttons"></div>
-					{{-- <div id="splashPar" >
-						ALL proceeds go to the <span style="color:#0af794;">charities</span> and <span style="color:#0af794;">human interest projects</span> around the world.
+						<div id="splashPar" >
+							ALL proceeds go to the <span style="color:#0af794;">charities</span> and <span style="color:#0af794;">human interest projects</span> around the world.
+						</div>
 					</div> --}}
-					</div>
 					<br>
-					{{-- <form action="{{action('RafflesController@index')}}">
+					<form action="{{action('RafflesController@index')}}">
 						<button class="btn-success btn" style="font-size:1.5em;padding-top:.5em;">JOIN IN!</button>  
 					</form>	
-					<br> --}}
+					<br>
 					{{-- <div id="mobileCar1">
 						@include('layouts.partials.carousel')
 					</div> --}}
@@ -84,11 +83,44 @@
 		</main>
 		<div class="text-center" style="padding-top:100vh;width:100%;"></div>
 		<section style="z-index:100;position:absolute;width:100%;">
-			<div id="splash4" class="row infoRows text-center">
-				<div class="col col-sm-12">
-					<h1>WHY and HOW</h1>
+			
+			
+			<div id="splash1" class="row infoRows gamePositioning text-center">	
+				<div class="col col-xs-12 col-md-8" id="gameHold">
+					<div class="splashInfo">
+						<h2>Donations</h2>
+						<blockquote>When a company wishes to advertise through us they may donate one of their products or services. We will create a drawing for the sponsored donation and all proceeds will go to charity. Celebrities may donate a day of their time", or something of the like, to for one or more lucky donors to win! There will always be a winner of each drawing as long as even one ticket is purchased. A small portion of each ticket price will increase the value of the currently running Global Charity drawing. The proceeds will be donated to selected charities.</blockquote>		
+					</div>
+					<br>
+					<div class="bottomPos">
+						@include('raffles.one')
+					</div>
 				</div>
+				<div class="col col-xs-12 col-md-4" id="gameHold">
+					<div class="splashInfo">
+						<h2>Upcoming Drawing Value</h2>
+						<blockquote>A monthly drawing where players select 5 numbers 1-100 and a key number. Our hope is that this will eventualy grow to a huge number and we can provide a world record breaking donation. The record is held by Warren Buffet. For now...</blockquote>
+					</div>
+					<div class="bottomPos">
+						<a href="/picknumbers">
+						<p style="font-size:2.5em;padding:1em .3em 1em .3em;background-color:rgba(0,0,0,.5);border-radius: 1em;margin-top:.5em;"><span style="color:white">The <span style="color:lightgreen;">Global Charity </span>Drawing <b><span style="color:lightgreen;">${{number_format((\App\Models\TheWorldLottery::orderBy('id','desc')->first()->get()[0]['current_value']),0,".",",")}}</span></b>
+						<br><strong style="color:#00ffc4;margin-bottom: .5em;">{{$twl[0]->end_date->diffForHumans()}}</strong></span></p>
+						</a>
+					</div>
+				</div>
+			{{-- 	<div class="col col-xs-12 col-sm-4" id="gameHold">
+					<div class="splashInfo">
+						<h2>Mixed Lotteries</h2>
+						<blockquote>Each Mixed Lottery is created with an initial donation from TWL. Each ticket purchase increases that individual lottery's jackpot and the current World Lottery Jackpot. There will always be a winner of each mixed lottery as long as even one ticket is purchased.</blockquote>
+					</div>
+					<div class="bottomPos">
+						@include('lotteries.one')
+					</div>
+				</div> --}}
 			</div>
+
+			
+
 			<div id="splash3" class="row infoRows parallax">
 					{{-- <div id="mobileCar2">
 						@include('layouts.partials.carousel')
@@ -111,49 +143,13 @@
 					</div>
 				</div>
 			</div>
-			
-			<div id="splash1" class="row infoRows gamePositioning text-center">	
-				<div class="col col-xs-12 col-sm-8" id="gameHold">
-					<div class="splashInfo">
-						<h2>Donations</h2>
-						<blockquote>When a company wishes to advertise through us they may donate one of their products or services. We will create a drawing for the sponsored donation and all proceeds will go to charity. Celebrities may donate a day of their time", or something of the like, to for one or more lucky donors to win! There will always be a winner of each drawing as long as even one ticket is purchased. A small portion of each ticket price will increase the value of the currently running Global Charity drawing. The proceeds will be donated to selected charities.</blockquote>		
-					</div>
-					<div class="bottomPos">
-						@include('raffles.one')
-					</div>
-				</div>
-				<div class="col col-xs-12 col-sm-4" id="gameHold">
-					<div class="splashInfo">
-						<h2>Upcoming Drawing Value</h2>
-						<blockquote>A monthly drawing where players select 5 numbers 1-100 and a key number. Our hope is that this will eventualy grow to a huge number and we can provide a world record breaking donation. The record is held by Warren Buffet. For now...</blockquote>
-					</div>
-					<div class="bottomPos">
-						<a href="/picknumbers">
-						<p style="font-size:2.7em;padding:1em .3em 1em .3em;background-color:rgba(0,0,0,.5);border-radius: 1em;margin-top:.5em;"><span style="color:white">The <span style="color:lightgreen;">Global Charity </span>Drawing <b><span style="color:lightgreen;">${{number_format((\App\Models\TheWorldLottery::orderBy('id','desc')->first()->get()[0]['current_value']),0,".",",")}}</span></b>
-						<br><strong style="color:#00ffc4;margin-bottom: .5em;">{{$twl[0]->end_date->diffForHumans()}}</strong></span></p>
-						</a>
-					</div>
-				</div>
-			{{-- 	<div class="col col-xs-12 col-sm-4" id="gameHold">
-					<div class="splashInfo">
-						<h2>Mixed Lotteries</h2>
-						<blockquote>Each Mixed Lottery is created with an initial donation from TWL. Each ticket purchase increases that individual lottery's jackpot and the current World Lottery Jackpot. There will always be a winner of each mixed lottery as long as even one ticket is purchased.</blockquote>
-					</div>
-					<div class="bottomPos">
-						@include('lotteries.one')
-					</div>
-				</div> --}}
-			</div>
 
-			<div id="splash3" class="row infoRows parallax2">
-				<div class="col col-xs-12 col-sm-8 col-sm-offset-2" style="background-color: rgba(0,0,0,.8);">
-					<div class="par3">
-						We've created a green, worldwide charity hub. A one-stop-shop to learn about and help out multiple charitable projects. Maybe even have a little fun doing it. There's no need for a large factory because our tickets aren't made of paper, they're virtual and of no threat to forests. You don't even have to drive your personal vehicle to play. That little rectangle you carry around everywhere and can't stop looking at is the only device you need to participate!
-					</div>
+			{{-- <div id="splash4" class="row infoRows text-center">
+				<div class="col col-sm-12">
+					<h1>WHY and HOW</h1>
 				</div>
-			</div>
-		
-			
+			</div> --}}
+
 			<div id="splash1" class="row infoRows">
 				<div class="col col-xs-12 col-sm-6">
 					<div class="splashInfo">
@@ -183,19 +179,32 @@
 					</div>
 				</div>
 			</div>
-			<div id="splash3" class="row infoRows">
-				<div class="col col-xs-12 col-sm-8 col-sm-offset-2 text-center" style="background-color: rgba(0,0,0,.8);">
-					<form action="{{action('RafflesController@index')}}">
+
+
+			<div id="splash3" class="row infoRows parallax2">
+				<div class="col col-xs-12 col-sm-8 col-sm-offset-2" style="background-color: rgba(0,0,0,.8);">
+					<div class="par3">
+						We've created a green, worldwide charity hub. A one-stop-shop to learn about and help out multiple charitable projects. Maybe even have a little fun doing it. There's no need for a large factory because our tickets aren't made of paper, they're virtual and of no threat to forests. You don't even have to drive your personal vehicle to play. That little rectangle you carry around everywhere and can't stop looking at is the only device you need to participate!
+					</div>
+
+					<form action="{{action('RafflesController@index')}}" style="display:flex;justify-content: center;">
 						<button class="btn-success btn" style="margin:1em 0 1em 0;font-size:1.5em;padding-top:.5em;">CHECK US OUT!</button>  
 						{{-- - OR -
 						<input type="submit" value="SIGN UP" class="btn-success btn" style="font-size:1.5em;padding-top:.5em;"> --}}
 					</form>	
-					{{-- <div style="padding:2em 0 .1em 0;height: 10em;">
-					    <div style="" id="random_quote">
-					    </div>
-					</div> --}}
 				</div>
 			</div>
+		
+			
+			
+			{{-- <div id="splash3" class="row infoRows">
+				<div class="col col-xs-12 col-sm-8 col-sm-offset-2 text-center" style="background-color: rgba(0,0,0,.8);">
+					<div style="padding:2em 0 .1em 0;height: 10em;">
+					    <div style="" id="random_quote">
+					    </div>
+					</div>
+				</div>
+			</div> --}}
 			
 		</section>
 	</div>

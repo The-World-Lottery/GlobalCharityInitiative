@@ -87,9 +87,9 @@
 				<div class="row" id="theCreatorsContainer">
 					<div class="col col-sm-4 col-xs-12">
 					<h2 class="infoHeaders">Emmett Peters</h2>
-						<img class="creatorPics" src="/images/roo.jpg">
+						{{-- <img class="creatorPics" src="/images/roo.jpg">
 						<br>
-						<br>
+						<br> --}}
 						<img class="creatorPics" src="/images/Emmett.jpg">
 						<br>
 						<br>
