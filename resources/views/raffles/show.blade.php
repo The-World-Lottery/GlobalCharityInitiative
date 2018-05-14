@@ -18,21 +18,24 @@
 		<div class="col-xs-12 col-sm-12 col paddingMobile text-center" >
 			<h1 style="font-size: 250%;margin-bottom:.5em;">{{$raffle->title}}</h1>
 			<br>
-			<br>
-			<div class="countdown col col-sm-6" style="padding-right: 3.5em;">
-				<h2>
+			<div style="margin-bottom: 1em;padding:0 2em 0 2em;">For each donation of 5 dollars you will recieve one entry. If you hold the only entry or enties when the drawing times out, you have a 100% chance to win the drawing. See a list of our previous winners <a href="/aboutus"><span style="color:#0af794;"><u>HERE</u></span></a>.<br>Thank you for your donation and good luck!</div>
+				<h2 style="color:lightgreen">
 					{{ $raffle->end_date->diffForHumans() }}
 				</h2>
+			<br>
+			<div class="countdown col col-sm-6" style="padding-right: 3.5em;">
 				<img style="max-height:20em;border-radius:1em;box-shadow: 20px 20px 20px rgba(0,0,0,.6);" src={!! $raffle->img !!}>
 			</div>
+			{{-- <br> --}}
 			<div class="col col-sm-6" style="margin-top: 1.5em;background-color: rgba(0,0,0,.5);padding:1em 2em 2em 2em;border-radius: 1em;">
-				<div class="">
-					<h2>Description: </h2>
-					<p>{{$raffle->product}}</p>
+				<br>
+				<div>
+					{{-- <h2>Description: </h2> --}}
+					<h3>{{$raffle->product}}</h3>
 				</div>
 				<div class="">
-					<h2>Charity Benefited:</h2>
-					<p>{{$raffle['content']}}</p>
+					<p>Charity Benefited:</p>
+					<h3>{{$raffle['content']}}</h3>
 				</div>
 				<div class="">
 					@if (\Auth::check())
@@ -44,7 +47,7 @@
 						  <button type="button" id="submit{{ $raffle['id'] }}" class="aSubmitButton cleargreenBtn btn-success btn">DONATE</button>
 						</div>
 					@else
-						<div style="margin-bottom:1em;">
+						<div style="margin-bottom:0em;">
 						  <a  href="/ticketFail" class="aSubmitButton cleargreenBtn btn-success btn">DONATE</a>
 						  <div>
 						  	

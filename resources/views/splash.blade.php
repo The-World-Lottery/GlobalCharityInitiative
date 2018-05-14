@@ -86,17 +86,23 @@
 			
 			
 			<div id="splash1" class="row infoRows gamePositioning text-center">	
-				<div class="col col-xs-12 col-md-8" id="gameHold">
+				<div class="col col-xs-12 col-md-12 " id="gameHold">
 					<div class="splashInfo">
-						<h2>Donations</h2>
-						<blockquote>When a company wishes to advertise through us they may donate one of their products or services. We will create a drawing for the sponsored donation and all proceeds will go to charity. Celebrities may donate a day of their time", or something of the like, to for one or more lucky donors to win! There will always be a winner of each drawing as long as even one ticket is purchased. A small portion of each ticket price will increase the value of the currently running Global Charity drawing. The proceeds will be donated to selected charities.</blockquote>		
-					</div>
-					<br>
-					<div class="bottomPos">
-						@include('raffles.one')
+						<div class="col-md-8">
+							<br>
+							<h2>Donations</h2>
+							<blockquote>When a company wishes to advertise through us they may donate one of their products or services. We will create a drawing for the sponsored donation and all proceeds will go to charity. Celebrities may donate a day of their time, or something of the like, to for one or more fans to win! There will always be a winner of each drawing as long as even one ticket is purchased. All proceeds will be donated to selected charities around the globe.</blockquote>	
+						</div>
+						<div class="col-md-4">
+							<br>
+							@include('raffles.one')
+							<br>
+						</div>	
+					{{-- </div>
+					<div class="bottomPos"> --}}
 					</div>
 				</div>
-				<div class="col col-xs-12 col-md-4" id="gameHold">
+				{{-- <div class="col col-xs-12 col-md-4" id="gameHold">
 					<div class="splashInfo">
 						<h2>Upcoming Drawing Value</h2>
 						<blockquote>A monthly drawing where players select 5 numbers 1-100 and a key number. Our hope is that this will eventualy grow to a huge number and we can provide a world record breaking donation. The record is held by Warren Buffet. For now...</blockquote>
@@ -107,7 +113,7 @@
 						<br><strong style="color:#00ffc4;margin-bottom: .5em;">{{$twl[0]->end_date->diffForHumans()}}</strong></span></p>
 						</a>
 					</div>
-				</div>
+				</div> --}}
 			{{-- 	<div class="col col-xs-12 col-sm-4" id="gameHold">
 					<div class="splashInfo">
 						<h2>Mixed Lotteries</h2>
@@ -126,11 +132,11 @@
 						@include('layouts.partials.carousel')
 					</div> --}}
 				<div class="col col-xs-12 col-sm-8 col-sm-offset-2" style="background-color: rgba(0,0,0,.8);">
-					<div class="par3 text-center">
-						<p>We saw a need to improve the efficiency of charitable fund-raising of every sort. This non-profit website was created in the hopes that we can do just that. All donations are allocated to charitable projects around the globe.</p>
+					<div class="par3">
+						<p>We saw a need to improve the efficiency of charitable fund-raising of every sort. This non-profit system was created in the hopes that we can do just that. </p>
 
-						<p>A <a target="_blank" href="https://www.gofundme.com/global-charity-initiative">GoFundMe</a> has been created for the cause. All donations here will go to staffing and operational costs. (right now its just me running everything). Hoping to hire the first two employees as I get into the Beta testing stages.</p> 
-						<p>The groups we work with will be decided by the world through our social media outlets.<br> <a target="_blank" href="https://twitter.com/WorldwideGiving?lang=en">Twitter<br>
+						{{-- <p>A <a style="color:lightgreen" target="_blank" href="https://www.gofundme.com/global-charity-initiative">GoFundMe</a> has been created for the cause. All donations here will go to staffing and operational costs. (right now its just me running everything). Hoping to hire the first two employees as I get into the Beta testing stages.</p> --}} 
+						<p class="text-center">You can keep up to date on what were doing the world through our social media outlets.<br> <a target="_blank" href="https://twitter.com/WorldwideGiving?lang=en">Twitter<br>
 						<img src="/images/Blue Icons/Twitter.svg" alt="global world charity twitter" class="socialIcon">
 					</a></p>
 						{{-- <br>
@@ -151,6 +157,7 @@
 			</div> --}}
 
 			<div id="splash1" class="row infoRows">
+				<br>
 				<div class="col col-xs-12 col-sm-6">
 					<div class="splashInfo">
 						<h2>The Idea</h2>
