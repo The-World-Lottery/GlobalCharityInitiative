@@ -49,32 +49,32 @@
 			    Every donation of $5 USD gets you one entry in the drawing of your choice.<br>
 			    Ticket prices to these drawings will be split thusly.
 			    </p>
+			    <br>
 			    <div class="row">
-				    <div class="col col-md-6 col-sm-12">
-				    	<h4 class="infoHeaders">Drawing Donations</h4>
-				    	<blockquote>
-				    		<div><span style="font-size:120%;color:#00ffc4;"> 75%</span><br> goes to Charity</div>
-			    			<div><span style="font-size:120%;color:#00ffc4;"> 20%</span><br> goes to The World Charity Drawing Pool</div>
-			    			<div><span style="font-size:120%;color:#00ffc4;"> 5%</span><br> goes to the payment system (Stripe)</div>
-				    	</blockquote>
+				    <div class="col col-md-12 col-sm-12">
+				    	<h2 class="infoHeaders text-center">Donation Drawings</h2>
+				    		<br>
+				    		<div class="col-md-4 text-center"><span style="font-size:300%;color:#00ffc4;"> 90%</span><br> goes DIRECTLY to Charity</div>
+			    			<div class="col-md-4 text-center"><span style="font-size:300%;color:#00ffc4;"> 3%</span><br> goes to The Global Charity Initiative</div>
+			    			<div class="col-md-4 text-center"><span style="font-size:300%;color:#00ffc4;"> 7%</span><br> goes to the payment system (Stripe)</div>
 				    </div>
-				    <div class="col col-md-6 col-sm-12">
+				    {{-- <div class="col col-md-6 col-sm-12">
 				    	<h4 class="infoHeaders">The Global Charity Drawing Donations</h4>
 				    	<blockquote>
 			    			<div><span style="font-size:120%;color:#00ffc4;"> 65%</span><br> goes to Charity</div>
 			    			<div><span style="font-size:120%;color:#00ffc4;"> 30%</span><br> goes to The Global Charity Drawing's Pool.</div>
 			    			<div><span style="font-size:120%;color:#00ffc4;"> 5%</span><br> goes to the payment system (Stripe)</div>
 				    	</blockquote>
-				    </div>
+				    </div> --}}
 			    </div>
 			    <br>
 			    <br>
-			    <div style="display:flex;justify-content: space-around;text-align:center;">
-					<a target="_blank" href="https://twitter.com/WorldwideCharity?lang=en">Twitter<br>
+			    <div style="display:flex;justify-content: center;text-align:center;">
+					<a style="margin:0 1em 0 1em;" target="_blank" href="https://twitter.com/WorldwideCharity?lang=en">Twitter<br>
 						<img src="/images/Blue Icons/Twitter.svg" alt="global charity twitter" class="socialIcon">
 					</a>
 					
-					<a target="_blank" href="https://github.com/The-World-Lottery/TheWorldLottery">GitHub<br>
+					<a style="margin:0 1em 0 1em;" target="_blank" href="https://github.com/The-World-Lottery/TheWorldLottery">GitHub<br>
 						<img src="/images/Blue Icons/GitHub.svg" alt="global charity GitHub" class="socialIcon">
 					</a>
 					
@@ -100,7 +100,10 @@
 					</div>
 					<div class="col col-sm-8 col-xs-12" >
 						<h2 class="infoHeaders">My History</h2>
-						<blockquote>Raised in the Castroville, Texas countryside with my one younger brother. Always enjoyed working in the shop with my dad on whatever project he was currently on. Became apt at math and sciences at a young age and graduated HS in the top 10 in 2010. I didn't know what I wanted to do after highschool but everyone told me engineering was just the next thing to do since I was already completing calculus and physics classes. Got a 50% scholarchip to Texas A&M for aerospace engineering. Went for 2 years and able to experience the day to day of engineers. Hated every second of it, so I took time off to relax for once. Met a wonderful girl while snowboarding and moved to amarillo with her very soon after. Spent ayear there, the we both moved back to my home in Castroville to help out with the family business. Got the business where it needed to be and decided to look for a new challenge. Racked my brain and remembered I had come up with several website ideas in the past. Brought a few ideas to a development company in San Antonio and was quoted $60,000 for them to create just one of them! So I decided to learn to code for myself. Found a 4 month accelerated coding camp called "Codeup" in Sa. Even though the cost of the class would put me in debt, decided to invest in my future. Halfway through the program I was informed that a grant I applied for paid for the entire thing! Because of this grant I didn't need to find a job immediately and i could actually work on my ideas. 4 months after graduating my idea for a global charity system is ready for the initial public test. I will announce the alpha round of testing on imgur. Every participant is greately appreciated! </blockquote>
+						<blockquote>Raised in the Castroville, Texas countryside with my one younger brother. Always enjoyed working in the shop with my dad on whatever project he was currently on. Became apt at math and sciences at a young age and graduated HS in the top 10 in 2010. I didn't know what I wanted to do after highschool but everyone told me engineering was just the next thing to do since I was already completing calculus and physics classes. Got a 50% scholarchip to Texas A&M for aerospace engineering. Went for 2 years and able to experience the day to day of engineers. Hated every second of it, so I took time off to relax for once. Met a wonderful girl while snowboarding and moved to amarillo with her very soon after. Spent ayear there, the we both moved back to my home in Castroville to help out with the family business. Got the business where it needed to be and decided to look for a new challenge. Racked my brain and remembered I had come up with several website ideas in the past. Brought a few ideas to a development company in San Antonio and was quoted $60,000 just to build me one of them! So I decided to learn to code for myself. Found a 4 month accelerated coding camp called "Codeup" in San Antonio. Even though the cost of the class would put me in debt, decided to invest in my future. Halfway through the program I was informed that a grant I applied for paid for the entire thing! Because of this grant I didn't need to find a job immediately and I could actually work on my ideas. 4 months after graduating my idea for a global charity system is ready for the initial public test. I will announce the alpha round of testing on imgur. Every participant is greately appreciated!
+						<br>
+						Edit: Initial public testing announced on Imgur went great! We had over 2000 test accounts created! All website feedback has been implemented and the Beta round of testing will be announced soon. Thank you all so much for the overwhelming support, advice and encouragement!
+						</blockquote>
 					</div> 	
 				</div>
 			</div>
