@@ -27,7 +27,7 @@
 				<img style="max-height:20em;border-radius:1em;box-shadow: 20px 20px 20px rgba(0,0,0,.6);" src={!! $raffle->img !!}>
 			</div>
 			{{-- <br> --}}
-			<div class="col col-sm-6" style="margin-top: 1.5em;background-color: rgba(0,0,0,.5);padding:1em 2em 2em 2em;border-radius: 1em;">
+			<div class="col col-sm-6" style="/*margin-top: 1.5em*/;background-color: rgba(0,0,0,.5);padding:1em 2em 2em 2em;border-radius: 1em;">
 				<br>
 				<div>
 					{{-- <h2>Description: </h2> --}}

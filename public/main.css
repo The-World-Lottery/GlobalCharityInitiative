@@ -445,9 +445,9 @@ label {
 }
 
 a:hover, a:active {
-	color:white;
-	text-decoration: underline;
 	color:lightgreen;
+	text-decoration: none;
+	
 }
 
 #jackpot {
