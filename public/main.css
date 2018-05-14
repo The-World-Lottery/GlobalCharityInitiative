@@ -833,9 +833,9 @@ blockquote {
 		padding-top:6em;
 	}
 
-	#navSuggMobile {
+	/*#navSuggMobile {
 		display:none;
-	}
+	}*/
 }
 
 @media (max-width: 991px) {

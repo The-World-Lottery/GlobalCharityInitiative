@@ -30,7 +30,7 @@
           	<span class="glyphicon glyphicon-gift" aria-hidden="true"></span>
           	<span class="navLink">Donations</span></a>
           </li>
-	      <li id="navSpecialHoverLink" class="headLinks">
+	      {{-- <li id="navSpecialHoverLink" class="headLinks">
           	<a style="border-radius:0 0 2px 2px" href="{{action('TheWorldLotterysController@selectNumbers')}}">
 	          	<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
 	          	<span id="navSpecialHover" class="navLink">
@@ -38,7 +38,7 @@
 	          		<span id="drawinghover2" style="font-size:110%;display:none;color:lightgreen;">${{ number_format((int) App\Models\TheWorldLottery::orderBy('id','desc')->get()[0]['current_value'],0,".",",") }}</span>
 	          	</span>
           	</a>
-          </li>
+          </li> --}}
           {{-- <li class="headLinks">
           	<a href="{{action('LotteriesController@index')}}">
           	<span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
