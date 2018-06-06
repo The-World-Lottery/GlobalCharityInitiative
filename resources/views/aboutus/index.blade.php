@@ -18,7 +18,7 @@
 	<ul class="nav nav-tabs" style="display:flex;justify-content: space-around;">
 	  <li class="active"><a  id="zeroO"  data-toggle="tab" href="#home">Past Winners </a></li>
 	  <li><a id="zeroO" data-toggle="tab" href="#menu1">Our Mission</a></li>
-	  <li><a id="zeroO" data-toggle="tab" href="#menu2">The Creator</a></li>
+	  {{-- <li><a id="zeroO" data-toggle="tab" href="#menu2">The Creator</a></li> --}}
 	</ul>
 	<div style="padding:1em;">
 		<div class="tab-content">
@@ -83,13 +83,13 @@
 
 
 			</div>
-			<div id="menu2" class="tab-pane fade">
+			{{-- <div id="menu2" class="tab-pane fade">
 				<div class="row" id="theCreatorsContainer">
 					<div class="col col-sm-4 col-xs-12">
 					<h2 class="infoHeaders">Emmett Peters</h2>
-						{{-- <img class="creatorPics" src="/images/roo.jpg">
+						<img class="creatorPics" src="/images/roo.jpg">
 						<br>
-						<br> --}}
+						<br>
 						<img class="creatorPics" src="/images/Emmett.jpg">
 						<br>
 						<br>
@@ -106,7 +106,7 @@
 						</blockquote>
 					</div> 	
 				</div>
-			</div>
+			</div> --}}
 		</div>
 	</div>
 </div>
