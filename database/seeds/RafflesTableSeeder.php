@@ -31,7 +31,7 @@ class RafflesTableSeeder extends Seeder
         }
         
         $day = 1;
-        $month = 6;
+        $month = 7;
         
         $raffle1= new \App\Models\Raffle();
         $raffle1->title = 'A Day With Samuel L. Jackson';
