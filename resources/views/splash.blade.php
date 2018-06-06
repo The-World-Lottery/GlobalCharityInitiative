@@ -136,9 +136,11 @@
 						<p>We saw a need to improve the efficiency of charitable fund-raising of every sort. This non-profit system was created in the hopes that we can do just that. </p>
 
 						{{-- <p>A <a style="color:lightgreen" target="_blank" href="https://www.gofundme.com/global-charity-initiative">GoFundMe</a> has been created for the cause. All donations here will go to staffing and operational costs. (right now its just me running everything). Hoping to hire the first two employees as I get into the Beta testing stages.</p> --}} 
-						<p class="text-center">You can keep up to date on what were doing the world through our social media outlets.<br> <a target="_blank" href="https://twitter.com/WorldwideGiving?lang=en">Twitter<br>
+						<p class="text-center">Follow us on <a target="_blank" href="https://twitter.com/WorldwideGiving?lang=en">Twitter
 						<img src="/images/Blue Icons/Twitter.svg" alt="global world charity twitter" class="socialIcon">
-					</a></p>
+						</a>
+						<br>To stay up to date with what we're doing.
+						</p>
 						{{-- <br>
 						<p>The two types of sponsors were currently looking for are
 							<ul>
