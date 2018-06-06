@@ -20,10 +20,10 @@ class UsersController extends Controller
     public function index()
     {
         if(\Auth::user()->is_admin){
-            $users = User::paginate(16);
+            $users = User::where("id",">",1)->paginate(16);
             return view('users.index')->with(array('users' => $users));    
         }
-        return \Redirect::action('LotteriesController@index');
+        return \Redirect::action('RafflesController@index');
     }
 
     /**
