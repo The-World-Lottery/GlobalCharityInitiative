@@ -48,7 +48,7 @@ class RafflesController extends Controller
             $raffles = Raffle::paginate(16);
             return view('raffles.admin')->with(array('raffles' => $raffles));
         }
-        return \Redirect::action('LotteriesController@index');
+        return \Redirect::action('RafflesController@index');
     }
 
     public function chargeCard(Request $request, $id, $count)

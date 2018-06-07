@@ -162,6 +162,10 @@ a.navLink:hover {
 	background-color: rgba(0,0,0,.2);
 }
 
+a h3:hover {
+	color:lightgreen;
+}
+
 .socialIcon {
 	height:2.5em;
 	margin-top: 1.7vh;
