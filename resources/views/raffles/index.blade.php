@@ -2,21 +2,15 @@
 
 @section('title')
 
-<title>Donations Drawings</title>
+<title>Dontated Experiences</title>
 
 @stop
 
 @section('divHead')
 	<div id="raffHead" class="container">
-	<br>
-		<h2>Donation Drawings</h2>
-
-	{{-- <h2 id="hoverTrigger"> --}}
-		<div style="margin-bottom: 1em;padding:0 2em 0 2em;">Each donation of 5 dollars gets you one entry in the drawing of your choice. If you hold the only entry or enties when the drawing times out, you have a 100% chance to win that drawing. See a list of our previous winners <a href="/aboutus"><span style="color:#0af794;"><u>HERE</u></span></a>.<br>Thank you for your donation!</div>
-
+		<br>
+		<h2>Donated Experiences</h2>
 	</div>
-	{{-- </h2> --}}
-
 @stop
 
 @section('content')
@@ -32,43 +26,46 @@
         <div class="alert alert-warning text-center">{{ session('errorMessage') }}</div>
     @endif
 
-	<div class="row" style="margin-top: 2em;">
+	<div class="container">
+		<div class="row" style="margin-top: 2em;">
 		@foreach($raffles as $raffle)
-			<div class="col-sm-6 col-md-4 col-lg-3 text-center">
+			<div class="col-sm-12 col-md-6 col-lg-4">
 				<div id="raffleHolder">
 					<a  id="raffleAnchor" style="" href="{{ action('RafflesController@show', $raffle->id) }}">
 						<div class="raffleCont" style='background-image:url("{{$raffle->img}}");'>
-							<img src="{{$raffle->img}}" style="height:0;width:0;" alt="{{$raffle->product}}">
-							<h3 title="{{$raffle->product}}" style="/*color:#31b7d5;*/background-color: rgba(0,0,0,.5);margin:-.7em 0 0 0;padding:.6em;">
-							{{$raffle->title}}
-							</h3>
+							<div class="raffleTime" style="">{{$raffle->end_date->diffForHumans()}}
+							</div>
+						</div>
+						<div class="raffleInfo">
+							<div>Support</div>
+							<div>{{$raffle->title}}</div>
+							<div style="color:red;position:absolute;right:30px;bottom:25px;"><span class="glyphicon glyphicon-circle-arrow-right"></span><b><i style="padding-bottom:2px;">more info</i></b></div>
+							<!-- <h3 title="{{$raffle->product}}" style="/*color:#31b7d5;*/background-color: rgba(0,0,0,.5);margin:-.7em 0 0 0;padding:.6em;"> -->
+							<!-- @if (\Auth::check())
+								<div style="margin-bottom:1em;">
+							  	<label>
+							  		HOW MANY ENTRIES?
+								  	<input class="form-control text-center" id="amount{{ $raffle->id }}" type="text" name="amount" value="1">
+							  	</label><br>
+								  <button type="button" id="submit{{ $raffle->id }}" class="aSubmitButton cleargreenBtn btn-success btn">DONATE</button>
+								</div>
+							@else
+								<div style="margin-bottom:1em;">
+								  <a  href="/ticketFail" class="aSubmitButton cleargreenBtn btn-success btn">DONATE</a>
+								</div>
+							@endif
+							 <h5>
+							 	<span style="color:#31b7d5">TOTAL ENTRY COUNT :</span> 
+							 	{{ \App\Models\RaffleEntry::where('raffles_id','=', $raffle->id)->count() }} 
+							 </h5> -->
 						</div>
 					</a>	
-					<div class="raffleInfo">
-						<h3 style="color:yellow;position:relative;bottom:0;">{{$raffle->end_date->diffForHumans()}}</h3>
-						@if (\Auth::check())
-							<div style="margin-bottom:1em;">
-						  	<label>
-						  		HOW MANY TIMES?
-							  	<input class="form-control text-center" id="amount{{ $raffle->id }}" type="text" name="amount" value="1">
-						  	</label><br>
-							  <button type="button" id="submit{{ $raffle->id }}" class="aSubmitButton cleargreenBtn btn-success btn">DONATE</button>
-							</div>
-						@else
-							<div style="margin-bottom:1em;">
-							  <a  href="/ticketFail" class="aSubmitButton cleargreenBtn btn-success btn">DONATE</a>
-							</div>
-						@endif
-						 <h5>
-						 	<span style="color:#31b7d5">ENTRY COUNT :</span> 
-						 	{{ \App\Models\RaffleEntry::where('raffles_id','=', $raffle->id)->count() }} 
-						 </h5>
-					</div>
 
 				</div>
 			</div>
 		@endforeach
-	</div>
+		</div>
+		</div>
 	<div style="height:3em;">
 	</div>
 

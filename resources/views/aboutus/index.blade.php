@@ -27,13 +27,12 @@
 					
 					 @foreach(\App\Models\Raffle::where('complete','1')->where('winner_id','>','0')->get() as $winner)
 						<div class="col col-sm-6 col-xs-12">
-						<h5><span style="color:#0af794;">{{ \App\User::select('username')->where('id',$winner->winner_id)->get()[0]['username'] }}</span>
+						<h5><span style="color:black;">{{ \App\User::select('username')->where('id',$winner->winner_id)->get()[0]['username'] }}</span>
 
 						</h5> 
 
 						won {{$winner->product}}
 
-						<span style="color:#0af794;">{{$winner->end_date->diffForHumans()}}</span>
 						<br>
 						<br>
 						</div>

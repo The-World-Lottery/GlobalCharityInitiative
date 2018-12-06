@@ -8,8 +8,8 @@ body.fade-out {
 }
 
 body#master {
-	color:#e0fff8;
-	background-color:#1b446f;
+	color:#005061;
+	background-color:white;
 	/*font-family: 'PT Sans Narrow', sans-serif !important; 	*/
 	letter-spacing:1px;
 	font-size:90%;
@@ -37,8 +37,9 @@ body#splashBod {
 
 h1,h2,h3,h4,h5,h6 {
 	/*font-family: 'PT Sans Narrow', sans-serif !important; */
-	letter-spacing:2px;
-	text-shadow: 3px 3px 3px black;
+	letter-spacing:1px;
+	color:#005061;
+	/*text-shadow: 3px 3px 3px black;*/
 	font-family: 'Josefin Sans', sans-serif !important;
 }
 
@@ -128,9 +129,10 @@ a.navLink:hover {
 	color:white;
 	background-position:center top;
 	background-size: cover;
-	text-align:center;
+	/*text-align:center;*/
 	height:17em;
 	min-width:100%;
+	font-size:80%;
 	overflow:hidden;
 	background-repeat: no-repeat;
 	background-color: rgba(0,0,0,.2);
@@ -142,24 +144,31 @@ a.navLink:hover {
 }
 
 #raffleHolder {
-	border:2px solid rgba(49,183,213,.5);
+	/*border:2px solid rgba(49,183,213,.5);*/
 	min-height:100%;
 	margin-bottom:1em;
 	/*padding-top:.5em;*/
-	border-radius: 1em;
+	border-radius: 4px;
 	overflow:hidden;
-	box-shadow:2px 2px 4px rgba(49,183,213,.4);
+	/*box-shadow:2px 2px 4px rgba(49,183,213,.4);*/
 }
 
-.lotteryPadding {
-	padding-left: .5em;
-	padding-right:.5em;
+.raffleTime {
+	font-style:italic;
+	color:white;
+	float:right;
+	background-color: rgba(19,154,205,.8);
+	border-radius:10px;
+	padding:3px 5px 3px 10px;
+	margin:8px 8px 0 0;
 }
 
 .raffleInfo {
-	padding:.6em .5em .5em .5em;
-	/*height:11em;*/
-	background-color: rgba(0,0,0,.2);
+	padding:1em;
+	border-left:1px solid #d1d1d1;
+	border-right:1px solid #d1d1d1;
+	border-bottom:1px solid #d1d1d1;
+	border-radius:0 0 2px 2px;
 }
 
 a h3:hover {
@@ -191,7 +200,7 @@ span.help-block {
 	color:yellow !important;
 }
 
-.indivLottoCont{
+/*.indivLottoCont{
 	background-position:center;
 	background-size:110% 110%;
 	text-align:center;
@@ -206,7 +215,7 @@ span.help-block {
 .lottoInfo {
 	background-color:rgba(0,0,0,.5);
 	padding:.5em .2em .5em .2em;
-}
+}*/
 
 #main {
 	color:white;
@@ -215,7 +224,7 @@ span.help-block {
 }
 
 .infoHeaders {
-	color:lightblue;
+	color:#005061;
 }
 
 #chat {
@@ -239,8 +248,8 @@ span.help-block {
 }
 
 .raffleContent:hover {
-	background-color:rgba(0,0,0,.5);
-	opacity:1;
+	opacity:.8;
+	
 }
 
 #gameArea {
@@ -271,7 +280,7 @@ ul.pagination {
 	max-height:1em;
 }
 
-.glyphicon {
+.navbar-header-glyphicon {
 	color:white;
 }
 
@@ -285,7 +294,7 @@ ul.pagination {
 
 .pagination > li > a,
 .pagination > li > span {
-    color: #31b7d5; // use your own color here
+    color: #31b7d5;
 }
 
 .pagination > .active > a,
@@ -448,7 +457,7 @@ label {
 }
 
 a:hover, a:active {
-	color:lightgreen;
+	color:black;
 	text-decoration: none;	
 }
 
@@ -458,7 +467,7 @@ a:hover, a:active {
 
 #zeroO {
 	background-color:rgba(0,0,0,0);
-	color:lightblue;
+	color:#005061;
 }
 
 input, button {
@@ -489,7 +498,7 @@ input {
 
 #menu {
 	padding:0 0 0 0;
-	background-color:#31b7d5;
+	background-color:#005061;
 }
 
 .navButton {

@@ -27,12 +27,12 @@
         <ul class="nav navbar-nav navbar-right">
           <li class="headLinks">
           	<a style="border-radius:0 0 2px 2px" href="{{action('RafflesController@index')}}">
-          	<span class="glyphicon glyphicon-gift" aria-hidden="true"></span>
+          	<span class="glyphicon glyphicon-gift navbar-header-glyphicon" aria-hidden="true"></span>
           	<span class="navLink">Donations</span></a>
           </li>
 	      {{-- <li id="navSpecialHoverLink" class="headLinks">
           	<a style="border-radius:0 0 2px 2px" href="{{action('TheWorldLotterysController@selectNumbers')}}">
-	          	<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+	          	<span class="glyphicon glyphicon-globe navbar-header-glyphicon" aria-hidden="true"></span>
 	          	<span id="navSpecialHover" class="navLink">
 	          		<span id="drawinghover1"> Global Drawing</span>
 	          		<span id="drawinghover2" style="font-size:110%;display:none;color:lightgreen;">${{ number_format((int) App\Models\TheWorldLottery::orderBy('id','desc')->get()[0]['current_value'],0,".",",") }}</span>
@@ -41,7 +41,7 @@
           </li> --}}
           {{-- <li class="headLinks">
           	<a href="{{action('LotteriesController@index')}}">
-          	<span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
+          	<span class="glyphicon glyphicon-usd navbar-header-glyphicon" aria-hidden="true"></span>
           	<span class="navLink">Lotteries</span></a>
           </li> --}}
           {{-- class="headLinks" <li>
@@ -88,12 +88,12 @@
           </li> --}}
           <li class="headLinks">
           	<a style="border-radius:0 0 2px 2px" href="/">
-          	<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+          	<span class="glyphicon glyphicon-home navbar-header-glyphicon" aria-hidden="true"></span>
           	<span class="navLink">Home</span></a>
           </li>
           <li   class="headLinks" style="margin-right:1em;">
           	<a style="border-radius:0 0 2px 2px" style="border-radius:0 0 2px 2px" href="{{action('AboutUsController@index')}}">
-          	<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+          	<span class="glyphicon glyphicon-info-sign navbar-header-glyphicon" aria-hidden="true"></span>
           	<span id="navSuggMobile" class="navLink">About Us</span>
           	</a>
           </li>

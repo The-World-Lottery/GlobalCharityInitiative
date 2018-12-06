@@ -16,8 +16,8 @@
 <body id="master" style="font-family: 'Josefin Sans', sans-serif;">
 	<div style="height:100%;">
 		@include('layouts.partials._header')	
-	<img id="backgroundPic" class="center-block" style="opacity:.41;height:100%;" src="/images/earthAtNight.jpg">
-		<div class="row" style="padding-top: 7vh;">
+	<!-- <img id="backgroundPic" class="center-block" style="opacity:.41;height:100%;" src="/images/earthAtNight.jpg"> -->
+		<div class="row" style="padding-top: 6.5vh;">
 			<div id="gameScroll" style="font-size:1.2em;" class="col col-sm-12">
 				<div class="text-center">
 					@yield('divHead')
